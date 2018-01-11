@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: PLIC_FE310
+
+.. option:: CONFIG_PLIC_FE310
+.. _CONFIG_PLIC_FE310:
+
+SiFive Freedom E310 Platform Level Interrupt Controller provides support
+for external interrupt lines defined by the FE310 SOC;
+
+
+
+:Symbol:           PLIC_FE310
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SiFive Freedom E310 Platform Level Interrupt Controller (PLIC)" if SOC_RISCV32_FE310 (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: SOC_RISCV32_FE310 (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_RISCV_HAS_PLIC` if SOC_RISCV32_FE310 (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../drivers/interrupt_controller/Kconfig:129

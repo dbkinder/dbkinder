@@ -1,0 +1,478 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Memory Domain &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="User Mode" href="usermode.html"/>
+        <link rel="next" title="Other Services" href="../other/other.html"/>
+        <link rel="prev" title="System Calls" href="syscalls.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../kernel.html">Zephyr Kernel Primer</a> /
+      
+          <a href="usermode.html">User Mode</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../kernel.html">Zephyr Kernel Primer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../threads/threads.html">Threads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timing/timing.html">Timing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory/memory.html">Memory Allocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synchronization/synchronization.html">Synchronization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_passing/data_passing.html">Data Passing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="usermode.html">User Mode</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="kernelobjects.html">Kernel Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscalls.html">System Calls</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Memory Domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../other/other.html">Other Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="memory-domain">
+<span id="id1"></span><h1>Memory Domain<a class="headerlink" href="#memory-domain" title="Permalink to this headline">¶</a></h1>
+<p>The memory domain APIs are used by unprivileged threads to share data to
+the threads in the same memory domain and protect sensitive data from threads
+outside their domain. Memory domains are not only used for improving security,
+but are also useful for debugging (unexpected access would cause an exception).</p>
+<p>An alternative to using memory domains is the
+<a class="reference internal" href="../../reference/kconfig/CONFIG_APPLICATION_MEMORY.html#cmdoption-arg-config-application-memory"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_APPLICATION_MEMORY</span></code></a> option, which will grant access to user
+threads at boot to all global memory defined in object files that are not
+part of the core kernel. This is useful for very simple applications which
+will allow all threads to use global data defined within the application, but
+each thread’s stack is still protected from other user threads and there is
+no access to private kernel data structures.</p>
+<p>Since architectures generally have constraints on how many partitions can be
+defined, and the size/alignment of each partition, users may need to group
+related data together using linker sections.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#concepts" id="id2">Concepts</a></li>
+<li><a class="reference internal" href="#implementation" id="id3">Implementation</a><ul>
+<li><a class="reference internal" href="#create-a-memory-domain" id="id4">Create a Memory Domain</a></li>
+<li><a class="reference internal" href="#add-memory-partitions-into-a-memory-domain" id="id5">Add Memory Partitions into a Memory Domain</a></li>
+<li><a class="reference internal" href="#add-threads-into-a-memory-domain" id="id6">Add Threads into a Memory Domain</a></li>
+<li><a class="reference internal" href="#remove-a-memory-partition-from-a-memory-domain" id="id7">Remove a Memory Partition from a Memory Domain</a></li>
+<li><a class="reference internal" href="#remove-a-thread-from-the-memory-domain" id="id8">Remove a Thread from the Memory Domain</a></li>
+<li><a class="reference internal" href="#destroy-a-memory-domain" id="id9">Destroy a Memory Domain</a></li>
+<li><a class="reference internal" href="#available-partition-attributes" id="id10">Available Partition Attributes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration-options" id="id11">Configuration Options</a></li>
+<li><a class="reference internal" href="#apis" id="id12">APIs</a></li>
+</ul>
+</div>
+<div class="section" id="concepts">
+<h2><a class="toc-backref" href="#id2">Concepts</a><a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<p>A memory domain contains some number of memory partitions.
+A memory partition is a memory region (might be RAM, peripheral registers,
+or flash, for example) with specific attributes (access permission, e.g.
+privileged read/write, unprivileged read-only, or execute never).
+Memory partitions are defined by a set of underlying MPU regions
+or MMU tables. A thread belongs to a single memory domain at
+any point in time but a memory domain may contain multiple threads.
+Threads in the same memory domain have the same access permissions
+to the memory partitions belonging to the memory domain. New threads
+will inherit any memory domain configuration from the parent thread.</p>
+</div>
+<div class="section" id="implementation">
+<h2><a class="toc-backref" href="#id3">Implementation</a><a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-a-memory-domain">
+<h3><a class="toc-backref" href="#id4">Create a Memory Domain</a><a class="headerlink" href="#create-a-memory-domain" title="Permalink to this headline">¶</a></h3>
+<p>A memory domain is defined using a variable of type
+<code class="xref c c-type docutils literal"><span class="pre">struct</span> <span class="pre">k_mem_domain</span></code>. It must then be initialized by calling
+<a class="reference internal" href="../../api/kernel_api.html#_CPPv217k_mem_domain_initP12k_mem_domain5u32_tA_P15k_mem_partition" title="k_mem_domain_init"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_mem_domain_init()</span></code></a>.</p>
+<p>The following code defines and initializes an empty memory domain.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">k_mem_domain</span> <span class="n">app0_domain</span><span class="p">;</span>
+
+<span class="n">k_mem_domain_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">app0_domain</span><span class="p">,</span> <span class="s">&quot;app0_domain&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-memory-partitions-into-a-memory-domain">
+<h3><a class="toc-backref" href="#id5">Add Memory Partitions into a Memory Domain</a><a class="headerlink" href="#add-memory-partitions-into-a-memory-domain" title="Permalink to this headline">¶</a></h3>
+<p>There are two ways to add memory partitions into a memory domain.</p>
+<p>This first code sample shows how to add memory partitions while creating
+a memory domain.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cm">/* the start address of the MPU region needs to align with its size */</span>
+<span class="n">u8_t</span> <span class="nf">__aligned</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="n">app0_buf</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+<span class="n">u8_t</span> <span class="nf">__aligned</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="n">app1_buf</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+
+<span class="n">K_MEM_PARTITION_DEFINE</span><span class="p">(</span><span class="n">app0_part0</span><span class="p">,</span> <span class="n">app0_buf</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">app0_buf</span><span class="p">),</span>
+                       <span class="n">K_MEM_PARTITION_P_RW_U_RW</span><span class="p">);</span>
+
+<span class="n">K_MEM_PARTITION_DEFINE</span><span class="p">(</span><span class="n">app0_part1</span><span class="p">,</span> <span class="n">app1_buf</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">app1_buf</span><span class="p">),</span>
+                       <span class="n">K_MEM_PARTITION_P_RW_U_RO</span><span class="p">);</span>
+
+<span class="k">struct</span> <span class="n">k_mem_partition</span> <span class="o">*</span><span class="n">app0_parts</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">app0_part0</span><span class="p">,</span>
+    <span class="n">app0_part1</span>
+<span class="p">};</span>
+
+<span class="n">k_mem_domain_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">app0_domain</span><span class="p">,</span> <span class="n">ARRAY_SIZE</span><span class="p">(</span><span class="n">app0_parts</span><span class="p">),</span> <span class="n">app0_parts</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This second code sample shows how to add memory partitions into an initialized
+memory domain one by one.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cm">/* the start address of the MPU region needs to align with its size */</span>
+<span class="n">u8_t</span> <span class="nf">__aligned</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="n">app0_buf</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+<span class="n">u8_t</span> <span class="nf">__aligned</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="n">app1_buf</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+
+<span class="n">K_MEM_PARTITION_DEFINE</span><span class="p">(</span><span class="n">app0_part0</span><span class="p">,</span> <span class="n">app0_buf</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">app0_buf</span><span class="p">),</span>
+                       <span class="n">K_MEM_PARTITION_P_RW_U_RW</span><span class="p">);</span>
+
+<span class="n">K_MEM_PARTITION_DEFINE</span><span class="p">(</span><span class="n">app0_part1</span><span class="p">,</span> <span class="n">app1_buf</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">app1_buf</span><span class="p">),</span>
+                       <span class="n">K_MEM_PARTITION_P_RW_U_RO</span><span class="p">);</span>
+
+<span class="n">k_mem_domain_add_partition</span><span class="p">(</span><span class="o">&amp;</span><span class="n">app0_domain</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">app0_part0</span><span class="p">);</span>
+<span class="n">k_mem_domain_add_partition</span><span class="p">(</span><span class="o">&amp;</span><span class="n">app0_domain</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">app0_part1</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The maximum number of memory partitions is limited by the maximum
+number of MPU regions or the maximum number of MMU tables.</p>
+</div>
+</div>
+<div class="section" id="add-threads-into-a-memory-domain">
+<h3><a class="toc-backref" href="#id6">Add Threads into a Memory Domain</a><a class="headerlink" href="#add-threads-into-a-memory-domain" title="Permalink to this headline">¶</a></h3>
+<p>Adding threads into a memory domain grants threads permission to access
+the memory partitions in the memory domain.</p>
+<p>The following code shows how to add threads into a memory domain.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">k_mem_domain_add_thread</span><span class="p">(</span><span class="o">&amp;</span><span class="n">app0_domain</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">app_thread_id</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-a-memory-partition-from-a-memory-domain">
+<h3><a class="toc-backref" href="#id7">Remove a Memory Partition from a Memory Domain</a><a class="headerlink" href="#remove-a-memory-partition-from-a-memory-domain" title="Permalink to this headline">¶</a></h3>
+<p>The following code shows how to remove a memory partition from a memory
+domain.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">k_mem_domain_remove_partition</span><span class="p">(</span><span class="o">&amp;</span><span class="n">app0_domain</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">app0_part1</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The k_mem_domain_remove_partition() API finds the memory partition
+that matches the given parameter and removes that partition from the
+memory domain.</p>
+</div>
+<div class="section" id="remove-a-thread-from-the-memory-domain">
+<h3><a class="toc-backref" href="#id8">Remove a Thread from the Memory Domain</a><a class="headerlink" href="#remove-a-thread-from-the-memory-domain" title="Permalink to this headline">¶</a></h3>
+<p>The following code shows how to remove a thread from the memory domain.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">k_mem_domain_remove_thread</span><span class="p">(</span><span class="o">&amp;</span><span class="n">app0_domain</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">app_thread_id</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="destroy-a-memory-domain">
+<h3><a class="toc-backref" href="#id9">Destroy a Memory Domain</a><a class="headerlink" href="#destroy-a-memory-domain" title="Permalink to this headline">¶</a></h3>
+<p>The following code shows how to destroy a memory domain.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">k_mem_domain_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">app0_domain</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="available-partition-attributes">
+<h3><a class="toc-backref" href="#id10">Available Partition Attributes</a><a class="headerlink" href="#available-partition-attributes" title="Permalink to this headline">¶</a></h3>
+<p>When defining a partition, we need to set access permission attributes
+to the partition. Since the access control of memory partitions relies on
+either an MPU or MMU, the available partition attributes would be architecture
+dependent.</p>
+<p>The complete list of available partition attributes for a specific architecture
+is found in the architecture-specific include file
+<code class="docutils literal"><span class="pre">include/arch/&lt;arch</span> <span class="pre">name&gt;/arch.h</span></code>, (for example, <code class="docutils literal"><span class="pre">include/arch/arm/arch.h</span></code>.)
+Some examples of partition attributes are:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cm">/* Denote partition is privileged read/write, unprivileged read/write */</span>
+<span class="n">K_MEM_PARTITION_P_RW_U_RW</span>
+<span class="cm">/* Denote partition is privileged read/write, unprivileged read-only */</span>
+<span class="n">K_MEM_PARTITION_P_RW_U_RO</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="configuration-options">
+<h2><a class="toc-backref" href="#id11">Configuration Options</a><a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h2>
+<p>Related configuration options:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../reference/kconfig/CONFIG_MAX_DOMAIN_PARTITIONS.html#cmdoption-arg-config-max-domain-partitions"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_MAX_DOMAIN_PARTITIONS</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="apis">
+<h2><a class="toc-backref" href="#id12">APIs</a><a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h2>
+<p>The following memory domain APIs are provided by <code class="file docutils literal"><span class="pre">kernel.h</span></code>:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../api/kernel_api.html#c.K_MEM_PARTITION_DEFINE" title="K_MEM_PARTITION_DEFINE"><code class="xref c c-macro docutils literal"><span class="pre">K_MEM_PARTITION_DEFINE</span></code></a></li>
+<li><a class="reference internal" href="../../api/kernel_api.html#_CPPv217k_mem_domain_initP12k_mem_domain5u32_tA_P15k_mem_partition" title="k_mem_domain_init"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_mem_domain_init()</span></code></a></li>
+<li><a class="reference internal" href="../../api/kernel_api.html#_CPPv220k_mem_domain_destroyP12k_mem_domain" title="k_mem_domain_destroy"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_mem_domain_destroy()</span></code></a></li>
+<li><a class="reference internal" href="../../api/kernel_api.html#_CPPv226k_mem_domain_add_partitionP12k_mem_domainP15k_mem_partition" title="k_mem_domain_add_partition"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_mem_domain_add_partition()</span></code></a></li>
+<li><a class="reference internal" href="../../api/kernel_api.html#_CPPv229k_mem_domain_remove_partitionP12k_mem_domainP15k_mem_partition" title="k_mem_domain_remove_partition"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_mem_domain_remove_partition()</span></code></a></li>
+<li><a class="reference internal" href="../../api/kernel_api.html#_CPPv223k_mem_domain_add_threadP12k_mem_domain7k_tid_t" title="k_mem_domain_add_thread"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_mem_domain_add_thread()</span></code></a></li>
+<li><a class="reference internal" href="../../api/kernel_api.html#_CPPv226k_mem_domain_remove_thread7k_tid_t" title="k_mem_domain_remove_thread"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_mem_domain_remove_thread()</span></code></a></li>
+</ul>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../other/other.html" class="btn btn-neutral float-right" title="Other Services" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="syscalls.html" class="btn btn-neutral" title="System Calls" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

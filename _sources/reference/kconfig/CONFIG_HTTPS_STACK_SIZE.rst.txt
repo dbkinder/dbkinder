@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: HTTPS_STACK_SIZE
+
+.. option:: CONFIG_HTTPS_STACK_SIZE
+.. _CONFIG_HTTPS_STACK_SIZE:
+
+HTTPS thread stack size. The mbedtls routines will use this stack
+thus it is by default very large.
+
+
+
+:Symbol:           HTTPS_STACK_SIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "HTTPS thread stack size" if HTTPS (value: "n")
+:Default values:
+
+ *  8192 (value: "n")
+ *   Condition: HTTPS (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ HTTP && NETWORKING && !HTTP_APP (value: "n")
+:Locations:
+ * ../subsys/net/lib/http/Kconfig:98

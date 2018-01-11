@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: ETH_STM32_HAL_NAME
+
+.. option:: CONFIG_ETH_STM32_HAL_NAME
+.. _CONFIG_ETH_STM32_HAL_NAME:
+
+The configuration item CONFIG_ETH_STM32_HAL_NAME:
+
+:Symbol:           ETH_STM32_HAL_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Device name"
+:Default values:
+
+ *  "ETH_0"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ETH_STM32_HAL (value: "n")
+:Locations:
+ * ../drivers/ethernet/Kconfig.stm32_hal:19

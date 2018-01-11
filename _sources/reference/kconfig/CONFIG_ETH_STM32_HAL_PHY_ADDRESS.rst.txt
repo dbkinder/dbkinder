@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: ETH_STM32_HAL_PHY_ADDRESS
+
+.. option:: CONFIG_ETH_STM32_HAL_PHY_ADDRESS
+.. _CONFIG_ETH_STM32_HAL_PHY_ADDRESS:
+
+The phy address to use.
+
+
+
+:Symbol:           ETH_STM32_HAL_PHY_ADDRESS
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Phy address" if ETH_STM32_HAL (value: "n")
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: ETH_STM32_HAL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ETH_STM32_HAL (value: "n")
+:Locations:
+ * ../drivers/ethernet/Kconfig.stm32_hal:44

@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: I2C_SAM_TWI
+
+.. option:: CONFIG_I2C_SAM_TWI
+.. _CONFIG_I2C_SAM_TWI:
+
+Enable Atmel SAM MCU Family (TWI) I2C bus driver.
+
+
+
+:Symbol:           I2C_SAM_TWI
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Atmel SAM (TWI) I2C driver" if SOC_FAMILY_SAM (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SOC_FAMILY_SAM (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_HAS_DTS_I2C` if SOC_FAMILY_SAM (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C && BOARD_SAM4S_XPLAINED (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:67
+ * ../boards/arm/arduino_due/Kconfig.defconfig:33
+ * ../boards/arm/sam4s_xplained/Kconfig.defconfig:15

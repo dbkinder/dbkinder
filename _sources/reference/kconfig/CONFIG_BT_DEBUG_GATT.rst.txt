@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: BT_DEBUG_GATT
+
+.. option:: CONFIG_BT_DEBUG_GATT
+.. _CONFIG_BT_DEBUG_GATT:
+
+This option enables debug support for the Bluetooth
+Generic Attribute Profile (GATT).
+
+
+
+:Symbol:           BT_DEBUG_GATT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bluetooth Generic Attribute Profile (GATT) debug" if BT_CONN (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_DEBUG (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:406

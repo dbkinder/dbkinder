@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: USB_DEVICE_NETWORK
+
+.. option:: CONFIG_USB_DEVICE_NETWORK
+.. _CONFIG_USB_DEVICE_NETWORK:
+
+The configuration item CONFIG_USB_DEVICE_NETWORK:
+
+:Symbol:           USB_DEVICE_NETWORK
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_NET_L2_ETHERNET`
+:Reverse (select-related) dependencies:
+ USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_NETWORK_ECM || USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_NETWORK_RNDIS (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_STACK (value: "n")
+:Locations:
+ * ../subsys/usb/class/netusb/Kconfig:12

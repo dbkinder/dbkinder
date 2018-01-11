@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: HAS_MCUX_SIM
+
+.. option:: CONFIG_HAS_MCUX_SIM
+.. _CONFIG_HAS_MCUX_SIM:
+
+Set if the system integration module (SIM) module is present in the
+SoC.
+
+
+
+:Symbol:           HAS_MCUX_SIM
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ SOC_MKW22D5 && ARM || SOC_MKW24D5 && ARM || SOC_MKW40Z4 && ARM || SOC_MKW41Z4 && ARM || SOC_MKL25Z4 && ARM || SOC_MK64F12 && ARM (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ HAS_MCUX (value: "n")
+:Locations:
+ * ../ext/hal/nxp/mcux/Kconfig:58

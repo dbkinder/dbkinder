@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: USB_UART_DTR_WAIT
+
+.. option:: CONFIG_USB_UART_DTR_WAIT
+.. _CONFIG_USB_UART_DTR_WAIT:
+
+Enable this option to use flow control on the console. The uart console
+waits until the DTR is asserted by the host.
+Note: Disabling this might lead to missing console prints.
+
+
+
+:Symbol:           USB_UART_DTR_WAIT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Wait on DTR control signal" if USB_UART_CONSOLE (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: USB_UART_CONSOLE (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ CONSOLE (value: "n")
+:Locations:
+ * ../drivers/console/Kconfig:96

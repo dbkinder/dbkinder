@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: MAX30101
+
+.. option:: CONFIG_MAX30101
+.. _CONFIG_MAX30101:
+
+The configuration item CONFIG_MAX30101:
+
+:Symbol:           MAX30101
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "MAX30101 Pulse Oximeter and Heart Rate Sensor" if I2C (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: I2C (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/max30101/Kconfig:8

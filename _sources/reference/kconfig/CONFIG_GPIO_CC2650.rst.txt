@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: GPIO_CC2650
+
+.. option:: CONFIG_GPIO_CC2650
+.. _CONFIG_GPIO_CC2650:
+
+Enable the GPIO driver on boards equipped with TI CC2650.
+
+
+
+:Symbol:           GPIO_CC2650
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "TI CC2650 GPIO driver" if GPIO && SOC_SERIES_CC2650 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: GPIO && SOC_SERIES_CC2650 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.cc2650:5

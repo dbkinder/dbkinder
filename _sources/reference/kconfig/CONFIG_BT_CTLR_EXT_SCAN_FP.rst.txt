@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BT_CTLR_EXT_SCAN_FP
+
+.. option:: CONFIG_BT_CTLR_EXT_SCAN_FP
+.. _CONFIG_BT_CTLR_EXT_SCAN_FP:
+
+Enable support for Bluetooth v4.2 LE Extended Scanner Filter Policies
+in the Controller.
+
+
+
+:Symbol:           BT_CTLR_EXT_SCAN_FP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "LE Extended Scanner Filter Policies"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR && BT_CONN (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:158

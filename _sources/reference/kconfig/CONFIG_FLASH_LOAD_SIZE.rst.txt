@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: FLASH_LOAD_SIZE
+
+.. option:: CONFIG_FLASH_LOAD_SIZE
+.. _CONFIG_FLASH_LOAD_SIZE:
+
+If non-zero, this option specifies the size, in bytes, of the flash
+area that the Zephyr image will be allowed to occupy.  If zero, the
+image will be able to occupy from the FLASH_LOAD_OFFSET to the end of
+the device.
+
+If unsure, leave at the default value 0.
+
+
+:Symbol:           FLASH_LOAD_SIZE
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Kernel load size" if HAS_FLASH_LOAD_OFFSET (value: "n")
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: HAS_FLASH_LOAD_OFFSET (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ !HAS_DTS (value: "n")
+:Locations:
+ * ../misc/Kconfig:31

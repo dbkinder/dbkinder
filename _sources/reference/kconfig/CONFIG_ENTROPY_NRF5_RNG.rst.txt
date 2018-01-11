@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: ENTROPY_NRF5_RNG
+
+.. option:: CONFIG_ENTROPY_NRF5_RNG
+.. _CONFIG_ENTROPY_NRF5_RNG:
+
+This option enables the RNG peripheral, which is a random number
+generator, based on internal thermal noise, that provides a
+random 8-bit value to the host when read.
+
+
+
+:Symbol:           ENTROPY_NRF5_RNG
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "nRF5 RNG driver" if ENTROPY_GENERATOR && !BT (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_ENTROPY_HAS_DRIVER` if ENTROPY_GENERATOR && !BT (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ENTROPY_GENERATOR (value: "n")
+:Locations:
+ * ../drivers/entropy/Kconfig.nrf5:8

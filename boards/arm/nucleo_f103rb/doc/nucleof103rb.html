@@ -1,0 +1,582 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>ST Nucleo F103RB &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../../../index.html"/>
+        <link rel="up" title="ARM Boards" href="../../index.html"/>
+        <link rel="next" title="ST Nucleo F334R8" href="../../nucleo_f334r8/doc/nucleof334r8.html"/>
+        <link rel="prev" title="ST Nucleo F091RC" href="../../nucleo_f091rc/doc/nucleof091rc.html"/> 
+
+    
+    <script src="../../../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../../../index.html">Docs</a> /
+      
+          <a href="../../../boards.html">Supported Boards</a> /
+      
+          <a href="../../index.html">ARM Boards</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../boards.html">Supported Boards</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../x86/index.html">x86 Boards</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">ARM Boards</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../96b_carbon/doc/96b_carbon.html">96Boards Carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../96b_carbon_nrf51/doc/96b_carbon_nrf51.html">96Boards Carbon nRF51</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../96b_neonkey/doc/96b_neonkey.html">96Boards Neonkey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../96b_nitrogen/doc/96b_nitrogen.html">96Boards Nitrogen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../arduino_101_ble/doc/board.html">Arduino/Genuino 101 (BLE)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../arduino_due/doc/board.html">Arduino Due</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../arduino_zero/doc/arduino_zero.html">Arduino/Genuino Zero</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cc2650_sensortag/doc/cc2650_sensortag.html">CC2650 SensorTag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cc3220sf_launchxl/doc/cc3220sf_launchxl.html">CC3220SF LaunchXL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../curie_ble/doc/board.html">Curie (BLE)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../disco_l475_iot1/doc/disco_l475_iot1.html">ST Disco L475 IOT01 (B-L475E-IOT01A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../efm32wg_stk3800/doc/efm32wg_stk3800.html">EFM32WG-STK3800</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../frdm_k64f/doc/frdm_k64f.html">NXP FRDM-K64F</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../frdm_kl25z/doc/frdm_kl25z.html">NXP FRDM-KL25Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../frdm_kw41z/doc/frdm_kw41z.html">NXP FRDM-KW41Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hexiwear_k64/doc/hexiwear_k64.html">Hexiwear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hexiwear_kw40z/doc/hexiwear_kw40z.html">Hexiwear KW40Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mimxrt1050_evk/doc/mimxrt1050_evk.html">NXP MIMXRT1050-EVK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mps2_an385/doc/mps2_an385.html">ARM V2M MPS2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../msp_exp432p401r_launchxl/doc/msp_exp432p401r_launchxl.html">MSP-EXP432P401R LaunchXL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf51_blenano/doc/nrf51_blenano.html">Redbear Labs Nano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf51_pca10028/doc/nrf51_pca10028.html">nRF51-PCA10028</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf51_vbluno51/doc/nrf51_vbluno51.html">nRF51-VBLUno51</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf52840_pca10056/doc/nrf52840_pca10056.html">nRF52840-PCA10056</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf52_blenano2/doc/nrf52_blenano2.html">Redbear Labs Nano v2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf52_pca10040/doc/nrf52_pca10040.html">nRF52-PCA10040</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf52_vbluno52/doc/nrf52_vbluno52.html">nRF52-VBLUno52</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f030r8/doc/nucleof030r8.html">ST Nucleo F030R8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f091rc/doc/nucleof091rc.html">ST Nucleo F091RC</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ST Nucleo F103RB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f334r8/doc/nucleof334r8.html">ST Nucleo F334R8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f401re/doc/nucleof401re.html">ST Nucleo F401RE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f411re/doc/nucleof411re.html">ST Nucleo F411RE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f412zg/doc/nucleo412zg.html">ST Nucleo F412ZG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f413zh/doc/nucleof413zh.html">ST Nucleo F413ZH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f429zi/doc/nucleof429zi.html">ST Nucleo F429ZI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_l432kc/doc/nucleol432kc.html">ST Nucleo L432KC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_l476rg/doc/nucleol476rg.html">ST Nucleo L476RG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../olimex_stm32_e407/doc/olimex_stm32_e407.html">OLIMEX-STM32-E407</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../olimex_stm32_p405/doc/olimex_stm32_p405.html">OLIMEX-STM32-P405</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../olimexino_stm32/doc/olimexino_stm32.html">OLIMEXINO-STM32</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qemu_cortex_m3/doc/board.html">ARM Cortex-M3 Emulation (QEMU)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sam4s_xplained/doc/sam4s_xplained.html">SAM4S Xplained</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sam_e70_xplained/doc/sam_e70_xplained.html">SAM E70 Xplained</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm3210c_eval/doc/stm3210c_eval.html">STM3210C-EVAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32373c_eval/doc/stm32373c_eval.html">STM32373C-EVAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32_min_dev/doc/stm32_min_dev.html">STM32 Minimum Development Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f3_disco/doc/stm32f3_disco.html">ST STM32F3DISCOVERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f411e_disco/doc/stm32f411e_disco.html">STM32F411E-DISCO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f412g_disco/doc/stm32f412g_disco.html">ST STM32F412G Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f429i_disc1/doc/stm32f429i_disc1.html">ST STM32F429I-DISC1 Discovery board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f469i_disco/doc/stm32f469i_disco.html">ST STM32F469I Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f4_disco/doc/stm32f4_disco.html">ST STM32F4DISCOVERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32l476g_disco/doc/stm32l476g_disco.html">ST STM32L476G Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32l496g_disco/doc/stm32l496g_disco.html">ST STM32L496G Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usb_kw24d512/doc/usb_kw24d512.html">NXP USB-KW24D512</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../v2m_beetle/doc/v2m_beetle.html">ARM V2M Beetle</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../arc/index.html">ARC Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../nios2/index.html">NIOS II Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../xtensa/index.html">XTENSA Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../posix/index.html">Native POSIX Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="st-nucleo-f103rb">
+<span id="nucleo-f103rb-board"></span><h1>ST Nucleo F103RB<a class="headerlink" href="#st-nucleo-f103rb" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The STM32 Nucleo-64 development board with STM32F103RB MCU, supports Arduino and ST morpho connectivity.</p>
+<p>The STM32 Nucleo board provides an affordable, and flexible way for users to try out new concepts,
+and build prototypes with the STM32 microcontroller, choosing from the various
+combinations of performance, power consumption, and features.</p>
+<p>The Arduino* Uno V3 connectivity support and the ST morpho headers allow easy functionality
+expansion of the STM32 Nucleo open development platform with a wide choice of
+specialized shields.</p>
+<p>The STM32 Nucleo board integrates the ST-LINK/V2-1 debugger and programmer.</p>
+<p>The STM32 Nucleo board comes with the STM32 comprehensive software HAL library together
+with various packaged software examples.</p>
+<a class="reference internal image-reference" href="../../../../_images/nucleo_f103rb_board.jpg"><img alt="Nucleo F103RB" class="align-center" src="../../../../_images/nucleo_f103rb_board.jpg" style="width: 500px; height: 367px;" /></a>
+<p>More information about the board can be found at the <a class="reference external" href="http://www.st.com/en/evaluation-tools/nucleo-f103rb.html">Nucleo F103RB website</a> <a class="footnote-reference" href="#id1" id="id2">[1]</a>.</p>
+</div>
+<div class="section" id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<p>Nucleo F103RB provides the following hardware components:</p>
+<ul class="simple">
+<li>STM32 microcontroller in QFP64 package</li>
+<li><dl class="first docutils">
+<dt>Two types of extension resources:</dt>
+<dd><ul class="first last">
+<li>Arduino* Uno V3 connectivity</li>
+<li>ST morpho extension pin headers for full access to all STM32 I/Os</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>ARM* mbed*</li>
+<li><dl class="first docutils">
+<dt>On-board ST-LINK/V2-1 debugger/programmer with SWD connector:</dt>
+<dd><ul class="first last">
+<li>Selection-mode switch to use the kit as a standalone ST-LINK/V2-1</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Flexible board power supply:</dt>
+<dd><ul class="first last">
+<li>USB VBUS or external source (3.3V, 5V, 7 - 12V)</li>
+<li>Power management access point</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Three LEDs:</dt>
+<dd><ul class="first last">
+<li>USB communication (LD1), user LED (LD2), power LED (LD3)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Two push-buttons: USER and RESET</li>
+<li><dl class="first docutils">
+<dt>USB re-enumeration capability. Three different interfaces supported on USB:</dt>
+<dd><ul class="first last">
+<li>Virtual COM port</li>
+<li>Mass storage</li>
+<li>Debug port</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Support of wide choice of Integrated Development Environments (IDEs) including:</dt>
+<dd><ul class="first last">
+<li>IAR</li>
+<li>ARM Keil</li>
+<li>GCC-based IDEs</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="docutils">
+<dt>More information about STM32F103RB can be found here:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.st.com/resource/en/reference_manual/cd00171190.pdf">STM32F103 reference manual</a> <a class="footnote-reference" href="#id3" id="id4">[2]</a></li>
+<li><a class="reference external" href="http://www.st.com/resource/en/datasheet/stm32f103rb.pdf">STM32F103 data sheet</a> <a class="footnote-reference" href="#id5" id="id6">[3]</a></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="supported-features">
+<h3>Supported Features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h3>
+<p>The Zephyr nucleo_f103rb board configuration supports the following hardware features:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="20%" />
+<col width="62%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Interface</th>
+<th class="head">Controller</th>
+<th class="head">Driver/Component</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>NVIC</td>
+<td>on-chip</td>
+<td>nested vector interrupt controller</td>
+</tr>
+<tr class="row-odd"><td>UART</td>
+<td>on-chip</td>
+<td>serial port-polling;
+serial port-interrupt</td>
+</tr>
+<tr class="row-even"><td>PINMUX</td>
+<td>on-chip</td>
+<td>pinmux</td>
+</tr>
+<tr class="row-odd"><td>GPIO</td>
+<td>on-chip</td>
+<td>gpio</td>
+</tr>
+<tr class="row-even"><td>CLOCK</td>
+<td>on-chip</td>
+<td>reset and clock control</td>
+</tr>
+<tr class="row-odd"><td>FLASH</td>
+<td>on-chip</td>
+<td>flash memory</td>
+</tr>
+<tr class="row-even"><td>IWDG</td>
+<td>on-chip</td>
+<td>independent watchdog</td>
+</tr>
+</tbody>
+</table>
+<p>Other hardware features are not yet supported in this Zephyr port.</p>
+<p>The default configuration can be found in the defconfig file:
+<code class="docutils literal"><span class="pre">boards/arm/nucleo_f103rb/nucleo_f103rb_defconfig</span></code></p>
+</div>
+<div class="section" id="connections-and-ios">
+<h3>Connections and IOs<a class="headerlink" href="#connections-and-ios" title="Permalink to this headline">¶</a></h3>
+<p>Each of the GPIO pins can be configured by software as output (push-pull or open-drain), as
+input (with or without pull-up or pull-down), or as peripheral alternate function. Most of the
+GPIO pins are shared with digital or analog alternate functions. All GPIOs are high current
+capable except for analog inputs.</p>
+<div class="section" id="board-connectors">
+<h4>Board connectors:<a class="headerlink" href="#board-connectors" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="../../../../_images/nucleo_f103rb_connectors.png"><img alt="Nucleo F103RB connectors" class="align-center" src="../../../../_images/nucleo_f103rb_connectors.png" style="width: 800px; height: 619px;" /></a>
+</div>
+<div class="section" id="default-zephyr-peripheral-mapping">
+<h4>Default Zephyr Peripheral Mapping:<a class="headerlink" href="#default-zephyr-peripheral-mapping" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>UART_1_TX : PA9</li>
+<li>UART_1_RX : PA10</li>
+<li>UART_2_TX : PA2</li>
+<li>UART_2_RX : PA3</li>
+</ul>
+<p>For mode details please refer to <a class="reference external" href="http://www.st.com/resource/en/user_manual/dm00105823.pdf">STM32 Nucleo-64 board User Manual</a> <a class="footnote-reference" href="#id7" id="id8">[4]</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="programming-and-debugging">
+<h2>Programming and Debugging<a class="headerlink" href="#programming-and-debugging" title="Permalink to this headline">¶</a></h2>
+<p>Applications for the <code class="docutils literal"><span class="pre">nucleo_f103rb</span></code> board configuration can be built and
+flashed in the usual way (see <a class="reference internal" href="../../../../application/application.html#build-an-application"><span class="std std-ref">Build an Application</span></a> and
+<a class="reference internal" href="../../../../application/application.html#application-run"><span class="std std-ref">Run an Application</span></a> for more details).</p>
+<div class="section" id="flashing">
+<h3>Flashing<a class="headerlink" href="#flashing" title="Permalink to this headline">¶</a></h3>
+<p>Nucleo F103RB board includes an ST-LINK/V2-1 embedded debug tool interface.
+This interface is supported by the openocd version included in the Zephyr SDK.</p>
+<div class="section" id="flashing-an-application-to-nucleo-f103rb">
+<h4>Flashing an application to Nucleo F103RB<a class="headerlink" href="#flashing-an-application-to-nucleo-f103rb" title="Permalink to this headline">¶</a></h4>
+<p>Here is an example for the <a class="reference internal" href="../../../../samples/basic/blinky/README.html#blinky-sample"><span class="std std-ref">Blinky Application</span></a> application.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/basic/blinky
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>nucleo_f103rb ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+<span class="gp">$</span> make flash
+</pre></div>
+</div>
+<p>You will see the LED blinking every second.</p>
+</div>
+</div>
+<div class="section" id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
+<p>You can debug an application in the usual way.  Here is an example for the
+<a class="reference internal" href="../../../../samples/basic/blinky/README.html#blinky-sample"><span class="std std-ref">Blinky Application</span></a> application.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/basic-blinky
+
+<span class="gp">#</span> If you already made a build directory <span class="o">(</span>build<span class="o">)</span> and ran cmake, just <span class="s1">&#39;cd build&#39;</span> instead.
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>nucleo_f103rb ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make debug
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td><a class="reference external" href="http://www.st.com/en/evaluation-tools/nucleo-f103rb.html">http://www.st.com/en/evaluation-tools/nucleo-f103rb.html</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[2]</a></td><td><a class="reference external" href="http://www.st.com/resource/en/reference_manual/cd00171190.pdf">http://www.st.com/resource/en/reference_manual/cd00171190.pdf</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[3]</a></td><td><a class="reference external" href="http://www.st.com/resource/en/datasheet/stm32f103rb.pdf">http://www.st.com/resource/en/datasheet/stm32f103rb.pdf</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id8">[4]</a></td><td><a class="reference external" href="http://www.st.com/resource/en/user_manual/dm00105823.pdf">http://www.st.com/resource/en/user_manual/dm00105823.pdf</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../../nucleo_f334r8/doc/nucleof334r8.html" class="btn btn-neutral float-right" title="ST Nucleo F334R8" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../../nucleo_f091rc/doc/nucleof091rc.html" class="btn btn-neutral" title="ST Nucleo F091RC" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

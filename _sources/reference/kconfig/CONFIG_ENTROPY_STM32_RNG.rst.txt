@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: ENTROPY_STM32_RNG
+
+.. option:: CONFIG_ENTROPY_STM32_RNG
+.. _CONFIG_ENTROPY_STM32_RNG:
+
+This option enables the RNG processor, which is a entropy number
+generator, based on a continuous analog noise, that provides
+a entropy 32-bit value to the host when read.
+
+
+:Symbol:           ENTROPY_STM32_RNG
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "STM32 RNG driver" if SOC_FAMILY_STM32 && ENTROPY_GENERATOR (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SOC_FAMILY_STM32 && ENTROPY_GENERATOR (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_ENTROPY_HAS_DRIVER` if SOC_FAMILY_STM32 && ENTROPY_GENERATOR (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ENTROPY_GENERATOR (value: "n")
+:Locations:
+ * ../drivers/entropy/Kconfig.stm32:7

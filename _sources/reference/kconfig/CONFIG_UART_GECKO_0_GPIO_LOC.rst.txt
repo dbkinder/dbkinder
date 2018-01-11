@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: UART_GECKO_0_GPIO_LOC
+
+.. option:: CONFIG_UART_GECKO_0_GPIO_LOC
+.. _CONFIG_UART_GECKO_0_GPIO_LOC:
+
+The GPIO pins to use.
+
+
+
+:Symbol:           UART_GECKO_0_GPIO_LOC
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 3]
+:Prompts:
+
+ *  "Pin Locations" if UART_GECKO (value: "n")
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ UART_GECKO && BOARD_EFM32WG_STK3800 (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.gecko:28
+ * ../boards/arm/efm32wg_stk3800/Kconfig.defconfig:46

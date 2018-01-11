@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BT_DEVICE_NAME
+
+.. option:: CONFIG_BT_DEVICE_NAME
+.. _CONFIG_BT_DEVICE_NAME:
+
+Bluetooth device name. Name can be up to 248 bytes long (excluding
+NULL termination). Can be empty string.
+
+
+
+:Symbol:           BT_DEVICE_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bluetooth device name"
+:Default values:
+
+ *  "Zephyr"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:314

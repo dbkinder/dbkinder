@@ -1,0 +1,46 @@
+:orphan:
+
+.. title:: ADC_0
+
+.. option:: CONFIG_ADC_0
+.. _CONFIG_ADC_0:
+
+The configuration item CONFIG_ADC_0:
+
+:Symbol:           ADC_0
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable ADC 0"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ ARC && ADC && ADC_DW || QMSI && ADC && ADC_QMSI || QMSI && ADC && ADC_QMSI_SS || ADC_TI_ADC108S102 && ADC (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ ADC && BOARD_FRDM_KL25Z (value: "n")
+:Locations:
+ * ../drivers/adc/Kconfig:49
+ * ../boards/arm/hexiwear_k64/Kconfig.defconfig:88
+ * ../boards/arm/frdm_kw41z/Kconfig.defconfig:67
+ * ../boards/arm/usb_kw24d512/Kconfig.defconfig:87
+ * ../boards/arm/hexiwear_kw40z/Kconfig.defconfig:64
+ * ../boards/arm/frdm_kl25z/Kconfig.defconfig:85

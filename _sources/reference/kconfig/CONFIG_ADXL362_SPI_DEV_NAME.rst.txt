@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: ADXL362_SPI_DEV_NAME
+
+.. option:: CONFIG_ADXL362_SPI_DEV_NAME
+.. _CONFIG_ADXL362_SPI_DEV_NAME:
+
+Specify the device name of the SPI device to which ADXL362 is
+connected.
+
+
+
+:Symbol:           ADXL362_SPI_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SPI device where ADXL362 is connected" if ADXL362 (value: "n")
+:Default values:
+
+ *  "SPI_0"
+ *   Condition: ADXL362 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/adxl362/Kconfig:20

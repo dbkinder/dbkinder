@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: I2C_SBCON
+
+.. option:: CONFIG_I2C_SBCON
+.. _CONFIG_I2C_SBCON:
+
+The configuration item CONFIG_I2C_SBCON:
+
+:Symbol:           I2C_SBCON
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "I2C driver for ARM's SBCon two-wire serial bus interface" if I2C && ARM (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: I2C && ARM (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_I2C_BITBANG` if I2C && ARM (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C && BOARD_MPS2_AN385 (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig.sbcon:7
+ * ../boards/arm/mps2_an385/Kconfig.defconfig:110

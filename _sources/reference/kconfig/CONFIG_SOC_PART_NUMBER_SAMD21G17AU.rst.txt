@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: SOC_PART_NUMBER_SAMD21G17AU
+
+.. option:: CONFIG_SOC_PART_NUMBER_SAMD21G17AU
+.. _CONFIG_SOC_PART_NUMBER_SAMD21G17AU:
+
+The configuration item CONFIG_SOC_PART_NUMBER_SAMD21G17AU:
+
+:Symbol:           SOC_PART_NUMBER_SAMD21G17AU
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SAMD21G17AU"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/atmel_sam0/samd/Kconfig.soc:31

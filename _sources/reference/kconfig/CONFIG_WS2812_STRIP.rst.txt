@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: WS2812_STRIP
+
+.. option:: CONFIG_WS2812_STRIP
+.. _CONFIG_WS2812_STRIP:
+
+Enable LED strip driver for daisy chains of WS2812-ish
+(or WS2812B, WS2813, SK6812, or compatible) devices.
+These devices have a one-wire communications interface
+which encodes bits using pulses. Short pulses indicate
+zero bits, and long pulses indicate ones; refer to the
+chip datasheets for precise specifications. To implement
+this in a multitasking operating system, this driver
+generates the pulses using a SPI peripheral.
+
+
+
+:Symbol:           WS2812_STRIP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable WS2812 (and compatible) LED strip driver" if SPI && !SPI_LEGACY_API (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SPI && !SPI_LEGACY_API (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LED_STRIP (value: "n")
+:Locations:
+ * ../drivers/led_strip/Kconfig.ws2812:11

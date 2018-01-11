@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: MDNS_RESPONDER_INIT_PRIO
+
+.. option:: CONFIG_MDNS_RESPONDER_INIT_PRIO
+.. _CONFIG_MDNS_RESPONDER_INIT_PRIO:
+
+Note that if NET_APP_AUTO_INIT is enabled, then this value
+should be bigger than its value.
+
+
+
+:Symbol:           MDNS_RESPONDER_INIT_PRIO
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Startup priority for the mDNS responder init"
+:Default values:
+
+ *  96 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MDNS_RESPONDER && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/dns/Kconfig:142

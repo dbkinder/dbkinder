@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: UART_GECKO
+
+.. option:: CONFIG_UART_GECKO
+.. _CONFIG_UART_GECKO:
+
+Enable the Gecko uart driver.
+
+
+
+:Symbol:           UART_GECKO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Gecko uart driver" if HAS_SILABS_GECKO && GPIO_GECKO (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: HAS_SILABS_GECKO && GPIO_GECKO (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_SERIAL_HAS_DRIVER` if HAS_SILABS_GECKO && GPIO_GECKO (value: "n")
+ *  :option:`CONFIG_SERIAL_SUPPORT_INTERRUPT` if HAS_SILABS_GECKO && GPIO_GECKO (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_EFM32WG && SOC_SERIES_EFM32WG && SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.gecko:8
+ * ../arch/arm/soc/silabs_exx32/efm32wg/Kconfig.defconfig.efm32wg:27

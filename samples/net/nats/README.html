@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>NATS Client Implementation Sample &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../../index.html"/>
+        <link rel="up" title="Networking Samples" href="../net.html"/>
+        <link rel="next" title="RPL node" href="../rpl-node/README.html"/>
+        <link rel="prev" title="MQTT Publisher" href="../mqtt_publisher/README.html"/> 
+
+    
+    <script src="../../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../../index.html">Docs</a> /
+      
+          <a href="../../../application/index.html">Developer Guides</a> /
+      
+          <a href="../../samples.html">Samples and Demos</a> /
+      
+          <a href="../net.html">Networking Samples</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../application/index.html">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../porting/porting.html">Porting Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../application/application.html">Application Development Primer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../samples.html">Samples and Demos</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../kernel.html">Kernel Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/basic.html">Basic Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../subsys/subsys.html">Various Subsystems Samples</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../net.html">Networking Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sensor/sensor.html">Sensor Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../grove/grove.html">Grove Kit Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../boards/boards.html">Board-specific samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mpu/index.html">MMU/MPU Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../drivers/drivers.html">Driver Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/kconfig/index.html">Configuration Options Reference Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/api.html">API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../README.html">Zephyr documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="nats-client-implementation-sample">
+<span id="nats-client-sample"></span><h1>NATS Client Implementation Sample<a class="headerlink" href="#nats-client-implementation-sample" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://nats.io/documentation/internals/nats-protocol/">NATS</a> is a
+publisher/subscriber protocol implemented on top of TCP.  It is specified in
+<a class="reference external" href="http://nats.io/documentation/internals/nats-protocol/">NATS Protocol documentation</a>,
+and this is a sample implementation for Zephyr using the new IP stack.
+The API is loosely based off of the <a class="reference external" href="https://github.com/nats-io/go-nats">Golang API</a>.</p>
+<p>With this sample, it’s possible to subscribe/unsubscribe to a given subject,
+and be notified of changes asynchronously.  In order to conserve resources,
+the implementation does not keep track of subscribed subjects; that
+must be performed by the application itself, so it can ignore unknown/undesired
+subjects.</p>
+<p>TLS is not supported yet, although basic authentication is. The client will indicate
+if it supports username/password if a certain callback is set in the <code class="docutils literal"><span class="pre">struct</span>
+<span class="pre">nats</span></code>.  This callback will then be called, and the user must copy the
+username/password to the supplied user/pass buffers.</p>
+<p>Content might be also published for a given subject.</p>
+<p>The sample application lets one observe the subject “led0”, and turn it
+“on”, “off”, or “toggle” its value.  Changing the value will, if supported,
+act on a status LED on the development board.  The new status will be
+published.</p>
+<p>Also worth noting is that most of the networking and GPIO boilerplate has
+been shamelessly copied from the IRC bot example.  (Curiously, both
+protocols are similar.)</p>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>To test the sample, build the Zephyr application for your platform.  This
+has only been tested with the QEMU emulator as provided by the Zephyr SDK,
+but it should work with other supported hardware as long as they have enough
+memory, the network stack has TCP enabled, and the connectivity hardware is
+supported.</p>
+<p>As far as the software goes, this has been tested with the official <a class="reference external" href="https://github.com/nats-io/gnatsd">gnatsd</a> for the server, and the official
+<a class="reference external" href="https://github.com/nats-io/go-nats">go-nats</a> client library.  Both the
+server and clients were set up as per instructions found in their respective
+<code class="docutils literal"><span class="pre">README.md</span></code> files.</p>
+<p>The client was a one-off test that is basically the same code provided in
+the <a class="reference external" href="https://github.com/nats-io/go-nats/blob/e6bb81b5a5f37ef7bf364bb6276e13813086c6ee/README.md#basic-usage">Basic Usage</a>
+section as found in the <code class="docutils literal"><span class="pre">go-nats</span></code> README file, however, subscribing to the
+topic used in this sample: <code class="docutils literal"><span class="pre">led0</span></code>, and publishing values as described
+above (<code class="docutils literal"><span class="pre">on</span></code>, <code class="docutils literal"><span class="pre">off</span></code>, and <code class="docutils literal"><span class="pre">toggle</span></code>).</p>
+</div>
+<div class="section" id="library-usage">
+<h2>Library Usage<a class="headerlink" href="#library-usage" title="Permalink to this headline">¶</a></h2>
+<p>Allocate enough space for a <code class="docutils literal"><span class="pre">struct</span> <span class="pre">nats</span></code>, setting a few callbacks so
+that you’re notified as events happen:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">nats</span> <span class="n">nats_ctx</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">.</span><span class="n">on_auth_required</span> <span class="o">=</span> <span class="n">on_auth_required</span><span class="p">,</span>
+    <span class="o">.</span><span class="n">on_message</span> <span class="o">=</span> <span class="n">on_message</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">on_auth_required()</span></code> and <code class="docutils literal"><span class="pre">on_message()</span></code> functions are part of
+your application, and each must have these signatures:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">on_auth_required</span><span class="p">(</span><span class="n">struct</span> <span class="n">nats</span> <span class="o">*</span><span class="n">nats</span><span class="p">,</span> <span class="n">char</span> <span class="o">**</span><span class="n">user</span><span class="p">,</span> <span class="n">char</span> <span class="o">**</span><span class="k">pass</span><span class="p">);</span>
+<span class="nb">int</span> <span class="n">on_message</span><span class="p">(</span><span class="n">struct</span> <span class="n">nats</span> <span class="o">*</span><span class="n">nats</span><span class="p">,</span> <span class="n">struct</span> <span class="n">nats_msg</span> <span class="o">*</span><span class="n">msg</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Both functions should return 0 to signal that they could successfully
+handle their role, and a negative value, if they couldn’t for any
+reason. It’s recommended to use a negative integer as provided by
+errno.h in order to ease debugging.</p>
+<p>The first function, <code class="docutils literal"><span class="pre">on_auth_required()</span></code>, is called if the server
+notifies that it requires authentication. It’s not going to be called if
+that’s not the case, so it is optional. However, if the server asks for
+credentials and this function is not provided, the connection will be
+closed and an error will be returned by <code class="docutils literal"><span class="pre">nats_connect()</span></code>.</p>
+<p>The second function, <code class="docutils literal"><span class="pre">on_message()</span></code>, will be called whenever the
+server has been notified of a value change. The <code class="docutils literal"><span class="pre">struct</span> <span class="pre">nats_msg</span></code> has the
+following fields:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">nats_msg</span> <span class="p">{</span>
+    <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">subject</span><span class="p">;</span>
+    <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">sid</span><span class="p">;</span>
+    <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">reply_to</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The field <code class="docutils literal"><span class="pre">reply_to</span></code> may be passed directly to <code class="docutils literal"><span class="pre">nats_publish()</span></code>,
+in order to publish a reply to this message. If it’s <code class="docutils literal"><span class="pre">NULL</span></code> (no
+reply-to field in the message from the server), the
+<code class="docutils literal"><span class="pre">nats_publish()</span></code> function will not reply to a specific mailbox and
+will just update the topic value.</p>
+<p>In order to manage topic subscription, these functions can be used:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">nats_subscribe</span><span class="p">(</span><span class="n">struct</span> <span class="n">nats</span> <span class="o">*</span><span class="n">nats</span><span class="p">,</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">subject</span><span class="p">,</span>
+    <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">queue_group</span><span class="p">,</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">sid</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">subject</span></code> and <code class="docutils literal"><span class="pre">sid</span></code> are validated so that they’re actually valid
+per the protocol rules. <code class="docutils literal"><span class="pre">-EINVAL</span></code> is returned if they’re not.</p>
+<p>If <code class="docutils literal"><span class="pre">queue_group</span></code> is NULL, it’s not sent to the server.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">nats_unsubscribe</span><span class="p">(</span><span class="n">struct</span> <span class="n">nats</span> <span class="o">*</span><span class="n">nats</span><span class="p">,</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">sid</span><span class="p">,</span>
+    <span class="n">size_t</span> <span class="n">max_msgs</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">sid</span></code> is validated so it’s actually valid per the protocol rules.
+-EINVAL is returned if it’s not.</p>
+<p><code class="docutils literal"><span class="pre">max_msgs</span></code> specifies the number of messages that the server will
+send before actually unsubscribing the message. Can be 0 to
+immediately unsubscribe.  (See note below.)</p>
+<p>Both of these functions will return <code class="docutils literal"><span class="pre">-ENOMEM</span></code> if they couldn’t build
+the message to transmit to the server. They can also return any error
+that <code class="docutils literal"><span class="pre">net_context_send()</span></code> can return.</p>
+<p>Note:  In order to conserve resources, the library implementation will not
+make note of subscribed topics.  Both <code class="docutils literal"><span class="pre">nats_subscribe()</span></code> and
+<code class="docutils literal"><span class="pre">nats_unsubscribe()</span></code> functions will only notify the server that the client
+is either interested or uninterested in a particular topic.  The
+<code class="docutils literal"><span class="pre">on_message()</span></code> callback may be called to notify of changes in topics that
+have not been subscribed to (or have been recently unsubscribed).  It’s up
+to the application to decide to ignore the message.</p>
+<p>Topics can be published by using the following function:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">nats_publish</span><span class="p">(</span><span class="n">struct</span> <span class="n">nats</span> <span class="o">*</span><span class="n">nats</span><span class="p">,</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">subject</span><span class="p">,</span>
+    <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">reply_to</span><span class="p">,</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">payload</span><span class="p">,</span>
+    <span class="n">size_t</span> <span class="n">payload_len</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>As usual, <code class="docutils literal"><span class="pre">subject</span></code> is validated and <code class="docutils literal"><span class="pre">-EINVAL</span></code> will be returned if
+it’s in an invalid format. The <code class="docutils literal"><span class="pre">reply_to</span></code> field can be <code class="docutils literal"><span class="pre">NULL</span></code>, in
+which case, subscribers to this topic won’t receive this information as
+well.</p>
+<p>As <code class="docutils literal"><span class="pre">net_subscribe()</span></code> and <code class="docutils literal"><span class="pre">net_unsubscribe()</span></code>, this function can
+return <code class="docutils literal"><span class="pre">-ENOMEM</span></code> or any other errors that <code class="docutils literal"><span class="pre">net_context_send()</span></code>
+returns.</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../rpl-node/README.html" class="btn btn-neutral float-right" title="RPL node" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../mqtt_publisher/README.html" class="btn btn-neutral" title="MQTT Publisher" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

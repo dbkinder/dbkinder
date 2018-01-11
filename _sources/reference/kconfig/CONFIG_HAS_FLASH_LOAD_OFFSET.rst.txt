@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: HAS_FLASH_LOAD_OFFSET
+
+.. option:: CONFIG_HAS_FLASH_LOAD_OFFSET
+.. _CONFIG_HAS_FLASH_LOAD_OFFSET:
+
+This option is selected by targets having a FLASH_LOAD_OFFSET
+and FLASH_LOAD_SIZE.
+
+
+
+:Symbol:           HAS_FLASH_LOAD_OFFSET
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ CPU_CORTEX_M && ARM (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../misc/Kconfig:12

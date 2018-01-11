@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: SOC_CC2650
+
+.. option:: CONFIG_SOC_CC2650
+.. _CONFIG_SOC_CC2650:
+
+The configuration item CONFIG_SOC_CC2650:
+
+:Symbol:           SOC_CC2650
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "CC2650"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/ti_simplelink/cc2650/Kconfig.soc:10

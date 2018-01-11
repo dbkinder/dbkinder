@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: BT_MESH_LPN_AUTO
+
+.. option:: CONFIG_BT_MESH_LPN_AUTO
+.. _CONFIG_BT_MESH_LPN_AUTO:
+
+Automatically enable LPN functionality once provisioned and start
+looking for Friend nodes. If this option is disabled LPN mode
+needs to be manually enabled by calling bt_mesh_lpn_set(true).
+
+
+
+:Symbol:           BT_MESH_LPN_AUTO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Automatically start looking for Friend nodes once provisioned"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_LOW_POWER (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:212

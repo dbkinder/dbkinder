@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: COVERAGE
+
+.. option:: CONFIG_COVERAGE
+.. _CONFIG_COVERAGE:
+
+This option will build your application with the -coverage option
+which will generate data that can be used to create coverage reports.
+Currently this is fully supported only on the native POSIX port.
+
+
+:Symbol:           COVERAGE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Create coverage data" if NATIVE_APPLICATION (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: NATIVE_APPLICATION (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ TEST && NATIVE_APPLICATION (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../tests/Kconfig:27

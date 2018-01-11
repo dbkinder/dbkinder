@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: MAX_DOMAIN_PARTITIONS
+
+.. option:: CONFIG_MAX_DOMAIN_PARTITIONS
+.. _CONFIG_MAX_DOMAIN_PARTITIONS:
+
+Configure the maximum number of partitions per memory domain.
+
+
+
+:Symbol:           MAX_DOMAIN_PARTITIONS
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 255]
+:Prompts:
+
+ *  "Maximum number of partitions per memory domain" if USERSPACE (value: "n")
+:Default values:
+
+ *  16 (value: "n")
+ *   Condition: USERSPACE (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../kernel/Kconfig:543

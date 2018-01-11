@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: LIS2DH_NAME
+
+.. option:: CONFIG_LIS2DH_NAME
+.. _CONFIG_LIS2DH_NAME:
+
+Device name with which the LIS2DH sensor is identified.
+
+
+
+:Symbol:           LIS2DH_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Driver name" if LIS2DH (value: "n")
+:Default values:
+
+ *  "LIS2DH"
+ *   Condition: LIS2DH (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lis2dh/Kconfig:17

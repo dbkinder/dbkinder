@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: BT_HCI_CMD_COUNT
+
+.. option:: CONFIG_BT_HCI_CMD_COUNT
+.. _CONFIG_BT_HCI_CMD_COUNT:
+
+Number of buffers available for HCI commands.
+
+
+
+:Symbol:           BT_HCI_CMD_COUNT
+:Type:             int
+:Value:            "2"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [2, 64]
+:Prompts:
+
+ *  "Number of HCI command buffers"
+:Default values:
+
+ *  2 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:19

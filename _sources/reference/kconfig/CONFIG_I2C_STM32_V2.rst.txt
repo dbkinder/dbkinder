@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: I2C_STM32_V2
+
+.. option:: CONFIG_I2C_STM32_V2
+.. _CONFIG_I2C_STM32_V2:
+
+Enable I2C support on the STM32 F0, F3 and L4X family of processors.
+This driver also supports the F7 and L0 series.
+
+
+
+:Symbol:           I2C_STM32_V2
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "STM32 V2 Driver (F0/F3/L4X)" if SOC_FAMILY_STM32 && (SOC_SERIES_STM32F0X || SOC_SERIES_STM32F3X || SOC_SERIES_STM32L4X) (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SOC_FAMILY_STM32 && (SOC_SERIES_STM32F0X || SOC_SERIES_STM32F3X || SOC_SERIES_STM32L4X) (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_HAS_DTS_I2C` if SOC_FAMILY_STM32 && (SOC_SERIES_STM32F0X || SOC_SERIES_STM32F3X || SOC_SERIES_STM32L4X) (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:124

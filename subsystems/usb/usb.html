@@ -1,0 +1,804 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>USB device stack &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="Subsystems" href="../subsystems.html"/>
+        <link rel="prev" title="Zephyr Sanity Tests" href="../test/sanitycheck.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../subsystems.html">Subsystems</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../subsystems.html">Subsystems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_library.html">Standard C Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../networking/networking.html">Networking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power_management.html">Power Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor.html">Sensor Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shell.html">Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test/index.html">Testing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">USB device stack</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usb-device-controller-drivers">USB device controller drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usb-device-core-layer">USB device core layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usb-device-class-drivers">USB device class drivers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="usb-device-stack">
+<h1>USB device stack<a class="headerlink" href="#usb-device-stack" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>The USB device stack is split into three layers:</dt>
+<dd><ul class="first last simple">
+<li>USB Device Controller drivers (hardware dependent)</li>
+<li>USB device core driver (hardware independent)</li>
+<li>USB device class drivers (hardware independent)</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="usb-device-controller-drivers">
+<h2>USB device controller drivers<a class="headerlink" href="#usb-device-controller-drivers" title="Permalink to this headline">¶</a></h2>
+<p>The Device Controller Driver Layer implements the low level control routines
+to deal directly with the hardware. All device controller drivers should
+implement the APIs described in file usb_dc.h. This allows the integration of
+new USB device controllers to be done without changing the upper layers.
+For now only Quark SE USB device controller (Designware IP) is supported.</p>
+<div class="section" id="structures">
+<h3>Structures<a class="headerlink" href="#structures" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">usb_dc_ep_cfg_data</span> <span class="p">{</span>
+   <span class="n">u8_t</span> <span class="n">ep_addr</span><span class="p">;</span>
+   <span class="n">u16_t</span> <span class="n">ep_mps</span><span class="p">;</span>
+   <span class="k">enum</span> <span class="n">usb_dc_ep_type</span> <span class="n">ep_type</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Structure containing the USB endpoint configuration.</dt>
+<dd><ul class="first last simple">
+<li>ep_addr: endpoint address, the number associated with the EP in the device
+configuration structure.
+IN  EP = 0x80 | &lt;endpoint number&gt;. OUT EP = 0x00 | &lt;endpoint number&gt;</li>
+<li>ep_mps: Endpoint max packet size.</li>
+<li>ep_type: Endpoint type, may be Bulk, Interrupt or Control. Isochronous
+endpoints are not supported for now.</li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">enum</span> <span class="n">usb_dc_status_code</span> <span class="p">{</span>
+   <span class="n">USB_DC_ERROR</span><span class="p">,</span>
+   <span class="n">USB_DC_RESET</span><span class="p">,</span>
+   <span class="n">USB_DC_CONNECTED</span><span class="p">,</span>
+   <span class="n">USB_DC_CONFIGURED</span><span class="p">,</span>
+   <span class="n">USB_DC_DISCONNECTED</span><span class="p">,</span>
+   <span class="n">USB_DC_SUSPEND</span><span class="p">,</span>
+   <span class="n">USB_DC_RESUME</span><span class="p">,</span>
+   <span class="n">USB_DC_UNKNOWN</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Status codes reported by the registered device status callback.</dt>
+<dd><ul class="first last simple">
+<li>USB_DC_ERROR: USB error reported by the controller.</li>
+<li>USB_DC_RESET: USB reset.</li>
+<li>USB_DC_CONNECTED: USB connection established - hardware enumeration is completed.</li>
+<li>USB_DC_CONFIGURED: USB configuration done.</li>
+<li>USB_DC_DISCONNECTED: USB connection lost.</li>
+<li>USB_DC_SUSPEND: USB connection suspended by the HOST.</li>
+<li>USB_DC_RESUME: USB connection resumed by the HOST.</li>
+<li>USB_DC_UNKNOWN: Initial USB connection status.</li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">enum</span> <span class="n">usb_dc_ep_cb_status_code</span> <span class="p">{</span>
+   <span class="n">USB_DC_EP_SETUP</span><span class="p">,</span>
+   <span class="n">USB_DC_EP_DATA_OUT</span><span class="p">,</span>
+   <span class="n">USB_DC_EP_DATA_IN</span><span class="p">,</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Status Codes reported by the registered endpoint callback.</dt>
+<dd><ul class="first last simple">
+<li>USB_DC_EP_SETUP: SETUP packet received.</li>
+<li>USB_DC_EP_DATA_OUT: Out transaction on this endpoint. Data is available
+for read.</li>
+<li>USB_DC_EP_DATA_IN: In transaction done on this endpoint.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="apis">
+<h3>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h3>
+<p>The following APIs are provided by the device controller driver:</p>
+<dl class="docutils">
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_attach()</span></code></dt>
+<dd>This function attaches USB for device connection. Upon success, the USB PLL
+is enabled, and the USB device is now capable of transmitting and receiving
+on the USB bus and of generating interrupts.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_detach()</span></code></dt>
+<dd>This function detaches the USB device. Upon success the USB hardware PLL is
+powered down and USB communication is disabled.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_reset()</span></code></dt>
+<dd>This function returns the USB device to it’s initial state.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_set_address()</span></code></dt>
+<dd>This function sets USB device address.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_set_status_callback()</span></code></dt>
+<dd>This function sets USB device controller status callback. The registered
+callback is used to report changes in the status of the device controller.
+The status code are described by the usb_dc_status_code enumeration.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_ep_configure()</span></code></dt>
+<dd>This function configures an endpoint. usb_dc_ep_cfg_data structure provides
+the endpoint configuration parameters: endpoint address, endpoint maximum
+packet size and endpoint type.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_ep_set_stall()</span></code></dt>
+<dd>This function sets stall condition for the selected endpoint.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_ep_clear_stall()</span></code></dt>
+<dd>This functions clears stall condition for the selected endpoint</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_ep_is_stalled()</span></code></dt>
+<dd>This function check if selected endpoint is stalled.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_ep_halt()</span></code></dt>
+<dd>This function halts the selected endpoint</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_ep_enable()</span></code></dt>
+<dd>This function enables the selected endpoint. Upon success interrupts are
+enabled for the corresponding endpoint and the endpoint is ready for
+transmitting/receiving data.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_ep_disable()</span></code></dt>
+<dd>This function disables the selected endpoint. Upon success interrupts are
+disabled for the corresponding endpoint and the endpoint is no longer able
+for transmitting/receiving data.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_ep_flush()</span></code></dt>
+<dd>This function flushes the FIFOs for the selected endpoint.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_ep_write()</span></code></dt>
+<dd>This function writes data to the specified endpoint. The supplied
+usb_ep_callback function will be called when data is transmitted out.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_ep_read()</span></code></dt>
+<dd>This function is called by the Endpoint handler function, after an OUT
+interrupt has been received for that EP. The application must only call this
+function through the supplied usb_ep_callback function.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_dc_ep_set_callback()</span></code></dt>
+<dd>This function sets callback function for notification of data received
+and available to application or transmit done on the selected endpoint.
+The callback status code is described by usb_dc_ep_cb_status_code.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="usb-device-core-layer">
+<h2>USB device core layer<a class="headerlink" href="#usb-device-core-layer" title="Permalink to this headline">¶</a></h2>
+<p>The USB Device core layer is a hardware independent interface between USB
+device controller driver and USB device class drivers or customer applications.
+It’s a port of the LPCUSB device stack. It provides the following
+functionalities:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Responds to standard device requests and returns standard descriptors,
+essentially handling ‘Chapter 9’ processing, specifically the standard
+device requests in table 9-3 from the universal serial bus specification
+revision 2.0.</li>
+<li>Provides a programming interface to be used by USB device classes or
+customer applications. The APIs are described in the usb_device.h file.</li>
+<li>Uses the APIs provided by the device controller drivers to interact with
+the USB device controller.</li>
+</ul>
+</div></blockquote>
+<div class="section" id="id1">
+<h3>Structures<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">usb_status_callback</span><span class="p">)(</span><span class="k">enum</span> <span class="n">usb_dc_status_code</span> <span class="n">status_code</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Callback function signature for the device status.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">usb_ep_callback</span><span class="p">)(</span><span class="n">u8_t</span> <span class="n">ep</span><span class="p">,</span>
+   <span class="k">enum</span> <span class="n">usb_dc_ep_cb_status_code</span> <span class="n">cb_status</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Callback function signature for the USB Endpoint.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="nf">int</span> <span class="p">(</span><span class="o">*</span><span class="n">usb_request_handler</span><span class="p">)</span> <span class="p">(</span><span class="k">struct</span> <span class="n">usb_setup_packet</span> <span class="o">*</span><span class="n">setup</span><span class="p">,</span>
+   <span class="kt">int</span> <span class="o">*</span><span class="n">transfer_len</span><span class="p">,</span> <span class="n">u8_t</span> <span class="o">**</span><span class="n">payload_data</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Callback function signature for class specific requests. For host to device
+direction the ‘len’ and ‘payload_data’ contain the length of the received data
+and the pointer to the received data respectively. For device to host class
+requests, ‘len’ and ‘payload_data’ should be set by the callback function
+with the length and the address of the data to be transmitted buffer
+respectively.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">usb_ep_cfg_data</span> <span class="p">{</span>
+   <span class="n">usb_ep_callback</span> <span class="n">ep_cb</span><span class="p">;</span>
+   <span class="n">u8_t</span> <span class="n">ep_addr</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>This structure contains configuration for a certain endpoint.</dt>
+<dd><ul class="first last simple">
+<li>ep_cb: callback function for notification of data received and available
+to application or transmit done, NULL if callback not required by
+application code.</li>
+<li>ep_addr: endpoint address. The number associated with the EP in the device
+configuration structure.</li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">usb_interface_cfg_data</span> <span class="p">{</span>
+   <span class="n">usb_request_handler</span> <span class="n">class_handler</span><span class="p">;</span>
+   <span class="n">usb_request_handler</span> <span class="n">custom_handler</span><span class="p">;</span>
+   <span class="n">u8_t</span> <span class="o">*</span><span class="n">payload_data</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>This structure contains USB interface configuration.</dt>
+<dd><ul class="first last simple">
+<li>class_handler: handler for USB Class specific Control (EP 0)
+communications.</li>
+<li>custom_handler: the custom request handler gets a first
+chance at handling the request before it is handed over to the
+‘chapter 9’ request handler.</li>
+<li>payload_data: this data area, allocated by the application, is used to
+store class specific command data and must be large enough to store the
+largest payload associated with the largest supported Class’ command set.</li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">usb_cfg_data</span> <span class="p">{</span>
+   <span class="k">const</span> <span class="n">u8_t</span> <span class="o">*</span><span class="n">usb_device_description</span><span class="p">;</span>
+   <span class="n">usb_status_callback</span> <span class="n">cb_usb_status</span><span class="p">;</span>
+   <span class="k">struct</span> <span class="n">usb_interface_cfg_data</span> <span class="n">interface</span><span class="p">;</span>
+   <span class="n">u8_t</span> <span class="n">num_endpoints</span><span class="p">;</span>
+   <span class="k">struct</span> <span class="n">usb_ep_cfg_data</span> <span class="o">*</span><span class="n">endpoint</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>This structure contains USB device configuration.</dt>
+<dd><ul class="first last simple">
+<li>usb_device_description: USB device description, see
+<a class="reference external" href="http://www.beyondlogic.org/usbnutshell/usb5.shtml#DeviceDescriptors">http://www.beyondlogic.org/usbnutshell/usb5.shtml#DeviceDescriptors</a></li>
+<li>cb_usb_status: callback to be notified on USB connection status change</li>
+<li>interface:  USB class handlers and storage space.</li>
+<li>num_endpoints: number of individual endpoints in the device configuration</li>
+<li>endpoint: pointer to an array of endpoint configuration structures
+(usb_cfg_data) of length equal to the number of EP associated with the
+device description, not including control endpoints.</li>
+</ul>
+</dd>
+</dl>
+<p>The class drivers instantiates this with given parameters using the
+“usb_set_config” function.</p>
+</div>
+<div class="section" id="id2">
+<h3>APIs<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_set_config()</span></code></dt>
+<dd>This function configures USB device.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_deconfig()</span></code></dt>
+<dd>This function returns the USB device back to it’s initial state</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_enable()</span></code></dt>
+<dd>This function enable USB for host/device connection. Upon success, the USB
+module is no longer clock gated in hardware, it is now capable of
+transmitting and receiving on the USB bus and of generating interrupts.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_disable()</span></code></dt>
+<dd>This function disables the USB device. Upon success, the USB module clock
+is gated in hardware and it is no longer capable of generating interrupts.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_write()</span></code></dt>
+<dd>write data to the specified endpoint. The supplied usb_ep_callback will be
+called when transmission is done.</dd>
+<dt><code class="xref c c-func docutils literal"><span class="pre">usb_read()</span></code></dt>
+<dd>This function is called by the endpoint handler function after an OUT
+interrupt has been received for that EP. The application must only call
+this function through the supplied usb_ep_callback function.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="usb-device-class-drivers">
+<h2>USB device class drivers<a class="headerlink" href="#usb-device-class-drivers" title="Permalink to this headline">¶</a></h2>
+<p>To initialize the device class driver instance the USB device class driver
+should call usb_set_config() passing as parameter the instance’s configuration
+structure.</p>
+<p>For example, for CDC_ACM sample application:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">u8_t</span> <span class="n">cdc_acm_usb_description</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="cm">/* Device descriptor */</span>
+   <span class="n">USB_DEVICE_DESC_SIZE</span><span class="p">,</span>           <span class="cm">/* Descriptor size */</span>
+   <span class="n">USB_DEVICE_DESC</span><span class="p">,</span>                <span class="cm">/* Descriptor type */</span>
+   <span class="n">LOW_BYTE</span><span class="p">(</span><span class="n">USB_1_1</span><span class="p">),</span>
+   <span class="n">HIGH_BYTE</span><span class="p">(</span><span class="n">USB_1_1</span><span class="p">),</span>             <span class="cm">/* USB version in BCD format */</span>
+   <span class="n">COMMUNICATION_DEVICE_CLASS</span><span class="p">,</span>     <span class="cm">/* Class */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* SubClass - Interface specific */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Protocol - Interface specific */</span>
+   <span class="n">MAX_PACKET_SIZE_EP0</span><span class="p">,</span>            <span class="cm">/* Max Packet Size */</span>
+   <span class="n">LOW_BYTE</span><span class="p">(</span><span class="n">VENDOR_ID</span><span class="p">),</span>
+   <span class="n">HIGH_BYTE</span><span class="p">(</span><span class="n">VENDOR_ID</span><span class="p">),</span>           <span class="cm">/* Vendor Id */</span>
+   <span class="n">LOW_BYTE</span><span class="p">(</span><span class="n">CDC_PRODUCT_ID</span><span class="p">),</span>
+   <span class="n">HIGH_BYTE</span><span class="p">(</span><span class="n">CDC_PRODUCT_ID</span><span class="p">),</span>      <span class="cm">/* Product Id */</span>
+   <span class="n">LOW_BYTE</span><span class="p">(</span><span class="n">BCDDEVICE_RELNUM</span><span class="p">),</span>
+   <span class="n">HIGH_BYTE</span><span class="p">(</span><span class="n">BCDDEVICE_RELNUM</span><span class="p">),</span>    <span class="cm">/* Device Release Number */</span>
+   <span class="mh">0x01</span><span class="p">,</span>                           <span class="cm">/* Index of Manufacturer String Descriptor */</span>
+   <span class="mh">0x02</span><span class="p">,</span>                           <span class="cm">/* Index of Product String Descriptor */</span>
+   <span class="mh">0x03</span><span class="p">,</span>                           <span class="cm">/* Index of Serial Number String Descriptor */</span>
+   <span class="n">CDC_NUM_CONF</span><span class="p">,</span>                   <span class="cm">/* Number of Possible Configuration */</span>
+
+   <span class="cm">/* Configuration descriptor */</span>
+   <span class="n">USB_CONFIGURATION_DESC_SIZE</span><span class="p">,</span>    <span class="cm">/* Descriptor size */</span>
+   <span class="n">USB_CONFIGURATION_DESC</span><span class="p">,</span>         <span class="cm">/* Descriptor type */</span>
+   <span class="n">LOW_BYTE</span><span class="p">(</span><span class="n">CDC_CONF_SIZE</span><span class="p">),</span>
+   <span class="n">HIGH_BYTE</span><span class="p">(</span><span class="n">CDC_CONF_SIZE</span><span class="p">),</span>       <span class="cm">/* Total length in bytes of data returned */</span>
+   <span class="n">CDC_NUM_ITF</span><span class="p">,</span>                    <span class="cm">/* Number of interfaces */</span>
+   <span class="mh">0x01</span><span class="p">,</span>                           <span class="cm">/* Configuration value */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Index of the Configuration string */</span>
+   <span class="n">USB_CONFIGURATION_ATTRIBUTES</span><span class="p">,</span>   <span class="cm">/* Attributes */</span>
+   <span class="n">MAX_LOW_POWER</span><span class="p">,</span>                  <span class="cm">/* Max power consumption */</span>
+
+   <span class="cm">/* Interface descriptor */</span>
+   <span class="n">USB_INTERFACE_DESC_SIZE</span><span class="p">,</span>        <span class="cm">/* Descriptor size */</span>
+   <span class="n">USB_INTERFACE_DESC</span><span class="p">,</span>             <span class="cm">/* Descriptor type */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Interface index */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Alternate setting */</span>
+   <span class="n">CDC1_NUM_EP</span><span class="p">,</span>                    <span class="cm">/* Number of Endpoints */</span>
+   <span class="n">COMMUNICATION_DEVICE_CLASS</span><span class="p">,</span>     <span class="cm">/* Class */</span>
+   <span class="n">ACM_SUBCLASS</span><span class="p">,</span>                   <span class="cm">/* SubClass */</span>
+   <span class="n">V25TER_PROTOCOL</span><span class="p">,</span>                <span class="cm">/* Protocol */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Index of the Interface String Descriptor */</span>
+
+   <span class="cm">/* Header Functional Descriptor */</span>
+   <span class="n">USB_HFUNC_DESC_SIZE</span><span class="p">,</span>            <span class="cm">/* Descriptor size */</span>
+   <span class="n">CS_INTERFACE</span><span class="p">,</span>                   <span class="cm">/* Descriptor type */</span>
+   <span class="n">USB_HFUNC_SUBDESC</span><span class="p">,</span>              <span class="cm">/* Descriptor SubType */</span>
+   <span class="n">LOW_BYTE</span><span class="p">(</span><span class="n">USB_1_1</span><span class="p">),</span>
+   <span class="n">HIGH_BYTE</span><span class="p">(</span><span class="n">USB_1_1</span><span class="p">),</span>             <span class="cm">/* CDC Device Release Number */</span>
+
+   <span class="cm">/* Call Management Functional Descriptor */</span>
+   <span class="n">USB_CMFUNC_DESC_SIZE</span><span class="p">,</span>           <span class="cm">/* Descriptor size */</span>
+   <span class="n">CS_INTERFACE</span><span class="p">,</span>                   <span class="cm">/* Descriptor type */</span>
+   <span class="n">USB_CMFUNC_SUBDESC</span><span class="p">,</span>             <span class="cm">/* Descriptor SubType */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Capabilities */</span>
+   <span class="mh">0x01</span><span class="p">,</span>                           <span class="cm">/* Data Interface */</span>
+
+   <span class="cm">/* ACM Functional Descriptor */</span>
+   <span class="n">USB_ACMFUNC_DESC_SIZE</span><span class="p">,</span>          <span class="cm">/* Descriptor size */</span>
+   <span class="n">CS_INTERFACE</span><span class="p">,</span>                   <span class="cm">/* Descriptor type */</span>
+   <span class="n">USB_ACMFUNC_SUBDESC</span><span class="p">,</span>            <span class="cm">/* Descriptor SubType */</span>
+   <span class="cm">/* Capabilities - Device supports the request combination of:</span>
+<span class="cm">    *        Set_Line_Coding,</span>
+<span class="cm">    *        Set_Control_Line_State,</span>
+<span class="cm">    *        Get_Line_Coding</span>
+<span class="cm">    *        and the notification Serial_State</span>
+<span class="cm">    */</span>
+   <span class="mh">0x02</span><span class="p">,</span>
+
+   <span class="cm">/* Union Functional Descriptor */</span>
+   <span class="n">USB_UFUNC_DESC_SIZE</span><span class="p">,</span>            <span class="cm">/* Descriptor size */</span>
+   <span class="n">CS_INTERFACE</span><span class="p">,</span>                   <span class="cm">/* Descriptor type */</span>
+   <span class="n">USB_UFUNC_SUBDESC</span><span class="p">,</span>              <span class="cm">/* Descriptor SubType */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Master Interface */</span>
+   <span class="mh">0x01</span><span class="p">,</span>                           <span class="cm">/* Slave Interface */</span>
+
+   <span class="cm">/* Endpoint INT */</span>
+   <span class="n">USB_ENDPOINT_DESC_SIZE</span><span class="p">,</span>         <span class="cm">/* Descriptor size */</span>
+   <span class="n">USB_ENDPOINT_DESC</span><span class="p">,</span>              <span class="cm">/* Descriptor type */</span>
+   <span class="n">CDC_ENDP_INT</span><span class="p">,</span>                   <span class="cm">/* Endpoint address */</span>
+   <span class="n">USB_DC_EP_INTERRUPT</span><span class="p">,</span>            <span class="cm">/* Attributes */</span>
+   <span class="n">LOW_BYTE</span><span class="p">(</span><span class="n">CDC_INTERRUPT_EP_MPS</span><span class="p">),</span>
+   <span class="n">HIGH_BYTE</span><span class="p">(</span><span class="n">CDC_INTERRUPT_EP_MPS</span><span class="p">),</span><span class="cm">/* Max packet size */</span>
+   <span class="mh">0x0A</span><span class="p">,</span>                           <span class="cm">/* Interval */</span>
+
+   <span class="cm">/* Interface descriptor */</span>
+   <span class="n">USB_INTERFACE_DESC_SIZE</span><span class="p">,</span>        <span class="cm">/* Descriptor size */</span>
+   <span class="n">USB_INTERFACE_DESC</span><span class="p">,</span>             <span class="cm">/* Descriptor type */</span>
+   <span class="mh">0x01</span><span class="p">,</span>                           <span class="cm">/* Interface index */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Alternate setting */</span>
+   <span class="n">CDC2_NUM_EP</span><span class="p">,</span>                    <span class="cm">/* Number of Endpoints */</span>
+   <span class="n">COMMUNICATION_DEVICE_CLASS_DATA</span><span class="p">,</span><span class="cm">/* Class */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* SubClass */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Protocol */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Index of the Interface String Descriptor */</span>
+
+   <span class="cm">/* First Endpoint IN */</span>
+   <span class="n">USB_ENDPOINT_DESC_SIZE</span><span class="p">,</span>         <span class="cm">/* Descriptor size */</span>
+   <span class="n">USB_ENDPOINT_DESC</span><span class="p">,</span>              <span class="cm">/* Descriptor type */</span>
+   <span class="n">CDC_ENDP_IN</span><span class="p">,</span>                    <span class="cm">/* Endpoint address */</span>
+   <span class="n">USB_DC_EP_BULK</span><span class="p">,</span>                 <span class="cm">/* Attributes */</span>
+   <span class="n">LOW_BYTE</span><span class="p">(</span><span class="n">CDC_BULK_EP_MPS</span><span class="p">),</span>
+   <span class="n">HIGH_BYTE</span><span class="p">(</span><span class="n">CDC_BULK_EP_MPS</span><span class="p">),</span>     <span class="cm">/* Max packet size */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Interval */</span>
+
+   <span class="cm">/* Second Endpoint OUT */</span>
+   <span class="n">USB_ENDPOINT_DESC_SIZE</span><span class="p">,</span>         <span class="cm">/* Descriptor size */</span>
+   <span class="n">USB_ENDPOINT_DESC</span><span class="p">,</span>              <span class="cm">/* Descriptor type */</span>
+   <span class="n">CDC_ENDP_OUT</span><span class="p">,</span>                   <span class="cm">/* Endpoint address */</span>
+   <span class="n">USB_DC_EP_BULK</span><span class="p">,</span>                 <span class="cm">/* Attributes */</span>
+   <span class="n">LOW_BYTE</span><span class="p">(</span><span class="n">CDC_BULK_EP_MPS</span><span class="p">),</span>
+   <span class="n">HIGH_BYTE</span><span class="p">(</span><span class="n">CDC_BULK_EP_MPS</span><span class="p">),</span>     <span class="cm">/* Max packet size */</span>
+   <span class="mh">0x00</span><span class="p">,</span>                           <span class="cm">/* Interval */</span>
+
+   <span class="cm">/* String descriptor language, only one, so min size 4 bytes.</span>
+<span class="cm">    * 0x0409 English(US) language code used</span>
+<span class="cm">    */</span>
+   <span class="n">USB_STRING_DESC_SIZE</span><span class="p">,</span>           <span class="cm">/* Descriptor size */</span>
+   <span class="n">USB_STRING_DESC</span><span class="p">,</span>                <span class="cm">/* Descriptor type */</span>
+   <span class="mh">0x09</span><span class="p">,</span>
+   <span class="mh">0x04</span><span class="p">,</span>
+   <span class="cm">/* Manufacturer String Descriptor &quot;Intel&quot; */</span>
+   <span class="mh">0x0C</span><span class="p">,</span>
+   <span class="n">USB_STRING_DESC</span><span class="p">,</span>
+   <span class="sc">&#39;I&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;n&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;t&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;e&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;l&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="cm">/* Product String Descriptor &quot;CDC-ACM&quot; */</span>
+   <span class="mh">0x10</span><span class="p">,</span>
+   <span class="n">USB_STRING_DESC</span><span class="p">,</span>
+   <span class="sc">&#39;C&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;D&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;C&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;-&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;A&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;C&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;M&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="cm">/* Serial Number String Descriptor &quot;00.01&quot; */</span>
+   <span class="mh">0x0C</span><span class="p">,</span>
+   <span class="n">USB_STRING_DESC</span><span class="p">,</span>
+   <span class="sc">&#39;0&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;0&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;.&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;0&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;1&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">struct</span> <span class="n">usb_ep_cfg_data</span> <span class="n">cdc_acm_ep_data</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="p">{</span>
+      <span class="p">.</span><span class="n">ep_cb</span> <span class="o">=</span> <span class="n">cdc_acm_int_in</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">ep_addr</span> <span class="o">=</span> <span class="n">CDC_ENDP_INT</span>
+   <span class="p">},</span>
+   <span class="p">{</span>
+      <span class="p">.</span><span class="n">ep_cb</span> <span class="o">=</span> <span class="n">cdc_acm_bulk_out</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">ep_addr</span> <span class="o">=</span> <span class="n">CDC_ENDP_OUT</span>
+   <span class="p">},</span>
+   <span class="p">{</span>
+      <span class="p">.</span><span class="n">ep_cb</span> <span class="o">=</span> <span class="n">cdc_acm_bulk_in</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">ep_addr</span> <span class="o">=</span> <span class="n">CDC_ENDP_IN</span>
+   <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">struct</span> <span class="n">usb_cfg_data</span> <span class="n">cdc_acm_config</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="p">.</span><span class="n">usb_device_description</span> <span class="o">=</span> <span class="n">cdc_acm_usb_description</span><span class="p">,</span>
+   <span class="p">.</span><span class="n">cb_usb_status</span> <span class="o">=</span> <span class="n">cdc_acm_dev_status_cb</span><span class="p">,</span>
+   <span class="p">.</span><span class="n">interface</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="p">.</span><span class="n">class_handler</span> <span class="o">=</span> <span class="n">cdc_acm_class_handle_req</span><span class="p">,</span>
+   <span class="p">.</span><span class="n">custom_handler</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">,</span>
+   <span class="p">.</span><span class="n">payload_data</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">,</span>
+   <span class="p">},</span>
+   <span class="p">.</span><span class="n">num_endpoints</span> <span class="o">=</span> <span class="n">CDC1_NUM_EP</span> <span class="o">+</span> <span class="n">CDC2_NUM_EP</span><span class="p">,</span>
+   <span class="p">.</span><span class="n">endpoint</span> <span class="o">=</span> <span class="n">cdc_acm_ep_data</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">ret</span> <span class="o">=</span> <span class="n">usb_set_config</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cdc_acm_config</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DBG</span><span class="p">(</span><span class="s">&quot;Failed to config USB</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+   <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To enable the USB device for host/device connection:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">ret</span> <span class="o">=</span> <span class="n">usb_enable</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cdc_acm_config</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DBG</span><span class="p">(</span><span class="s">&quot;Failed to enable USB</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+   <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The class device requests are forwarded by the USB stack core driver to the
+class driver through the registered class handler.
+For the CDC ACM sample class driver, ‘cdc_acm_class_handle_req’ processes
+the SET_LINE_CODING, CDC_SET_CONTROL_LINE_STATE and CDC_GET_LINE_CODING
+class requests:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">cdc_acm_class_handle_req</span><span class="p">(</span><span class="k">struct</span> <span class="n">usb_setup_packet</span> <span class="o">*</span><span class="n">pSetup</span><span class="p">,</span>
+      <span class="n">s32_t</span> <span class="o">*</span><span class="n">len</span><span class="p">,</span> <span class="n">u8_t</span> <span class="o">**</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="k">struct</span> <span class="n">cdc_acm_dev_data_t</span> <span class="o">*</span> <span class="k">const</span> <span class="n">dev_data</span> <span class="o">=</span> <span class="n">DEV_DATA</span><span class="p">(</span><span class="n">cdc_acm_dev</span><span class="p">);</span>
+
+   <span class="k">switch</span> <span class="p">(</span><span class="n">pSetup</span><span class="o">-&gt;</span><span class="n">bRequest</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">case</span> <span class="nl">CDC_SET_LINE_CODING</span><span class="p">:</span>
+      <span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">,</span> <span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">));</span>
+      <span class="n">DBG</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">CDC_SET_LINE_CODING %d %d %d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+         <span class="n">sys_le32_to_cpu</span><span class="p">(</span><span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">.</span><span class="n">dwDTERate</span><span class="p">),</span>
+         <span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">.</span><span class="n">bCharFormat</span><span class="p">,</span>
+         <span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">.</span><span class="n">bParityType</span><span class="p">,</span>
+         <span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">.</span><span class="n">bDataBits</span><span class="p">);</span>
+   <span class="k">break</span><span class="p">;</span>
+
+   <span class="k">case</span> <span class="nl">CDC_SET_CONTROL_LINE_STATE</span><span class="p">:</span>
+      <span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_state</span> <span class="o">=</span> <span class="p">(</span><span class="n">u8_t</span><span class="p">)</span><span class="n">sys_le16_to_cpu</span><span class="p">(</span><span class="n">pSetup</span><span class="o">-&gt;</span><span class="n">wValue</span><span class="p">);</span>
+      <span class="n">DBG</span><span class="p">(</span><span class="s">&quot;CDC_SET_CONTROL_LINE_STATE 0x%x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_state</span><span class="p">);</span>
+         <span class="k">break</span><span class="p">;</span>
+
+   <span class="k">case</span> <span class="nl">CDC_GET_LINE_CODING</span><span class="p">:</span>
+      <span class="o">*</span><span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">u8_t</span> <span class="o">*</span><span class="p">)(</span><span class="o">&amp;</span><span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">);</span>
+      <span class="o">*</span><span class="n">len</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">);</span>
+      <span class="n">DBG</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">CDC_GET_LINE_CODING %d %d %d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+      <span class="n">sys_le32_to_cpu</span><span class="p">(</span><span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">.</span><span class="n">dwDTERate</span><span class="p">),</span>
+         <span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">.</span><span class="n">bCharFormat</span><span class="p">,</span>
+         <span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">.</span><span class="n">bParityType</span><span class="p">,</span>
+         <span class="n">dev_data</span><span class="o">-&gt;</span><span class="n">line_coding</span><span class="p">.</span><span class="n">bDataBits</span><span class="p">);</span>
+         <span class="k">break</span><span class="p">;</span>
+
+   <span class="k">default</span><span class="o">:</span>
+      <span class="n">DBG</span><span class="p">(</span><span class="s">&quot;CDC ACM request 0x%x, value 0x%x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+         <span class="n">pSetup</span><span class="o">-&gt;</span><span class="n">bRequest</span><span class="p">,</span> <span class="n">pSetup</span><span class="o">-&gt;</span><span class="n">wValue</span><span class="p">);</span>
+         <span class="k">return</span> <span class="o">-</span><span class="n">EINVAL</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The class driver should wait for the USB_DC_CONFIGURED device status code
+before transmitting any data.</p>
+<p>To transmit data to the host, the class driver should call usb_write().
+Upon completion the registered endpoint callback will be called. Before
+sending another packet the class driver should wait for the completion of
+the previous transfer.</p>
+<p>When data is received, the registered endpoint callback is called.
+usb_read() should be used for retrieving the received data. It must
+always be called through the registered endpoint callback. For CDC ACM
+sample driver this happens via the OUT bulk endpoint handler (cdc_acm_bulk_out)
+mentioned in the endpoint array (cdc_acm_ep_data).</p>
+<p>Only CDC ACM and DFU class driver examples are provided for now.</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+    
+      <a href="../test/sanitycheck.html" class="btn btn-neutral" title="Zephyr Sanity Tests" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

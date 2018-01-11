@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: NET_TCP_2MSL_TIME
+
+.. option:: CONFIG_NET_TCP_2MSL_TIME
+.. _CONFIG_NET_TCP_2MSL_TIME:
+
+The value is in seconds.
+
+
+
+:Symbol:           NET_TCP_2MSL_TIME
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "How long to wait in TIME_WAIT (in seconds)" if NET_TCP_TIME_WAIT (value: "n")
+:Default values:
+
+ *  240 (value: "n")
+ *   Condition: NET_TCP_TIME_WAIT (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig:140

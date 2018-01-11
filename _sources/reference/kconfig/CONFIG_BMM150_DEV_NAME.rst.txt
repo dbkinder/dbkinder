@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: BMM150_DEV_NAME
+
+.. option:: CONFIG_BMM150_DEV_NAME
+.. _CONFIG_BMM150_DEV_NAME:
+
+The configuration item CONFIG_BMM150_DEV_NAME:
+
+:Symbol:           BMM150_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "BMM150 device name"
+:Default values:
+
+ *  "bmm150"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BMM150 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/bmm150/Kconfig:17

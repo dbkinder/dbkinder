@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Getting Started Guide &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="next" title="Development Environment Setup on Linux" href="installation_linux.html"/>
+        <link rel="prev" title="Introducing Zephyr" href="../introduction/introducing_zephyr.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#checking-out-the-source-code-anonymously">Checking Out the Source Code Anonymously</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-the-development-environment">Set Up the Development Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation_linux.html">Development Environment Setup on Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation_mac.html">Development Environment Setup on macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation_win.html">Development Environment Setup on Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-and-running-an-application">Building and Running an Application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#building-a-sample-application">Building a Sample Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-without-the-zephyr-sdk">Building without the Zephyr SDK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-custom-and-3rd-party-cross-compilers">Using Custom and 3rd Party Cross Compilers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-a-sample-application-in-qemu">Running a Sample Application in QEMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-a-sample-application-natively-posix-os">Running a Sample Application natively (POSIX OS)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="getting-started-guide">
+<span id="getting-started"></span><h1>Getting Started Guide<a class="headerlink" href="#getting-started-guide" title="Permalink to this headline">¶</a></h1>
+<p>Use this guide to get started with your <a class="reference internal" href="../introduction/introducing_zephyr.html#introducing-zephyr"><span class="std std-ref">Zephyr</span></a>
+development.</p>
+<div class="section" id="checking-out-the-source-code-anonymously">
+<h2>Checking Out the Source Code Anonymously<a class="headerlink" href="#checking-out-the-source-code-anonymously" title="Permalink to this headline">¶</a></h2>
+<p>The Zephyr source code is hosted in a GitHub repo that supports
+anonymous cloning via git. There are scripts and such in this repo that
+you’ll need to set up your development environment, and we’ll be using
+Git to get this repo.  (If you don’t have Git installed, see the
+beginning of the OS-specific instructions below for help.)</p>
+<p>We’ll begin by
+using Git to clone the repository anonymously. Enter:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> ~
+<span class="gp">$</span> git clone https://github.com/zephyrproject-rtos/zephyr.git
+</pre></div>
+</div>
+<p>You have successfully checked out a copy of the source code to your local
+machine in the ~/zephyr folder.</p>
+</div>
+<div class="section" id="set-up-the-development-environment">
+<h2>Set Up the Development Environment<a class="headerlink" href="#set-up-the-development-environment" title="Permalink to this headline">¶</a></h2>
+<p>The Zephyr project supports these operating systems:</p>
+<ul class="simple">
+<li>Linux</li>
+<li>macOS</li>
+<li>Windows 8.1</li>
+</ul>
+<p>Use the following procedures to create a new development environment.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation_linux.html">Development Environment Setup on Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_mac.html">Development Environment Setup on macOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_win.html">Development Environment Setup on Windows</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="building-and-running-an-application">
+<span id="getting-started-run-sample"></span><h2>Building and Running an Application<a class="headerlink" href="#building-and-running-an-application" title="Permalink to this headline">¶</a></h2>
+<p>Using the ‘Hello World’ sample application as a base model, the following
+section will describe the pieces necessary for creating a Zephyr application.</p>
+<p>The processes to build and run a Zephyr application are the same across
+operating systems. Nevertheless, the commands needed do differ from one OS to
+the next. The following sections contain the commands used in a Linux
+development environment. If you are using macOS please use the appropriate
+commands for your OS.</p>
+<div class="section" id="building-a-sample-application">
+<h3>Building a Sample Application<a class="headerlink" href="#building-a-sample-application" title="Permalink to this headline">¶</a></h3>
+<p>To build an example application follow these steps:</p>
+<ol class="arabic">
+<li><p class="first">Make sure your environment is setup by exporting the following environment
+variables. When using the Zephyr SDK on Linux for example, type:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">ZEPHYR_GCC_VARIANT</span><span class="o">=</span>zephyr
+<span class="gp">$</span> <span class="nb">export</span> <span class="nv">ZEPHYR_SDK_INSTALL_DIR</span><span class="o">=</span>&lt;sdk installation directory&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Navigate to the main project directory:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> zephyr
+</pre></div>
+</div>
+</li>
+<li><p class="first">Source the project environment file to set the project environment
+variables:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">source</span> zephyr-env.sh
+</pre></div>
+</div>
+</li>
+<li><p class="first">Build the <a class="reference internal" href="../samples/hello_world/README.html#hello-world"><span class="std std-ref">Hello World</span></a> example for the <cite>arduino_101</cite> board, enter:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir -p build/arduino_101 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build/arduino_101
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>arduino_101 ../..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+</pre></div>
+</div>
+</li>
+</ol>
+<p>You can build for a different board by defining the variable BOARD
+with another of the supported boards, for example:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir -p build/arduino_due <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build/arduino_due
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>arduino_due ../..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+</pre></div>
+</div>
+</div></blockquote>
+<p>For further information on the supported boards go see
+<a class="reference internal" href="../boards/boards.html#boards"><span class="std std-ref">here</span></a>. Alternatively, run the following command to obtain a list
+of the supported boards:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> make usage
+</pre></div>
+</div>
+<p>Sample projects for different features of the project are available at
+at <code class="file docutils literal"><span class="pre">$ZEPHYR_BASE/samples</span></code>.
+After building an application successfully, the results can be found in the
+directory where cmake was invoked.</p>
+<p>The ELF binaries generated by the build system are named by default
+<code class="file docutils literal"><span class="pre">zephyr.elf</span></code>. This value can be overridden in the application
+configuration The build system generates different names for different use cases
+depending on the hardware and boards used.</p>
+</div>
+<div class="section" id="building-without-the-zephyr-sdk">
+<span id="sdkless-builds"></span><h3>Building without the Zephyr SDK<a class="headerlink" href="#building-without-the-zephyr-sdk" title="Permalink to this headline">¶</a></h3>
+<p>The Zephyr SDK is provided for convenience and ease of use. It provides
+cross-compilers for all ports supported by the Zephyr OS and does not require
+any extra flags when building applications or running tests.</p>
+<p>In addition to cross-compilers, the Zephyr SDK also provides prebuilt
+host tools. To use the SDK host tools alongside a custom or 3rd party
+cross-compiler, keep the ZEPHYR_SDK_INSTALL_DIR environment variable
+set to the Zephyr SDK installation directory.</p>
+<p>To build without the Zephyr SDK’s prebuilt host tools, the
+ZEPHYR_SDK_INSTALL_DIR environment variable must be unset, the host
+tools must be built and added to path, and a 3rd party cross-compiler
+must be installed.</p>
+<ol class="arabic">
+<li><p class="first">Follow the steps below to build without the Zephyr SDK:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">unset</span> ZEPHYR_GCC_VARIANT
+<span class="gp">$</span> <span class="nb">unset</span> ZEPHYR_SDK_INSTALL_DIR
+<span class="gp">$</span> <span class="nb">cd</span> &lt;zephyr git clone location&gt;
+<span class="gp">$</span> <span class="nb">source</span> zephyr-env.sh
+</pre></div>
+</div>
+</li>
+<li><p class="first">Build Kconfig in <code class="file docutils literal"><span class="pre">$ZEPHYR_BASE/build</span></code> and add it to path</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake <span class="nv">$ZEPHYR_BASE</span>/scripts
+<span class="gp">$</span> make
+<span class="gp">$</span> <span class="nb">echo</span> <span class="s2">&quot;export PATH=</span><span class="nv">$PWD</span><span class="s2">/kconfig:\$PATH&quot;</span> &gt;&gt; <span class="nv">$HOME</span>/.zephyrrc
+<span class="gp">$</span> <span class="nb">source</span> <span class="nv">$ZEPHYR_BASE</span>/zephyr-env.sh
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You only need to do this once after cloning the git repository.</p>
+</div>
+</li>
+</ol>
+<p>Now that the host tools are installed, a 3rd party cross compiler must
+be installed. See <a class="reference internal" href="#using-custom-and-3rd-party-cross-compilers">Using Custom and 3rd Party Cross Compilers</a> for
+details.</p>
+</div>
+<div class="section" id="using-custom-and-3rd-party-cross-compilers">
+<span id="third-party-x-compilers"></span><h3>Using Custom and 3rd Party Cross Compilers<a class="headerlink" href="#using-custom-and-3rd-party-cross-compilers" title="Permalink to this headline">¶</a></h3>
+<p>To use a 3rd party cross compiler that is not provided by the Zephyr
+SDK, follow the steps below. It is possible to use a 3rd party cross
+compiler and still use the Zephyr SDK’s host tools. See <a class="reference internal" href="#building-without-the-zephyr-sdk">Building
+without the Zephyr SDK</a> for details.</p>
+<ol class="arabic">
+<li><p class="first">We will use the <a class="reference external" href="https://launchpad.net/gcc-arm-embedded">GCC ARM Embedded</a> compiler for this example, download the
+package suitable for your operating system from the <a class="reference external" href="https://launchpad.net/gcc-arm-embedded">GCC ARM Embedded</a> website
+and extract it on your file system. This example assumes the compiler was
+extracted to: <code class="file docutils literal"><span class="pre">~/gcc-arm-none-eabi-5_3-2016q1/</span></code>.</p>
+</li>
+<li><p class="first">Build the example <a class="reference internal" href="../samples/hello_world/README.html#hello-world"><span class="std std-ref">Hello World</span></a> project, enter:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">GCCARMEMB_TOOLCHAIN_PATH</span><span class="o">=</span><span class="s2">&quot;~/gcc-arm-none-eabi-5_3-2016q1/&quot;</span>
+<span class="gp">$</span> <span class="nb">export</span> <span class="nv">ZEPHYR_GCC_VARIANT</span><span class="o">=</span>gccarmemb
+</pre></div>
+</div>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>arduino_due ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="running-a-sample-application-in-qemu">
+<h3>Running a Sample Application in QEMU<a class="headerlink" href="#running-a-sample-application-in-qemu" title="Permalink to this headline">¶</a></h3>
+<p>To perform rapid testing of an application in the development environment you
+can use the QEMU emulation board configuration available for both X86 and ARM
+Cortex-M3 architectures. This can be easily accomplished by calling a special
+target when building an application that invokes QEMU once the build process is
+completed.</p>
+<p>To run an application using the x86 emulation board configuration (qemu_x86),
+type:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+<span class="gp">$</span> mkdir qemu_build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> qemu_build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>qemu_x86 ..
+<span class="gp">$</span> make run
+</pre></div>
+</div>
+<p>To exit the qemu emulator, press <code class="docutils literal"><span class="pre">Ctrl-a</span></code>, followed by <code class="docutils literal"><span class="pre">x</span></code>.</p>
+<p>Use the <code class="docutils literal"><span class="pre">qemu_cortex_m3</span></code> board configuration to test the ARM build.</p>
+<p>QEMU is not supported on all boards and SoCs. When developing for a specific
+hardware target you should always test on the actual hardware and should not
+rely on testing in the QEMU emulation environment only.</p>
+</div>
+<div class="section" id="running-a-sample-application-natively-posix-os">
+<h3>Running a Sample Application natively (POSIX OS)<a class="headerlink" href="#running-a-sample-application-natively-posix-os" title="Permalink to this headline">¶</a></h3>
+<p>It is also possible to compile some of the sample and test applications to run
+as native process on a POSIX OS (e.g. Linux).
+To be able to do this, remember to have installed the 32 bit libC if your OS is
+natively 64bit.</p>
+<p>To compile and run an application in this way, type:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>native_posix ..
+<span class="gp">$</span> make
+</pre></div>
+</div>
+<p>and then:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> make run
+<span class="gp">#</span> or just:
+<span class="gp">$</span> zephyr/zephyr.exe
+<span class="gp">#</span> Press Ctrl+C to <span class="nb">exit</span>
+</pre></div>
+</div>
+<p>This executable can be instrumented like any other Linux process. For ex. with gdb
+or valgrind.
+Note that the native port is currently only tested in Linux.</p>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="installation_linux.html" class="btn btn-neutral float-right" title="Development Environment Setup on Linux" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../introduction/introducing_zephyr.html" class="btn btn-neutral" title="Introducing Zephyr" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

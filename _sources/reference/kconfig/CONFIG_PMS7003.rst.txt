@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: PMS7003
+
+.. option:: CONFIG_PMS7003
+.. _CONFIG_PMS7003:
+
+Enable driver for pms7003 particulate matter sensor.
+
+
+
+:Symbol:           PMS7003
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "PMS7003 particulate matter sensor" if SERIAL (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SERIAL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/pms7003/Kconfig:9

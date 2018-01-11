@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: LWM2M_ENGINE_DEFAULT_LIFETIME
+
+.. option:: CONFIG_LWM2M_ENGINE_DEFAULT_LIFETIME
+.. _CONFIG_LWM2M_ENGINE_DEFAULT_LIFETIME:
+
+Set the default lifetime (in seconds) for the LWM2M library engine
+
+
+
+:Symbol:           LWM2M_ENGINE_DEFAULT_LIFETIME
+:Type:             int
+:Value:            "15"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [15, 65535]
+:Prompts:
+
+ *  "LWM2M engine default server connection lifetime"
+:Default values:
+
+ *  30 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:60

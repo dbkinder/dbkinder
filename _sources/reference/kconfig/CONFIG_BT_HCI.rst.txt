@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: BT_HCI
+
+.. option:: CONFIG_BT_HCI
+.. _CONFIG_BT_HCI:
+
+HCI-based stack with optional host & controller parts and an
+HCI driver in between.
+
+
+
+:Symbol:           BT_HCI
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "HCI-based"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT (value: "n")
+:Locations:
+ * ../subsys/bluetooth/Kconfig:24

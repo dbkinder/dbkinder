@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: NXP_MPU
+
+.. option:: CONFIG_NXP_MPU
+.. _CONFIG_NXP_MPU:
+
+MCU has NXP MPU
+
+
+
+:Symbol:           NXP_MPU
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "NXP MPU Support" if CPU_HAS_MPU && SOC_FAMILY_KINETIS (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: CPU_HAS_MPU && SOC_FAMILY_KINETIS (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_ARM_CORE_MPU` if CPU_HAS_MPU && SOC_FAMILY_KINETIS (value: "n")
+ *  :option:`CONFIG_ARCH_HAS_EXECUTABLE_PAGE_BIT` if CPU_HAS_MPU && SOC_FAMILY_KINETIS (value: "n")
+:Reverse (select-related) dependencies:
+ CPU_HAS_MPU && ARM && HAS_SYSMPU (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ CPU_HAS_MPU && ARM (value: "n")
+:Locations:
+ * ../arch/arm/core/cortex_m/mpu/Kconfig:34

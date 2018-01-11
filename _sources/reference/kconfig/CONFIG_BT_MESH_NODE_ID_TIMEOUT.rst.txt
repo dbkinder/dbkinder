@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: BT_MESH_NODE_ID_TIMEOUT
+
+.. option:: CONFIG_BT_MESH_NODE_ID_TIMEOUT
+.. _CONFIG_BT_MESH_NODE_ID_TIMEOUT:
+
+This option determines for how long the local node advertises
+using Node Identity. The given value is in seconds. The
+specification limits this to 60 seconds, and implies that to
+be the appropriate value as well, so just leaving this as the
+default is the safest option.
+
+
+
+:Symbol:           BT_MESH_NODE_ID_TIMEOUT
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 60]
+:Prompts:
+
+ *  "Node Identity advertising timeout" if BT_MESH_GATT_PROXY (value: "n")
+:Default values:
+
+ *  60 (value: "n")
+ *   Condition: BT_MESH_GATT_PROXY (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_CONN (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:55

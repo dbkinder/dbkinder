@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: NFFS_FILESYSTEM_MAX_BLOCK_SIZE
+
+.. option:: CONFIG_NFFS_FILESYSTEM_MAX_BLOCK_SIZE
+.. _CONFIG_NFFS_FILESYSTEM_MAX_BLOCK_SIZE:
+
+This determines the maximum size of data block written to flash.
+Writes larger than this size are split into multiple write operations.
+
+
+:Symbol:           NFFS_FILESYSTEM_MAX_BLOCK_SIZE
+:Type:             int
+:Value:            "16"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [16, 2048]
+:Prompts:
+
+ *  "Maximum block size" if FILE_SYSTEM_NFFS && FILE_SYSTEM_NFFS (value: "n")
+:Default values:
+
+ *  2048 (value: "n")
+ *   Condition: FILE_SYSTEM_NFFS (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FILE_SYSTEM (value: "n")
+:Locations:
+ * ../ext/fs/nffs/Kconfig:13

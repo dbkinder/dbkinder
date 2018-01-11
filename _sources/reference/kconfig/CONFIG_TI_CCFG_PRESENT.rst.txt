@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: TI_CCFG_PRESENT
+
+.. option:: CONFIG_TI_CCFG_PRESENT
+.. _CONFIG_TI_CCFG_PRESENT:
+
+The configuration item CONFIG_TI_CCFG_PRESENT:
+
+:Symbol:           TI_CCFG_PRESENT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_CC2650 && ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/ti_simplelink/cc2650/Kconfig.soc:17

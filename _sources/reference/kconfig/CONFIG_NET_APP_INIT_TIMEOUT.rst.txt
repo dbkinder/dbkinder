@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: NET_APP_INIT_TIMEOUT
+
+.. option:: CONFIG_NET_APP_INIT_TIMEOUT
+.. _CONFIG_NET_APP_INIT_TIMEOUT:
+
+The value is in seconds. If for example IPv4 address from DHCPv4 is not
+received within this limit, then the net_app_init() call will fail
+during the device startup.
+
+
+
+:Symbol:           NET_APP_INIT_TIMEOUT
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "How long to wait for networking to be ready and available" if NET_APP_AUTO_INIT (value: "n")
+:Default values:
+
+ *  30 (value: "n")
+ *   Condition: NET_APP_AUTO_INIT (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:33

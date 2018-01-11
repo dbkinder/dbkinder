@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: SLIP_MAC_ADDR
+
+.. option:: CONFIG_SLIP_MAC_ADDR
+.. _CONFIG_SLIP_MAC_ADDR:
+
+Specify a MAC address for the SLIP interface in the form of
+six hex 8-bit chars separated by colons (e.g.:
+aa:33:cc:22:e2:c0).  The default is an empty string, which
+means the code will make 00:00:5E:00:53:XX, where XX will be
+random.
+
+
+
+:Symbol:           SLIP_MAC_ADDR
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "MAC address for the interface"
+:Default values:
+
+ *  ""
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SLIP (value: "n")
+:Locations:
+ * ../drivers/net/Kconfig:89

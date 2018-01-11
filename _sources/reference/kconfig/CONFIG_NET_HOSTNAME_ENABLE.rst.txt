@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_HOSTNAME_ENABLE
+
+.. option:: CONFIG_NET_HOSTNAME_ENABLE
+.. _CONFIG_NET_HOSTNAME_ENABLE:
+
+This is used for example in mDNS to respond to <hostname>.local
+mDNS queries.
+
+
+
+:Symbol:           NET_HOSTNAME_ENABLE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Add hostname to the device"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/Kconfig.hostname:9

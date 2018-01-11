@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Networking with QEMU &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="Networking" href="networking.html"/>
+        <link rel="next" title="USB Device Networking" href="usbnet_setup.html"/>
+        <link rel="prev" title="Network Buffers" href="buffers.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../subsystems.html">Subsystems</a> /
+      
+          <a href="networking.html">Networking</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../subsystems.html">Subsystems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_library.html">Standard C Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/index.html">Logging</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="networking.html">Networking</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ip-stack-architecture.html">IP Stack Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="networking-api-usage.html">Network Connectivity API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bsd-sockets.html">BSD Sockets compatible API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="l2-and-drivers.html">L2 Stack and Drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network-management-api.html">Network Management API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html">Network Application API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#initialization">Initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#client-server-applications">Client / Server Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffers.html">Network Buffers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Networking with QEMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usbnet_setup.html">USB Device Networking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../power_management.html">Power Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor.html">Sensor Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shell.html">Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usb/usb.html">USB device stack</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="networking-with-qemu">
+<span id="id1"></span><h1>Networking with QEMU<a class="headerlink" href="#networking-with-qemu" title="Permalink to this headline">¶</a></h1>
+<p>This page describes how to set up a “virtual” networking between a (Linux) host
+and a Zephyr application running in a QEMU virtual machine (built for Zephyr
+targets like qemu_x86, qemu_cortex_m3, etc.) In this example, the
+<code class="docutils literal"><span class="pre">echo_server</span></code> sample application from Zephyr source distribution is run in
+QEMU. The QEMU instance is connected to Linux host using serial port and SLIP is
+used to transfer data between Zephyr and Linux (over a chain of virtual
+connections).</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>On the Linux Host you need to fetch Zephyr net-tools project, which is located
+in a separate git repository:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone https://github.com/zephyrproject-rtos/net-tools
+<span class="gp">$</span> <span class="nb">cd</span> net-tools
+<span class="gp">$</span> make
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you get error about AX_CHECK_COMPILE_FLAG, install package autoconf-archive
+package on Debian/Ubuntu.</p>
+</div>
+</div>
+<div class="section" id="basic-setup">
+<h2>Basic Setup<a class="headerlink" href="#basic-setup" title="Permalink to this headline">¶</a></h2>
+<p>For the steps below, you will need at least 4 terminal windows:</p>
+<ul class="simple">
+<li>Terminal #1 is your usual Zephyr development terminal, with Zephyr environment
+initialized.</li>
+<li>Terminals #2, #3, #4 - fresh terminal windows with net-tools being the current
+directory (“cd net-tools”)</li>
+</ul>
+<div class="section" id="step-1-create-helper-socket">
+<h3>Step 1 - Create helper socket<a class="headerlink" href="#step-1-create-helper-socket" title="Permalink to this headline">¶</a></h3>
+<p>Before starting QEMU with network emulation, a Unix socket for the emulation
+should be created.</p>
+<p>In terminal #2, type:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ./loop-socat.sh
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-2-start-tap-device-routing-daemon">
+<h3>Step 2 - Start TAP device routing daemon<a class="headerlink" href="#step-2-start-tap-device-routing-daemon" title="Permalink to this headline">¶</a></h3>
+<p>In terminal #3, type:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo ./loop-slip-tap.sh
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-start-app-in-qemu">
+<h3>Step 3 - Start app in QEMU<a class="headerlink" href="#step-3-start-app-in-qemu" title="Permalink to this headline">¶</a></h3>
+<p>Build and start the <code class="docutils literal"><span class="pre">echo_server</span></code> sample application.</p>
+<p>In terminal #1, type:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/net/echo_server
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>qemu_x86 ..
+<span class="gp">$</span> make run
+</pre></div>
+</div>
+<p>If you see error from QEMU about unix:/tmp/slip.sock, it means you missed Step 1
+above.</p>
+</div>
+<div class="section" id="step-4-run-apps-on-host">
+<h3>Step 4 - Run apps on host<a class="headerlink" href="#step-4-run-apps-on-host" title="Permalink to this headline">¶</a></h3>
+<p>Now in terminal #4, you can run various tools to communicate with the
+application running in QEMU.</p>
+<p>You can start with pings:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ping <span class="m">192</span>.0.2.1
+<span class="gp">$</span> ping6 <span class="m">2001</span>:db8::1
+</pre></div>
+</div>
+<p>For example, using netcat (“nc”) utility, connecting using UDP:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> foobar <span class="p">|</span> nc -6 -u <span class="m">2001</span>:db8::1 <span class="m">4242</span>
+<span class="go">foobar</span>
+</pre></div>
+</div>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> foobar <span class="p">|</span> nc -u <span class="m">192</span>.0.2.1 <span class="m">4242</span>
+<span class="go">foobar</span>
+</pre></div>
+</div>
+<p>If echo_server is compiled with TCP support (now enabled by default for
+echo_server sample, CONFIG_NET_TCP=y):</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> foobar <span class="p">|</span> nc -6 -q2 <span class="m">2001</span>:db8::1 <span class="m">4242</span>
+<span class="go">foobar</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You will need to Ctrl+C manually.</p>
+</div>
+<p>You can also use the telnet command to achieve the above.</p>
+</div>
+<div class="section" id="step-5-stop-supporting-daemons">
+<h3>Step 5 - Stop supporting daemons<a class="headerlink" href="#step-5-stop-supporting-daemons" title="Permalink to this headline">¶</a></h3>
+<p>When you are finished with network testing using QEMU, you should stop
+any daemons or helpers started in the initial steps, to avoid possible
+networking or routing problems such as address conflicts in local network
+interfaces. For example, you definitely need to stop them if you switch
+from testing networking with QEMU to using real hardware. For example,
+there was a report of an airport WiFi connection not working during
+travel due to an address conflict.</p>
+<p>To stop the daemons, just press Ctrl+C in the corresponding terminal windows
+(you need to stop both <code class="docutils literal"><span class="pre">loop-slip-tap.sh</span></code> and <code class="docutils literal"><span class="pre">loop-socat.sh</span></code>).</p>
+</div>
+</div>
+<div class="section" id="setting-up-zephyr-and-nat-masquerading-on-qemu-host-to-access-internet">
+<h2>Setting up Zephyr and NAT/masquerading on QEMU host to access Internet<a class="headerlink" href="#setting-up-zephyr-and-nat-masquerading-on-qemu-host-to-access-internet" title="Permalink to this headline">¶</a></h2>
+<p>To access the Internet from a Zephyr application using IPv4,
+a gateway should be set via DHCP or configured manually.
+For applications using the <a class="reference internal" href="net-app-api.html#net-app-api"><span class="std std-ref">Network Application API</span></a> facility (with the config option
+<a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP.html#cmdoption-arg-config-net-app"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP</span></code></a> enabled),
+set the <a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_MY_IPV4_GW.html#cmdoption-arg-config-net-app-my-ipv4-gw"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_MY_IPV4_GW</span></code></a> option to the IP address
+of the gateway. For apps not using the <a class="reference internal" href="net-app-api.html#net-app-api"><span class="std std-ref">Network Application API</span></a> facility, set up the
+gateway by calling the <code class="xref c c-func docutils literal"><span class="pre">net_if_ipv4_set_gw()</span></code> at runtime.</p>
+<p>To access Internet from a custom application running in a QEMU, NAT
+(masquerading) should be set up for QEMU’s source address. Assuming 192.0.2.1 is
+used, the following command should be run as root:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> iptables -t nat -A POSTROUTING -j MASQUERADE -s <span class="m">192</span>.0.2.1
+</pre></div>
+</div>
+<p>Additionally, IPv4 forwarding should be enabled on host, and you may need to
+check that other firewall (iptables) rules don’t interfere with masquerading.</p>
+</div>
+<div class="section" id="network-connection-between-two-qemu-vms">
+<h2>Network connection between two QEMU VMs<a class="headerlink" href="#network-connection-between-two-qemu-vms" title="Permalink to this headline">¶</a></h2>
+<p>Unlike VM-Host setup described above, VM-VM setup is automatic - for sample
+applications which support such mode such as the echo_server and echo_client
+samples, you will need 2 terminal windows, set up for Zephyr development.</p>
+<div class="section" id="terminal-1">
+<h3>Terminal #1:<a class="headerlink" href="#terminal-1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/net/echo_server
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>qemu_x86 ..
+<span class="gp">$</span> make server
+</pre></div>
+</div>
+<p>This will start QEMU, waiting for connection from a client QEMU.</p>
+</div>
+<div class="section" id="terminal-2">
+<h3>Terminal #2:<a class="headerlink" href="#terminal-2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/net/echo_client
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>qemu_x86 ..
+<span class="gp">$</span> make client
+</pre></div>
+</div>
+<p>This will start 2nd QEMU instance, and you should see logging of data sent and
+received in both.</p>
+</div>
+</div>
+<div class="section" id="running-multiple-qemu-vms-of-the-same-sample">
+<h2>Running multiple QEMU VMs of the same sample<a class="headerlink" href="#running-multiple-qemu-vms-of-the-same-sample" title="Permalink to this headline">¶</a></h2>
+<p>If you find yourself needing to run multiple instances of the same Zephyr
+sample application, which do not need to be able to talk to each other, the
+<code class="docutils literal"><span class="pre">QEMU_INSTANCE</span></code> argument is what you need.</p>
+<p>Start socat and tunslip6 manually (avoiding loop-x.sh scripts) for as many
+instances as you want. Use the following as a guide, replacing MAIN or OTHER.</p>
+<div class="section" id="id2">
+<h3>Terminal #1:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> socat PTY,link<span class="o">=</span>/tmp/slip.devMAIN UNIX-LISTEN:/tmp/slip.sockMAIN
+<span class="gp">$</span> <span class="nv">$ZEPHYR_BASE</span>/../net-tools/tunslip6 -t tapMAIN -T -s /tmp/slip.devMAIN <span class="se">\</span>
+     <span class="m">2001</span>:db8::1/64
+<span class="gp">#</span> Now run Zephyr
+<span class="gp">$</span> make run <span class="nv">QEMU_INSTANCE</span><span class="o">=</span>MAIN
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Terminal #2:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> socat PTY,link<span class="o">=</span>/tmp/slip.devOTHER UNIX-LISTEN:/tmp/slip.sockOTHER
+<span class="gp">$</span> <span class="nv">$ZEPHYR_BASE</span>/../net-tools/tunslip6 -t tapOTHER -T -s /tmp/slip.devOTHER <span class="se">\</span>
+     <span class="m">2001</span>:db8::1/64
+<span class="gp">$</span> make run <span class="nv">QEMU_INSTANCE</span><span class="o">=</span>OTHER
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="usbnet_setup.html" class="btn btn-neutral float-right" title="USB Device Networking" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="buffers.html" class="btn btn-neutral" title="Network Buffers" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

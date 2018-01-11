@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: NET_HOSTNAME_UNIQUE
+
+.. option:: CONFIG_NET_HOSTNAME_UNIQUE
+.. _CONFIG_NET_HOSTNAME_UNIQUE:
+
+This will append link address to hostname to create a unique
+hostname. For example, zephyr00005e005357 could be the hostname
+if this setting is enabled.
+
+
+
+:Symbol:           NET_HOSTNAME_UNIQUE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Make hostname unique"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_HOSTNAME_ENABLE && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/Kconfig.hostname:24

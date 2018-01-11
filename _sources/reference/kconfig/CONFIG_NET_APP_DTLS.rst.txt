@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_APP_DTLS
+
+.. option:: CONFIG_NET_APP_DTLS
+.. _CONFIG_NET_APP_DTLS:
+
+Enables net app library to use DTLS for encrypted UDP communication.
+
+
+
+:Symbol:           NET_APP_DTLS
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable DTLS support for UDP applications" if NET_UDP (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: NET_UDP (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_MBEDTLS` if NET_UDP (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:105

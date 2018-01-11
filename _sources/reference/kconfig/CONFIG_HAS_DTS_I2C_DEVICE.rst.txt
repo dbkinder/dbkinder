@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: HAS_DTS_I2C_DEVICE
+
+.. option:: CONFIG_HAS_DTS_I2C_DEVICE
+.. _CONFIG_HAS_DTS_I2C_DEVICE:
+
+This option specifies that the target platform supports device tree
+configuration for sensors.
+
+
+:Symbol:           HAS_DTS_I2C_DEVICE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: HAS_DTS_I2C (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BOARD_DISCO_L475_IOT1 && SOC_STM32L475XG (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../dts/Kconfig:22

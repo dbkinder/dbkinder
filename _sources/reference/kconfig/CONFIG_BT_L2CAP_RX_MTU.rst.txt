@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: BT_L2CAP_RX_MTU
+
+.. option:: CONFIG_BT_L2CAP_RX_MTU
+.. _CONFIG_BT_L2CAP_RX_MTU:
+
+Maximum size of each incoming L2CAP PDU.
+
+
+:Symbol:           BT_L2CAP_RX_MTU
+:Type:             int
+:Value:            "23"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [23, 1300]
+ *  [65, 1300] if BT_SMP (value: "n")
+:Prompts:
+
+ *  "Maximum supported L2CAP MTU for incoming data"
+:Default values:
+
+ *  23 (value: "n")
+ *   Condition: (none)
+ *  65 (value: "n")
+ *   Condition: BT_SMP (value: "n")
+ *  200 (value: "n")
+ *   Condition: BT_BREDR (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_CONN && BT_HCI_ACL_FLOW_CONTROL (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:153

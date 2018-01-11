@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>IP Stack Architecture &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="Networking" href="networking.html"/>
+        <link rel="next" title="Network Connectivity API" href="networking-api-usage.html"/>
+        <link rel="prev" title="Overview" href="overview.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../subsystems.html">Subsystems</a> /
+      
+          <a href="networking.html">Networking</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../subsystems.html">Subsystems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_library.html">Standard C Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/index.html">Logging</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="networking.html">Networking</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">IP Stack Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="networking-api-usage.html">Network Connectivity API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bsd-sockets.html">BSD Sockets compatible API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="l2-and-drivers.html">L2 Stack and Drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network-management-api.html">Network Management API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html">Network Application API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#initialization">Initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#client-server-applications">Client / Server Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffers.html">Network Buffers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qemu_setup.html">Networking with QEMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usbnet_setup.html">USB Device Networking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../power_management.html">Power Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor.html">Sensor Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shell.html">Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usb/usb.html">USB device stack</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="ip-stack-architecture">
+<span id="id1"></span><h1>IP Stack Architecture<a class="headerlink" href="#ip-stack-architecture" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="high-level-overview-of-the-ip-stack">
+<h2>High level overview of the IP stack<a class="headerlink" href="#high-level-overview-of-the-ip-stack" title="Permalink to this headline">¶</a></h2>
+<div class="align-center figure" id="id2">
+<img alt="Overview of the IP stack architecture" src="../../_images/ip-stack-architecture.svg" /><p class="caption"><span class="caption-text">Network stack overview</span></p>
+</div>
+<p><em>The IP stack is layered and it consists of the following parts:</em></p>
+<ul class="simple">
+<li><strong>Networking Application.</strong> This application uses the connectivity API to
+manipulate a network connection, and management API to set network
+related parameters such as starting a scan (when applicable),
+setting IP address to a network interface, etc.</li>
+<li><strong>Core IP stack.</strong> This provides implementations for
+various protocols such as IPv6, IPv4, UDP, TCP, ICMPv4 and ICMPv6.</li>
+<li><strong>Network interface abstraction layer.</strong> This provides functionality
+that is common in all the network interfaces, such as acquiring
+an IP address, etc.</li>
+<li><strong>Generic L2 layer.</strong> This provides common API for sending and receiving
+data to and from an actual network device.</li>
+<li><strong>L2 network technology component.</strong> These components include Ethernet,
+IEEE 802.15.4, Bluetooth, etc. Some of these technologies support IPv6
+header compression (6LoWPAN), which is done in its own layer. For
+example ARP for IPv4 is done in the Ethernet component.</li>
+<li><strong>Network device driver.</strong> The actual low-level device driver handles the
+physical sending or receiving of a network packet.</li>
+</ul>
+</div>
+<div class="section" id="network-data-flow">
+<h2>Network data flow<a class="headerlink" href="#network-data-flow" title="Permalink to this headline">¶</a></h2>
+<div class="align-center figure" id="id3">
+<img alt="Network data flow" src="../../_images/ip-stack-data-flow.svg" /><p class="caption"><span class="caption-text">Network data flow</span></p>
+</div>
+<p>The application typically consists of one or more tasks or threads
+that execute the application logic. When using the network
+connectivity APIs, following things will happen.</p>
+<p><em>Data receiving (RX):</em></p>
+<ol class="arabic simple">
+<li>A network data packet is received by a device driver.</li>
+<li>The device driver allocates enough network buffers to store the received
+data. The network buffers are then passed to the RX FIFO
+for further processing. The RX FIFO is used as a way to separate
+the data processing pipeline (bottom-half) as the device driver is
+running in interrupt context and it must do its processing very fast.</li>
+<li>The RX thread reads the RX FIFO and passes the data to the correct
+L2 driver. After the L2 driver has checked the packet, the packet is
+passed to L3 processing. The L3 layer checks if the packet is a proper
+IPv6 or IPv4 packet. If the packet contains UDP or TCP data, it
+is then sent to correct application via a function callback.
+This also means that the application data processing in that callback
+is run in thread context even if the actual application is running
+in task context. The data processing in the application callback should
+be done fast in order not to block the system too long.
+There is only one RX thread in the system. The stack size of the RX
+thread can be tweaked via Kconfig option but it should be kept as
+small as possible. This also means that stack utilization in the
+data processing callback should be minimized in order to avoid stack
+overflow.</li>
+<li>The application will then receive the data, which is stored inside a chain
+of net_bufs. The application now owns the data. After it has finished working
+with it, the application should release the net_bufs data by calling
+<a class="reference internal" href="../../api/networking.html#_CPPv213net_pkt_unrefP7net_pkt" title="net_pkt_unref"><code class="xref cpp cpp-func docutils literal"><span class="pre">net_pkt_unref()</span></code></a>.</li>
+</ol>
+<p><em>Data sending (TX):</em></p>
+<ol class="arabic simple">
+<li>The application should use the connectivity API when the application is
+ready to send data. The sent data is checked by the correct L2 layer module
+and if everything is ok, the data is placed into the network interface TX
+queue. The network interface is typically selected to be the same interface
+for reply data packets or the interface is selected according to the routing
+algorithm. The application should not free the data packet if it was
+correctly placed into TX queue; the network driver will release the packet
+after it is sent. If the connectivity API sending function returns an error
+to the application, that means the packet was not sent correctly and the
+application needs to free the packet.</li>
+<li>Each network interface has a dedicated TX queue used to send data to that
+interface. A TX thread in the system reads all the TX queues and passes
+that data to the correct L2 driver, for sending via the device driver.</li>
+<li>If the device driver is able to inject the network packet into the
+network, then it will release the packet. Typically there are no
+retransmits at this lower level so usually the packet is released
+even if not sent correctly. This depends on the technology being used.</li>
+</ol>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="networking-api-usage.html" class="btn btn-neutral float-right" title="Network Connectivity API" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="overview.html" class="btn btn-neutral" title="Overview" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

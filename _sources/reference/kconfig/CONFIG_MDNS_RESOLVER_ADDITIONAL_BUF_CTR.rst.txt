@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: MDNS_RESOLVER_ADDITIONAL_BUF_CTR
+
+.. option:: CONFIG_MDNS_RESOLVER_ADDITIONAL_BUF_CTR
+.. _CONFIG_MDNS_RESOLVER_ADDITIONAL_BUF_CTR:
+
+Number of additional buffers available for the mDNS responder.
+
+
+
+:Symbol:           MDNS_RESOLVER_ADDITIONAL_BUF_CTR
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Additional DNS buffers"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MDNS_RESPONDER && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/dns/Kconfig:156

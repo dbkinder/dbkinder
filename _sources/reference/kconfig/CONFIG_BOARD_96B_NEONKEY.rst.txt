@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_96B_NEONKEY
+
+.. option:: CONFIG_BOARD_96B_NEONKEY
+.. _CONFIG_BOARD_96B_NEONKEY:
+
+The configuration item CONFIG_BOARD_96B_NEONKEY:
+
+:Symbol:           BOARD_96B_NEONKEY
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "96Boards Neonkey" if SOC_STM32F411XE (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/96b_neonkey/Kconfig.board:7

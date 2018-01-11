@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: FP_FPU_DA
+
+.. option:: CONFIG_FP_FPU_DA
+.. _CONFIG_FP_FPU_DA:
+
+The configuration item CONFIG_FP_FPU_DA:
+
+:Symbol:           FP_FPU_DA
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_EM11D (value: "n")
+:Locations:
+ * ../arch/arc/soc/em11d/Kconfig.defconfig:60

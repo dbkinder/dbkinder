@@ -1,0 +1,737 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Contribution Guidelines &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="Contributing to the Zephyr Project" href="contribute.html"/>
+        <link rel="next" title="Contributing non-Apache 2.0 licensed components" href="contribute_non-apache.html"/>
+        <link rel="prev" title="Contributing to the Zephyr Project" href="contribute.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+          <a href="contribute.html">Contributing to the Zephyr Project</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contribute.html">Contributing to the Zephyr Project</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Contribution Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#licensing">Licensing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#developer-certification-of-origin-dco">Developer Certification of Origin (DCO)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#repository-layout">Repository layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pull-requests-and-issues">Pull Requests and Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#development-tools-and-git-setup">Development Tools and Git Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coding-style">Coding Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contribution-workflow">Contribution Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commit-guidelines">Commit Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contribute_non-apache.html">Contributing non-Apache 2.0 licensed components</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="contribution-guidelines">
+<span id="contribute-guidelines"></span><h1>Contribution Guidelines<a class="headerlink" href="#contribution-guidelines" title="Permalink to this headline">¶</a></h1>
+<p>As an open-source project, we welcome and encourage the community to submit
+patches directly to the project.  In our collaborative open source environment,
+standards and methods for submitting changes help reduce the chaos that can result
+from an active development community.</p>
+<p>This document explains how to participate in project conversations, log bugs
+and enhancement requests, and submit patches to the project so your patch will
+be accepted quickly in the codebase.</p>
+<div class="section" id="licensing">
+<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
+<p>Licensing is very important to open source projects. It helps ensure the
+software continues to be available under the terms that the author desired.</p>
+<p>Zephyr uses the <a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/blob/master/LICENSE">Apache 2.0 license</a> (as found in the LICENSE file in
+the project’s <a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr">GitHub repo</a>) to strike a balance between open
+contribution and allowing you to use the software however you would like
+to.  The Apache 2.0 license is a permisive open source license that
+allows you to freely use, modify, distribute and sell your own products
+that include Apache 2.0 licensed software.  (For more information about
+this, check out articles such as <a class="reference external" href="https://www.zephyrproject.org/about/#faq">Why choose Apache 2.0 licensing</a> and
+<a class="reference external" href="https://www.whitesourcesoftware.com/whitesource-blog/top-10-apache-license-questions-answered/">Top 10 Apache License Questions Answered</a>).</p>
+<p>A license tells you what rights you have as a developer, as provided by the
+copyright holder. It is important that the contributor fully understands the
+licensing rights and agrees to them. Sometimes the copyright holder isn’t the
+contributor, such as when the contributor is doing work on behalf of a
+company.</p>
+<div class="section" id="components-using-other-licenses">
+<h3>Components using other Licenses<a class="headerlink" href="#components-using-other-licenses" title="Permalink to this headline">¶</a></h3>
+<p>There are some imported or reused components of the Zephyr project that
+use other licensing, as described in <a class="reference external" href="https://www.zephyrproject.org/doc/LICENSING.html">Zephyr Licensing</a>.</p>
+<p>Importing code into the Zephyr OS from other projects that use a license
+other than the Apache 2.0 license needs to be fully understood in
+context and approved by the Zephyr governing board.</p>
+<p>By carefully reviewing potential contributions and also enforcing a
+<a class="reference internal" href="#dco"><span class="std std-ref">Developer Certification of Origin (DCO)</span></a> for contributed code, we can ensure that
+the Zephyr community can develop products with the Zephyr Project
+without concerns over patent or copyright issues.</p>
+<p>See <a class="reference external" href="https://www.zephyrproject.org/doc/contribute/contribute_non-apache.html">Contributing non-Apache 2.0 components</a> for more information about
+this contributing and review process for imported components.</p>
+</div>
+</div>
+<div class="section" id="developer-certification-of-origin-dco">
+<span id="dco"></span><h2>Developer Certification of Origin (DCO)<a class="headerlink" href="#developer-certification-of-origin-dco" title="Permalink to this headline">¶</a></h2>
+<p>To make a good faith effort to ensure licensing criteria are met, the Zephyr
+project requires the Developer Certificate of Origin (DCO) process to be
+followed.</p>
+<p>The DCO is an attestation attached to every contribution made by every
+developer. In the commit message of the contribution, (described more fully
+later in this document), the developer simply adds a <code class="docutils literal"><span class="pre">Signed-off-by</span></code>
+statement and thereby agrees to the DCO.</p>
+<p>When a developer submits a patch, it is a commitment that the contributor has
+the right to submit the patch per the license.  The DCO agreement is shown
+below and at <a class="reference external" href="http://developercertificate.org/">http://developercertificate.org/</a>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Developer&#39;s Certificate of Origin 1.1
+
+By making a contribution to this project, I certify that:
+
+(a) The contribution was created in whole or in part by me and I
+    have the right to submit it under the open source license
+    indicated in the file; or
+
+(b) The contribution is based upon previous work that, to the
+    best of my knowledge, is covered under an appropriate open
+    source license and I have the right under that license to
+    submit that work with modifications, whether created in whole
+    or in part by me, under the same open source license (unless
+    I am permitted to submit under a different license), as
+    Indicated in the file; or
+
+(c) The contribution was provided directly to me by some other
+    person who certified (a), (b) or (c) and I have not modified
+    it.
+
+(d) I understand and agree that this project and the contribution
+    are public and that a record of the contribution (including
+    all personal information I submit with it, including my
+    sign-off) is maintained indefinitely and may be redistributed
+    consistent with this project or the open source license(s)
+    involved.
+</pre></div>
+</div>
+<div class="section" id="dco-sign-off-methods">
+<h3>DCO Sign-Off Methods<a class="headerlink" href="#dco-sign-off-methods" title="Permalink to this headline">¶</a></h3>
+<p>The DCO requires a sign-off message in the following format appear on each
+commit in the pull request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Signed</span><span class="o">-</span><span class="n">off</span><span class="o">-</span><span class="n">by</span><span class="p">:</span> <span class="n">Zephyrus</span> <span class="n">Zephyr</span> <span class="o">&lt;</span><span class="n">zephyrus</span><span class="nd">@zephyrproject</span><span class="o">.</span><span class="n">org</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The DCO text can either be manually added to your commit body, or you can add
+either <code class="docutils literal"><span class="pre">-s</span></code> or <code class="docutils literal"><span class="pre">--signoff</span></code> to your usual Git commit commands. If you forget
+to add the sign-off you can also amend a previous commit with the sign-off by
+running <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">--amend</span> <span class="pre">-s</span></code>. If you’ve pushed your changes to GitHub
+already you’ll need to force push your branch after this with <code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-f</span></code>.</p>
+</div>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>As a contributor, you’ll want to be familiar with the Zephyr project, how to
+configure, install, and use it as explained in the <a class="reference external" href="https://zephyrproject.org">Zephyr Project website</a>
+and how to set up your development environment as introduced in the Zephyr
+<a class="reference external" href="https://www.zephyrproject.org/doc/getting_started/getting_started.html">Getting Started Guide</a>.</p>
+<p>The examples below use a Linux host environment for Zephyr development.
+You should be familiar with common developer tools such as Git and CMake, and
+platforms such as GitHub.</p>
+<p>If you haven’t already done so, you’ll need to create a (free) GitHub account
+on <a class="reference external" href="http://github.com">http://github.com</a> and have Git tools available on your development system.</p>
+</div>
+<div class="section" id="repository-layout">
+<h2>Repository layout<a class="headerlink" href="#repository-layout" title="Permalink to this headline">¶</a></h2>
+<p>To clone the main Zephyr Project repository use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git clone https://github.com/zephyrproject-rtos/zephyr
+</pre></div>
+</div>
+<p>The Zephyr project directory structure is described in <a class="reference external" href="https://www.zephyrproject.org/doc/kernel/overview/source_tree.html">Source Tree Structure</a>
+documentation. In addition to the Zephyr kernel itself, you’ll also find the
+sources for technical documentation, sample code, supported board
+configurations, and a collection of subsystem tests.  All of these are
+available for developers to contribute to and enhance.</p>
+</div>
+<div class="section" id="pull-requests-and-issues">
+<h2>Pull Requests and Issues<a class="headerlink" href="#pull-requests-and-issues" title="Permalink to this headline">¶</a></h2>
+<p>Before starting on a patch, first check in our issues <a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues">Zephyr Project Issues</a>
+system to see what’s been reported on the issue you’d like to address.  Have a
+conversation on the <a class="reference external" href="https://lists.zephyrproject.org/mailman/listinfo/zephyr-devel">Zephyr-devel mailing list</a> (or the #zephyrproject IRC
+channel on freenode.net) to see what others think of your issue (and proposed
+solution).  You may find others that have encountered the issue you’re
+finding, or that have similar ideas for changes or additions.  Send a message
+to the <a class="reference external" href="https://lists.zephyrproject.org/mailman/listinfo/zephyr-devel">Zephyr-devel mailing list</a> to introduce and discuss your idea with
+the development community.</p>
+<p>Please note that it’s common practice on IRC to be away from the
+channel, but still have a client logged in to receive traffic. If you
+ask a question to a particular person and they don’t answer, <strong>try
+to stay signed in to the channel</strong> if you can, so they have time to
+respond to you. This is especially important given the many different
+timezones Zephyr developers live in. If you don’t get a timely
+response on IRC, try sending a message to the mailing list instead.</p>
+<p>It’s always a good practice to search for existing or related issues before
+submitting your own. When you submit an issue (bug or feature request), the
+triage team will review and comment on the submission, typically within a few
+business days.</p>
+<p>You can find all <a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/pulls">open pull requests</a> on GitHub and open <a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues">Zephyr Project
+Issues</a> in Github issues.</p>
+</div>
+<div class="section" id="development-tools-and-git-setup">
+<h2>Development Tools and Git Setup<a class="headerlink" href="#development-tools-and-git-setup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="signed-off-by">
+<h3>Signed-off-by<a class="headerlink" href="#signed-off-by" title="Permalink to this headline">¶</a></h3>
+<p>The name in the commit message <code class="docutils literal"><span class="pre">Signed-off-by:</span></code> line and your email must
+match the change authorship information. Make sure your <em>.git/config</em> is set
+up correctly:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git config --global user.name &quot;David Developer&quot;
+$ git config --global user.email &quot;david.developer@company.com&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="gitlint">
+<h3>gitlint<a class="headerlink" href="#gitlint" title="Permalink to this headline">¶</a></h3>
+<p>When you submit a pull request to the project, a series of checks are
+performed to verify your commit messages meet the requirements. The same step
+done during the CI process can be performed locally using the the <em>gitlint</em>
+command.</p>
+<p>Install gitlint and run it locally in your tree and branch where your patches
+have been committed:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo pip3 install gitlint
+$ gitlint
+</pre></div>
+</div>
+<p>Note, gitlint only checks HEAD (the most recent commit), so you should run it
+after each commit, or use the <code class="docutils literal"><span class="pre">--commits</span></code> option to specify a commit range
+covering all the development patches to be submitted.</p>
+</div>
+<div class="section" id="sanitycheck">
+<h3>sanitycheck<a class="headerlink" href="#sanitycheck" title="Permalink to this headline">¶</a></h3>
+<p>To verify that your changes did not break any tests or samples, please run the
+<code class="docutils literal"><span class="pre">sanitycheck</span></code> script locally before submitting your pull request to GitHub. To
+run the same tests the CI system runs, follow these steps from within your
+local Zephyr source working directory:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ source zephyr-env.sh
+$ ./scripts/sanitycheck
+</pre></div>
+</div>
+<p>The above will execute the basic sanitycheck script, which will run various
+kernel tests using the QEMU emulator.  It will also do some build tests on
+various samples with advanced features that can’t run in QEMU.</p>
+<p>We highly recommend you run these tests locally to avoid any CI
+failures.</p>
+</div>
+</div>
+<div class="section" id="coding-style">
+<h2>Coding Style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
+<p>Use these coding guidelines to ensure that your development complies with the
+project’s style and naming conventions.</p>
+<p>In general, follow the <a class="reference external" href="https://kernel.org/doc/html/latest/process/coding-style.html">Linux kernel coding style</a>, with the
+following exceptions:</p>
+<ul class="simple">
+<li>Add braces to every <code class="docutils literal"><span class="pre">if</span></code> and <code class="docutils literal"><span class="pre">else</span></code> body, even for single-line code
+blocks. Use the <code class="docutils literal"><span class="pre">--ignore</span> <span class="pre">BRACES</span></code> flag to make <em>checkpatch</em> stop
+complaining.</li>
+<li>Use spaces instead of tabs to align comments after declarations, as needed.</li>
+<li>Use C89-style single line comments, <code class="docutils literal"><span class="pre">/*</span>&#160; <span class="pre">*/</span></code>. The C99-style single line
+comment, <code class="docutils literal"><span class="pre">//</span></code>, is not allowed.</li>
+<li>Use <code class="docutils literal"><span class="pre">/**</span>&#160; <span class="pre">*/</span></code> for doxygen comments that need to appear in the documentation.</li>
+</ul>
+<p>The Linux kernel GPL-licensed tool <code class="docutils literal"><span class="pre">checkpatch</span></code> is used to check
+coding style conformity. Checkpatch is available in the scripts
+directory. To invoke it when committing code, make the file
+<em>$ZEPHYR_BASE/.git/hooks/pre-commit</em> executable and edit it to contain:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
+<span class="nb">set</span> -e <span class="nb">exec</span>
+<span class="nb">exec</span> git diff --cached <span class="p">|</span> <span class="si">${</span><span class="nv">ZEPHYR_BASE</span><span class="si">}</span>/scripts/checkpatch.pl -
+</pre></div>
+</div>
+</div>
+<div class="section" id="contribution-workflow">
+<span id="id1"></span><h2>Contribution Workflow<a class="headerlink" href="#contribution-workflow" title="Permalink to this headline">¶</a></h2>
+<p>One general practice we encourage, is to make small,
+controlled changes. This practice simplifies review, makes merging and
+rebasing easier, and keeps the change history clear and clean.</p>
+<p>When contributing to the Zephyr Project, it is also important you provide as much
+information as you can about your change, update appropriate documentation,
+and test your changes thoroughly before submitting.</p>
+<p>The general GitHub workflow used by Zephyr developers uses a combination of
+command line Git commands and browser interaction with GitHub.  As it is with
+Git, there are multiple ways of getting a task done.  We’ll describe a typical
+workflow here:</p>
+<ol class="arabic">
+<li><p class="first"><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr#fork-destination-box">Create a Fork of Zephyr</a>
+to your personal account on GitHub.  (Click on the fork button in the top
+right corner of the Zephyr project repo page in GitHub.)</p>
+</li>
+<li><p class="first">On your development computer, clone the fork you just made:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git clone https://github.com/&lt;your github id&gt;/zephyr
+</pre></div>
+</div>
+<p>This would be a good time to let Git know about the upstream repo too:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git remote add upstream https://github.com/zephyrproject-rtos/zephyr.git
+</pre></div>
+</div>
+<p>and verify the remote repos:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git remote -v
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create a topic branch (off of master) for your work (if you’re addressing
+an issue, we suggest including the issue number in the branch name):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git checkout master
+$ git checkout -b fix_comment_typo
+</pre></div>
+</div>
+<p>Some Zephyr subsystems do development work on a separate branch from
+master so you may need to indicate this in your checkout:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git checkout -b fix_out_of_date_patch origin/net
+</pre></div>
+</div>
+</li>
+<li><p class="first">Make changes, test locally, change, test, test again, …  (Check out the
+prior chapter on <a class="reference internal" href="#sanitycheck">sanitycheck</a> as well).</p>
+</li>
+<li><p class="first">When things look good, start the pull request process by adding your changed
+files:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git add [file(s) that changed, add -p if you want to be more specific]
+</pre></div>
+</div>
+<p>You can see files that are not yet staged using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git status
+</pre></div>
+</div>
+</li>
+<li><p class="first">Verify changes to be committed look as you expected:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git diff --cached
+</pre></div>
+</div>
+</li>
+<li><p class="first">Commit your changes to your local repo:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git commit -s
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">-s</span></code> option automatically adds your <code class="docutils literal"><span class="pre">Signed-off-by:</span></code> to your commit
+message.  Your commit will be rejected without this line that indicates your
+agreement with the <a class="reference internal" href="#dco">DCO</a>.  See the <a class="reference internal" href="#commit-guidelines">Commit Guidelines</a> section for
+specific guidelines for writing your commit messages.</p>
+</li>
+<li><p class="first">Push your topic branch with your changes to your fork in your personal
+GitHub account:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git push origin fix_comment_typo
+</pre></div>
+</div>
+</li>
+<li><p class="first">In your web browser, go to your forked repo and click on the
+<code class="docutils literal"><span class="pre">Compare</span> <span class="pre">&amp;</span> <span class="pre">pull</span> <span class="pre">request</span></code> button for the branch you just worked on and
+you want to open a pull request with.</p>
+</li>
+<li><p class="first">Review the pull request changes, and verify that you are opening a
+pull request for the appropriate branch. The title and message from your
+commit message should appear as well.</p>
+</li>
+<li><p class="first">If you’re working on a subsystem branch that’s not <code class="docutils literal"><span class="pre">master</span></code>,
+you may need to change the intended branch for the pull request
+here, for example, by changing the base branch from <code class="docutils literal"><span class="pre">master</span></code> to <code class="docutils literal"><span class="pre">net</span></code>.</p>
+</li>
+<li><p class="first">GitHub will assign one or more suggested reviewers (based on the
+CODEOWNERS file in the repo). If you are a project member, you can
+select additional reviewers now too.</p>
+</li>
+<li><p class="first">Click on the submit button and your pull request is sent and awaits
+review.  Email will be sent as review comments are made, or you can check
+on your pull request at <a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/pulls">https://github.com/zephyrproject-rtos/zephyr/pulls</a>.</p>
+</li>
+<li><p class="first">While you’re waiting for your pull request to be accepted and merged, you
+can create another branch to work on another issue. (Be sure to make your
+new branch off of master and not the previous branch.):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git checkout master
+$ git checkout -b fix_another_issue
+</pre></div>
+</div>
+<p>and use the same process described above to work on this new topic branch.</p>
+</li>
+<li><p class="first">If reviewers do request changes to your patch, you can interactively rebase
+commit(s) to fix review issues.  In your development repo:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git fetch --all
+$ git rebase --ignore-whitespace upstream/master
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">--ignore-whitespace</span></code> option stops <code class="docutils literal"><span class="pre">git</span> <span class="pre">apply</span></code> (called by rebase)
+from changing any whitespace. Continuing:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git rebase -i &lt;offending-commit-id&gt;^
+</pre></div>
+</div>
+<p>In the interactive rebase editor, replace <code class="docutils literal"><span class="pre">pick</span></code> with <code class="docutils literal"><span class="pre">edit</span></code> to select
+a specific commit (if there’s more than one in your pull request), or
+remove the line to delete a commit entirely.  Then edit files to fix the
+issues in the review.</p>
+<p>As before, inspect and test your changes. When ready, continue the
+patch submission:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git add [file(s)]
+$ git rebase --continue
+</pre></div>
+</div>
+<p>Update commit comment if needed, and continue:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git push --force origin fix_comment_typo
+</pre></div>
+</div>
+<p>By force pushing your update, your original pull request will be updated
+with your changes so you won’t need to resubmit the pull request.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="commit-guidelines">
+<h2>Commit Guidelines<a class="headerlink" href="#commit-guidelines" title="Permalink to this headline">¶</a></h2>
+<p>Changes are submitted as Git commits. Each commit message must contain:</p>
+<ul>
+<li><p class="first">A short and descriptive subject line that is less than 72 characters,
+followed by a blank line. The subject line must include a prefix that
+identifies the subsystem being changed, followed by a colon, and a short
+title, for example:  <code class="docutils literal"><span class="pre">doc:</span> <span class="pre">update</span> <span class="pre">wiki</span> <span class="pre">references</span> <span class="pre">to</span> <span class="pre">new</span> <span class="pre">site</span></code>.
+(If you’re updating an existing file, you can use
+<code class="docutils literal"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">&lt;filename&gt;</span></code> to see what developers used as the prefix for
+previous patches of this file.)</p>
+</li>
+<li><p class="first">A change description with your logic or reasoning for the changes, followed
+by a blank line.</p>
+</li>
+<li><p class="first">A Signed-off-by line, <code class="docutils literal"><span class="pre">Signed-off-by:</span> <span class="pre">&lt;name&gt;</span> <span class="pre">&lt;email&gt;</span></code> typically added
+automatically by using <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-s</span></code></p>
+</li>
+<li><p class="first">If the change addresses an issue, include a line of the form:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fixes</span> <span class="c1">#&lt;issue number&gt;.</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>All changes and topics sent to GitHub must be well-formed, as described above.</p>
+<div class="section" id="commit-message-body">
+<h3>Commit Message Body<a class="headerlink" href="#commit-message-body" title="Permalink to this headline">¶</a></h3>
+<p>When editing the commit message, please briefly explain what your change
+does and why it’s needed. A change summary of <code class="docutils literal"><span class="pre">&quot;Fixes</span> <span class="pre">stuff&quot;</span></code> will be rejected. An
+empty change summary is only acceptable for trivial changes fully described by
+the commit title (e.g., <code class="docutils literal"><span class="pre">doc:</span> <span class="pre">fix</span> <span class="pre">misspellings</span> <span class="pre">in</span> <span class="pre">CONTRIBUTING</span> <span class="pre">doc</span></code>)</p>
+<p>The description body of the commit message must include:</p>
+<ul class="simple">
+<li><strong>what</strong> the change does,</li>
+<li><strong>why</strong> you chose that approach,</li>
+<li><strong>what</strong> assumptions were made, and</li>
+<li><strong>how</strong> you know it works – for example, which tests you ran.</li>
+</ul>
+<p>For examples of accepted commit messages, you can refer to the Zephyr GitHub
+<a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/commits/master">changelog</a>.</p>
+</div>
+<div class="section" id="other-commit-expectations">
+<h3>Other Commit Expectations<a class="headerlink" href="#other-commit-expectations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Commits must build cleanly when applied on top of each other, thus avoiding
+breaking bisectability.</li>
+<li>Commits must pass the <em>scripts/checkpatch.pl</em> requirements.</li>
+<li>Each commit must address a single identifiable issue and must be
+logically self-contained. Unrelated changes should be submitted as
+separate commits.</li>
+<li>You may submit pull request RFCs (requests for comments) to send work
+proposals, progress snapshots of your work, or to get early feedback on
+features or changes that will affect multiple areas in the code base.</li>
+</ul>
+</div>
+<div class="section" id="identifying-contribution-origin">
+<h3>Identifying Contribution Origin<a class="headerlink" href="#identifying-contribution-origin" title="Permalink to this headline">¶</a></h3>
+<p>When adding a new file to the tree, it is important to detail the source of
+origin on the file, provide attributions, and detail the intended usage. In
+cases where the file is an original to Zephyr, the commit message should
+include the following (“Original” is the assumption if no Origin tag is
+present):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Origin</span><span class="p">:</span> <span class="n">Original</span>
+</pre></div>
+</div>
+<p>In cases where the file is imported from an external project, the commit
+message shall contain details regarding the original project, the location of
+the project, the SHA-id of the origin commit for the file, the intended
+purpose, and if the file will be maintained by the Zephyr project,
+(whether or not the Zephyr project will contain a localized branch or if
+it is a downstream copy).</p>
+<p>For example, a copy of a locally maintained import:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Origin</span><span class="p">:</span> <span class="n">Contiki</span> <span class="n">OS</span>
+<span class="n">License</span><span class="p">:</span> <span class="n">BSD</span> <span class="mi">3</span><span class="o">-</span><span class="n">Clause</span>
+<span class="n">URL</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">contiki</span><span class="o">-</span><span class="n">os</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
+<span class="n">commit</span><span class="p">:</span> <span class="mi">853207</span><span class="n">acfdc6549b10eb3e44504b1a75ae1ad63a</span>
+<span class="n">Purpose</span><span class="p">:</span> <span class="n">Introduction</span> <span class="n">of</span> <span class="n">networking</span> <span class="n">stack</span><span class="o">.</span>
+<span class="n">Maintained</span><span class="o">-</span><span class="n">by</span><span class="p">:</span> <span class="n">Zephyr</span>
+</pre></div>
+</div>
+<p>For example, a copy of an externally maintained import:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Origin</span><span class="p">:</span> <span class="n">Tiny</span> <span class="n">Crypt</span>
+<span class="n">License</span><span class="p">:</span> <span class="n">BSD</span> <span class="mi">3</span><span class="o">-</span><span class="n">Clause</span>
+<span class="n">URL</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">01</span><span class="n">org</span><span class="o">/</span><span class="n">tinycrypt</span>
+<span class="n">commit</span><span class="p">:</span> <span class="mi">08</span><span class="n">ded7f21529c39e5133688ffb93a9d0c94e5c6e</span>
+<span class="n">Purpose</span><span class="p">:</span> <span class="n">Introduction</span> <span class="n">of</span> <span class="n">TinyCrypt</span>
+<span class="n">Maintained</span><span class="o">-</span><span class="n">by</span><span class="p">:</span> <span class="n">External</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="contribute_non-apache.html" class="btn btn-neutral float-right" title="Contributing non-Apache 2.0 licensed components" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="contribute.html" class="btn btn-neutral" title="Contributing to the Zephyr Project" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

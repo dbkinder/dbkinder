@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: LWM2M_NUM_BLOCK1_CONTEXT
+
+.. option:: CONFIG_LWM2M_NUM_BLOCK1_CONTEXT
+.. _CONFIG_LWM2M_NUM_BLOCK1_CONTEXT:
+
+This value sets up the maximum number of block1 contexts for
+CoAP block-wise transfer we can handle at the same time.
+
+
+
+:Symbol:           LWM2M_NUM_BLOCK1_CONTEXT
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Maximum # of LWM2M block1 contexts"
+:Default values:
+
+ *  3 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:145

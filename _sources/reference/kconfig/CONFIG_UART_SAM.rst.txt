@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: UART_SAM
+
+.. option:: CONFIG_UART_SAM
+.. _CONFIG_UART_SAM:
+
+This option enables the UARTx driver for Atmel SAM MCUs.
+
+
+
+:Symbol:           UART_SAM
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Atmel SAM MCU family UART driver" if SOC_FAMILY_SAM (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SOC_FAMILY_SAM (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_SERIAL_HAS_DRIVER` if SOC_FAMILY_SAM (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.uart_sam:7

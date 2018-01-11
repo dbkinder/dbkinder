@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: NET_DEBUG_HTTP
+
+.. option:: CONFIG_NET_DEBUG_HTTP
+.. _CONFIG_NET_DEBUG_HTTP:
+
+Enables HTTP output debug messages
+
+
+
+:Symbol:           NET_DEBUG_HTTP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Debug HTTP" if HTTP && NET_LOG (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: HTTP && NET_LOG (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ HTTP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/http/Kconfig:132

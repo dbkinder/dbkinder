@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: PWM_1
+
+.. option:: CONFIG_PWM_1
+.. _CONFIG_PWM_1:
+
+The configuration item CONFIG_PWM_1:
+
+:Symbol:           PWM_1
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable PWM port 1"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ PWM_MCUX_FTM && BOARD_USB_KW24D512 (value: "n")
+:Locations:
+ * ../drivers/pwm/Kconfig:36
+ * ../boards/arm/usb_kw24d512/Kconfig.defconfig:94

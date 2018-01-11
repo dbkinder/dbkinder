@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: FS_NFFS_NUM_FILES
+
+.. option:: CONFIG_FS_NFFS_NUM_FILES
+.. _CONFIG_FS_NFFS_NUM_FILES:
+
+The configuration item CONFIG_FS_NFFS_NUM_FILES:
+
+:Symbol:           FS_NFFS_NUM_FILES
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 256]
+:Prompts:
+
+ *  "Maximum number of opened files" if FILE_SYSTEM_NFFS (value: "n")
+:Default values:
+
+ *  4 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FILE_SYSTEM (value: "n")
+:Locations:
+ * ../subsys/fs/Kconfig:67

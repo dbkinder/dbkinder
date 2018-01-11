@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: LWM2M_FIRMWARE_UPDATE_PULL_SUPPORT
+
+.. option:: CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_SUPPORT
+.. _CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_SUPPORT:
+
+Include support for pulling a file from a remote server via
+block transfer and "FIRMWARE PACKAGE URI" resource.  This option
+adds another UDP context and packet handling.
+
+
+
+:Symbol:           LWM2M_FIRMWARE_UPDATE_PULL_SUPPORT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Firmware Update object pull support" if LWM2M_FIRMWARE_UPDATE_OBJ_SUPPORT && (HTTP_PARSER || HTTP_PARSER_URL) (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: LWM2M_FIRMWARE_UPDATE_OBJ_SUPPORT && (HTTP_PARSER || HTTP_PARSER_URL) (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:125

@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: I2C_GPIO_3
+
+.. option:: CONFIG_I2C_GPIO_3
+.. _CONFIG_I2C_GPIO_3:
+
+This tells the driver to configure the I2C device at boot, depending
+on the additional configuration options below.
+
+
+
+:Symbol:           I2C_GPIO_3
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable GPIO Bit Bang I2C device 3" if I2C_GPIO (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: I2C_GPIO (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig.gpio:125

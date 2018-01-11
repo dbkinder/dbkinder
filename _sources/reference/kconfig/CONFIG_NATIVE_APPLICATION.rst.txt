@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NATIVE_APPLICATION
+
+.. option:: CONFIG_NATIVE_APPLICATION
+.. _CONFIG_NATIVE_APPLICATION:
+
+Build as a native application that can run on the host and using
+resources and libraries provided by the host.
+
+
+
+:Symbol:           NATIVE_APPLICATION
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Build as a native host application"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ ARCH_POSIX (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../misc/Kconfig:125

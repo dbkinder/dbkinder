@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BME280_SPI_DEV_SLAVE
+
+.. option:: CONFIG_BME280_SPI_DEV_SLAVE
+.. _CONFIG_BME280_SPI_DEV_SLAVE:
+
+Specify the Slave Select pin of the SPI device to which BME280 CS is
+connected.
+
+
+
+:Symbol:           BME280_SPI_DEV_SLAVE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SPI Slave Select where BME280 is connected" if BME280 && BME280_DEV_TYPE_SPI (value: "n")
+:Default values:
+
+ *  3 (value: "n")
+ *   Condition: BME280 && BME280_DEV_TYPE_SPI (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/bme280/Kconfig:64

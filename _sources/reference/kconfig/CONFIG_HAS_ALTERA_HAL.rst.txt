@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: HAS_ALTERA_HAL
+
+.. option:: CONFIG_HAS_ALTERA_HAL
+.. _CONFIG_HAS_ALTERA_HAL:
+
+The configuration item CONFIG_HAS_ALTERA_HAL:
+
+:Symbol:           HAS_ALTERA_HAL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Altera HAL drivers support" if NIOS2 && NEWLIB_LIBC (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: NIOS2 && NEWLIB_LIBC (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../ext/hal/altera/Kconfig:11

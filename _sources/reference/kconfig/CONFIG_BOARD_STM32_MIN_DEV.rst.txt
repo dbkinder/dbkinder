@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_STM32_MIN_DEV
+
+.. option:: CONFIG_BOARD_STM32_MIN_DEV
+.. _CONFIG_BOARD_STM32_MIN_DEV:
+
+The configuration item CONFIG_BOARD_STM32_MIN_DEV:
+
+:Symbol:           BOARD_STM32_MIN_DEV
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "STM32 Minimum Development Board" if SOC_STM32F103X8 (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/stm32_min_dev/Kconfig.board:7

@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: I2C_ESP32_0_RX_LSB_FIRST
+
+.. option:: CONFIG_I2C_ESP32_0_RX_LSB_FIRST
+.. _CONFIG_I2C_ESP32_0_RX_LSB_FIRST:
+
+The configuration item CONFIG_I2C_ESP32_0_RX_LSB_FIRST:
+
+:Symbol:           I2C_ESP32_0_RX_LSB_FIRST
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port 0 Receive LSB first"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C_ESP32 && I2C && I2C_0 (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig.esp32:33

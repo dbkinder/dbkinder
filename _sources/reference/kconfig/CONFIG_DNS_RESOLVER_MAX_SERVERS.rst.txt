@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: DNS_RESOLVER_MAX_SERVERS
+
+.. option:: CONFIG_DNS_RESOLVER_MAX_SERVERS
+.. _CONFIG_DNS_RESOLVER_MAX_SERVERS:
+
+Max number of DNS servers that we can connect to. Normally one
+DNS server is enough. Each connection to DNS server will use one
+network context.
+
+
+
+:Symbol:           DNS_RESOLVER_MAX_SERVERS
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, NET_MAX_CONTEXTS]
+:Prompts:
+
+ *  "Number of DNS server addresses"
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ DNS_RESOLVER && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/dns/Kconfig:44

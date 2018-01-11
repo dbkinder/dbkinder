@@ -1,0 +1,48 @@
+:orphan:
+
+.. title:: CACHE_FLUSHING
+
+.. option:: CONFIG_CACHE_FLUSHING
+.. _CONFIG_CACHE_FLUSHING:
+
+This links in the sys_cache_flush() function, which provides a
+way to flush multiple lines of the d-cache.
+If the d-cache is present, set this to y.
+If the d-cache is NOT present, set this to n.
+
+
+
+:Symbol:           CACHE_FLUSHING
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable cache flushing mechanism"
+ *  "Enable d-cache flushing mechanism"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_EM11D (value: "n")
+:Locations:
+ * ../arch/x86/Kconfig:241
+ * ../arch/arc/Kconfig:257
+ * ../arch/arc/soc/em7d/Kconfig.defconfig:66
+ * ../arch/arc/soc/em11d/Kconfig.defconfig:57

@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: FXAS21002_I2C_ADDRESS
+
+.. option:: CONFIG_FXAS21002_I2C_ADDRESS
+.. _CONFIG_FXAS21002_I2C_ADDRESS:
+
+The I2C slave address can be configured by the SA0 input pin. This
+option should usually be set by the board defconfig.
+
+
+
+:Symbol:           FXAS21002_I2C_ADDRESS
+:Type:             hex
+:Value:            "0x20"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0x20, 0x21]
+:Prompts:
+
+ *  "I2C address"
+:Default values:
+
+ *  0x20 (value: "n")
+ *   Condition: (none)
+ *  0x20 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FXAS21002 && BOARD_HEXIWEAR_K64 (value: "n")
+:Locations:
+ * ../drivers/sensor/fxas21002/Kconfig:26
+ * ../boards/arm/hexiwear_k64/Kconfig.defconfig:111

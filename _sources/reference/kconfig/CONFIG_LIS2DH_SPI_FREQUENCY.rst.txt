@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: LIS2DH_SPI_FREQUENCY
+
+.. option:: CONFIG_LIS2DH_SPI_FREQUENCY
+.. _CONFIG_LIS2DH_SPI_FREQUENCY:
+
+SPI clock frequency to use. Make sure the SPI master hardware supports
+this frequency.
+
+
+
+:Symbol:           LIS2DH_SPI_FREQUENCY
+:Type:             int
+:Value:            "125000"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [125000, 10000000]
+:Prompts:
+
+ *  "SPI clock frequency" if LIS2DH && LIS2DH_BUS_SPI (value: "n")
+:Default values:
+
+ *  4000000 (value: "n")
+ *   Condition: LIS2DH && LIS2DH_BUS_SPI (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lis2dh/Kconfig:61

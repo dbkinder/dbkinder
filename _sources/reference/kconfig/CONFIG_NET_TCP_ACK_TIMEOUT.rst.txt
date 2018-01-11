@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: NET_TCP_ACK_TIMEOUT
+
+.. option:: CONFIG_NET_TCP_ACK_TIMEOUT
+.. _CONFIG_NET_TCP_ACK_TIMEOUT:
+
+This value affects the timeout when waiting ACK to arrive in
+various TCP states. The value is in milliseconds. Note that
+having a very low value here could prevent connectivity.
+
+
+
+:Symbol:           NET_TCP_ACK_TIMEOUT
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 2147483647]
+:Prompts:
+
+ *  "How long to wait for ACK (in milliseconds)" if NET_TCP (value: "n")
+:Default values:
+
+ *  1000 (value: "n")
+ *   Condition: NET_TCP (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig:147

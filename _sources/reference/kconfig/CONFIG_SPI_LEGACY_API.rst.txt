@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: SPI_LEGACY_API
+
+.. option:: CONFIG_SPI_LEGACY_API
+.. _CONFIG_SPI_LEGACY_API:
+
+Driver and user API is the legacy SPI API (spi_legacy.h).
+If unselected, the new API will be used.
+
+
+
+:Symbol:           SPI_LEGACY_API
+:Type:             bool
+:Value:            "y"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Use legacy SPI API (default)"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT && BOARD_96B_CARBON (value: "n")
+:Locations:
+ * ../drivers/spi/Kconfig:9
+ * ../boards/arm/96b_carbon/Kconfig.defconfig:30

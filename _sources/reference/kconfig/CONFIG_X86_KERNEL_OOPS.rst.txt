@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: X86_KERNEL_OOPS
+
+.. option:: CONFIG_X86_KERNEL_OOPS
+.. _CONFIG_X86_KERNEL_OOPS:
+
+Enable handling of k_oops() API as a CPU exception, which will provide
+extra debugging information such as program counter and register
+values when the oops is triggered. Requires an entry in the IDT.
+
+
+
+:Symbol:           X86_KERNEL_OOPS
+:Type:             bool
+:Value:            "y"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable handling of kernel oops as an exception"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ X86 (value: "y")
+:Locations:
+ * ../arch/x86/Kconfig:257

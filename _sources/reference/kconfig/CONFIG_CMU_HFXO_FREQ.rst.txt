@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: CMU_HFXO_FREQ
+
+.. option:: CONFIG_CMU_HFXO_FREQ
+.. _CONFIG_CMU_HFXO_FREQ:
+
+Set the external high frequency oscillator frequency in Hz. This should be set by the
+board's defconfig.
+
+
+
+:Symbol:           CMU_HFXO_FREQ
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "External high frequency oscillator frequency"
+:Default values:
+
+ *  48000000 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BOARD_EFM32WG_STK3800 (value: "n")
+:Locations:
+ * ../arch/arm/soc/silabs_exx32/Kconfig:59
+ * ../boards/arm/efm32wg_stk3800/Kconfig.defconfig:13

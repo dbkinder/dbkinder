@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NATIVE_POSIX_CONSOLE
+
+.. option:: CONFIG_NATIVE_POSIX_CONSOLE
+.. _CONFIG_NATIVE_POSIX_CONSOLE:
+
+Use native console to print messages.
+
+
+
+:Symbol:           NATIVE_POSIX_CONSOLE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Print to console" if BOARD_NATIVE_POSIX (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: BOARD_NATIVE_POSIX (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_CONSOLE_HAS_DRIVER` if BOARD_NATIVE_POSIX (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ CONSOLE (value: "n")
+:Locations:
+ * ../drivers/console/Kconfig:201

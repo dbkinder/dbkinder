@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: HAS_MCUX
+
+.. option:: CONFIG_HAS_MCUX
+.. _CONFIG_HAS_MCUX:
+
+The configuration item CONFIG_HAS_MCUX:
+
+:Symbol:           HAS_MCUX
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_HAS_CMSIS` if SOC_FAMILY_KINETIS || SOC_FAMILY_IMX (value: "n")
+:Reverse (select-related) dependencies:
+ SOC_MIMXRT1051 && ARM || SOC_MIMXRT1052 && ARM || SOC_MKW22D5 && ARM || SOC_MKW24D5 && ARM || SOC_MKW40Z4 && ARM || SOC_MKW41Z4 && ARM || SOC_MKL25Z4 && ARM || SOC_MK64F12 && ARM (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../ext/hal/nxp/mcux/Kconfig:8

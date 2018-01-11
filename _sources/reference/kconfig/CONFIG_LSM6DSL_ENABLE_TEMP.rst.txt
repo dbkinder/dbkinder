@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: LSM6DSL_ENABLE_TEMP
+
+.. option:: CONFIG_LSM6DSL_ENABLE_TEMP
+.. _CONFIG_LSM6DSL_ENABLE_TEMP:
+
+Enable/disable temperature
+
+
+
+:Symbol:           LSM6DSL_ENABLE_TEMP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable temperature" if LSM6DSL (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: LSM6DSL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lsm6dsl/Kconfig:42

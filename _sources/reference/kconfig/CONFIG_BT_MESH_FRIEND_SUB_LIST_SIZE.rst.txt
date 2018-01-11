@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: BT_MESH_FRIEND_SUB_LIST_SIZE
+
+.. option:: CONFIG_BT_MESH_FRIEND_SUB_LIST_SIZE
+.. _CONFIG_BT_MESH_FRIEND_SUB_LIST_SIZE:
+
+Size of the Subscription List that can be supported by a
+Friend node for a Low Power node.
+
+
+
+:Symbol:           BT_MESH_FRIEND_SUB_LIST_SIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 1023]
+:Prompts:
+
+ *  "Friend Subscription List Size"
+:Default values:
+
+ *  3 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_FRIEND (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:335

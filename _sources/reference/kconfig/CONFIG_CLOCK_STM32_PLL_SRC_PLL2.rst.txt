@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: CLOCK_STM32_PLL_SRC_PLL2
+
+.. option:: CONFIG_CLOCK_STM32_PLL_SRC_PLL2
+.. _CONFIG_CLOCK_STM32_PLL_SRC_PLL2:
+
+Use PLL2 as source of main PLL. This is equivalent of defining
+PLL2 as source PREDIV1SCR. If not selected, default source is HSE.
+
+
+
+:Symbol:           CLOCK_STM32_PLL_SRC_PLL2
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "PLL2" if SOC_STM32F10X_CONNECTIVITY_LINE_DEVICE (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_FAMILY_STM32 && CLOCK_CONTROL && CLOCK_CONTROL_STM32_CUBE (value: "n")
+:Locations:
+ * ../drivers/clock_control/Kconfig.stm32:89

@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Native POSIX execution (native_posix) &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../../../index.html"/>
+        <link rel="up" title="Native POSIX Boards" href="../../index.html"/>
+        <link rel="next" title="Device and Driver Support" href="../../../../devices/index.html"/>
+        <link rel="prev" title="Native POSIX Boards" href="../../index.html"/> 
+
+    
+    <script src="../../../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../../../index.html">Docs</a> /
+      
+          <a href="../../../boards.html">Supported Boards</a> /
+      
+          <a href="../../index.html">Native POSIX Boards</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../boards.html">Supported Boards</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../x86/index.html">x86 Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../arm/index.html">ARM Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../arc/index.html">ARC Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../nios2/index.html">NIOS II Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../xtensa/index.html">XTENSA Boards</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Native POSIX Boards</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Native POSIX execution (native_posix)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="native-posix-execution-native-posix">
+<span id="native-posix"></span><h1>Native POSIX execution (native_posix)<a class="headerlink" href="#native-posix-execution-native-posix" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Using this board, a Zephyr application can be compiled together with
+the Zephyr kernel, creating a normal console executable that runs as
+a native application on the host OS, without emulation.  Instead,
+you use native host tools for compiling, debugging, and analyzing your
+Zephyr application, eliminating the need for architecture-specific
+target hardware in the early phases of development.</p>
+<div class="section" id="host-system-dependencies">
+<h3>Host system dependencies<a class="headerlink" href="#host-system-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>This port is designed to run in POSIX compatible operating systems.
+It has only been tested on Linux, but should also be compatible with macOS.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You must have the 32-bit C library installed in your system
+(in Ubuntu 16.04 install the gcc-multilib package)</p>
+</div>
+</div>
+</div>
+<div class="section" id="architecture">
+<h2>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h2>
+<p>This board is based on the POSIX architecture port of Zephyr.
+In this architecture each Zephyr thread is mapped to one POSIX pthread,
+but only one of these pthreads executes at a time.
+This architecture provides the same interface to the Kernel as other
+architectures and is therefore transparent for the application.</p>
+<p>This board does not try to emulate any particular embedded CPU or SOC.
+The code is compiled natively for the host x86 system, as a 32-bit
+binary assuming pointer and integer types are 32-bits wide.</p>
+<p>To ensure determinism when the Zephyr code is running,
+and to ease application debugging,
+the issue of code execution speed is ignored.
+The board uses a different time than real time: simulated time.
+This simulated time is, in principle, not linked to the host time.</p>
+<p>The Zephyr application sees the code executing as if the CPU were running at
+an infinitely high clock, and fully decoupled from the underlying host CPU
+speed.
+No simulated time passes while the application or kernel code execute.</p>
+<p>The CPU boot is emulated by creating the Zephyr initialization thread and
+letting it run. This in turn may spawn more Zephyr threads.
+Eventually the SW will run to completion, that is, it will set the CPU
+back to sleep.</p>
+<p>At this point, control is transferred back to the HW models and the simulation
+time can be advanced.</p>
+<p>When the HW models raise an interrupt, the CPU wakes back up: the interrupt
+is handled, the SW runs until completion again, and control is
+transferred back to the HW models, all in zero simulated time.</p>
+<p>If the SW unmasks a pending interrupt while running, or triggers a SW
+interrupt, the interrupt controller may raise the interrupt immediately
+depending on interrupt priorities, masking, and locking state.</p>
+<p>Normally the resulting executable runs fully decoupled from the real host time.
+That is, simulated time will advance as fast as it can. This is desirable when
+running in a debuger or testing in batch, but not if one wants to interact
+with external interfaces which are based on the real host time.</p>
+</div>
+<div class="section" id="peripherals">
+<h2>Peripherals<a class="headerlink" href="#peripherals" title="Permalink to this headline">¶</a></h2>
+<p>The following peripherals are currently provided with this board:</p>
+<p><strong>Console/printk driver</strong>:</p>
+<p>A driver is provided that redirects any printk write to the native
+host application’s stdout.</p>
+<p><strong>Simple timer</strong>:</p>
+<p>A simple timer provides the kernel with a 10ms tick.
+This peripheral driver also provides the needed functionality for this
+architecture-specific k_busy_wait().</p>
+<p>This timer, may also be configured with NATIVE_POSIX_SLOWDOWN_TO_REAL_TIME
+to slow down the execution to real host time.
+This will provide the illusion that the simulated time is running at the same
+speed as the real host time.
+In reality, the timer will monitor how much real host time
+has actually passed since boot, and when needed, the timer will pause
+the execution before raising each timer interrupt.
+Normally the Zephyr application and HW models run in very little time
+on the host CPU, so this is a good enough approach.</p>
+<p><strong>Interrupt controller</strong></p>
+<p>A simple yet generic interrupt controller is provided. It can nest interrupts
+and provides interrupt priorities. Interrupts can be individually masked or
+unmasked. SW interrupts are also supported.</p>
+<div class="section" id="important-limitations">
+<h3>Important limitations<a class="headerlink" href="#important-limitations" title="Permalink to this headline">¶</a></h3>
+<p>The assumption that simulated time can only pass while the CPU is sleeping
+means that there can not be busy wait loops in the application code that
+wait for something to happen without letting the CPU sleep.
+If busy wait loops do exist, they will behave as infinite loops and
+will stall the execution.</p>
+<p>As simulated time does not pass while the CPU is running, it also means no HW
+interrupts will interrupt the threads’ execution unless the SW enables or
+unmasks them.
+This is intentional, as it provides a deterministic environment to develop and
+debug.
+But note that this may hide issues in the SW that may only be triggered in the
+real platform.</p>
+<p>This native port of Zephyr is not meant to, and could not possibly
+help debug races between HW and SW, or similar timing related issues.</p>
+</div>
+</div>
+<div class="section" id="how-to-use-it">
+<h2>How to use it<a class="headerlink" href="#how-to-use-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="compiling">
+<h3>Compiling<a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h3>
+<p>Specify the native_posix board target to build a native POSIX application:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>native_posix ..
+<span class="gp">$</span> make
+</pre></div>
+</div>
+</div>
+<div class="section" id="running">
+<h3>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h3>
+<p>The result of the compilation is an executable (zephyr.exe) placed in the
+zephyr/ subdirectory of the build folder.
+Run the zephyr.exe executable as you would any other Linux console application.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> zephyr/zephyr.exe
+<span class="gp">#</span> Press Ctrl+C to <span class="nb">exit</span>
+</pre></div>
+</div>
+<p>Note that the Zephyr kernel does not actually exit once the application is
+finished. It simply goes into the idle loop forever.
+Therefore you must stop the application manually (Ctrl+C in Linux).</p>
+<p>Application tests using the <code class="docutils literal"><span class="pre">ztest</span></code> framework will exit after all
+tests have completed.</p>
+<p>If you want your application to gracefully finish when it reaches some point,
+you may add a conditionally compiled (CONFIG_BOARD_NATIVE_POSIX) call to
+<code class="docutils literal"><span class="pre">main_clean_up(exit_code)</span></code> at that point.</p>
+</div>
+<div class="section" id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
+<p>Since the Zephyr executable is a native application, it can be debuged and
+instrumented as any other native program. The program is compiled with debug
+information, so it can be run directly in, for example, <code class="docutils literal"><span class="pre">gdb</span></code> or instrumented
+with <code class="docutils literal"><span class="pre">valgrind</span></code>.</p>
+<p>Because the execution of your Zephyr application is fully deterministic
+(there are no asynchronous or random components), you can execute the
+code multiple times and get the exact same result and instrumenting the
+code does not affect the execution of the code.</p>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../../../../devices/index.html" class="btn btn-neutral float-right" title="Device and Driver Support" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../../index.html" class="btn btn-neutral" title="Native POSIX Boards" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

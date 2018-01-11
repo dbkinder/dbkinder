@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: BT_SCAN_WITH_IDENTITY
+
+.. option:: CONFIG_BT_SCAN_WITH_IDENTITY
+.. _CONFIG_BT_SCAN_WITH_IDENTITY:
+
+Enable this if you want to perform active scanning using the local
+identity address as the scanner address. By default the stack will
+always use a non-resolvable private address (NRPA) in order to avoid
+disclosing local identity information. However, if the use case
+requires disclosing it then enable this option.
+
+
+
+:Symbol:           BT_SCAN_WITH_IDENTITY
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Perform active scanning using local identity address" if !BT_PRIVACY && (BT_CENTRAL || BT_OBSERVER) (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:304

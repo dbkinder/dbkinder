@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_DEBUG_NET_PKT
+
+.. option:: CONFIG_NET_DEBUG_NET_PKT
+.. _CONFIG_NET_DEBUG_NET_PKT:
+
+Enables collection of network packet and buffer allocations and frees.
+
+
+
+:Symbol:           NET_DEBUG_NET_PKT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Debug network packet and buffer allocation"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_NET_BUF_POOL_USAGE`
+:Reverse (select-related) dependencies:
+ NETWORKING && NETWORKING && !NET_RAW_MODE && NET_LOG && NET_LOG_GLOBAL (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE && NET_LOG (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig.debug:89

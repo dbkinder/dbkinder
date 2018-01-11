@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: BT_L2CAP_DYNAMIC_CHANNEL
+
+.. option:: CONFIG_BT_L2CAP_DYNAMIC_CHANNEL
+.. _CONFIG_BT_L2CAP_DYNAMIC_CHANNEL:
+
+This option enables support for LE Connection oriented Channels,
+allowing the creation of dynamic L2CAP Channels.
+
+
+
+:Symbol:           BT_L2CAP_DYNAMIC_CHANNEL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "L2CAP Dynamic Channel support" if BT_SMP (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BT_HCI && BT && BT_HCI_HOST && BT_BREDR || NETWORKING && NETWORKING && NET_L2_BT (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_CONN (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:281

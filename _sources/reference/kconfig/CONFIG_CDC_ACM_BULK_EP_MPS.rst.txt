@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: CDC_ACM_BULK_EP_MPS
+
+.. option:: CONFIG_CDC_ACM_BULK_EP_MPS
+.. _CONFIG_CDC_ACM_BULK_EP_MPS:
+
+CDC ACM class bulk endpoints size
+
+
+
+:Symbol:           CDC_ACM_BULK_EP_MPS
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  64 (value: "n")
+ *   Condition: USB_CDC_ACM (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ USB_DEVICE_STACK && USB_DEVICE_STACK (value: "n")
+:Locations:
+ * ../subsys/usb/class/Kconfig:56

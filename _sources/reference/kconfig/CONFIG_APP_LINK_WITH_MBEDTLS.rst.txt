@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: APP_LINK_WITH_MBEDTLS
+
+.. option:: CONFIG_APP_LINK_WITH_MBEDTLS
+.. _CONFIG_APP_LINK_WITH_MBEDTLS:
+
+Add MBEDTLS header files to the 'app' include path. It may be
+disabled if the include paths for MBEDTLS are causing aliasing
+issues for 'app'.
+
+
+:Symbol:           APP_LINK_WITH_MBEDTLS
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Link 'app' with MBEDTLS" if MBEDTLS (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: MBEDTLS (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../ext/lib/crypto/mbedtls/Kconfig:102

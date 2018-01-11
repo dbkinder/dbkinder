@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: CONSOLE_GETLINE
+
+.. option:: CONFIG_CONSOLE_GETLINE
+.. _CONFIG_CONSOLE_GETLINE:
+
+The configuration item CONFIG_CONSOLE_GETLINE:
+
+:Symbol:           CONSOLE_GETLINE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Line by line input"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_CONSOLE_HANDLER`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ CONSOLE_PULL (value: "n")
+:Locations:
+ * ../subsys/console/Kconfig:25

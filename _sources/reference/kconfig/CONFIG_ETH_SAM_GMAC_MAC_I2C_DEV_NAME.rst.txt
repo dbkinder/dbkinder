@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: ETH_SAM_GMAC_MAC_I2C_DEV_NAME
+
+.. option:: CONFIG_ETH_SAM_GMAC_MAC_I2C_DEV_NAME
+.. _CONFIG_ETH_SAM_GMAC_MAC_I2C_DEV_NAME:
+
+Device name, e.g. I2C_0, of an I2C bus driver device. It is required to
+obtain handle to the I2C device object.
+
+
+
+:Symbol:           ETH_SAM_GMAC_MAC_I2C_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "I2C bus driver device name"
+:Default values:
+
+ *  "I2C_0"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ETH_SAM_GMAC && BOARD_SAM_E70_XPLAINED (value: "n")
+:Locations:
+ * ../drivers/ethernet/Kconfig.sam_gmac:119
+ * ../boards/arm/sam_e70_xplained/Kconfig.defconfig:44

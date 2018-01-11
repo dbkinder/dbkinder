@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: SOC_SERIES_CC2650
+
+.. option:: CONFIG_SOC_SERIES_CC2650
+.. _CONFIG_SOC_SERIES_CC2650:
+
+Enable support for TI SimpleLink CC2650.
+
+
+:Symbol:           SOC_SERIES_CC2650
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "TI SimpleLink Family CC2650"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_CPU_CORTEX_M`
+ *  :option:`CONFIG_CPU_CORTEX_M3`
+ *  :option:`CONFIG_SOC_FAMILY_TISIMPLELINK`
+ *  :option:`CONFIG_CPU_HAS_SYSTICK`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/arm/soc/ti_simplelink/cc2650/Kconfig.series:6

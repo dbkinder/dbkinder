@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: BT_MONITOR_ON_DEV_NAME
+
+.. option:: CONFIG_BT_MONITOR_ON_DEV_NAME
+.. _CONFIG_BT_MONITOR_ON_DEV_NAME:
+
+This option specifies the name of UART device to be used
+for the Bluetooth monitor logging.
+
+
+:Symbol:           BT_MONITOR_ON_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Device Name of Bluetooth monitor logging UART" if BT_DEBUG_MONITOR (value: "n")
+:Default values:
+
+ *  "UART_0"
+ *   Condition: BT_DEBUG_MONITOR (value: "n")
+ *  "UART_1"
+ *   Condition: BT_DEBUG_MONITOR (value: "n")
+ *  UART_QMSI_1_NAME (value: "")
+ *   Condition: BT_DEBUG_MONITOR (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BOARD_QUARK_SE_C1000_DEVBOARD (value: "n")
+:Locations:
+ * ../subsys/bluetooth/common/Kconfig:80
+ * ../arch/x86/soc/atom/Kconfig.defconfig:98
+ * ../boards/x86/quark_se_c1000_devboard/Kconfig.defconfig:19

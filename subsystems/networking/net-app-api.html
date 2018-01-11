@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Network Application API &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="Networking" href="networking.html"/>
+        <link rel="next" title="Network Buffers" href="buffers.html"/>
+        <link rel="prev" title="Network Management API" href="network-management-api.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../subsystems.html">Subsystems</a> /
+      
+          <a href="networking.html">Networking</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../subsystems.html">Subsystems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_library.html">Standard C Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/index.html">Logging</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="networking.html">Networking</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ip-stack-architecture.html">IP Stack Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="networking-api-usage.html">Network Connectivity API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bsd-sockets.html">BSD Sockets compatible API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="l2-and-drivers.html">L2 Stack and Drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network-management-api.html">Network Management API</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Network Application API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initialization">Initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#client-server-applications">Client / Server Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffers.html">Network Buffers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qemu_setup.html">Networking with QEMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usbnet_setup.html">USB Device Networking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../power_management.html">Power Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor.html">Sensor Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shell.html">Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usb/usb.html">USB device stack</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="network-application-api">
+<span id="net-app-api"></span><h1>Network Application API<a class="headerlink" href="#network-application-api" title="Permalink to this headline">¶</a></h1>
+<p>The Network Application (net-app) API allows applications to:</p>
+<dl class="docutils">
+<dt><strong>Initialize</strong></dt>
+<dd>The application for networking use. This means, for example,
+that if the application needs to have an IPv4 address, and if DHCPv4 is
+enabled, then the net-app API will make sure that the device will get an
+IPv4 address before the application is started.</dd>
+<dt><strong>Set</strong></dt>
+<dd>Various options for the networking subsystem. This means that if the
+user has set options like IP addresses, IEEE 802.15.4 channel etc. in the
+project configuration file, then those settings are applied to the system
+before the application starts.</dd>
+<dt><strong>Create</strong></dt>
+<dd>A simple TCP/UDP server or client application. The net-app API
+has functions that make it easy to create a simple TCP or UDP based network
+application. The net-app API also provides transparent TLS and DTLS support
+for the application.</dd>
+</dl>
+<p>The net-app API functionality is enabled by <a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP.html#cmdoption-arg-config-net-app"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP</span></code></a> option.
+The current net-app API implementation is still experimental and may change and
+improve in future releases.</p>
+</div>
+<div class="section" id="initialization">
+<h1>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline">¶</a></h1>
+<p>The net-app API provides a <a class="reference internal" href="../../api/networking.html#_CPPv212net_app_initPKc5u32_t5s32_t" title="net_app_init"><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_init()</span></code></a> function that can
+configure the networking subsystem for the application. The following
+configuration options control this configuration:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_AUTO_INIT.html#cmdoption-arg-config-net-app-auto-init"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_AUTO_INIT</span></code></a></dt>
+<dd>automatically configures the system according to other configuration options.
+The user does not need to call <a class="reference internal" href="../../api/networking.html#_CPPv212net_app_initPKc5u32_t5s32_t" title="net_app_init"><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_init()</span></code></a> in this case as that
+function will be automatically called when the system boots. This option is
+enabled by default.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_INIT_TIMEOUT.html#cmdoption-arg-config-net-app-init-timeout"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_INIT_TIMEOUT</span></code></a></dt>
+<dd>specifies how long to wait for the network configuration during the system
+boot. For example, if DHCPv4 is enabled, and if the IPv4 address discovery
+takes too long or the DHCPv4 server is not found, the system will resume
+booting after this number of seconds.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_NEED_IPV6.html#cmdoption-arg-config-net-app-need-ipv6"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_NEED_IPV6</span></code></a></dt>
+<dd>specifies that the application needs IPv6 connectivity. The
+<a class="reference internal" href="../../api/networking.html#_CPPv212net_app_initPKc5u32_t5s32_t" title="net_app_init"><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_init()</span></code></a> function will wait until it is able to setup an
+IPv6 address for the system before continuing. This means that the IPv6
+duplicate address detection (DAD) has finished and the system has properly
+setup the IPv6 address.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_NEED_IPV6_ROUTER.html#cmdoption-arg-config-net-app-need-ipv6-router"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_NEED_IPV6_ROUTER</span></code></a></dt>
+<dd>specifies that the application needs IPv6 router connectivity; i.e., it needs
+access to external networks (such as the Internet). The
+<a class="reference internal" href="../../api/networking.html#_CPPv212net_app_initPKc5u32_t5s32_t" title="net_app_init"><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_init()</span></code></a> function will wait until it receives a router
+advertisement (RA) message from the IPv6 router before continuing.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_NEED_IPV4.html#cmdoption-arg-config-net-app-need-ipv4"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_NEED_IPV4</span></code></a></dt>
+<dd>specifies that the application needs IPv4 connectivity. The
+<a class="reference internal" href="../../api/networking.html#_CPPv212net_app_initPKc5u32_t5s32_t" title="net_app_init"><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_init()</span></code></a> function will wait, unless a static IP address is
+configured, until it is able to setup an IPv4 address for the network
+subsystem.</dd>
+</dl>
+</div>
+<div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<p>Various system level network configuration options can be added to the project
+configuration file. These settings are enabled by the
+<a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_SETTINGS.html#cmdoption-arg-config-net-app-settings"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_SETTINGS</span></code></a> configuration option. This option is disabled
+by default, and other net-app options may also be disabled by default if
+generic support for the networking feature is disabled. For example, the IPv6
+net-app options are only available if generic IPv6 support is enabled.</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_MY_IPV6_ADDR.html#cmdoption-arg-config-net-app-my-ipv6-addr"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_MY_IPV6_ADDR</span></code></a></dt>
+<dd>This option sets a static IPv6 address for the system. This is typically only
+useful in device testing as normally the system should use SLAAC (IPv6
+Stateless Address Auto Configuration), which is enabled by default in the
+system. The system can be configured to use multiple IPv6 addresses; this is
+controlled by the <a class="reference internal" href="../../reference/kconfig/CONFIG_NET_IF_UNICAST_IPV6_ADDR_COUNT.html#cmdoption-arg-config-net-if-unicast-ipv6-addr-count"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_IF_UNICAST_IPV6_ADDR_COUNT</span></code></a>
+configuration option.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_PEER_IPV6_ADDR.html#cmdoption-arg-config-net-app-peer-ipv6-addr"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_PEER_IPV6_ADDR</span></code></a></dt>
+<dd>This option specifies what is the peer device IPv6 address. This is only
+useful when testing client/server type applications. This peer address is
+typically used as a parameter when calling <code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_connect()</span></code>.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_MY_IPV4_ADDR.html#cmdoption-arg-config-net-app-my-ipv4-addr"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_MY_IPV4_ADDR</span></code></a></dt>
+<dd>This option sets a static IPv4 address for the system. This is typically
+useful only in device testing as normally the system should use DHCPv4 to
+discover the IPv4 address.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_PEER_IPV4_ADDR.html#cmdoption-arg-config-net-app-peer-ipv4-addr"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_PEER_IPV4_ADDR</span></code></a></dt>
+<dd>This option specifies what is the peer device IPv4 address. This is only
+useful when testing client/server type applications. This peer address is
+typically used as a parameter when connecting to other device.</dd>
+</dl>
+<p>The following options are only available if IEEE 802.15.4 wireless network
+technology support is enabled.</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_IEEE802154_DEV_NAME.html#cmdoption-arg-config-net-app-ieee802154-dev-name"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_IEEE802154_DEV_NAME</span></code></a></dt>
+<dd>This option specifies the name of the IEEE 802.15.4 device.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_IEEE802154_PAN_ID.html#cmdoption-arg-config-net-app-ieee802154-pan-id"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_IEEE802154_PAN_ID</span></code></a></dt>
+<dd>This option specifies the used PAN identifier.
+Note that the PAN id can be changed at runtime if needed.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_IEEE802154_CHANNEL.html#cmdoption-arg-config-net-app-ieee802154-channel"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_IEEE802154_CHANNEL</span></code></a></dt>
+<dd>This option specifies the used radio channel.
+Note that the used channel can be changed at runtime if needed.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_IEEE802154_RADIO_TX_POWER.html#cmdoption-arg-config-net-app-ieee802154-radio-tx-power"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_IEEE802154_RADIO_TX_POWER</span></code></a></dt>
+<dd>This option specifies the initial radio TX power level. The TX power level can
+be changed at runtime if needed.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_IEEE802154_SECURITY_KEY.html#cmdoption-arg-config-net-app-ieee802154-security-key"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_IEEE802154_SECURITY_KEY</span></code></a></dt>
+<dd>This option specifies the initially used security key. The security key can be
+changed at runtime if needed.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_IEEE802154_SECURITY_KEY_MODE.html#cmdoption-arg-config-net-app-ieee802154-security-key-mode"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_IEEE802154_SECURITY_KEY_MODE</span></code></a></dt>
+<dd>This option specifies the initially used security key mode. The security key
+mode can be changed at runtime if needed.</dd>
+<dt><a class="reference internal" href="../../reference/kconfig/CONFIG_NET_APP_IEEE802154_SECURITY_LEVEL.html#cmdoption-arg-config-net-app-ieee802154-security-level"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_APP_IEEE802154_SECURITY_LEVEL</span></code></a></dt>
+<dd>This option specifies the initially used security level. The used security
+level can be changed at runtime if needed.</dd>
+</dl>
+</div>
+<div class="section" id="client-server-applications">
+<h1>Client / Server Applications<a class="headerlink" href="#client-server-applications" title="Permalink to this headline">¶</a></h1>
+<p>The net-app API provides functions that enable the application to create
+client / server applications easily. If needed, the applications can
+have the communication secured by TLS (for TCP connections) or DTLS (for
+UDP connections) automatically.</p>
+<p>A simple <strong>TCP server</strong> application would make the following net-app API
+function calls:</p>
+<ul class="simple">
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_init_tcp_server()</span></code> to configure a local address and TCP
+port.</li>
+<li><a class="reference internal" href="../../api/networking.html#_CPPv214net_app_set_cbP11net_app_ctx20net_app_connect_cb_t17net_app_recv_cb_t17net_app_send_cb_t18net_app_close_cb_t" title="net_app_set_cb"><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_set_cb()</span></code></a> to configure callback functions to invoke in
+response to events, such as data reception.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_server_tls()</span></code> will optionally setup the system for secured
+connections. To enable the TLS server, also call the
+<code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_server_tls_enable()</span></code> function.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_listen()</span></code> will start listening for new client connections.</li>
+</ul>
+<p>Creating a <strong>UDP server</strong> is also very easy:</p>
+<ul class="simple">
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_init_udp_server()</span></code> to configure a local address and UDP
+port.</li>
+<li><a class="reference internal" href="../../api/networking.html#_CPPv214net_app_set_cbP11net_app_ctx20net_app_connect_cb_t17net_app_recv_cb_t17net_app_send_cb_t18net_app_close_cb_t" title="net_app_set_cb"><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_set_cb()</span></code></a> to configure callback functions to invoke in
+response to events, such as data reception.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_server_tls()</span></code> will optionally setup the system for secured
+connections. To enable the DTLS server, also call the
+<code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_server_tls_enable()</span></code> function.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_listen()</span></code> will start listening for new client connections.</li>
+</ul>
+<p>If the server wants to stop listening for connections, it can call
+<a class="reference internal" href="../../api/networking.html#_CPPv215net_app_releaseP11net_app_ctx" title="net_app_release"><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_release()</span></code></a>. After this, if the application wants to start
+listening for incoming connections again, it must call the server
+initialization functions.</p>
+<p>For TLS/DTLS connections, the server can be disabled by a call to
+<code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_server_tls_disable()</span></code>. There are separate enable/disable
+functions for TLS support because we need a separate crypto thread for calling
+mbedtls crypto API functions. The enable/disable TLS functions will
+either create the TLS thread or kill it.</p>
+<p>A simple <strong>TCP client</strong> application would make the following net-app API
+function calls:</p>
+<ul class="simple">
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_init_tcp_client()</span></code> to configure a local address, peer
+address and TCP port. If the DNS resolver support is enabled in the
+project configuration file, then the peer address can be given as a hostname,
+and the API tries to resolve it to IP address before connecting.</li>
+<li><a class="reference internal" href="../../api/networking.html#_CPPv214net_app_set_cbP11net_app_ctx20net_app_connect_cb_t17net_app_recv_cb_t17net_app_send_cb_t18net_app_close_cb_t" title="net_app_set_cb"><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_set_cb()</span></code></a> to configure callback functions to invoke in
+response to events, such as data reception.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_client_tls()</span></code> will optionally setup the system for secured
+connections. The TLS crypto thread will be automatically created when the
+application calls <code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_connect()</span></code> function.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_connect()</span></code> will initiate a new connection to the peer host.</li>
+</ul>
+<p>Creating a <strong>UDP client</strong> is also very easy:</p>
+<ul class="simple">
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_init_udp_client()</span></code> to configure a local address, peer
+address and UDP port. If peer name is a hostname, then it will be
+automatically resolved to IP address if DNS resolver is enabled.</li>
+<li><a class="reference internal" href="../../api/networking.html#_CPPv214net_app_set_cbP11net_app_ctx20net_app_connect_cb_t17net_app_recv_cb_t17net_app_send_cb_t18net_app_close_cb_t" title="net_app_set_cb"><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_set_cb()</span></code></a> to configure callback functions to invoke in
+response to events, such as data reception.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_client_tls()</span></code> will optionally setup the system for secured
+connections. The DTLS crypto thread will be automatically created when the
+application calls <code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_connect()</span></code> function.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">net_app_connect()</span></code> will initiate a new connection to the peer host.
+As the UDP is connectionless protocol, this function is very simple and it
+will just call the connected callback if that is defined.</li>
+</ul>
+<p>As both the <code class="docutils literal"><span class="pre">echo_server</span></code> and <code class="docutils literal"><span class="pre">echo_client</span></code> applications use net-app API
+functions, please see those applications for more detailed usage examples.</p>
+<p>The <a class="reference external" href="https://github.com/zephyrproject-rtos/net-tools">net-tools</a> project has information how to test the system if TLS and
+DTLS support is enabled. See the <strong>README</strong> file in that project for more
+information.</p>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="buffers.html" class="btn btn-neutral float-right" title="Network Buffers" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="network-management-api.html" class="btn btn-neutral" title="Network Management API" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

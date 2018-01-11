@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BMM150_PRESET_LOW_POWER
+
+.. option:: CONFIG_BMM150_PRESET_LOW_POWER
+.. _CONFIG_BMM150_PRESET_LOW_POWER:
+
+The configuration item CONFIG_BMM150_PRESET_LOW_POWER:
+
+:Symbol:           BMM150_PRESET_LOW_POWER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Low power (3, 3, 10)"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BMM150 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/bmm150/Kconfig:42

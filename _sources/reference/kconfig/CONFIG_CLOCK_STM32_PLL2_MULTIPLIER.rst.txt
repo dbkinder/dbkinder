@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: CLOCK_STM32_PLL2_MULTIPLIER
+
+.. option:: CONFIG_CLOCK_STM32_PLL2_MULTIPLIER
+.. _CONFIG_CLOCK_STM32_PLL2_MULTIPLIER:
+
+PLL2 multiplier, allowed values: 8 - 20. 15-17-18-19 reserved
+
+
+
+:Symbol:           CLOCK_STM32_PLL2_MULTIPLIER
+:Type:             int
+:Value:            "8"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [8, 20]
+:Prompts:
+
+ *  "PLL2 multiplier" if SOC_STM32F10X_CONNECTIVITY_LINE_DEVICE && CLOCK_STM32_PLL_SRC_PLL2 (value: "n")
+:Default values:
+
+ *  8 (value: "n")
+ *   Condition: SOC_STM32F10X_CONNECTIVITY_LINE_DEVICE && CLOCK_STM32_PLL_SRC_PLL2 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_FAMILY_STM32 && CLOCK_CONTROL && CLOCK_CONTROL_STM32_CUBE && SOC_SERIES_STM32F1X (value: "n")
+:Locations:
+ * ../drivers/clock_control/Kconfig.stm32:153

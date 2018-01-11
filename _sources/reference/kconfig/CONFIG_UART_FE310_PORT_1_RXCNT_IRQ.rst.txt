@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: UART_FE310_PORT_1_RXCNT_IRQ
+
+.. option:: CONFIG_UART_FE310_PORT_1_RXCNT_IRQ
+.. _CONFIG_UART_FE310_PORT_1_RXCNT_IRQ:
+
+Port 1 RX Threshold at which the RX FIFO interrupt triggers.
+
+
+
+:Symbol:           UART_FE310_PORT_1_RXCNT_IRQ
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port 0 RX Interrupt Threshold Count" if UART_FE310_PORT_1 (value: "n")
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: UART_FE310_PORT_1 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.fe310:99

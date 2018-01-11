@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: DMA_1_NAME
+
+.. option:: CONFIG_DMA_1_NAME
+.. _CONFIG_DMA_1_NAME:
+
+Device name for DMA Controller 1.
+
+
+
+:Symbol:           DMA_1_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Device name for DMA Controller 1"
+:Default values:
+
+ *  "DMA_1"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ DMA (value: "n")
+:Locations:
+ * ../drivers/dma/Kconfig:30

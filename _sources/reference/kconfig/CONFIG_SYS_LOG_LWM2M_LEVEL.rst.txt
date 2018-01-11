@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: SYS_LOG_LWM2M_LEVEL
+
+.. option:: CONFIG_SYS_LOG_LWM2M_LEVEL
+.. _CONFIG_SYS_LOG_LWM2M_LEVEL:
+
+Set the log level for the LWM2M library.
+
+
+
+:Symbol:           SYS_LOG_LWM2M_LEVEL
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 4]
+:Prompts:
+
+ *  "LWM2M log level" if SYS_LOG (value: "n")
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: SYS_LOG (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:18

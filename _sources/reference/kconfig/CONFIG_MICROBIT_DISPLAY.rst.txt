@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: MICROBIT_DISPLAY
+
+.. option:: CONFIG_MICROBIT_DISPLAY
+.. _CONFIG_MICROBIT_DISPLAY:
+
+Enable this to be able to display images and text on the 5x5
+LED matrix display on the BBC micro:bit.
+
+
+
+:Symbol:           MICROBIT_DISPLAY
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "BBC micro:bit 5x5 LED Display support" if BOARD_BBC_MICROBIT && PRINTK && GPIO (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../drivers/display/Kconfig:9

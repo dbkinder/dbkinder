@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: I2C_CC32XX
+
+.. option:: CONFIG_I2C_CC32XX
+.. _CONFIG_I2C_CC32XX:
+
+Enable the CC32XX I2C driver.
+
+
+
+:Symbol:           I2C_CC32XX
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "CC32XX I2C driver" if SOC_SERIES_CC32XX (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SOC_SERIES_CC32XX (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_HAS_DTS_I2C` if SOC_SERIES_CC32XX (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C && BOARD_CC3220SF_LAUNCHXL (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:92
+ * ../boards/arm/cc3220sf_launchxl/Kconfig.defconfig:11

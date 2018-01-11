@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: WS2812_HAS_WHITE_CHANNEL
+
+.. option:: CONFIG_WS2812_HAS_WHITE_CHANNEL
+.. _CONFIG_WS2812_HAS_WHITE_CHANNEL:
+
+If the chipset has a white channel, say y. White channels
+are not used by the driver, but must be declared if expected
+by the chip.
+
+
+
+:Symbol:           WS2812_HAS_WHITE_CHANNEL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Does the chip have a white channel on wire?"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ WS2812_STRIP && LED_STRIP (value: "n")
+:Locations:
+ * ../drivers/led_strip/Kconfig.ws2812:105

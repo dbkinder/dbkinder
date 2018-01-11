@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: BT_DEBUG_SDP
+
+.. option:: CONFIG_BT_DEBUG_SDP
+.. _CONFIG_BT_DEBUG_SDP:
+
+This option enables debug support for the Bluetooth
+Service Discovery Protocol (SDP).
+
+
+
+:Symbol:           BT_DEBUG_SDP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bluetooth Service Discovery Protocol (SDP) debug" if BT_BREDR (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_DEBUG (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:440

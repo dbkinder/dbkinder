@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: LWM2M_RW_JSON_SUPPORT
+
+.. option:: CONFIG_LWM2M_RW_JSON_SUPPORT
+.. _CONFIG_LWM2M_RW_JSON_SUPPORT:
+
+Include support for writing JSON data
+
+
+
+:Symbol:           LWM2M_RW_JSON_SUPPORT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "support for JSON writer"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:168

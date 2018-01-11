@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: LWM2M_ENGINE_MAX_MESSAGES
+
+.. option:: CONFIG_LWM2M_ENGINE_MAX_MESSAGES
+.. _CONFIG_LWM2M_ENGINE_MAX_MESSAGES:
+
+Set the maximum message objects for the LWM2M library client
+
+
+
+:Symbol:           LWM2M_ENGINE_MAX_MESSAGES
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "LWM2M engine max. message object"
+:Default values:
+
+ *  10 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:34

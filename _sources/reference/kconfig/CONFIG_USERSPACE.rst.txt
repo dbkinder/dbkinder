@@ -1,0 +1,45 @@
+:orphan:
+
+.. title:: USERSPACE
+
+.. option:: CONFIG_USERSPACE
+.. _CONFIG_USERSPACE:
+
+When enabled, threads may be created or dropped down to user mode,
+which has significantly restricted permissions and must interact
+with the kernel via system calls. See Zephyr documentation for more
+details       about this feature.
+
+If a user thread overflows its stack, this will be caught and the
+kernel itself will be shielded from harm. Enabling this option
+may or may not catch stack overflows when the system is in
+privileged mode or handling a system call; to ensure these are always
+caught, enable CONFIG_HW_STACK_PROTECTION.
+
+This feature is under heavy development and APIs related to it are
+subject to change, even if declared non-private.
+
+
+
+:Symbol:           USERSPACE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "User mode threads (EXPERIMENTAL)" if ARCH_HAS_USERSPACE (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/Kconfig:63

@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_UDP_CHECKSUM
+
+.. option:: CONFIG_NET_UDP_CHECKSUM
+.. _CONFIG_NET_UDP_CHECKSUM:
+
+Enables UDP handler to check UDP checksum. If the checksum is invalid,
+then the packet is discarded.
+
+
+
+:Symbol:           NET_UDP_CHECKSUM
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Check UDP checksum" if NET_UDP (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: NET_UDP (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig:191

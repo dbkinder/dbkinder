@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: RISCV_ROM_SIZE
+
+.. option:: CONFIG_RISCV_ROM_SIZE
+.. _CONFIG_RISCV_ROM_SIZE:
+
+The configuration item CONFIG_RISCV_ROM_SIZE:
+
+:Symbol:           RISCV_ROM_SIZE
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  0xC00000 (value: "n")
+ *   Condition: (none)
+ *  0x100000 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_RISCV32_QEMU (value: "n")
+:Locations:
+ * ../arch/riscv32/soc/riscv-privilege/fe310/Kconfig.defconfig.series:35
+ * ../arch/riscv32/soc/riscv-privilege/riscv32-qemu/Kconfig.defconfig.series:27

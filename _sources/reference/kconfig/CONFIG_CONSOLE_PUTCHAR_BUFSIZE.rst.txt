@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: CONSOLE_PUTCHAR_BUFSIZE
+
+.. option:: CONFIG_CONSOLE_PUTCHAR_BUFSIZE
+.. _CONFIG_CONSOLE_PUTCHAR_BUFSIZE:
+
+Buffer size for console_putchar(). Must be power of 2. The
+default is optimized to save RAM. You may need to increase
+it e.g. to support large host-side clipboard pastes (with
+echo).
+
+
+
+:Symbol:           CONSOLE_PUTCHAR_BUFSIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "console_putchar() buffer size"
+:Default values:
+
+ *  16 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ CONSOLE_GETCHAR && CONSOLE_PULL (value: "n")
+:Locations:
+ * ../subsys/console/Kconfig:41

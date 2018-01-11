@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: MICROBIT_DISPLAY_STR_MAX
+
+.. option:: CONFIG_MICROBIT_DISPLAY_STR_MAX
+.. _CONFIG_MICROBIT_DISPLAY_STR_MAX:
+
+This value specifies the maximum length of strings that can
+be displayed using the mb_display_string() and mb_display_print()
+APIs.
+
+
+
+:Symbol:           MICROBIT_DISPLAY_STR_MAX
+:Type:             int
+:Value:            "3"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [3, 255]
+:Prompts:
+
+ *  "Maximum length of strings that can be shown on the display"
+:Default values:
+
+ *  40 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MICROBIT_DISPLAY (value: "n")
+:Locations:
+ * ../drivers/display/Kconfig:30

@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: LPS22HB_DEV_NAME
+
+.. option:: CONFIG_LPS22HB_DEV_NAME
+.. _CONFIG_LPS22HB_DEV_NAME:
+
+Device name used for LPS22HB sensor identification.
+
+
+
+:Symbol:           LPS22HB_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Device name" if LPS22HB && !HAS_DTS_I2C_DEVICE (value: "n")
+:Default values:
+
+ *  "LPS22HB"
+ *   Condition: LPS22HB && !HAS_DTS_I2C_DEVICE (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lps22hb/Kconfig:16

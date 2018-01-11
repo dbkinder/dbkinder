@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: SOC_D_108MINI
+
+.. option:: CONFIG_SOC_D_108MINI
+.. _CONFIG_SOC_D_108MINI:
+
+The configuration item CONFIG_SOC_D_108MINI:
+
+:Symbol:           SOC_D_108MINI
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "D_108mini core"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/xtensa/soc/D_108mini/Kconfig.soc:4

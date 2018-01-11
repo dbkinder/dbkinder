@@ -1,0 +1,30 @@
+:orphan:
+
+.. title:: SOC_PART_NUMBER_MIMXRT1051DVL6A
+
+.. option:: CONFIG_SOC_PART_NUMBER_MIMXRT1051DVL6A
+.. _CONFIG_SOC_PART_NUMBER_MIMXRT1051DVL6A:
+
+The configuration item CONFIG_SOC_PART_NUMBER_MIMXRT1051DVL6A:
+
+:Symbol:           SOC_PART_NUMBER_MIMXRT1051DVL6A
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_IMX_RT && ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/nxp_imx/rt/Kconfig.soc:45

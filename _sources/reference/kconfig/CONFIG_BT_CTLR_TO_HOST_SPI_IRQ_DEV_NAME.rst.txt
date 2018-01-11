@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: BT_CTLR_TO_HOST_SPI_IRQ_DEV_NAME
+
+.. option:: CONFIG_BT_CTLR_TO_HOST_SPI_IRQ_DEV_NAME
+.. _CONFIG_BT_CTLR_TO_HOST_SPI_IRQ_DEV_NAME:
+
+This option specifies the name of SPI IRQ device to be used to
+notify an external Bluetooth Host when Zephyr is acting as a
+Bluetooth Controller.
+
+
+
+:Symbol:           BT_CTLR_TO_HOST_SPI_IRQ_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Device Name of SPI IRQ to an external Bluetooth Host" if SPI && BT_HCI_RAW (value: "n")
+:Default values:
+
+ *  "GPIO_0"
+ *   Condition: SPI && BT_HCI_RAW (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT (value: "n")
+:Locations:
+ * ../subsys/bluetooth/Kconfig:132

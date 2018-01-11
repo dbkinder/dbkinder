@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: SOC_ATMEL_SAMD_XOSC32K
+
+.. option:: CONFIG_SOC_ATMEL_SAMD_XOSC32K
+.. _CONFIG_SOC_ATMEL_SAMD_XOSC32K:
+
+Say y to enable the external 32 kHZ crystal oscillator at
+startup.  This can then be selected as the main clock source
+for the SOC.
+
+
+
+:Symbol:           SOC_ATMEL_SAMD_XOSC32K
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable the external 32 kHz crystal oscillator"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_SAMD && ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/atmel_sam0/samd/Kconfig.soc:56

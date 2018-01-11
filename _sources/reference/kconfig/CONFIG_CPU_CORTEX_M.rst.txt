@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: CPU_CORTEX_M
+
+.. option:: CONFIG_CPU_CORTEX_M
+.. _CONFIG_CPU_CORTEX_M:
+
+This option signifies the use of a CPU of the Cortex-M family.
+
+
+
+:Symbol:           CPU_CORTEX_M
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_CPU_CORTEX`
+ *  :option:`CONFIG_ARCH_HAS_CUSTOM_SWAP_TO_MAIN`
+ *  :option:`CONFIG_HAS_CMSIS`
+ *  :option:`CONFIG_HAS_FLASH_LOAD_OFFSET`
+ *  :option:`CONFIG_HAS_DTS`
+ *  :option:`CONFIG_ARCH_HAS_STACK_PROTECTION` if ARM_CORE_MPU (value: "n")
+ *  :option:`CONFIG_ARCH_HAS_USERSPACE` if ARM_CORE_MPU (value: "n")
+:Reverse (select-related) dependencies:
+ SOC_SERIES_SAM4S || SOC_SERIES_SAME70 || SOC_SERIES_SAM3X || SOC_TI_LM3S6965 || SOC_SERIES_MPS2 && ARM || SOC_SERIES_BEETLE && ARM || SOC_SERIES_EFM32WG || SOC_SERIES_STM32F0X || SOC_SERIES_STM32F4X || SOC_SERIES_STM32L4X || SOC_SERIES_STM32F1X || SOC_SERIES_STM32F3X || SOC_SERIES_CC2650 || SOC_SERIES_CC32XX || SOC_SERIES_MSP432P4XX || SOC_SERIES_IMX_RT || SOC_SERIES_KINETIS_KWX || SOC_SERIES_KINETIS_KL2X || SOC_SERIES_KINETIS_K6X || SOC_SERIES_NRF52X || SOC_SERIES_NRF51X || SOC_SERIES_SAMD (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/core/Kconfig:16

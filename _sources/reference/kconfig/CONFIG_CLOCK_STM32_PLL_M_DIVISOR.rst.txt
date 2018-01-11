@@ -1,0 +1,44 @@
+:orphan:
+
+.. title:: CLOCK_STM32_PLL_M_DIVISOR
+
+.. option:: CONFIG_CLOCK_STM32_PLL_M_DIVISOR
+.. _CONFIG_CLOCK_STM32_PLL_M_DIVISOR:
+
+PLL divisor, allowed values: 1-8. With this ensure that the PLL
+VCO input frequency ranges from 4 to 16MHz.
+
+
+
+:Symbol:           CLOCK_STM32_PLL_M_DIVISOR
+:Type:             int
+:Value:            "2"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [2, 63]
+ *  [1, 8]
+:Prompts:
+
+ *  "Division factor for PLL VCO input clock" if CLOCK_STM32_SYSCLK_SRC_PLL (value: "n")
+ *  "PLL divisor" if CLOCK_STM32_SYSCLK_SRC_PLL (value: "n")
+:Default values:
+
+ *  8 (value: "n")
+ *   Condition: CLOCK_STM32_SYSCLK_SRC_PLL (value: "n")
+ *  1 (value: "n")
+ *   Condition: CLOCK_STM32_SYSCLK_SRC_PLL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_FAMILY_STM32 && CLOCK_CONTROL && CLOCK_CONTROL_STM32_CUBE && SOC_SERIES_STM32L4X (value: "n")
+:Locations:
+ * ../drivers/clock_control/Kconfig.stm32:201
+ * ../drivers/clock_control/Kconfig.stm32:247

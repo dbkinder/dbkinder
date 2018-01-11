@@ -1,0 +1,44 @@
+:orphan:
+
+.. title:: ARC_FIRQ
+
+.. option:: CONFIG_ARC_FIRQ
+.. _CONFIG_ARC_FIRQ:
+
+Fast interrupts are supported (FIRQ). If FIRQ enabled, for interrupts
+with highest priority, status32 and pc will be saved in aux regs,
+other regs will be saved according to the number of register bank;
+If FIRQ is disabled, the handle of interrupts with highest priority
+will be same with other interrupts.
+
+
+
+:Symbol:           ARC_FIRQ
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "FIRQ enable"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: BOARD_EM_STARTERKIT_R23 (value: "n")
+ *  y (value: "y")
+ *   Condition: BOARD_EM_STARTERKIT_R22 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_EM7D (value: "n")
+:Locations:
+ * ../arch/arc/Kconfig:92
+ * ../arch/arc/soc/em7d/Kconfig.defconfig:37

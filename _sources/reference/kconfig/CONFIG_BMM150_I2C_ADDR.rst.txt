@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BMM150_I2C_ADDR
+
+.. option:: CONFIG_BMM150_I2C_ADDR
+.. _CONFIG_BMM150_I2C_ADDR:
+
+Specify the I2C slave address for the BMM150.
+Possible addresses are 0x10,0x11,0x12,0x13.
+
+
+
+:Symbol:           BMM150_I2C_ADDR
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "BMM150 I2C slave address"
+:Default values:
+
+ *  0x10 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BMM150 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/bmm150/Kconfig:21

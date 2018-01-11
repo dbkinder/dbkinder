@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: I2C_ESP32
+
+.. option:: CONFIG_I2C_ESP32
+.. _CONFIG_I2C_ESP32:
+
+Enables the ESP32 I2C driver
+
+
+
+:Symbol:           I2C_ESP32
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "ESP32 I2C" if I2C && SOC_ESP32 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: I2C && SOC_ESP32 (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_GPIO_ESP32` if I2C && SOC_ESP32 (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig.esp32:9

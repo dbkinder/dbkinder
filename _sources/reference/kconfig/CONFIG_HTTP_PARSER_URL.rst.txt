@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: HTTP_PARSER_URL
+
+.. option:: CONFIG_HTTP_PARSER_URL
+.. _CONFIG_HTTP_PARSER_URL:
+
+This option enables the URI parser library based on source from nodejs.
+This parser requires some string-related routines commonly
+provided by a libc implementation.
+
+
+
+:Symbol:           HTTP_PARSER_URL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "HTTP Parser for URL support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ HTTP && NETWORKING && HTTP_APP && HTTP_SERVER || HTTP && NETWORKING && HTTP_APP && HTTP_CLIENT || HTTP && NETWORKING && !HTTP_APP && HTTP_SERVER || HTTP && NETWORKING && !HTTP_APP && HTTP_CLIENT || HTTP_PARSER && NETWORKING || LWM2M && NETWORKING (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/http/Kconfig:157

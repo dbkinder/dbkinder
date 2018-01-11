@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: LWM2M_ENGINE_STACK_SIZE
+
+.. option:: CONFIG_LWM2M_ENGINE_STACK_SIZE
+.. _CONFIG_LWM2M_ENGINE_STACK_SIZE:
+
+Set the stack size for the LWM2M library engine (used for handling
+OBSERVE and NOTIFY events)
+
+
+
+:Symbol:           LWM2M_ENGINE_STACK_SIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "LWM2M engine stack size"
+:Default values:
+
+ *  1024 (value: "n")
+ *   Condition: (none)
+ *  1536 (value: "n")
+ *   Condition: NET_LOG_GLOBAL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:26

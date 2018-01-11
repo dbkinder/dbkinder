@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: DNS_SERVER_IP_ADDRESSES
+
+.. option:: CONFIG_DNS_SERVER_IP_ADDRESSES
+.. _CONFIG_DNS_SERVER_IP_ADDRESSES:
+
+Allow DNS IP addresses to be set in config file for
+networking applications.
+
+
+
+:Symbol:           DNS_SERVER_IP_ADDRESSES
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Set DNS server IP addresses"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ DNS_RESOLVER && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/dns/Kconfig:53

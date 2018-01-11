@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: ARM_MPU
+
+.. option:: CONFIG_ARM_MPU
+.. _CONFIG_ARM_MPU:
+
+MCU has ARM MPU
+
+
+
+:Symbol:           ARM_MPU
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "ARM MPU Support" if CPU_HAS_MPU && (SOC_FAMILY_ARM || SOC_FAMILY_STM32 || SOC_FAMILY_NRF5 || SOC_FAMILY_IMX) (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: CPU_HAS_MPU && (SOC_FAMILY_ARM || SOC_FAMILY_STM32 || SOC_FAMILY_NRF5 || SOC_FAMILY_IMX) (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_ARM_CORE_MPU` if CPU_HAS_MPU && (SOC_FAMILY_ARM || SOC_FAMILY_STM32 || SOC_FAMILY_NRF5 || SOC_FAMILY_IMX) (value: "n")
+ *  :option:`CONFIG_ARCH_HAS_EXECUTABLE_PAGE_BIT` if CPU_HAS_MPU && (SOC_FAMILY_ARM || SOC_FAMILY_STM32 || SOC_FAMILY_NRF5 || SOC_FAMILY_IMX) (value: "n")
+:Reverse (select-related) dependencies:
+ CPU_HAS_MPU && ARM && ARM_MPU_ENABLE || CPU_HAS_MPU && ARM && STM32_ARM_MPU_ENABLE || SOC_SERIES_IMX_RT && ARM && CPU_HAS_MPU && ARM_MPU_IMX_RT || CPU_HAS_MPU && ARM && ARM_MPU_NRF52X (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ CPU_HAS_MPU && ARM (value: "n")
+:Locations:
+ * ../arch/arm/core/cortex_m/mpu/Kconfig:24

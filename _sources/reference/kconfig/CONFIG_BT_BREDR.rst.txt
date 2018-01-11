@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: BT_BREDR
+
+.. option:: CONFIG_BT_BREDR
+.. _CONFIG_BT_BREDR:
+
+This option enables Bluetooth BR/EDR support
+
+
+
+:Symbol:           BT_BREDR
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bluetooth BR/EDR support [EXPERIMENTAL]" if BT_HCI_HOST (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_BT_PERIPHERAL` if BT_HCI_HOST (value: "n")
+ *  :option:`CONFIG_BT_CENTRAL` if BT_HCI_HOST (value: "n")
+ *  :option:`CONFIG_BT_SMP` if BT_HCI_HOST (value: "n")
+ *  :option:`CONFIG_BT_L2CAP_DYNAMIC_CHANNEL` if BT_HCI_HOST (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:455

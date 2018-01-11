@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: GPIO_MCUX_IGPIO_2
+
+.. option:: CONFIG_GPIO_MCUX_IGPIO_2
+.. _CONFIG_GPIO_MCUX_IGPIO_2:
+
+Enable Port 2.
+
+
+
+:Symbol:           GPIO_MCUX_IGPIO_2
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port 2"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_MCUX_IGPIO && BOARD_MIMXRT1050_EVK (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.mcux_igpio:23
+ * ../boards/arm/mimxrt1050_evk/Kconfig.defconfig:18

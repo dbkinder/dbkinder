@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: GPIO_MCUX_IGPIO_5
+
+.. option:: CONFIG_GPIO_MCUX_IGPIO_5
+.. _CONFIG_GPIO_MCUX_IGPIO_5:
+
+Enable Port 5.
+
+
+
+:Symbol:           GPIO_MCUX_IGPIO_5
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port 5"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_MCUX_IGPIO && BOARD_MIMXRT1050_EVK (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.mcux_igpio:41
+ * ../boards/arm/mimxrt1050_evk/Kconfig.defconfig:27

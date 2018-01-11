@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: ENTROPY_GENERATOR
+
+.. option:: CONFIG_ENTROPY_GENERATOR
+.. _CONFIG_ENTROPY_GENERATOR:
+
+Include entropy drivers in system config.
+
+
+
+:Symbol:           ENTROPY_GENERATOR
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Entropy Drivers"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ NETWORKING || TINYCRYPT_ECC_DH && TINYCRYPT || TINYCRYPT_ECC_DSA && TINYCRYPT (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../drivers/entropy/Kconfig:9

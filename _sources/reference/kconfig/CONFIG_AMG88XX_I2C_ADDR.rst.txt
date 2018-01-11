@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: AMG88XX_I2C_ADDR
+
+.. option:: CONFIG_AMG88XX_I2C_ADDR
+.. _CONFIG_AMG88XX_I2C_ADDR:
+
+I2C address of the AMG88XX sensor.
+
+0x68: AD-SELECT connected GND
+0x69: AD-SELECT connected VDD
+
+
+
+:Symbol:           AMG88XX_I2C_ADDR
+:Type:             hex
+:Value:            "0x68"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0x68, 0x69]
+:Prompts:
+
+ *  "I2C address for AMG88XX Sensor"
+:Default values:
+
+ *  "0x68" (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ AMG88XX && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/amg88xx/Kconfig:24

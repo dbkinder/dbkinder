@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: PMS7003_DRIVER_NAME
+
+.. option:: CONFIG_PMS7003_DRIVER_NAME
+.. _CONFIG_PMS7003_DRIVER_NAME:
+
+The configuration item CONFIG_PMS7003_DRIVER_NAME:
+
+:Symbol:           PMS7003_DRIVER_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Driver name" if PMS7003 (value: "n")
+:Default values:
+
+ *  "PMS7003"
+ *   Condition: PMS7003 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/pms7003/Kconfig:21

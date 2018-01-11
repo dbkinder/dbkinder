@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: I2C_STM32_INTERRUPT
+
+.. option:: CONFIG_I2C_STM32_INTERRUPT
+.. _CONFIG_I2C_STM32_INTERRUPT:
+
+Enable Interrupt support for the I2C Driver
+
+
+
+:Symbol:           I2C_STM32_INTERRUPT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "STM32 MCU I2C Interrupt Support" if I2C_STM32_V1 || I2C_STM32_V2 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: I2C_STM32_V1 || I2C_STM32_V2 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:134

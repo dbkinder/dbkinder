@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: LIS2DH_SPI_SS_1
+
+.. option:: CONFIG_LIS2DH_SPI_SS_1
+.. _CONFIG_LIS2DH_SPI_SS_1:
+
+SPI slave select line to use to talk to LIS2DH sensor.
+
+
+
+:Symbol:           LIS2DH_SPI_SS_1
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 4]
+:Prompts:
+
+ *  "LIS2DH SPI slave 1 select number" if LIS2DH && LIS2DH_BUS_SPI (value: "n")
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: LIS2DH && LIS2DH_BUS_SPI (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lis2dh/Kconfig:53

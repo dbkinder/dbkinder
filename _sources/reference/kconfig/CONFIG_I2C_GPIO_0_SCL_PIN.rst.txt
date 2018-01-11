@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: I2C_GPIO_0_SCL_PIN
+
+.. option:: CONFIG_I2C_GPIO_0_SCL_PIN
+.. _CONFIG_I2C_GPIO_0_SCL_PIN:
+
+This is the GPIO pin number for the I2S SCL line
+
+
+
+:Symbol:           I2C_GPIO_0_SCL_PIN
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bit Bang I2C device 0 GPIO pin number for SCL" if I2C_GPIO_0 (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig.gpio:39

@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: CONSOLE_GETCHAR
+
+.. option:: CONFIG_CONSOLE_GETCHAR
+.. _CONFIG_CONSOLE_GETCHAR:
+
+The configuration item CONFIG_CONSOLE_GETCHAR:
+
+:Symbol:           CONSOLE_GETCHAR
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Character by character input and output"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_UART_CONSOLE_DEBUG_SERVER_HOOKS`
+ *  :option:`CONFIG_CONSOLE_HANDLER`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ CONSOLE_PULL (value: "n")
+:Locations:
+ * ../subsys/console/Kconfig:20

@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: UART_MCUX_LPSCI
+
+.. option:: CONFIG_UART_MCUX_LPSCI
+.. _CONFIG_UART_MCUX_LPSCI:
+
+Enable the MCUX LPSCI driver.
+
+
+
+:Symbol:           UART_MCUX_LPSCI
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "MCUX LPSCI driver" if HAS_MCUX_LPSCI && CLOCK_CONTROL (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: HAS_MCUX_LPSCI && CLOCK_CONTROL (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_SERIAL_HAS_DRIVER` if HAS_MCUX_LPSCI && CLOCK_CONTROL (value: "n")
+ *  :option:`CONFIG_SERIAL_SUPPORT_INTERRUPT` if HAS_MCUX_LPSCI && CLOCK_CONTROL (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_MKL25Z4 && SOC_SERIES_KINETIS_KL2X && SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.mcux_lpsci:8
+ * ../arch/arm/soc/nxp_kinetis/kl2x/Kconfig.defconfig.mkl25z4:48

@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Memory Pools &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="Memory Allocation" href="memory.html"/>
+        <link rel="next" title="Heap Memory Pool" href="heap.html"/>
+        <link rel="prev" title="Memory Slabs" href="slabs.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../kernel.html">Zephyr Kernel Primer</a> /
+      
+          <a href="memory.html">Memory Allocation</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../kernel.html">Zephyr Kernel Primer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../threads/threads.html">Threads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timing/timing.html">Timing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="memory.html">Memory Allocation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="slabs.html">Memory Slabs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Memory Pools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="heap.html">Heap Memory Pool</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../synchronization/synchronization.html">Synchronization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_passing/data_passing.html">Data Passing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usermode/usermode.html">User Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other/other.html">Other Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="memory-pools">
+<span id="memory-pools-v2"></span><h1>Memory Pools<a class="headerlink" href="#memory-pools" title="Permalink to this headline">¶</a></h1>
+<p>A <em class="dfn">memory pool</em> is a kernel object that allows memory blocks
+to be dynamically allocated from a designated memory region.
+The memory blocks in a memory pool can be of any size,
+thereby reducing the amount of wasted memory when an application
+needs to allocate storage for data structures of different sizes.
+The memory pool uses a “buddy memory allocation” algorithm
+to efficiently partition larger blocks into smaller ones,
+allowing blocks of different sizes to be allocated and released efficiently
+while limiting memory fragmentation concerns.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#concepts" id="id1">Concepts</a><ul>
+<li><a class="reference internal" href="#internal-operation" id="id2">Internal Operation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#implementation" id="id3">Implementation</a><ul>
+<li><a class="reference internal" href="#defining-a-memory-pool" id="id4">Defining a Memory Pool</a></li>
+<li><a class="reference internal" href="#allocating-a-memory-block" id="id5">Allocating a Memory Block</a></li>
+<li><a class="reference internal" href="#releasing-a-memory-block" id="id6">Releasing a Memory Block</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#suggested-uses" id="id7">Suggested Uses</a></li>
+<li><a class="reference internal" href="#apis" id="id8">APIs</a></li>
+</ul>
+</div>
+<div class="section" id="concepts">
+<h2><a class="toc-backref" href="#id1">Concepts</a><a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<p>Any number of memory pools can be defined. Each memory pool is referenced
+by its memory address.</p>
+<p>A memory pool has the following key properties:</p>
+<ul class="simple">
+<li>A <strong>minimum block size</strong>, measured in bytes.
+It must be at least 4X bytes long, where X is greater than 0.</li>
+<li>A <strong>maximum block size</strong>, measured in bytes.
+This should be a power of 4 times larger than the minimum block size.
+That is, “maximum block size” must equal “minimum block size” times 4^Y,
+where Y is greater than or equal to zero.</li>
+<li>The <strong>number of maximum-size blocks</strong> initially available.
+This must be greater than zero.</li>
+<li>A <strong>buffer</strong> that provides the memory for the memory pool’s blocks.
+This must be at least “maximum block size” times
+“number of maximum-size blocks” bytes long.</li>
+</ul>
+<p>The memory pool’s buffer must be aligned to an N-byte boundary, where
+N is a power of 2 larger than 2 (i.e. 4, 8, 16, …). To ensure that
+all memory blocks in the buffer are similarly aligned to this boundary,
+the minimum block size must also be a multiple of N.</p>
+<p>A thread that needs to use a memory block simply allocates it from a memory
+pool. Following a successful allocation, the <code class="xref c c-data docutils literal"><span class="pre">data</span></code> field
+of the block descriptor supplied by the thread indicates the starting address
+of the memory block. When the thread is finished with a memory block,
+it must release the block back to the memory pool so the block can be reused.</p>
+<p>If a block of the desired size is unavailable, a thread can optionally wait
+for one to become available.
+Any number of threads may wait on a memory pool simultaneously;
+when a suitable memory block becomes available, it is given to
+the highest-priority thread that has waited the longest.</p>
+<p>Unlike a heap, more than one memory pool can be defined, if needed. For
+example, different applications can utilize different memory pools; this
+can help prevent one application from hijacking resources to allocate all
+of the available blocks.</p>
+<div class="section" id="internal-operation">
+<h3><a class="toc-backref" href="#id2">Internal Operation</a><a class="headerlink" href="#internal-operation" title="Permalink to this headline">¶</a></h3>
+<p>A memory pool’s buffer is an array of maximum-size blocks,
+with no wasted space between the blocks.
+Each of these “level 0” blocks is a <em>quad-block</em> that can be
+partitioned into four smaller “level 1” blocks of equal size, if needed.
+Likewise, each level 1 block is itself a quad-block that can be partitioned
+into four smaller “level 2” blocks in a similar way, and so on.
+Thus, memory pool blocks can be recursively partitioned into quarters
+until blocks of the minimum size are obtained,
+at which point no further partitioning can occur.</p>
+<p>A memory pool keeps track of how its buffer space has been partitioned
+using an array of <em>block set</em> data structures. There is one block set
+for each partitioning level supported by the pool, or (to put it another way)
+for each block size. A block set keeps track of all free blocks of its
+associated size using an array of <em>quad-block status</em> data structures.</p>
+<p>When an application issues a request for a memory block,
+the memory pool first determines the size of the smallest block
+that will satisfy the request, and examines the corresponding block set.
+If the block set contains a free block, the block is marked as used
+and the allocation process is complete.
+If the block set does not contain a free block,
+the memory pool attempts to create one automatically by splitting a free block
+of a larger size or by merging free blocks of smaller sizes;
+if a suitable block can’t be created, the allocation request fails.</p>
+<p>The memory pool’s merging algorithm cannot combine adjacent free
+blocks of different sizes, nor can it merge adjacent free blocks of
+the same size if they belong to different parent quad-blocks. As a
+consequence, memory fragmentation issues can still be encountered when
+using a memory pool.</p>
+<p>When an application releases a previously allocated memory block it is
+combined synchronously with its three “partner” blocks if possible,
+and recursively so up through the levels.  This is done in constant
+time, and quickly, so no manual “defragmentation” management is
+needed.</p>
+</div>
+</div>
+<div class="section" id="implementation">
+<h2><a class="toc-backref" href="#id3">Implementation</a><a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="defining-a-memory-pool">
+<h3><a class="toc-backref" href="#id4">Defining a Memory Pool</a><a class="headerlink" href="#defining-a-memory-pool" title="Permalink to this headline">¶</a></h3>
+<p>A memory pool is defined using a variable of type <code class="xref c c-type docutils literal"><span class="pre">struct</span> <span class="pre">k_mem_pool</span></code>.
+However, since a memory pool also requires a number of variable-size data
+structures to represent its block sets and the status of its quad-blocks,
+the kernel does not support the runtime definition of a memory pool.
+A memory pool can only be defined and initialized at compile time
+by calling <a class="reference internal" href="../../api/kernel_api.html#c.K_MEM_POOL_DEFINE" title="K_MEM_POOL_DEFINE"><code class="xref c c-macro docutils literal"><span class="pre">K_MEM_POOL_DEFINE</span></code></a>.</p>
+<p>The following code defines and initializes a memory pool that has 3 blocks
+of 4096 bytes each, which can be partitioned into blocks as small as 64 bytes
+and is aligned to a 4-byte boundary.
+(That is, the memory pool supports block sizes of 4096, 1024, 256,
+and 64 bytes.)
+Observe that the macro defines all of the memory pool data structures,
+as well as its buffer.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">K_MEM_POOL_DEFINE</span><span class="p">(</span><span class="n">my_pool</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">4096</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="allocating-a-memory-block">
+<h3><a class="toc-backref" href="#id5">Allocating a Memory Block</a><a class="headerlink" href="#allocating-a-memory-block" title="Permalink to this headline">¶</a></h3>
+<p>A memory block is allocated by calling <a class="reference internal" href="../../api/kernel_api.html#_CPPv216k_mem_pool_allocP10k_mem_poolP11k_mem_block6size_t5s32_t" title="k_mem_pool_alloc"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_mem_pool_alloc()</span></code></a>.</p>
+<p>The following code builds on the example above, and waits up to 100 milliseconds
+for a 200 byte memory block to become available, then fills it with zeroes.
+A warning is issued if a suitable block is not obtained.</p>
+<p>Note that the application will actually receive a 256 byte memory block,
+since that is the closest matching size supported by the memory pool.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">k_mem_block</span> <span class="n">block</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">k_mem_pool_alloc</span><span class="p">(</span><span class="o">&amp;</span><span class="n">my_pool</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">memset</span><span class="p">(</span><span class="n">block</span><span class="p">.</span><span class="n">data</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+    <span class="p">...</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Memory allocation time-out&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="releasing-a-memory-block">
+<h3><a class="toc-backref" href="#id6">Releasing a Memory Block</a><a class="headerlink" href="#releasing-a-memory-block" title="Permalink to this headline">¶</a></h3>
+<p>A memory block is released by calling <a class="reference internal" href="../../api/kernel_api.html#_CPPv215k_mem_pool_freeP11k_mem_block" title="k_mem_pool_free"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_mem_pool_free()</span></code></a>.</p>
+<p>The following code builds on the example above, and allocates a 75 byte
+memory block, then releases it once it is no longer needed. (A 256 byte
+memory block is actually used to satisfy the request.)</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">k_mem_block</span> <span class="n">block</span><span class="p">;</span>
+
+<span class="n">k_mem_pool_alloc</span><span class="p">(</span><span class="o">&amp;</span><span class="n">my_pool</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="n">K_FOREVER</span><span class="p">);</span>
+<span class="p">...</span> <span class="cm">/* use memory block */</span>
+<span class="n">k_mem_pool_free</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="suggested-uses">
+<h2><a class="toc-backref" href="#id7">Suggested Uses</a><a class="headerlink" href="#suggested-uses" title="Permalink to this headline">¶</a></h2>
+<p>Use a memory pool to allocate memory in variable-size blocks.</p>
+<p>Use memory pool blocks when sending large amounts of data from one thread
+to another, to avoid unnecessary copying of the data.</p>
+</div>
+<div class="section" id="apis">
+<h2><a class="toc-backref" href="#id8">APIs</a><a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h2>
+<p>The following memory pool APIs are provided by <code class="file docutils literal"><span class="pre">kernel.h</span></code>:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../api/kernel_api.html#c.K_MEM_POOL_DEFINE" title="K_MEM_POOL_DEFINE"><code class="xref c c-macro docutils literal"><span class="pre">K_MEM_POOL_DEFINE</span></code></a></li>
+<li><a class="reference internal" href="../../api/kernel_api.html#_CPPv216k_mem_pool_allocP10k_mem_poolP11k_mem_block6size_t5s32_t" title="k_mem_pool_alloc"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_mem_pool_alloc()</span></code></a></li>
+<li><a class="reference internal" href="../../api/kernel_api.html#_CPPv215k_mem_pool_freeP11k_mem_block" title="k_mem_pool_free"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_mem_pool_free()</span></code></a></li>
+</ul>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="heap.html" class="btn btn-neutral float-right" title="Heap Memory Pool" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="slabs.html" class="btn btn-neutral" title="Memory Slabs" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

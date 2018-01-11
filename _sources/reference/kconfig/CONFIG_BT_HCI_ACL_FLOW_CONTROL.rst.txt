@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: BT_HCI_ACL_FLOW_CONTROL
+
+.. option:: CONFIG_BT_HCI_ACL_FLOW_CONTROL
+.. _CONFIG_BT_HCI_ACL_FLOW_CONTROL:
+
+Enable support for throttling ACL buffers from the controller
+to the host. This is particularly useful when the host and
+controller are on separate cores since it ensures that we do
+not run out of incoming ACL buffers.
+
+
+:Symbol:           BT_HCI_ACL_FLOW_CONTROL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Controller to Host ACL flow control support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: !BT_CTLR (value: "y")
+ *  y (value: "y")
+ *   Condition: BT_HCI_RAW (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_POLL`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CONN (value: "n")
+:Locations:
+ * ../subsys/bluetooth/Kconfig:97

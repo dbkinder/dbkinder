@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: ENTROPY_NRF5_BIAS_CORRECTION
+
+.. option:: CONFIG_ENTROPY_NRF5_BIAS_CORRECTION
+.. _CONFIG_ENTROPY_NRF5_BIAS_CORRECTION:
+
+This option enables the RNG bias correction, which guarantees a
+uniform distribution of 0 and 1. When this option is enabled, the time
+to generate a byte cannot be guaranteed.
+
+
+:Symbol:           ENTROPY_NRF5_BIAS_CORRECTION
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable bias correction (uniform distribution)" if ENTROPY_NRF5_RNG (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ENTROPY_GENERATOR (value: "n")
+:Locations:
+ * ../drivers/entropy/Kconfig.nrf5:19

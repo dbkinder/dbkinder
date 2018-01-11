@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_APP_TLS_STACK_SIZE
+
+.. option:: CONFIG_NET_APP_TLS_STACK_SIZE
+.. _CONFIG_NET_APP_TLS_STACK_SIZE:
+
+TLS handler thread stack size. The mbedtls routines will use this stack
+thus it is by default very large.
+
+
+
+:Symbol:           NET_APP_TLS_STACK_SIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "TLS handler thread stack size" if NET_APP_TLS || NET_APP_DTLS (value: "n")
+:Default values:
+
+ *  8192 (value: "n")
+ *   Condition: NET_APP_TLS || NET_APP_DTLS (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:135

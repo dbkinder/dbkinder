@@ -1,0 +1,44 @@
+:orphan:
+
+.. title:: ARC_MPU_VER
+
+.. option:: CONFIG_ARC_MPU_VER
+.. _CONFIG_ARC_MPU_VER:
+
+ARC MPU has several versions. For MPU v2, the minimum region is 2048 bytes;
+For MPU v3, the minimum region is 32 bytes
+
+
+
+:Symbol:           ARC_MPU_VER
+:Type:             int
+:Value:            "2"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [2, 4]
+:Prompts:
+
+ *  "ARC MPU version"
+:Default values:
+
+ *  2 (value: "n")
+ *   Condition: (none)
+ *  3 (value: "n")
+ *   Condition: BOARD_EM_STARTERKIT_R23 (value: "n")
+ *  2 (value: "n")
+ *   Condition: BOARD_EM_STARTERKIT_R22 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_EM7D (value: "n")
+:Locations:
+ * ../arch/arc/core/mpu/Kconfig:8
+ * ../arch/arc/soc/em7d/Kconfig.defconfig:23

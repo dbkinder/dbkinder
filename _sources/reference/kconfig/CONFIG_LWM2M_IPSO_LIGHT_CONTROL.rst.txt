@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: LWM2M_IPSO_LIGHT_CONTROL
+
+.. option:: CONFIG_LWM2M_IPSO_LIGHT_CONTROL
+.. _CONFIG_LWM2M_IPSO_LIGHT_CONTROL:
+
+This Object is used to control a light source, such as a LED or other
+light. It allows a light to be turned on or off and its dimmer
+setting to be controlled as a % between 0 and 100. An optional color
+setting enables a string to be used to indicate the desired color.
+
+
+
+:Symbol:           LWM2M_IPSO_LIGHT_CONTROL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "IPSO Light Control Support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING && LWM2M_IPSO_SUPPORT (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig.ipso:34

@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: ADXL362_ACCEL_ODR_RUNTIME
+
+.. option:: CONFIG_ADXL362_ACCEL_ODR_RUNTIME
+.. _CONFIG_ADXL362_ACCEL_ODR_RUNTIME:
+
+The configuration item CONFIG_ADXL362_ACCEL_ODR_RUNTIME:
+
+:Symbol:           ADXL362_ACCEL_ODR_RUNTIME
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Set at runtime."
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/adxl362/Kconfig:60

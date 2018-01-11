@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: NET_DEBUG_NET_OFFLOAD
+
+.. option:: CONFIG_NET_DEBUG_NET_OFFLOAD
+.. _CONFIG_NET_DEBUG_NET_OFFLOAD:
+
+Enables offload TCP/IP stack output debug messages.
+
+
+
+:Symbol:           NET_DEBUG_NET_OFFLOAD
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Debug Net Offload Layer" if NET_LOG && NET_OFFLOAD (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: NET_LOG && NET_OFFLOAD (value: "n")
+ *  y (value: "y")
+ *   Condition: NET_LOG && NET_OFFLOAD && NET_LOG_GLOBAL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/ip/l2/Kconfig:39

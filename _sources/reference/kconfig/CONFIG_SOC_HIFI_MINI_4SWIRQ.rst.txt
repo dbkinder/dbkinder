@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: SOC_HIFI_MINI_4SWIRQ
+
+.. option:: CONFIG_SOC_HIFI_MINI_4SWIRQ
+.. _CONFIG_SOC_HIFI_MINI_4SWIRQ:
+
+The configuration item CONFIG_SOC_HIFI_MINI_4SWIRQ:
+
+:Symbol:           SOC_HIFI_MINI_4SWIRQ
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "hifi_mini_4swIrq (hifi_mini core with 4 additional SW IRQs)"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/xtensa/soc/hifi_mini_4swIrq/Kconfig.soc:4

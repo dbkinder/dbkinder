@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: XTENSA_USE_CORE_CRT1
+
+.. option:: CONFIG_XTENSA_USE_CORE_CRT1
+.. _CONFIG_XTENSA_USE_CORE_CRT1:
+
+SoC or boards might define their own __start by setting this setting
+to false.
+
+
+
+:Symbol:           XTENSA_USE_CORE_CRT1
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Use crt1.S from core"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ XTENSA (value: "n")
+:Locations:
+ * ../arch/xtensa/Kconfig:60

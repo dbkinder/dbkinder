@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: AMG88XX_GPIO_PIN_NUM
+
+.. option:: CONFIG_AMG88XX_GPIO_PIN_NUM
+.. _CONFIG_AMG88XX_GPIO_PIN_NUM:
+
+The GPIO pin number receiving the interrupt signal from the
+AMG88XX sensor.
+
+
+
+:Symbol:           AMG88XX_GPIO_PIN_NUM
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Interrupt GPIO pin number" if AMG88XX_TRIGGER (value: "n")
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: AMG88XX_TRIGGER (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ AMG88XX && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/amg88xx/Kconfig:72

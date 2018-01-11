@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: LWM2M_LOCAL_PORT
+
+.. option:: CONFIG_LWM2M_LOCAL_PORT
+.. _CONFIG_LWM2M_LOCAL_PORT:
+
+This is the client port for LWM2M communication (0 = random, defaults
+to 5683)
+
+
+
+:Symbol:           LWM2M_LOCAL_PORT
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "LWM2M client port"
+:Default values:
+
+ *  5683 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:67

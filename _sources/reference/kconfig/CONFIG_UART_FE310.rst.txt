@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: UART_FE310
+
+.. option:: CONFIG_UART_FE310
+.. _CONFIG_UART_FE310:
+
+This option enables the SiFive Freedom E310 serial driver.
+
+
+
+:Symbol:           UART_FE310
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SiFive Freedom E310 serial driver" if SOC_RISCV32_FE310 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SOC_RISCV32_FE310 (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_SERIAL_HAS_DRIVER` if SOC_RISCV32_FE310 (value: "n")
+ *  :option:`CONFIG_SERIAL_SUPPORT_INTERRUPT` if SOC_RISCV32_FE310 (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.fe310:8

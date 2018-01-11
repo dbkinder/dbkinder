@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: BT_MESH_LPN_RSSI_FACTOR
+
+.. option:: CONFIG_BT_MESH_LPN_RSSI_FACTOR
+.. _CONFIG_BT_MESH_LPN_RSSI_FACTOR:
+
+The contribution of the RSSI measured by the Friend node used
+in Friend Offer Delay calculations. 0 = 1, 1 = 1.5, 2 = 2, 3 = 2.5.
+
+
+
+:Symbol:           BT_MESH_LPN_RSSI_FACTOR
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 3]
+:Prompts:
+
+ *  "RSSIFactor, used in the Friend Offer Delay calculation"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_LOW_POWER (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:237

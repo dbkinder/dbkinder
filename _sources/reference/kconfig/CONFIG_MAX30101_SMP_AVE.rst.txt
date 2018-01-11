@@ -1,0 +1,48 @@
+:orphan:
+
+.. title:: MAX30101_SMP_AVE
+
+.. option:: CONFIG_MAX30101_SMP_AVE
+.. _CONFIG_MAX30101_SMP_AVE:
+
+To reduce the amount of data throughput, adjacent samples (in each
+individual channel) can be averaged and decimated on the chip by
+setting this register. Set to 0 for no averaging.
+0 = 1 sample (no averaging)
+1 = 2 samples
+2 = 4 samples
+3 = 8 samples
+4 = 16 samples
+5 = 32 samples
+6 = 32 samples
+7 = 32 samples
+
+
+
+:Symbol:           MAX30101_SMP_AVE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 7]
+:Prompts:
+
+ *  "Sample averaging"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MAX30101 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/max30101/Kconfig:27

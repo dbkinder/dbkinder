@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: BT_MESH_RX_SEG_MSG_COUNT
+
+.. option:: CONFIG_BT_MESH_RX_SEG_MSG_COUNT
+.. _CONFIG_BT_MESH_RX_SEG_MSG_COUNT:
+
+Maximum number of simultaneous incoming multi-segment and/or
+reliable messages.
+
+
+
+:Symbol:           BT_MESH_RX_SEG_MSG_COUNT
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 255]
+:Prompts:
+
+ *  "Maximum number of simultaneous incoming segmented messages"
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:173

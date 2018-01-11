@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: GPIO_FE310_GPIO_NAME
+
+.. option:: CONFIG_GPIO_FE310_GPIO_NAME
+.. _CONFIG_GPIO_FE310_GPIO_NAME:
+
+The configuration item CONFIG_GPIO_FE310_GPIO_NAME:
+
+:Symbol:           GPIO_FE310_GPIO_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "GPIO driver name"
+:Default values:
+
+ *  "gpio0"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_FE310 && GPIO (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.fe310:19

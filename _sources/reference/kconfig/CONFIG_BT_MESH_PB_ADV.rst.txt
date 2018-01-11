@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: BT_MESH_PB_ADV
+
+.. option:: CONFIG_BT_MESH_PB_ADV
+.. _CONFIG_BT_MESH_PB_ADV:
+
+Enable this option to allow the device to be provisioned over
+the advertising bearer.
+
+
+
+:Symbol:           BT_MESH_PB_ADV
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Provisioning support using the advertising bearer (PB-ADV)"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_BT_MESH_PROV`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:25

@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: THREAD_STACK_INFO
+
+.. option:: CONFIG_THREAD_STACK_INFO
+.. _CONFIG_THREAD_STACK_INFO:
+
+This option allows each thread to store the thread stack info into
+the k_thread data structure.
+
+
+
+:Symbol:           THREAD_STACK_INFO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Thread stack info"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ X86_USERSPACE && X86 || CPU_HAS_MPU && ARM && CPU_HAS_MPU && ARM_CORE_MPU || ARC_STACK_CHECKING && ARC || ARC_CORE_MPU && !ARC_STACK_CHECKING && CPU_HAS_MPU && ARC && MPU_STACK_GUARD || STACK_SENTINEL (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../kernel/Kconfig:136

@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: UART_FE310_PORT_1
+
+.. option:: CONFIG_UART_FE310_PORT_1
+.. _CONFIG_UART_FE310_PORT_1:
+
+This tells the driver to configure the UART port at boot, depending on
+the additional configure options below.
+
+
+
+:Symbol:           UART_FE310_PORT_1
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable FE310 Port 1" if UART_FE310 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: UART_FE310 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.fe310:67

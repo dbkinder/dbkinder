@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: PWM_0
+
+.. option:: CONFIG_PWM_0
+.. _CONFIG_PWM_0:
+
+The configuration item CONFIG_PWM_0:
+
+:Symbol:           PWM_0
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable PWM port 0"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ PWM (value: "n")
+:Locations:
+ * ../drivers/pwm/Kconfig:32

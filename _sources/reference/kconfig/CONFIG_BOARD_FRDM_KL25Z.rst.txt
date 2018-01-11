@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: BOARD_FRDM_KL25Z
+
+.. option:: CONFIG_BOARD_FRDM_KL25Z
+.. _CONFIG_BOARD_FRDM_KL25Z:
+
+The configuration item CONFIG_BOARD_FRDM_KL25Z:
+
+:Symbol:           BOARD_FRDM_KL25Z
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "NXP FRDM-KL25Z" if SOC_SERIES_KINETIS_KL2X (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_SOC_PART_NUMBER_MKL25Z128VLK4` if SOC_SERIES_KINETIS_KL2X (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/frdm_kl25z/Kconfig.board:8

@@ -1,0 +1,43 @@
+:orphan:
+
+.. title:: X86_KERNEL_OOPS_VECTOR
+
+.. option:: CONFIG_X86_KERNEL_OOPS_VECTOR
+.. _CONFIG_X86_KERNEL_OOPS_VECTOR:
+
+Specify the IDT vector to use for the kernel oops exception handler.
+The default should be fine for most arches, but on systems like MVIC
+where there is a fixed IRQ-to-vector mapping another value may be
+needed to avoid collision.
+
+
+
+:Symbol:           X86_KERNEL_OOPS_VECTOR
+:Type:             int
+:Value:            "33"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [32, 255]
+:Prompts:
+
+ *  "IDT vector to use for kernel oops" if X86_KERNEL_OOPS (value: "y")
+:Default values:
+
+ *  62 (value: "n")
+ *   Condition: MVIC && X86_KERNEL_OOPS (value: "n")
+ *  33 (value: "n")
+ *   Condition: !MVIC && X86_KERNEL_OOPS (value: "y")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ X86 (value: "y")
+:Locations:
+ * ../arch/x86/Kconfig:265

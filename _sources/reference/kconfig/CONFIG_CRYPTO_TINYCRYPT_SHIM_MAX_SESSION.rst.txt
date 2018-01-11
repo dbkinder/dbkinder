@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: CRYPTO_TINYCRYPT_SHIM_MAX_SESSION
+
+.. option:: CONFIG_CRYPTO_TINYCRYPT_SHIM_MAX_SESSION
+.. _CONFIG_CRYPTO_TINYCRYPT_SHIM_MAX_SESSION:
+
+This can be used to tweak the amount of sessions the driver
+can handle in parallel.
+
+
+
+:Symbol:           CRYPTO_TINYCRYPT_SHIM_MAX_SESSION
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Maximum of sessions TinyCrypt shim driver can handle" if CRYPTO_TINYCRYPT_SHIM (value: "n")
+:Default values:
+
+ *  2 (value: "n")
+ *   Condition: CRYPTO_TINYCRYPT_SHIM (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ CRYPTO (value: "n")
+:Locations:
+ * ../drivers/crypto/Kconfig:56

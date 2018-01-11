@@ -1,0 +1,46 @@
+:orphan:
+
+.. title:: DNS_SERVER1
+
+.. option:: CONFIG_DNS_SERVER1
+.. _CONFIG_DNS_SERVER1:
+
+DNS server IP address 1. The address can be either IPv4 or IPv6
+address. An optional port number can be given.
+Following syntax is supported:
+192.0.2.1
+192.0.2.1:5353
+2001:db8::1
+[2001:db8::1]:5353
+It is not mandatory to use this Kconfig option at all.
+The one calling dns_resolve_init() can use this option or not
+to populate the server list. If the DNS server addresses are
+set here, then we automatically create default DNS context
+for the user.
+
+
+
+:Symbol:           DNS_SERVER1
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "DNS server 1"
+:Default values:
+
+ *  ""
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ DNS_RESOLVER && NETWORKING && DNS_SERVER_IP_ADDRESSES (value: "n")
+:Locations:
+ * ../subsys/net/lib/dns/Kconfig:62

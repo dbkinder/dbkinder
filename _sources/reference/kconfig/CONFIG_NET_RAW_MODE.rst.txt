@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: NET_RAW_MODE
+
+.. option:: CONFIG_NET_RAW_MODE
+.. _CONFIG_NET_RAW_MODE:
+
+This is a very specific option used to built only the very minimal
+part of the net stack in order to get network drivers working without
+any net stack above: core, L2 etc... Basically this will build only
+net_pkt part. It is currently used only by IEEE 802.15.4 drivers,
+though any type of net drivers could use it.
+
+
+
+:Symbol:           NET_RAW_MODE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ IEEE802154_RAW_MODE (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig:13

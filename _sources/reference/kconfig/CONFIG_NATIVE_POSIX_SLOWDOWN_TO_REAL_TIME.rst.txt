@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: NATIVE_POSIX_SLOWDOWN_TO_REAL_TIME
+
+.. option:: CONFIG_NATIVE_POSIX_SLOWDOWN_TO_REAL_TIME
+.. _CONFIG_NATIVE_POSIX_SLOWDOWN_TO_REAL_TIME:
+
+When selected the execution of the process will be slowed down to real time.
+(if there is a lot of load it may be slower than real time)
+If deselected, the process will run as fast as possible.
+Note that this only decouples simulated time from real/wall time. In either
+case the zephyr kernel and application cannot tell the diffence unless they
+interact with some other driver/device which runs at real time.
+
+
+
+:Symbol:           NATIVE_POSIX_SLOWDOWN_TO_REAL_TIME
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Slow down exectution to real time" if BOARD_NATIVE_POSIX (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: BOARD_NATIVE_POSIX (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BOARD_NATIVE_POSIX (value: "n")
+:Locations:
+ * ../boards/posix/native_posix/Kconfig:6

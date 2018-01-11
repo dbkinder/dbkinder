@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: BT_CTLR_PHY_2M_NRF
+
+.. option:: CONFIG_BT_CTLR_PHY_2M_NRF
+.. _CONFIG_BT_CTLR_PHY_2M_NRF:
+
+Enable support for Nordic Semiconductor proprietary 2Mbps PHY in the
+Controller. Encrypted connections are not supported.
+
+
+
+:Symbol:           BT_CTLR_PHY_2M_NRF
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "2Mbps Nordic Semiconductor PHY Support (Cleartext only)" if BT_CTLR_ADVANCED_FEATURES && SOC_SERIES_NRF51X (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_BT_CTLR_PHY_2M` if SOC_SERIES_NRF51X (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR && BT_CTLR_PHY (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:250

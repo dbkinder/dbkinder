@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: WDT_ESP32
+
+.. option:: CONFIG_WDT_ESP32
+.. _CONFIG_WDT_ESP32:
+
+Enable WDT driver for ESP32.
+
+
+
+:Symbol:           WDT_ESP32
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "ESP32 Watchdog (WDT) Driver" if SOC_ESP32 (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: SOC_ESP32 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ WATCHDOG (value: "n")
+:Locations:
+ * ../drivers/watchdog/Kconfig.esp32:8

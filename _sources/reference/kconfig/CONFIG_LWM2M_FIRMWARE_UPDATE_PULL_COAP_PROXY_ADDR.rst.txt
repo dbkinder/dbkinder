@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_ADDR
+
+.. option:: CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_ADDR
+.. _CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_ADDR:
+
+Network address of the CoAP proxy server.
+
+
+
+:Symbol:           LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_ADDR
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "CoAP proxy network address"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING && LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:161

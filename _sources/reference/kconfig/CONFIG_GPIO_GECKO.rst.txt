@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: GPIO_GECKO
+
+.. option:: CONFIG_GPIO_GECKO
+.. _CONFIG_GPIO_GECKO:
+
+Enable the Gecko gpio driver.
+
+
+
+:Symbol:           GPIO_GECKO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Gecko GPIO driver" if GPIO && HAS_SILABS_GECKO (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: GPIO && HAS_SILABS_GECKO (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_EFM32WG && SOC_SERIES_EFM32WG && GPIO (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.gecko:8
+ * ../arch/arm/soc/silabs_exx32/efm32wg/Kconfig.defconfig.efm32wg:20

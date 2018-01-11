@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: GPIO_DW_0_IRQ_PRI
+
+.. option:: CONFIG_GPIO_DW_0_IRQ_PRI
+.. _CONFIG_GPIO_DW_0_IRQ_PRI:
+
+IRQ priority
+
+
+
+:Symbol:           GPIO_DW_0_IRQ_PRI
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Controller interrupt priority" if GPIO_DW_0 && GPIO_DW_0_IRQ_DIRECT (value: "n")
+:Default values:
+
+ *  2 (value: "n")
+ *   Condition: (none)
+ *  1 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO && BOARD_EM_STARTERKIT && GPIO_DW && GPIO_DW_0 (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.dw:83
+ * ../arch/x86/soc/intel_quark/quark_x1000/Kconfig.defconfig.series:139
+ * ../boards/arc/em_starterkit/Kconfig.defconfig:22

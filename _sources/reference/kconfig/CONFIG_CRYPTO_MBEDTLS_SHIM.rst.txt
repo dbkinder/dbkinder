@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: CRYPTO_MBEDTLS_SHIM
+
+.. option:: CONFIG_CRYPTO_MBEDTLS_SHIM
+.. _CONFIG_CRYPTO_MBEDTLS_SHIM:
+
+Enable mbedTLS shim layer compliant with crypto APIs. You will need
+to fill in a relevant value to CONFIG_MBEDTLS_HEAP_SIZE.
+
+
+
+:Symbol:           CRYPTO_MBEDTLS_SHIM
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable mbedTLS shim driver [EXPERIMENTAL] "
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_MBEDTLS`
+ *  :option:`CONFIG_MBEDTLS_BUILTIN`
+ *  :option:`CONFIG_MBEDTLS_ENABLE_HEAP`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ CRYPTO (value: "n")
+:Locations:
+ * ../drivers/crypto/Kconfig:71

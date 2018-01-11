@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: NET_APP_CLIENT
+
+.. option:: CONFIG_NET_APP_CLIENT
+.. _CONFIG_NET_APP_CLIENT:
+
+Enables net app library client APIs.
+
+
+
+:Symbol:           NET_APP_CLIENT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable client support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ MQTT_LIB && NETWORKING || HTTP && NETWORKING && HTTP_APP && HTTP_CLIENT || LWM2M && NETWORKING || SNTP && NETWORKING (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:91

@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: LWM2M
+
+.. option:: CONFIG_LWM2M
+.. _CONFIG_LWM2M:
+
+This option adds logic for managing OMA LWM2M data
+
+
+
+:Symbol:           LWM2M
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "OMA LWM2M protocol stack"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_COAP`
+ *  :option:`CONFIG_NET_APP_CLIENT`
+ *  :option:`CONFIG_HTTP_PARSER_URL`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:7

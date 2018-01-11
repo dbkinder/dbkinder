@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: X86_PAE_MODE
+
+.. option:: CONFIG_X86_PAE_MODE
+.. _CONFIG_X86_PAE_MODE:
+
+When selected the Page address extension mode is enabled. The PAE
+page tables provides a mechanism to selectively disable execution.
+So any Page Table Entry (PTE) that sets the XD bit will have all
+instruction fetches disabled in that 4KB region. The amount of RAM
+needed for PAE tables is more than twice that of 32-Bit paging
+because each PAE entry is 64bits wide.
+Note: Do not enable in RAM constrained devices.
+
+
+:Symbol:           X86_PAE_MODE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable PAE page tables" if X86_MMU (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: X86_MMU (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ X86 (value: "y")
+:Locations:
+ * ../arch/x86/Kconfig:73

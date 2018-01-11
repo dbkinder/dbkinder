@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: USB_DEVICE_NETWORK_ECM_MAC
+
+.. option:: CONFIG_USB_DEVICE_NETWORK_ECM_MAC
+.. _CONFIG_USB_DEVICE_NETWORK_ECM_MAC:
+
+MAC Host OS Address string.
+MAC Address which would be assigned to network device, created in
+the Host's Operating System. Use RFC 7042 Documentation values as
+default MAC.
+
+
+
+:Symbol:           USB_DEVICE_NETWORK_ECM_MAC
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  "00005E005301"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_NETWORK_ECM (value: "n")
+:Locations:
+ * ../subsys/usb/class/netusb/Kconfig:70

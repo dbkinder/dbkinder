@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: BT_MESH_LPN_SCAN_LATENCY
+
+.. option:: CONFIG_BT_MESH_LPN_SCAN_LATENCY
+.. _CONFIG_BT_MESH_LPN_SCAN_LATENCY:
+
+Latency in milliseconds that it takes to enable scanning. This
+is in practice how much time in advance before the Receive Window
+that scanning is requested to be enabled.
+
+
+
+:Symbol:           BT_MESH_LPN_SCAN_LATENCY
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 50]
+:Prompts:
+
+ *  "Latency for enabling scanning"
+:Default values:
+
+ *  10 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_LOW_POWER (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:296

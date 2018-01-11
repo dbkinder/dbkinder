@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: LIS2DH
+
+.. option:: CONFIG_LIS2DH
+.. _CONFIG_LIS2DH:
+
+Enable driver for LIS2DH SPI/I2C-based triaxial accelerometer sensor.
+
+
+
+:Symbol:           LIS2DH
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "LIS2DH Three Axis Accelerometer" if I2C || SPI (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: I2C || SPI (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lis2dh/Kconfig:9

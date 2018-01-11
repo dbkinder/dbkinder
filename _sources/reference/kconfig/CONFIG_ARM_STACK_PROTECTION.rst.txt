@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: ARM_STACK_PROTECTION
+
+.. option:: CONFIG_ARM_STACK_PROTECTION
+.. _CONFIG_ARM_STACK_PROTECTION:
+
+This option enables MPU stack guard to cause a system fatal error
+if the bounds of the current process stack are overflowed.
+
+
+
+:Symbol:           ARM_STACK_PROTECTION
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: HW_STACK_PROTECTION (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_MPU_STACK_GUARD` if ARM_CORE_MPU (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/core/Kconfig:37

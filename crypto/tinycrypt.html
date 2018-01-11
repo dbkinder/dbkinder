@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>TinyCrypt Cryptographic Library &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="tinycrypt-cryptographic-library">
+<span id="tinycrypt"></span><h1>TinyCrypt Cryptographic Library<a class="headerlink" href="#tinycrypt-cryptographic-library" title="Permalink to this headline">¶</a></h1>
+<p>Copyright (C) 2015 by Intel Corporation, All Rights Reserved.</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The TinyCrypt Library provides an implementation for targeting constrained devices
+with a minimal set of standard cryptography primitives, as listed below. To better
+serve applications targeting constrained devices, TinyCrypt implementations differ
+from the standard specifications (see the Important Remarks section for some
+important differences). Certain cryptographic primitives depend on other
+primitives, as mentioned in the list below.</p>
+<p>Aside from the Important Remarks section below, valuable information on the usage,
+security and technicalities of each cryptographic primitive are found in the
+corresponding header file.</p>
+<ul class="simple">
+<li>SHA-256:<ul>
+<li>Type of primitive: Hash function.</li>
+<li>Standard Specification: NIST FIPS PUB 180-4.</li>
+<li>Requires: –</li>
+</ul>
+</li>
+<li>HMAC-SHA256:<ul>
+<li>Type of primitive: Message authentication code.</li>
+<li>Standard Specification: RFC 2104.</li>
+<li>Requires: SHA-256</li>
+</ul>
+</li>
+<li>HMAC-PRNG:<ul>
+<li>Type of primitive: Pseudo-random number generator.</li>
+<li>Standard Specification: NIST SP 800-90A.</li>
+<li>Requires: SHA-256 and HMAC-SHA256.</li>
+</ul>
+</li>
+<li>AES-128:<ul>
+<li>Type of primitive: Block cipher.</li>
+<li>Standard Specification: NIST FIPS PUB 197.</li>
+<li>Requires: –</li>
+</ul>
+</li>
+<li>AES-CBC mode:<ul>
+<li>Type of primitive: Encryption mode of operation.</li>
+<li>Standard Specification: NIST SP 800-38A.</li>
+<li>Requires: AES-128.</li>
+</ul>
+</li>
+<li>AES-CTR mode:<ul>
+<li>Type of primitive: Encryption mode of operation.</li>
+<li>Standard Specification: NIST SP 800-38A.</li>
+<li>Requires: AES-128.</li>
+</ul>
+</li>
+<li>AES-CMAC mode:<ul>
+<li>Type of primitive: Message authentication code.</li>
+<li>Standard Specification: NIST SP 800-38B.</li>
+<li>Requires: AES-128.</li>
+</ul>
+</li>
+<li>AES-CCM mode:<ul>
+<li>Type of primitive: Authenticated encryption.</li>
+<li>Standard Specification: NIST SP 800-38C.</li>
+<li>Requires: AES-128.</li>
+</ul>
+</li>
+<li>ECC-DH:<ul>
+<li>Type of primitive: Key exchange.</li>
+<li>Standard Specification: RFC 6090.</li>
+<li>Requires: ECC auxiliary functions (ecc.h/c).</li>
+</ul>
+</li>
+<li>ECC-DSA:<ul>
+<li>Type of primitive: Digital signature.</li>
+<li>Standard Specification: RFC 6090.</li>
+<li>Requires: ECC auxiliary functions (ecc.h/c).</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="design-goals">
+<h2>Design Goals<a class="headerlink" href="#design-goals" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Minimize the code size of each cryptographic primitive. This means minimize
+the size of a board-independent implementation, as presented in TinyCrypt.
+Note that various applications may require further features, optimizations with
+respect to other metrics and countermeasures for particular threats. These
+peculiarities would increase the code size and thus are not considered here.</li>
+<li>Minimize the dependencies among the cryptographic primitives. This means
+that it is unnecessary to build and allocate object code for more primitives
+than the ones strictly required by the intended application. In other words,
+one can select and compile only the primitives required by the application.</li>
+</ul>
+</div>
+<div class="section" id="important-remarks">
+<h2>Important Remarks<a class="headerlink" href="#important-remarks" title="Permalink to this headline">¶</a></h2>
+<p>The cryptographic implementations in TinyCrypt library have some limitations.
+Some of these limitations are inherent to the cryptographic primitives
+themselves, while others are specific to TinyCrypt. Some of these limitations
+are discussed in-depth below.</p>
+</div>
+<div class="section" id="general-remarks">
+<h2>General Remarks<a class="headerlink" href="#general-remarks" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>TinyCrypt does <strong>not</strong> intend to be fully side-channel resistant. Due to the
+variety of side-channel attacks, many of them making certain boards
+vulnerable. In this sense, instead of penalizing all library users with
+side-channel countermeasures such as increasing the overall code size,
+TinyCrypt only implements certain generic timing-attack countermeasures.</li>
+</ul>
+</div>
+<div class="section" id="specific-remarks">
+<h2>Specific Remarks<a class="headerlink" href="#specific-remarks" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">SHA-256:</p>
+<ul class="simple">
+<li>The number of bits_hashed in the state is not checked for overflow. Note
+however that this will only be a problem if you intend to hash more than
+2^64 bits, which is an extremely large window.</li>
+</ul>
+</li>
+<li><p class="first">HMAC:</p>
+<ul class="simple">
+<li>The HMAC verification process is assumed to be performed by the application.
+This compares the computed tag with some given tag.
+Note that conventional memory-comparison methods (such as memcmp function)
+might be vulnerable to timing attacks; thus be sure to use a constant-time
+memory comparison function (such as compare_constant_time
+function provided in lib/utils.c).</li>
+</ul>
+</li>
+<li><p class="first">HMAC-PRNG:</p>
+<ul class="simple">
+<li>Before using HMAC-PRNG, you <em>must</em> find an entropy source to produce a seed.
+PRNGs only stretch the seed into a seemingly random output of arbitrary
+length. The security of the output is exactly equal to the
+unpredictability of the seed.</li>
+<li>NIST SP 800-90A requires three items as seed material in the initialization
+step: entropy seed, personalization and a nonce (which is not implemented).
+TinyCrypt requires the personalization byte array and automatically creates
+the entropy seed using a mandatory call to the re-seed function.</li>
+</ul>
+</li>
+<li><p class="first">AES-128:</p>
+<ul class="simple">
+<li>The current implementation does not support other key-lengths (such as 256
+bits). Note that if you need AES-256, it doesn’t sound as though your
+application is running in a constrained environment. AES-256 requires keys
+twice the size as for AES-128, and the key schedule is 40% larger.</li>
+</ul>
+</li>
+<li><p class="first">CTR mode:</p>
+<ul class="simple">
+<li>The AES-CTR mode limits the size of a data message they encrypt to 2^32
+blocks. If you need to encrypt larger data sets, your application would
+need to replace the key after 2^32 block encryptions.</li>
+</ul>
+</li>
+<li><p class="first">CBC mode:</p>
+<ul class="simple">
+<li>TinyCrypt CBC decryption assumes that the iv and the ciphertext are
+contiguous (as produced by TinyCrypt CBC encryption). This allows for a
+very efficient decryption algorithm that would not otherwise be possible.</li>
+</ul>
+</li>
+<li><p class="first">CMAC mode:</p>
+<ul class="simple">
+<li>AES128-CMAC mode of operation offers 64 bits of security against collision
+attacks. Note however that an external attacker cannot generate the tags
+him/herself without knowing the MAC key. In this sense, to attack the
+collision property of AES128-CMAC, an external attacker would need the
+cooperation of the legal user to produce an exponentially high number of
+tags (e.g. 2^64) to finally be able to look for collisions and benefit
+from them. As an extra precaution, the current implementation allows to at
+most 2^48 calls to tc_cmac_update function before re-calling tc_cmac_setup
+(allowing a new key to be set), as suggested in Appendix B of SP 800-38B.</li>
+</ul>
+</li>
+<li><p class="first">CCM mode:</p>
+<ul>
+<li><p class="first">There are a few tradeoffs for the selection of the parameters of CCM mode.
+In special, there is a tradeoff between the maximum number of invocations
+of CCM under a given key and the maximum payload length for those
+invocations. Both things are related to the parameter ‘q’ of CCM mode. The
+maximum number of invocations of CCM under a given key is determined by
+the nonce size, which is: 15-q bytes. The maximum payload length for those
+invocations is defined as 2^(8q) bytes.</p>
+<p>To achieve minimal code size, TinyCrypt CCM implementation fixes q = 2,
+which is a quite reasonable choice for constrained applications. The
+implications of this choice are:</p>
+<p>The nonce size is: 13 bytes.</p>
+<p>The maximum payload length is: 2^16 bytes = 65 KB.</p>
+<p>The mac size parameter is an important parameter to estimate the security
+against collision attacks (that aim at finding different messages that
+produce the same authentication tag). TinyCrypt CCM implementation
+accepts any even integer between 4 and 16, as suggested in SP 800-38C.</p>
+</li>
+<li><p class="first">TinyCrypt CCM implementation accepts associated data of any length between
+0 and (2^16 - 2^8) = 65280 bytes.</p>
+</li>
+<li><p class="first">TinyCrypt CCM implementation accepts:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Both non-empty payload and associated data (it encrypts and
+authenticates the payload and only authenticates the associated data);</li>
+<li>Non-empty payload and empty associated data (it encrypts and
+authenticates the payload);</li>
+<li>Non-empty associated data and empty payload (it degenerates to an
+authentication-only mode on the associated data).</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>RFC-3610, which also specifies CCM, presents a few relevant security
+suggestions, such as: it is recommended for most applications to use a
+mac size greater than 8. Besides, it is emphasized that the usage of the
+same nonce for two different messages which are encrypted with the same
+key obviously destroys the security properties of CCM mode.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">ECC-DH and ECC-DSA:</p>
+<ul>
+<li><p class="first">TinyCrypt ECC implementation is based on nano-ecc (see
+<a class="reference external" href="https://github.com/iSECPartners/nano-ecc">https://github.com/iSECPartners/nano-ecc</a>) which in turn is based on
+micro-ecc (see <a class="reference external" href="https://github.com/kmackay/micro-ecc">https://github.com/kmackay/micro-ecc</a>). In the original
+nano and micro-ecc documentation, there is an important remark about the
+way integers are represented:</p>
+<p>“Integer representation: To reduce code size, all large integers are
+represented using little-endian words - so the least significant word is
+first. You can use the ‘ecc_bytes2native()’ and ‘ecc_native2bytes()’
+functions to convert between the native integer representation and the
+standardized octet representation.”</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="examples-of-applications">
+<h2>Examples of Applications<a class="headerlink" href="#examples-of-applications" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to do useful cryptography with only the given small set of
+primitives. With this list of primitives it becomes feasible to support a range
+of cryptography usages:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Measurement of code, data structures, and other digital artifacts (SHA256);</li>
+<li>Generate commitments (SHA256);</li>
+<li>Construct keys (HMAC-SHA256);</li>
+<li>Extract entropy from strings containing some randomness (HMAC-SHA256);</li>
+<li>Construct random mappings (HMAC-SHA256);</li>
+<li>Construct nonces and challenges (HMAC-PRNG);</li>
+<li>Authenticate using a shared secret (HMAC-SHA256);</li>
+<li>Create an authenticated, replay-protected session (HMAC-SHA256 + HMAC-PRNG);</li>
+<li>Authenticated encryption (AES-128 + AES-CCM);</li>
+<li>Key-exchange (EC-DH);</li>
+<li>Digital signature (EC-DSA);</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="test-vectors">
+<h2>Test Vectors<a class="headerlink" href="#test-vectors" title="Permalink to this headline">¶</a></h2>
+<p>The library provides a test program for each cryptographic primitive (see ‘test’
+folder). Besides illustrating how to use the primitives, these tests evaluate
+the correctness of the implementations by checking the results against
+well-known publicly validated test vectors.</p>
+<p>For the case of the HMAC-PRNG, due to the necessity of performing an extensive
+battery test to produce meaningful conclusions, we suggest the user to evaluate
+the unpredictability of the implementation by using the NIST Statistical Test
+Suite (see References).</p>
+<p>For the case of the EC-DH and EC-DSA implementations, most of the test vectors
+were obtained from the site of the NIST Cryptographic Algorithm Validation
+Program (CAVP), see References.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf">NIST FIPS PUB 180-4 (SHA-256)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf">NIST FIPS PUB 197 (AES-128)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://csrc.nist.gov/publications/nistpubs/800-90A/SP800-90A.pdf">NIST SP800-90A (HMAC-PRNG)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf">NIST SP 800-38A (AES-CBC and AES-CTR)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://csrc.nist.gov/publications/nistpubs/800-38B/SP_800-38B.pdf">NIST SP 800-38B (AES-CMAC)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://csrc.nist.gov/publications/nistpubs/800-38C/SP800-38C_updated-July20_2007.pdf">NIST SP 800-38C (AES-CCM)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://csrc.nist.gov/groups/ST/toolkit/rng/documentation_software.html">NIST Statistical Test Suite</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://csrc.nist.gov/groups/STM/cavp/">NIST Cryptographic Algorithm Validation Program (CAVP) site</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://www.ietf.org/rfc/rfc2104.txt">RFC 2104 (HMAC-SHA256)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://www.ietf.org/rfc/rfc6090.txt">RFC 6090 (ECC-DH and ECC-DSA)</a></li>
+</ul>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!--   for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

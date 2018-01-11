@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BT_CTLR_MIN_USED_CHAN
+
+.. option:: CONFIG_BT_CTLR_MIN_USED_CHAN
+.. _CONFIG_BT_CTLR_MIN_USED_CHAN:
+
+Enable support for Bluetooth 5.0 Minimum Number of Used Channels
+Procedure in the Controller.
+
+
+
+:Symbol:           BT_CTLR_MIN_USED_CHAN
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Minimum Number of Used Channels"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:198

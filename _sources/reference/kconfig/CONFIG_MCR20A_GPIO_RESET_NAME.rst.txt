@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: MCR20A_GPIO_RESET_NAME
+
+.. option:: CONFIG_MCR20A_GPIO_RESET_NAME
+.. _CONFIG_MCR20A_GPIO_RESET_NAME:
+
+The configuration item CONFIG_MCR20A_GPIO_RESET_NAME:
+
+:Symbol:           MCR20A_GPIO_RESET_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "GPIO device used for RESET input of MCR20A"
+:Default values:
+
+ *  GPIO_MCUX_PORTA_NAME (value: "")
+ *   Condition: (none)
+ *  GPIO_MCUX_PORTB_NAME (value: "")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (IEEE802154_MCR20A || IEEE802154_MCR20A_RAW) && BOARD_USB_KW24D512 (value: "n")
+:Locations:
+ * ../drivers/ieee802154/Kconfig.mcr20a:52
+ * ../boards/arm/usb_kw24d512/Kconfig.defconfig:120

@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: FXOS8700_TEMP
+
+.. option:: CONFIG_FXOS8700_TEMP
+.. _CONFIG_FXOS8700_TEMP:
+
+Enable the temperature sensor. Note that the temperature sensor is
+uncalibrated and its output for a given temperature may vary from one
+device to the next.
+
+
+
+:Symbol:           FXOS8700_TEMP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable temperature" if FXOS8700 && (FXOS8700_MODE_MAGN || FXOS8700_MODE_HYBRID) (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: FXOS8700 && (FXOS8700_MODE_MAGN || FXOS8700_MODE_HYBRID) (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/fxos8700/Kconfig:60

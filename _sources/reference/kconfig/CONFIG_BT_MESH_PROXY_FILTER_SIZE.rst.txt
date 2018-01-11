@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: BT_MESH_PROXY_FILTER_SIZE
+
+.. option:: CONFIG_BT_MESH_PROXY_FILTER_SIZE
+.. _CONFIG_BT_MESH_PROXY_FILTER_SIZE:
+
+This option specifies how many Proxy Filter entries the local
+node supports.
+
+
+
+:Symbol:           BT_MESH_PROXY_FILTER_SIZE
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 32767]
+:Prompts:
+
+ *  "Maximum number of filter entries per Proxy Client"
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: (none)
+ *  3 (value: "n")
+ *   Condition: BT_MESH_GATT_PROXY (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_CONN && BT_MESH_PROXY (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:69

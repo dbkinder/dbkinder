@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: SOC_XRC_D2PM_5SWIRQ
+
+.. option:: CONFIG_SOC_XRC_D2PM_5SWIRQ
+.. _CONFIG_SOC_XRC_D2PM_5SWIRQ:
+
+The configuration item CONFIG_SOC_XRC_D2PM_5SWIRQ:
+
+:Symbol:           SOC_XRC_D2PM_5SWIRQ
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "XRC_D2PM_5swIrq (XRC_D2PM core with 4 additional SW IRQs)"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/xtensa/soc/XRC_D2PM_5swIrq/Kconfig.soc:4

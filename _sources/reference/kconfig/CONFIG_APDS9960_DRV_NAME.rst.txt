@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: APDS9960_DRV_NAME
+
+.. option:: CONFIG_APDS9960_DRV_NAME
+.. _CONFIG_APDS9960_DRV_NAME:
+
+Device name with which the APDS9960 is identified.
+
+
+:Symbol:           APDS9960_DRV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Driver name" if APDS9960 (value: "n")
+:Default values:
+
+ *  "APDS9960"
+ *   Condition: APDS9960 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/apds9960/Kconfig:22

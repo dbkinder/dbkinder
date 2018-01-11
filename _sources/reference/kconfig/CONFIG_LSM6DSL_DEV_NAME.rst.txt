@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: LSM6DSL_DEV_NAME
+
+.. option:: CONFIG_LSM6DSL_DEV_NAME
+.. _CONFIG_LSM6DSL_DEV_NAME:
+
+The configuration item CONFIG_LSM6DSL_DEV_NAME:
+
+:Symbol:           LSM6DSL_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "LSM6DSL device name" if LSM6DSL && !HAS_DTS_I2C_DEVICE (value: "n")
+:Default values:
+
+ *  "LSM6DSL"
+ *   Condition: LSM6DSL && !HAS_DTS_I2C_DEVICE (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lsm6dsl/Kconfig:18

@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_NUCLEO_F091RC
+
+.. option:: CONFIG_BOARD_NUCLEO_F091RC
+.. _CONFIG_BOARD_NUCLEO_F091RC:
+
+The configuration item CONFIG_BOARD_NUCLEO_F091RC:
+
+:Symbol:           BOARD_NUCLEO_F091RC
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "NUCLEO-64 F091RC Development Board" if SOC_STM32F091XC (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/nucleo_f091rc/Kconfig.board:8

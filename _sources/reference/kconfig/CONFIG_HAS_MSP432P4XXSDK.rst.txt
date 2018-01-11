@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: HAS_MSP432P4XXSDK
+
+.. option:: CONFIG_HAS_MSP432P4XXSDK
+.. _CONFIG_HAS_MSP432P4XXSDK:
+
+The configuration item CONFIG_HAS_MSP432P4XXSDK:
+
+:Symbol:           HAS_MSP432P4XXSDK
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_HAS_CMSIS`
+:Reverse (select-related) dependencies:
+ SOC_MSP432P401R && ARM (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../ext/hal/ti/simplelink/Kconfig:21

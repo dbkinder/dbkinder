@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: TICKLESS_KERNEL_TIME_UNIT_IN_MICRO_SECS
+
+.. option:: CONFIG_TICKLESS_KERNEL_TIME_UNIT_IN_MICRO_SECS
+.. _CONFIG_TICKLESS_KERNEL_TIME_UNIT_IN_MICRO_SECS:
+
+This option makes the system clock and scheduling granularity.
+The default will be one millisecond. This option also determines
+the time unit passed in functions like _sys_soc_suspend. The
+value should be determined based what the timer hardware and driver
+can support. Specifying too small a time unit than what the overall
+system speed can support would cause scheduling errors.
+
+
+
+:Symbol:           TICKLESS_KERNEL_TIME_UNIT_IN_MICRO_SECS
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Tickless kernel time unit in micro seconds" if TICKLESS_KERNEL (value: "n")
+:Default values:
+
+ *  1000 (value: "n")
+ *   Condition: TICKLESS_KERNEL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SYS_POWER_MANAGEMENT (value: "n")
+:Locations:
+ * ../kernel/Kconfig.power_mgmt:89

@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: SIMPLELINK_HOST_DRIVER
+
+.. option:: CONFIG_SIMPLELINK_HOST_DRIVER
+.. _CONFIG_SIMPLELINK_HOST_DRIVER:
+
+Build the SimpleLink host driver
+
+
+
+:Symbol:           SIMPLELINK_HOST_DRIVER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Build the SimpleLink WiFi Host Driver" if HAS_CC3220SDK && MULTITHREADING && NEWLIB_LIBC (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: HAS_CC3220SDK && MULTITHREADING && NEWLIB_LIBC (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_ERRNO` if HAS_CC3220SDK && MULTITHREADING && NEWLIB_LIBC (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../ext/hal/ti/simplelink/Kconfig:9

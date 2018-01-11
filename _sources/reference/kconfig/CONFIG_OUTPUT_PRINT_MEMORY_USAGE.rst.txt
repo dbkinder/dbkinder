@@ -1,0 +1,46 @@
+:orphan:
+
+.. title:: OUTPUT_PRINT_MEMORY_USAGE
+
+.. option:: CONFIG_OUTPUT_PRINT_MEMORY_USAGE
+.. _CONFIG_OUTPUT_PRINT_MEMORY_USAGE:
+
+If the toolchain supports it, this option will pass
+--print-memory-region to the linker when it is doing it's first
+linker pass. Note that the memory regions are symbolic concepts
+defined by the linker scripts and do not necessarily map
+directly to the real physical address space. Take also note that
+some platforms do two passes of the linker so the results do not
+match exactly to the final elf file. See also rom_report,
+ram_report and
+https://sourceware.org/binutils/docs/ld/MEMORY.html
+
+
+
+:Symbol:           OUTPUT_PRINT_MEMORY_USAGE
+:Type:             bool
+:Value:            "y"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Print memory usage to stdout"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BOARD_NATIVE_POSIX (value: "n")
+:Locations:
+ * ../misc/Kconfig:172
+ * ../boards/posix/native_posix/Kconfig.defconfig:10

@@ -1,0 +1,847 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Arduino/Genuino 101 &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../../../index.html"/>
+        <link rel="up" title="x86 Boards" href="../../index.html"/>
+        <link rel="next" title="Galileo Gen1/Gen2" href="../../galileo/doc/galileo.html"/>
+        <link rel="prev" title="x86 Boards" href="../../index.html"/> 
+
+    
+    <script src="../../../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../../../index.html">Docs</a> /
+      
+          <a href="../../../boards.html">Supported Boards</a> /
+      
+          <a href="../../index.html">x86 Boards</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../boards.html">Supported Boards</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">x86 Boards</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Arduino/Genuino 101</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../galileo/doc/galileo.html">Galileo Gen1/Gen2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../minnowboard/doc/minnowboard.html">MinnowBoard Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qemu_x86/doc/board.html">X86 Emulation (QEMU)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../quark_d2000_crb/doc/quark_d2000_crb.html">Quark D2000 Development Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tinytile/doc/board.html">tinyTILE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../x86_jailhouse/doc/board.html">Jailhouse cell X86 Emulation (QEMU)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../arm/index.html">ARM Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../arc/index.html">ARC Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../nios2/index.html">NIOS II Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../xtensa/index.html">XTENSA Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../posix/index.html">Native POSIX Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="arduino-genuino-101">
+<span id="arduino-101"></span><h1>Arduino/Genuino 101<a class="headerlink" href="#arduino-genuino-101" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The Arduino/Genuino 101 is a learning and development board which contains an
+Intel® Curie™ Module. This board is designed to integrate the core’s low
+power-consumption and high performance with the Arduino’s ease-of-use. The
+Arduino 101 adds Bluetooth Low Energy capabilities and has an on-board 6-axis
+accelerometer/gyroscope, providing exciting opportunities for building creative
+projects in the connected world.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/arduino_101.jpg"><img alt="Arduino/Genuino 101" src="../../../../_images/arduino_101.jpg" style="width: 442px;" /></a>
+<p class="caption"><span class="caption-text">Arduino/Genuino 101 (Credit: Intel)</span></p>
+</div>
+<p>The Intel Quark* SE SoC in the Curie module contains a single core 32 MHz x86
+(Intel Quark* processor) and the 32 MHz Argonaut RISC Core (ARC)* EM processor.
+The two processors operate simultaneously and share memory. The ARC processor is
+also referenced as the digital signal processor (DSP) sensor hub or a sensor
+subsystem depending on what document you’re looking at. In theory, the DSP can
+run using a minimal amount of power, gathering and processing sensor data while
+the x86 processor waits in a low power mode, which would be ideal for always-on
+applications.</p>
+<p>Zephyr can be flashed to an Arduino 101 for experimentation and testing
+purposes; keep in mind that running the Zephyr OS on the Arduino 101 is not
+supported by Arduino LLC.</p>
+</div>
+<div class="section" id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="board-layout">
+<h3>Board Layout<a class="headerlink" href="#board-layout" title="Permalink to this headline">¶</a></h3>
+<p>General information for the board can be found at the
+<a class="reference external" href="https://www.arduino.cc/en/Main/ArduinoBoard101">Arduino 101 website</a>,
+which also includes schematics and BRD files
+for the board.</p>
+</div>
+<div class="section" id="arduino-101-pinout">
+<h3>Arduino 101 Pinout<a class="headerlink" href="#arduino-101-pinout" title="Permalink to this headline">¶</a></h3>
+<p>When using the Zephyr kernel, the pinout mapping for the Arduino 101 becomes a
+little more complicated. The table below details which pins in Zephyr map to
+those on the Arduino 101 board for control. Full details of the pinmux
+implementation, what valid options can be configured, and where things map can
+be found in the <code class="file docutils literal"><span class="pre">boards/x86/arduino_101/pinmux.c</span></code> file.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="29%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Arduino Pin</th>
+<th class="head">Function</th>
+<th class="head">Zephyr Pin</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>IO-0</td>
+<td>UART1-RX</td>
+<td>17</td>
+</tr>
+<tr class="row-odd"><td>IO-1</td>
+<td>UART1-TX</td>
+<td>16</td>
+</tr>
+<tr class="row-even"><td>IO-2</td>
+<td>GPIO</td>
+<td>52</td>
+</tr>
+<tr class="row-odd"><td>IO-3</td>
+<td>GPIO</td>
+<td>51
+63</td>
+</tr>
+<tr class="row-even"><td>IO-4</td>
+<td>GPIO</td>
+<td>53</td>
+</tr>
+<tr class="row-odd"><td>IO-5</td>
+<td>GPIO</td>
+<td>49
+64</td>
+</tr>
+<tr class="row-even"><td>IO-6</td>
+<td>PWM2</td>
+<td>65</td>
+</tr>
+<tr class="row-odd"><td>IO-7</td>
+<td>GPIO</td>
+<td>54</td>
+</tr>
+<tr class="row-even"><td>IO-8</td>
+<td>GPIO</td>
+<td>50</td>
+</tr>
+<tr class="row-odd"><td>IO-9</td>
+<td>PWM3</td>
+<td>66</td>
+</tr>
+<tr class="row-even"><td>IO-10</td>
+<td>AIN0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>IO-11</td>
+<td>AIN3</td>
+<td>3</td>
+</tr>
+<tr class="row-even"><td>IO-12</td>
+<td>AIN1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>IO-13</td>
+<td>AIN2</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td>ADC0</td>
+<td>GPIO SS</td>
+<td>10</td>
+</tr>
+<tr class="row-odd"><td>ADC1</td>
+<td>GPIO SS</td>
+<td>11</td>
+</tr>
+<tr class="row-even"><td>ADC2</td>
+<td>GPIO SS</td>
+<td>12</td>
+</tr>
+<tr class="row-odd"><td>ADC3</td>
+<td>GPIO SS</td>
+<td>13</td>
+</tr>
+<tr class="row-even"><td>ADC4</td>
+<td>AIN14</td>
+<td>14</td>
+</tr>
+<tr class="row-odd"><td>ADC5</td>
+<td>AIN9</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">IO-3 and IO-5 require both pins to be set for functionality changes.</p>
+</div>
+</div>
+<div class="section" id="supported-features">
+<h3>Supported Features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h3>
+<p>The Zephyr kernel supports multiple hardware features on the Arduino 101 through
+the use of drivers. Some drivers are functional on the x86 side only, some on
+the ARC side only, and a few are functional on both sides. The table below shows
+which drivers and functionality can be found on which architectures:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="21%" />
+<col width="9%" />
+<col width="9%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Interface</th>
+<th class="head">Controller</th>
+<th class="head">ARC</th>
+<th class="head">x86</th>
+<th class="head">Driver/Component</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>APIC</td>
+<td>on-chip</td>
+<td>N</td>
+<td>Y</td>
+<td>interrupt_controller</td>
+</tr>
+<tr class="row-odd"><td>UART</td>
+<td>on-chip</td>
+<td>N</td>
+<td>Y</td>
+<td>serial port-polling;
+serial port-interrupt</td>
+</tr>
+<tr class="row-even"><td>SPI</td>
+<td>on-chip</td>
+<td>Y</td>
+<td>Y</td>
+<td>spi</td>
+</tr>
+<tr class="row-odd"><td>ADC</td>
+<td>on-chip</td>
+<td>Y</td>
+<td>N</td>
+<td>adc</td>
+</tr>
+<tr class="row-even"><td>I2C</td>
+<td>on-chip</td>
+<td>Y</td>
+<td>Y</td>
+<td>i2c</td>
+</tr>
+<tr class="row-odd"><td>GPIO</td>
+<td>on-chip</td>
+<td>Y</td>
+<td>Y</td>
+<td>gpio</td>
+</tr>
+<tr class="row-even"><td>PWM</td>
+<td>on-chip</td>
+<td>Y</td>
+<td>Y</td>
+<td>pwm</td>
+</tr>
+<tr class="row-odd"><td>mailbox</td>
+<td>on-chip</td>
+<td>Y</td>
+<td>Y</td>
+<td>ipm</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="required-hardware-and-software">
+<h3>Required Hardware and Software<a class="headerlink" href="#required-hardware-and-software" title="Permalink to this headline">¶</a></h3>
+<p>Before flashing the Zephyr kernel onto an Arduino 101, a few additional pieces
+of hardware are required.</p>
+<ul class="simple">
+<li>The USB port for power will work; however, we recommend the 7V-12V barrel
+connector be used when working with the JTAG connector.</li>
+<li>If you wish to grab any data off the serial port, you will need a TTL-to-USB
+adapter. The following adapters require male-to-male jumper cables in order to
+connect to the Arduino 101 board.<ul>
+<li>USB to 3.3V TTL Serial Cable</li>
+<li>FTDI USB to TTL Serial Part #TTL-232R-3V3 <a class="reference external" href="http://www.ftdichip.com/Products/Cables/USBTTLSerial.htm">http://www.ftdichip.com/Products/Cables/USBTTLSerial.htm</a></li>
+</ul>
+</li>
+</ul>
+<p>We recommend using the <code class="docutils literal"><span class="pre">dfu-util</span></code> tool to flash the Arduino 101 board.
+For Linux environments, verify that <code class="docutils literal"><span class="pre">udev</span></code> has the proper rules for granting
+you access to the Arduino 101 board in DFU mode. You can easily add the required
+rules, using the <code class="docutils literal"><span class="pre">create_dfu_udev_rule</span></code> script provided with the
+<a class="reference external" href="https://www.arduino.cc/en/Guide/Arduino101#toc2">Intel Curie Boards package</a> for the Arduino Desktop IDE. You can get and run
+this script standalone with the following commands:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> wget https://github.com/01org/intel-arduino-tools/raw/linux64/scripts/create_dfu_udev_rule
+<span class="gp">$</span> chmod +x create_dfu_udev_rule
+<span class="gp">$</span> sudo ./create_dfu_udev_rule
+<span class="gp">$</span> rm create_dfu_udev_rule
+</pre></div>
+</div>
+<p>If you’d like to flash using JTAG, the following additional hardware is needed:</p>
+<ul class="simple">
+<li>Flyswatter2 JTAG debugger</li>
+<li>ARM Micro JTAG Connector, Model: ARM-JTAG-20-10</li>
+</ul>
+</div>
+<div class="section" id="connecting-serial-output">
+<h3>Connecting Serial Output<a class="headerlink" href="#connecting-serial-output" title="Permalink to this headline">¶</a></h3>
+<p>The default configuration defined in the Zephyr kernel supports serial output
+via the UART1 on the board. To read the output, you will need a USB to 3.3V TTL
+serial cable. To enable serial output:</p>
+<ul class="simple">
+<li>Connect the Serial Cable RX pin to the Arduino 101’s TX-&gt;1 pin.</li>
+<li>Connect the Serial Cable TX pin to the Arduino 101’s RX&lt;-0 pin.</li>
+<li>Connect the Serial Cable GND pin to the Arduino 101’s GND pin.</li>
+</ul>
+<p>Once connected, on your development environment, you will need to:</p>
+<ul class="simple">
+<li>Open a serial port emulator (i.e. on Linux minicom, screen, etc)</li>
+<li>Attach to the USB to TTL Serial cable, for example, on Linux this may be
+/dev/ttyUSB0</li>
+<li>Set the communication details to:<ul>
+<li>Speed: 115200</li>
+<li>Data: 8 bits</li>
+<li>Parity: None</li>
+<li>Stopbits: 1</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="programming-and-debugging">
+<h2>Programming and Debugging<a class="headerlink" href="#programming-and-debugging" title="Permalink to this headline">¶</a></h2>
+<p>The Arduino 101 is powered by a Quark CPU and a sensor subsystem powered by an
+ARC processor. When building applications, depending on the usage, two Zephyr
+images need to be built and flashed.</p>
+<p>The Arduino 101 has a bootloader that supports flashing over USB using the DFU
+protocol. Additionally, the factory installed bootloader supports flashing of
+the firmware for the Bluetooth device of the Curie module.</p>
+<p>Use the <code class="docutils literal"><span class="pre">arduino_101</span></code> board definition to build a kernel for the Quark core. Use
+the <code class="docutils literal"><span class="pre">arduino_101_sss</span></code> board definition when targeting the sensor subsystem.</p>
+<p>When your application is targeting the Quark processor only, it is important to
+disable the sensor subsystem processor using the <code class="docutils literal"><span class="pre">CONFIG_ARC_INIT=n</span></code> option,
+otherwise the board will appear to hang waiting for the sensor subsystem
+processor to boot.</p>
+<div class="section" id="bootloader-boot-rom">
+<h3>Bootloader (Boot ROM)<a class="headerlink" href="#bootloader-boot-rom" title="Permalink to this headline">¶</a></h3>
+<p>Support for the <a class="reference external" href="https://github.com/quark-mcu/qm-bootloader">QMSI Bootloader</a> has been removed starting from Zephyr 1.4.0.
+Thus, the factory boot ROM can be kept supporting the flashing of the board over
+DFU and flashing the Bluetooth firmware.</p>
+<p>If you have previously installed a different boot ROM it is recommended to
+restore the factory boot ROM image using the <a class="reference external" href="https://downloadcenter.intel.com/downloads/eula/25470/Arduino-101-software-package?httpDown=https%3A%2F%2Fdownloadmirror.intel.com%2F25470%2Feng%2Farduino101-factory_recovery-flashpack.tar.bz2">Flashpack Utility</a>. Consult
+the README available in the <a class="reference external" href="https://downloadcenter.intel.com/downloads/eula/25470/Arduino-101-software-package?httpDown=https%3A%2F%2Fdownloadmirror.intel.com%2F25470%2Feng%2Farduino101-factory_recovery-flashpack.tar.bz2">Flashpack Utility</a> package and follow the
+instructions for your environment.</p>
+</div>
+<div class="section" id="flashing">
+<h3>Flashing<a class="headerlink" href="#flashing" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">dfu-util</span></code> flashing application will only recognize the Arduino 101 as a
+DFU-capable device within five seconds after the Master Reset button is pressed
+on the board. You can run this application with the help of the Zephyr build
+system by defining the environment variable <code class="docutils literal"><span class="pre">ZEPHYR_FLASH_OVER_DFU=y</span></code> before
+flashing Zephyr applications (as described in <a class="reference internal" href="../../../../application/application.html#application-run"><span class="std std-ref">Run an Application</span></a>).</p>
+<p>If you regularly use this method, you can add the following line into your
+<code class="docutils literal"><span class="pre">~/.zephyrrc</span></code> file:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">export ZEPHYR_FLASH_OVER_DFU=y</span>
+</pre></div>
+</div>
+<div class="section" id="flashing-the-sensor-subsystem-core">
+<h4>Flashing the Sensor Subsystem Core<a class="headerlink" href="#flashing-the-sensor-subsystem-core" title="Permalink to this headline">¶</a></h4>
+<p>When building for the ARC processor, the board type is listed as
+<code class="docutils literal"><span class="pre">arduino_101_sss</span></code>.</p>
+<p>The sample application <a class="reference internal" href="../../../../samples/hello_world/README.html#hello-world"><span class="std std-ref">Hello World</span></a> is used for this tutorial.  To build
+and flash this application using <code class="docutils literal"><span class="pre">dfu-util</span></code>, first set
+<code class="docutils literal"><span class="pre">ZEPHYR_FLASH_OVER_DFU=y</span></code> in the environment as described above, then run:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir -p build/arduino_101_sss <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build/arduino_101_sss
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>arduino_101_sss ../..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+<span class="gp">$</span> make flash
+</pre></div>
+</div>
+</div>
+<div class="section" id="flashing-the-x86-application-core">
+<h4>Flashing the x86 Application Core<a class="headerlink" href="#flashing-the-x86-application-core" title="Permalink to this headline">¶</a></h4>
+<p>When building for the x86 processor, the board type is listed as
+<code class="docutils literal"><span class="pre">arduino_101</span></code>.  To build and flash the <a class="reference internal" href="../../../../samples/hello_world/README.html#hello-world"><span class="std std-ref">Hello World</span></a> application to this
+board using <code class="docutils literal"><span class="pre">dfu-util</span></code>, first set <code class="docutils literal"><span class="pre">ZEPHYR_FLASH_OVER_DFU=y</span></code> in the
+environment as described above, then run:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir -p build/arduino_101 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build/arduino_101
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>arduino_101 ../..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+<span class="gp">$</span> make flash
+</pre></div>
+</div>
+</div>
+<div class="section" id="flashing-the-bluetooth-core">
+<span id="bluetooth-firmware-arduino-101"></span><h4>Flashing the Bluetooth Core<a class="headerlink" href="#flashing-the-bluetooth-core" title="Permalink to this headline">¶</a></h4>
+<p>To be interoperable with the Zephyr Bluetooth stack the Bluetooth controller of
+the Arduino 101 (Nordic Semiconductor nRF51) needs to be flashed with a
+compatible firmware.</p>
+<p>The Arduino 101 factory-installed firmware on this controller is not supported
+by the Zephyr project, so you need to flash a new one onto it.</p>
+<p>Luckily, starting with Zephyr 1.6, Zephyr itself is able to act as the firmware
+for the controller. The application you need is <code class="docutils literal"><span class="pre">samples/bluetooth/hci_uart</span></code> and
+the target board is called <code class="docutils literal"><span class="pre">arduino_101_ble</span></code>.</p>
+<p>To build the Bluetooth controller image and flash it using <code class="docutils literal"><span class="pre">dfu-util</span></code>, first
+set <code class="docutils literal"><span class="pre">ZEPHYR_FLASH_OVER_DFU=y</span></code> in the environment as described above, then
+run:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/bluetooth/hci_uart
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>arduino_101_ble ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+<span class="gp">$</span> make flash
+</pre></div>
+</div>
+<p>After successfully completing these steps your Arduino 101 should now have a HCI
+compatible BLE firmware.</p>
+</div>
+<div class="section" id="flashing-using-jtag-adapter">
+<h4>Flashing using JTAG Adapter<a class="headerlink" href="#flashing-using-jtag-adapter" title="Permalink to this headline">¶</a></h4>
+<p>We recommend using the <code class="docutils literal"><span class="pre">dfu-util</span></code> tool to flash the Arduino 101 board for typical
+development work. JTAG is intended for advanced development and debugging.</p>
+<ul>
+<li><p class="first">Connect the ARM Micro JTAG Connector to the Flyswatter2.</p>
+</li>
+<li><p class="first">Locate the micro JTAG header on the Arduino 101 board. It is adjacent to the
+SCL and SDA pins in the Arduino headers, highlighted as the red square in the
+figure below.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../_images/arduino_101_flat.jpg"><img alt="Arduino/Genuino 101 JTAG" src="../../../../_images/arduino_101_flat.jpg" style="width: 442px;" /></a>
+</div>
+</li>
+<li><p class="first">Beside the micro JTAG header is a small white dot indicating the location of
+pin 1 on the header. The green arrow on the figure points to the dot.</p>
+</li>
+<li><p class="first">Connect the ARM Micro JTAG Connector to the Arduino 101 micro JTAG header.</p>
+</li>
+</ul>
+<p>Ensure that both the cable and header pin 1 locations line up. The cable from
+the ARM Micro JTAG Connector uses a red wire on the cable to denote which end on
+the cable has the pin 1.</p>
+<p>For Linux environments, to control the Flyswatter2 your Linux account needs to be
+granted HAL layer interaction permissions. This is done through the group
+‘plugdev’. Verifying the group exists and adding your username can be
+accomplished with the usermod command:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo usermod -a -G plugdev <span class="nv">$LOGNAME</span>
+</pre></div>
+</div>
+<p>If the group does not exist, you can add it by running the following command:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo groupadd -r plugdev
+</pre></div>
+</div>
+<p>For Linux environments, verify that <code class="docutils literal"><span class="pre">udev</span></code> has the proper rules for giving your
+user control of the Flyswatter2 device. Adding the following rule to udev will
+give members of the plugdev group control of the Flyswatter2.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo su
+<span class="gp">$</span> cat &lt;&lt;EOF &gt; /etc/udev/rules.d/99-openocd.rules
+<span class="gp">#</span> TinCanTools Flyswatter2
+<span class="go">ATTRS{idVendor}==&quot;0403&quot;, ATTRS{idProduct}==&quot;6010&quot;, MODE=&quot;664&quot;, GROUP=&quot;plugdev&quot;</span>
+<span class="go">EOF</span>
+<span class="gp">$</span> <span class="nb">exit</span>
+</pre></div>
+</div>
+<p>Once your udev rules are setup, you will need to reload the rules:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo udevadm control --reload-rules
+</pre></div>
+</div>
+<p>Plug the USB Type B cable into the Flyswatter2 and your computer. On Linux, you
+should see something similar to the following in your dmesg:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">usb 1-2.1.1: new high-speed USB device number 13 using xhci_hcd</span>
+<span class="go">usb 1-2.1.1: New USB device found, idVendor=0403, idProduct=6010</span>
+<span class="go">usb 1-2.1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3</span>
+<span class="go">usb 1-2.1.1: Product: Flyswatter2</span>
+<span class="go">usb 1-2.1.1: Manufacturer: TinCanTools</span>
+<span class="go">usb 1-2.1.1: SerialNumber: FS20000</span>
+<span class="go">ftdi_sio 1-2.1.1:1.0: FTDI USB Serial Device converter detected</span>
+<span class="go">usb 1-2.1.1: Detected FT2232H</span>
+<span class="go">usb 1-2.1.1: FTDI USB Serial Device converter now attached to ttyUSB0</span>
+<span class="go">ftdi_sio 1-2.1.1:1.1: FTDI USB Serial Device converter detected</span>
+<span class="go">usb 1-2.1.1: Detected FT2232H</span>
+<span class="go">usb 1-2.1.1: FTDI USB Serial Device converter now attached to ttyUSB1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
+<p>The instructions below will help you debug the Arduino 101 on the x86 core or
+the ARC core, respectively.</p>
+<div class="section" id="application-core-x86">
+<h4>Application Core (x86)<a class="headerlink" href="#application-core-x86" title="Permalink to this headline">¶</a></h4>
+<p>Build and flash an x86 application, then launch a debugging server with the
+following commands:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> &lt;my x86 app&gt;
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>arduino_101 ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+<span class="gp">$</span> make flash
+<span class="gp">$</span> make debugserver
+</pre></div>
+</div>
+<p>Connect to the debug server at the x86 core from a second console:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> &lt;my x86 app&gt;
+<span class="gp">$</span> <span class="nv">$ZEPHYR_SDK_INSTALL_DIR</span>/sysroots/x86_64-pokysdk-linux/usr/bin/i586-zephyr-elfiamcu/i586-zephyr-elfiamcu-gdb build/zephyr/zephyr.elf
+<span class="go">(gdb) target remote localhost:3333</span>
+<span class="go">(gdb) b main</span>
+<span class="go">(gdb) c</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sensor-subsystem-core-arc">
+<h4>Sensor Subsystem Core (ARC)<a class="headerlink" href="#sensor-subsystem-core-arc" title="Permalink to this headline">¶</a></h4>
+<p>Enable ARC INIT from the x86 core. This can be done by flashing an x86
+application that sets the <code class="docutils literal"><span class="pre">CONFIG_ARC_INIT=y</span></code> option, such as the booting stub
+provided with the Zephyr Test Framework, like so:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/tests/booting/stub
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>arduino_101 ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make flash
+</pre></div>
+</div>
+<p>Then build the ARC application, flash it, and launch a debug server with the
+following commands:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> &lt;my arc app&gt;
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>arduino_101_sss ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make flash
+<span class="gp">$</span> make debugserver
+</pre></div>
+</div>
+<p>Connect to the debug server at the ARC core from a second console:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> &lt;my arc app&gt;
+<span class="gp">$</span> <span class="nv">$ZEPHYR_SDK_INSTALL_DIR</span>/sysroots/x86_64-pokysdk-linux/usr/bin/arc-zephyr-elf/arc-zephyr-elf-gdb build/zephyr/zephyr.elf
+<span class="go">(gdb) target remote localhost:3334</span>
+<span class="go">(gdb) b main</span>
+<span class="go">(gdb) c</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bluetooth-firmware">
+<h4>Bluetooth Firmware<a class="headerlink" href="#bluetooth-firmware" title="Permalink to this headline">¶</a></h4>
+<p>You will only see normal log messages on the console, by default, without any
+way of accessing the HCI traffic between Zephyr and the nRF51 controller.
+However, there is a special Bluetooth logging mode that converts the console to
+use a binary protocol that interleaves both normal log messages as well as the
+HCI traffic. Set the following Kconfig options to enable this protocol before
+building your application:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">CONFIG_BT_DEBUG_MONITOR=y</span>
+<span class="go">CONFIG_UART_CONSOLE=n</span>
+<span class="go">CONFIG_UART_QMSI_1_BAUDRATE=1000000</span>
+</pre></div>
+</div>
+<p>The first item replaces the BT_DEBUG_LOG option, the second one
+disables the default printk/printf hooks, and the third one matches the console
+baudrate with what’s used to communicate with the nRF51, in order not to create
+a bottleneck.</p>
+<p>To decode the binary protocol that will now be sent to the console UART you need
+to use the btmon tool from BlueZ 5.40 or later:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> btmon --tty &lt;console TTY&gt; --tty-speed <span class="m">1000000</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="release-notes">
+<h2>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h2>
+<p>When debugging on ARC, it is important that the x86 core be started and running
+BEFORE attempting to debug on ARC. This is because the IPM console calls will
+hang waiting for the x86 core to clear the communication.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../../galileo/doc/galileo.html" class="btn btn-neutral float-right" title="Galileo Gen1/Gen2" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../../index.html" class="btn btn-neutral" title="x86 Boards" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

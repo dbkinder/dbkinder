@@ -1,0 +1,44 @@
+:orphan:
+
+.. title:: NET_DEBUG_APP_TLS_LEVEL
+
+.. option:: CONFIG_NET_DEBUG_APP_TLS_LEVEL
+.. _CONFIG_NET_DEBUG_APP_TLS_LEVEL:
+
+Sets log level for the mbedtls when debugging net_app library.
+Levels are (from ext/lib/crypto/mbedtls/include/mbedtls/debug.h):
+0 No debug
+1 Error
+2 State change
+3 Information
+4 Verbose
+
+
+
+:Symbol:           NET_DEBUG_APP_TLS_LEVEL
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 4]
+:Prompts:
+
+ *  "Debug level for mbedtls in net app library" if (NET_APP_TLS || NET_APP_DTLS) && NET_DEBUG_APP (value: "n")
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (NET_APP_TLS || NET_APP_DTLS) && NET_DEBUG_APP (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:121

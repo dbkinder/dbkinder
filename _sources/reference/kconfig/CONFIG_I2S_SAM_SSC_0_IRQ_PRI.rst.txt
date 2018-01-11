@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: I2S_SAM_SSC_0_IRQ_PRI
+
+.. option:: CONFIG_I2S_SAM_SSC_0_IRQ_PRI
+.. _CONFIG_I2S_SAM_SSC_0_IRQ_PRI:
+
+The configuration item CONFIG_I2S_SAM_SSC_0_IRQ_PRI:
+
+:Symbol:           I2S_SAM_SSC_0_IRQ_PRI
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Interrupt priority"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2S_SAM_SSC && I2S (value: "n")
+:Locations:
+ * ../drivers/i2s/Kconfig.sam_ssc:31

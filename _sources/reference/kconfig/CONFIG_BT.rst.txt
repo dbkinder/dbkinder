@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: BT
+
+.. option:: CONFIG_BT
+.. _CONFIG_BT:
+
+This option enables Bluetooth support.
+
+
+
+:Symbol:           BT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bluetooth support"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_NET_BUF`
+:Reverse (select-related) dependencies:
+ NETWORKING && NETWORKING && NET_L2_BT (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../subsys/bluetooth/Kconfig:10

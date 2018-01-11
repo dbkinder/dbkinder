@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: PWM_NRF5_SW
+
+.. option:: CONFIG_PWM_NRF5_SW
+.. _CONFIG_PWM_NRF5_SW:
+
+Enable driver to utilize PWM on the Nordic Semiconductor nRF5x series.
+This implementation provides up to 3 pins using one HF timer, two PPI
+channels per pin and one GPIOTE config per pin.
+
+
+
+:Symbol:           PWM_NRF5_SW
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Nordic Semiconductor nRF5x series S/W PWM" if PWM && SOC_FAMILY_NRF5 (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: PWM && SOC_FAMILY_NRF5 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ PWM (value: "n")
+:Locations:
+ * ../drivers/pwm/Kconfig.nrf5_sw:9

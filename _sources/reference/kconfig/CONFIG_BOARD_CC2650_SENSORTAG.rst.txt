@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_CC2650_SENSORTAG
+
+.. option:: CONFIG_BOARD_CC2650_SENSORTAG
+.. _CONFIG_BOARD_CC2650_SENSORTAG:
+
+The configuration item CONFIG_BOARD_CC2650_SENSORTAG:
+
+:Symbol:           BOARD_CC2650_SENSORTAG
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "TI CC2650 SensorTag" if SOC_CC2650 (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/cc2650_sensortag/Kconfig.board:6

@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: FLASH_LOAD_OFFSET
+
+.. option:: CONFIG_FLASH_LOAD_OFFSET
+.. _CONFIG_FLASH_LOAD_OFFSET:
+
+This option specifies the byte offset from the beginning of flash that
+the kernel should be loaded into. Changing this value from zero will
+affect the Zephyr image's link, and will decrease the total amount of
+flash available for use by application code.
+
+If unsure, leave at the default value 0.
+
+
+
+:Symbol:           FLASH_LOAD_OFFSET
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Kernel load offset" if HAS_FLASH_LOAD_OFFSET (value: "n")
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: HAS_FLASH_LOAD_OFFSET (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ !HAS_DTS (value: "n")
+:Locations:
+ * ../misc/Kconfig:19

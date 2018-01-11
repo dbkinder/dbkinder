@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: GPIO_ALTERA_NIOS2_OUTPUT
+
+.. option:: CONFIG_GPIO_ALTERA_NIOS2_OUTPUT
+.. _CONFIG_GPIO_ALTERA_NIOS2_OUTPUT:
+
+Build the driver to utilize PIO controller Output Port.
+
+
+
+:Symbol:           GPIO_ALTERA_NIOS2_OUTPUT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable driver for Altera Nios-II PIO Output Port"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_ALTERA_NIOS2 && GPIO (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.altera_nios2:21

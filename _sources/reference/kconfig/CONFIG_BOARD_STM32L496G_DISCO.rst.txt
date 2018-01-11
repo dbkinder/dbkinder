@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_STM32L496G_DISCO
+
+.. option:: CONFIG_BOARD_STM32L496G_DISCO
+.. _CONFIG_BOARD_STM32L496G_DISCO:
+
+The configuration item CONFIG_BOARD_STM32L496G_DISCO:
+
+:Symbol:           BOARD_STM32L496G_DISCO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "STM32L496G Discovery Development Board" if SOC_STM32L496XG (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/stm32l496g_disco/Kconfig.board:9

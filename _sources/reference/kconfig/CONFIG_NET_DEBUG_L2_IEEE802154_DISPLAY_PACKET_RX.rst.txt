@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: NET_DEBUG_L2_IEEE802154_DISPLAY_PACKET_RX
+
+.. option:: CONFIG_NET_DEBUG_L2_IEEE802154_DISPLAY_PACKET_RX
+.. _CONFIG_NET_DEBUG_L2_IEEE802154_DISPLAY_PACKET_RX:
+
+This will print-out received packets only.
+
+
+
+:Symbol:           NET_DEBUG_L2_IEEE802154_DISPLAY_PACKET_RX
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Print-out only RX packets"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && NET_L2_IEEE802154 && NET_DEBUG_L2_IEEE802154_DISPLAY_PACKET (value: "n")
+:Locations:
+ * ../subsys/net/ip/l2/ieee802154/Kconfig:49

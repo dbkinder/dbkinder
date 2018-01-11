@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_NUCLEO_L432KC
+
+.. option:: CONFIG_BOARD_NUCLEO_L432KC
+.. _CONFIG_BOARD_NUCLEO_L432KC:
+
+The configuration item CONFIG_BOARD_NUCLEO_L432KC:
+
+:Symbol:           BOARD_NUCLEO_L432KC
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Nucleo L432KC Development Board" if SOC_STM32L432XC (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/nucleo_l432kc/Kconfig.board:9

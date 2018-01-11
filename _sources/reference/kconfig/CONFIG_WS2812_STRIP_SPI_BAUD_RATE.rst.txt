@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: WS2812_STRIP_SPI_BAUD_RATE
+
+.. option:: CONFIG_WS2812_STRIP_SPI_BAUD_RATE
+.. _CONFIG_WS2812_STRIP_SPI_BAUD_RATE:
+
+SPI clock rate, in Hz, to use while driving the strip.
+The baud rate must be chosen carefully together with the
+WS2812_STRIP_SPI_ONE_FRAME and WS2812_STRIP_SPI_ZERO_FRAME
+values so that the transmitted frames meet the chipset
+pulse widths for one and zero bits. If unsure, keep the default,
+but enable SPI debug logging for your device and make sure the
+configuration is matched exactly at runtime.
+
+
+
+:Symbol:           WS2812_STRIP_SPI_BAUD_RATE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Baud rate to use to drive LED strip"
+:Default values:
+
+ *  5250000 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ WS2812_STRIP && LED_STRIP (value: "n")
+:Locations:
+ * ../drivers/led_strip/Kconfig.ws2812:44

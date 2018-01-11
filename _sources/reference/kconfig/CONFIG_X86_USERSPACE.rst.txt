@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: X86_USERSPACE
+
+.. option:: CONFIG_X86_USERSPACE
+.. _CONFIG_X86_USERSPACE:
+
+This option enables APIs to drop a thread's privileges down to ring 3,
+supporting user-level threads that are protected from each other and
+from crashing the kernel.
+
+
+
+:Symbol:           X86_USERSPACE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: USERSPACE (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_THREAD_STACK_INFO`
+ *  :option:`CONFIG_SET_GDT`
+ *  :option:`CONFIG_GDT_DYNAMIC`
+ *  :option:`CONFIG_X86_ENABLE_TSS`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ X86 (value: "y")
+:Locations:
+ * ../arch/x86/Kconfig:108

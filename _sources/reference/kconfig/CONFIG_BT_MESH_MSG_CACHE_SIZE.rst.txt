@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: BT_MESH_MSG_CACHE_SIZE
+
+.. option:: CONFIG_BT_MESH_MSG_CACHE_SIZE
+.. _CONFIG_BT_MESH_MSG_CACHE_SIZE:
+
+Number of messages that are cached for the network. This helps
+prevent unnecessary decryption operations and unnecessary
+relays. This option is similar to the replay protection list,
+but has a different purpose.
+
+
+
+:Symbol:           BT_MESH_MSG_CACHE_SIZE
+:Type:             int
+:Value:            "2"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [2, 65535]
+:Prompts:
+
+ *  "Network message cache size"
+:Default values:
+
+ *  10 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:142

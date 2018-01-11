@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: IEEE802154_MCR20A_SPI_FREQ
+
+.. option:: CONFIG_IEEE802154_MCR20A_SPI_FREQ
+.. _CONFIG_IEEE802154_MCR20A_SPI_FREQ:
+
+This option sets the SPI controller's frequency. Beware this value
+depends on the SPI controller being used and also on the system
+clock.
+
+
+
+:Symbol:           IEEE802154_MCR20A_SPI_FREQ
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SPI system frequency"
+:Default values:
+
+ *  4000000 (value: "n")
+ *   Condition: (none)
+ *  8000000 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (IEEE802154_MCR20A || IEEE802154_MCR20A_RAW) && BOARD_USB_KW24D512 (value: "n")
+:Locations:
+ * ../drivers/ieee802154/Kconfig.mcr20a:29
+ * ../boards/arm/usb_kw24d512/Kconfig.defconfig:126

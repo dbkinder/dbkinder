@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: NET_RPL_DAO_MAX_RETRANSMISSIONS
+
+.. option:: CONFIG_NET_RPL_DAO_MAX_RETRANSMISSIONS
+.. _CONFIG_NET_RPL_DAO_MAX_RETRANSMISSIONS:
+
+If NET_RPL_DAO_ACK enabled then node expects DAO ACK message from
+the parent. If DAO message is routed through different nodes, ACK
+may be lost. So retry sending DAO message for max number of trials.
+
+
+
+:Symbol:           NET_RPL_DAO_MAX_RETRANSMISSIONS
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 5]
+:Prompts:
+
+ *  "Max DAO retransmissions" if NET_RPL && NET_RPL_DAO_ACK (value: "n")
+:Default values:
+
+ *  4 (value: "n")
+ *   Condition: NET_RPL && NET_RPL_DAO_ACK (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && NET_RPL (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig.rpl:217

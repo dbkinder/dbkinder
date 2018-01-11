@@ -1,0 +1,78 @@
+:orphan:
+
+.. title:: I2C_0
+
+.. option:: CONFIG_I2C_0
+.. _CONFIG_I2C_0:
+
+The configuration item CONFIG_I2C_0:
+
+:Symbol:           I2C_0
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable I2C Port 0"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C && BOARD_EM_STARTERKIT && I2C_DW (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:216
+ * ../arch/x86/soc/intel_quark/quark_x1000/Kconfig.defconfig.series:76
+ * ../arch/x86/soc/intel_quark/quark_se/Kconfig.defconfig.series:80
+ * ../arch/x86/soc/intel_quark/quark_d2000/Kconfig.defconfig.series:113
+ * ../arch/arc/soc/quark_se_c1000_ss/Kconfig.defconfig:162
+ * ../boards/arm/hexiwear_k64/Kconfig.defconfig:78
+ * ../boards/arm/arduino_due/Kconfig.defconfig:36
+ * ../boards/arm/frdm_k64f/Kconfig.defconfig:78
+ * ../boards/arm/nrf51_vbluno51/Kconfig.defconfig:40
+ * ../boards/arm/bbc_microbit/Kconfig.defconfig:34
+ * ../boards/arm/usb_kw24d512/Kconfig.defconfig:77
+ * ../boards/arm/nrf52_vbluno52/Kconfig.defconfig:40
+ * ../boards/arm/frdm_kl25z/Kconfig.defconfig:78
+ * ../boards/arm/sam_e70_xplained/Kconfig.defconfig:59
+ * ../boards/arm/sam4s_xplained/Kconfig.defconfig:18
+ * ../boards/arc/em_starterkit/Kconfig.defconfig:80

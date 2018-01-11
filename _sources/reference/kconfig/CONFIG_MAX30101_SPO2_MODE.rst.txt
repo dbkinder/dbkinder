@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: MAX30101_SPO2_MODE
+
+.. option:: CONFIG_MAX30101_SPO2_MODE
+.. _CONFIG_MAX30101_SPO2_MODE:
+
+Set to operate in SpO2 mode. The red and IR LED channels are active.
+
+
+
+:Symbol:           MAX30101_SPO2_MODE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SpO2 mode"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MAX30101 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/max30101/Kconfig:71

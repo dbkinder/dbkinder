@@ -1,0 +1,897 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Kernel Event Logger &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="Logging" href="index.html"/>
+        <link rel="next" title="Networking" href="../networking/networking.html"/>
+        <link rel="prev" title="System Logging" href="system_log.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../subsystems.html">Subsystems</a> /
+      
+          <a href="index.html">Logging</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../subsystems.html">Subsystems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_library.html">Standard C Library</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Logging</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="system_log.html">System Logging</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Kernel Event Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../networking/networking.html">Networking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power_management.html">Power Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor.html">Sensor Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shell.html">Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usb/usb.html">USB device stack</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="kernel-event-logger">
+<span id="kernel-event-logger-v2"></span><h1>Kernel Event Logger<a class="headerlink" href="#kernel-event-logger" title="Permalink to this headline">¶</a></h1>
+<p>The kernel event logger records the occurrence of certain types of kernel
+events, allowing them to be subsequently extracted and reviewed.
+This capability can be helpful in profiling the operation of an application,
+either for debugging purposes or for optimizing the performance the application.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#concepts" id="id2">Concepts</a><ul>
+<li><a class="reference internal" href="#event-formats" id="id3">Event Formats</a></li>
+<li><a class="reference internal" href="#timestamps" id="id4">Timestamps</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#implementation" id="id5">Implementation</a><ul>
+<li><a class="reference internal" href="#retrieving-an-event" id="id6">Retrieving An Event</a></li>
+<li><a class="reference internal" href="#adding-a-custom-event-type" id="id7">Adding a Custom Event Type</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration-options" id="id8">Configuration Options</a></li>
+<li><a class="reference internal" href="#related-functions" id="id9">Related Functions</a></li>
+<li><a class="reference internal" href="#apis" id="id10">APIs</a><ul>
+<li><a class="reference internal" href="#event-logger" id="id11">Event Logger</a></li>
+<li><a class="reference internal" href="#id1" id="id12">Kernel Event Logger</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="concepts">
+<h2><a class="toc-backref" href="#id2">Concepts</a><a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<p>The kernel event logger does not exist unless it is configured for an
+application. The capacity of the kernel event logger is also configurable.
+By default, it has a ring buffer that can hold up to 128 32-bit words
+of event information.</p>
+<p>The kernel event logger is capable of recording the following predefined
+event types:</p>
+<ul class="simple">
+<li>Interrupts.</li>
+<li>Context switching of threads.</li>
+<li>Kernel sleep events (i.e. entering and exiting a low power state).</li>
+</ul>
+<p>The kernel event logger only records the predefined event types it has been
+configured to record. Each event type can be enabled independently.</p>
+<p>An application can also define and record custom event types.
+The information recorded for a custom event, and the times
+at which it is recorded, must be implemented by the application.</p>
+<p>All events recorded by the kernel event logger remain in its ring buffer
+until they are retrieved by the application for review and analysis. The
+retrieval and analysis logic must be implemented by the application.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">An application must retrieve the events recorded by the kernel event logger
+in a timely manner, otherwise new events will be dropped once the event
+logger’s ring buffer becomes full. A recommended approach is to use
+a cooperative thread to retrieve the events, either on a periodic basis
+or as its sole responsibility.</p>
+</div>
+<p>By default, the kernel event logger records all occurrences of all event types
+that have been enabled. However, it can also be configured to allow an
+application to dynamically start or stop the recording of events at any time,
+and to control which event types are being recorded. This permits
+the application to capture only the events that occur during times
+of particular interest, thereby reducing the work needed to analyze them.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The kernel event logger can also be instructed to ignore context switches
+involving a single specified thread. This can be used to avoid recording
+context switch events involving the thread that retrieves the events
+from the kernel event logger.</p>
+</div>
+<div class="section" id="event-formats">
+<h3><a class="toc-backref" href="#id3">Event Formats</a><a class="headerlink" href="#event-formats" title="Permalink to this headline">¶</a></h3>
+<p>Each event recorded by the kernel event logger consists of one or more
+32-bit words of data that describe the event.</p>
+<p>An <strong>interrupt event</strong> has the following format:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="p">{</span>
+    <span class="n">u32_t</span> <span class="n">timestamp</span><span class="p">;</span>        <span class="cm">/* time of interrupt */</span>
+    <span class="n">u32_t</span> <span class="n">interrupt_id</span><span class="p">;</span>     <span class="cm">/* ID of interrupt */</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>A <strong>context-switch event</strong> has the following format:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="p">{</span>
+    <span class="n">u32_t</span> <span class="n">timestamp</span><span class="p">;</span>        <span class="cm">/* time of context switch */</span>
+    <span class="n">u32_t</span> <span class="n">context_id</span><span class="p">;</span>       <span class="cm">/* ID of thread that was switched out */</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>A <strong>sleep event</strong> has the following format:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="p">{</span>
+    <span class="n">u32_t</span> <span class="n">sleep_timestamp</span><span class="p">;</span>  <span class="cm">/* time when CPU entered sleep mode */</span>
+    <span class="n">u32_t</span> <span class="n">wake_timestamp</span><span class="p">;</span>   <span class="cm">/* time when CPU exited sleep mode */</span>
+    <span class="n">u32_t</span> <span class="n">interrupt_id</span><span class="p">;</span>     <span class="cm">/* ID of interrupt that woke CPU */</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>A <strong>custom event</strong> must have a type ID that does not conflict with
+any existing predefined event type ID. The format of a custom event
+is application-defined, but must contain at least one 32-bit data word.
+A custom event may utilize a variable size, to allow different events
+of a single type to record differing amounts of information.</p>
+</div>
+<div class="section" id="timestamps">
+<h3><a class="toc-backref" href="#id4">Timestamps</a><a class="headerlink" href="#timestamps" title="Permalink to this headline">¶</a></h3>
+<p>By default, the timestamp recorded with each predefined event is obtained from
+the kernel’s <a class="reference internal" href="../../kernel/timing/clocks.html#clocks-v2"><span class="std std-ref">hardware clock</span></a>. This 32-bit clock counts up
+extremely rapidly, which means the timestamp value wraps around frequently.
+(For example, the Lakemont APIC timer for Quark SE wraps every 134 seconds.)
+This wraparound must be accounted for when analyzing kernel event logger data.
+In addition, care must be taken when tickless idle is enabled, in case a sleep
+duration exceeds 2^32 clock cycles.</p>
+<p>If desired, the kernel event logger can be configured to record
+a custom timestamp, rather than the default timestamp.
+The application registers the callback function that generates the custom 32-bit
+timestamp at run-time by calling <a class="reference internal" href="#_CPPv228sys_k_event_logger_set_timer18sys_k_timer_func_t" title="sys_k_event_logger_set_timer"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_set_timer()</span></code></a>.</p>
+</div>
+</div>
+<div class="section" id="implementation">
+<h2><a class="toc-backref" href="#id5">Implementation</a><a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="retrieving-an-event">
+<h3><a class="toc-backref" href="#id6">Retrieving An Event</a><a class="headerlink" href="#retrieving-an-event" title="Permalink to this headline">¶</a></h3>
+<p>An event can be retrieved from the kernel event logger in a blocking or
+non-blocking manner using the following APIs:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#_CPPv222sys_k_event_logger_getP5u16_tP4u8_tP5u32_tP4u8_t" title="sys_k_event_logger_get"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_get()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv227sys_k_event_logger_get_waitP5u16_tP4u8_tP5u32_tP4u8_t" title="sys_k_event_logger_get_wait"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_get_wait()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv235sys_k_event_logger_get_wait_timeoutP5u16_tP4u8_tP5u32_tP4u8_t5u32_t" title="sys_k_event_logger_get_wait_timeout"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_get_wait_timeout()</span></code></a></li>
+</ul>
+<p>In each case, the API also returns the type and size of the event, as well
+as the event information itself. The API also indicates how many events
+were dropped between the occurrence of the previous event and the retrieved
+event.</p>
+<p>The following code illustrates how a thread can retrieve the events
+recorded by the kernel event logger.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">u16_t</span> <span class="n">event_id</span><span class="p">;</span>
+<span class="n">u8_t</span>  <span class="n">dropped_count</span><span class="p">;</span>
+<span class="n">u32_t</span> <span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="n">u8_t</span>  <span class="n">data_size</span><span class="p">;</span>
+
+<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/* retrieve an event */</span>
+    <span class="n">data_size</span> <span class="o">=</span> <span class="n">SIZE32_OF</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">sys_k_event_logger_get_wait</span><span class="p">(</span><span class="o">&amp;</span><span class="n">event_id</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">dropped_count</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span>
+                                      <span class="o">&amp;</span><span class="n">data_size</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">dropped_count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="cm">/* ... Process the dropped events count ... */</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="cm">/* process the event */</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">event_id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="nl">KERNEL_EVENT_LOGGER_CONTEXT_SWITCH_EVENT_ID</span><span class="p">:</span>
+            <span class="cm">/* ... Process the context switch event ... */</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="nl">KERNEL_EVENT_LOGGER_INTERRUPT_EVENT_ID</span><span class="p">:</span>
+            <span class="cm">/* ... Process the interrupt event ... */</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="nl">KERNEL_EVENT_LOGGER_SLEEP_EVENT_ID</span><span class="p">:</span>
+            <span class="cm">/* ... Process the sleep event ... */</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">default</span><span class="o">:</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;unrecognized event id %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">event_id</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="o">-</span><span class="n">EMSGSIZE</span><span class="p">)</span> <span class="p">{</span>
+        <span class="cm">/* ... Data array is too small to hold the event! ... */</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-a-custom-event-type">
+<h3><a class="toc-backref" href="#id7">Adding a Custom Event Type</a><a class="headerlink" href="#adding-a-custom-event-type" title="Permalink to this headline">¶</a></h3>
+<p>A custom event type must use an integer type ID that does not duplicate
+an existing type ID. The type IDs for the predefined events can be found
+in <code class="file docutils literal"><span class="pre">include/logging/kernel_event_logger.h</span></code>. If dynamic recording of
+events is enabled, the event type ID must not exceed 32.</p>
+<p>Custom events can be written to the kernel event logger using the following
+APIs:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#_CPPv222sys_k_event_logger_put5u16_tP5u32_t4u8_t" title="sys_k_event_logger_put"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_put()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv228sys_k_event_logger_put_timed5u16_t" title="sys_k_event_logger_put_timed"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_put_timed()</span></code></a></li>
+</ul>
+<p>Both of these APIs record an event as long as there is room in the kernel
+event logger’s ring buffer. To enable dynamic recording of a custom event type,
+the application must first call <a class="reference internal" href="#_CPPv220sys_k_must_log_eventi" title="sys_k_must_log_event"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_must_log_event()</span></code></a> to determine
+if event recording is currently active for that event type.</p>
+<p>The following code illustrates how an application can write a custom
+event consisting of two 32-bit words to the kernel event logger.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#define MY_CUSTOM_EVENT_ID 8</span>
+
+<span class="cm">/* record custom event only if recording is currently wanted */</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">sys_k_must_log_event</span><span class="p">(</span><span class="n">MY_CUSTOM_EVENT_ID</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">u32_t</span> <span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+
+    <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">custom_data_1</span><span class="p">;</span>
+    <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">custom_data_2</span><span class="p">;</span>
+
+    <span class="n">sys_k_event_logger_put</span><span class="p">(</span><span class="n">MY_CUSTOM_EVENT_ID</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">ARRAY_SIZE</span><span class="p">(</span><span class="n">data</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The following code illustrates how an application can write a custom event
+that records just a timestamp using a single 32-bit word.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#define MY_CUSTOM_TIME_ONLY_EVENT_ID 9</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">sys_k_must_log_event</span><span class="p">(</span><span class="n">MY_CUSTOM_TIME_ONLY_EVENT_ID</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">sys_k_event_logger_put_timed</span><span class="p">(</span><span class="n">MY_CUSTOM_TIME_ONLY_EVENT_ID</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="configuration-options">
+<h2><a class="toc-backref" href="#id8">Configuration Options</a><a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h2>
+<p>Related configuration options:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../reference/kconfig/CONFIG_KERNEL_EVENT_LOGGER.html#cmdoption-arg-config-kernel-event-logger"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_KERNEL_EVENT_LOGGER</span></code></a></li>
+<li><a class="reference internal" href="../../reference/kconfig/CONFIG_KERNEL_EVENT_LOGGER_CONTEXT_SWITCH.html#cmdoption-arg-config-kernel-event-logger-context-switch"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_KERNEL_EVENT_LOGGER_CONTEXT_SWITCH</span></code></a></li>
+<li><a class="reference internal" href="../../reference/kconfig/CONFIG_KERNEL_EVENT_LOGGER_INTERRUPT.html#cmdoption-arg-config-kernel-event-logger-interrupt"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_KERNEL_EVENT_LOGGER_INTERRUPT</span></code></a></li>
+<li><a class="reference internal" href="../../reference/kconfig/CONFIG_KERNEL_EVENT_LOGGER_SLEEP.html#cmdoption-arg-config-kernel-event-logger-sleep"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_KERNEL_EVENT_LOGGER_SLEEP</span></code></a></li>
+<li><a class="reference internal" href="../../reference/kconfig/CONFIG_KERNEL_EVENT_LOGGER_BUFFER_SIZE.html#cmdoption-arg-config-kernel-event-logger-buffer-size"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_KERNEL_EVENT_LOGGER_BUFFER_SIZE</span></code></a></li>
+<li><a class="reference internal" href="../../reference/kconfig/CONFIG_KERNEL_EVENT_LOGGER_DYNAMIC.html#cmdoption-arg-config-kernel-event-logger-dynamic"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_KERNEL_EVENT_LOGGER_DYNAMIC</span></code></a></li>
+<li><a class="reference internal" href="../../reference/kconfig/CONFIG_KERNEL_EVENT_LOGGER_CUSTOM_TIMESTAMP.html#cmdoption-arg-config-kernel-event-logger-custom-timestamp"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_KERNEL_EVENT_LOGGER_CUSTOM_TIMESTAMP</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="related-functions">
+<h2><a class="toc-backref" href="#id9">Related Functions</a><a class="headerlink" href="#related-functions" title="Permalink to this headline">¶</a></h2>
+<p>The following kernel event logger APIs are provided by
+<code class="file docutils literal"><span class="pre">kernel_event_logger.h</span></code>:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#_CPPv240sys_k_event_logger_register_as_collectorv" title="sys_k_event_logger_register_as_collector"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_register_as_collector()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv222sys_k_event_logger_getP5u16_tP4u8_tP5u32_tP4u8_t" title="sys_k_event_logger_get"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_get()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv227sys_k_event_logger_get_waitP5u16_tP4u8_tP5u32_tP4u8_t" title="sys_k_event_logger_get_wait"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_get_wait()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv235sys_k_event_logger_get_wait_timeoutP5u16_tP4u8_tP5u32_tP4u8_t5u32_t" title="sys_k_event_logger_get_wait_timeout"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_get_wait_timeout()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv220sys_k_must_log_eventi" title="sys_k_must_log_event"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_must_log_event()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv222sys_k_event_logger_put5u16_tP5u32_t4u8_t" title="sys_k_event_logger_put"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_put()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv228sys_k_event_logger_put_timed5u16_t" title="sys_k_event_logger_put_timed"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_put_timed()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv227sys_k_event_logger_get_maskv" title="sys_k_event_logger_get_mask"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_get_mask()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv227sys_k_event_logger_set_maski" title="sys_k_event_logger_set_mask"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_set_mask()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv228sys_k_event_logger_set_timer18sys_k_timer_func_t" title="sys_k_event_logger_set_timer"><code class="xref cpp cpp-func docutils literal"><span class="pre">sys_k_event_logger_set_timer()</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="apis">
+<h2><a class="toc-backref" href="#id10">APIs</a><a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="event-logger">
+<h3><a class="toc-backref" href="#id11">Event Logger</a><a class="headerlink" href="#event-logger" title="Permalink to this headline">¶</a></h3>
+<p>An event logger is an object that can record the occurrence of significant
+events, which can be subsequently extracted and reviewed.</p>
+<dl class="group">
+<dt>
+<span class="target" id="d7/d6f/group__event__logger"></span><em>group</em> <code class="descname">event_logger</code></dt>
+<dd><p>Event Logger. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv221sys_event_logger_initP12event_loggerP5u32_t5u32_t">
+<span id="sys_event_logger_init__event_loggerP.u32_tP.u32_t"></span><span class="target" id="d7/d6f/group__event__logger_1ga225168d7139ffc71ad2313c00f4ef5fc"></span>void <code class="descname">sys_event_logger_init</code><span class="sig-paren">(</span><em class="property">struct</em> event_logger *<em>logger</em>, u32_t *<em>logger_buffer</em>, u32_t <em>buffer_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv221sys_event_logger_initP12event_loggerP5u32_t5u32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize the event logger. </p>
+<p>This routine initializes the ring buffer.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>N/A </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">logger</span></code>: Logger to be initialized. </li>
+<li><code class="docutils literal"><span class="pre">logger_buffer</span></code>: Pointer to the buffer to be used by the logger. </li>
+<li><code class="docutils literal"><span class="pre">buffer_size</span></code>: Size of the buffer in 32-bit words.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv220sys_event_logger_putP12event_logger5u16_tP5u32_t4u8_t">
+<span id="sys_event_logger_put__event_loggerP.u16_t.u32_tP.u8_t"></span><span class="target" id="d7/d6f/group__event__logger_1gaab63662665fa97f910ec9054cd5d4b98"></span>void <code class="descname">sys_event_logger_put</code><span class="sig-paren">(</span><em class="property">struct</em> event_logger *<em>logger</em>, u16_t <em>event_id</em>, u32_t *<em>event_data</em>, u8_t <em>data_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sys_event_logger_putP12event_logger5u16_tP5u32_t4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Send an event message to the logger. </p>
+<p>This routine adds an event message to the ring buffer and signals the sync semaphore to indicate that event messages are available.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>N/A </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">logger</span></code>: Pointer to the event logger used. </li>
+<li><code class="docutils literal"><span class="pre">event_id</span></code>: The profiler event’s ID. </li>
+<li><code class="docutils literal"><span class="pre">event_data</span></code>: Pointer to the data of the message. </li>
+<li><code class="docutils literal"><span class="pre">data_size</span></code>: Size of the buffer in 32-bit words.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv220sys_event_logger_getP12event_loggerP5u16_tP4u8_tP5u32_tP4u8_t">
+<span id="sys_event_logger_get__event_loggerP.u16_tP.u8_tP.u32_tP.u8_tP"></span><span class="target" id="d7/d6f/group__event__logger_1ga9dd1536be164b7a809df8289b70f13c1"></span>int <code class="descname">sys_event_logger_get</code><span class="sig-paren">(</span><em class="property">struct</em> event_logger *<em>logger</em>, u16_t *<em>event_id</em>, u8_t *<em>dropped_event_count</em>, u32_t *<em>buffer</em>, u8_t *<em>buffer_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sys_event_logger_getP12event_loggerP5u16_tP4u8_tP5u32_tP4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieve an event message from the logger. </p>
+<p>This routine retrieves an event message from the ring buffer and copies it to the provided buffer. If the provided buffer is smaller than the message size the function returns -EMSGSIZE. Otherwise, it returns the number of 32-bit words copied. The function retrieves messages in FIFO order. If there is no message in the buffer the function returns immediately. It can only be called from a thread.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">logger</span></code>: Pointer to the event logger used. </li>
+<li><code class="docutils literal"><span class="pre">event_id</span></code>: Pointer to the id of the fetched event. </li>
+<li><code class="docutils literal"><span class="pre">dropped_event_count</span></code>: Pointer to the number of events dropped. </li>
+<li><code class="docutils literal"><span class="pre">buffer</span></code>: Pointer to the buffer for the copied message. </li>
+<li><code class="docutils literal"><span class="pre">buffer_size</span></code>: Size of the buffer in 32-bit words. Updated with the actual message’s size.</li>
+</ul>
+</dd>
+<dt><strong>Return Value</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">EMSGSIZE</span></code>: If the buffer size is smaller than the message size. </li>
+<li><code class="docutils literal"><span class="pre">Number</span></code>: of 32-bit words copied. </li>
+<li><code class="docutils literal"><span class="pre">0</span></code>: If no message was already available. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv225sys_event_logger_get_waitP12event_loggerP5u16_tP4u8_tP5u32_tP4u8_t">
+<span id="sys_event_logger_get_wait__event_loggerP.u16_tP.u8_tP.u32_tP.u8_tP"></span><span class="target" id="d7/d6f/group__event__logger_1ga39978355023f415a88b727f95ec7f072"></span>int <code class="descname">sys_event_logger_get_wait</code><span class="sig-paren">(</span><em class="property">struct</em> event_logger *<em>logger</em>, u16_t *<em>event_id</em>, u8_t *<em>dropped_event_count</em>, u32_t *<em>buffer</em>, u8_t *<em>buffer_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv225sys_event_logger_get_waitP12event_loggerP5u16_tP4u8_tP5u32_tP4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieve an event message from the logger, wait if empty. </p>
+<p>This routine retrieves an event message from the ring buffer and copies it to the provided buffer. If the provided buffer is smaller than the message size the function returns -EMSGSIZE. Otherwise, it returns the number of 32-bit words copied.</p>
+<p>The function retrieves messages in FIFO order. The caller pends if there is no message available in the buffer. It can only be called from a thread.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">logger</span></code>: Pointer to the event logger used. </li>
+<li><code class="docutils literal"><span class="pre">event_id</span></code>: Pointer to the ID of the fetched event. </li>
+<li><code class="docutils literal"><span class="pre">dropped_event_count</span></code>: Pointer to the number of dropped events. </li>
+<li><code class="docutils literal"><span class="pre">buffer</span></code>: Pointer to the buffer for the copied messages. </li>
+<li><code class="docutils literal"><span class="pre">buffer_size</span></code>: Size of the buffer in 32-bit words. Updated with the actual message’s size.</li>
+</ul>
+</dd>
+<dt><strong>Return Value</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">EMSGSIZE</span></code>: If the buffer size is smaller than the message size. </li>
+<li><code class="docutils literal"><span class="pre">Number</span></code>: of DWORDs copied, otherwise. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv233sys_event_logger_get_wait_timeoutP12event_loggerP5u16_tP4u8_tP5u32_tP4u8_t5u32_t">
+<span id="sys_event_logger_get_wait_timeout__event_loggerP.u16_tP.u8_tP.u32_tP.u8_tP.u32_t"></span><span class="target" id="d7/d6f/group__event__logger_1ga34d89140d9eb71a569745cefbaeff0ea"></span>int <code class="descname">sys_event_logger_get_wait_timeout</code><span class="sig-paren">(</span><em class="property">struct</em> event_logger *<em>logger</em>, u16_t *<em>event_id</em>, u8_t *<em>dropped_event_count</em>, u32_t *<em>buffer</em>, u8_t *<em>buffer_size</em>, u32_t <em>timeout</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv233sys_event_logger_get_wait_timeoutP12event_loggerP5u16_tP4u8_tP5u32_tP4u8_t5u32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieve an event message from the logger, wait with a timeout if empty. </p>
+<p>This routine retrieves an event message from the ring buffer and copies it to the provided buffer. If the provided buffer is smaller than the message size the routine returns -EMSGSIZE. Otherwise, it returns the number of dwords copied. The function retrieves messages in FIFO order. If no message is available in the buffer, the caller pends until a new message is added or the timeout expires. This routine can only be called from a thread.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">logger</span></code>: Pointer to the event logger used. </li>
+<li><code class="docutils literal"><span class="pre">event_id</span></code>: Pointer to the ID of the event fetched. </li>
+<li><code class="docutils literal"><span class="pre">dropped_event_count</span></code>: Pointer to the number of dropped events. </li>
+<li><code class="docutils literal"><span class="pre">buffer</span></code>: Pointer to the buffer for the copied message. </li>
+<li><code class="docutils literal"><span class="pre">buffer_size</span></code>: Size of the buffer in 32-bit words. Updated with the actual message size. </li>
+<li><code class="docutils literal"><span class="pre">timeout</span></code>: Timeout in ticks.</li>
+</ul>
+</dd>
+<dt><strong>Return Value</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">EMSGSIZE</span></code>: if the buffer size is smaller than the message size. </li>
+<li><code class="docutils literal"><span class="pre">Number</span></code>: of 32-bit words copied. </li>
+<li><code class="docutils literal"><span class="pre">0</span></code>: If the timeout expired and there was no message already available. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="id1">
+<h3><a class="toc-backref" href="#id12">Kernel Event Logger</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The kernel event logger records the occurrence of significant kernel events,
+which can be subsequently extracted and reviewed.
+(See <a class="reference internal" href="#kernel-event-logger-v2"><span class="std std-ref">Kernel Event Logger</span></a>.)</p>
+<dl class="group">
+<dt>
+<span class="target" id="de/d8d/group__kernel__event__logger"></span><em>group</em> <code class="descname">kernel_event_logger</code></dt>
+<dd><p>Kernel Event Logger. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv218sys_k_timer_func_t">
+<span id="sys_k_timer_func_t"></span><span class="target" id="de/d8d/group__kernel__event__logger_1gaf825b8f89458c62d7aa570ab3e9956fb"></span><em class="property">typedef </em><code class="descname">sys_k_timer_func_t</code><a class="headerlink" href="#_CPPv218sys_k_timer_func_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Event timestamp generator function type. </p>
+<p>A timestamp generator function is executed when the kernel event logger generates an event containing a timestamp.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Timestamp value (application-defined). </dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv228sys_k_event_logger_set_timer18sys_k_timer_func_t">
+<span id="sys_k_event_logger_set_timer__sys_k_timer_func_t"></span><span class="target" id="de/d8d/group__kernel__event__logger_1ga4cf29f94d244192acbd510398ea43ab8"></span><em class="property">static</em> void <code class="descname">sys_k_event_logger_set_timer</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv218sys_k_timer_func_t" title="sys_k_timer_func_t">sys_k_timer_func_t</a> <em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv228sys_k_event_logger_set_timer18sys_k_timer_func_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set kernel event logger timestamp function. </p>
+<p>This routine instructs the kernel event logger to call <em>func</em> whenever it needs to generate an event timestamp. By default, the kernel’s hardware timer is used.</p>
+<p><dl class="docutils">
+<dt><strong>Note</strong></dt>
+<dd>On some boards the hardware timer is not a pure hardware up counter, which can lead to timestamp errors. For example, boards using the LOAPIC timer can run it in periodic mode, which requires software to update a count of accumulated cycles each time the timer hardware resets itself to zero. This can result in an incorrect timestamp being generated if it occurs after the timer hardware has reset but before the timer ISR has updated accumulated cycle count.</dd>
+<dt><strong>Return</strong></dt>
+<dd>N/A </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">func</span></code>: Address of timestamp function to be used.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv227sys_k_event_logger_set_maski">
+<span id="sys_k_event_logger_set_mask__i"></span><span class="target" id="de/d8d/group__kernel__event__logger_1ga539cc859defb493c69de297fc9f9ac9f"></span><em class="property">static</em> void <code class="descname">sys_k_event_logger_set_mask</code><span class="sig-paren">(</span>int <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv227sys_k_event_logger_set_maski" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set kernel event logger filtering mask. </p>
+<p>This routine specifies which events are recorded by the kernel event logger. It can only be used when dynamic event logging has been configured.</p>
+<p>Each mask bit corresponds to a kernel event type. The least significant mask bit corresponds to event type 1, the next bit to event type 2, and so on.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>N/A </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">value</span></code>: Bitmask indicating events to be recorded.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv227sys_k_event_logger_get_maskv">
+<span id="sys_k_event_logger_get_mask__void"></span><span class="target" id="de/d8d/group__kernel__event__logger_1ga7e7732eb77d3b88a60f6af3cf4c85b67"></span><em class="property">static</em> int <code class="descname">sys_k_event_logger_get_mask</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv227sys_k_event_logger_get_maskv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get kernel event logger filtering mask. </p>
+<p>This routine indicates which events are currently being recorded by the kernel event logger. It can only be used when dynamic event logging has been configured. By default, no events are recorded.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Bitmask indicating events that are being recorded. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv220sys_k_must_log_eventi">
+<span id="sys_k_must_log_event__i"></span><span class="target" id="de/d8d/group__kernel__event__logger_1ga7be46969bbf12a57f6fd35d0b54cf33f"></span><em class="property">static</em> int <code class="descname">sys_k_must_log_event</code><span class="sig-paren">(</span>int <em>event_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sys_k_must_log_eventi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Indicate if an event type is currently being recorded. </p>
+<p>This routine indicates if event type <em>event_type</em> should be recorded by the kernel event logger when the event occurs. The routine should be used by code that writes an event to the kernel event logger to ensure that only events of interest to the application are recorded.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>1 if event should be recorded, or 0 if not. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">event_type</span></code>: Event ID.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv222sys_k_event_logger_put5u16_tP5u32_t4u8_t">
+<span id="sys_k_event_logger_put__u16_t.u32_tP.u8_t"></span><span class="target" id="de/d8d/group__kernel__event__logger_1ga95dae9de46061f10f973925e4a8a5794"></span><em class="property">static</em> void <code class="descname">sys_k_event_logger_put</code><span class="sig-paren">(</span>u16_t <em>event_id</em>, u32_t *<em>event_data</em>, u8_t <em>data_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv222sys_k_event_logger_put5u16_tP5u32_t4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write an event to the kernel event logger. </p>
+<p>This routine writes an event message to the kernel event logger.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>N/A </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">event_id</span></code>: Event ID. </li>
+<li><code class="docutils literal"><span class="pre">event_data</span></code>: Address of event data. </li>
+<li><code class="docutils literal"><span class="pre">data_size</span></code>: Size of event data (number of 32-bit words).</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv228sys_k_event_logger_put_timed5u16_t">
+<span id="sys_k_event_logger_put_timed__u16_t"></span><span class="target" id="de/d8d/group__kernel__event__logger_1ga336c98a9deb293879488fef995a85b97"></span>void <code class="descname">sys_k_event_logger_put_timed</code><span class="sig-paren">(</span>u16_t <em>event_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv228sys_k_event_logger_put_timed5u16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write an event to the kernel event logger (with timestamp only). </p>
+<p>This routine writes an event message to the kernel event logger. The event records a single 32-bit word containing a timestamp.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>N/A </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">event_id</span></code>: Event ID.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv222sys_k_event_logger_getP5u16_tP4u8_tP5u32_tP4u8_t">
+<span id="sys_k_event_logger_get__u16_tP.u8_tP.u32_tP.u8_tP"></span><span class="target" id="de/d8d/group__kernel__event__logger_1gade26fe1ce2551eb97f215ef7c1afdba6"></span><em class="property">static</em> int <code class="descname">sys_k_event_logger_get</code><span class="sig-paren">(</span>u16_t *<em>event_id</em>, u8_t *<em>dropped</em>, u32_t *<em>event_data</em>, u8_t *<em>data_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv222sys_k_event_logger_getP5u16_tP4u8_tP5u32_tP4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieves a kernel event message, or returns without waiting. </p>
+<p>This routine retrieves the next recorded event from the kernel event logger, or returns immediately if no such event exists.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">event_id</span></code>: Area to store event type ID. </li>
+<li><code class="docutils literal"><span class="pre">dropped</span></code>: Area to store number of events that were dropped between the previous event and the retrieved event. </li>
+<li><code class="docutils literal"><span class="pre">event_data</span></code>: Buffer to store event data. </li>
+<li><code class="docutils literal"><span class="pre">data_size</span></code>: Size of event data buffer (number of 32-bit words).</li>
+</ul>
+</dd>
+<dt><strong>Return Value</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">positive_integer</span></code>: Number of event data words retrieved; <em>event_id</em>, <em>dropped</em>, and <em>buffer</em> have been updated. </li>
+<li><code class="docutils literal"><span class="pre">0</span></code>: Returned without waiting; no event was retrieved. </li>
+<li><code class="docutils literal"><span class="pre">-EMSGSIZE</span></code>: Buffer too small; <em>data_size</em> now indicates the size of the event to be retrieved. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv227sys_k_event_logger_get_waitP5u16_tP4u8_tP5u32_tP4u8_t">
+<span id="sys_k_event_logger_get_wait__u16_tP.u8_tP.u32_tP.u8_tP"></span><span class="target" id="de/d8d/group__kernel__event__logger_1ga9e93292b3e51cc150c690108cbad13b2"></span><em class="property">static</em> int <code class="descname">sys_k_event_logger_get_wait</code><span class="sig-paren">(</span>u16_t *<em>event_id</em>, u8_t *<em>dropped</em>, u32_t *<em>event_data</em>, u8_t *<em>data_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv227sys_k_event_logger_get_waitP5u16_tP4u8_tP5u32_tP4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieves a kernel event message. </p>
+<p>This routine retrieves the next recorded event from the kernel event logger. If there is no such event the caller pends until it is available.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">event_id</span></code>: Area to store event type ID. </li>
+<li><code class="docutils literal"><span class="pre">dropped</span></code>: Area to store number of events that were dropped between the previous event and the retrieved event. </li>
+<li><code class="docutils literal"><span class="pre">event_data</span></code>: Buffer to store event data. </li>
+<li><code class="docutils literal"><span class="pre">data_size</span></code>: Size of event data buffer (number of 32-bit words).</li>
+</ul>
+</dd>
+<dt><strong>Return Value</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">positive_integer</span></code>: Number of event data words retrieved; <em>event_id</em>, <em>dropped</em>, and <em>buffer</em> have been updated. </li>
+<li><code class="docutils literal"><span class="pre">-EMSGSIZE</span></code>: Buffer too small; <em>data_size</em> now indicates the size of the event to be retrieved. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv235sys_k_event_logger_get_wait_timeoutP5u16_tP4u8_tP5u32_tP4u8_t5u32_t">
+<span id="sys_k_event_logger_get_wait_timeout__u16_tP.u8_tP.u32_tP.u8_tP.u32_t"></span><span class="target" id="de/d8d/group__kernel__event__logger_1ga81a3020aa7af786bad310aaea79ebe3c"></span><em class="property">static</em> int <code class="descname">sys_k_event_logger_get_wait_timeout</code><span class="sig-paren">(</span>u16_t *<em>event_id</em>, u8_t *<em>dropped</em>, u32_t *<em>event_data</em>, u8_t *<em>data_size</em>, u32_t <em>timeout</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv235sys_k_event_logger_get_wait_timeoutP5u16_tP4u8_tP5u32_tP4u8_t5u32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieves a kernel event message, or waits for a specified time. </p>
+<p>This routine retrieves the next recorded event from the kernel event logger. If there is no such event the caller pends until it is available or until the specified timeout expires.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">event_id</span></code>: Area to store event type ID. </li>
+<li><code class="docutils literal"><span class="pre">dropped</span></code>: Area to store number of events that were dropped between the previous event and the retrieved event. </li>
+<li><code class="docutils literal"><span class="pre">event_data</span></code>: Buffer to store event data. </li>
+<li><code class="docutils literal"><span class="pre">data_size</span></code>: Size of event data buffer (number of 32-bit words). </li>
+<li><code class="docutils literal"><span class="pre">timeout</span></code>: Timeout in system clock ticks.</li>
+</ul>
+</dd>
+<dt><strong>Return Value</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">positive_integer</span></code>: Number of event data words retrieved; <em>event_id</em>, <em>dropped</em>, and <em>buffer</em> have been updated. </li>
+<li><code class="docutils literal"><span class="pre">0</span></code>: Waiting period timed out; no event was retrieved. </li>
+<li><code class="docutils literal"><span class="pre">-EMSGSIZE</span></code>: Buffer too small; <em>data_size</em> now indicates the size of the event to be retrieved. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv240sys_k_event_logger_register_as_collectorv">
+<span id="sys_k_event_logger_register_as_collector__void"></span><span class="target" id="de/d8d/group__kernel__event__logger_1gadb106e6cc1deb7e722d77fe6b3ec4cc4"></span><em class="property">static</em> void <code class="descname">sys_k_event_logger_register_as_collector</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv240sys_k_event_logger_register_as_collectorv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register thread that retrieves kernel events. </p>
+<p>This routine instructs the kernel event logger not to record context switch events for the calling thread. It is typically called by the thread that retrieves events from the kernel event logger.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>N/A </dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../networking/networking.html" class="btn btn-neutral float-right" title="Networking" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="system_log.html" class="btn btn-neutral" title="System Logging" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

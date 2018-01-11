@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: BMM150
+
+.. option:: CONFIG_BMM150
+.. _CONFIG_BMM150:
+
+Enable driver for BMM150 I2C-based Geomagnetic sensor.
+
+
+:Symbol:           BMM150
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "BMM150 I2C Geomagnetic Chip" if I2C (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: I2C (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/bmm150/Kconfig:9

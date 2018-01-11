@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: BT_BROADCASTER
+
+.. option:: CONFIG_BT_BROADCASTER
+.. _CONFIG_BT_BROADCASTER:
+
+Select this for LE Broadcaster role support.
+
+
+
+:Symbol:           BT_BROADCASTER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Broadcaster Role support" if !BT_PERIPHERAL (value: "y")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: !BT_OBSERVER (value: "y")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BT_HCI && BT && BT_PERIPHERAL (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT (value: "n")
+:Locations:
+ * ../subsys/bluetooth/Kconfig:65

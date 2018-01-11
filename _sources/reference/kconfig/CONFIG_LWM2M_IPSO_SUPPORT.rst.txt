@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: LWM2M_IPSO_SUPPORT
+
+.. option:: CONFIG_LWM2M_IPSO_SUPPORT
+.. _CONFIG_LWM2M_IPSO_SUPPORT:
+
+This option adds general support for IPSO objects
+
+
+
+:Symbol:           LWM2M_IPSO_SUPPORT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "IPSO Alliance Smart Object Support" if LWM2M (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: LWM2M (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig.ipso:7

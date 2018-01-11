@@ -1,0 +1,49 @@
+:orphan:
+
+.. title:: BT_RX_STACK_SIZE
+
+.. option:: CONFIG_BT_RX_STACK_SIZE
+.. _CONFIG_BT_RX_STACK_SIZE:
+
+Size of the receiving thread stack. This is the context from
+which all event callbacks to the application occur. The
+default value is sufficient for basic operation, but if the
+application needs to do advanced things in its callbacks that
+require extra stack space, this value can be increased to
+accommodate for that.
+
+
+
+:Symbol:           BT_RX_STACK_SIZE
+:Type:             int
+:Value:            "1024"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [512, 65536] if BT_HCI_RAW (value: "n")
+ *  [1100, 65536] if BT_MESH (value: "n")
+ *  [1024, 65536]
+:Prompts:
+
+ *  "Size of the receiving thread stack" if BT_HCI_HOST || BT_RECV_IS_RX_THREAD (value: "n")
+:Default values:
+
+ *  1024 (value: "n")
+ *   Condition: BT_HCI_HOST || BT_RECV_IS_RX_THREAD (value: "n")
+ *  2048 (value: "n")
+ *   Condition: BT_MESH && (BT_HCI_HOST || BT_RECV_IS_RX_THREAD) (value: "n")
+ *  512 (value: "n")
+ *   Condition: BT_HCI_RAW && (BT_HCI_HOST || BT_RECV_IS_RX_THREAD) (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:94

@@ -1,0 +1,63 @@
+:orphan:
+
+.. title:: I2C_1
+
+.. option:: CONFIG_I2C_1
+.. _CONFIG_I2C_1:
+
+The configuration item CONFIG_I2C_1:
+
+:Symbol:           I2C_1
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable I2C Port 1"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ I2C && SOC_STM32F401XE && BOARD_96B_CARBON || I2C && SOC_STM32F401XE && BOARD_NUCLEO_F401RE || I2C && SOC_STM32F303XC && BOARD_STM32F3_DISCO (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ I2C && BOARD_EM_STARTERKIT && I2C_DW (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:242
+ * ../arch/x86/soc/intel_quark/quark_se/Kconfig.defconfig.series:92
+ * ../arch/arc/soc/quark_se_c1000_ss/Kconfig.defconfig:174
+ * ../boards/arm/hexiwear_k64/Kconfig.defconfig:81
+ * ../boards/arm/arduino_due/Kconfig.defconfig:39
+ * ../boards/arm/disco_l475_iot1/Kconfig.defconfig:51
+ * ../boards/arm/frdm_kw41z/Kconfig.defconfig:60
+ * ../boards/arm/frdm_k64f/Kconfig.defconfig:81
+ * ../boards/arm/usb_kw24d512/Kconfig.defconfig:80
+ * ../boards/arm/hexiwear_kw40z/Kconfig.defconfig:57
+ * ../boards/arc/em_starterkit/Kconfig.defconfig:94

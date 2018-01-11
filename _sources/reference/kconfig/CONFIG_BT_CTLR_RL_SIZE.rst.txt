@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: BT_CTLR_RL_SIZE
+
+.. option:: CONFIG_BT_CTLR_RL_SIZE
+.. _CONFIG_BT_CTLR_RL_SIZE:
+
+Set the size of the Resolving List for LE Controller-based Privacy.
+On nRF5x-based controllers, the hardware imposes a limit of 8 devices.
+
+
+
+:Symbol:           BT_CTLR_RL_SIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 8] if SOC_FAMILY_NRF5 (value: "n")
+:Prompts:
+
+ *  "LE Controller-based Privacy Resolving List size" if BT_CTLR_PRIVACY (value: "n")
+:Default values:
+
+ *  8 (value: "n")
+ *   Condition: BT_CTLR_PRIVACY (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR && BT_CONN (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:148

@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: LWM2M_DEVICE_ERROR_CODE_MAX
+
+.. option:: CONFIG_LWM2M_DEVICE_ERROR_CODE_MAX
+.. _CONFIG_LWM2M_DEVICE_ERROR_CODE_MAX:
+
+This value sets the maximum number of error codes that the device
+object will store before ignoring new values.
+
+
+
+:Symbol:           LWM2M_DEVICE_ERROR_CODE_MAX
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 20]
+:Prompts:
+
+ *  "Maximum # of device obj error codes to store"
+:Default values:
+
+ *  10 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:174

@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: BMM150_SAMPLING_REP_Z
+
+.. option:: CONFIG_BMM150_SAMPLING_REP_Z
+.. _CONFIG_BMM150_SAMPLING_REP_Z:
+
+Enable alteration of Z oversampling at runtime.
+
+
+
+:Symbol:           BMM150_SAMPLING_REP_Z
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable dynamic Z oversampling"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BMM150 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/bmm150/Kconfig:68

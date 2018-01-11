@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: LPD880X_STRIP_SPI_BAUD_RATE
+
+.. option:: CONFIG_LPD880X_STRIP_SPI_BAUD_RATE
+.. _CONFIG_LPD880X_STRIP_SPI_BAUD_RATE:
+
+SPI clock rate, in Hz, to use while driving the strip.
+The recommended maximum is 2 MHz (2000000); the absolute maximum
+is 20 MHz (20000000). If unsure, accept the default value.
+
+
+
+:Symbol:           LPD880X_STRIP_SPI_BAUD_RATE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Strip clock line frequency"
+:Default values:
+
+ *  2000000 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LPD880X_STRIP && LED_STRIP (value: "n")
+:Locations:
+ * ../drivers/led_strip/Kconfig.lpd880x:39

@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: FXAS21002_RANGE
+
+.. option:: CONFIG_FXAS21002_RANGE
+.. _CONFIG_FXAS21002_RANGE:
+
+Selects the full scale range
+0: +/-2000 dps (62.5 mdps/LSB)
+1: +/-1000 dps (31.25 mdps/LSB)
+2: +/-500 dps (15.625 mdps/LSB)
+3: +/-250 dps (7.8125 mdps/LSB)
+
+
+
+:Symbol:           FXAS21002_RANGE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 3]
+:Prompts:
+
+ *  "Full scale range"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FXAS21002 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/fxas21002/Kconfig:43

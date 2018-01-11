@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_L2_IEEE802154_RADIO_DFLT_TX_POWER
+
+.. option:: CONFIG_NET_L2_IEEE802154_RADIO_DFLT_TX_POWER
+.. _CONFIG_NET_L2_IEEE802154_RADIO_DFLT_TX_POWER:
+
+TX power in dbm. Valid setting are: -18, -7, -4, -2, 0, 1, 2, 3, 5
+If wrongly set, it will silently fail.
+
+
+
+:Symbol:           NET_L2_IEEE802154_RADIO_DFLT_TX_POWER
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Default radio transmission power"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && NET_L2_IEEE802154 (value: "n")
+:Locations:
+ * ../subsys/net/ip/l2/ieee802154/Kconfig.radio:9

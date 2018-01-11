@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: AMG88XX
+
+.. option:: CONFIG_AMG88XX
+.. _CONFIG_AMG88XX:
+
+Enable driver for AMG88XX infrared thermopile sensor.
+
+
+
+:Symbol:           AMG88XX
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "AMG88XX Infrared Thermopile Sensor" if I2C (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: I2C (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/amg88xx/Kconfig:9

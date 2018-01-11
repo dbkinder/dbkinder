@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_L2_IEEE802154_SECURITY
+
+.. option:: CONFIG_NET_L2_IEEE802154_SECURITY
+.. _CONFIG_NET_L2_IEEE802154_SECURITY:
+
+Enable 802.15.4 frame security handling, in order to bring data
+confidentiality and authenticity.
+
+
+
+:Symbol:           NET_L2_IEEE802154_SECURITY
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable IEEE 802.15.4 security [EXPERIMENTAL]"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && NET_L2_IEEE802154 (value: "n")
+:Locations:
+ * ../subsys/net/ip/l2/ieee802154/Kconfig:129

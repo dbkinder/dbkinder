@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: SPIM1_NRF52_ORC
+
+.. option:: CONFIG_SPIM1_NRF52_ORC
+.. _CONFIG_SPIM1_NRF52_ORC:
+
+This option configures what value to send when the TX char count is
+less than the RX count.
+
+
+
+:Symbol:           SPIM1_NRF52_ORC
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0x00, 0xff]
+:Prompts:
+
+ *  "Over Read Character"
+:Default values:
+
+ *  0x00 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SPI_1 && !I2C_1 && SPI_LEGACY_API && SPI && SPI_NRF5 && SPIM1_NRF52 (value: "n")
+:Locations:
+ * ../drivers/spi/Kconfig.nrf5_legacy:219

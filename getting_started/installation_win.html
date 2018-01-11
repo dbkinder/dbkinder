@@ -1,0 +1,494 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Development Environment Setup on Windows &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="Getting Started Guide" href="getting_started.html"/>
+        <link rel="next" title="Contributing to the Zephyr Project" href="../contribute/contribute.html"/>
+        <link rel="prev" title="Development Environment Setup on macOS" href="installation_mac.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+          <a href="getting_started.html">Getting Started Guide</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#checking-out-the-source-code-anonymously">Checking Out the Source Code Anonymously</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="getting_started.html#set-up-the-development-environment">Set Up the Development Environment</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="installation_linux.html">Development Environment Setup on Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation_mac.html">Development Environment Setup on macOS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Development Environment Setup on Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#building-and-running-an-application">Building and Running an Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="development-environment-setup-on-windows">
+<span id="installing-zephyr-win"></span><h1>Development Environment Setup on Windows<a class="headerlink" href="#development-environment-setup-on-windows" title="Permalink to this headline">¶</a></h1>
+<p>This section describes how to configure your development environment and
+to build Zephyr applications in a Microsoft Windows environment.</p>
+<p>This guide was tested by building the Zephyr <a class="reference internal" href="../samples/hello_world/README.html#hello-world"><span class="std std-ref">Hello World</span></a> sample
+application on Windows versions 7, 8.1, and 10.</p>
+<div class="section" id="update-your-operating-system">
+<h2>Update Your Operating System<a class="headerlink" href="#update-your-operating-system" title="Permalink to this headline">¶</a></h2>
+<p>Before proceeding with the build, ensure that you are running your
+Windows system with the latest updates installed.</p>
+</div>
+<div class="section" id="installing-requirements-and-dependencies">
+<span id="windows-requirements"></span><h2>Installing Requirements and Dependencies<a class="headerlink" href="#installing-requirements-and-dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-msys2">
+<h3>Using MSYS2<a class="headerlink" href="#using-msys2" title="Permalink to this headline">¶</a></h3>
+<p>The Zephyr development environment on Windows relies on MSYS2, a modern UNIX
+environment for Windows. Follow the steps below to set it up:</p>
+<ol class="arabic">
+<li><p class="first">Download and install <strong class="program">MSYS2</strong>. Download the appropriate (32 or
+64-bit) MSYS2 installer from the <a class="reference external" href="http://www.msys2.org/">MSYS2 website</a> and execute it. On the
+final installation screen, check the “Run MSYS2 now.” box to start up an
+MSYS2 shell when installation is complete.  Follow the rest of the
+installation instructions on the MSYS2 website to update the package
+database and core system packages.  You may be advised to “terminate MSYS2
+without returning to shell and check for updates again”.  If so, simply
+close the <code class="docutils literal"><span class="pre">MSYS2</span> <span class="pre">MSYS</span> <span class="pre">Shell</span></code> desktop app and run it again to complete the update.)</p>
+</li>
+<li><p class="first">Launch the <code class="docutils literal"><span class="pre">MSYS2</span> <span class="pre">MSYS</span> <span class="pre">Shell</span></code> desktop app from your start menu (if it’s not still open).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Make sure you start <code class="docutils literal"><span class="pre">MSYS2</span> <span class="pre">MSYS</span> <span class="pre">Shell</span></code>, not <code class="docutils literal"><span class="pre">MSYS2</span> <span class="pre">MinGW</span> <span class="pre">Shell</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you need to inherit the existing Windows environment variables into
+MSYS2 you will need to create a <strong>Windows</strong> environment variable like so::
+<code class="docutils literal"><span class="pre">MSYS2_PATH_TYPE=inherit</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are multiple <code class="docutils literal"><span class="pre">export</span></code> statements in this tutorial. You can avoid
+typing them every time by placing them at the bottom of your
+<code class="docutils literal"><span class="pre">~/.bash_profile</span></code> file.</p>
+</div>
+</li>
+<li><p class="first">If you’re behind a corporate firewall, you’ll likely need to specify a
+proxy to get access to internet resources:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ export http_proxy=http://proxy.mycompany.com:123
+$ export https_proxy=$http_proxy
+</pre></div>
+</div>
+</li>
+<li><p class="first">Update MSYS2’s packages and install the dependencies required to build
+Zephyr (you may need to restart the MSYS2 shell):</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> pacman -Syu
+<span class="gp">$</span> pacman -S git cmake make gcc dtc diffutils ncurses-devel python3 gperf
+</pre></div>
+</div>
+</li>
+<li><p class="first">From within the MSYS2 MSYS Shell, clone a copy of the Zephyr source
+into your home directory using Git.  (Some Zephyr tools require
+Unix-style line endings, so we’ll configure Git for this repo to
+not do the automatic Unix/Windows line ending conversion (using
+<code class="docutils literal"><span class="pre">--config</span> <span class="pre">core.autocrlf=false</span></code>).</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> ~
+<span class="gp">$</span> git clone --config core.autocrlf<span class="o">=</span><span class="nb">false</span> https://github.com/zephyrproject-rtos/zephyr.git
+</pre></div>
+</div>
+</li>
+<li><p class="first">Install pip and the required Python modules:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl -O &#39;https://bootstrap.pypa.io/get-pip.py&#39;
+$ ./get-pip.py
+$ rm get-pip.py
+$ cd ~/zephyr   # or to the folder where you cloned the zephyr repo
+$ pip install --user -r scripts/requirements.txt
+</pre></div>
+</div>
+</li>
+<li><p class="first">The build system should now be ready to work with any toolchain installed in
+your system. In the next step you’ll find instructions for installing
+toolchains for building both x86 and ARM applications.</p>
+</li>
+<li><p class="first">Install cross compiler toolchain:</p>
+<ul>
+<li><p class="first">For x86, install the 2017 Windows host ISSM toolchain from the Intel
+Developer Zone: <a class="reference external" href="https://software.intel.com/en-us/articles/issm-toolchain-only-download">ISSM Toolchain</a>. Use your web browser to
+download the toolchain’s <code class="docutils literal"><span class="pre">tar.gz</span></code> file.</p>
+<p>You’ll need the tar application to unpack this file. In an <code class="docutils literal"><span class="pre">MSYS2</span> <span class="pre">MSYS</span></code>
+console, install <code class="docutils literal"><span class="pre">tar</span></code> and use it to extract the toolchain archive:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ pacman -S tar
+$ tar -zxvf /c/Users/myusername/Downloads/issm-toolchain-windows-2017-01-15.tar.gz -C /c
+</pre></div>
+</div>
+<p>substituting the .tar.gz path name with the one you downloaded.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The ISSM toolset only supports development for Intel® Quark™
+Microcontrollers, for example, the Arduino 101 board.  (Check out the
+“Zephyr Development Environment
+Setup” in this <a class="reference external" href="https://software.intel.com/en-us/articles/getting-started-arduino-101genuino-101-with-intel-system-studio-for-microcontrollers">Getting Started on Arduino 101 with ISSM</a> document.)
+Additional setup is required to use the ISSM GUI for development.</p>
+</div>
+</li>
+<li><p class="first">For ARM, install GNU ARM Embedded from the ARM developer website:
+<a class="reference external" href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads">GNU ARM Embedded</a> (install to <code class="file docutils literal"><span class="pre">c:\gccarmemb</span></code>).</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Within the MSYS console, set up environment variables for the installed
+tools and for the Zephyr environment (using the provided shell script):</p>
+<p>For x86:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">ZEPHYR_GCC_VARIANT</span><span class="o">=</span>issm
+<span class="gp">$</span> <span class="nb">export</span> <span class="nv">ISSM_INSTALLATION_PATH</span><span class="o">=</span>/c/issm0-toolchain-windows-2017-01-25
+</pre></div>
+</div>
+<p>Use the path where you extracted the ISSM toolchain.</p>
+<p>For ARM:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">ZEPHYR_GCC_VARIANT</span><span class="o">=</span>gccarmemb
+<span class="gp">$</span> <span class="nb">export</span> <span class="nv">GCCARMEMB_TOOLCHAIN_PATH</span><span class="o">=</span>/c/gccarmemb
+</pre></div>
+</div>
+<p>And for either, run the provided script to set up zephyr project specific
+variables:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">unset</span> ZEPHYR_SDK_INSTALL_DIR
+<span class="gp">$</span> <span class="nb">cd</span> &lt;zephyr git clone location&gt;
+<span class="gp">$</span> <span class="nb">source</span> zephyr-env.sh
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Within the MSYS console, build Kconfig in <code class="file docutils literal"><span class="pre">$ZEPHYR_BASE/build</span></code> and</dt>
+<dd><p class="first last">add it to path</p>
+</dd>
+</dl>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">  $</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>
+<span class="gp">  $</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">  $</span> cmake <span class="nv">$ZEPHYR_BASE</span>/scripts
+<span class="gp">  $</span> make
+<span class="gp">  $</span> <span class="nb">echo</span> <span class="s2">&quot;export PATH=</span><span class="nv">$PWD</span><span class="s2">/kconfig:\$PATH&quot;</span> &gt;&gt; <span class="nv">$HOME</span>/.zephyrrc
+<span class="gp">  $</span> <span class="nb">source</span> <span class="nv">$ZEPHYR_BASE</span>/zephyr-env.sh
+
+<span class="go">.. note::</span>
+
+<span class="go">    You only need to do this once after cloning the git repository.</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Finally, you can try building the <a class="reference internal" href="../samples/hello_world/README.html#hello-world"><span class="std std-ref">Hello World</span></a> sample to check things
+out.</p>
+</li>
+</ol>
+<p>To build for the Intel® Quark™ (x86-based) Arduino 101:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>arduino_101 ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+</pre></div>
+</div>
+<p>To build for the ARM-based Nordic nRF52 Development Kit:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>nrf52_pca10040 ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+</pre></div>
+</div>
+<p>This should check that all the tools and toolchain are set up correctly for
+your own Zephyr development.</p>
+</div>
+<div class="section" id="using-windows-10-wsl-windows-subsystem-for-linux">
+<h3>Using Windows 10 WSL (Windows Subsystem for Linux)<a class="headerlink" href="#using-windows-10-wsl-windows-subsystem-for-linux" title="Permalink to this headline">¶</a></h3>
+<p>If you are running a recent version of Windows 10 you can make use of the
+built-in functionality to natively run Ubuntu binaries directly on a standard
+command-prompt. This allows you to install the standard Zephyr SDK and build
+for all supported architectures without the need for a Virtual Machine.</p>
+<ol class="arabic">
+<li><p class="first">Install Windows Subsystem for Linux (WSL) following the instructions on the
+official Microsoft website: <a class="reference external" href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">WSL Installation</a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For the Zephyr SDK to function properly you will need Windows 10
+build 15002 or greater. You can check which Windows 10 build you are
+running in the “About your PC” section of the System Settings.
+If you are running an older Windows 10 build you might need to install
+the Creator’s Update.</p>
+</div>
+</li>
+<li><p class="first">Follow the instructions for Ubuntu detailed in the Zephyr Linux Getting
+Started Guide which can be found here: <a class="reference internal" href="installation_linux.html#installation-linux"><span class="std std-ref">Development Environment Setup on Linux</span></a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../contribute/contribute.html" class="btn btn-neutral float-right" title="Contributing to the Zephyr Project" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="installation_mac.html" class="btn btn-neutral" title="Development Environment Setup on macOS" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: SPI_NRF5
+
+.. option:: CONFIG_SPI_NRF5
+.. _CONFIG_SPI_NRF5:
+
+Enable support for nRF5 MCU series SPI drivers. Peripherals
+with the same instance id can not be used together, e.g., SPIM0 and I2C_0
+(TWIM0) and SPIS0. You may need to disable I2C_0 or I2C_1.
+
+
+
+:Symbol:           SPI_NRF5
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "nRF5 SPI drivers" if SPI && SOC_FAMILY_NRF5 && GPIO_NRF5_P0 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SPI && SOC_FAMILY_NRF5 && GPIO_NRF5_P0 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SPI_LEGACY_API && SPI (value: "n")
+:Locations:
+ * ../drivers/spi/Kconfig.nrf5_legacy:11

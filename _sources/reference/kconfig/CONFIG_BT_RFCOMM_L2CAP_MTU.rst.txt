@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: BT_RFCOMM_L2CAP_MTU
+
+.. option:: CONFIG_BT_RFCOMM_L2CAP_MTU
+.. _CONFIG_BT_RFCOMM_L2CAP_MTU:
+
+Maximum size of L2CAP PDU for RFCOMM frames.
+
+
+
+:Symbol:           BT_RFCOMM_L2CAP_MTU
+:Type:             int
+:Value:            "73"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [BT_RX_BUF_LEN, 32767]
+ *  [BT_L2CAP_RX_MTU, 32767] if BT_HCI_ACL_FLOW_CONTROL (value: "n")
+:Prompts:
+
+ *  "L2CAP MTU for RFCOMM frames" if BT_RFCOMM (value: "n")
+:Default values:
+
+ *  BT_RX_BUF_LEN (value: "n")
+ *   Condition: BT_RFCOMM (value: "n")
+ *  BT_L2CAP_RX_MTU (value: "n")
+ *   Condition: BT_HCI_ACL_FLOW_CONTROL && BT_RFCOMM (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_BREDR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:479

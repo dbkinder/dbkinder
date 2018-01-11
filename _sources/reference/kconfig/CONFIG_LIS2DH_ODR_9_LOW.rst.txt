@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: LIS2DH_ODR_9_LOW
+
+.. option:: CONFIG_LIS2DH_ODR_9_LOW
+.. _CONFIG_LIS2DH_ODR_9_LOW:
+
+The configuration item CONFIG_LIS2DH_ODR_9_LOW:
+
+:Symbol:           LIS2DH_ODR_9_LOW
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "5KHz" if LIS2DH_POWER_MODE_LOW (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lis2dh/Kconfig:237

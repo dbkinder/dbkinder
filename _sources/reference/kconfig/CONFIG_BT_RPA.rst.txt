@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: BT_RPA
+
+.. option:: CONFIG_BT_RPA
+.. _CONFIG_BT_RPA:
+
+The configuration item CONFIG_BT_RPA:
+
+:Symbol:           BT_RPA
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_TINYCRYPT`
+ *  :option:`CONFIG_TINYCRYPT_AES`
+:Reverse (select-related) dependencies:
+ BT_HCI && BT && BT_HCI_HOST && BT_CONN && BT_SMP || BT_HCI && BT && BT_CTLR && BT_CONN && !SOC_SERIES_NRF51X && BT_CTLR_PRIVACY (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI (value: "n")
+:Locations:
+ * ../subsys/bluetooth/common/Kconfig:28

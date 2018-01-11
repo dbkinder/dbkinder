@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: MAX30101_FIFO_ROLLOVER_EN
+
+.. option:: CONFIG_MAX30101_FIFO_ROLLOVER_EN
+.. _CONFIG_MAX30101_FIFO_ROLLOVER_EN:
+
+Controls the behavior of the FIFO when the FIFO becomes completely
+filled with data. If set, the FIFO address rolls over to zero and the
+FIFO continues to fill with new data. If not set, then the FIFO is
+not updated until FIFO_DATA is read or the WRITE/READ pointer
+positions are changed.
+
+
+
+:Symbol:           MAX30101_FIFO_ROLLOVER_EN
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "FIFO rolls on full"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MAX30101 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/max30101/Kconfig:44

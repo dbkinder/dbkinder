@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: ALTERA_AVALON_SYSID
+
+.. option:: CONFIG_ALTERA_AVALON_SYSID
+.. _CONFIG_ALTERA_AVALON_SYSID:
+
+The configuration item CONFIG_ALTERA_AVALON_SYSID:
+
+:Symbol:           ALTERA_AVALON_SYSID
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_NIOS2F_ZEPHYR (value: "n")
+:Locations:
+ * ../arch/nios2/soc/nios2f-zephyr/Kconfig.defconfig:11

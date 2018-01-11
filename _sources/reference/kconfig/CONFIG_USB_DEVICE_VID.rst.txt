@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: USB_DEVICE_VID
+
+.. option:: CONFIG_USB_DEVICE_VID
+.. _CONFIG_USB_DEVICE_VID:
+
+USB device vendor ID. MUST be configured by vendor.
+
+
+
+:Symbol:           USB_DEVICE_VID
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "USB Vendor ID"
+:Default values:
+
+ *  0xDEAD (value: "n")
+ *   Condition: (none)
+ *  0x8087 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ USB && BOARD_TINYTILE (value: "n")
+:Locations:
+ * ../subsys/usb/Kconfig:39
+ * ../boards/x86/tinytile/Kconfig.defconfig:24

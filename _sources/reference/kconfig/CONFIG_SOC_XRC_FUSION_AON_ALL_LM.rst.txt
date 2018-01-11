@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: SOC_XRC_FUSION_AON_ALL_LM
+
+.. option:: CONFIG_SOC_XRC_FUSION_AON_ALL_LM
+.. _CONFIG_SOC_XRC_FUSION_AON_ALL_LM:
+
+The configuration item CONFIG_SOC_XRC_FUSION_AON_ALL_LM:
+
+:Symbol:           SOC_XRC_FUSION_AON_ALL_LM
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "XRC_FUSION_AON_ALL_LM core"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/xtensa/soc/XRC_FUSION_AON_ALL_LM/Kconfig.soc:4

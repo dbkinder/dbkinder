@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: HAS_DTS
+
+.. option:: CONFIG_HAS_DTS
+.. _CONFIG_HAS_DTS:
+
+This option specifies that the target platform supports device tree
+configuration.
+
+
+
+:Symbol:           HAS_DTS
+:Type:             bool
+:Value:            "y"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ CPU_CORTEX_M && ARM || BOARD_GALILEO && SOC_SERIES_QUARK_X1000 || BOARD_TINYTILE && SOC_SERIES_QUARK_SE || BOARD_QUARK_D2000_CRB && SOC_SERIES_QUARK_D2000 || BOARD_MINNOWBOARD && SOC_ATOM || BOARD_X86_JAILHOUSE && SOC_IA32 || BOARD_QEMU_X86 && SOC_IA32 || BOARD_ARDUINO_101 && SOC_SERIES_QUARK_SE || BOARD_QUARK_SE_C1000_DEVBOARD && SOC_SERIES_QUARK_SE || BOARD_ARDUINO_101_SSS && SOC_QUARK_SE_C1000_SS || BOARD_QUARK_SE_C1000_DEVBOARD_SS && SOC_QUARK_SE_C1000_SS (value: "y")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../dts/Kconfig:1

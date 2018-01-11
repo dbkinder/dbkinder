@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: MBEDTLS_DEBUG
+
+.. option:: CONFIG_MBEDTLS_DEBUG
+.. _CONFIG_MBEDTLS_DEBUG:
+
+Enable debugging activation for mbed TLS configuration. Note that this
+does not directly cause any debug print output. For that you need to
+call
+mbedtls_debug_set_threshold(level);
+and
+mbedtls_ssl_conf_dbg(&mbedtls.conf, my_debug, NULL);
+functions in your application, and create the my_debug() function to
+actually print something useful.
+
+
+
+:Symbol:           MBEDTLS_DEBUG
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "mbed TLS debug activation" if MBEDTLS_BUILTIN (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: MBEDTLS_BUILTIN (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../ext/lib/crypto/mbedtls/Kconfig:41

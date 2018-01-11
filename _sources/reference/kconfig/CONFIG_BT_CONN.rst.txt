@@ -1,0 +1,30 @@
+:orphan:
+
+.. title:: BT_CONN
+
+.. option:: CONFIG_BT_CONN
+.. _CONFIG_BT_CONN:
+
+The configuration item CONFIG_BT_CONN:
+
+:Symbol:           BT_CONN
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BT_HCI && BT && BT_PERIPHERAL || BT_HCI && BT && BT_CENTRAL (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT (value: "n")
+:Locations:
+ * ../subsys/bluetooth/Kconfig:83

@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: UART_SAM_PORT_4_PIN_TX_PD3
+
+.. option:: CONFIG_UART_SAM_PORT_4_PIN_TX_PD3
+.. _CONFIG_UART_SAM_PORT_4_PIN_TX_PD3:
+
+The configuration item CONFIG_UART_SAM_PORT_4_PIN_TX_PD3:
+
+:Symbol:           UART_SAM_PORT_4_PIN_TX_PD3
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "PD3"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ UART_SAM_PORT_4 && SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.uart_sam:99

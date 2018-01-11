@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: NET_DEBUG_NET_PKT_EXTERNALS
+
+.. option:: CONFIG_NET_DEBUG_NET_PKT_EXTERNALS
+.. _CONFIG_NET_DEBUG_NET_PKT_EXTERNALS:
+
+How many external net_pkt objects are there in user specific pools.
+This value is used when allocating space for tracking the
+memory allocations.
+
+
+
+:Symbol:           NET_DEBUG_NET_PKT_EXTERNALS
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "How many external network packet allocations" if NET_DEBUG_NET_PKT (value: "n")
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: NET_DEBUG_NET_PKT (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE && NET_LOG (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig.debug:105

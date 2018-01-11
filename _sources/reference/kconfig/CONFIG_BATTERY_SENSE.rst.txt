@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BATTERY_SENSE
+
+.. option:: CONFIG_BATTERY_SENSE
+.. _CONFIG_BATTERY_SENSE:
+
+The configuration item CONFIG_BATTERY_SENSE:
+
+:Symbol:           BATTERY_SENSE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable the battery sense circuit"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ADC && BOARD_HEXIWEAR_K64 (value: "n")
+:Locations:
+ * ../boards/arm/hexiwear_k64/Kconfig:10
+ * ../boards/arm/hexiwear_k64/Kconfig.defconfig:91

@@ -1,0 +1,995 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Zephyr Security Overview &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="Zephyr Project Security" href="security.html"/>
+        <link rel="next" title="Secure Coding Guidelines" href="secure-coding.html"/>
+        <link rel="prev" title="Zephyr Project Security" href="security.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+          <a href="security.html">Zephyr Project Security</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="security.html">Zephyr Project Security</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Zephyr Security Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#current-security-definition">Current Security Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secure-development-process">Secure Development Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secure-design">Secure Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#security-certification">Security Certification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="secure-coding.html">Secure Coding Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="zephyr-security-overview">
+<span id="security-overview"></span><h1>Zephyr Security Overview<a class="headerlink" href="#zephyr-security-overview" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="26%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3"><strong>Revision history</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Rev</strong></td>
+<td><strong>Date</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-odd"><td>1.0 Draft</td>
+<td>July 27, 2016</td>
+<td>Initial draft version</td>
+</tr>
+<tr class="row-even"><td>1.0-rc1</td>
+<td>April 21, 2017</td>
+<td>Draft for review by TSC</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This document outlines the steps of the Zephyr Security board towards a
+defined security process that helps developers build more secure
+software while addressing security compliance requirements. It presents
+the key ideas of the security process and outlines which documents need
+to be created. After the process is implemented and all supporting
+documents are created, this document is a top-level overview and entry
+point.</p>
+<div class="section" id="overview-and-scope">
+<h3>Overview and Scope<a class="headerlink" href="#overview-and-scope" title="Permalink to this headline">¶</a></h3>
+<p>We begin with an overview of the Zephyr development process, which
+mainly focuses on security functionality.</p>
+<p>In subsequent sections, the individual parts of the process are treated
+in detail. As depicted in Figure 1, these main steps are:</p>
+<ol class="arabic simple">
+<li><strong>Secure Development:</strong> Defines the system architecture and
+development process that ensures adherence to relevant coding
+guidelines and quality assurance procedures.</li>
+<li><strong>Secure Design:</strong> Defines security procedures and implement measures
+to enforce them. A security architecture of the system and
+relevant sub-modules is created, threats are identified, and
+countermeasures designed. Their correct implementation and the
+validity of the threat models are checked by code reviews.
+Finally, a process shall be defined for reporting, classifying,
+and mitigating security issues..</li>
+<li><strong>Security Certification:</strong> Defines the certifiable part of the
+Zephyr RTOS. This includes an evaluation target, its assets, and
+how these assets are protected. Certification claims shall be
+determined and backed with appropriate evidence.</li>
+</ol>
+<div class="figure" id="id15">
+<img alt="../_images/security-process-steps.png" src="../_images/security-process-steps.png" />
+<p class="caption"><span class="caption-text">Figure 1. Security Process Steps</span></p>
+</div>
+</div>
+<div class="section" id="intended-audience">
+<h3>Intended Audience<a class="headerlink" href="#intended-audience" title="Permalink to this headline">¶</a></h3>
+<p>This document is a guideline for the development of a security process
+by the Zephyr Security Committee and the Zephyr Technical Steering
+Committee. It provides an overview of the Zephyr security process for
+(security) engineers and architects.</p>
+</div>
+<div class="section" id="nomenclature">
+<h3>Nomenclature<a class="headerlink" href="#nomenclature" title="Permalink to this headline">¶</a></h3>
+<p>In this document, the keywords “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”,
+“SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and
+“OPTIONAL” are to be interpreted as described in <a class="reference external" href="https://www.ietf.org/rfc/rfc2119.txt">RFC2119</a>.</p>
+<p>These words are used to define absolute requirements (or prohibitions),
+highly recommended requirements, and truly optional requirements. As
+noted in RFC-2119, “These terms are frequently used to specify behavior
+with security implications. The effects on security of not implementing
+a MUST or SHOULD, or doing something the specification says MUST NOT or
+SHOULD NOT be done may be very subtle. Document authors should take the
+time to elaborate the security implications of not following
+recommendations or requirements as most implementors will not have had
+the benefit of the experience and discussion that produced the
+specification.”</p>
+</div>
+<div class="section" id="security-document-update">
+<h3>Security Document Update<a class="headerlink" href="#security-document-update" title="Permalink to this headline">¶</a></h3>
+<p>This document is a living document. As new requirements, features, and
+changes are identified, they will be added to this document through the
+following process:</p>
+<ol class="arabic simple">
+<li>Changes will be submitted from the interested party(ies) via pull
+requests to the Zephyr documentation repository.</li>
+<li>The security committee will review these changes and provide feedback
+or acceptance of the changes.</li>
+<li>Once accepted, these changes will become part of the document.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="current-security-definition">
+<h2>Current Security Definition<a class="headerlink" href="#current-security-definition" title="Permalink to this headline">¶</a></h2>
+<p>This section recapitulates the current status of secure development
+within the Zephyr RTOS. Currently, focus is put on functional security
+and code quality assurance, although additional security features are
+scoped.</p>
+<p>The three major security measures currently implemented are:</p>
+<ul class="simple">
+<li><strong>Security</strong> <strong>Functionality</strong> with a focus on cryptographic
+algorithms and protocols. Support for cryptographic hardware is
+scoped for future releases.The Zephyr runtime architecture is a
+monolithic binary and removes the need for dynamic loaders ,
+thereby reducing the exposed attack surface.</li>
+<li><strong>Quality Assurance</strong> is driven by using a development process that
+requires all code to be reviewed before being committed to the
+common repository. Furthermore, the reuse of proven building
+blocks such as network stacks increases the overall quality level
+and guarantees stable APIs. Static code analyses are planned for
+the near future.</li>
+<li><strong>Execution Protection</strong> including thread separation, stack and
+memory protection is currently not available in the upstream
+Zephyr RTOS but is planned for future releases.</li>
+</ul>
+<p>These topics are discussed in more detail in the following subsections.</p>
+<div class="section" id="security-functionality">
+<h3>Security Functionality<a class="headerlink" href="#security-functionality" title="Permalink to this headline">¶</a></h3>
+<p>The security functionality in Zephyr hinges mainly on the inclusion of
+cryptographic algorithms, and on its monolithic system design.</p>
+<p>The cryptographic features are provided through a set of cryptographic
+libraries. Applications can choose TinyCrypt2 or mbedTLS based on their
+needs. TinyCrypt2 supports key cryptographic algorithms required by the
+connectivity stacks. Tinycrypt2, however, only provides a limited set of
+algorithms. mbedTLS supports a wider range of algorithms, but at the
+cost of additional requirements such as malloc support. Applications can
+choose the solution that matches their individual requirements. Future
+work may include APIs to abstract the underlying crypto library choice.</p>
+<p>APIs for vendor specific cryptographic IPs in both hardware and software
+are planned, including secure key storage in the form of secure access
+modules (SAMs), Trusted Platform Modules (TPMs), and
+Trusted Execution Environments (TEEs).</p>
+<p>The security architecture is based on a monolithic design where the
+Zephyr kernel and all applications are compiled into a single static
+binary. System calls are implemented as function calls without requiring
+context switches. Static linking eliminates the potential for
+dynamically loading malicious code. Memory protection and task
+separation techniques are in scope for future releases.</p>
+</div>
+<div class="section" id="quality-assurance">
+<h3>Quality Assurance<a class="headerlink" href="#quality-assurance" title="Permalink to this headline">¶</a></h3>
+<p>The Zephyr project uses an automated quality assurance process. The goal
+is to have a process including mandatory code reviews, feature and issue
+management/tracking, and static code analyses.</p>
+<p>Code reviews are documented and enforced using a voting system before
+getting checked into the repository by the responsible subsystem’s
+maintainer. The main goals of the code review are:</p>
+<ul class="simple">
+<li>Verifying correct functionality of the implementation</li>
+<li>Increasing the readability and maintainability of the contributed
+source code</li>
+<li>Ensuring appropriate usage of string and memory functions</li>
+<li>Validation of the user input</li>
+<li>Reviewing the security relevant code for potential issues</li>
+</ul>
+<p>The current coding guidelines focus mostly on coding styles and
+conventions. Functional correctness is ensured by the build system and
+the experience of the reviewer. Especially for security relevant code,
+concrete and detailed guidelines need to be developed and aligned with
+the developers (see: <a class="reference internal" href="secure-coding.html#secure-code"><span class="std std-ref">Secure Coding Guidelines</span></a>).</p>
+<p>Static code analyses are run on the Zephyr code tree on a regular basis
+using the open source Coverity Scan tool. Coverity Scan now includes
+complexity analysis.</p>
+<p>Bug and issue tracking and management is performed using Jira. The term
+“survivability” was coined to cover pro-active security tasks such as
+security issue categorization and management. Initial effort has been
+started on the definition of vulnerability categorization and mitigation
+processes within Jira.</p>
+<p>Issues determined by Coverity should have more stringent reviews before
+they are closed as non issues (at least another person educated in
+security processes need to agree on non-issue before closing).</p>
+<p>A security subcommittee has been formed to develop a security process in
+more detail; this document is part of that process.</p>
+</div>
+<div class="section" id="execution-protection">
+<h3>Execution Protection<a class="headerlink" href="#execution-protection" title="Permalink to this headline">¶</a></h3>
+<p>Execution protection is planned for future releases and is roughly
+categorized into the following tasks:</p>
+<ul class="simple">
+<li><strong>Memory separation:</strong> Memory will be partitioned into regions and
+assigned attributes based on the owner of that region of memory.
+Threads will only have access to regions they control.</li>
+<li><strong>Stack protection:</strong> Stack guards would provide mechanisms for
+detecting and trapping stack overruns. Individual threads should
+only have access to their own stacks.</li>
+<li><strong>Thread separation:</strong> Individual threads should only have access to
+their own memory resources. As threads are scheduled, only memory
+resources owned by that thread will be accessible.Topics such as
+program flow protection and other measures for tamper resistance
+are currently not in scope.</li>
+</ul>
+</div>
+<div class="section" id="system-level-security-ecosystem">
+<h3>System Level Security (Ecosystem, …)<a class="headerlink" href="#system-level-security-ecosystem" title="Permalink to this headline">¶</a></h3>
+<p>System level security encompasses a wide variety of categories. Some
+examples of these would be:</p>
+<ul class="simple">
+<li>Secure/trusted boot</li>
+<li>Over the air (OTA) updates</li>
+<li>External Communication</li>
+<li>Device authentication</li>
+<li>Access control of onboard resources<ul>
+<li>Flash updating</li>
+<li>Secure storage</li>
+<li>Peripherals</li>
+</ul>
+</li>
+<li>Root of trust</li>
+<li>Reduction of attack surface</li>
+</ul>
+<p>Some of these categories are interconnected and rely on multiple pieces
+to be in place to produce a full solution for the application.</p>
+</div>
+</div>
+<div class="section" id="secure-development-process">
+<h2>Secure Development Process<a class="headerlink" href="#secure-development-process" title="Permalink to this headline">¶</a></h2>
+<p>The development of secure code shall adhere to certain criteria. These
+include coding guidelines and development processes that can be roughly
+separated into two categories related to software quality and related to
+software security. Furthermore, a system architecture document shall be
+created and kept up-to-date with future development.</p>
+<div class="section" id="system-architecture">
+<h3>System Architecture<a class="headerlink" href="#system-architecture" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id16">
+<img alt="../_images/security-zephyr-system-architecture.png" src="../_images/security-zephyr-system-architecture.png" />
+<p class="caption"><span class="caption-text">Figure 2: Zephyr System Architecture</span></p>
+</div>
+<p>A high-level schematic of the Zephyr system architecture is given in
+Figure 2. It separates the architecture into an OS part (<em>kernel + OS
+Services</em>) and a user-specific part (<em>Application Services</em>). The OS
+part itself contains low-level, platform specific drivers and the
+generic implementation of I/O APIs, file systems, kernel-specific
+functions, and the cryptographic library.</p>
+<p>A document describing the system architecture and design choices shall
+be created and kept up to date with future development. This document
+shall include the base architecture of the Zephyr OS and an overview of
+important submodules. For each of the modules, a dedicated architecture
+document shall be created and evaluated against the implementation.
+These documents shall serve as an entry point to new developers and as a
+basis for the security architecture. Please refer to the
+<a class="reference internal" href="../subsystems/subsystems.html#subsystems"><span class="std std-ref">Zephyr Kernel subsystem documentation</span></a> for
+detailed information.</p>
+</div>
+<div class="section" id="secure-coding-guidelines">
+<h3>Secure Coding Guidelines<a class="headerlink" href="#secure-coding-guidelines" title="Permalink to this headline">¶</a></h3>
+<p>Designing an open software system such as Zephyr to be secure requires
+adhering to a defined set of design standards. These standards are
+included in the Zephyr Project documentation, specifically in its
+<a class="reference internal" href="secure-coding.html#secure-code"><span class="std std-ref">Secure Coding Guidelines</span></a> section. In <a class="reference internal" href="security-citations.html#salt75" id="id1">[SALT75]</a>, the following, widely
+accepted principles for protection mechanisms are defined to prevent
+security violations and limit their impact:</p>
+<ul class="simple">
+<li><strong>Open design</strong> as a design guideline incorporates the maxim that
+protection mechanisms cannot be kept secret on any system in
+widespread use. Instead of relying on secret, custom-tailored
+security measures, publicly accepted cryptographic algorithms and
+well established cryptographic libraries shall be used.</li>
+<li><strong>Economy of mechanism</strong> specifies that the underlying design of a
+system shall be kept as simple and small as possible. In the
+context of the Zephyr project, this can be realized, e.g., by
+modular code <a class="reference internal" href="security-citations.html#paul09" id="id2">[PAUL09]</a> and abstracted APIs.</li>
+<li><strong>Complete mediation</strong> requires that each access to every object and
+process needs to be authenticated first. Mechanisms to store
+access conditions shall be avoided if possible.</li>
+<li><strong>Fail-safe defaults</strong> defines that access is restricted by default
+and permitted only in specific conditions defined by the system
+protection scheme, e.g., after successful authentication.
+Furthermore, default settings for services shall be chosen in a
+way to provide maximum security. This corresponds to the “Secure
+by Default” paradigm <a class="reference internal" href="security-citations.html#ms12" id="id3">[MS12]</a>.</li>
+<li><strong>Separation of privilege</strong> is the principle that two conditions or
+more need to be satisfied before access is granted. In the
+context of the Zephyr project, this could encompass split keys
+<a class="reference internal" href="security-citations.html#paul09" id="id4">[PAUL09]</a>.</li>
+<li><strong>Least privilege</strong> describes an access model in which each user,
+program and thread shall have the smallest possible
+subset of permissions in the system required to perform their
+task. This positive security model aims to minimize the attack
+surface of the system.</li>
+<li><strong>Least common mechanism</strong> specifies that mechanisms common to more
+than one user or process shall not be shared if not strictly
+required. The example given in <a class="reference internal" href="security-citations.html#salt75" id="id5">[SALT75]</a> is a function that should
+be implemented as a shared library executed by each user and not
+as a supervisor procedure shared by all users.</li>
+<li><strong>Psychological acceptability</strong> requires that security features are
+easy to use by the developers in order to ensure its usage and
+the correctness of its application.</li>
+</ul>
+<p>In addition to these general principles, the following points are
+specific to the development of a secure RTOS:</p>
+<ul class="simple">
+<li><strong>Complementary Security/Defense in Depth:</strong> do not rely on a single
+threat mitigation approach. In case of the complementary security
+approach, parts of the threat mitigation are performed by the
+underlying platform. In case such mechanisms are not provided by
+the platform, or are not trusted, a defense in depth <a class="reference internal" href="security-citations.html#ms12" id="id6">[MS12]</a>
+paradigm shall be used.</li>
+<li><strong>Less commonly used services off by default</strong>: to reduce the
+exposure of the system to potential attacks, features or services
+shall not be enabled by default if they are only rarely used (a
+threshold of 80% is given in <a class="reference internal" href="security-citations.html#ms12" id="id7">[MS12]</a>). For the Zephyr project,
+this can be realized using the configuration management. Each
+functionality and module shall be represented as a configuration
+option and needs to be explicitly enabled. Then, all features,
+protocols, and drivers not required for a particular use case can
+be disabled. The user shall be notified if low-level options and
+APIs are enabled but not used by the application.</li>
+<li><strong>Change management:</strong> to guarantee a traceability of changes to the
+system, each change shall follow a specified process including a
+change request, impact analysis, ratification, implementation,
+and validation phase. In each stage, appropriate documentation
+shall be provided. All commits shall be related to a bug report
+or change request in the issue tracker. Commits without a valid
+reference shall be denied.</li>
+</ul>
+<p>Based on these design principles and commonly accepted best practices, a
+secure development guide shall be developed, published, and implemented
+into the Zephyr development process. Further details on this are given
+in the <a class="reference internal" href="#secure-design">Secure Design</a> section.</p>
+</div>
+<div class="section" id="id8">
+<h3>Quality Assurance<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>The quality assurance part encompasses the following criteria:</p>
+<ul class="simple">
+<li><strong>Adherence to the Coding Guidelines</strong> with respect to coding style,
+naming schemes of modules, functions, variables, and so forth.
+This increases the readability of the Zephyr code base and eases
+the code review. These coding guidelines are enforced by
+automated scripts prior to check-in.</li>
+<li><strong>Adherence to Deployment Guidelines</strong> is required to ensure
+consistent releases with a well-documented feature set and a
+trackable list of security issues.</li>
+<li><strong>Code Reviews</strong> ensure the functional correctness of the code base
+and shall be performed on each proposed code change prior to
+check-in. Code reviews shall be performed by at least one
+independent reviewer other than the author(s) of the code change.
+These reviews shall be performed by the subsystem maintainers and
+developers on a functional level and are to be distinguished from
+security reviews as laid out in Chapter 4. Please refer to the
+<a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/wiki/Development-Model">development model documentation</a> on the Zephyr project Wiki.</li>
+<li><strong>Static Code Analysis</strong> tools efficiently detect common coding
+mistakes in large code bases. All code shall be analyzed using an
+appropriate tool prior to merges into the main repository. This
+is not per individual commit, but is to be run on some interval
+on specific branches. It is mandatory to remove all findings or
+waive potential false-positives before each release. To process
+process documentation. Waivers shall be documented centrally and
+in form of a comment inside the source code itself. The
+documentation shall include the employed tool and its version,
+the date of the analysis, the branch and parent revision number,
+the reason for the waiver, the author of the respective code, and
+the approver(s) of the waiver. This shall as a minimum run on the
+main release branch and on the security branch. It shall be
+ensured that each release has zero issues with regard to static
+code analysis (including waivers). Please refer to the
+<a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/wiki/Development-Model">development model documentation</a> on the Zephyr project Wiki.</li>
+<li><strong>Complexity Analyses</strong> shall be performed as part of the development
+process and metrics such as cyclomatic complexity shall be
+evaluated. The main goal is to keep the code as simple as
+possible.</li>
+<li><dl class="first docutils">
+<dt><strong>Automation:</strong> the review process and checks for coding rule</dt>
+<dd>adherence are a mandatory part of the precommit checks. To
+ensure consistent application, they shall be automated as part of
+the precommit procedure. Prior to merging large pieces of code
+in from subsystems, in addition to review process and coding rule
+adherence, all static code analysis must have been run and issues
+resolved.</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="release-and-lifecycle-management">
+<h3>Release and Lifecycle Management<a class="headerlink" href="#release-and-lifecycle-management" title="Permalink to this headline">¶</a></h3>
+<p>Lifecycle management contains several aspects:</p>
+<ul class="simple">
+<li><strong>Device management</strong> encompasses the possibility to update the
+operating system and/or security related sub-systems of Zephyr
+enabled devices in the field.</li>
+<li><strong>Lifecycle management:</strong> system stages shall be defined and
+documented along with the transactions between the stages in a
+system state diagram. For security reasons, this shall include
+locking of the device in case an attack has been detected, and a
+termination if the end of life is reached.</li>
+<li><strong>Release management</strong> describes the process of defining the release
+cycle, documenting releases, and maintaining a record of known
+vulnerabilities and mitigations. Especially for certification
+purposes the integrity of the release needs to be ensured in a
+way that later manipulation (e.g. inserting of backdoors, etc.)
+can be easily detected.</li>
+<li><strong>Rights management and NDAs:</strong> if required by the chosen
+certification, the confidentiality and integrity of the system
+needs to be ensured by an appropriate rights management (e.g.
+separate source code repository) and non-disclosure agreements
+between the relevant parties. In case of a repository shared
+between several parties, measures shall be taken that no
+malicious code is checked in.</li>
+</ul>
+<p>These points shall be evaluated with respect to their impact on the
+development process employed for the Zephyr project.</p>
+</div>
+</div>
+<div class="section" id="secure-design">
+<h2>Secure Design<a class="headerlink" href="#secure-design" title="Permalink to this headline">¶</a></h2>
+<p>In order to obtain a certifiable system or product, the security process
+needs to be clearly defined and its application needs to be monitored
+and driven. This process includes the development of security related
+modules in all of its stages and the management of reported security
+issues. Furthermore, threat models need to be created for currently
+known and future attack vectors, and their impact on the system needs to
+be investigated and mitigated. Please refer to the
+<a class="reference external" href="https://www.zephyrproject.org/doc/contribute/security.html">secure coding guidelines</a> outlined in the Zephyr project documentation
+for detailed information.</p>
+<p>The software security process includes:</p>
+<ul class="simple">
+<li><strong>Adherence to the Secure Development Guidelines</strong> is mandatory to
+avoid that individual components breach the system security and
+to minimize the vulnerability of individual modules. While this
+can be partially achieved by automated tests, it is inevitable to
+investigate the correct implementation of security features such
+as countermeasures manually in security-critical modules.</li>
+<li><strong>Security Reviews</strong> shall be performed by a security architect in
+preparation of each security-targeted release and each time a
+security-related module of the Zephyr project is changed. This
+process includes the validation of the effectiveness of
+implemented security measures, the adherence to the global
+security strategy and architecture, and the preparation of audits
+towards a security certification if required.</li>
+<li><strong>Security Issue Management</strong> encompasses the evaluation of potential
+system vulnerabilities and their mitigation as described in the
+<a class="reference internal" href="#security-issue-management">Security Issue Management</a> Section.</li>
+</ul>
+<p>These criteria and tasks need to be integrated into the development
+process for secure software and shall be automated wherever possible. On
+system level, and for each security related module of the secure branch
+of Zephyr, a directly responsible security architect shall be defined to
+guide the secure development process.</p>
+<div class="section" id="security-architecture">
+<h3>Security Architecture<a class="headerlink" href="#security-architecture" title="Permalink to this headline">¶</a></h3>
+<p>The general guidelines above shall be accompanied by an architectural
+security design on system- and module-level. The high level
+considerations include</p>
+<ul class="simple">
+<li>The identification of <strong>security and compliance requirements</strong></li>
+<li><strong>Functional security</strong> such as the use of cryptographic functions
+whenever applicable</li>
+<li>Design of <strong>countermeasures</strong> against known attack vectors</li>
+<li>Recording of security relevant <strong>auditable events</strong></li>
+<li>Support for <strong>Trusted Platform Modules (TPM)</strong> and
+<strong>Trusted Execution Environments (TEE)</strong></li>
+<li>Mechanisms to allow for <strong>in-the-field</strong> <strong>updates</strong> of devices using
+Zephyr</li>
+<li>Task scheduler and separation</li>
+</ul>
+<p>The security architecture development is based on assets derived from
+the structural overview of the overall system architecture. Based on
+this, the individual steps include:</p>
+<ol class="arabic simple">
+<li><strong>Identification of assets</strong> such as user data, authentication and
+encryption keys, key generation data (obtained from RNG),
+security relevant status information.</li>
+<li><strong>Identification of threats</strong> against the assets such as breaches of
+confidentiality, manipulation of user data, etc.</li>
+<li><strong>Definition of requirements</strong> regarding security and protection of
+the assets, e.g. countermeasures or memory protection schemes.</li>
+</ol>
+<p>The security architecture shall be harmonized with the existing system
+architecture and implementation to determine potential deviations and
+mitigate existing weaknesses. Newly developed sub-modules that are
+integrated into the secure branch of the Zephyr project shall provide
+individual documents describing their security architecture.
+Additionally, their impact on the system level security shall be
+considered and documented.</p>
+</div>
+<div class="section" id="security-issue-management">
+<h3>Security Issue Management<a class="headerlink" href="#security-issue-management" title="Permalink to this headline">¶</a></h3>
+<p>In order to quickly respond to security threats towards the Zephyr RTOS,
+a well-defined security issue management needs to be established.</p>
+<p>Such issues shall be reported through the Zephyr Jira bug tracking
+system. Some JIRA modifications will be necessary to accommodate
+management of security issues. In addition, there will be guidelines
+that govern visibility, control, and resolution of security issues. The
+following is the current proposal:</p>
+<ul class="simple">
+<li>A boolean field shall be added to JIRA bugs to mark it security
+sensitive (or any other name that makes sense). This renders the
+entry invisible to anyone except as described below.</li>
+<li>Security sensitive bugs are only accessible (view/modify) to members
+of the Security Group; members of this Security Group are:<ul>
+<li>members of the Security Subcommittee</li>
+<li>other as proposed and ratified Security Subcommittee, who will
+also have the authority to remove others</li>
+<li>the reporter</li>
+<li>Ability to add other users for individual issues</li>
+</ul>
+</li>
+<li>Security Subcommittee meetings have to review the embargoed bugs on
+every meeting with more than three people in attendance. Said
+review process shall decide if new issues needs to be embargoed
+or not.</li>
+<li>Security sensitive bugs shall be made public (by removing the
+security sensitive indicator) after an embargo period of TBD
+days. The Security Subcommittee is the only entity with authority
+to extend the embargo period on a case by case basis; the JIRA
+entry should be updated with the rationale for the embargo
+extension so at some point said rationale will be made public.If
+the Security Subcommittee does not act upon a security sensitive
+bug after its TBD days of embargo are over, it shall be
+automatically made public by removing the security sensitive
+setting.</li>
+<li>Likewise, there shall be code repositories marked as security
+sensitive, accessible only to the Security Group members where
+the code to fix said issues is being worked on and reviewed. The
+person/s contributing the fix shall also have access, but fix
+contributors shall have only access to the tree for said fix, not
+to other security sensitive trees.</li>
+<li>A CVE space shall be allocated to assign Zephyr issues when the SWG
+decides such is needed.</li>
+<li>The severity of the issue with regard to security shall be entered by
+the reporter.</li>
+<li>All security relevant issues shall trigger an automated notification
+on the Zephyr security mailing list
+(<a class="reference external" href="mailto:vulnerabilities&#37;&#52;&#48;zephyrproject&#46;org">vulnerabilities<span>&#64;</span>zephyrproject<span>&#46;</span>org</a>).  Any member of the security
+board can then triage the severity of the issue according to the
+<a class="reference external" href="https://www.first.org/cvss/specification-document">Common Vulnerability Scoring System v3.0</a></li>
+<li>Depending on the resulting severity score of the issue, the issue is
+prioritized and assigned to the owner of the affected module.
+Additionally, the system security architect and the security
+architect of the module are notified and shall take the
+responsibility to mitigate the issue and review the solution or
+counter-measure. In any case, the security issue shall be
+documented centrally, including the affected modules, software
+releases, and applicable workarounds for immediate mitigation. A
+list of known security issues per public release of the Zephyr
+shall be published and maintained by the security board after a
+risk assessment.</li>
+</ul>
+</div>
+<div class="section" id="threat-modeling-and-mitigation">
+<h3>Threat Modeling and Mitigation<a class="headerlink" href="#threat-modeling-and-mitigation" title="Permalink to this headline">¶</a></h3>
+<p>The modeling of security threats against the Zephyr RTOS is required for
+the development of an accurate security architecture and for most
+certification schemes. The first step of this process is the definition
+of assets to be protected by the system. The next step then models how
+these assets are protected by the system and which threats against them
+are present. After a threat has been identified, a corresponding threat
+model is created. This model contains the asset and system
+vulnerabilities, as well as the description of the potential exploits of
+these vulnerabilities. Additionally, the impact on the asset, the module
+it resides in, and the overall system is to be estimated. This threat
+model is then considered in the module and system security architecture
+and appropriate counter-measures are defined to mitigate the threat or
+limit the impact of exploits.</p>
+<p>In short, the threat modeling process can be separated into these steps
+(adapted from <a class="reference external" href="https://www.owasp.org/index.php/Application_Threat_Modeling">Application Thread Modeling</a>:</p>
+<ol class="arabic simple">
+<li>Definition of assets</li>
+<li>Application decomposition and creation of appropriate data flow
+diagrams (DFDs)</li>
+<li>Threat identification and categorization using the <a class="reference external" href="https://msdn.microsoft.com/en-us/library/ee823878%28v=cs.20%29.aspx">STRIDE</a> and
+<a class="reference external" href="https://www.first.org/cvss/specification-document">CVSS</a> approaches</li>
+<li>Determination of countermeasures and other mitigation approaches</li>
+</ol>
+<p>This procedure shall be carried out during the design phase of modules
+and before major changes of the module or system architecture.
+Additionally, new models shall be created or existing ones shall be
+updated whenever new vulnerabilities or exploits are discovered. During
+security reviews, the threat models and the mitigation techniques shall
+be evaluated by the responsible security architect.</p>
+<p>From these threat models and mitigation techniques tests shall be
+derived that prove the effectiveness of the countermeasures. These tests
+shall be integrated into the continuous integration workflow to ensure
+that the security is not impaired by regressions.</p>
+</div>
+<div class="section" id="vulnerability-analyses">
+<h3>Vulnerability Analyses<a class="headerlink" href="#vulnerability-analyses" title="Permalink to this headline">¶</a></h3>
+<p>In order to find weak spots in the software implementation,
+vulnerability analyses (VA) shall be performed. Of special interest are
+investigations on cryptographic algorithms, critical OS tasks, and
+connectivity protocols.</p>
+<p>On a pure software level, this encompasses</p>
+<ul class="simple">
+<li><strong>Penetration testing</strong> of the RTOS on a particular hardware
+platform, which involves testing the respective Zephyr OS
+configuration and hardware as one system.</li>
+<li><strong>Side channel attacks</strong> (timing invariance, power invariance, etc.)
+should be considered. For instance, ensuring <strong>timing
+invariance</strong> of the cryptographic algorithms and modules is
+required to reduce the attack surface. This applies to both the
+software implementations and when using cryptographic hardware.</li>
+<li><strong>Fuzzing tests</strong> shall be performed on both exposed APIs and
+protocols.</li>
+</ul>
+<p>The list given above serves primarily illustration purposes. For each
+module and for the complete Zephyr system (in general on a particular
+hardware platform), a suitable VA plan shall be created and executed.
+The findings of these analyses shall be considered in the security issue
+management process, and learnings shall be formulated as guidelines and
+incorporated into the secure coding guide.</p>
+<p>If possible (as in case of fuzzing analyses), these tests shall be
+integrated into the continuous integration process.</p>
+</div>
+</div>
+<div class="section" id="security-certification">
+<h2>Security Certification<a class="headerlink" href="#security-certification" title="Permalink to this headline">¶</a></h2>
+<p>One goal of creating a secure branch of the Zephyr RTOS is to create a
+certifiable system or certifiable submodules thereof. The certification
+scope and scheme is yet to be decided. However, many certification such
+as Common Criteria <a class="reference internal" href="security-citations.html#ccitse12" id="id9">[CCITSE12]</a> require evidence that the evaluation
+claims are indeed fulfilled, so a general certification process is
+outlined in the following. Based on the final choices for the
+certification scheme and evaluation level, this process needs to be
+refined.</p>
+<div class="section" id="generic-certification-process">
+<h3>Generic Certification Process<a class="headerlink" href="#generic-certification-process" title="Permalink to this headline">¶</a></h3>
+<p>In general, the steps towards a certification or precertification
+(compare <a class="reference internal" href="security-citations.html#micr16" id="id10">[MICR16]</a>) are:</p>
+<ol class="arabic simple">
+<li>The <strong>definition of assets</strong> to be protected within the Zephyr RTOS.
+Potential candidates are confidential information such as
+cryptographic keys, user data such as communication logs, and
+potentially IP of the vendor or manufacturer.</li>
+<li>Developing a <strong>threat model</strong> and <strong>security architecture</strong> to
+protect the assets against exploits of vulnerabilities of the
+system. As a complete threat model includes the overall product
+including the hardware platform, this might be realized by a
+split model containing a precertified secure branch of Zephyr
+which the vendor could use to certify their Zephyr-enabled
+product.</li>
+<li>Formulating an <strong>evaluation target</strong> that includes the
+<strong>certification claims</strong> on the security of the assets to be
+evaluated and certified, as well as assumptions on the operating
+conditions.</li>
+<li>Providing <strong>proof</strong> that the claims are fulfilled. This includes
+consistent documentation of the security development process,
+etc.</li>
+</ol>
+<p>These steps are partially covered in previous sections as well. In
+contrast to these sections, the certification process only requires to
+consider those components that shall be covered by the certification.
+The security architecture, for example, considers assets on system level
+and might include items not relevant for the certification.</p>
+</div>
+<div class="section" id="certification-options">
+<h3>Certification Options<a class="headerlink" href="#certification-options" title="Permalink to this headline">¶</a></h3>
+<p>For the security certification as such, the following options can be
+pursued:</p>
+<ol class="arabic simple">
+<li><strong>Abstract precertification of Zephyr as a pure software system:</strong>
+this option requires assumptions on the underlying hardware
+platform and the final application running on top of Zephyr. If
+these assumptions are met by the hardware and the application, a
+full certification can be more easily achieved. This option is
+the most flexible approach but puts the largest burden on the
+product vendor.</li>
+<li><strong>Certification of Zephyr on specific hardware platform without a
+specific application in mind:</strong> this scenario describes the
+enablement of a secure platform running the Zephyr RTOS. The
+hardware manufacturer certifies the platform under defined
+assumptions on the application. If these are met, the final
+product can be certified with little effort.</li>
+<li><strong>Certification of an actual product:</strong> in this case, a full product
+including a specific hardware, the Zephyr RTOS, and an
+application is certified.</li>
+</ol>
+<p>In all three cases, the certification scheme (e.g. FIPS 140-2 <a class="reference internal" href="security-citations.html#nist02" id="id11">[NIST02]</a>
+or Common Criteria <a class="reference internal" href="security-citations.html#ccitse12" id="id12">[CCITSE12]</a>), the scope of the certification
+(main-stream Zephyr, security branch, or certain modules), and the
+certification/assurance level need to be determined.</p>
+<p>In case of partial certifications (options 1 and 2), assumptions on
+hardware and/or software are required for certifications. These can
+include <a class="reference internal" href="security-citations.html#ghs10" id="id13">[GHS10]</a></p>
+<ul class="simple">
+<li><strong>Appropriate physical security</strong> of the hardware platform and its
+environment.</li>
+<li><strong>Sufficient protection of storage and timing channels</strong>  on
+the hardware platform itself and all connected devices. (No mentioning of
+remote connections.)</li>
+<li>Only <strong>trusted/assured applications</strong> running on the device</li>
+<li>The device and its software stack is configured and operated by
+<strong>properly trained and trusted individuals</strong> with no malicious
+intent.</li>
+</ul>
+<p>These assumptions shall be part of the security claim and evaluation
+target documents.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="security-citations.html#security-citations"><span class="std std-ref">Security Document Citations</span></a></p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="secure-coding.html" class="btn btn-neutral float-right" title="Secure Coding Guidelines" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="security.html" class="btn btn-neutral" title="Zephyr Project Security" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BT_CTLR_DUP_FILTER_LEN
+
+.. option:: CONFIG_BT_CTLR_DUP_FILTER_LEN
+.. _CONFIG_BT_CTLR_DUP_FILTER_LEN:
+
+Set the number of unique BLE addresses that can be filtered as
+duplicates while scanning.
+
+
+
+:Symbol:           BT_CTLR_DUP_FILTER_LEN
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Number of addresses in the scan duplicate filter" if BT_OBSERVER (value: "n")
+:Default values:
+
+ *  16 (value: "n")
+ *   Condition: BT_OBSERVER (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:44

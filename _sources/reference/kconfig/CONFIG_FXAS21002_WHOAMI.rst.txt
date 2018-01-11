@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: FXAS21002_WHOAMI
+
+.. option:: CONFIG_FXAS21002_WHOAMI
+.. _CONFIG_FXAS21002_WHOAMI:
+
+The datasheet defines the value of the WHOAMI register, but some
+pre-production devices can have a different value. It is unlikely you
+should need to change this configuration option from the default.
+
+
+
+:Symbol:           FXAS21002_WHOAMI
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0x00, 0xff]
+:Prompts:
+
+ *  "WHOAMI value"
+:Default values:
+
+ *  0xd7 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FXAS21002 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/fxas21002/Kconfig:34

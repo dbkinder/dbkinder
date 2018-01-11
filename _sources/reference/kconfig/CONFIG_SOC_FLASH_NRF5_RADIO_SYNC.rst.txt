@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: SOC_FLASH_NRF5_RADIO_SYNC
+
+.. option:: CONFIG_SOC_FLASH_NRF5_RADIO_SYNC
+.. _CONFIG_SOC_FLASH_NRF5_RADIO_SYNC:
+
+Enable synchronization between flash memory driver and radio.
+
+
+
+:Symbol:           SOC_FLASH_NRF5_RADIO_SYNC
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Nordic nRF5x flash driver synchronized with radio" if SOC_FLASH_NRF5 && BT_CTLR (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: SOC_FLASH_NRF5 && BT_CTLR (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../drivers/flash/Kconfig:141

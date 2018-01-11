@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: NET_CONTEXT_NET_PKT_POOL
+
+.. option:: CONFIG_NET_CONTEXT_NET_PKT_POOL
+.. _CONFIG_NET_CONTEXT_NET_PKT_POOL:
+
+If enabled, then it is possible to fine-tune network packet pool
+for each context when sending network data. If this setting is
+enabled, then you should define the context pools in your application
+using NET_PKT_TX_POOL_DEFINE() and NET_PKT_DATA_POOL_DEFINE()
+macros and tie these pools to desired context using the
+net_context_setup_pools() function.
+
+
+
+:Symbol:           NET_CONTEXT_NET_PKT_POOL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable net_buf TX pool / context"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: NET_TCP && NET_6LO (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig:231

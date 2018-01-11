@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: ARC_STACK_CHECKING
+
+.. option:: CONFIG_ARC_STACK_CHECKING
+.. _CONFIG_ARC_STACK_CHECKING:
+
+ARCV2 has a special feature allowing to check stack overflows. This
+enables code that allows using this debug feature
+
+
+
+:Symbol:           ARC_STACK_CHECKING
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: HW_STACK_PROTECTION (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_THREAD_STACK_INFO`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ARC (value: "n")
+:Locations:
+ * ../arch/arc/Kconfig:103

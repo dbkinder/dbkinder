@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: LSM6DSL_ACCEL_SAMPLING_RATE
+
+.. option:: CONFIG_LSM6DSL_ACCEL_SAMPLING_RATE
+.. _CONFIG_LSM6DSL_ACCEL_SAMPLING_RATE:
+
+Specify the default accelerometer output data rate expressed in
+samples per second (Hz).
+Data rates supported by the chip are 0, 2, 13, 26, 52, 104, 208,
+416, 833, 1660, 3330, 6660.
+
+
+
+:Symbol:           LSM6DSL_ACCEL_SAMPLING_RATE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Output data rate" if LSM6DSL (value: "n")
+:Default values:
+
+ *  26 (value: "n")
+ *   Condition: LSM6DSL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LSM6DSL && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lsm6dsl/Kconfig:83

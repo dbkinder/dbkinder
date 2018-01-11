@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: SOC_SERIES_SAM3X
+
+.. option:: CONFIG_SOC_SERIES_SAM3X
+.. _CONFIG_SOC_SERIES_SAM3X:
+
+Enable support for Atmel SAM3X Cortex-M3 microcontrollers.
+Part No.: SAM3X8E
+
+
+:Symbol:           SOC_SERIES_SAM3X
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Atmel SAM3X MCU"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_CPU_CORTEX_M`
+ *  :option:`CONFIG_CPU_CORTEX_M3`
+ *  :option:`CONFIG_SOC_FAMILY_SAM`
+ *  :option:`CONFIG_SYS_POWER_LOW_POWER_STATE_SUPPORTED`
+ *  :option:`CONFIG_CPU_HAS_SYSTICK`
+ *  :option:`CONFIG_ASF`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/arm/soc/atmel_sam/sam3x/Kconfig.series:9

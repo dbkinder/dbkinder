@@ -1,0 +1,44 @@
+:orphan:
+
+.. title:: HTTP_CLIENT
+
+.. option:: CONFIG_HTTP_CLIENT
+.. _CONFIG_HTTP_CLIENT:
+
+Enables HTTP client routines.
+
+
+
+:Symbol:           HTTP_CLIENT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "HTTP client support"
+ *  "HTTP client support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_HTTP_PARSER`
+ *  :option:`CONFIG_HTTP_PARSER_URL`
+ *  :option:`CONFIG_NET_APP_CLIENT`
+ *  :option:`CONFIG_HTTP_PARSER`
+ *  :option:`CONFIG_HTTP_PARSER_URL`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ HTTP && NETWORKING && !HTTP_APP (value: "n")
+:Locations:
+ * ../subsys/net/lib/http/Kconfig:29
+ * ../subsys/net/lib/http/Kconfig:75

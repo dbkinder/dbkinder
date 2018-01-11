@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: BT_SPI
+
+.. option:: CONFIG_BT_SPI
+.. _CONFIG_BT_SPI:
+
+Supports Bluetooth ICs using SPI as the communication protocol.
+HCI packets are sent and received as single Byte transfers,
+prepended after a known header.  Headers may vary per device, so
+additional platform specific knowledge may need to be added as
+devices are.
+
+
+
+:Symbol:           BT_SPI
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SPI HCI" if SPI (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT && !BT_CTLR && BT_HCI (value: "n")
+:Locations:
+ * ../drivers/bluetooth/hci/Kconfig:37

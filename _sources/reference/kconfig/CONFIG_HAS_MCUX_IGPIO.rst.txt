@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: HAS_MCUX_IGPIO
+
+.. option:: CONFIG_HAS_MCUX_IGPIO
+.. _CONFIG_HAS_MCUX_IGPIO:
+
+Set if the iMX GPIO (IGPIO) module is present in the SoC.
+
+
+
+:Symbol:           HAS_MCUX_IGPIO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ SOC_MIMXRT1051 && ARM || SOC_MIMXRT1052 && ARM (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ HAS_MCUX (value: "n")
+:Locations:
+ * ../ext/hal/nxp/mcux/Kconfig:33

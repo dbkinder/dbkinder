@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: HAS_SYSMPU
+
+.. option:: CONFIG_HAS_SYSMPU
+.. _CONFIG_HAS_SYSMPU:
+
+Enable MPU
+
+
+
+:Symbol:           HAS_SYSMPU
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable MPU" if CPU_HAS_MPU (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: CPU_HAS_MPU (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_NXP_MPU` if CPU_HAS_MPU (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/nxp_kinetis/Kconfig:43

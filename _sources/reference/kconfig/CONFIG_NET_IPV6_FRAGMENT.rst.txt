@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: NET_IPV6_FRAGMENT
+
+.. option:: CONFIG_NET_IPV6_FRAGMENT
+.. _CONFIG_NET_IPV6_FRAGMENT:
+
+IPv6 fragmentation is disabled by default. This saves memory and
+should not cause issues normally as we support anyway the minimum
+length IPv6 packets (1280 bytes). If you enable fragmentation
+support, please increase amount of RX data buffers so that larger
+than 1280 byte packets can be received.
+
+
+
+:Symbol:           NET_IPV6_FRAGMENT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Support IPv6 fragmentation"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE && NET_IPV6 (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig.ipv6:43

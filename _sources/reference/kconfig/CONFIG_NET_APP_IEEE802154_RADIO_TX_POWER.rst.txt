@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_APP_IEEE802154_RADIO_TX_POWER
+
+.. option:: CONFIG_NET_APP_IEEE802154_RADIO_TX_POWER
+.. _CONFIG_NET_APP_IEEE802154_RADIO_TX_POWER:
+
+The TX power to use by default in the sample application.
+See NET_L2_IEEE802154_RADIO_DFLT_TX_POWER for more info.
+
+
+
+:Symbol:           NET_APP_IEEE802154_RADIO_TX_POWER
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "IEEE 802.15.4 TX power in dbm"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP_SETTINGS && NETWORKING && (NET_L2_IEEE802154 || IEEE802154_RAW_MODE) (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:222

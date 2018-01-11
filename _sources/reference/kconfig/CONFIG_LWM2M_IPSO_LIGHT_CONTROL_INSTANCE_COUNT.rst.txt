@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: LWM2M_IPSO_LIGHT_CONTROL_INSTANCE_COUNT
+
+.. option:: CONFIG_LWM2M_IPSO_LIGHT_CONTROL_INSTANCE_COUNT
+.. _CONFIG_LWM2M_IPSO_LIGHT_CONTROL_INSTANCE_COUNT:
+
+This setting establishes the total count of IPSO Light Control
+instances available to the LWM2M client.
+
+
+
+:Symbol:           LWM2M_IPSO_LIGHT_CONTROL_INSTANCE_COUNT
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 20]
+:Prompts:
+
+ *  "Maximum # of IPSO Light Control object instances" if LWM2M_IPSO_LIGHT_CONTROL (value: "n")
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: LWM2M_IPSO_LIGHT_CONTROL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING && LWM2M_IPSO_SUPPORT (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig.ipso:43

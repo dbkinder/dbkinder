@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: BT_HCI_VS_EXT_DETECT
+
+.. option:: CONFIG_BT_HCI_VS_EXT_DETECT
+.. _CONFIG_BT_HCI_VS_EXT_DETECT:
+
+Use some heuristics to try to guess in advance whether the controller
+supports the HCI vendor extensions in advance, in order to prevent
+sending vendor commands to controller which may interpret them in
+completely different ways.
+
+
+
+:Symbol:           BT_HCI_VS_EXT_DETECT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Use heuristics to guess HCI vendor extensions support in advance" if BT_HCI_VS_EXT && !BT_CTLR (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: BT_HCI_VS_EXT && !BT_CTLR && (BOARD_QEMU_X86 || BOARD_QEMU_CORTEX_M3) (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI (value: "n")
+:Locations:
+ * ../subsys/bluetooth/common/Kconfig:18

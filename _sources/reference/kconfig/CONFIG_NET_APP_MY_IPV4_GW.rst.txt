@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: NET_APP_MY_IPV4_GW
+
+.. option:: CONFIG_NET_APP_MY_IPV4_GW
+.. _CONFIG_NET_APP_MY_IPV4_GW:
+
+Static gateway to use if not overridden by DHCP. Use empty value to
+skip setting static value.
+
+
+
+:Symbol:           NET_APP_MY_IPV4_GW
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "My IPv4 gateway"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP_SETTINGS && NETWORKING && NET_IPV4 (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:188

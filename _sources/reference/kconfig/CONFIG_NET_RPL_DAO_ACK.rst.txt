@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_RPL_DAO_ACK
+
+.. option:: CONFIG_NET_RPL_DAO_ACK
+.. _CONFIG_NET_RPL_DAO_ACK:
+
+Node expecting DAO ACK for DAO message. Enable if interested
+in status of DAO message.
+
+
+
+:Symbol:           NET_RPL_DAO_ACK
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Node expecting DAO ACK" if NET_RPL (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: NET_RPL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && NET_RPL (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig.rpl:209

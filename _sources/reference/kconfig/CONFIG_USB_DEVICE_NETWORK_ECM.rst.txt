@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: USB_DEVICE_NETWORK_ECM
+
+.. option:: CONFIG_USB_DEVICE_NETWORK_ECM
+.. _CONFIG_USB_DEVICE_NETWORK_ECM:
+
+Ethernet Control Model (ECM) is a part of  Communications Device
+Class (CDC) USB protocol specified by USB-IF.
+
+
+
+:Symbol:           USB_DEVICE_NETWORK_ECM
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "USB Ethernet Control Model (ECM) Networking device"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_USB_DEVICE_NETWORK`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_STACK (value: "n")
+:Locations:
+ * ../subsys/usb/class/netusb/Kconfig:17

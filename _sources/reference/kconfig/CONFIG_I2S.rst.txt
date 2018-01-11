@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: I2S
+
+.. option:: CONFIG_I2S
+.. _CONFIG_I2S:
+
+Enable support for the I2S (Inter-IC Sound) hardware bus.
+
+
+
+:Symbol:           I2S
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "I2S bus drivers"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../drivers/i2s/Kconfig:10

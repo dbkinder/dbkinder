@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: MICROBIT_DISPLAY_PIN_GRANULARITY
+
+.. option:: CONFIG_MICROBIT_DISPLAY_PIN_GRANULARITY
+.. _CONFIG_MICROBIT_DISPLAY_PIN_GRANULARITY:
+
+By default, the micro:bit display driver will update the GPIO
+pins of the display (pins 4 through 15) by accessing the entire
+GPIO port. This is done for efficiency, however it may interfere
+with other peripherals connected to the same GPIO port. Select
+this option if other peripherals are connected to the same GPIO
+port.
+
+
+
+:Symbol:           MICROBIT_DISPLAY_PIN_GRANULARITY
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Access the GPIO on a per-pin instead of per-port basis"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MICROBIT_DISPLAY (value: "n")
+:Locations:
+ * ../drivers/display/Kconfig:20

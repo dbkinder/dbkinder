@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: LED_STRIP_INIT_PRIORITY
+
+.. option:: CONFIG_LED_STRIP_INIT_PRIORITY
+.. _CONFIG_LED_STRIP_INIT_PRIORITY:
+
+System initialization priority for LED strip drivers.
+
+
+
+:Symbol:           LED_STRIP_INIT_PRIORITY
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "LED strip initialization priority"
+:Default values:
+
+ *  90 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LED_STRIP (value: "n")
+:Locations:
+ * ../drivers/led_strip/Kconfig:32

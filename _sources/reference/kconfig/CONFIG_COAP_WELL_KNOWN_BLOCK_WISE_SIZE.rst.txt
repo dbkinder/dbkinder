@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: COAP_WELL_KNOWN_BLOCK_WISE_SIZE
+
+.. option:: CONFIG_COAP_WELL_KNOWN_BLOCK_WISE_SIZE
+.. _CONFIG_COAP_WELL_KNOWN_BLOCK_WISE_SIZE:
+
+Maximum size of CoAP block. Valid values are 16, 32, 64, 128,
+256, 512 and 1024.
+
+
+
+:Symbol:           COAP_WELL_KNOWN_BLOCK_WISE_SIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "CoAP ./well-known/core services block wise support" if COAP_WELL_KNOWN_BLOCK_WISE (value: "n")
+:Default values:
+
+ *  32 (value: "n")
+ *   Condition: COAP_WELL_KNOWN_BLOCK_WISE (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/coap/Kconfig:36

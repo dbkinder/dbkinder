@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: SPIM0_NRF52
+
+.. option:: CONFIG_SPIM0_NRF52
+.. _CONFIG_SPIM0_NRF52:
+
+nRF52 SPI Master with EasyDMA on port 0
+
+
+
+:Symbol:           SPIM0_NRF52
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "nRF52 SPIM0" if SOC_SERIES_NRF52X (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SPI_0 && !I2C_0 && SPI_LEGACY_API && SPI && SPI_NRF5 (value: "n")
+:Locations:
+ * ../drivers/spi/Kconfig.nrf5_legacy:30

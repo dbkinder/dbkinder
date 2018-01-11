@@ -1,0 +1,30 @@
+:orphan:
+
+.. title:: BT_DEBUG
+
+.. option:: CONFIG_BT_DEBUG
+.. _CONFIG_BT_DEBUG:
+
+The configuration item CONFIG_BT_DEBUG:
+
+:Symbol:           BT_DEBUG
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BT_HCI && BT && BT_HCI && BT_DEBUG_LOG || BT_HCI && BT && BT_HCI && BT_DEBUG_MONITOR (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI (value: "n")
+:Locations:
+ * ../subsys/bluetooth/common/Kconfig:35

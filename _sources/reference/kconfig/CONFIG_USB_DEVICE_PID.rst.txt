@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: USB_DEVICE_PID
+
+.. option:: CONFIG_USB_DEVICE_PID
+.. _CONFIG_USB_DEVICE_PID:
+
+USB device product ID. MUST be configured by vendor.
+
+
+
+:Symbol:           USB_DEVICE_PID
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "USB Product ID"
+:Default values:
+
+ *  0xBEEF (value: "n")
+ *   Condition: (none)
+ *  0x0AB6 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ USB && BOARD_TINYTILE (value: "n")
+:Locations:
+ * ../subsys/usb/Kconfig:46
+ * ../boards/x86/tinytile/Kconfig.defconfig:27

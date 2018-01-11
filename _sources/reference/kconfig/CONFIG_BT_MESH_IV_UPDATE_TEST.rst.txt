@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: BT_MESH_IV_UPDATE_TEST
+
+.. option:: CONFIG_BT_MESH_IV_UPDATE_TEST
+.. _CONFIG_BT_MESH_IV_UPDATE_TEST:
+
+This option removes the 96 hour limit of the IV Update
+Procedure and lets the state be changed at any time.
+
+
+
+:Symbol:           BT_MESH_IV_UPDATE_TEST
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Test the IV Update Procedure"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:88

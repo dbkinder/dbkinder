@@ -1,0 +1,30 @@
+:orphan:
+
+.. title:: AMG88XX_TRIGGER
+
+.. option:: CONFIG_AMG88XX_TRIGGER
+.. _CONFIG_AMG88XX_TRIGGER:
+
+The configuration item CONFIG_AMG88XX_TRIGGER:
+
+:Symbol:           AMG88XX_TRIGGER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ AMG88XX && SENSOR && GPIO && AMG88XX_TRIGGER_GLOBAL_THREAD || AMG88XX && SENSOR && GPIO && AMG88XX_TRIGGER_OWN_THREAD (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ AMG88XX && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/amg88xx/Kconfig:61

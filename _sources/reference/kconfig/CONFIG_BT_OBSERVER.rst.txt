@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: BT_OBSERVER
+
+.. option:: CONFIG_BT_OBSERVER
+.. _CONFIG_BT_OBSERVER:
+
+Select this for LE Observer role support.
+
+
+
+:Symbol:           BT_OBSERVER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Observer Role support" if !BT_CENTRAL (value: "y")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BT_HCI && BT && BT_CENTRAL (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT (value: "n")
+:Locations:
+ * ../subsys/bluetooth/Kconfig:76

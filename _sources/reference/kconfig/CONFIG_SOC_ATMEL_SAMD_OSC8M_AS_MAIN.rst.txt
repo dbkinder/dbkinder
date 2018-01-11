@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: SOC_ATMEL_SAMD_OSC8M_AS_MAIN
+
+.. option:: CONFIG_SOC_ATMEL_SAMD_OSC8M_AS_MAIN
+.. _CONFIG_SOC_ATMEL_SAMD_OSC8M_AS_MAIN:
+
+The configuration item CONFIG_SOC_ATMEL_SAMD_OSC8M_AS_MAIN:
+
+:Symbol:           SOC_ATMEL_SAMD_OSC8M_AS_MAIN
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "OSC8M"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_SAMD && ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/atmel_sam0/samd/Kconfig.soc:84

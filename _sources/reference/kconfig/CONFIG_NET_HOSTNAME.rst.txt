@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: NET_HOSTNAME
+
+.. option:: CONFIG_NET_HOSTNAME
+.. _CONFIG_NET_HOSTNAME:
+
+The string should be a valid hostname.
+
+
+
+:Symbol:           NET_HOSTNAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "The hostname of this device"
+:Default values:
+
+ *  "zephyr"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_HOSTNAME_ENABLE && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/Kconfig.hostname:18

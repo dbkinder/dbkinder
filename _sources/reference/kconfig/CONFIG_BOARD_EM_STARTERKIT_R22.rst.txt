@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_EM_STARTERKIT_R22
+
+.. option:: CONFIG_BOARD_EM_STARTERKIT_R22
+.. _CONFIG_BOARD_EM_STARTERKIT_R22:
+
+The configuration item CONFIG_BOARD_EM_STARTERKIT_R22:
+
+:Symbol:           BOARD_EM_STARTERKIT_R22
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "2.2"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BOARD_EM_STARTERKIT (value: "n")
+:Locations:
+ * ../boards/arc/em_starterkit/Kconfig:15

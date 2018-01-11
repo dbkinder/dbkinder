@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_OLIMEX_STM32_P405
+
+.. option:: CONFIG_BOARD_OLIMEX_STM32_P405
+.. _CONFIG_BOARD_OLIMEX_STM32_P405:
+
+The configuration item CONFIG_BOARD_OLIMEX_STM32_P405:
+
+:Symbol:           BOARD_OLIMEX_STM32_P405
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "OLIMEX-STM32-P405 Development Board" if SOC_STM32F405XG (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/olimex_stm32_p405/Kconfig.board:7

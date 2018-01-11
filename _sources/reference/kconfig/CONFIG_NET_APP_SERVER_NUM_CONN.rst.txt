@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: NET_APP_SERVER_NUM_CONN
+
+.. option:: CONFIG_NET_APP_SERVER_NUM_CONN
+.. _CONFIG_NET_APP_SERVER_NUM_CONN:
+
+Tells how many simultaneous incoming connections the server instance can
+support. The value of CONFIG_NET_TCP_BACKLOG_SIZE must be greater than
+or equal to CONFIG_NET_APP_SERVER_NUM_CONN.
+
+
+
+:Symbol:           NET_APP_SERVER_NUM_CONN
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Number of simultaneous incoming connections" if NET_APP_SERVER (value: "n")
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: NET_APP_SERVER (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:82

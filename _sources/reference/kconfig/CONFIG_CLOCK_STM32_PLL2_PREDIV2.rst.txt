@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: CLOCK_STM32_PLL2_PREDIV2
+
+.. option:: CONFIG_CLOCK_STM32_PLL2_PREDIV2
+.. _CONFIG_CLOCK_STM32_PLL2_PREDIV2:
+
+PREDIV2 is PLL2 prescaler, allowed values: 1 - 16.
+
+
+
+:Symbol:           CLOCK_STM32_PLL2_PREDIV2
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 16]
+:Prompts:
+
+ *  "PREDIV2 Prescaler" if SOC_STM32F10X_CONNECTIVITY_LINE_DEVICE && CLOCK_STM32_PLL_SRC_PLL2 (value: "n")
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: SOC_STM32F10X_CONNECTIVITY_LINE_DEVICE && CLOCK_STM32_PLL_SRC_PLL2 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_FAMILY_STM32 && CLOCK_CONTROL && CLOCK_CONTROL_STM32_CUBE && SOC_SERIES_STM32F1X (value: "n")
+:Locations:
+ * ../drivers/clock_control/Kconfig.stm32:161

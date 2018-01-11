@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: NET_APP_SERVER
+
+.. option:: CONFIG_NET_APP_SERVER
+.. _CONFIG_NET_APP_SERVER:
+
+Enables net app library server APIs.
+
+
+
+:Symbol:           NET_APP_SERVER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable server support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ HTTP && NETWORKING && HTTP_APP && HTTP_SERVER (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:76

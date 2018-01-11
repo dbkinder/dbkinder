@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>BSD Sockets compatible API &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="Networking" href="networking.html"/>
+        <link rel="next" title="L2 Stack and Drivers" href="l2-and-drivers.html"/>
+        <link rel="prev" title="Network Connectivity API" href="networking-api-usage.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../subsystems.html">Subsystems</a> /
+      
+          <a href="networking.html">Networking</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../subsystems.html">Subsystems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_library.html">Standard C Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/index.html">Logging</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="networking.html">Networking</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ip-stack-architecture.html">IP Stack Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="networking-api-usage.html">Network Connectivity API</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">BSD Sockets compatible API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="l2-and-drivers.html">L2 Stack and Drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network-management-api.html">Network Management API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html">Network Application API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#initialization">Initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#client-server-applications">Client / Server Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffers.html">Network Buffers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qemu_setup.html">Networking with QEMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usbnet_setup.html">USB Device Networking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../power_management.html">Power Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor.html">Sensor Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shell.html">Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usb/usb.html">USB device stack</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="bsd-sockets-compatible-api">
+<span id="bsd-sockets-api"></span><h1>BSD Sockets compatible API<a class="headerlink" href="#bsd-sockets-compatible-api" title="Permalink to this headline">¶</a></h1>
+<p>Zephyr offers an implementation of a subset of the BSD Sockets API (a part
+of the POSIX standard). This API allows to reuse existing programming experience
+and port existing simple networking applications to Zephyr.</p>
+<p>Here are the key requirements and concepts which governed BSD Sockets
+compatible API implementation for Zephyr:</p>
+<ul class="simple">
+<li>Should have minimal overhead, similar to the requirement for other
+Zephyr subsystems.</li>
+<li>Should be implemented on top of
+<a class="reference internal" href="networking-api-usage.html#networking-api-usage"><span class="std std-ref">native networking API</span></a> to keep modular
+design.</li>
+<li>Should be namespaced by default, to avoid name conflicts with well-known
+names like <code class="docutils literal"><span class="pre">close()</span></code>, which may be part of libc or other POSIX
+compatibility libraries. If enabled, should also expose native POSIX
+names.</li>
+</ul>
+<p>BSD Sockets compatible API is enabled using <a class="reference internal" href="../../reference/kconfig/CONFIG_NET_SOCKETS.html#cmdoption-arg-config-net-sockets"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_SOCKETS</span></code></a>
+config option and implements the following operations: <code class="docutils literal"><span class="pre">socket()</span></code>,
+<code class="docutils literal"><span class="pre">close()</span></code>, <code class="docutils literal"><span class="pre">recv()</span></code>, <code class="docutils literal"><span class="pre">send()</span></code>, <code class="docutils literal"><span class="pre">connect()</span></code>, <code class="docutils literal"><span class="pre">bind()</span></code>,
+<code class="docutils literal"><span class="pre">listen()</span></code>, <code class="docutils literal"><span class="pre">fcntl()</span></code> (to set non-blocking mode), <code class="docutils literal"><span class="pre">poll()</span></code>.</p>
+<p>Based on the namespacing requirements above, these operations are by
+default exposed as functions with <code class="docutils literal"><span class="pre">zsock_</span></code> prefix, e.g.
+<code class="xref c c-func docutils literal"><span class="pre">zsock_socket()</span></code> and <code class="xref c c-func docutils literal"><span class="pre">zsock_close()</span></code>. If the config option
+<a class="reference internal" href="../../reference/kconfig/CONFIG_NET_SOCKETS_POSIX_NAMES.html#cmdoption-arg-config-net-sockets-posix-names"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NET_SOCKETS_POSIX_NAMES</span></code></a> is defined, all the functions
+will be also exposed as aliases without the prefix. This includes the
+functions like <code class="docutils literal"><span class="pre">close()</span></code> and <code class="docutils literal"><span class="pre">fcntl()</span></code> (which may conflict with
+functions in libc or other libraries, for example, with the filesystem
+libraries).</p>
+<p>The native BSD Sockets API uses file descriptors to represent sockets. File descriptors
+are small integers, consecutively assigned from zero. Internally, there is usually a table
+mapping file descriptors to internal object pointers. For memory efficiency reasons, the
+Zephyr BSD Sockets compatible API is devoid of such a table. Instead, <code class="docutils literal"><span class="pre">net_context</span></code>
+pointers, cast to an int, are used to represent sockets. Thus, socket identifiers aren’t
+really small integers, so the <code class="docutils literal"><span class="pre">select()</span></code> operation is not available, as it depends on the
+“small int” property of file descriptors. Instead of using <code class="docutils literal"><span class="pre">select()</span></code> then, use the <code class="docutils literal"><span class="pre">poll()</span></code>
+operation, which is generally more efficient.</p>
+<p>The BSD Sockets API (and the POSIX API in general) also treat negative file
+descriptors values in a special way (such values usually mean an
+error). As the Zephyr API uses a pointer value cast to an int for file descriptors, it means
+that the pointer should not have the highest bit set, in other words,
+pointers should not refer to the second (highest) part of the address space.
+For many CPU architectures and SoCs Zephyr supports, user RAM is
+located in the lower half, so the above condition is satisfied. If
+you face an issue with some SoC because of this, please report it to the Zephyr bug
+tracker or mailing list. The decision to use pointers to represent
+sockets might be reworked in the future.</p>
+<p>The final entailment of the design requirements above is that the Zephyr
+API aggressively employs the short-read/short-write property of the POSIX API
+whenever possible (to minimize complexity and overheads). POSIX allows
+for calls like <code class="docutils literal"><span class="pre">recv()</span></code> and <code class="docutils literal"><span class="pre">send()</span></code> to actually process (receive
+or send) less data than requested by the user (on STREAM type sockets).
+For example, a call <code class="docutils literal"><span class="pre">recv(sock,</span> <span class="pre">1000,</span> <span class="pre">0)</span></code> may return 100,
+meaning that only 100 bytes were read (short read), and the application
+needs to retry call(s) to read the remaining 900 bytes.</p>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="l2-and-drivers.html" class="btn btn-neutral float-right" title="L2 Stack and Drivers" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="networking-api-usage.html" class="btn btn-neutral" title="Network Connectivity API" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: CPU_HAS_MPU
+
+.. option:: CONFIG_CPU_HAS_MPU
+.. _CONFIG_CPU_HAS_MPU:
+
+This option is enabled when the CPU has a Memory Protection Unit (MPU).
+
+
+
+:Symbol:           CPU_HAS_MPU
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ SOC_SERIES_BEETLE && ARM || SOC_SERIES_STM32F4X || SOC_SERIES_STM32L4X || SOC_SERIES_KINETIS_K6X || SOC_SERIES_NRF52X || SOC_STM32F303XC && ARM || SOC_STM32F373XC && ARM || SOC_MIMXRT1051 && ARM || SOC_MIMXRT1052 && ARM || SOC_EM7D (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/Kconfig:221

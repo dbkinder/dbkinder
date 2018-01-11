@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: I2C_GPIO
+
+.. option:: CONFIG_I2C_GPIO
+.. _CONFIG_I2C_GPIO:
+
+Enable software driven (bit banging) I2C support using GPIO pins
+
+
+
+:Symbol:           I2C_GPIO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "GPIO bit banging I2C support" if I2C (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: I2C (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_I2C_BITBANG` if I2C (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig.gpio:7

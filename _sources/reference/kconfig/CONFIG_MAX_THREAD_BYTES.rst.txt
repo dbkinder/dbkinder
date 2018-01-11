@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: MAX_THREAD_BYTES
+
+.. option:: CONFIG_MAX_THREAD_BYTES
+.. _CONFIG_MAX_THREAD_BYTES:
+
+Every kernel object will have an associated bitfield to store
+thread permissions for that object. This controls the size of the
+bitfield (in bytes) and imposes a limit on how many threads can
+be created in the system.
+
+
+
+:Symbol:           MAX_THREAD_BYTES
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bytes to use when tracking object thread permissions" if USERSPACE (value: "n")
+:Default values:
+
+ *  2 (value: "n")
+ *   Condition: USERSPACE (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/Kconfig:81

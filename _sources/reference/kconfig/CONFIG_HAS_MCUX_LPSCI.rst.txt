@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: HAS_MCUX_LPSCI
+
+.. option:: CONFIG_HAS_MCUX_LPSCI
+.. _CONFIG_HAS_MCUX_LPSCI:
+
+Set if the low power uart (LPSCI) module is present in the SoC.
+
+
+
+:Symbol:           HAS_MCUX_LPSCI
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ SOC_MKL25Z4 && ARM (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ HAS_MCUX (value: "n")
+:Locations:
+ * ../ext/hal/nxp/mcux/Kconfig:39

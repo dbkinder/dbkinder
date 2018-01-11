@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: SOC_HIFI3_BD5
+
+.. option:: CONFIG_SOC_HIFI3_BD5
+.. _CONFIG_SOC_HIFI3_BD5:
+
+The configuration item CONFIG_SOC_HIFI3_BD5:
+
+:Symbol:           SOC_HIFI3_BD5
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "hifi3_bd5 core"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/xtensa/soc/hifi3_bd5/Kconfig.soc:4

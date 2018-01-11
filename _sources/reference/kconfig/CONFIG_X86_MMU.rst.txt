@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: X86_MMU
+
+.. option:: CONFIG_X86_MMU
+.. _CONFIG_X86_MMU:
+
+This options enables the memory management unit present in x86. Enabling
+this will create boot time page table structure.
+
+
+
+:Symbol:           X86_MMU
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable Memory Management Unit"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ X86 (value: "y")
+:Locations:
+ * ../arch/x86/Kconfig:65

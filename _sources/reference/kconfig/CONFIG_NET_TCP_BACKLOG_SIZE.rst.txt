@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: NET_TCP_BACKLOG_SIZE
+
+.. option:: CONFIG_NET_TCP_BACKLOG_SIZE
+.. _CONFIG_NET_TCP_BACKLOG_SIZE:
+
+The number of simultaneous TCP connection attempts, i.e. outstanding
+TCP connections waiting for initial ACK.
+
+
+
+:Symbol:           NET_TCP_BACKLOG_SIZE
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 128]
+:Prompts:
+
+ *  "Number of simultaneous incoming TCP connections" if NET_TCP (value: "n")
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: NET_TCP (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig:118

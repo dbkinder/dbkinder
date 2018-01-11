@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: SOC_MIMXRT1051
+
+.. option:: CONFIG_SOC_MIMXRT1051
+.. _CONFIG_SOC_MIMXRT1051:
+
+The configuration item CONFIG_SOC_MIMXRT1051:
+
+:Symbol:           SOC_MIMXRT1051
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SOC_MIMXRT1051"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_HAS_MCUX`
+ *  :option:`CONFIG_HAS_MCUX_CCM`
+ *  :option:`CONFIG_HAS_MCUX_IGPIO`
+ *  :option:`CONFIG_HAS_MCUX_LPUART`
+ *  :option:`CONFIG_CPU_HAS_FPU`
+ *  :option:`CONFIG_CPU_HAS_MPU`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/nxp_imx/rt/Kconfig.soc:12

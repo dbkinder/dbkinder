@@ -1,0 +1,46 @@
+:orphan:
+
+.. title:: NET_APP_IEEE802154_SECURITY_LEVEL
+
+.. option:: CONFIG_NET_APP_IEEE802154_SECURITY_LEVEL
+.. _CONFIG_NET_APP_IEEE802154_SECURITY_LEVEL:
+
+The security level to use for the link-layer security part.
+0 means no security
+1 authentication only with a 4 bytes length tag
+2 authentication only with a 8 bytes length tag
+3 authentication only with a 16 bytes length tag
+4 encryption only
+5 encryption/authentication with a 4 bytes length tag
+6 encryption/authentication with a 8 bytes length tag
+7 encryption/authentication with a 16 bytes length tag
+
+
+
+:Symbol:           NET_APP_IEEE802154_SECURITY_LEVEL
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 7]
+:Prompts:
+
+ *  "IEEE 802.15.4 security level (0-7)" if NET_L2_IEEE802154_SECURITY (value: "n")
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: NET_L2_IEEE802154_SECURITY (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP_SETTINGS && NETWORKING && (NET_L2_IEEE802154 || IEEE802154_RAW_MODE) (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:245

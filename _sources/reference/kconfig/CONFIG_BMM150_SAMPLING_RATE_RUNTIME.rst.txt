@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: BMM150_SAMPLING_RATE_RUNTIME
+
+.. option:: CONFIG_BMM150_SAMPLING_RATE_RUNTIME
+.. _CONFIG_BMM150_SAMPLING_RATE_RUNTIME:
+
+Enable alteration of sampling rate attribute at runtime.
+
+
+
+:Symbol:           BMM150_SAMPLING_RATE_RUNTIME
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable dynamic sampling rate"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BMM150 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/bmm150/Kconfig:56

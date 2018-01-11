@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: ENTROPY_DEVICE_RANDOM_GENERATOR
+
+.. option:: CONFIG_ENTROPY_DEVICE_RANDOM_GENERATOR
+.. _CONFIG_ENTROPY_DEVICE_RANDOM_GENERATOR:
+
+Enables a random number generator that uses the enabled
+hardware entropy gathering driver to generate random
+numbers.
+
+
+
+:Symbol:           ENTROPY_DEVICE_RANDOM_GENERATOR
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Use entropy driver to generate random numbers" if ENTROPY_HAS_DRIVER (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ ENTROPY_GENERATOR && HAS_MCUX_RNGA && ENTROPY_GENERATOR && ENTROPY_MCUX_RNGA || ENTROPY_GENERATOR && HAS_MCUX_TRNG && ENTROPY_GENERATOR && ENTROPY_MCUX_TRNG (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../subsys/random/Kconfig:41

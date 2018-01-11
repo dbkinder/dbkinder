@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: MBEDTLS_ENABLE_HEAP
+
+.. option:: CONFIG_MBEDTLS_ENABLE_HEAP
+.. _CONFIG_MBEDTLS_ENABLE_HEAP:
+
+This option enables the mbedtls to use the heap. This setting must
+be global so that various applications and libraries in Zephyr do not
+try to do this themselves as there can be only one heap defined
+in mbedtls. If this is enabled, then the Zephyr will, during the device
+startup, initialize the heap automatically.
+
+
+
+:Symbol:           MBEDTLS_ENABLE_HEAP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable global heap for mbed TLS" if MBEDTLS (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: MBEDTLS (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ CRYPTO_MBEDTLS_SHIM && CRYPTO (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../ext/lib/crypto/mbedtls/Kconfig:77

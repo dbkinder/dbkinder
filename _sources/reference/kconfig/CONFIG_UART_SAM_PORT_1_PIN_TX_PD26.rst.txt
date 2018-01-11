@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: UART_SAM_PORT_1_PIN_TX_PD26
+
+.. option:: CONFIG_UART_SAM_PORT_1_PIN_TX_PD26
+.. _CONFIG_UART_SAM_PORT_1_PIN_TX_PD26:
+
+The configuration item CONFIG_UART_SAM_PORT_1_PIN_TX_PD26:
+
+:Symbol:           UART_SAM_PORT_1_PIN_TX_PD26
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "PD26"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ UART_SAM_PORT_1 && SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.uart_sam:45

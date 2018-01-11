@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: BT_MESH_LPN_RETRY_TIMEOUT
+
+.. option:: CONFIG_BT_MESH_LPN_RETRY_TIMEOUT
+.. _CONFIG_BT_MESH_LPN_RETRY_TIMEOUT:
+
+Time in seconds between Friend Requests, if a previous Friend
+Request did not receive any acceptable Friend Offers.
+
+
+
+:Symbol:           BT_MESH_LPN_RETRY_TIMEOUT
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 3600]
+:Prompts:
+
+ *  "Retry timeout for Friend requests"
+:Default values:
+
+ *  8 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_LOW_POWER (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:229

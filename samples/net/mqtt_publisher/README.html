@@ -1,0 +1,533 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>MQTT Publisher &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../../index.html"/>
+        <link rel="up" title="Networking Samples" href="../net.html"/>
+        <link rel="next" title="NATS Client Implementation Sample" href="../nats/README.html"/>
+        <link rel="prev" title="mbedTLS DTLS sample server" href="../mbedtls_dtlsserver/README.html"/> 
+
+    
+    <script src="../../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../../index.html">Docs</a> /
+      
+          <a href="../../../application/index.html">Developer Guides</a> /
+      
+          <a href="../../samples.html">Samples and Demos</a> /
+      
+          <a href="../net.html">Networking Samples</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../application/index.html">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../porting/porting.html">Porting Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../application/application.html">Application Development Primer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../samples.html">Samples and Demos</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../kernel.html">Kernel Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/basic.html">Basic Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../subsys/subsys.html">Various Subsystems Samples</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../net.html">Networking Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sensor/sensor.html">Sensor Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../grove/grove.html">Grove Kit Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../boards/boards.html">Board-specific samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mpu/index.html">MMU/MPU Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../drivers/drivers.html">Driver Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/kconfig/index.html">Configuration Options Reference Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/api.html">API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../README.html">Zephyr documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="mqtt-publisher">
+<span id="mqtt-publisher-sample"></span><h1>MQTT Publisher<a class="headerlink" href="#mqtt-publisher" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://mqtt.org/">MQTT</a> (MQ Telemetry Transport) is a lightweight
+publish/subscribe messaging protocol optimized for small sensors and
+mobile devices.</p>
+<p>The Zephyr MQTT Publisher sample application is a MQTT v3.1.1
+client that sends MQTT PUBLISH messages to a MQTT broker.
+See the <a class="reference external" href="http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html">MQTT V3.1.1 spec</a> for more information.</p>
+<p>The source code of this sample application can be found at:
+<code class="file docutils literal"><span class="pre">samples/net/mqtt_publisher</span></code>.</p>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Linux machine</li>
+<li>Freedom Board (FRDM-K64F)</li>
+<li>Mosquitto server: any version that supports MQTT v3.1.1. This sample
+was tested with mosquitto 1.3.4.</li>
+<li>Mosquitto subscriber</li>
+<li>LAN for testing purposes (Ethernet)</li>
+</ul>
+</div>
+<div class="section" id="build-and-running">
+<h2>Build and Running<a class="headerlink" href="#build-and-running" title="Permalink to this headline">¶</a></h2>
+<p>Currently, this sample application only supports static IP addresses.
+Open the <code class="file docutils literal"><span class="pre">src/config.h</span></code> file and set the IP addresses according
+to the LAN environment.
+Alternatively, set the IP addresses in the <code class="file docutils literal"><span class="pre">prj_frdm_k64f.conf</span></code> file.</p>
+<p>This file <code class="file docutils literal"><span class="pre">src/config.h</span></code> also contains some variables that may be changed:</p>
+<p>MQTT broker TCP port:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#define SERVER_PORT             1883</span>
+</pre></div>
+</div>
+<p>Application sleep time:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#define APP_SLEEP_MSECS         500</span>
+</pre></div>
+</div>
+<p>Application RX and TX timeout:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#define APP_TX_RX_TIMEOUT       300</span>
+</pre></div>
+</div>
+<p>Max number of connection tries:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#define APP_CONNECT_TRIES       10</span>
+</pre></div>
+</div>
+<p>Max number of MQTT PUBLISH iterations:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#define APP_MAX_ITERATIONS      5</span>
+</pre></div>
+</div>
+<p>MQTT Client Identifier:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#define MQTT_CLIENTID           &quot;zephyr_publisher&quot;</span>
+</pre></div>
+</div>
+<p>This sample application supports the IBM Bluemix Watson topic format that can
+be enabled by changing the default value of APP_BLUEMIX_TOPIC from 0 to 1:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#define APP_BLUEMIX_TOPIC       1</span>
+</pre></div>
+</div>
+<p>The Bluemix topic may include some parameters like device type, device
+identifier, event type and message format. This application uses the
+following macros to specify those values:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#define BLUEMIX_DEVTYPE         &quot;sensor&quot;</span>
+<span class="cp">#define BLUEMIX_DEVID           &quot;carbon&quot;</span>
+<span class="cp">#define BLUEMIX_EVENT           &quot;status&quot;</span>
+<span class="cp">#define BLUEMIX_FORMAT          &quot;json&quot;</span>
+</pre></div>
+</div>
+<p>On your Linux host computer, open a terminal window, locate the source code
+of this sample application (i.e. <code class="file docutils literal"><span class="pre">samples/net/mqtt_publisher</span></code>) and type:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/net/mqtt_publisher
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>frdm_k64f ..
+<span class="gp">$</span> make
+<span class="gp">$</span> make flash
+</pre></div>
+</div>
+<p>Open another terminal window and type:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo mosquitto -v -p <span class="m">1883</span>
+</pre></div>
+</div>
+<p>Open another terminal window and type:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> mosquitto_sub -t sensors
+</pre></div>
+</div>
+<div class="section" id="sample-output">
+<h3>Sample output<a class="headerlink" href="#sample-output" title="Permalink to this headline">¶</a></h3>
+<p>This is the output from the FRDM UART console, with:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#define APP_MAX_ITERATIONS     5</span>
+</pre></div>
+</div>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">[dev/eth_mcux] [INF] eth_0_init: Enabled 100M full-duplex mode.</span>
+<span class="go">[dev/eth_mcux] [DBG] eth_0_init: MAC 00:04:9f:3e:1a:0a</span>
+<span class="go">[publisher:233] network_setup: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:258] mqtt_init: 0 &lt;OK&gt;</span>
+<span class="go">[connect_cb:81] user_data: CONNECTED</span>
+<span class="go">[try_to_connect:212] mqtt_tx_connect: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:276] try_to_connect: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:285] mqtt_tx_pingreq: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:290] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBACK&gt; packet id: 1888, user_data: PUBLISH</span>
+<span class="go">[publisher:295] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBREC&gt; packet id: 16356, user_data: PUBLISH</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBCOMP&gt; packet id: 16356, user_data: PUBLISH</span>
+<span class="go">[publisher:300] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:285] mqtt_tx_pingreq: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:290] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBACK&gt; packet id: 45861, user_data: PUBLISH</span>
+<span class="go">[publisher:295] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBREC&gt; packet id: 53870, user_data: PUBLISH</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBCOMP&gt; packet id: 53870, user_data: PUBLISH</span>
+<span class="go">[publisher:300] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:285] mqtt_tx_pingreq: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:290] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBACK&gt; packet id: 60144, user_data: PUBLISH</span>
+<span class="go">[publisher:295] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBREC&gt; packet id: 6561, user_data: PUBLISH</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBCOMP&gt; packet id: 6561, user_data: PUBLISH</span>
+<span class="go">[publisher:300] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:285] mqtt_tx_pingreq: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:290] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBACK&gt; packet id: 38355, user_data: PUBLISH</span>
+<span class="go">[publisher:295] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBREC&gt; packet id: 60656, user_data: PUBLISH</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBCOMP&gt; packet id: 60656, user_data: PUBLISH</span>
+<span class="go">[publisher:300] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:285] mqtt_tx_pingreq: 0 &lt;OK&gt;</span>
+<span class="go">[publisher:290] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBACK&gt; packet id: 28420, user_data: PUBLISH</span>
+<span class="go">[publisher:295] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBREC&gt; packet id: 49829, user_data: PUBLISH</span>
+<span class="go">[publish_cb:149] &lt;MQTT_PUBCOMP&gt; packet id: 49829, user_data: PUBLISH</span>
+<span class="go">[publisher:300] mqtt_tx_publish: 0 &lt;OK&gt;</span>
+<span class="go">[disconnect_cb:101] user_data: DISCONNECTED</span>
+<span class="go">[publisher:304] mqtt_tx_disconnect: 0 &lt;OK&gt;</span>
+
+<span class="go">Bye!</span>
+</pre></div>
+</div>
+<p>The line:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">[try_to_connect:220] mqtt_connect: -5 &lt;ERROR&gt;</span>
+</pre></div>
+</div>
+<p>means that an error was detected and a new connect message will be sent.</p>
+<p>The MQTT API is asynchronous, so messages are displayed as the callbacks are
+executed.</p>
+<p>This is the information that the subscriber will receive:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> mosquitto_sub -t sensors
+<span class="go">DOORS:OPEN_QoS0</span>
+<span class="go">DOORS:OPEN_QoS1</span>
+<span class="go">DOORS:OPEN_QoS2</span>
+<span class="go">DOORS:OPEN_QoS0</span>
+<span class="go">DOORS:OPEN_QoS1</span>
+<span class="go">DOORS:OPEN_QoS2</span>
+<span class="go">DOORS:OPEN_QoS0</span>
+<span class="go">DOORS:OPEN_QoS1</span>
+<span class="go">DOORS:OPEN_QoS2</span>
+<span class="go">DOORS:OPEN_QoS0</span>
+<span class="go">DOORS:OPEN_QoS1</span>
+<span class="go">DOORS:OPEN_QoS2</span>
+<span class="go">DOORS:OPEN_QoS0</span>
+<span class="go">DOORS:OPEN_QoS1</span>
+<span class="go">DOORS:OPEN_QoS2</span>
+</pre></div>
+</div>
+<p>This is the output from the MQTT broker:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo mosquitto -v
+<span class="go">1485663791: mosquitto version 1.3.4 (build date 2014-08-17 00:14:52-0300) starting</span>
+<span class="go">1485663791: Using default config.</span>
+<span class="go">1485663791: Opening ipv4 listen socket on port 1883.</span>
+<span class="go">1485663791: Opening ipv6 listen socket on port 1883.</span>
+<span class="go">1485663797: New connection from 192.168.1.101 on port 1883.</span>
+<span class="go">1485663797: New client connected from 192.168.1.101 as zephyr_publisher (c1, k0).</span>
+<span class="go">1485663797: Sending CONNACK to zephyr_publisher (0)</span>
+<span class="go">1485663798: Received PINGREQ from zephyr_publisher</span>
+<span class="go">1485663798: Sending PINGRESP to zephyr_publisher</span>
+<span class="go">1485663798: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663799: Received PUBLISH from zephyr_publisher (d0, q1, r0, m1888, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663799: Sending PUBACK to zephyr_publisher (Mid: 1888)</span>
+<span class="go">1485663799: Received PUBLISH from zephyr_publisher (d0, q2, r0, m16356, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663799: Sending PUBREC to zephyr_publisher (Mid: 16356)</span>
+<span class="go">1485663799: Received PUBREL from zephyr_publisher (Mid: 16356)</span>
+<span class="go">1485663799: Sending PUBCOMP to zephyr_publisher (Mid: 16356)</span>
+<span class="go">1485663800: Received PINGREQ from zephyr_publisher</span>
+<span class="go">1485663800: Sending PINGRESP to zephyr_publisher</span>
+<span class="go">1485663800: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663801: Received PUBLISH from zephyr_publisher (d0, q1, r0, m45861, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663801: Sending PUBACK to zephyr_publisher (Mid: 45861)</span>
+<span class="go">1485663801: Received PUBLISH from zephyr_publisher (d0, q2, r0, m53870, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663801: Sending PUBREC to zephyr_publisher (Mid: 53870)</span>
+<span class="go">1485663801: Received PUBREL from zephyr_publisher (Mid: 53870)</span>
+<span class="go">1485663801: Sending PUBCOMP to zephyr_publisher (Mid: 53870)</span>
+<span class="go">1485663802: Received PINGREQ from zephyr_publisher</span>
+<span class="go">1485663802: Sending PINGRESP to zephyr_publisher</span>
+<span class="go">1485663802: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663803: Received PUBLISH from zephyr_publisher (d0, q1, r0, m60144, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663803: Sending PUBACK to zephyr_publisher (Mid: 60144)</span>
+<span class="go">1485663803: Received PUBLISH from zephyr_publisher (d0, q2, r0, m6561, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663803: Sending PUBREC to zephyr_publisher (Mid: 6561)</span>
+<span class="go">1485663803: Received PUBREL from zephyr_publisher (Mid: 6561)</span>
+<span class="go">1485663803: Sending PUBCOMP to zephyr_publisher (Mid: 6561)</span>
+<span class="go">1485663804: Received PINGREQ from zephyr_publisher</span>
+<span class="go">1485663804: Sending PINGRESP to zephyr_publisher</span>
+<span class="go">1485663804: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663805: Received PUBLISH from zephyr_publisher (d0, q1, r0, m38355, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663805: Sending PUBACK to zephyr_publisher (Mid: 38355)</span>
+<span class="go">1485663805: Received PUBLISH from zephyr_publisher (d0, q2, r0, m60656, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663805: Sending PUBREC to zephyr_publisher (Mid: 60656)</span>
+<span class="go">1485663805: Received PUBREL from zephyr_publisher (Mid: 60656)</span>
+<span class="go">1485663805: Sending PUBCOMP to zephyr_publisher (Mid: 60656)</span>
+<span class="go">1485663806: Received PINGREQ from zephyr_publisher</span>
+<span class="go">1485663806: Sending PINGRESP to zephyr_publisher</span>
+<span class="go">1485663806: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663807: Received PUBLISH from zephyr_publisher (d0, q1, r0, m28420, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663807: Sending PUBACK to zephyr_publisher (Mid: 28420)</span>
+<span class="go">1485663807: Received PUBLISH from zephyr_publisher (d0, q2, r0, m49829, &#39;sensors&#39;, ... (15 bytes))</span>
+<span class="go">1485663807: Sending PUBREC to zephyr_publisher (Mid: 49829)</span>
+<span class="go">1485663807: Received PUBREL from zephyr_publisher (Mid: 49829)</span>
+<span class="go">1485663807: Sending PUBCOMP to zephyr_publisher (Mid: 49829)</span>
+<span class="go">1485663808: Received DISCONNECT from zephyr_publisher</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../nats/README.html" class="btn btn-neutral float-right" title="NATS Client Implementation Sample" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../mbedtls_dtlsserver/README.html" class="btn btn-neutral" title="mbedTLS DTLS sample server" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

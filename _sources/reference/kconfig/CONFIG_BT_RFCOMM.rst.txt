@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: BT_RFCOMM
+
+.. option:: CONFIG_BT_RFCOMM
+.. _CONFIG_BT_RFCOMM:
+
+This option enables Bluetooth RFCOMM support
+
+
+
+:Symbol:           BT_RFCOMM
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bluetooth RFCOMM protocol support [EXPERIMENTAL]"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BT_HCI && BT && BT_BREDR && PRINTK && BT_HFP_HF (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_BREDR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:474

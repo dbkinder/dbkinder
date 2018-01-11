@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: I2C_GPIO_0_NAME
+
+.. option:: CONFIG_I2C_GPIO_0_NAME
+.. _CONFIG_I2C_GPIO_0_NAME:
+
+This is the device name for the I2C device, and is included in the
+device struct.
+
+
+
+:Symbol:           I2C_GPIO_0_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "GPIO Bit Bang I2C device 0 device name" if I2C_GPIO_0 (value: "n")
+:Default values:
+
+ *  "I2C_0"
+ *   Condition: I2C_GPIO_0 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig.gpio:25

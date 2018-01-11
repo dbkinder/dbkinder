@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_RPL_PREFIX
+
+.. option:: CONFIG_NET_RPL_PREFIX
+.. _CONFIG_NET_RPL_PREFIX:
+
+What is the DAG id (prefix) of the RPL network. This is only used
+if you are creating a root node. You should specify here the full
+IPv6 address as that is used as a root node address.
+Example: 2001:db8::1/64
+
+
+
+:Symbol:           NET_RPL_PREFIX
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Network IPv6 prefix"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && NET_RPL (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig.rpl:21

@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: WDT_ESP32_IRQ
+
+.. option:: CONFIG_WDT_ESP32_IRQ
+.. _CONFIG_WDT_ESP32_IRQ:
+
+Set the IRQ line used by the WDT device.  Very few lines can be
+chosen here, as it must be a level 4 interrupt.
+
+
+:Symbol:           WDT_ESP32_IRQ
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "IRQ line for watchdog interrupt" if WDT_ESP32 (value: "n")
+:Default values:
+
+ *  24 (value: "n")
+ *   Condition: WDT_ESP32 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ WATCHDOG (value: "n")
+:Locations:
+ * ../drivers/watchdog/Kconfig.esp32:29

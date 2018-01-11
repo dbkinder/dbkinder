@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: ARC_CORE_MPU
+
+.. option:: CONFIG_ARC_CORE_MPU
+.. _CONFIG_ARC_CORE_MPU:
+
+ARC core MPU functionalities
+
+
+
+:Symbol:           ARC_CORE_MPU
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "ARC Core MPU functionalities" if CPU_HAS_MPU (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: CPU_HAS_MPU (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ CPU_HAS_MPU && ARC && CPU_HAS_MPU && ARC_MPU (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ CPU_HAS_MPU && ARC (value: "n")
+:Locations:
+ * ../arch/arc/core/mpu/Kconfig:17

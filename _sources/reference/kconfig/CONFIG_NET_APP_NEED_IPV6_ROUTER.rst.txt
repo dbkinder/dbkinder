@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: NET_APP_NEED_IPV6_ROUTER
+
+.. option:: CONFIG_NET_APP_NEED_IPV6_ROUTER
+.. _CONFIG_NET_APP_NEED_IPV6_ROUTER:
+
+The network application needs IPv6 router to exists before continuing.
+What this means that the application wants to wait until it receives
+IPv6 router advertisement message before continuing.
+
+
+
+:Symbol:           NET_APP_NEED_IPV6_ROUTER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "This application wants IPv6 router to exists" if NET_APP_AUTO_INIT && NET_IPV6 (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:51

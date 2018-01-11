@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: KW41_DBG_TRACE
+
+.. option:: CONFIG_KW41_DBG_TRACE
+.. _CONFIG_KW41_DBG_TRACE:
+
+The value depends on your debugging needs. This generates an encoded
+trace of events without going to debug logging to avoid timing impact
+on running code. The buffer is post analyzed via the debugger.
+
+
+:Symbol:           KW41_DBG_TRACE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enabled simplified debug tracing of events"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ IEEE802154_KW41Z (value: "n")
+:Locations:
+ * ../drivers/ieee802154/Kconfig.kw41z:32

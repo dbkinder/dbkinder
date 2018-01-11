@@ -1,0 +1,843 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Miscellaneous APIs &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="api.html"/>
+        <link rel="next" title="Zephyr documentation" href="../README.html"/>
+        <link rel="prev" title="Display Interface APIs" href="display_api.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+          <a href="../application/index.html">Developer Guides</a> /
+      
+          <a href="api.html">API Documentation</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../application/index.html">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../porting/porting.html">Porting Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../application/application.html">Application Development Primer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../samples/samples.html">Samples and Demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/kconfig/index.html">Configuration Options Reference Guide</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">API Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="kernel_api.html">Kernel APIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="device.html">Device Driver Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bluetooth.html">Bluetooth API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="networking.html">Networking API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_interfaces.html">Input / Output Driver APIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power_management_api.html">Power Management APIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_system.html">File System APIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="display_api.html">Display Interface APIs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Miscellaneous APIs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html">Zephyr documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="miscellaneous-apis">
+<span id="misc-api"></span><h1>Miscellaneous APIs<a class="headerlink" href="#miscellaneous-apis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="checksum-apis">
+<h2>Checksum APIs<a class="headerlink" href="#checksum-apis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="crc16">
+<h3>CRC16<a class="headerlink" href="#crc16" title="Permalink to this headline">¶</a></h3>
+<dl class="group">
+<dt>
+<span class="target" id="d1/dbd/group__crc16"></span><em>group</em> <code class="descname">crc16</code></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv25crc16PK4u8_t6size_t5u16_t5u16_tb">
+<span id="crc16__u8_tCP.s.u16_t.u16_t.b"></span><span class="target" id="d1/dbd/group__crc16_1gac49744282013f6dd436ab7d7066e5490"></span>u16_t <code class="descname">crc16</code><span class="sig-paren">(</span><em class="property">const</em> u8_t *<em>src</em>, size_t <em>len</em>, u16_t <em>polynomial</em>, u16_t <em>initial_value</em>, bool <em>pad</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25crc16PK4u8_t6size_t5u16_t5u16_tb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Generic function for computing CRC 16. </p>
+<p>Compute CRC 16 by passing in the address of the input, the input length and polynomial used in addition to the initial value.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The computed CRC16 value </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">src</span></code>: Input bytes for the computation </li>
+<li><code class="docutils literal"><span class="pre">len</span></code>: Length of the input in bytes </li>
+<li><code class="docutils literal"><span class="pre">polynomial</span></code>: The polynomial to use omitting the leading x^16 coefficient </li>
+<li><code class="docutils literal"><span class="pre">initial_value</span></code>: Initial value for the CRC computation </li>
+<li><code class="docutils literal"><span class="pre">pad</span></code>: Adds padding with zeros at the end of input bytes</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv211crc16_ccittPK4u8_t6size_t">
+<span id="crc16_ccitt__u8_tCP.s"></span><span class="target" id="d1/dbd/group__crc16_1ga4c50cb5bb2bcd3093be6c3183637ffdc"></span><em class="property">static</em> u16_t <code class="descname">crc16_ccitt</code><span class="sig-paren">(</span><em class="property">const</em> u8_t *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211crc16_ccittPK4u8_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Compute CCITT variant of CRC 16. </p>
+<p>CCITT variant of CRC 16 is using 0x1021 as its polynomial with the initial value set to 0xffff.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The computed CRC16 value </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">src</span></code>: Input bytes for the computation </li>
+<li><code class="docutils literal"><span class="pre">len</span></code>: Length of the input in bytes</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv210crc16_ansiPK4u8_t6size_t">
+<span id="crc16_ansi__u8_tCP.s"></span><span class="target" id="d1/dbd/group__crc16_1ga4ea5cb76e2543d529149d37c884794c1"></span><em class="property">static</em> u16_t <code class="descname">crc16_ansi</code><span class="sig-paren">(</span><em class="property">const</em> u8_t *<em>src</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210crc16_ansiPK4u8_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Compute ANSI variant of CRC 16. </p>
+<p>ANSI variant of CRC 16 is using 0x8005 as its polynomial with the initial value set to 0xffff.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The computed CRC16 value </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">src</span></code>: Input bytes for the computation </li>
+<li><code class="docutils literal"><span class="pre">len</span></code>: Length of the input in bytes</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="structured-data-apis">
+<h2>Structured Data APIs<a class="headerlink" href="#structured-data-apis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="json">
+<h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<dl class="group">
+<dt>
+<span class="target" id="d8/d91/group__json"></span><em>group</em> <code class="descname">json</code></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.JSON_OBJ_DESCR_PRIM">
+<span class="target" id="d8/d91/group__json_1ga1ed917f5a247ca33f2778afe62ff1a88"></span><code class="descname">JSON_OBJ_DESCR_PRIM</code><span class="sig-paren">(</span>struct_, field_name_, type_<span class="sig-paren">)</span><a class="headerlink" href="#c.JSON_OBJ_DESCR_PRIM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper macro to declare a descriptor for supported primitive values. </p>
+<p>
+Here’s an example of use: <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">foo</span> <span class="p">{</span>
+    <span class="nb">int</span> <span class="n">some_int</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">struct</span> <span class="n">json_obj_descr</span> <span class="n">foo</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">JSON_OBJ_DESCR_PRIM</span><span class="p">(</span><span class="n">struct</span> <span class="n">foo</span><span class="p">,</span> <span class="n">some_int</span><span class="p">,</span> <span class="n">JSON_TOK_NUMBER</span><span class="p">),</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+ <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">struct_</span></code>: Struct packing the values</li>
+<li><code class="docutils literal"><span class="pre">field_name_</span></code>: Field name in the struct</li>
+<li><code class="docutils literal"><span class="pre">type_</span></code>: Token type for JSON value corresponding to a primitive type. Must be one of: JSON_TOK_STRING for strings, JSON_TOK_NUMBER for numbers, JSON_TOK_TRUE (or JSON_TOK_FALSE) for booleans.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.JSON_OBJ_DESCR_OBJECT">
+<span class="target" id="d8/d91/group__json_1ga4ee365f43cfa86a214973defe81f1e88"></span><code class="descname">JSON_OBJ_DESCR_OBJECT</code><span class="sig-paren">(</span>struct_, field_name_, sub_descr_<span class="sig-paren">)</span><a class="headerlink" href="#c.JSON_OBJ_DESCR_OBJECT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper macro to declare a descriptor for an object value. </p>
+<p>
+Here’s an example of use: struct nested { int foo; struct { int baz; } bar; };<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">struct_</span></code>: Struct packing the values</li>
+<li><code class="docutils literal"><span class="pre">field_name_</span></code>: Field name in the struct</li>
+<li><code class="docutils literal"><span class="pre">sub_descr_</span></code>: Array of json_obj_descr describing the subobject</li>
+</ul>
+</dd>
+</dl>
+</p>
+<p>struct json_obj_descr nested_bar[] = { { … declare bar.baz descriptor … }, }; struct json_obj_descr nested[] = { { … declare foo descriptor … }, JSON_OBJ_DESCR_OBJECT(struct nested, bar, nested_bar), }; </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.JSON_OBJ_DESCR_ARRAY">
+<span class="target" id="d8/d91/group__json_1ga0b510decbc755c82903b54fcbc4a3b64"></span><code class="descname">JSON_OBJ_DESCR_ARRAY</code><span class="sig-paren">(</span>struct_, field_name_, max_len_, len_field_, elem_type_<span class="sig-paren">)</span><a class="headerlink" href="#c.JSON_OBJ_DESCR_ARRAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper macro to declare a descriptor for an array of primitives. </p>
+<p>
+Here’s an example of use: struct example { int foo[10]; size_t foo_len; };<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">struct_</span></code>: Struct packing the values</li>
+<li><code class="docutils literal"><span class="pre">field_name_</span></code>: Field name in the struct</li>
+<li><code class="docutils literal"><span class="pre">max_len_</span></code>: Maximum number of elements in array</li>
+<li><code class="docutils literal"><span class="pre">len_field_</span></code>: Field name in the struct for the number of elements in the array</li>
+<li><code class="docutils literal"><span class="pre">elem_type_</span></code>: Element type, must be a primitive type</li>
+</ul>
+</dd>
+</dl>
+</p>
+<p>struct json_obj_descr array[] = { JSON_OBJ_DESCR_ARRAY(struct example, foo, 10, foo_len, JSON_TOK_NUMBER) }; </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.JSON_OBJ_DESCR_OBJ_ARRAY">
+<span class="target" id="d8/d91/group__json_1gae012264df03546a1c01eec4216b52ffd"></span><code class="descname">JSON_OBJ_DESCR_OBJ_ARRAY</code><span class="sig-paren">(</span>struct_, field_name_, max_len_, len_field_, elem_descr_, elem_descr_len_<span class="sig-paren">)</span><a class="headerlink" href="#c.JSON_OBJ_DESCR_OBJ_ARRAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper macro to declare a descriptor for an array of objects. </p>
+<p>
+Here’s an example of use: <div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">struct</span> <span class="n">person_height</span> <span class="p">{</span>
+     <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
+     <span class="nb">int</span> <span class="n">height</span><span class="p">;</span>
+ <span class="p">};</span>
+
+ <span class="n">struct</span> <span class="n">people_heights</span> <span class="p">{</span>
+     <span class="n">struct</span> <span class="n">person_height</span> <span class="n">heights</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+     <span class="n">size_t</span> <span class="n">heights_len</span><span class="p">;</span>
+ <span class="p">};</span>
+
+ <span class="n">struct</span> <span class="n">json_obj_descr</span> <span class="n">person_height_descr</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">JSON_OBJ_DESCR_PRIM</span><span class="p">(</span><span class="n">struct</span> <span class="n">person_height</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">JSON_TOK_STRING</span><span class="p">),</span>
+      <span class="n">JSON_OBJ_DESCR_PRIM</span><span class="p">(</span><span class="n">struct</span> <span class="n">person_height</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">JSON_TOK_NUMBER</span><span class="p">),</span>
+ <span class="p">};</span>
+
+ <span class="n">struct</span> <span class="n">json_obj_descr</span> <span class="n">array</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">JSON_OBJ_DESCR_OBJ_ARRAY</span><span class="p">(</span><span class="n">struct</span> <span class="n">people_heights</span><span class="p">,</span> <span class="n">heights</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>
+                               <span class="n">heights_len</span><span class="p">,</span> <span class="n">person_height_descr</span><span class="p">,</span>
+                               <span class="n">ARRAY_SIZE</span><span class="p">(</span><span class="n">person_height_descr</span><span class="p">)),</span>
+ <span class="p">};</span>
+</pre></div>
+</div>
+ <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">struct_</span></code>: Struct packing the values</li>
+<li><code class="docutils literal"><span class="pre">field_name_</span></code>: Field name in the struct containing the array</li>
+<li><code class="docutils literal"><span class="pre">max_len_</span></code>: Maximum number of elements in the array</li>
+<li><code class="docutils literal"><span class="pre">len_field_</span></code>: Field name in the struct for the number of elements in the array</li>
+<li><code class="docutils literal"><span class="pre">elem_descr_</span></code>: Element descriptor, pointer to a descriptor array</li>
+<li><code class="docutils literal"><span class="pre">elem_descr_len_</span></code>: Number of elements in elem_descr_</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.JSON_OBJ_DESCR_PRIM_NAMED">
+<span class="target" id="d8/d91/group__json_1gaad081c4f8debcb41779bd5879ed8bbd4"></span><code class="descname">JSON_OBJ_DESCR_PRIM_NAMED</code><span class="sig-paren">(</span>struct_, json_field_name_, struct_field_name_, type_<span class="sig-paren">)</span><a class="headerlink" href="#c.JSON_OBJ_DESCR_PRIM_NAMED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variant of JSON_OBJ_DESCR_PRIM that can be used when the structure and JSON field names differ. </p>
+<p>This is useful when the JSON field is not a valid C identifier.</p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd>JSON_OBJ_DESCR_PRIM </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">struct_</span></code>: Struct packing the values.</li>
+<li><code class="docutils literal"><span class="pre">json_field_name_</span></code>: String, field name in JSON strings</li>
+<li><code class="docutils literal"><span class="pre">struct_field_name_</span></code>: Field name in the struct</li>
+<li><code class="docutils literal"><span class="pre">type_</span></code>: Token type for JSON value corresponding to a primitive type.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.JSON_OBJ_DESCR_OBJECT_NAMED">
+<span class="target" id="d8/d91/group__json_1ga8f8d03241e4f69d5f7147792db9a9fe9"></span><code class="descname">JSON_OBJ_DESCR_OBJECT_NAMED</code><span class="sig-paren">(</span>struct_, json_field_name_, struct_field_name_, sub_descr_<span class="sig-paren">)</span><a class="headerlink" href="#c.JSON_OBJ_DESCR_OBJECT_NAMED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variant of JSON_OBJ_DESCR_OBJECT that can be used when the structure and JSON field names differ. </p>
+<p>This is useful when the JSON field is not a valid C identifier.</p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd>JSON_OBJ_DESCR_OBJECT </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">struct_</span></code>: Struct packing the values</li>
+<li><code class="docutils literal"><span class="pre">json_field_name_</span></code>: String, field name in JSON strings</li>
+<li><code class="docutils literal"><span class="pre">struct_field_name_</span></code>: Field name in the struct</li>
+<li><code class="docutils literal"><span class="pre">sub_descr_</span></code>: Array of json_obj_descr describing the subobject</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.JSON_OBJ_DESCR_ARRAY_NAMED">
+<span class="target" id="d8/d91/group__json_1ga4a5bafd64de8abcbc2b5c039bd59ec84"></span><code class="descname">JSON_OBJ_DESCR_ARRAY_NAMED</code><span class="sig-paren">(</span>struct_, json_field_name_, struct_field_name_, max_len_, len_field_, elem_type_<span class="sig-paren">)</span><a class="headerlink" href="#c.JSON_OBJ_DESCR_ARRAY_NAMED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variant of JSON_OBJ_DESCR_ARRAY that can be used when the structure and JSON field names differ. </p>
+<p>This is useful when the JSON field is not a valid C identifier.</p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd>JSON_OBJ_DESCR_ARRAY </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">struct_</span></code>: Struct packing the values</li>
+<li><code class="docutils literal"><span class="pre">json_field_name_</span></code>: String, field name in JSON strings</li>
+<li><code class="docutils literal"><span class="pre">struct_field_name_</span></code>: Field name in the struct</li>
+<li><code class="docutils literal"><span class="pre">max_len_</span></code>: Maximum number of elements in array</li>
+<li><code class="docutils literal"><span class="pre">len_field_</span></code>: Field name in the struct for the number of elements in the array</li>
+<li><code class="docutils literal"><span class="pre">elem_type_</span></code>: Element type, must be a primitive type</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.JSON_OBJ_DESCR_OBJ_ARRAY_NAMED">
+<span class="target" id="d8/d91/group__json_1gaa6602833e59c7e5205d69cc7c4ab2bba"></span><code class="descname">JSON_OBJ_DESCR_OBJ_ARRAY_NAMED</code><span class="sig-paren">(</span>struct_, json_field_name_, struct_field_name_, max_len_, len_field_, elem_descr_, elem_descr_len_<span class="sig-paren">)</span><a class="headerlink" href="#c.JSON_OBJ_DESCR_OBJ_ARRAY_NAMED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variant of JSON_OBJ_DESCR_OBJ_ARRAY that can be used when the structure and JSON field names differ. </p>
+<p>This is useful when the JSON field is not a valid C identifier.</p>
+<p>
+Here’s an example of use: <div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">struct</span> <span class="n">person_height</span> <span class="p">{</span>
+     <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
+     <span class="nb">int</span> <span class="n">height</span><span class="p">;</span>
+ <span class="p">};</span>
+
+ <span class="n">struct</span> <span class="n">people_heights</span> <span class="p">{</span>
+     <span class="n">struct</span> <span class="n">person_height</span> <span class="n">heights</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+     <span class="n">size_t</span> <span class="n">heights_len</span><span class="p">;</span>
+ <span class="p">};</span>
+
+ <span class="n">struct</span> <span class="n">json_obj_descr</span> <span class="n">person_height_descr</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">JSON_OBJ_DESCR_PRIM</span><span class="p">(</span><span class="n">struct</span> <span class="n">person_height</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">JSON_TOK_STRING</span><span class="p">),</span>
+      <span class="n">JSON_OBJ_DESCR_PRIM</span><span class="p">(</span><span class="n">struct</span> <span class="n">person_height</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">JSON_TOK_NUMBER</span><span class="p">),</span>
+ <span class="p">};</span>
+
+ <span class="n">struct</span> <span class="n">json_obj_descr</span> <span class="n">array</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">JSON_OBJ_DESCR_OBJ_ARRAY_NAMED</span><span class="p">(</span><span class="n">struct</span> <span class="n">people_heights</span><span class="p">,</span>
+                                     <span class="s2">&quot;people-heights&quot;</span><span class="p">,</span> <span class="n">heights</span><span class="p">,</span>
+                                     <span class="mi">10</span><span class="p">,</span> <span class="n">heights_len</span><span class="p">,</span>
+                                     <span class="n">person_height_descr</span><span class="p">,</span>
+                                     <span class="n">ARRAY_SIZE</span><span class="p">(</span><span class="n">person_height_descr</span><span class="p">)),</span>
+ <span class="p">};</span>
+</pre></div>
+</div>
+ <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">struct_</span></code>: Struct packing the values</li>
+<li><code class="docutils literal"><span class="pre">json_field_name_</span></code>: String, field name of the array in JSON strings</li>
+<li><code class="docutils literal"><span class="pre">struct_field_name_</span></code>: Field name in the struct containing the array</li>
+<li><code class="docutils literal"><span class="pre">max_len_</span></code>: Maximum number of elements in the array</li>
+<li><code class="docutils literal"><span class="pre">len_field_</span></code>: Field name in the struct for the number of elements in the array</li>
+<li><code class="docutils literal"><span class="pre">elem_descr_</span></code>: Element descriptor, pointer to a descriptor array</li>
+<li><code class="docutils literal"><span class="pre">elem_descr_len_</span></code>: Number of elements in elem_descr_</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv219json_append_bytes_t">
+<span id="json_append_bytes_t"></span><span class="target" id="d8/d91/group__json_1gacb409ebe9c59789a5d9aca02c6c94674"></span><em class="property">typedef </em>int (*<code class="descname">json_append_bytes_t</code>)<span class="sig-paren">(</span><em class="property">const</em> char *bytes, size_t len, void *data<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv219json_append_bytes_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Function pointer type to append bytes to a buffer while encoding JSON data. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>This callback function should return a negative number on error (which will be propagated to the return value of json_obj_encode()), or 0 on success. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">bytes</span></code>: Contents to write to the output </li>
+<li><code class="docutils literal"><span class="pre">len</span></code>: Number of bytes in </li>
+<li><code class="docutils literal"><span class="pre">bytes</span></code>: to append to output </li>
+<li><code class="docutils literal"><span class="pre">data</span></code>: User-provided pointer</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="type">
+<dt id="_CPPv2N4json11json_tokensE">
+<span id="json::json_tokens"></span><span class="target" id="d8/d91/group__json_1ga18a137ac5e2998d375540298670797c4"></span><em class="property">enum </em><code class="descname">json_tokens</code><a class="headerlink" href="#_CPPv2N4json11json_tokensE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N4json13JSON_TOK_NONEE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4a926d6b0a5458be2e707d51f0b25dbe77"></span><code class="descname">JSON_TOK_NONE</code> = '_'<a class="headerlink" href="#_CPPv2N4json13JSON_TOK_NONEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json21JSON_TOK_OBJECT_STARTE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4a81e303d23da0b3d8504cc4a7ee7d52e8"></span><code class="descname">JSON_TOK_OBJECT_START</code> = '{'<a class="headerlink" href="#_CPPv2N4json21JSON_TOK_OBJECT_STARTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json19JSON_TOK_OBJECT_ENDE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4a835bc516b25eb0619b3f1a52f1ebc911"></span><code class="descname">JSON_TOK_OBJECT_END</code> = '}'<a class="headerlink" href="#_CPPv2N4json19JSON_TOK_OBJECT_ENDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json19JSON_TOK_LIST_STARTE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4a8f9beceabf104da239f713e23b91d76b"></span><code class="descname">JSON_TOK_LIST_START</code> = '['<a class="headerlink" href="#_CPPv2N4json19JSON_TOK_LIST_STARTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json17JSON_TOK_LIST_ENDE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4a5e90a7b034a4af48a1b90fad7675a88d"></span><code class="descname">JSON_TOK_LIST_END</code> = ']'<a class="headerlink" href="#_CPPv2N4json17JSON_TOK_LIST_ENDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json15JSON_TOK_STRINGE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4ab145f07a93c4fdcf60c9052fbd9a7afc"></span><code class="descname">JSON_TOK_STRING</code> = '&quot;'<a class="headerlink" href="#_CPPv2N4json15JSON_TOK_STRINGE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json14JSON_TOK_COLONE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4a4873e5c0c6344323d5d6af158952ca36"></span><code class="descname">JSON_TOK_COLON</code> = ':'<a class="headerlink" href="#_CPPv2N4json14JSON_TOK_COLONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json14JSON_TOK_COMMAE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4a736325745f9521f38a68962775e76a50"></span><code class="descname">JSON_TOK_COMMA</code> = ','<a class="headerlink" href="#_CPPv2N4json14JSON_TOK_COMMAE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json15JSON_TOK_NUMBERE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4ae25f16ae591eb17d4074e6dcc2f1e62c"></span><code class="descname">JSON_TOK_NUMBER</code> = '0'<a class="headerlink" href="#_CPPv2N4json15JSON_TOK_NUMBERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json13JSON_TOK_TRUEE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4a87ffb12e4d174bb4427d9a72eabca7e3"></span><code class="descname">JSON_TOK_TRUE</code> = 't'<a class="headerlink" href="#_CPPv2N4json13JSON_TOK_TRUEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json14JSON_TOK_FALSEE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4a8df1b1d0061d7e289f94bae1df35baa7"></span><code class="descname">JSON_TOK_FALSE</code> = 'f'<a class="headerlink" href="#_CPPv2N4json14JSON_TOK_FALSEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json13JSON_TOK_NULLE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4a93de1b7e780ac22744c97e922de3b35e"></span><code class="descname">JSON_TOK_NULL</code> = 'n'<a class="headerlink" href="#_CPPv2N4json13JSON_TOK_NULLE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json14JSON_TOK_ERRORE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4afe9c51f453d7dd02504071330a030e9e"></span><code class="descname">JSON_TOK_ERROR</code> = '!'<a class="headerlink" href="#_CPPv2N4json14JSON_TOK_ERRORE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N4json12JSON_TOK_EOFE">
+<span class="target" id="d8/d91/group__json_ga18a137ac5e2998d375540298670797c4_1gga18a137ac5e2998d375540298670797c4ad970b7d8553296bf4ed03c831cb6f604"></span><code class="descname">JSON_TOK_EOF</code> = '\0'<a class="headerlink" href="#_CPPv2N4json12JSON_TOK_EOFE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv214json_obj_parsePc6size_tPK14json_obj_descr6size_tPv">
+<span id="json_obj_parse__cP.s.json_obj_descrCP.s.voidP"></span><span class="target" id="d8/d91/group__json_1ga9aa97a94e7e91a5d818c20b27059b6cd"></span>int <code class="descname">json_obj_parse</code><span class="sig-paren">(</span>char *<em>json</em>, size_t <em>len</em>, <em class="property">const</em> <em class="property">struct</em> json_obj_descr *<em>descr</em>, size_t <em>descr_len</em>, void *<em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv214json_obj_parsePc6size_tPK14json_obj_descr6size_tPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Parses the JSON-encoded object pointer to by <em>json</em>, with size <em>len</em>, according to the descriptor pointed to by <em>descr</em>. Values are stored in a struct pointed to by <em>val</em>. Set up the descriptor like this: </p>
+<p>struct s { int foo; char *bar; } struct json_obj_descr descr[] = { JSON_OBJ_DESCR_PRIM(struct s, foo, JSON_TOK_NUMBER), JSON_OBJ_DESCR_PRIM(struct s, bar, JSON_TOK_STRING), };</p>
+<p>Since this parser is designed for machine-to-machine communications, some liberties were taken to simplify the design: (1) strings are not unescaped (but only valid escape sequences are accepted); (2) no UTF-8 validation is performed; and (3) only integer numbers are supported (no strtod() in the minimal libc).</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>&lt; 0 if error, bitmap of decoded fields on success (bit 0 is set if first field in the descriptor has been properly decoded, etc). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">json</span></code>: Pointer to JSON-encoded value to be parsed</li>
+<li><code class="docutils literal"><span class="pre">len</span></code>: Length of JSON-encoded value</li>
+<li><code class="docutils literal"><span class="pre">descr</span></code>: Pointer to the descriptor array</li>
+<li><code class="docutils literal"><span class="pre">descr_len</span></code>: Number of elements in the descriptor array. Must be less than 31 due to implementation detail reasons (if more fields are necessary, use two descriptors)</li>
+<li><code class="docutils literal"><span class="pre">val</span></code>: Pointer to the struct to hold the decoded values</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv211json_escapePcP6size_t6size_t">
+<span id="json_escape__cP.sP.s"></span><span class="target" id="d8/d91/group__json_1ga43ee6d1fbd3fa8fb2ae052844b465dda"></span>ssize_t <code class="descname">json_escape</code><span class="sig-paren">(</span>char *<em>str</em>, size_t *<em>len</em>, size_t <em>buf_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211json_escapePcP6size_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Escapes the string so it can be used to encode JSON objects. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if string has been escaped properly, or -ENOMEM if there was not enough space to escape the buffer </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">str</span></code>: The string to escape; the escape string is stored the buffer pointed to by this parameter</li>
+<li><code class="docutils literal"><span class="pre">len</span></code>: Points to a size_t containing the size before and after the escaping process</li>
+<li><code class="docutils literal"><span class="pre">buf_size</span></code>: The size of buffer str points to</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv221json_calc_escaped_lenPKc6size_t">
+<span id="json_calc_escaped_len__cCP.s"></span><span class="target" id="d8/d91/group__json_1ga5ef155a3a6444801592badd6a092734c"></span>size_t <code class="descname">json_calc_escaped_len</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>str</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv221json_calc_escaped_lenPKc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calculates the JSON-escaped string length. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The length str would have if it were escaped </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">str</span></code>: The string to analyze</li>
+<li><code class="docutils literal"><span class="pre">len</span></code>: String size</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv221json_calc_encoded_lenPK14json_obj_descr6size_tPKv">
+<span id="json_calc_encoded_len__json_obj_descrCP.s.voidCP"></span><span class="target" id="d8/d91/group__json_1ga41e6e90beef8bae12fca1de2584145bb"></span>ssize_t <code class="descname">json_calc_encoded_len</code><span class="sig-paren">(</span><em class="property">const</em> <em class="property">struct</em> json_obj_descr *<em>descr</em>, size_t <em>descr_len</em>, <em class="property">const</em> void *<em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv221json_calc_encoded_lenPK14json_obj_descr6size_tPKv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calculates the string length to fully encode an object. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Number of bytes necessary to encode the values if &gt;0, an error code is returned. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">descr</span></code>: Pointer to the descriptor array</li>
+<li><code class="docutils literal"><span class="pre">descr_len</span></code>: Number of elements in the descriptor array</li>
+<li><code class="docutils literal"><span class="pre">val</span></code>: Struct holding the values</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv219json_obj_encode_bufPK14json_obj_descr6size_tPKvPc6size_t">
+<span id="json_obj_encode_buf__json_obj_descrCP.s.voidCP.cP.s"></span><span class="target" id="d8/d91/group__json_1gab758ad32cfb6369f4967a6842ac63245"></span>int <code class="descname">json_obj_encode_buf</code><span class="sig-paren">(</span><em class="property">const</em> <em class="property">struct</em> json_obj_descr *<em>descr</em>, size_t <em>descr_len</em>, <em class="property">const</em> void *<em>val</em>, char *<em>buffer</em>, size_t <em>buf_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv219json_obj_encode_bufPK14json_obj_descr6size_tPKvPc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Encodes an object in a contiguous memory location. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if object has been successfully encoded. A negative value indicates an error (as defined on errno.h). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">descr</span></code>: Pointer to the descriptor array</li>
+<li><code class="docutils literal"><span class="pre">descr_len</span></code>: Number of elements in the descriptor array</li>
+<li><code class="docutils literal"><span class="pre">val</span></code>: Struct holding the values</li>
+<li><code class="docutils literal"><span class="pre">buffer</span></code>: Buffer to store the JSON data</li>
+<li><code class="docutils literal"><span class="pre">buf_size</span></code>: Size of buffer, in bytes, with space for the terminating NUL character</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv215json_obj_encodePK14json_obj_descr6size_tPKv19json_append_bytes_tPv">
+<span id="json_obj_encode__json_obj_descrCP.s.voidCP.json_append_bytes_t.voidP"></span><span class="target" id="d8/d91/group__json_1gafec772f687a0280f5211139bd019e582"></span>int <code class="descname">json_obj_encode</code><span class="sig-paren">(</span><em class="property">const</em> <em class="property">struct</em> json_obj_descr *<em>descr</em>, size_t <em>descr_len</em>, <em class="property">const</em> void *<em>val</em>, <a class="reference internal" href="#_CPPv219json_append_bytes_t" title="json_append_bytes_t">json_append_bytes_t</a> <em>append_bytes</em>, void *<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215json_obj_encodePK14json_obj_descr6size_tPKv19json_append_bytes_tPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Encodes an object using an arbitrary writer function. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if object has been successfully encoded. A negative value indicates an error. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">descr</span></code>: Pointer to the descriptor array</li>
+<li><code class="docutils literal"><span class="pre">descr_len</span></code>: Number of elements in the descriptor array</li>
+<li><code class="docutils literal"><span class="pre">val</span></code>: Struct holding the values</li>
+<li><code class="docutils literal"><span class="pre">append_bytes</span></code>: Function to append bytes to the output</li>
+<li><code class="docutils literal"><span class="pre">data</span></code>: Data pointer to be passed to the append_bytes callback function.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<dl class="type">
+<dt>
+<span class="target" id="d1/d03/unionjson__obj__descr_8____unnamed____"></span><em class="property">union </em></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt>
+<span class="target" id="d1/d03/unionjson__obj__descr_8____unnamed_____1aa8cfde6331bd59eb2ac96f8911c4b666"></span><code class="descname"></code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="d1/d03/unionjson__obj__descr_8____unnamed_____1af1f713c9e000f5d3f280adbd124df4f5"></span><code class="descname"></code></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../README.html" class="btn btn-neutral float-right" title="Zephyr documentation" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="display_api.html" class="btn btn-neutral" title="Display Interface APIs" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

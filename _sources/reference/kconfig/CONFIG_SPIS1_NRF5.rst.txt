@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: SPIS1_NRF5
+
+.. option:: CONFIG_SPIS1_NRF5
+.. _CONFIG_SPIS1_NRF5:
+
+nRF51 and nRF52 SPI Slave with EasyDMA on port 1
+
+
+
+:Symbol:           SPIS1_NRF5
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "nRF5 SPIS1" if SOC_SERIES_NRF52X || SOC_SERIES_NRF51X (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SPI_1 && !I2C_1 && SPI_LEGACY_API && SPI && SPI_NRF5 (value: "n")
+:Locations:
+ * ../drivers/spi/Kconfig.nrf5_legacy:159

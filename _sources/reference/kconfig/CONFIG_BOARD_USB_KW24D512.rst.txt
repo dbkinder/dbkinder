@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: BOARD_USB_KW24D512
+
+.. option:: CONFIG_BOARD_USB_KW24D512
+.. _CONFIG_BOARD_USB_KW24D512:
+
+The configuration item CONFIG_BOARD_USB_KW24D512:
+
+:Symbol:           BOARD_USB_KW24D512
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "NXP USB-KW24D512" if SOC_SERIES_KINETIS_KWX (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_SOC_PART_NUMBER_MKW24D512VHA5` if SOC_SERIES_KINETIS_KWX (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/usb_kw24d512/Kconfig.board:8

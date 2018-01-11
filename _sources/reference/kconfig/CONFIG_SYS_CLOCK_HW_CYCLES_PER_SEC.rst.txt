@@ -1,0 +1,126 @@
+:orphan:
+
+.. title:: SYS_CLOCK_HW_CYCLES_PER_SEC
+
+.. option:: CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC
+.. _CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC:
+
+This option specifies the frequency of the hardware timer used for the
+system clock (in Hz). This option is set by the board's Kconfig file
+and the user should generally avoid modifying it via the menu configuration.
+
+
+
+:Symbol:           SYS_CLOCK_HW_CYCLES_PER_SEC
+:Type:             int
+:Value:            "25000000"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1000000, 1000000000]
+:Prompts:
+
+ *  "Hardware clock cycles per second, 2000000 for ISS"
+ *  "System clock's h/w timer frequency"
+:Default values:
+
+ *  2000000 (value: "n")
+ *   Condition: (none)
+ *  25000000 (value: "n")
+ *   Condition: HPET_TIMER (value: "y")
+ *  32000000 (value: "n")
+ *   Condition: (none)
+ *  32000000 (value: "n")
+ *   Condition: (none)
+ *  150000000 (value: "n")
+ *   Condition: LOAPIC_TIMER (value: "n")
+ *  25000000 (value: "n")
+ *   Condition: HPET_TIMER (value: "y")
+ *  150000000 (value: "n")
+ *   Condition: LOAPIC_TIMER (value: "n")
+ *  25000000 (value: "n")
+ *   Condition: HPET_TIMER (value: "y")
+ *  120000000 (value: "n")
+ *   Condition: (none)
+ *  300000000 (value: "n")
+ *   Condition: (none)
+ *  84000000 (value: "n")
+ *   Condition: (none)
+ *  12000000 (value: "n")
+ *   Condition: (none)
+ *  25000000 (value: "n")
+ *   Condition: (none)
+ *  24000000 (value: "n")
+ *   Condition: (none)
+ *  48000000 (value: "n")
+ *   Condition: (none)
+ *  80000000 (value: "n")
+ *   Condition: (none)
+ *  48000000 (value: "n")
+ *   Condition: (none)
+ *  32768 (value: "n")
+ *   Condition: (none)
+ *  32768 (value: "n")
+ *   Condition: (none)
+ *  48000000 (value: "n")
+ *   Condition: (none)
+ *  32000000 (value: "n")
+ *   Condition: (none)
+ *  20000000 (value: "n")
+ *   Condition: (none)
+ *  25000000 (value: "n")
+ *   Condition: BOARD_EM_STARTERKIT_R23 (value: "n")
+ *  30000000 (value: "n")
+ *   Condition: BOARD_EM_STARTERKIT_R22 (value: "n")
+ *  20000000 (value: "n")
+ *   Condition: (none)
+ *  50000000 (value: "n")
+ *   Condition: (none)
+ *  50000000 (value: "n")
+ *   Condition: (none)
+ *  32768 (value: "n")
+ *   Condition: (none)
+ *  10000000 (value: "n")
+ *   Condition: (none)
+ *  5000000 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_RISCV32_PULPINO (value: "n")
+:Locations:
+ * ../arch/xtensa/Kconfig:25
+ * ../kernel/Kconfig:419
+ * ../arch/x86/soc/intel_quark/quark_x1000/Kconfig.defconfig.series:29
+ * ../arch/x86/soc/intel_quark/quark_se/Kconfig.defconfig.series:35
+ * ../arch/x86/soc/intel_quark/quark_d2000/Kconfig.defconfig.series:19
+ * ../arch/x86/soc/atom/Kconfig.defconfig:29
+ * ../arch/x86/soc/ia32/Kconfig.defconfig:21
+ * ../arch/arm/soc/atmel_sam/sam4s/Kconfig.defconfig.series:26
+ * ../arch/arm/soc/atmel_sam/same70/Kconfig.defconfig.series:33
+ * ../arch/arm/soc/atmel_sam/sam3x/Kconfig.defconfig.series:27
+ * ../arch/arm/soc/ti_lm3s6965/Kconfig.defconfig:20
+ * ../arch/arm/soc/arm/mps2/Kconfig.defconfig.series:12
+ * ../arch/arm/soc/arm/beetle/Kconfig.defconfig.series:20
+ * ../arch/arm/soc/ti_simplelink/cc2650/Kconfig.defconfig.series:11
+ * ../arch/arm/soc/ti_simplelink/cc32xx/Kconfig.defconfig.cc3220sf:16
+ * ../arch/arm/soc/ti_simplelink/msp432p4xx/Kconfig.defconfig.msp432p401r:14
+ * ../arch/arm/soc/nordic_nrf5/nrf52/Kconfig.defconfig.series:15
+ * ../arch/arm/soc/nordic_nrf5/nrf51/Kconfig.defconfig.series:15
+ * ../arch/arm/soc/atmel_sam0/samd/Kconfig.defconfig.series:33
+ * ../arch/arc/soc/quark_se_c1000_ss/Kconfig.defconfig:25
+ * ../arch/arc/soc/em9d/Kconfig.defconfig:26
+ * ../arch/arc/soc/em7d/Kconfig.defconfig:30
+ * ../arch/arc/soc/em11d/Kconfig.defconfig:26
+ * ../arch/nios2/soc/nios2-qemu/Kconfig.defconfig:7
+ * ../arch/nios2/soc/nios2f-zephyr/Kconfig.defconfig:7
+ * ../arch/riscv32/soc/riscv-privilege/fe310/Kconfig.defconfig.series:7
+ * ../arch/riscv32/soc/riscv-privilege/riscv32-qemu/Kconfig.defconfig.series:7
+ * ../arch/riscv32/soc/pulpino/Kconfig.defconfig:7

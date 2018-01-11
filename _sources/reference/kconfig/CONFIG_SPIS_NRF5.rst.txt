@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: SPIS_NRF5
+
+.. option:: CONFIG_SPIS_NRF5
+.. _CONFIG_SPIS_NRF5:
+
+The configuration item CONFIG_SPIS_NRF5:
+
+:Symbol:           SPIS_NRF5
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (SPIS0_NRF52 || SPIS1_NRF5) && (!I2C_0 || !I2C_1) (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SPI_LEGACY_API && SPI && SPI_NRF5 (value: "n")
+:Locations:
+ * ../drivers/spi/Kconfig.nrf5_legacy:274

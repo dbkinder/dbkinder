@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BT_SHELL
+
+.. option:: CONFIG_BT_SHELL
+.. _CONFIG_BT_SHELL:
+
+Activate shell module that provides Bluetooth commands to the
+console.
+
+
+:Symbol:           BT_SHELL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable Bluetooth shell"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_CONSOLE_SHELL`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT (value: "n")
+:Locations:
+ * ../subsys/bluetooth/shell/Kconfig:9

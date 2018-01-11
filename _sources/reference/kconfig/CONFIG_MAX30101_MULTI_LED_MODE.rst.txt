@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: MAX30101_MULTI_LED_MODE
+
+.. option:: CONFIG_MAX30101_MULTI_LED_MODE
+.. _CONFIG_MAX30101_MULTI_LED_MODE:
+
+Set to operate in multi-LED mode. The green, red, and/or IR LED
+channels are active.
+
+
+
+:Symbol:           MAX30101_MULTI_LED_MODE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Multi-LED mode"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MAX30101 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/max30101/Kconfig:76

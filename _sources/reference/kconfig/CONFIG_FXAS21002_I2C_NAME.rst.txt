@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: FXAS21002_I2C_NAME
+
+.. option:: CONFIG_FXAS21002_I2C_NAME
+.. _CONFIG_FXAS21002_I2C_NAME:
+
+The configuration item CONFIG_FXAS21002_I2C_NAME:
+
+:Symbol:           FXAS21002_I2C_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "I2C device name" if !HAS_DTS_I2C (value: "y")
+:Default values:
+
+ *  I2C_0_NAME (value: "")
+ *   Condition: !HAS_DTS_I2C (value: "y")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FXAS21002 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/fxas21002/Kconfig:21

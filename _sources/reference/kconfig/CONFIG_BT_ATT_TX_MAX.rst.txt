@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: BT_ATT_TX_MAX
+
+.. option:: CONFIG_BT_ATT_TX_MAX
+.. _CONFIG_BT_ATT_TX_MAX:
+
+Number of ATT PDUs that can be at a single moment queued for
+transmission. If the application tries to send more than this
+amount the calls will block until an existing queued PDU gets
+sent.
+
+
+
+:Symbol:           BT_ATT_TX_MAX
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, BT_L2CAP_TX_BUF_COUNT]
+:Prompts:
+
+ *  "Maximum number of queued outgoing ATT PDUs"
+:Default values:
+
+ *  2 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_CONN (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:217

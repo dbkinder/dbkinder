@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: NET_IPV6_FRAGMENT_MAX_COUNT
+
+.. option:: CONFIG_NET_IPV6_FRAGMENT_MAX_COUNT
+.. _CONFIG_NET_IPV6_FRAGMENT_MAX_COUNT:
+
+How many fragmented IPv6 packets can be waiting reassembly
+simultaneously. Each fragment count might use up to 1280 bytes
+of memory so you need to plan this and increase the network buffer
+count.
+
+
+
+:Symbol:           NET_IPV6_FRAGMENT_MAX_COUNT
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 16]
+:Prompts:
+
+ *  "How many packets to reassemble at a time" if NET_IPV6_FRAGMENT (value: "n")
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: NET_IPV6_FRAGMENT (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE && NET_IPV6 (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig.ipv6:53

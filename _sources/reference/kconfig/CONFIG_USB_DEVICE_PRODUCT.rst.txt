@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: USB_DEVICE_PRODUCT
+
+.. option:: CONFIG_USB_DEVICE_PRODUCT
+.. _CONFIG_USB_DEVICE_PRODUCT:
+
+USB device Product string
+
+
+
+:Symbol:           USB_DEVICE_PRODUCT
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  "USB-DEV"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ USB_DEVICE_STACK (value: "n")
+:Locations:
+ * ../subsys/usb/Kconfig:59

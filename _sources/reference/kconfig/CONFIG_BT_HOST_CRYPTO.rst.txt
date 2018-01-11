@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: BT_HOST_CRYPTO
+
+.. option:: CONFIG_BT_HOST_CRYPTO
+.. _CONFIG_BT_HOST_CRYPTO:
+
+The configuration item CONFIG_BT_HOST_CRYPTO:
+
+:Symbol:           BT_HOST_CRYPTO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: !BT_CTLR (value: "y")
+:Selects:
+
+ *  :option:`CONFIG_TINYCRYPT`
+ *  :option:`CONFIG_TINYCRYPT_AES`
+ *  :option:`CONFIG_TINYCRYPT_SHA256`
+ *  :option:`CONFIG_TINYCRYPT_SHA256_HMAC`
+ *  :option:`CONFIG_TINYCRYPT_SHA256_HMAC_PRNG`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:121

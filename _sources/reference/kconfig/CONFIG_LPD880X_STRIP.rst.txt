@@ -1,0 +1,43 @@
+:orphan:
+
+.. title:: LPD880X_STRIP
+
+.. option:: CONFIG_LPD880X_STRIP
+.. _CONFIG_LPD880X_STRIP:
+
+Enable LED strip driver for daisy chains of LPD880x
+(LPD8803, LPD8806, or compatible) devices.
+
+Each LPD880x LED driver chip has some output channels
+(3 channels for LPD8803, 6 for LPD8806), whose PWM
+duty cycle can be set at 7 bit resolution via a
+reduced SPI interface (MOSI and CLK lines only).
+Each chip also includes data and clock out pins for
+daisy chaining LED strips.
+
+
+
+:Symbol:           LPD880X_STRIP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable LPD880x SPI LED strip driver" if SPI && !SPI_LEGACY_API (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SPI && !SPI_LEGACY_API (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LED_STRIP (value: "n")
+:Locations:
+ * ../drivers/led_strip/Kconfig.lpd880x:7

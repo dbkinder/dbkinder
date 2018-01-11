@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: NET_SOCKETS_POLL_MAX
+
+.. option:: CONFIG_NET_SOCKETS_POLL_MAX
+.. _CONFIG_NET_SOCKETS_POLL_MAX:
+
+Maximum number of entries supported for poll() call.
+
+
+
+:Symbol:           NET_SOCKETS_POLL_MAX
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Max number of supported poll() entries"
+:Default values:
+
+ *  3 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_SOCKETS && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/sockets/Kconfig:28

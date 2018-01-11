@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: MCUBOOT_IMG_MANAGER
+
+.. option:: CONFIG_MCUBOOT_IMG_MANAGER
+.. _CONFIG_MCUBOOT_IMG_MANAGER:
+
+Enable support for managing DFU image downloaded using mcuboot.
+
+
+:Symbol:           MCUBOOT_IMG_MANAGER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Image manager for mcuboot"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../subsys/dfu/Kconfig:29

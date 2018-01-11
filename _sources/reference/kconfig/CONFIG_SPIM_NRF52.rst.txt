@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: SPIM_NRF52
+
+.. option:: CONFIG_SPIM_NRF52
+.. _CONFIG_SPIM_NRF52:
+
+The configuration item CONFIG_SPIM_NRF52:
+
+:Symbol:           SPIM_NRF52
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (SPIM0_NRF52 || SPIM1_NRF52) && (!I2C_0 || !I2C_1) (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SPI_LEGACY_API && SPI && SPI_NRF5 (value: "n")
+:Locations:
+ * ../drivers/spi/Kconfig.nrf5_legacy:269

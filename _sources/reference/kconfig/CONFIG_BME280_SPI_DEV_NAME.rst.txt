@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BME280_SPI_DEV_NAME
+
+.. option:: CONFIG_BME280_SPI_DEV_NAME
+.. _CONFIG_BME280_SPI_DEV_NAME:
+
+Specify the device name of the SPI device to which BME280 is
+connected.
+
+
+
+:Symbol:           BME280_SPI_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SPI device where BME280 is connected" if BME280 && BME280_DEV_TYPE_SPI (value: "n")
+:Default values:
+
+ *  "SPI_0"
+ *   Condition: BME280 && BME280_DEV_TYPE_SPI (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/bme280/Kconfig:56

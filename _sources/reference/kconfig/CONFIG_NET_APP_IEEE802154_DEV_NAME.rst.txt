@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_APP_IEEE802154_DEV_NAME
+
+.. option:: CONFIG_NET_APP_IEEE802154_DEV_NAME
+.. _CONFIG_NET_APP_IEEE802154_DEV_NAME:
+
+The device name to get bindings from in the sample application.
+
+
+
+:Symbol:           NET_APP_IEEE802154_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "IEEE 802.15.4 device name"
+:Default values:
+
+ *  IEEE802154_KW41Z_DRV_NAME (value: "")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_MKW41Z4 && SOC_SERIES_KINETIS_KWX && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:205
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.defconfig.mkw41z4:82

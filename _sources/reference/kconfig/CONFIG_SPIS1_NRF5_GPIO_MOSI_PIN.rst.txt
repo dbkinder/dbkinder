@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: SPIS1_NRF5_GPIO_MOSI_PIN
+
+.. option:: CONFIG_SPIS1_NRF5_GPIO_MOSI_PIN
+.. _CONFIG_SPIS1_NRF5_GPIO_MOSI_PIN:
+
+GPIO pin number for MOSI
+
+
+
+:Symbol:           SPIS1_NRF5_GPIO_MOSI_PIN
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 31]
+:Prompts:
+
+ *  "MOSI pin number"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SPI_1 && !I2C_1 && SPI_LEGACY_API && SPI && SPI_NRF5 && SPIS1_NRF5 (value: "n")
+:Locations:
+ * ../drivers/spi/Kconfig.nrf5_legacy:237

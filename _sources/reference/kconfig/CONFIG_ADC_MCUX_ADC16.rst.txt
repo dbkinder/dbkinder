@@ -1,0 +1,50 @@
+:orphan:
+
+.. title:: ADC_MCUX_ADC16
+
+.. option:: CONFIG_ADC_MCUX_ADC16
+.. _CONFIG_ADC_MCUX_ADC16:
+
+Enable the MCUX ADC16 driver.
+
+
+:Symbol:           ADC_MCUX_ADC16
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "MCUX ADC16 driver" if HAS_MCUX_ADC16 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: HAS_MCUX_ADC16 (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_HAS_DTS_ADC` if HAS_MCUX_ADC16 (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_MK64F12 && SOC_SERIES_KINETIS_K6X && ADC (value: "n")
+:Locations:
+ * ../drivers/adc/Kconfig.mcux:9
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.defconfig.mkw41z4:20
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.defconfig.mkw2xd512:32
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.defconfig.mkw40z4:20
+ * ../arch/arm/soc/nxp_kinetis/kl2x/Kconfig.defconfig.mkl25z4:20
+ * ../arch/arm/soc/nxp_kinetis/k6x/Kconfig.defconfig.mk64f12:17

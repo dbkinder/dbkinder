@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: LSM6DSL_GYRO_FULLSCALE
+
+.. option:: CONFIG_LSM6DSL_GYRO_FULLSCALE
+.. _CONFIG_LSM6DSL_GYRO_FULLSCALE:
+
+Specify the default gyroscope full-scale range.
+An X value for the config represents a range of +/- X degree per
+second. Valid values are 125, 245, 500, 1000 and 2000.
+
+
+
+:Symbol:           LSM6DSL_GYRO_FULLSCALE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Gyroscope full-scale range" if LSM6DSL (value: "n")
+:Default values:
+
+ *  2000 (value: "n")
+ *   Condition: LSM6DSL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LSM6DSL && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lsm6dsl/Kconfig:52

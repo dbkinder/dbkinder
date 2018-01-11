@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: SOC_SERIES_RISCV32_QEMU
+
+.. option:: CONFIG_SOC_SERIES_RISCV32_QEMU
+.. _CONFIG_SOC_SERIES_RISCV32_QEMU:
+
+Enable support for riscv32 QEMU SOC implementation
+
+
+:Symbol:           SOC_SERIES_RISCV32_QEMU
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "riscv32 QEMU SOC implementation" if RISCV32 (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_SOC_FAMILY_RISCV_PRIVILEGE` if RISCV32 (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/riscv32/soc/riscv-privilege/riscv32-qemu/Kconfig.series:8

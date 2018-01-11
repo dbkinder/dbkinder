@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: HTTP_CLIENT_NETWORK_TIMEOUT
+
+.. option:: CONFIG_HTTP_CLIENT_NETWORK_TIMEOUT
+.. _CONFIG_HTTP_CLIENT_NETWORK_TIMEOUT:
+
+Default network activity timeout in seconds.  This setting is used
+for TCP connection timeout.
+
+
+
+:Symbol:           HTTP_CLIENT_NETWORK_TIMEOUT
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Default network activity timeout in seconds" if HTTP_CLIENT (value: "n")
+:Default values:
+
+ *  20 (value: "n")
+ *   Condition: HTTP_CLIENT (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ HTTP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/http/Kconfig:124

@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: NO_FS
+
+.. option:: CONFIG_NO_FS
+.. _CONFIG_NO_FS:
+
+No file system chosen.
+
+
+
+:Symbol:           NO_FS
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "No File System"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FILE_SYSTEM (value: "n")
+:Locations:
+ * ../subsys/fs/Kconfig:21

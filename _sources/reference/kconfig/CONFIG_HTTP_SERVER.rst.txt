@@ -1,0 +1,44 @@
+:orphan:
+
+.. title:: HTTP_SERVER
+
+.. option:: CONFIG_HTTP_SERVER
+.. _CONFIG_HTTP_SERVER:
+
+Enables HTTP server routines.
+
+
+
+:Symbol:           HTTP_SERVER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "HTTP server support"
+ *  "HTTP server support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_HTTP_PARSER`
+ *  :option:`CONFIG_HTTP_PARSER_URL`
+ *  :option:`CONFIG_NET_APP_SERVER`
+ *  :option:`CONFIG_HTTP_PARSER`
+ *  :option:`CONFIG_HTTP_PARSER_URL`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ HTTP && NETWORKING && !HTTP_APP (value: "n")
+:Locations:
+ * ../subsys/net/lib/http/Kconfig:20
+ * ../subsys/net/lib/http/Kconfig:67

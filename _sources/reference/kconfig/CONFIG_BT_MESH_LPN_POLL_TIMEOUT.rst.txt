@@ -1,0 +1,43 @@
+:orphan:
+
+.. title:: BT_MESH_LPN_POLL_TIMEOUT
+
+.. option:: CONFIG_BT_MESH_LPN_POLL_TIMEOUT
+.. _CONFIG_BT_MESH_LPN_POLL_TIMEOUT:
+
+PollTimeout timer is used to measure time between two
+consecutive requests sent by the Low Power node. If no
+requests are received by the Friend node before the
+PollTimeout timer expires, then the friendship is considered
+terminated. The value is in units of 100 milliseconds, so e.g.
+a value of 300 means 3 seconds.
+
+
+
+:Symbol:           BT_MESH_LPN_POLL_TIMEOUT
+:Type:             int
+:Value:            "10"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [10, 244735]
+:Prompts:
+
+ *  "The value of the PollTimeout timer"
+:Default values:
+
+ *  300 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_LOW_POWER (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:273

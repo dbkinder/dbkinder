@@ -1,0 +1,44 @@
+:orphan:
+
+.. title:: ETH_SAM_GMAC_BUF_RX_COUNT
+
+.. option:: CONFIG_ETH_SAM_GMAC_BUF_RX_COUNT
+.. _CONFIG_ETH_SAM_GMAC_BUF_RX_COUNT:
+
+Number of network buffers that will be permanently allocated by the
+Ethernet driver. These buffers are used in receive path. They are
+preallocated by the driver and made available to the GMAC module to be
+filled in with incoming data. Their number has to be large enough to fit
+at least one complete Ethernet frame. SAM ETH driver will always allocate
+that amount of buffers for itself thus reducing the NET_BUF_RX_COUNT
+which is a total amount of RX data buffers used by the whole networking
+stack. One has to ensure that NET_PKT_RX_COUNT is large enough to
+fit at least two Ethernet frames: one being received by the GMAC module
+and the other being processed by the higher layer networking stack.
+
+
+
+:Symbol:           ETH_SAM_GMAC_BUF_RX_COUNT
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Network RX buffers preallocated by the SAM ETH driver"
+:Default values:
+
+ *  18 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ETH_SAM_GMAC (value: "n")
+:Locations:
+ * ../drivers/ethernet/Kconfig.sam_gmac:24

@@ -1,0 +1,513 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Device Tree in Zephyr &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="Device and Driver Support" href="../index.html"/>
+        <link rel="next" title="Subsystems" href="../../subsystems/subsystems.html"/>
+        <link rel="prev" title="Device Drivers and Device Model" href="../drivers/drivers.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../index.html">Device and Driver Support</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Device and Driver Support</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../drivers/drivers.html">Device Drivers and Device Model</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Device Tree in Zephyr</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-device-tree">Introduction to Device Tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-build-requirements">System build requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zephyr-and-device-tree">Zephyr and Device Tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#device-tree-file-formats">Device tree file formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#currently-supported-boards">Currently supported boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-support-for-a-board">Adding support for a board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-support-for-device-tree-in-drivers">Adding support for device tree in drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#source-tree-hierarchy">Source Tree Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#yaml-definitions-for-device-nodes">YAML definitions for device nodes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="device-tree-in-zephyr">
+<span id="device-tree"></span><h1>Device Tree in Zephyr<a class="headerlink" href="#device-tree-in-zephyr" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction-to-device-tree">
+<h2>Introduction to Device Tree<a class="headerlink" href="#introduction-to-device-tree" title="Permalink to this headline">¶</a></h2>
+<p>Device tree is a way of describing hardware and configuration information
+for boards.  Device tree was adopted for use in the Linux kernel for the
+PowerPC architecture.  However, it is now in use for ARM and other
+architectures.</p>
+<p>The device tree is a data structure for dynamically describing hardware
+using a Device Tree Source (DTS) data structure language, and compiled
+into a compact Device Tree Blob (DTB) using a Device Tree Compiler (DTC).
+Rather than hard coding every detail of a board’s hardware into the
+operating system, the hardware-describing DTB is passed to the operating
+system at boot time. This allows the same compiled Linux kernel to support
+different hardware configurations within an architecture family (e.g., ARM,
+x86, PowerPC) and moves a significant part of the hardware description out of
+the kernel binary itself.</p>
+<p>Traditional usage of device tree involves storing of the Device Tree Blob.
+The DTB is then used during runtime for configuration of device drivers.  In
+Zephyr, the DTS information will be used only during compile time.
+Information about the system is extracted from the compiled DTS and used to
+create the application image.</p>
+<p>Device tree uses a specific format to describe the device nodes in a system.
+This format is described in <a class="reference external" href="https://www.devicetree.org/downloads/devicetree-specification-v0.1-20160524.pdf">EPAPR document</a>.</p>
+<p>More device tree information can be found at the <a class="reference external" href="https://git.kernel.org/pub/scm/utils/dtc/dtc.git">device tree repository</a>.</p>
+</div>
+<div class="section" id="system-build-requirements">
+<h2>System build requirements<a class="headerlink" href="#system-build-requirements" title="Permalink to this headline">¶</a></h2>
+<p>The Zephyr device tree feature requires a device tree compiler (DTC) and Python
+YAML packages.  Refer to the installation guide for your specific host OS:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../getting_started/installation_win.html#installing-zephyr-win"><span class="std std-ref">Development Environment Setup on Windows</span></a></li>
+<li><a class="reference internal" href="../../getting_started/installation_linux.html#installation-linux"><span class="std std-ref">Development Environment Setup on Linux</span></a></li>
+<li><a class="reference internal" href="../../getting_started/installation_mac.html#installing-zephyr-mac"><span class="std std-ref">Development Environment Setup on macOS</span></a></li>
+</ul>
+</div>
+<div class="section" id="zephyr-and-device-tree">
+<h2>Zephyr and Device Tree<a class="headerlink" href="#zephyr-and-device-tree" title="Permalink to this headline">¶</a></h2>
+<p>In Zephyr, device tree is used to not only describe hardware, but also to
+describe Zephyr-specific configuration information.  The Zephyr-specific
+information is intended to augment the device tree descriptions.  The main
+reason for this is to leverage existing device tree files that a SoC vendor may
+already have defined for a given platform.</p>
+<p>Today, configuration in Zephyr comes from a number of different places.  It can
+come from Kconfig files, CMSIS header files, vendor header files, prj.conf
+files, and other miscellaneous sources.  The intent of using device tree is to
+replace or curtail the use of Kconfig files throughout the system, and instead
+use device tree files to describe the configuration of device nodes.  CMSIS and
+vendor header files can be used in conjunction with the device tree to fully
+describe hardware.  Device tree is not intended to replace CMSIS or vendor
+include files.</p>
+<p>The device tree files are compiled using the device tree compiler.  The compiler
+runs the .dts file through the C preprocessor to resolve any macro or #defines
+utilized in the file.  The output of the compile is another dts formatted file.</p>
+<p>After compilation, a python script extracts information from the compiled device
+tree file using a set of rules specified in YAML files.  The extracted
+information is placed in a header file that is used by the rest of the code as
+the project is compiled.</p>
+<p>A temporary fixup file is required for device tree support on most devices.
+This .fixup file by default resides in the board directory and is named
+dts.fixup.  This fixup file maps the generated include information to the
+current driver/source usage.</p>
+</div>
+<div class="section" id="device-tree-file-formats">
+<h2>Device tree file formats<a class="headerlink" href="#device-tree-file-formats" title="Permalink to this headline">¶</a></h2>
+<p>Hardware and software is described inside of device tree files in clear text format.
+These files have the file suffix of .dtsi or .dts.  The .dtsi files are meant to
+be included by other files.  Typically for a given board you have some number of
+.dtsi include files that pull in common device descriptions that are used across
+a given SoC family.</p>
+<div class="section" id="example-frdm-k64f-board-and-hexiwear-k64">
+<h3>Example: FRDM K64F Board and Hexiwear K64<a class="headerlink" href="#example-frdm-k64f-board-and-hexiwear-k64" title="Permalink to this headline">¶</a></h3>
+<p>Both of these boards are based on the same NXP Kinetis SoC family, the K6X.  The
+following shows the include hierarchy for both boards.</p>
+<p>boards/arm/frdm_k64f/frdm_k64f.dts includes the following files:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dts</span><span class="o">/</span><span class="n">arm</span><span class="o">/</span><span class="n">nxp</span><span class="o">/</span><span class="n">nxp_k6x</span><span class="o">.</span><span class="n">dtsi</span>
+<span class="n">dts</span><span class="o">/</span><span class="n">arm</span><span class="o">/</span><span class="n">armv7</span><span class="o">-</span><span class="n">m</span><span class="o">.</span><span class="n">dtsi</span>
+</pre></div>
+</div>
+<p>boards/arm/hexiwear_k64/hexiwear_k64.dts includes the same files:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dts</span><span class="o">/</span><span class="n">arm</span><span class="o">/</span><span class="n">nxp</span><span class="o">/</span><span class="n">nxp_k6x</span><span class="o">.</span><span class="n">dtsi</span>
+<span class="n">dts</span><span class="o">/</span><span class="n">arm</span><span class="o">/</span><span class="n">armv7</span><span class="o">-</span><span class="n">m</span><span class="o">.</span><span class="n">dtsi</span>
+</pre></div>
+</div>
+<p>The board-specific .dts files enable nodes, define the Zephyr-specific items,
+and also adds board-specific changes like gpio/pinmux assignments.  These types
+of things will vary based on the board layout and application use.</p>
+</div>
+</div>
+<div class="section" id="currently-supported-boards">
+<h2>Currently supported boards<a class="headerlink" href="#currently-supported-boards" title="Permalink to this headline">¶</a></h2>
+<p>Device tree is currently supported on all ARM targets.  Support for all other
+architectures is to be completed by release 1.11.</p>
+</div>
+<div class="section" id="adding-support-for-a-board">
+<h2>Adding support for a board<a class="headerlink" href="#adding-support-for-a-board" title="Permalink to this headline">¶</a></h2>
+<p>Adding device tree support for a given board requires adding a number of files.
+These files will contain the DTS information that describes a platform, the
+YAML descriptions that define the contents of a given Device Tree peripheral
+node, and also any fixup files required to support the platform.</p>
+<p>When writing Device Tree Source files, it is good to separate out common
+peripheral information that could be used across multiple SoC families or
+boards.  DTS files are identified by their file suffix.  A .dtsi suffix denotes
+a DTS file that is used as an include in another DTS file.  A .dts suffix
+denotes the primary DTS file for a given board.</p>
+<p>The primary DTS file will contain at a minimum a version line, optional
+includes, and the root node definition.  The root node will contain a model and
+compatible that denotes the unique board described by the .dts file.</p>
+<div class="section" id="device-tree-source-file-template">
+<h3>Device Tree Source File Template<a class="headerlink" href="#device-tree-source-file-template" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">/dts-v1/</span>
+<span class="l l-Scalar l-Scalar-Plain">/ {</span>
+        <span class="l l-Scalar l-Scalar-Plain">model = &quot;Model name for your board&quot;;</span>
+        <span class="l l-Scalar l-Scalar-Plain">compatible = &quot;compatible for your board&quot;;</span>
+        <span class="l l-Scalar l-Scalar-Plain">/* rest of file */</span>
+<span class="l l-Scalar l-Scalar-Plain">};</span>
+</pre></div>
+</div>
+<p>One suggestion for starting from scratch on a platform/board is to examine other
+boards and their device tree source files.</p>
+<p>The following is a more precise list of required files:</p>
+<ul class="simple">
+<li>Base architecture support<ul>
+<li>Add architecture-specific DTS directory, if not already present.
+Example: dts/arm for ARM.</li>
+<li>Add target specific device tree files for base SoC.  These should be
+.dtsi files to be included in the board-specific device tree files.</li>
+<li>Add target specific YAML files in the dts/bindings/ directory.
+Create the yaml directory if not present.</li>
+</ul>
+</li>
+<li>SoC family support<ul>
+<li>Add one or more SoC family .dtsi files that describe the hardware
+for a set of devices.  The file should contain all the relevant
+nodes and base configuration that would be applicable to all boards
+utilizing that SoC family.</li>
+<li>Add SoC family YAML files that describe the nodes present in the .dtsi file.</li>
+</ul>
+</li>
+<li>Board specific support<ul>
+<li>Add a board level .dts file that includes the SoC family .dtsi files
+and enables the nodes required for that specific board.</li>
+<li>Board .dts file should specify the SRAM and FLASH devices, if present.</li>
+<li>Add board-specific YAML files, if required.  This would occur if the
+board has additional hardware that is not covered by the SoC family
+.dtsi/.yaml files.</li>
+</ul>
+</li>
+<li>Fixup files<ul>
+<li>Fixup files contain mappings from existing Kconfig options to the actual
+underlying DTS derived configuration #defines.  Fixup files are temporary
+artifacts until additional DTS changes are made to make them unnecessary.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="adding-support-for-device-tree-in-drivers">
+<h2>Adding support for device tree in drivers<a class="headerlink" href="#adding-support-for-device-tree-in-drivers" title="Permalink to this headline">¶</a></h2>
+<p>As drivers and other source code is converted over to make use of device tree
+generated information, these drivers may require changes to match the generated
+#define information.</p>
+</div>
+<div class="section" id="source-tree-hierarchy">
+<h2>Source Tree Hierarchy<a class="headerlink" href="#source-tree-hierarchy" title="Permalink to this headline">¶</a></h2>
+<p>The device tree files are located in a couple of different directories.  The
+directory split is done based on architecture, and there is also a common
+directory where architecture agnostic device tree and yaml files are located.</p>
+<p>Assuming the current working directory is the ZEPHYR_BASE, the directory
+hierarchy looks like the following:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dts</span><span class="o">/</span><span class="n">common</span><span class="o">/</span>
+<span class="n">dts</span><span class="o">/&lt;</span><span class="n">ARCH</span><span class="o">&gt;/</span>
+<span class="n">dts</span><span class="o">/</span><span class="n">bindings</span><span class="o">/</span>
+<span class="n">boards</span><span class="o">/&lt;</span><span class="n">ARCH</span><span class="o">&gt;/&lt;</span><span class="n">BOARD</span><span class="o">&gt;/</span>
+</pre></div>
+</div>
+<p>The common directories contain a skeleton.dtsi include file that defines the
+address and size cells.  The yaml subdirectory contains common yaml files for
+Zephyr-specific nodes/properties and generic device properties common across
+architectures.</p>
+<p>Example: Subset of DTS/YAML files for NXP FRDM K64F (Subject to Change):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dts</span><span class="o">/</span><span class="n">arm</span><span class="o">/</span><span class="n">armv7</span><span class="o">-</span><span class="n">m</span><span class="o">.</span><span class="n">dtsi</span>
+<span class="n">dts</span><span class="o">/</span><span class="n">arm</span><span class="o">/</span><span class="n">k6x</span><span class="o">/</span><span class="n">nxp_k6x</span><span class="o">.</span><span class="n">dtsi</span>
+<span class="n">boards</span><span class="o">/</span><span class="n">arm</span><span class="o">/</span><span class="n">frdm_k64f</span><span class="o">/</span><span class="n">frdm_k64f</span><span class="o">.</span><span class="n">dts</span>
+<span class="n">dts</span><span class="o">/</span><span class="n">bindings</span><span class="o">/</span><span class="n">interrupt</span><span class="o">-</span><span class="n">controller</span><span class="o">/</span><span class="n">arm</span><span class="p">,</span><span class="n">v7m</span><span class="o">-</span><span class="n">nvic</span><span class="o">.</span><span class="n">yaml</span>
+<span class="n">dts</span><span class="o">/</span><span class="n">bindings</span><span class="o">/</span><span class="n">gpio</span><span class="o">/</span><span class="n">nxp</span><span class="p">,</span><span class="n">kinetis</span><span class="o">-</span><span class="n">gpio</span><span class="o">.</span><span class="n">yaml</span>
+<span class="n">dts</span><span class="o">/</span><span class="n">bindings</span><span class="o">/</span><span class="n">pinctrl</span><span class="o">/</span><span class="n">nxp</span><span class="p">,</span><span class="n">kinetis</span><span class="o">-</span><span class="n">pinmux</span><span class="o">.</span><span class="n">yaml</span>
+<span class="n">dts</span><span class="o">/</span><span class="n">bindings</span><span class="o">/</span><span class="n">serial</span><span class="o">/</span><span class="n">nxp</span><span class="p">,</span><span class="n">kinetis</span><span class="o">-</span><span class="n">uart</span><span class="o">.</span><span class="n">yaml</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="yaml-definitions-for-device-nodes">
+<h2>YAML definitions for device nodes<a class="headerlink" href="#yaml-definitions-for-device-nodes" title="Permalink to this headline">¶</a></h2>
+<p>Device tree can describe hardware and configuration, but it doesn’t tell the
+system which pieces of information are useful, or how to generate configuration
+data from the device tree nodes.  For this, we rely on YAML files to describe
+the contents or definition of a device tree node.</p>
+<p>A YAML description must be provided for every device node that is to be a source
+of information for the system.  This YAML description can be used for more than
+one purpose.  It can be used in conjunction with the device tree to generate
+include information.  It can also be used to validate the device tree files
+themselves.  A device tree file can successfully compile and still not contain
+the necessary pieces required to build the rest of the software.  YAML provides
+a means to detect that issue.</p>
+<p>YAML files reside in a subdirectory inside the common and architecture-specific
+device tree directories.  A YAML template file is provided to show the required
+format.  This file is located at:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dts</span><span class="o">/</span><span class="n">bindings</span><span class="o">/</span><span class="n">device_node</span><span class="o">.</span><span class="n">yaml</span><span class="o">.</span><span class="n">template</span>
+</pre></div>
+</div>
+<p>YAML files must end in a .yaml suffix.  YAML files are scanned during the
+information extraction phase and are matched to device tree nodes via the
+compatible property.</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../../subsystems/subsystems.html" class="btn btn-neutral float-right" title="Subsystems" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../drivers/drivers.html" class="btn btn-neutral" title="Device Drivers and Device Model" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

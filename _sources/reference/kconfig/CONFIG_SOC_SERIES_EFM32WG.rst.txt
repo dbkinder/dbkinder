@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: SOC_SERIES_EFM32WG
+
+.. option:: CONFIG_SOC_SERIES_EFM32WG
+.. _CONFIG_SOC_SERIES_EFM32WG:
+
+Enable support for EFM32 WonderGecko MCU series
+
+
+:Symbol:           SOC_SERIES_EFM32WG
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "EFM32WG Series MCU"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_CPU_CORTEX_M`
+ *  :option:`CONFIG_CPU_CORTEX_M4`
+ *  :option:`CONFIG_CPU_HAS_FPU`
+ *  :option:`CONFIG_SOC_FAMILY_EXX32`
+ *  :option:`CONFIG_SYS_POWER_LOW_POWER_STATE_SUPPORTED`
+ *  :option:`CONFIG_CPU_HAS_SYSTICK`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/arm/soc/silabs_exx32/efm32wg/Kconfig.series:8

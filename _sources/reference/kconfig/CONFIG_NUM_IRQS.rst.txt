@@ -1,0 +1,194 @@
+:orphan:
+
+.. title:: NUM_IRQS
+
+.. option:: CONFIG_NUM_IRQS
+.. _CONFIG_NUM_IRQS:
+
+Interrupts available will be 0 to NUM_IRQS-1.
+The minimum value is 17 as the first 16 entries in the vector
+table are for CPU exceptions.
+
+The BSP must provide a valid default. This drives the size of the
+vector table.
+
+
+
+:Symbol:           NUM_IRQS
+:Type:             int
+:Value:            "17"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [17, 256]
+:Prompts:
+
+ *  "Upper limit of interrupt numbers/IDs used"
+:Default values:
+
+ *  32 (value: "n")
+ *   Condition: (none)
+ *  35 (value: "n")
+ *   Condition: (none)
+ *  71 (value: "n")
+ *   Condition: (none)
+ *  45 (value: "n")
+ *   Condition: (none)
+ *  34 (value: "n")
+ *   Condition: (none)
+ *  32 (value: "n")
+ *   Condition: (none)
+ *  45 (value: "n")
+ *   Condition: (none)
+ *  39 (value: "n")
+ *   Condition: (none)
+ *  29 (value: "n")
+ *   Condition: (none)
+ *  32 (value: "n")
+ *   Condition: (none)
+ *  91 (value: "n")
+ *   Condition: (none)
+ *  97 (value: "n")
+ *   Condition: (none)
+ *  82 (value: "n")
+ *   Condition: (none)
+ *  85 (value: "n")
+ *   Condition: (none)
+ *  82 (value: "n")
+ *   Condition: (none)
+ *  82 (value: "n")
+ *   Condition: (none)
+ *  102 (value: "n")
+ *   Condition: (none)
+ *  85 (value: "n")
+ *   Condition: (none)
+ *  93 (value: "n")
+ *   Condition: (none)
+ *  82 (value: "n")
+ *   Condition: (none)
+ *  82 (value: "n")
+ *   Condition: (none)
+ *  91 (value: "n")
+ *   Condition: (none)
+ *  82 (value: "n")
+ *   Condition: (none)
+ *  59 (value: "n")
+ *   Condition: (none)
+ *  68 (value: "n")
+ *   Condition: (none)
+ *  68 (value: "n")
+ *   Condition: (none)
+ *  82 (value: "n")
+ *   Condition: (none)
+ *  82 (value: "n")
+ *   Condition: (none)
+ *  82 (value: "n")
+ *   Condition: (none)
+ *  34 (value: "n")
+ *   Condition: (none)
+ *  179 (value: "n")
+ *   Condition: (none)
+ *  64 (value: "n")
+ *   Condition: (none)
+ *  160 (value: "n")
+ *   Condition: (none)
+ *  32 (value: "n")
+ *   Condition: (none)
+ *  65 (value: "n")
+ *   Condition: (none)
+ *  32 (value: "n")
+ *   Condition: (none)
+ *  32 (value: "n")
+ *   Condition: (none)
+ *  86 (value: "n")
+ *   Condition: (none)
+ *  46 (value: "n")
+ *   Condition: (none)
+ *  39 (value: "n")
+ *   Condition: (none)
+ *  26 (value: "n")
+ *   Condition: (none)
+ *  29 (value: "n")
+ *   Condition: (none)
+ *  68 (value: "n")
+ *   Condition: (none)
+ *  38 (value: "n")
+ *   Condition: BOARD_EM_STARTERKIT_R23 (value: "n")
+ *  36 (value: "n")
+ *   Condition: BOARD_EM_STARTERKIT_R22 (value: "n")
+ *  38 (value: "n")
+ *   Condition: BOARD_EM_STARTERKIT_R23 (value: "n")
+ *  36 (value: "n")
+ *   Condition: BOARD_EM_STARTERKIT_R22 (value: "n")
+ *  38 (value: "n")
+ *   Condition: BOARD_EM_STARTERKIT_R23 (value: "n")
+ *  36 (value: "n")
+ *   Condition: BOARD_EM_STARTERKIT_R22 (value: "n")
+ *  64 (value: "n")
+ *   Condition: (none)
+ *  32 (value: "n")
+ *   Condition: (none)
+ *  32 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_RISCV32_PULPINO (value: "n")
+:Locations:
+ * ../arch/arc/Kconfig:66
+ * ../arch/nios2/Kconfig:47
+ * ../arch/arm/soc/atmel_sam/sam4s/Kconfig.defconfig.series:22
+ * ../arch/arm/soc/atmel_sam/same70/Kconfig.defconfig.series:29
+ * ../arch/arm/soc/atmel_sam/sam3x/Kconfig.defconfig.series:23
+ * ../arch/arm/soc/ti_lm3s6965/Kconfig.defconfig:14
+ * ../arch/arm/soc/arm/mps2/Kconfig.defconfig.mps2_an385:12
+ * ../arch/arm/soc/arm/beetle/Kconfig.defconfig.series:16
+ * ../arch/arm/soc/silabs_exx32/efm32wg/Kconfig.defconfig.series:14
+ * ../arch/arm/soc/st_stm32/stm32f0/Kconfig.defconfig.stm32f030x8:18
+ * ../arch/arm/soc/st_stm32/stm32f0/Kconfig.defconfig.stm32f091xc:18
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.defconfig.stm32f429xx:14
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.defconfig.stm32f412zg:14
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.defconfig.stm32f407xx:14
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.defconfig.stm32f411xe:14
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.defconfig.stm32f417xx:14
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.defconfig.stm32f405xx:14
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.defconfig.stm32f413xx:14
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.defconfig.stm32f401xe:14
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.defconfig.stm32f469xi:14
+ * ../arch/arm/soc/st_stm32/stm32l4/Kconfig.defconfig.stm32l476xx:15
+ * ../arch/arm/soc/st_stm32/stm32l4/Kconfig.defconfig.stm32l475xg:14
+ * ../arch/arm/soc/st_stm32/stm32l4/Kconfig.defconfig.stm32l496xx:15
+ * ../arch/arm/soc/st_stm32/stm32l4/Kconfig.defconfig.stm32l432xx:15
+ * ../arch/arm/soc/st_stm32/stm32f1/Kconfig.defconfig.stm32f103xx:14
+ * ../arch/arm/soc/st_stm32/stm32f1/Kconfig.defconfig.stm32f103xx:26
+ * ../arch/arm/soc/st_stm32/stm32f1/Kconfig.defconfig.stm32f107xc:14
+ * ../arch/arm/soc/st_stm32/stm32f3/Kconfig.defconfig.stm32f303xc:18
+ * ../arch/arm/soc/st_stm32/stm32f3/Kconfig.defconfig.stm32f373xc:18
+ * ../arch/arm/soc/st_stm32/stm32f3/Kconfig.defconfig.stm32f334x8:18
+ * ../arch/arm/soc/ti_simplelink/cc2650/Kconfig.defconfig.series:14
+ * ../arch/arm/soc/ti_simplelink/cc32xx/Kconfig.defconfig.cc3220sf:10
+ * ../arch/arm/soc/ti_simplelink/msp432p4xx/Kconfig.defconfig.msp432p401r:22
+ * ../arch/arm/soc/nxp_imx/rt/Kconfig.defconfig.series:13
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.defconfig.mkw41z4:14
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.defconfig.mkw2xd512:26
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.defconfig.mkw40z4:14
+ * ../arch/arm/soc/nxp_kinetis/kl2x/Kconfig.defconfig.mkl25z4:14
+ * ../arch/arm/soc/nxp_kinetis/k6x/Kconfig.defconfig.series:14
+ * ../arch/arm/soc/nordic_nrf5/nrf52/Kconfig.defconfig.nrf52840_QIAA:15
+ * ../arch/arm/soc/nordic_nrf5/nrf52/Kconfig.defconfig.nrf52832_QFAA:15
+ * ../arch/arm/soc/nordic_nrf5/nrf51/Kconfig.defconfig.series:22
+ * ../arch/arm/soc/atmel_sam0/samd/Kconfig.defconfig.series:29
+ * ../arch/arc/soc/quark_se_c1000_ss/Kconfig.defconfig:18
+ * ../arch/arc/soc/em9d/Kconfig.defconfig:18
+ * ../arch/arc/soc/em7d/Kconfig.defconfig:18
+ * ../arch/arc/soc/em11d/Kconfig.defconfig:18
+ * ../arch/riscv32/soc/riscv-privilege/fe310/Kconfig.defconfig.series:23
+ * ../arch/riscv32/soc/riscv-privilege/riscv32-qemu/Kconfig.defconfig.series:19
+ * ../arch/riscv32/soc/pulpino/Kconfig.defconfig:27

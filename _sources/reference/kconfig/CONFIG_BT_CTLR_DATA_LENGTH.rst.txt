@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BT_CTLR_DATA_LENGTH
+
+.. option:: CONFIG_BT_CTLR_DATA_LENGTH
+.. _CONFIG_BT_CTLR_DATA_LENGTH:
+
+Enable support for Bluetooth v4.2 LE Data Length Update procedure in
+the Controller.
+
+
+
+:Symbol:           BT_CTLR_DATA_LENGTH
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Data Length Update"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: SOC_SERIES_NRF52X (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR && BT_CONN (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:165

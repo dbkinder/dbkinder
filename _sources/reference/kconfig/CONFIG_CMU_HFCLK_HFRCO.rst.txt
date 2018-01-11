@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: CMU_HFCLK_HFRCO
+
+.. option:: CONFIG_CMU_HFCLK_HFRCO
+.. _CONFIG_CMU_HFCLK_HFRCO:
+
+Set this option to use the internal high frequency RC oscillator as high frequency clock.
+
+
+
+:Symbol:           CMU_HFCLK_HFRCO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Internal high frequency RC oscillator"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ HAS_CMU && ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/silabs_exx32/Kconfig:52

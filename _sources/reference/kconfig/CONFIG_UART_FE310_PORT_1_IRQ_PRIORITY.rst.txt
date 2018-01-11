@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: UART_FE310_PORT_1_IRQ_PRIORITY
+
+.. option:: CONFIG_UART_FE310_PORT_1_IRQ_PRIORITY
+.. _CONFIG_UART_FE310_PORT_1_IRQ_PRIORITY:
+
+Port 1 Interrupt Priority
+
+
+
+:Symbol:           UART_FE310_PORT_1_IRQ_PRIORITY
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port 1 Interrupt Priority" if UART_FE310_PORT_1 (value: "n")
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: UART_FE310_PORT_1 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.fe310:92

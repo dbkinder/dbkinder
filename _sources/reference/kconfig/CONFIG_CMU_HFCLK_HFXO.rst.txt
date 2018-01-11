@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: CMU_HFCLK_HFXO
+
+.. option:: CONFIG_CMU_HFCLK_HFXO
+.. _CONFIG_CMU_HFCLK_HFXO:
+
+Set this option to use the external high frequency crystal oscillator
+as high frequency clock.
+
+
+
+:Symbol:           CMU_HFCLK_HFXO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "External high frequency crystal oscillator"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ HAS_CMU && ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/silabs_exx32/Kconfig:40

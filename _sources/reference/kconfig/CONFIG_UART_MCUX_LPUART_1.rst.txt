@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: UART_MCUX_LPUART_1
+
+.. option:: CONFIG_UART_MCUX_LPUART_1
+.. _CONFIG_UART_MCUX_LPUART_1:
+
+Enable UART 1.
+
+
+
+:Symbol:           UART_MCUX_LPUART_1
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "UART 1"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ UART_MCUX_LPUART && BOARD_MIMXRT1050_EVK (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.mcux_lpuart:25
+ * ../boards/arm/mimxrt1050_evk/Kconfig.defconfig:34

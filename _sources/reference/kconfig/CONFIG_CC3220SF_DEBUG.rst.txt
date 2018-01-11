@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: CC3220SF_DEBUG
+
+.. option:: CONFIG_CC3220SF_DEBUG
+.. _CONFIG_CC3220SF_DEBUG:
+
+The configuration item CONFIG_CC3220SF_DEBUG:
+
+:Symbol:           CC3220SF_DEBUG
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Prepend debug header, disabling flash verification" if XIP (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: XIP && XIP (value: "n")
+ *  n (value: "n")
+ *   Condition: !XIP && XIP (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_CC3220SF && ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/ti_simplelink/cc32xx/Kconfig.soc:17

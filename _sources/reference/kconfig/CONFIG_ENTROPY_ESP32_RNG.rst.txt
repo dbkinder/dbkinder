@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: ENTROPY_ESP32_RNG
+
+.. option:: CONFIG_ENTROPY_ESP32_RNG
+.. _CONFIG_ENTROPY_ESP32_RNG:
+
+This option enables the entropy number generator for ESP32 SoCs.
+
+With Wi-Fi and Bluetooth disabled, this will produce pseudo-entropy
+numbers: noise from these radios are used to feed entropy in this
+generator.
+
+
+:Symbol:           ENTROPY_ESP32_RNG
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "ESP32 entropy number generator driver" if ENTROPY_GENERATOR && SOC_ESP32 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: ENTROPY_GENERATOR && SOC_ESP32 (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_ENTROPY_HAS_DRIVER` if ENTROPY_GENERATOR && SOC_ESP32 (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ENTROPY_GENERATOR (value: "n")
+:Locations:
+ * ../drivers/entropy/Kconfig.esp32:7

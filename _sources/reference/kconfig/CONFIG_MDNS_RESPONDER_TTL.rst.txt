@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: MDNS_RESPONDER_TTL
+
+.. option:: CONFIG_MDNS_RESPONDER_TTL
+.. _CONFIG_MDNS_RESPONDER_TTL:
+
+DNS answers will use the TTL (in seconds).
+
+
+
+:Symbol:           MDNS_RESPONDER_TTL
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Time-to-Live of returned DNS name"
+:Default values:
+
+ *  600 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MDNS_RESPONDER && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/dns/Kconfig:136

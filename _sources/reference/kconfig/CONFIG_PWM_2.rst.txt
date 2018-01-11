@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: PWM_2
+
+.. option:: CONFIG_PWM_2
+.. _CONFIG_PWM_2:
+
+The configuration item CONFIG_PWM_2:
+
+:Symbol:           PWM_2
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable PWM port 2"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ PWM (value: "n")
+:Locations:
+ * ../drivers/pwm/Kconfig:40

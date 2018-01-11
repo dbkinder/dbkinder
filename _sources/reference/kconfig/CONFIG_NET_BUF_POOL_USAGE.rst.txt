@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: NET_BUF_POOL_USAGE
+
+.. option:: CONFIG_NET_BUF_POOL_USAGE
+.. _CONFIG_NET_BUF_POOL_USAGE:
+
+Enable network buffer pool tracking. This means that:
+* amount of free buffers in the pool is remembered
+* total size of the pool is calculated
+* pool name is stored and can be shown in debugging prints
+
+
+
+:Symbol:           NET_BUF_POOL_USAGE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Network buffer pool usage tracking" if NET_BUF (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: NET_BUF (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ NETWORKING && NETWORKING && !NET_RAW_MODE && NET_LOG && NET_DEBUG_NET_PKT (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../subsys/net/Kconfig:61

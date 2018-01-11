@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: BT_MESH
+
+.. option:: CONFIG_BT_MESH
+.. _CONFIG_BT_MESH:
+
+This option enables Bluetooth Mesh support. The specific
+features that are available may depend on other features
+that have been enabled in the stack, such as GATT support.
+
+
+
+:Symbol:           BT_MESH
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bluetooth Mesh support"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_TINYCRYPT`
+ *  :option:`CONFIG_TINYCRYPT_AES`
+ *  :option:`CONFIG_TINYCRYPT_AES_CMAC`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:9

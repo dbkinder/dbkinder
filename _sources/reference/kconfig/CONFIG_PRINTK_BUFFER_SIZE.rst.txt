@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: PRINTK_BUFFER_SIZE
+
+.. option:: CONFIG_PRINTK_BUFFER_SIZE
+.. _CONFIG_PRINTK_BUFFER_SIZE:
+
+If userspace is enabled, printk() calls are buffered so that we do
+not have to make a system call for every character emitted. Specify
+the size of this buffer.
+
+
+
+:Symbol:           PRINTK_BUFFER_SIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "printk() buffer size" if PRINTK && USERSPACE (value: "n")
+:Default values:
+
+ *  32 (value: "n")
+ *   Condition: PRINTK && USERSPACE (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../subsys/debug/Kconfig:62

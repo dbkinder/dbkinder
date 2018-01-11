@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: BOARD_EFM32WG_STK3800
+
+.. option:: CONFIG_BOARD_EFM32WG_STK3800
+.. _CONFIG_BOARD_EFM32WG_STK3800:
+
+The configuration item CONFIG_BOARD_EFM32WG_STK3800:
+
+:Symbol:           BOARD_EFM32WG_STK3800
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SiLabs EFM32WG-STK3800 (Wonder Gecko)" if SOC_SERIES_EFM32WG (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_SOC_PART_NUMBER_EFM32WG990F256` if SOC_SERIES_EFM32WG (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/efm32wg_stk3800/Kconfig.board:8

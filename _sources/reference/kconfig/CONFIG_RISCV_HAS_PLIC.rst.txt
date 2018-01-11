@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: RISCV_HAS_PLIC
+
+.. option:: CONFIG_RISCV_HAS_PLIC
+.. _CONFIG_RISCV_HAS_PLIC:
+
+Does the SOC provide support for a Platform Level Interrupt Controller
+
+
+
+
+:Symbol:           RISCV_HAS_PLIC
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Does the SOC provide support for a Platform Level Interrupt Controller" if SOC_FAMILY_RISCV_PRIVILEGE (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SOC_FAMILY_RISCV_PRIVILEGE (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ PLIC_FE310 && SOC_RISCV32_FE310 (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_RISCV32_FE310 (value: "n")
+:Locations:
+ * ../arch/riscv32/soc/riscv-privilege/Kconfig:19
+ * ../arch/riscv32/soc/riscv-privilege/fe310/Kconfig.defconfig.series:19

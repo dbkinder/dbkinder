@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT
+
+.. option:: CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT
+.. _CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT:
+
+Include support for pulling firmware file via a CoAP-CoAP/HTTP proxy.
+
+
+
+:Symbol:           LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Firmware Update object pull via CoAP-CoAP/HTTP proxy support" if LWM2M_FIRMWARE_UPDATE_PULL_SUPPORT (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: LWM2M_FIRMWARE_UPDATE_PULL_SUPPORT (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:152

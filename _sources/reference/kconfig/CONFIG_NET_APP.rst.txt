@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: NET_APP
+
+.. option:: CONFIG_NET_APP
+.. _CONFIG_NET_APP:
+
+Enable API that helps to create client/server network applications.
+This API is experimental and subject to change.
+
+
+
+:Symbol:           NET_APP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Network application API support [EXPERIMENTAL]"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_NET_MGMT`
+ *  :option:`CONFIG_NET_MGMT_EVENT`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:9

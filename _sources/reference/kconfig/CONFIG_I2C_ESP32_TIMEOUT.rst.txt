@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: I2C_ESP32_TIMEOUT
+
+.. option:: CONFIG_I2C_ESP32_TIMEOUT
+.. _CONFIG_I2C_ESP32_TIMEOUT:
+
+The configuration item CONFIG_I2C_ESP32_TIMEOUT:
+
+:Symbol:           I2C_ESP32_TIMEOUT
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "I2C timeout to receive a data bit in APB clock cycles"
+:Default values:
+
+ *  200000 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C_ESP32 && I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig.esp32:19

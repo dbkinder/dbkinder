@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>CC3220SF LaunchXL &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../../../index.html"/>
+        <link rel="up" title="ARM Boards" href="../../index.html"/>
+        <link rel="next" title="Curie (BLE)" href="../../curie_ble/doc/board.html"/>
+        <link rel="prev" title="CC2650 SensorTag" href="../../cc2650_sensortag/doc/cc2650_sensortag.html"/> 
+
+    
+    <script src="../../../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../../../index.html">Docs</a> /
+      
+          <a href="../../../boards.html">Supported Boards</a> /
+      
+          <a href="../../index.html">ARM Boards</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../boards.html">Supported Boards</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../x86/index.html">x86 Boards</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">ARM Boards</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../96b_carbon/doc/96b_carbon.html">96Boards Carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../96b_carbon_nrf51/doc/96b_carbon_nrf51.html">96Boards Carbon nRF51</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../96b_neonkey/doc/96b_neonkey.html">96Boards Neonkey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../96b_nitrogen/doc/96b_nitrogen.html">96Boards Nitrogen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../arduino_101_ble/doc/board.html">Arduino/Genuino 101 (BLE)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../arduino_due/doc/board.html">Arduino Due</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../arduino_zero/doc/arduino_zero.html">Arduino/Genuino Zero</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cc2650_sensortag/doc/cc2650_sensortag.html">CC2650 SensorTag</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CC3220SF LaunchXL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../curie_ble/doc/board.html">Curie (BLE)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../disco_l475_iot1/doc/disco_l475_iot1.html">ST Disco L475 IOT01 (B-L475E-IOT01A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../efm32wg_stk3800/doc/efm32wg_stk3800.html">EFM32WG-STK3800</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../frdm_k64f/doc/frdm_k64f.html">NXP FRDM-K64F</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../frdm_kl25z/doc/frdm_kl25z.html">NXP FRDM-KL25Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../frdm_kw41z/doc/frdm_kw41z.html">NXP FRDM-KW41Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hexiwear_k64/doc/hexiwear_k64.html">Hexiwear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hexiwear_kw40z/doc/hexiwear_kw40z.html">Hexiwear KW40Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mimxrt1050_evk/doc/mimxrt1050_evk.html">NXP MIMXRT1050-EVK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mps2_an385/doc/mps2_an385.html">ARM V2M MPS2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../msp_exp432p401r_launchxl/doc/msp_exp432p401r_launchxl.html">MSP-EXP432P401R LaunchXL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf51_blenano/doc/nrf51_blenano.html">Redbear Labs Nano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf51_pca10028/doc/nrf51_pca10028.html">nRF51-PCA10028</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf51_vbluno51/doc/nrf51_vbluno51.html">nRF51-VBLUno51</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf52840_pca10056/doc/nrf52840_pca10056.html">nRF52840-PCA10056</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf52_blenano2/doc/nrf52_blenano2.html">Redbear Labs Nano v2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf52_pca10040/doc/nrf52_pca10040.html">nRF52-PCA10040</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nrf52_vbluno52/doc/nrf52_vbluno52.html">nRF52-VBLUno52</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f030r8/doc/nucleof030r8.html">ST Nucleo F030R8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f091rc/doc/nucleof091rc.html">ST Nucleo F091RC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f103rb/doc/nucleof103rb.html">ST Nucleo F103RB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f334r8/doc/nucleof334r8.html">ST Nucleo F334R8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f401re/doc/nucleof401re.html">ST Nucleo F401RE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f411re/doc/nucleof411re.html">ST Nucleo F411RE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f412zg/doc/nucleo412zg.html">ST Nucleo F412ZG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f413zh/doc/nucleof413zh.html">ST Nucleo F413ZH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_f429zi/doc/nucleof429zi.html">ST Nucleo F429ZI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_l432kc/doc/nucleol432kc.html">ST Nucleo L432KC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nucleo_l476rg/doc/nucleol476rg.html">ST Nucleo L476RG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../olimex_stm32_e407/doc/olimex_stm32_e407.html">OLIMEX-STM32-E407</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../olimex_stm32_p405/doc/olimex_stm32_p405.html">OLIMEX-STM32-P405</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../olimexino_stm32/doc/olimexino_stm32.html">OLIMEXINO-STM32</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qemu_cortex_m3/doc/board.html">ARM Cortex-M3 Emulation (QEMU)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sam4s_xplained/doc/sam4s_xplained.html">SAM4S Xplained</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sam_e70_xplained/doc/sam_e70_xplained.html">SAM E70 Xplained</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm3210c_eval/doc/stm3210c_eval.html">STM3210C-EVAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32373c_eval/doc/stm32373c_eval.html">STM32373C-EVAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32_min_dev/doc/stm32_min_dev.html">STM32 Minimum Development Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f3_disco/doc/stm32f3_disco.html">ST STM32F3DISCOVERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f411e_disco/doc/stm32f411e_disco.html">STM32F411E-DISCO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f412g_disco/doc/stm32f412g_disco.html">ST STM32F412G Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f429i_disc1/doc/stm32f429i_disc1.html">ST STM32F429I-DISC1 Discovery board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f469i_disco/doc/stm32f469i_disco.html">ST STM32F469I Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32f4_disco/doc/stm32f4_disco.html">ST STM32F4DISCOVERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32l476g_disco/doc/stm32l476g_disco.html">ST STM32L476G Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stm32l496g_disco/doc/stm32l496g_disco.html">ST STM32L496G Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usb_kw24d512/doc/usb_kw24d512.html">NXP USB-KW24D512</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../v2m_beetle/doc/v2m_beetle.html">ARM V2M Beetle</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../arc/index.html">ARC Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../nios2/index.html">NIOS II Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../xtensa/index.html">XTENSA Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../posix/index.html">Native POSIX Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="cc3220sf-launchxl">
+<span id="id1"></span><h1>CC3220SF LaunchXL<a class="headerlink" href="#cc3220sf-launchxl" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The SimpleLink Wi-Fi CC3220SF LaunchPad development kit (CC3220SF-LAUNCHXL)
+highlights CC3220SF, a single-chip wireless microcontroller (MCU) with
+1MB internal flash, 4MB external serial flash, 256KB of RAM and enhanced
+security features.</p>
+<p>See the <a class="reference external" href="http://www.ti.com/product/cc3220">TI CC3220 Product Page</a> for details.</p>
+<div class="section" id="features">
+<h3>Features:<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Two separate execution environments: a user application dedicated ARM
+Cortex-M4 MCU and a network processor MCU to run all Wi-Fi and
+internet logical layers</li>
+<li>40-pin LaunchPad standard leveraging the BoosterPack ecosystem</li>
+<li>On-board accelerometer and temperature sensor</li>
+<li>Two buttons and three LEDs for user interaction</li>
+<li>UART through USB to PC</li>
+<li>BoosterPack plug-in module for adding graphical displays, audio
+codecs, antenna selection, environmental sensing, and more</li>
+<li>Power from USB for the LaunchPad and optional external BoosterPack</li>
+<li>XDS110-based JTAG emulation with serial port for flash programming</li>
+</ul>
+<p>Details on the CC3220SF LaunchXL development board can be found in the
+<a class="reference external" href="http://www.ti.com/lit/ug/swru463/swru463.pdf">CC3220SF LaunchXL User’s Guide</a>.</p>
+</div>
+</div>
+<div class="section" id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<p>The CC3220SF SoC has two MCUs:</p>
+<ol class="arabic simple">
+<li>Applications MCU - an ARM® Cortex®-M4 Core at 80 MHz, with 256Kb RAM,
+and access to external serial 4MB flash with bootloader and peripheral
+drivers in ROM.</li>
+<li>Network Coprocessor (NWP) - a dedicated ARM MCU, which completely
+offloads Wi-Fi and internet protocols from the application MCU.</li>
+</ol>
+<p>Complete details of the CC3220SF SoC can be found in the <a class="reference external" href="http://www.ti.com/lit/ug/swru465/swru465.pdf">CC3220 TRM</a>.</p>
+<div class="section" id="supported-features">
+<h3>Supported Features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h3>
+<p>Zephyr has been ported to the Applications MCU, with basic peripheral
+driver support.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="26%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Interface</th>
+<th class="head">Controller</th>
+<th class="head">Driver/Component</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>UART</td>
+<td>on-chip</td>
+<td>serial port-interrupt</td>
+</tr>
+<tr class="row-odd"><td>GPIO</td>
+<td>on-chip</td>
+<td>gpio</td>
+</tr>
+<tr class="row-even"><td>I2C</td>
+<td>on-chip</td>
+<td>i2c</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For consistency with TI SimpleLink SDK and BoosterPack examples,
+the I2C driver defaults to I2C_BITRATE_FAST mode (400 kHz) bus speed
+on bootup.</p>
+</div>
+<p>The accelerometer, temperature sensors, or other peripherals
+accessible through the BoosterPack, are not currently supported.</p>
+</div>
+<div class="section" id="connections-and-ios">
+<h3>Connections and IOs<a class="headerlink" href="#connections-and-ios" title="Permalink to this headline">¶</a></h3>
+<p>Peripherals on the CC3220SF LaunchXL are mapped to the following pins in
+the file <code class="file docutils literal"><span class="pre">boards/arm/cc3220sf_launchxl/pinmux.c</span></code>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="27%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function</th>
+<th class="head">PIN</th>
+<th class="head">GPIO</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>UART0_TX</td>
+<td>55</td>
+<td>N/A</td>
+</tr>
+<tr class="row-odd"><td>UART0_RX</td>
+<td>57</td>
+<td>N/A</td>
+</tr>
+<tr class="row-even"><td>LED D7 (R)</td>
+<td>64</td>
+<td>9</td>
+</tr>
+<tr class="row-odd"><td>LED D6 (O)</td>
+<td>01</td>
+<td>10</td>
+</tr>
+<tr class="row-even"><td>LED D5 (G)</td>
+<td>02</td>
+<td>11</td>
+</tr>
+<tr class="row-odd"><td>Switch SW2</td>
+<td>15</td>
+<td>22</td>
+</tr>
+<tr class="row-even"><td>Switch SW3</td>
+<td>04</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<p>The default configuration can be found in the Kconfig file at
+<code class="file docutils literal"><span class="pre">boards/arm/cc3220sf_launchxl/cc3220sf_launchxl_defconfig</span></code>.</p>
+</div>
+</div>
+<div class="section" id="programming-and-debugging">
+<h2>Programming and Debugging<a class="headerlink" href="#programming-and-debugging" title="Permalink to this headline">¶</a></h2>
+<p>TI officially supports development on the CC3220SF using the TI
+<a class="reference external" href="http://www.ti.com/tool/download/SIMPLELINK-CC3220-SDK">CC3220 SDK</a> on Windows and Linux using TI tools: Code Composer
+Studio for debugging and <a class="reference external" href="http://processors.wiki.ti.com/index.php/Category:CCS_UniFlash">UniFlash</a> for flashing.</p>
+<p>For Windows developers, see the <a class="reference external" href="http://www.ti.com/lit/ug/swru461/swru461.pdf">CC3220 Getting Started Guide</a> for
+instructions on installation of tools, and how to flash the board using
+UniFlash.</p>
+<p>Note that zephyr.bin produced by the Zephyr SDK may not load via
+UniFlash tool.  If encountering difficulties, use the zephyr.elf
+file and dslite.sh instead.</p>
+<p>The following instructions are geared towards Linux developers who
+prefer command line tools to an IDE.</p>
+<div class="section" id="flashing">
+<h3>Flashing<a class="headerlink" href="#flashing" title="Permalink to this headline">¶</a></h3>
+<p>The TI UniFlash tool can be used to download a program into flash, which
+will persist over subsequent reboots.</p>
+<div class="section" id="prerequisites">
+<h4>Prerequisites:<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">Python 2.7 (the DSLite tool does not work with Python v 3.x).</p>
+</li>
+<li><p class="first">Download and install <a class="reference external" href="http://processors.wiki.ti.com/index.php/Category:CCS_UniFlash">UniFlash</a> version 4.1 for Linux.</p>
+</li>
+<li><p class="first">Jumper SOP[2..0] (J15) to 010, and connect the USB cable to the PC.</p>
+<p>This should result in a new device “Texas Instruments XDS110 Embed
+with CMSIS-DAP” appearing at /dev/ttyACM1 and /dev/ttyACM0.</p>
+</li>
+<li><p class="first">Update the service pack, and place board in “Development Mode”.</p>
+<p>Follow the instructions in Section 3.4 “Download the Application”,
+in the <a class="reference external" href="http://www.ti.com/lit/ug/swru461/swru461.pdf">CC3220 Getting Started Guide</a>, except for steps 5 and 6 which
+select an MCU image.</p>
+</li>
+<li><p class="first">Ensure the XDS-110 emulation firmware is updated.</p>
+<p>Download and install the latest <a class="reference external" href="http://processors.wiki.ti.com/index.php/XDS_Emulation_Software_Package#XDS110_Reset_Download">XDS-110 emulation package</a>.
+Follow the directions here to update the firmware:
+<a class="reference external" href="http://processors.wiki.ti.com/index.php/XDS110#Updating_the_XDS110_Firmware">http://processors.wiki.ti.com/index.php/XDS110#Updating_the_XDS110_Firmware</a></p>
+</li>
+<li><p class="first">Ensure CONFIG_XIP=y is set.</p>
+<p>Add a ‘CONFIG_XIP=y’ line to the project’s prj.conf file.</p>
+<p>This locates the program into flash, and sets CONFIG_CC3220SF_DEBUG=y,
+which prepends a debug header enabling the flash to persist over
+subsequent reboots, bypassing the bootloader flash signature
+verification.</p>
+<p>See Section of the 21.10 of the <a class="reference external" href="http://www.ti.com/lit/ug/swru465/swru465.pdf">CC3220 TRM</a> for details on the
+secure flash boot process.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="flashing-command">
+<h4>Flashing Command:<a class="headerlink" href="#flashing-command" title="Permalink to this headline">¶</a></h4>
+<p>Once the above prerequisites are met, use the UniFlash command line tool
+to flash the Zephyr image:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">%</span> dslite.sh -c <span class="nv">$ZEPHYR_BASE</span>/boards/arm/cc3220sf_launchxl/support/CC3220SF.ccxml <span class="se">\</span>
+  -e -f zephyr.elf
+</pre></div>
+</div>
+<p>The CC3220SF.ccxml is a configuration file written by TI’s Code Composer
+Studio IDE, and required for the dslite.sh tool.</p>
+<p>To see program output from UART0, one can execute in a separate terminal
+window:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">%</span> screen /dev/ttyACM0 <span class="m">115200</span> 8N1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to enable loading and debugging of an application via
+openocd and gdb, by linking and locating the program completely in SRAM.</p>
+<div class="section" id="id2">
+<h4>Prerequisites:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Follow the same prerequisites as in Flashing above, in addition:</p>
+<ol class="arabic simple">
+<li>Ensure OpenOCD v0.9+ is configured/built with CMSIS-DAP support.</li>
+<li>Power off the board, jumper SOP[2..0] (J15) to 001, and reconnect
+the USB cable to the PC.</li>
+<li>Set CONFIG_XIP=n and build the Zephyr elf file.</li>
+</ol>
+<p>The necessary OpenOCD CFG and sample gdbinit scripts can be found in
+<code class="file docutils literal"><span class="pre">boards/arm/cc3220sf_launchxl/support/</span></code>.</p>
+</div>
+<div class="section" id="debugging-command">
+<h4>Debugging Command<a class="headerlink" href="#debugging-command" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">%</span> arm-none-eabi-gdb -x <span class="nv">$ZEPHYR_BASE</span>/boards/arm/cc3220sf_launchxl/support/gdbinit_xds110 <span class="se">\</span>
+  zephyr.elf
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>CC32xx Wiki:</dt>
+<dd><a class="reference external" href="http://processors.wiki.ti.com/index.php/CC31xx_%26_CC32xx">http://processors.wiki.ti.com/index.php/CC31xx_%26_CC32xx</a></dd>
+</dl>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../../curie_ble/doc/board.html" class="btn btn-neutral float-right" title="Curie (BLE)" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../../cc2650_sensortag/doc/cc2650_sensortag.html" class="btn btn-neutral" title="CC2650 SensorTag" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

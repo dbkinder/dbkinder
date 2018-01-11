@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: WS2812_STRIP_ZERO_FRAME
+
+.. option:: CONFIG_WS2812_STRIP_ZERO_FRAME
+.. _CONFIG_WS2812_STRIP_ZERO_FRAME:
+
+When shifted out at the configured clock frequency,
+this must generate a pulse whose width fits within the chipset
+specifications for T0H, and whose interpulse timing meets low
+times. It is recommended that the first and last bits in the
+frame be zero; this "encourages" SPI IPs to leave MOSI low
+between frames.
+
+
+
+:Symbol:           WS2812_STRIP_ZERO_FRAME
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SPI frame to shift out to signal a zero bit"
+:Default values:
+
+ *  0x60 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ WS2812_STRIP && LED_STRIP (value: "n")
+:Locations:
+ * ../drivers/led_strip/Kconfig.ws2812:67

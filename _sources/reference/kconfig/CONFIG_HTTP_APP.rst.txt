@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: HTTP_APP
+
+.. option:: CONFIG_HTTP_APP
+.. _CONFIG_HTTP_APP:
+
+The configuration item CONFIG_HTTP_APP:
+
+:Symbol:           HTTP_APP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Use new HTTP API built on top of net-app API"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ HTTP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/http/Kconfig:14

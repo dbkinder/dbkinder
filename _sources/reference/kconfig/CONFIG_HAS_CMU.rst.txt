@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: HAS_CMU
+
+.. option:: CONFIG_HAS_CMU
+.. _CONFIG_HAS_CMU:
+
+Set if the clock management unit (CMU) is present in the SoC.
+
+
+
+:Symbol:           HAS_CMU
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ SOC_EFM32WG && ARM (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/silabs_exx32/Kconfig:28

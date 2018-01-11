@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: CRYPTO_TINYCRYPT_SHIM_DRV_NAME
+
+.. option:: CONFIG_CRYPTO_TINYCRYPT_SHIM_DRV_NAME
+.. _CONFIG_CRYPTO_TINYCRYPT_SHIM_DRV_NAME:
+
+Device name for TinyCrypt Pseudo device.
+
+
+
+:Symbol:           CRYPTO_TINYCRYPT_SHIM_DRV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Device name for TinyCrypt Pseudo device" if CRYPTO_TINYCRYPT_SHIM (value: "n")
+:Default values:
+
+ *  "CRYPTO_TC"
+ *   Condition: CRYPTO_TINYCRYPT_SHIM (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ CRYPTO (value: "n")
+:Locations:
+ * ../drivers/crypto/Kconfig:64

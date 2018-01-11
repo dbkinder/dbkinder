@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: LPS22HB_I2C_ADDR
+
+.. option:: CONFIG_LPS22HB_I2C_ADDR
+.. _CONFIG_LPS22HB_I2C_ADDR:
+
+I2C address of the LPS22HB sensor.
+Use 0x5C if the SA0 pin is pulled to GND or 0x5D if the SA0
+pin is pulled to VDD.
+
+
+
+:Symbol:           LPS22HB_I2C_ADDR
+:Type:             hex
+:Value:            "0x5c"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0x5C, 0x5D]
+:Prompts:
+
+ *  "I2C address" if LPS22HB && !HAS_DTS_I2C_DEVICE (value: "n")
+:Default values:
+
+ *  0x5D (value: "n")
+ *   Condition: LPS22HB && !HAS_DTS_I2C_DEVICE (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lps22hb/Kconfig:24

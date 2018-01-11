@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_NUCLEO_F412ZG
+
+.. option:: CONFIG_BOARD_NUCLEO_F412ZG
+.. _CONFIG_BOARD_NUCLEO_F412ZG:
+
+The configuration item CONFIG_BOARD_NUCLEO_F412ZG:
+
+:Symbol:           BOARD_NUCLEO_F412ZG
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "NUCLEO-144 F412ZG Development Board" if SOC_STM32F412ZG (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/nucleo_f412zg/Kconfig.board:8

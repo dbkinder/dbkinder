@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: ARM_CORE_MPU
+
+.. option:: CONFIG_ARM_CORE_MPU
+.. _CONFIG_ARM_CORE_MPU:
+
+ARM Core MPU functionalities
+
+
+
+:Symbol:           ARM_CORE_MPU
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "ARM Core MPU functionalities" if CPU_HAS_MPU (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: CPU_HAS_MPU (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_THREAD_STACK_INFO` if CPU_HAS_MPU (value: "n")
+:Reverse (select-related) dependencies:
+ CPU_HAS_MPU && (SOC_FAMILY_ARM || SOC_FAMILY_STM32 || SOC_FAMILY_NRF5 || SOC_FAMILY_IMX) && CPU_HAS_MPU && ARM && ARM_MPU || CPU_HAS_MPU && SOC_FAMILY_KINETIS && CPU_HAS_MPU && ARM && NXP_MPU (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ CPU_HAS_MPU && ARM (value: "n")
+:Locations:
+ * ../arch/arm/core/cortex_m/mpu/Kconfig:9

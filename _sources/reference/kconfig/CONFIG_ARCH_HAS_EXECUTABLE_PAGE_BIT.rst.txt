@@ -1,0 +1,30 @@
+:orphan:
+
+.. title:: ARCH_HAS_EXECUTABLE_PAGE_BIT
+
+.. option:: CONFIG_ARCH_HAS_EXECUTABLE_PAGE_BIT
+.. _CONFIG_ARCH_HAS_EXECUTABLE_PAGE_BIT:
+
+The configuration item CONFIG_ARCH_HAS_EXECUTABLE_PAGE_BIT:
+
+:Symbol:           ARCH_HAS_EXECUTABLE_PAGE_BIT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ CPU_HAS_MPU && (SOC_FAMILY_ARM || SOC_FAMILY_STM32 || SOC_FAMILY_NRF5 || SOC_FAMILY_IMX) && CPU_HAS_MPU && ARM && ARM_MPU || CPU_HAS_MPU && SOC_FAMILY_KINETIS && CPU_HAS_MPU && ARM && NXP_MPU (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/Kconfig:172

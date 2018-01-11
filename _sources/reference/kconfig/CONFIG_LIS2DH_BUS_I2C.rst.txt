@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: LIS2DH_BUS_I2C
+
+.. option:: CONFIG_LIS2DH_BUS_I2C
+.. _CONFIG_LIS2DH_BUS_I2C:
+
+Use an I2C master to communicate with accelerometer (I2C slave)
+
+
+
+:Symbol:           LIS2DH_BUS_I2C
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "I2C bus" if I2C (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lis2dh/Kconfig:37

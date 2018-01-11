@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: BT_MESH_DEBUG_PROXY
+
+.. option:: CONFIG_BT_MESH_DEBUG_PROXY
+.. _CONFIG_BT_MESH_DEBUG_PROXY:
+
+Use this option to enable Proxy protocol debug logs.
+
+
+
+:Symbol:           BT_MESH_DEBUG_PROXY
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Proxy debug" if BT_MESH_PROXY (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_DEBUG (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:451

@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: BUILD_OUTPUT_EXE
+
+.. option:: CONFIG_BUILD_OUTPUT_EXE
+.. _CONFIG_BUILD_OUTPUT_EXE:
+
+Build a binary in ELF format that can run in the host system. This
+will build a zephyr.exe file.
+
+
+
+:Symbol:           BUILD_OUTPUT_EXE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Build a binary in ELF format with .exe extension"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BOARD_NATIVE_POSIX (value: "n")
+:Locations:
+ * ../misc/Kconfig:200
+ * ../boards/posix/native_posix/Kconfig.defconfig:7

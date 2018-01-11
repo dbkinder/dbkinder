@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: CPU_HAS_FPU
+
+.. option:: CONFIG_CPU_HAS_FPU
+.. _CONFIG_CPU_HAS_FPU:
+
+This option is enabled when the CPU has hardware floating point
+unit.
+
+
+
+:Symbol:           CPU_HAS_FPU
+:Type:             bool
+:Value:            "y"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ SOC_SERIES_QUARK_X1000 || CPU_ATOM && X86 || SOC_SERIES_QUARK_X1000 && X86 && SOC_QUARK_X1000 || SOC_SERIES_SAME70 || SOC_SERIES_EFM32WG || SOC_SERIES_STM32F4X || SOC_SERIES_STM32F3X || SOC_SERIES_MSP432P4XX || SOC_SERIES_NRF52X || SOC_EFM32WG && ARM || SOC_MIMXRT1051 && ARM || SOC_MIMXRT1052 && ARM || SOC_MK64F12 && ARM || SOC_EM9D || SOC_EM11D || !X86_IAMCU && SOC_IA32 && BOARD_X86_JAILHOUSE || !X86_IAMCU && SOC_IA32 && BOARD_QEMU_X86 (value: "y")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/Kconfig:214

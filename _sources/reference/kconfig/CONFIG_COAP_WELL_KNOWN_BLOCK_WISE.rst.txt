@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: COAP_WELL_KNOWN_BLOCK_WISE
+
+.. option:: CONFIG_COAP_WELL_KNOWN_BLOCK_WISE
+.. _CONFIG_COAP_WELL_KNOWN_BLOCK_WISE:
+
+This option enables the block wise support of CoAP response
+to ./well-known/core request. Without this option all resource's
+information will be sent in a single IP packet (can be multiple
+fragments depends on MTU size). This will be useful in mesh kind
+of networks.
+
+
+
+:Symbol:           COAP_WELL_KNOWN_BLOCK_WISE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "CoAP ./well-known/core services block wise support" if COAP (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: COAP (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/coap/Kconfig:24

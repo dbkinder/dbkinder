@@ -1,0 +1,43 @@
+:orphan:
+
+.. title:: BT_CTLR_TX_BUFFERS
+
+.. option:: CONFIG_BT_CTLR_TX_BUFFERS
+.. _CONFIG_BT_CTLR_TX_BUFFERS:
+
+Set the number of Tx PDUs to be queued for transmission in the
+controller. In a 7.5ms connection interval and 2M PHY, maximum 19
+packets can be enqueued, with 18 packets with L2CAP payload size of 1
+byte can be acknowledged.
+
+
+
+:Symbol:           BT_CTLR_TX_BUFFERS
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 19]
+:Prompts:
+
+ *  "Number of Tx buffers"
+:Default values:
+
+ *  2 (value: "n")
+ *   Condition: (none)
+ *  7 (value: "n")
+ *   Condition: BT_HCI_RAW (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:64

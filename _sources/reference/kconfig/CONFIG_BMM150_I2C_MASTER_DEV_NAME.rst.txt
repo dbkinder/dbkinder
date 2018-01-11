@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BMM150_I2C_MASTER_DEV_NAME
+
+.. option:: CONFIG_BMM150_I2C_MASTER_DEV_NAME
+.. _CONFIG_BMM150_I2C_MASTER_DEV_NAME:
+
+Specify the device name of the I2C master device to which BMM150
+is connected.
+
+
+
+:Symbol:           BMM150_I2C_MASTER_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "I2C master where BMM150 is connected"
+:Default values:
+
+ *  "I2C_0"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BMM150 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/bmm150/Kconfig:28

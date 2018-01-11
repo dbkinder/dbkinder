@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: ADC_SAM_AFEC
+
+.. option:: CONFIG_ADC_SAM_AFEC
+.. _CONFIG_ADC_SAM_AFEC:
+
+Enable Atmel SAM MCU Family Analog-to-Digital Converter (ADC) driver
+based on AFEC module.
+
+
+:Symbol:           ADC_SAM_AFEC
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SAM ADC Driver" if SOC_FAMILY_SAM (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SOC_FAMILY_SAM (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_HAS_DTS_ADC` if SOC_FAMILY_SAM (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ADC (value: "y")
+:Locations:
+ * ../drivers/adc/Kconfig.sam_afec:9

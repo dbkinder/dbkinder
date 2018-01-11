@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: ARC_MPU
+
+.. option:: CONFIG_ARC_MPU
+.. _CONFIG_ARC_MPU:
+
+Target has ARC MPU (currently only works for EMSK 2.2/2.3 ARCEM7D)
+
+
+:Symbol:           ARC_MPU
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "ARC MPU Support" if CPU_HAS_MPU (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: CPU_HAS_MPU (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_ARC_CORE_MPU` if CPU_HAS_MPU (value: "n")
+:Reverse (select-related) dependencies:
+ CPU_HAS_MPU && ARC && CPU_HAS_MPU && ARC_MPU_ENABLE (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ CPU_HAS_MPU && ARC (value: "n")
+:Locations:
+ * ../arch/arc/core/mpu/Kconfig:33

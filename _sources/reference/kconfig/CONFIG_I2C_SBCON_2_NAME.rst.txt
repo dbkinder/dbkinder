@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: I2C_SBCON_2_NAME
+
+.. option:: CONFIG_I2C_SBCON_2_NAME
+.. _CONFIG_I2C_SBCON_2_NAME:
+
+The configuration item CONFIG_I2C_SBCON_2_NAME:
+
+:Symbol:           I2C_SBCON_2_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SBCon device 2 Device Name" if I2C_SBCON_2 (value: "n")
+:Default values:
+
+ *  "SBCON_2"
+ *   Condition: I2C_SBCON_2 (value: "n")
+ *  I2C_SHIELD0 (value: "I2C_SHIELD0")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C && BOARD_MPS2_AN385 (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig.sbcon:37
+ * ../boards/arm/mps2_an385/Kconfig.defconfig:128

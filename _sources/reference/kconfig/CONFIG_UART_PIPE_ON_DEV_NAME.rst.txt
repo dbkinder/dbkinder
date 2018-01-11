@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: UART_PIPE_ON_DEV_NAME
+
+.. option:: CONFIG_UART_PIPE_ON_DEV_NAME
+.. _CONFIG_UART_PIPE_ON_DEV_NAME:
+
+This option specifies the name of UART device to be used
+for pipe UART.
+
+
+:Symbol:           UART_PIPE_ON_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Device Name of UART Device for pipe UART" if UART_PIPE (value: "n")
+:Default values:
+
+ *  "UART_0"
+ *   Condition: UART_PIPE (value: "n")
+ *  "UART_1"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_UART && SOC_ATOM && UART_PIPE (value: "n")
+:Locations:
+ * ../drivers/console/Kconfig:183
+ * ../arch/x86/soc/atom/Kconfig.defconfig:93

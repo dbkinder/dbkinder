@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_IPV6_NBR_CACHE
+
+.. option:: CONFIG_NET_IPV6_NBR_CACHE
+.. _CONFIG_NET_IPV6_NBR_CACHE:
+
+The value depends on your network needs. Neighbor cache should
+normally be active.
+
+
+
+:Symbol:           NET_IPV6_NBR_CACHE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Neighbor cache"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ NETWORKING && NETWORKING && NET_RPL (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE && NET_IPV6 (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig.ipv6:83

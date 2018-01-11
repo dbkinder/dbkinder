@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: NET_SOCKETS_POSIX_NAMES
+
+.. option:: CONFIG_NET_SOCKETS_POSIX_NAMES
+.. _CONFIG_NET_SOCKETS_POSIX_NAMES:
+
+By default, Sockets API function are prefixed with ``zsock_`` to avoid
+namespacing issues. If this option is enabled, they will be provided
+with standard POSIX names like socket(), recv(), and close(), to help
+with porting existing code. Note that close() may require a special
+attention, as in POSIX it closes any file descriptor, while with this
+option enabled, it will still apply only to sockets.
+
+
+
+:Symbol:           NET_SOCKETS_POSIX_NAMES
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Standard POSIX names for Sockets API"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_SOCKETS && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/sockets/Kconfig:17

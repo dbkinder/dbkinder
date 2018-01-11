@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: FXAS21002_DRDY_INT1
+
+.. option:: CONFIG_FXAS21002_DRDY_INT1
+.. _CONFIG_FXAS21002_DRDY_INT1:
+
+Say Y to route data ready interrupt to INT1 pin. Say N to route to
+INT2 pin.
+
+
+
+:Symbol:           FXAS21002_DRDY_INT1
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Data ready interrupt to INT1 pin"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FXAS21002 && SENSOR && FXAS21002_TRIGGER (value: "n")
+:Locations:
+ * ../drivers/sensor/fxas21002/Kconfig:98

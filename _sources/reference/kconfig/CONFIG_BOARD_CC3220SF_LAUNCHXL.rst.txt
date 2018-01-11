@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_CC3220SF_LAUNCHXL
+
+.. option:: CONFIG_BOARD_CC3220SF_LAUNCHXL
+.. _CONFIG_BOARD_CC3220SF_LAUNCHXL:
+
+The configuration item CONFIG_BOARD_CC3220SF_LAUNCHXL:
+
+:Symbol:           BOARD_CC3220SF_LAUNCHXL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "TI CC3220SF LAUNCHXL" if SOC_CC3220SF (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/cc3220sf_launchxl/Kconfig.board:4

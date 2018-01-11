@@ -1,0 +1,30 @@
+:orphan:
+
+.. title:: BT_UART
+
+.. option:: CONFIG_BT_UART
+.. _CONFIG_BT_UART:
+
+The configuration item CONFIG_BT_UART:
+
+:Symbol:           BT_UART
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BT && !BT_CTLR && BT_HCI && SERIAL && BT_H4 || BT && !BT_CTLR && BT_HCI && SERIAL && BT_H5 (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ BT && !BT_CTLR && BT_HCI (value: "n")
+:Locations:
+ * ../drivers/bluetooth/hci/Kconfig:11

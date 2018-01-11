@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: BUILD_OUTPUT_HEX
+
+.. option:: CONFIG_BUILD_OUTPUT_HEX
+.. _CONFIG_BUILD_OUTPUT_HEX:
+
+Build a binary in HEX format. This will build a zephyr.hex file need
+by some platforms.
+
+
+
+:Symbol:           BUILD_OUTPUT_HEX
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Build a binary in HEX format"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ CPU_NIOS2_GEN2 && NIOS2 (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ SOC_FAMILY_NRF5 (value: "n")
+:Locations:
+ * ../arch/arm/soc/st_stm32/Kconfig:15
+ * ../misc/Kconfig:186
+ * ../arch/arm/soc/nordic_nrf5/Kconfig.defconfig:10

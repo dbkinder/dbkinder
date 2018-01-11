@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: HAS_SEGGER_SYSTEMVIEW
+
+.. option:: CONFIG_HAS_SEGGER_SYSTEMVIEW
+.. _CONFIG_HAS_SEGGER_SYSTEMVIEW:
+
+The configuration item CONFIG_HAS_SEGGER_SYSTEMVIEW:
+
+:Symbol:           HAS_SEGGER_SYSTEMVIEW
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Segger SystemView support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_HAS_SEGGER_RTT`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../ext/debug/segger/Kconfig:12

@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: BOOT_DELAY
+
+.. option:: CONFIG_BOOT_DELAY
+.. _CONFIG_BOOT_DELAY:
+
+This option delays bootup for the specified amount of
+milliseconds. This is used to allow serial ports to get ready
+before starting to print information on them during boot, as
+some systems might boot to fast for a receiving endpoint to
+detect the new USB serial bus, enumerate it and get ready to
+receive before it actually gets data. A similar effect can be
+achieved by waiting for DCD on the serial port--however, not
+all serial ports have DCD.
+
+
+
+:Symbol:           BOOT_DELAY
+:Type:             int
+:Value:            "0"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Boot delay in milliseconds"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../kernel/Kconfig:195

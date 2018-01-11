@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: ARCH_HAS_CUSTOM_BUSY_WAIT
+
+.. option:: CONFIG_ARCH_HAS_CUSTOM_BUSY_WAIT
+.. _CONFIG_ARCH_HAS_CUSTOM_BUSY_WAIT:
+
+It's possible that an architecture port cannot or does not want to use
+the provided k_busy_wait(), but instead must do something custom. It must
+enable this option in that case.
+
+
+
+:Symbol:           ARCH_HAS_CUSTOM_BUSY_WAIT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ ARCH_POSIX (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../kernel/Kconfig:384

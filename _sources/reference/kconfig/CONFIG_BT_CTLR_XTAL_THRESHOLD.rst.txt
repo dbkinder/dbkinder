@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: BT_CTLR_XTAL_THRESHOLD
+
+.. option:: CONFIG_BT_CTLR_XTAL_THRESHOLD
+.. _CONFIG_BT_CTLR_XTAL_THRESHOLD:
+
+Configure the optimal delta in micro seconds between two consecutive
+radio events below which (active clock) crystal will be retained. This
+value is board dependent. The value 5168 is based on crude calculation
+for nRF51 current versus startup time of high frequency crystal.
+
+
+
+:Symbol:           BT_CTLR_XTAL_THRESHOLD
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Crystal shutdown threshold in uS" if BT_CTLR_ADVANCED_FEATURES && BT_CTLR_XTAL_ADVANCED (value: "n")
+:Default values:
+
+ *  5168 (value: "n")
+ *   Condition: BT_CTLR_XTAL_ADVANCED (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:308

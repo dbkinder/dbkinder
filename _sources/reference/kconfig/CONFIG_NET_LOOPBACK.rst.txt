@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: NET_LOOPBACK
+
+.. option:: CONFIG_NET_LOOPBACK
+.. _CONFIG_NET_LOOPBACK:
+
+The configuration item CONFIG_NET_LOOPBACK:
+
+:Symbol:           NET_LOOPBACK
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Net loopback driver"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_NET_L2_DUMMY`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../drivers/net/Kconfig:104

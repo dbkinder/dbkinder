@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: COAP_EXTENDED_OPTIONS_LEN
+
+.. option:: CONFIG_COAP_EXTENDED_OPTIONS_LEN
+.. _CONFIG_COAP_EXTENDED_OPTIONS_LEN:
+
+This option enables the parsing of extended CoAP options length.
+CoAP extended options length can be 2 byte value, which
+requires more memory. User can save memory by disabling this.
+That means only length of maximum 12 bytes are supported by default.
+Enable this if length field going to bigger that 12.
+
+
+
+:Symbol:           COAP_EXTENDED_OPTIONS_LEN
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Support for CoAP extended options" if COAP (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: COAP (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/coap/Kconfig:45

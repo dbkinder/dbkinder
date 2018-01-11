@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: ETH_SAM_GMAC_MAC_I2C_INT_ADDRESS
+
+.. option:: CONFIG_ETH_SAM_GMAC_MAC_I2C_INT_ADDRESS
+.. _CONFIG_ETH_SAM_GMAC_MAC_I2C_INT_ADDRESS:
+
+Internal address of the EEPROM chip where the MAC address is stored.
+Chips with 1 to 4 byte internal address size are supported. Address
+size has to be configured in a separate Kconfig option.
+
+
+
+:Symbol:           ETH_SAM_GMAC_MAC_I2C_INT_ADDRESS
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 0xffffffff]
+:Prompts:
+
+ *  "I2C EEPROM internal address"
+:Default values:
+
+ *  0x9A (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ETH_SAM_GMAC && BOARD_SAM_E70_XPLAINED (value: "n")
+:Locations:
+ * ../drivers/ethernet/Kconfig.sam_gmac:104
+ * ../boards/arm/sam_e70_xplained/Kconfig.defconfig:36

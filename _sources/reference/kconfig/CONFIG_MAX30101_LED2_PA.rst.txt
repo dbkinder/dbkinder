@@ -1,0 +1,45 @@
+:orphan:
+
+.. title:: MAX30101_LED2_PA
+
+.. option:: CONFIG_MAX30101_LED2_PA
+.. _CONFIG_MAX30101_LED2_PA:
+
+Set the pulse amplitude to control the LED2 (IR) current. The actual
+measured LED current for each part can vary significantly due to the
+trimming methodology.
+0x00 = 0.0 mA
+0x01 = 0.2 mA
+0x02 = 0.4 mA
+0x0f = 3.1 mA
+0xff = 50.0 mA
+
+
+
+:Symbol:           MAX30101_LED2_PA
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 0xff]
+:Prompts:
+
+ *  "LED2 (IR) pulse amplitude"
+:Default values:
+
+ *  0x33 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MAX30101 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/max30101/Kconfig:127

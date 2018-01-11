@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: I2C_GPIO_3_GPIO
+
+.. option:: CONFIG_I2C_GPIO_3_GPIO
+.. _CONFIG_I2C_GPIO_3_GPIO:
+
+This is the name of the GPIO device that controls the I2C lines.
+
+
+
+:Symbol:           I2C_GPIO_3_GPIO
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bit Bang I2C device 3 GPIO name" if I2C_GPIO_3 (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig.gpio:141

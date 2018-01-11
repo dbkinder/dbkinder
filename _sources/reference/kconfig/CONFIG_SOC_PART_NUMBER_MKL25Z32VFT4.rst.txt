@@ -1,0 +1,30 @@
+:orphan:
+
+.. title:: SOC_PART_NUMBER_MKL25Z32VFT4
+
+.. option:: CONFIG_SOC_PART_NUMBER_MKL25Z32VFT4
+.. _CONFIG_SOC_PART_NUMBER_MKL25Z32VFT4:
+
+The configuration item CONFIG_SOC_PART_NUMBER_MKL25Z32VFT4:
+
+:Symbol:           SOC_PART_NUMBER_MKL25Z32VFT4
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_KINETIS_KL2X && ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/nxp_kinetis/kl2x/Kconfig.soc:35

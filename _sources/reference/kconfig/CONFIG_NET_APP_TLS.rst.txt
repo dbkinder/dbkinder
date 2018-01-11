@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_APP_TLS
+
+.. option:: CONFIG_NET_APP_TLS
+.. _CONFIG_NET_APP_TLS:
+
+Enables net app library to use TLS for encrypted communication.
+
+
+
+:Symbol:           NET_APP_TLS
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable TLS support for TCP applications" if NET_TCP (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: NET_TCP (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_MBEDTLS` if NET_TCP (value: "n")
+:Reverse (select-related) dependencies:
+ MQTT_LIB && NETWORKING && MQTT_LIB_TLS || HTTP && NETWORKING && HTTP_APP && HTTPS (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:97

@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: GPIO_ESP32_IRQ
+
+.. option:: CONFIG_GPIO_ESP32_IRQ
+.. _CONFIG_GPIO_ESP32_IRQ:
+
+The configuration item CONFIG_GPIO_ESP32_IRQ:
+
+:Symbol:           GPIO_ESP32_IRQ
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "IRQ line for ESP32 GPIO pins"
+:Default values:
+
+ *  10 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_ESP32 && GPIO (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.esp32:18

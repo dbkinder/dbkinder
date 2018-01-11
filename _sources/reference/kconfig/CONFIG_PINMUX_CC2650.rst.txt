@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: PINMUX_CC2650
+
+.. option:: CONFIG_PINMUX_CC2650
+.. _CONFIG_PINMUX_CC2650:
+
+Enable pin multiplexer for CC2650 SoC.
+
+For hardware reasons, the pinmux depends on the GPIO module
+being activated; it must initialize *before* the pinmux does.
+Please take care that the pinmux init priority value is *lower*
+that the GPIO driver init priority.
+
+
+:Symbol:           PINMUX_CC2650
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Pinmux driver for CC2650 SoC" if PINMUX && SOC_SERIES_CC2650 && GPIO && GPIO_CC2650 (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ PINMUX (value: "n")
+:Locations:
+ * ../drivers/pinmux/Kconfig.cc2650:5

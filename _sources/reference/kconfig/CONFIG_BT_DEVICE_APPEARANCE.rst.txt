@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: BT_DEVICE_APPEARANCE
+
+.. option:: CONFIG_BT_DEVICE_APPEARANCE
+.. _CONFIG_BT_DEVICE_APPEARANCE:
+
+Bluetooth device appearance. For the list of possible values please
+consult the following link:
+https://www.bluetooth.com/specifications/assigned-numbers
+
+
+
+:Symbol:           BT_DEVICE_APPEARANCE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 65535]
+:Prompts:
+
+ *  "Bluetooth device appearance"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:321

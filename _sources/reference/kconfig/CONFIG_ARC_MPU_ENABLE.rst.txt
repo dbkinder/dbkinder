@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: ARC_MPU_ENABLE
+
+.. option:: CONFIG_ARC_MPU_ENABLE
+.. _CONFIG_ARC_MPU_ENABLE:
+
+Enable MPU
+
+
+
+:Symbol:           ARC_MPU_ENABLE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable MPU" if CPU_HAS_MPU (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: CPU_HAS_MPU (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_ARC_MPU` if CPU_HAS_MPU (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ CPU_HAS_MPU && ARC (value: "n")
+:Locations:
+ * ../arch/arc/Kconfig:162

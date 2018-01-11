@@ -1,0 +1,100 @@
+:orphan:
+
+.. title:: SOC_PART_NUMBER
+
+.. option:: CONFIG_SOC_PART_NUMBER
+.. _CONFIG_SOC_PART_NUMBER:
+
+This string holds the full part number of the SoC. It is a hidden option
+that you should not set directly. The part number selection choice defines
+the default value for this string.
+
+
+
+:Symbol:           SOC_PART_NUMBER
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  SOC_PART_NUMBER_EXX32_EFM32WG (value: "")
+ *   Condition: SOC_SERIES_EFM32WG (value: "n")
+ *  SOC_PART_NUMBER_IMX_RT (value: "")
+ *   Condition: SOC_SERIES_IMX_RT (value: "n")
+ *  SOC_PART_NUMBER_KINETIS_K6X (value: "")
+ *   Condition: SOC_SERIES_KINETIS_K6X (value: "n")
+ *  SOC_PART_NUMBER_KINETIS_KWX (value: "")
+ *   Condition: SOC_SERIES_KINETIS_KWX (value: "n")
+ *  SOC_PART_NUMBER_KINETIS_KL2X (value: "")
+ *   Condition: SOC_SERIES_KINETIS_KL2X (value: "n")
+ *  sam4s16c (value: "sam4s16c")
+ *   Condition: SOC_PART_NUMBER_SAM4S16C (value: "n")
+ *  same70q21 (value: "same70q21")
+ *   Condition: SOC_PART_NUMBER_SAME70Q21 (value: "n")
+ *  same70q20 (value: "same70q20")
+ *   Condition: SOC_PART_NUMBER_SAME70Q20 (value: "n")
+ *  same70q19 (value: "same70q19")
+ *   Condition: SOC_PART_NUMBER_SAME70Q19 (value: "n")
+ *  same70n21 (value: "same70n21")
+ *   Condition: SOC_PART_NUMBER_SAME70N21 (value: "n")
+ *  same70n20 (value: "same70n20")
+ *   Condition: SOC_PART_NUMBER_SAME70N20 (value: "n")
+ *  same70n19 (value: "same70n19")
+ *   Condition: SOC_PART_NUMBER_SAME70N19 (value: "n")
+ *  same70j21 (value: "same70j21")
+ *   Condition: SOC_PART_NUMBER_SAME70J21 (value: "n")
+ *  same70j20 (value: "same70j20")
+ *   Condition: SOC_PART_NUMBER_SAME70J20 (value: "n")
+ *  same70j19 (value: "same70j19")
+ *   Condition: SOC_PART_NUMBER_SAME70J19 (value: "n")
+ *  sam3x8e (value: "sam3x8e")
+ *   Condition: SOC_PART_NUMBER_SAM3X8E (value: "n")
+ *  samd21e15a (value: "samd21e15a")
+ *   Condition: SOC_PART_NUMBER_SAMD21E15A (value: "n")
+ *  samd21e16a (value: "samd21e16a")
+ *   Condition: SOC_PART_NUMBER_SAMD21E16A (value: "n")
+ *  samd21e17a (value: "samd21e17a")
+ *   Condition: SOC_PART_NUMBER_SAMD21E17A (value: "n")
+ *  samd21e18a (value: "samd21e18a")
+ *   Condition: SOC_PART_NUMBER_SAMD21E18A (value: "n")
+ *  samd21g15a (value: "samd21g15a")
+ *   Condition: SOC_PART_NUMBER_SAMD21G15A (value: "n")
+ *  samd21g16a (value: "samd21g16a")
+ *   Condition: SOC_PART_NUMBER_SAMD21G16A (value: "n")
+ *  samd21g17a (value: "samd21g17a")
+ *   Condition: SOC_PART_NUMBER_SAMD21G17A (value: "n")
+ *  samd21g17au (value: "samd21g17au")
+ *   Condition: SOC_PART_NUMBER_SAMD21G17AU (value: "n")
+ *  samd21g18a (value: "samd21g18a")
+ *   Condition: SOC_PART_NUMBER_SAMD21G18A (value: "n")
+ *  samd21g18au (value: "samd21g18au")
+ *   Condition: SOC_PART_NUMBER_SAMD21G18AU (value: "n")
+ *  samd21j15a (value: "samd21j15a")
+ *   Condition: SOC_PART_NUMBER_SAMD21J15A (value: "n")
+ *  samd21j16a (value: "samd21j16a")
+ *   Condition: SOC_PART_NUMBER_SAMD21J16A (value: "n")
+ *  samd21j17a (value: "samd21j17a")
+ *   Condition: SOC_PART_NUMBER_SAMD21J17A (value: "n")
+ *  samd21j18a (value: "samd21j18a")
+ *   Condition: SOC_PART_NUMBER_SAMD21J18A (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_SAMD (value: "n")
+:Locations:
+ * ../arch/arm/soc/silabs_exx32/Kconfig:20
+ * ../arch/arm/soc/nxp_imx/Kconfig:20
+ * ../arch/arm/soc/nxp_kinetis/Kconfig:21
+ * ../arch/arm/soc/atmel_sam/sam4s/Kconfig.defconfig.series:14
+ * ../arch/arm/soc/atmel_sam/same70/Kconfig.defconfig.series:13
+ * ../arch/arm/soc/atmel_sam/sam3x/Kconfig.defconfig.series:15
+ * ../arch/arm/soc/atmel_sam0/samd/Kconfig.defconfig.series:12

@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: BT_MESH_LPN_AUTO_TIMEOUT
+
+.. option:: CONFIG_BT_MESH_LPN_AUTO_TIMEOUT
+.. _CONFIG_BT_MESH_LPN_AUTO_TIMEOUT:
+
+Time in seconds from the last received message, that the node
+will wait before starting to look for Friend nodes.
+
+
+
+:Symbol:           BT_MESH_LPN_AUTO_TIMEOUT
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 3600]
+:Prompts:
+
+ *  "Time from last received message before going to LPN mode" if BT_MESH_LPN_AUTO (value: "n")
+:Default values:
+
+ *  15 (value: "n")
+ *   Condition: BT_MESH_LPN_AUTO (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_LOW_POWER (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:220

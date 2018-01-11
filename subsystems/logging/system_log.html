@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>System Logging &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="Logging" href="index.html"/>
+        <link rel="next" title="Kernel Event Logger" href="kernel_event_logger.html"/>
+        <link rel="prev" title="Logging" href="index.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../subsystems.html">Subsystems</a> /
+      
+          <a href="index.html">Logging</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../subsystems.html">Subsystems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_library.html">Standard C Library</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Logging</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">System Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kernel_event_logger.html">Kernel Event Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../networking/networking.html">Networking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power_management.html">Power Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor.html">Sensor Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shell.html">Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usb/usb.html">USB device stack</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="system-logging">
+<span id="system-log"></span><h1>System Logging<a class="headerlink" href="#system-logging" title="Permalink to this headline">¶</a></h1>
+<p>The system log API provides a common interface to process messages issued by
+developers. These messages are currently printed on the terminal but the API is
+defined in a generic way.</p>
+<p>This API can be deactivated through the Kconfig options, see
+<a class="reference internal" href="#global-kconfig"><span class="std std-ref">Global Kconfig Options</span></a>.
+This approach prevents impacting image size and execution time when the system
+log is not needed.</p>
+<p>Each of the four <code class="docutils literal"><span class="pre">SYS_LOG_X</span></code> macros correspond to a different logging level,
+The logging macros activate when their logging level or higher is set.</p>
+<p>There are two configuration categories: configurations per module and global
+configurations. When logging is enabled globally, it works for modules. However,
+modules can disable logging locally. Every module can specify its own logging
+level. The module must define the <code class="xref c c-macro docutils literal"><span class="pre">SYS_LOG_LEVEL</span></code> macro before
+including the <code class="file docutils literal"><span class="pre">include/logging/sys_log.h</span></code> header file to do so. Unless a global
+override is set, the module logging level will be honored. The global override
+can only increase the logging level. It cannot be used to lower module logging
+levels that were previously set higher.</p>
+<p>You can set a local domain to differentiate messages. When no domain is set,
+then the <code class="docutils literal"><span class="pre">[general]</span></code> domain appears before the message. Define the
+<code class="xref c c-macro docutils literal"><span class="pre">SYS_LOG_DOMAIN</span></code> macro before including the <code class="file docutils literal"><span class="pre">include/logging/sys_log.h</span></code>
+header file to set the domain.</p>
+<p>When several macros are active, the printed messages can be differentiated in
+two ways: by a tag printed before the message or by ANSI colors. See the
+<a class="reference internal" href="../../reference/kconfig/CONFIG_SYS_LOG_SHOW_TAGS.html#cmdoption-arg-config-sys-log-show-tags"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SYS_LOG_SHOW_TAGS</span></code></a> and <a class="reference internal" href="../../reference/kconfig/CONFIG_SYS_LOG_SHOW_COLOR.html#cmdoption-arg-config-sys-log-show-color"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SYS_LOG_SHOW_COLOR</span></code></a>
+Kconfig options for more information.</p>
+<p>Define the <code class="xref c c-macro docutils literal"><span class="pre">SYS_LOG_NO_NEWLINE</span></code> macro before including the
+<code class="file docutils literal"><span class="pre">include/logging/sys_log.h</span></code> header file to prevent macros appending a new line at the
+end of the logging message.</p>
+<div class="section" id="global-kconfig-options">
+<span id="global-kconfig"></span><h2>Global Kconfig Options<a class="headerlink" href="#global-kconfig-options" title="Permalink to this headline">¶</a></h2>
+<p>These options can be found in the following path <code class="file docutils literal"><span class="pre">subsys/logging/Kconfig</span></code>.</p>
+<p><a class="reference internal" href="../../reference/kconfig/CONFIG_SYS_LOG.html#cmdoption-arg-config-sys-log"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SYS_LOG</span></code></a>: Global switch, turns on/off all system logging.</p>
+<p><a class="reference internal" href="../../reference/kconfig/CONFIG_SYS_LOG_DEFAULT_LEVEL.html#cmdoption-arg-config-sys-log-default-level"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SYS_LOG_DEFAULT_LEVEL</span></code></a>: Default level, sets the logging level
+used by modules that are not setting their own logging level.</p>
+<p><a class="reference internal" href="../../reference/kconfig/CONFIG_SYS_LOG_SHOW_TAGS.html#cmdoption-arg-config-sys-log-show-tags"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SYS_LOG_SHOW_TAGS</span></code></a>: Globally sets whether level tags will be
+shown on log or not.</p>
+<p><a class="reference internal" href="../../reference/kconfig/CONFIG_SYS_LOG_SHOW_COLOR.html#cmdoption-arg-config-sys-log-show-color"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SYS_LOG_SHOW_COLOR</span></code></a>: Globally sets whether ANSI colors will be
+used by the system log.</p>
+<p><a class="reference internal" href="../../reference/kconfig/CONFIG_SYS_LOG_OVERRIDE_LEVEL.html#cmdoption-arg-config-sys-log-override-level"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SYS_LOG_OVERRIDE_LEVEL</span></code></a>: It overrides module logging level when
+it is not set or set lower than the override value.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>The following macro:</p>
+<blockquote>
+<div><div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">SYS_LOG_WRN</span><span class="p">(</span><span class="s">&quot;hi!&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Will produce:</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">[general] [WRN] main: Hi!</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>For the above example to work at least one of the following settings must be
+true:</p>
+<ul class="simple">
+<li>The <a class="reference internal" href="../../reference/kconfig/CONFIG_SYS_LOG_DEFAULT_LEVEL.html#cmdoption-arg-config-sys-log-default-level"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SYS_LOG_DEFAULT_LEVEL</span></code></a> is set to 2 or above and module
+configuration is not set.</li>
+<li>The module configuration is set to 2 or above.</li>
+<li>The <a class="reference internal" href="../../reference/kconfig/CONFIG_SYS_LOG_OVERRIDE_LEVEL.html#cmdoption-arg-config-sys-log-override-level"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SYS_LOG_OVERRIDE_LEVEL</span></code></a> is set to 2 or above.</li>
+</ul>
+</div>
+<div class="section" id="apis">
+<h2>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h2>
+<dl class="group">
+<dt>
+<span class="target" id="db/df6/group__system__log"></span><em>group</em> <code class="descname">system_log</code></dt>
+<dd><p>System Log. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.IS_SYS_LOG_ACTIVE">
+<span class="target" id="db/df6/group__system__log_1gaaf49e0bd9b29ca2b257e28d91c2f99d1"></span><code class="descname">IS_SYS_LOG_ACTIVE</code><a class="headerlink" href="#c.IS_SYS_LOG_ACTIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether SYS_LOG is in use or not. </p>
+<p>This macro expands to 1 if SYS_LOG was activated for current .c file, 0 otherwise. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.SYS_LOG_ERR">
+<span class="target" id="db/df6/group__system__log_1gaa99ef670acc2d7015f73fe2c706c8fdf"></span><code class="descname">SYS_LOG_ERR</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.SYS_LOG_ERR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes an ERROR level message to the log. </p>
+<p>Lowest logging level, these messages are logged whenever sys log is active. it’s meant to report severe errors, such as those from which it’s not possible to recover.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">...</span></code>: A string optionally containing printk valid conversion specifier, followed by as many values as specifiers. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.SYS_LOG_WRN">
+<span class="target" id="db/df6/group__system__log_1ga2bca267824bb4d402423b24098b52cc2"></span><code class="descname">SYS_LOG_WRN</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.SYS_LOG_WRN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes a WARNING level message to the log. </p>
+<p>available if SYS_LOG_LEVEL is SYS_LOG_LEVEL_WARNING or higher. It’s meant to register messages related to unusual situations that are not necessarily errors.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">...</span></code>: A string optionally containing printk valid conversion specifier, followed by as many values as specifiers. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.SYS_LOG_INF">
+<span class="target" id="db/df6/group__system__log_1gaaa186a62677bf08f795aab08b2362c2d"></span><code class="descname">SYS_LOG_INF</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.SYS_LOG_INF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes an INFO level message to the log. </p>
+<p>available if SYS_LOG_LEVEL is SYS_LOG_LEVEL_INFO or higher. It’s meant to write generic user oriented messages.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">...</span></code>: A string optionally containing printk valid conversion specifier, followed by as many values as specifiers. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.SYS_LOG_DBG">
+<span class="target" id="db/df6/group__system__log_1ga93e3dc5e2bea095db85840d96378db01"></span><code class="descname">SYS_LOG_DBG</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.SYS_LOG_DBG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes a DEBUG level message to the log. </p>
+<p>highest logging level, available if SYS_LOG_LEVEL is SYS_LOG_LEVEL_DEBUG. It’s meant to write developer oriented information.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">...</span></code>: A string optionally containing printk valid conversion specifier, followed by as many values as specifiers. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="kernel_event_logger.html" class="btn btn-neutral float-right" title="Kernel Event Logger" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="index.html" class="btn btn-neutral" title="Logging" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

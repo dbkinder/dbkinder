@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: WDT_SAM
+
+.. option:: CONFIG_WDT_SAM
+.. _CONFIG_WDT_SAM:
+
+Enable WDT driver for Atmel SAM MCUs.
+
+
+
+:Symbol:           WDT_SAM
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Atmel SAM MCU Family Watchdog (WDT) Driver" if SOC_FAMILY_SAM (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: SOC_FAMILY_SAM (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ WATCHDOG (value: "n")
+:Locations:
+ * ../drivers/watchdog/Kconfig.sam:8

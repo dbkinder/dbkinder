@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>ESP32 &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../../../index.html"/>
+        <link rel="up" title="XTENSA Boards" href="../../index.html"/>
+        <link rel="next" title="Xtensa Emulation (QEMU)" href="../../qemu_xtensa/doc/board.html"/>
+        <link rel="prev" title="XTENSA Boards" href="../../index.html"/> 
+
+    
+    <script src="../../../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../../../index.html">Docs</a> /
+      
+          <a href="../../../boards.html">Supported Boards</a> /
+      
+          <a href="../../index.html">XTENSA Boards</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../boards.html">Supported Boards</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../x86/index.html">x86 Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../arm/index.html">ARM Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../arc/index.html">ARC Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../nios2/index.html">NIOS II Boards</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">XTENSA Boards</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ESP32</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qemu_xtensa/doc/board.html">Xtensa Emulation (QEMU)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../xt-sim/doc/xt-sim.html">Xtensa simulator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../posix/index.html">Native POSIX Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="esp32">
+<span id="id1"></span><h1>ESP32<a class="headerlink" href="#esp32" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>ESP32 is a series of low cost, low power system on a chip microcontrollers
+with integrated Wi-Fi &amp; dual-mode Bluetooth.  The ESP32 series employs a
+Tensilica Xtensa LX6 microprocessor in both dual-core and single-core
+variations.  ESP32 is created and developed by Espressif Systems, a
+Shanghai-based Chinese company, and is manufactured by TSMC using their 40nm
+process. <a class="footnote-reference" href="#id3" id="id2">[1]</a></p>
+<p>The features include the following:</p>
+<ul class="simple">
+<li>Dual core Xtensa microprocessor (LX6), running at 160 or 240MHz</li>
+<li>520KB of SRAM</li>
+<li>802.11b/g/n/e/i</li>
+<li>Bluetooth v4.2 BR/EDR and BLE</li>
+<li>Various peripherals:<ul>
+<li>12-bit ADC with up to 18 channels</li>
+<li>2x 8-bit DACs</li>
+<li>10x touch sensors</li>
+<li>Temperature sensor</li>
+<li>4x SPI</li>
+<li>2x I2S</li>
+<li>2x I2C</li>
+<li>3x UART</li>
+<li>SD/SDIO/MMC host</li>
+<li>Slave (SDIO/SPI)</li>
+<li>Ethernet MAC</li>
+<li>CAN bus 2.0</li>
+<li>IR (RX/TX)</li>
+<li>Motor PWM</li>
+<li>LED PWM with up to 16 channels</li>
+<li>Hall effect sensor</li>
+</ul>
+</li>
+<li>Cryptographic hardware acceleration (RNG, ECC, RSA, SHA-2, AES)</li>
+<li>5uA deep sleep current</li>
+</ul>
+</div>
+<div class="section" id="system-requirements">
+<h2>System requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p>Two components are required in order to build this port: the <a class="reference external" href="https://esp-idf.readthedocs.io/en/latest/get-started/index.html#get-started-setup-toochain">toolchain</a>
+and the <a class="reference external" href="https://esp-idf.readthedocs.io/en/latest/get-started/index.html#get-started-get-esp-idf">SDK</a>.  Both are provided by the SoC manufacturer.</p>
+<p>The SDK contains headers and a hardware abstraction layer library
+(provided only as object files) that are required for the port to
+function.</p>
+<p>The toolchain is available for Linux, Windows, and Mac hosts and
+instructions to obtain and set them up are available in the ESP-IDF
+repository, using the toolchain and SDK links above.</p>
+</div>
+<div class="section" id="set-up-build-environment">
+<h3>Set up build environment<a class="headerlink" href="#set-up-build-environment" title="Permalink to this headline">¶</a></h3>
+<p>With both the toolchain and SDK installed, the Zephyr build system must be
+instructed to use this particular variant by setting the
+<code class="docutils literal"><span class="pre">ZEPHYR_GCC_VARIANT</span></code> shell variable.  Two other environment variables
+should also be set, pointing to, respectively, the path where ESP-IDF can be
+located, and where the toolchain has been installed:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">export ZEPHYR_GCC_VARIANT=&quot;espressif&quot;</span>
+<span class="go">export ESP_IDF_PATH=&quot;/path/to/esp-idf&quot;</span>
+<span class="go">export ESPRESSIF_TOOLCHAIN_PATH=&quot;/path/to/xtensa-esp32-elf/&quot;</span>
+</pre></div>
+</div>
+<p>Since ESP-IDF is an external project in constant development, it’s possible
+that files that Zephyr depends on will be moved, removed, or renamed.  Those
+files are mostly header files containing hardware definitions, which are
+unlikely to change and require fixes from the vendor.  In addition to
+setting the environment variables above, also check out an earlier version
+of ESP-IDF:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd ${ESP_IDF_PATH}</span>
+<span class="go">git checkout dc8c33892e0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="flashing">
+<h3>Flashing<a class="headerlink" href="#flashing" title="Permalink to this headline">¶</a></h3>
+<p>The usual <code class="docutils literal"><span class="pre">flash</span></code> target will work with the <code class="docutils literal"><span class="pre">esp32</span></code> board
+configuration. Here is an example for the <a class="reference internal" href="../../../../samples/hello_world/README.html#hello-world"><span class="std std-ref">Hello World</span></a>
+application.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>esp32 ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make flash
+</pre></div>
+</div>
+<p>Refer to <a class="reference internal" href="../../../../application/application.html#build-an-application"><span class="std std-ref">Build an Application</span></a> and <a class="reference internal" href="../../../../application/application.html#application-run"><span class="std std-ref">Run an Application</span></a> for
+more details.</p>
+<p>Environment variables can be set to set the serial port device, baud
+rate, and other options.  Please refer to the following table for
+details.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Variable</th>
+<th class="head">Default value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ESP_DEVICE</td>
+<td>/dev/ttyUSB0</td>
+</tr>
+<tr class="row-odd"><td>ESP_BAUD_RATE</td>
+<td>921600</td>
+</tr>
+<tr class="row-even"><td>ESP_FLASH_SIZE</td>
+<td>detect</td>
+</tr>
+<tr class="row-odd"><td>ESP_FLASH_FREQ</td>
+<td>40m</td>
+</tr>
+<tr class="row-even"><td>ESP_FLASH_MODE</td>
+<td>dio</td>
+</tr>
+<tr class="row-odd"><td>ESP_TOOL</td>
+<td>espidf</td>
+</tr>
+</tbody>
+</table>
+<p>It’s impossible to determine which serial port the ESP32 board is
+connected to, as it uses a generic RS232-USB converter.  The default of
+<code class="docutils literal"><span class="pre">/dev/ttyUSB0</span></code> is provided as that’s often the assigned name on a Linux
+machine without any other such converters.</p>
+<p>The baud rate of 921600bps is recommended.  If experiencing issues when
+flashing, try halving the value a few times (460800, 230400, 115200,
+etc).  It might be necessary to change the flash frequency or the flash
+mode; please refer to the <a class="reference external" href="https://github.com/espressif/esptool/blob/master/README.md">esptool documentation</a> for guidance on these
+settings.</p>
+<p>If <code class="docutils literal"><span class="pre">ESP_TOOL</span></code> is set to “espidf”, the <a class="reference external" href="https://github.com/espressif/esptool">esptool.py</a> script found within
+ESP-IDF will be used.  Otherwise, this variable is handled as a path to
+the tool.</p>
+</div>
+<div class="section" id="using-jtag">
+<h3>Using JTAG<a class="headerlink" href="#using-jtag" title="Permalink to this headline">¶</a></h3>
+<p>As with much custom hardware, the ESP-32 modules require patches to
+OpenOCD that are not upstream.  Espressif maintains their own fork of
+the project here.  By convention they put it in the <cite>~/esp</cite> next to the
+installations of their toolchain and SDK:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd ~/esp</span>
+
+<span class="go">git clone https://github.com/espressif/openocd-esp32</span>
+
+<span class="go">cd openocd-esp32</span>
+<span class="go">./bootstrap</span>
+<span class="go">./configure</span>
+<span class="go">make</span>
+</pre></div>
+</div>
+<p>On the ESP-WROVER-KIT board, the JTAG pins are connected internally to
+a USB serial port on the same device as the console.  These boards
+require no external hardware and are debuggable as-is.  The JTAG
+signals, however, must be jumpered closed to connect the internal
+controller (the default is to leave them disconnected).  The jumper
+headers are on the right side of the board as viewed from the power
+switch, next to similar headers for SPI and UART.  See
+<a class="reference external" href="https://dl.espressif.com/doc/esp-idf/latest/get-started/get-started-wrover-kit.html">ESP-WROVER-32 V3 Getting Started Guide</a> for details.</p>
+<p>On the ESP-WROOM-32 DevKitC board, the JTAG pins are not run to a
+standard connector (e.g. ARM 20-pin) and need to be manually connected
+to the external programmer (e.g. a Flyswatter2):</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ESP32 pin</th>
+<th class="head">JTAG pin</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>3V3</td>
+<td>VTRef</td>
+</tr>
+<tr class="row-odd"><td>EN</td>
+<td>nTRST</td>
+</tr>
+<tr class="row-even"><td>IO14</td>
+<td>TMS</td>
+</tr>
+<tr class="row-odd"><td>IO12</td>
+<td>TDI</td>
+</tr>
+<tr class="row-even"><td>GND</td>
+<td>GND</td>
+</tr>
+<tr class="row-odd"><td>IO13</td>
+<td>TCK</td>
+</tr>
+<tr class="row-even"><td>IO15</td>
+<td>TDO</td>
+</tr>
+</tbody>
+</table>
+<p>Once the device is connected, you should be able to connect with (for
+a DevKitC board, replace with esp32-wrover.cfg for WROVER):</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd ~/esp/openocd-esp32</span>
+<span class="go">src/openocd -f interface/ftdi/flyswatter2.cfg -c &#39;set ESP32_ONLYCPU 1&#39; -c &#39;set ESP32_RTOS none&#39; -f board/esp-wroom-32.cfg -s tcl</span>
+</pre></div>
+</div>
+<p>The ESP32_ONLYCPU setting is critical: without it OpenOCD will present
+only the “APP_CPU” via the gdbserver, and not the “PRO_CPU” on which
+Zephyr is running.  It’s currently unexplored as to whether the CPU
+can be switched at runtime or if breakpoints can be set for
+either/both.</p>
+<p>Now you can connect to openocd with gdb and point it to the OpenOCD
+gdbserver running (by default) on localhost port 3333.  Note that you
+must use the gdb distributed with the ESP-32 SDK.  Builds off of the
+FSF mainline get inexplicable protocol errors when connecting.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">~/esp/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb outdir/esp32/zephyr.elf</span>
+<span class="go">(gdb) target remote localhost:3333</span>
+</pre></div>
+</div>
+<p>Further documentation can be obtained from the SoC vendor in <a class="reference external" href="http://esp-idf.readthedocs.io/en/latest/api-guides/jtag-debugging/index.html">JTAG debugging
+for ESP32</a>.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/ESP32">https://en.wikipedia.org/wiki/ESP32</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../../qemu_xtensa/doc/board.html" class="btn btn-neutral float-right" title="Xtensa Emulation (QEMU)" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../../index.html" class="btn btn-neutral" title="XTENSA Boards" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

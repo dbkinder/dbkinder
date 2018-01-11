@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: HW_STACK_PROTECTION
+
+.. option:: CONFIG_HW_STACK_PROTECTION
+.. _CONFIG_HW_STACK_PROTECTION:
+
+Select this option to enable hardware-based platform features to
+catch stack overflows when the system is running in privileged
+mode. If CONFIG_USERSPACE is not enabled, the system is always
+running in privileged mode.
+
+Note that this does not necessarily prevent corruption and assertions
+about the overall system state when a fault is triggered cannot be
+made.
+
+
+
+:Symbol:           HW_STACK_PROTECTION
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Hardware Stack Protection" if ARCH_HAS_STACK_PROTECTION (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/Kconfig:50

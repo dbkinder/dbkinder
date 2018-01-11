@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: GPIO_CC2650_INIT_PRIO
+
+.. option:: CONFIG_GPIO_CC2650_INIT_PRIO
+.. _CONFIG_GPIO_CC2650_INIT_PRIO:
+
+The configuration item CONFIG_GPIO_CC2650_INIT_PRIO:
+
+:Symbol:           GPIO_CC2650_INIT_PRIO
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "GPIO driver initialization priority."
+:Default values:
+
+ *  40 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_CC2650 && GPIO (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.cc2650:21

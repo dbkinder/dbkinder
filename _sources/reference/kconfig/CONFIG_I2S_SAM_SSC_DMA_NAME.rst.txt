@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: I2S_SAM_SSC_DMA_NAME
+
+.. option:: CONFIG_I2S_SAM_SSC_DMA_NAME
+.. _CONFIG_I2S_SAM_SSC_DMA_NAME:
+
+Name of the DMA device this device driver can use.
+
+
+
+:Symbol:           I2S_SAM_SSC_DMA_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "DMA device name"
+:Default values:
+
+ *  "DMA_0"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2S_SAM_SSC && I2S (value: "n")
+:Locations:
+ * ../drivers/i2s/Kconfig.sam_ssc:35

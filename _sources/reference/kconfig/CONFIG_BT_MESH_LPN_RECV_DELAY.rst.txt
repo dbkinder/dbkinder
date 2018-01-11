@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: BT_MESH_LPN_RECV_DELAY
+
+.. option:: CONFIG_BT_MESH_LPN_RECV_DELAY
+.. _CONFIG_BT_MESH_LPN_RECV_DELAY:
+
+The ReceiveDelay is the time between the Low Power node
+sending a request and listening for a response. This delay
+allows the Friend node time to prepare the response. The value
+is in units of milliseconds.
+
+
+
+:Symbol:           BT_MESH_LPN_RECV_DELAY
+:Type:             int
+:Value:            "10"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [10, 255]
+:Prompts:
+
+ *  "Receive delay requested by the local node"
+:Default values:
+
+ *  100 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_LOW_POWER (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:263

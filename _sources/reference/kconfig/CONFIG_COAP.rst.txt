@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: COAP
+
+.. option:: CONFIG_COAP
+.. _CONFIG_COAP:
+
+This option enables the CoAP implementation.
+
+
+
+:Symbol:           COAP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "CoAP Support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ LWM2M && NETWORKING (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/coap/Kconfig:9

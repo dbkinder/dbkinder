@@ -1,0 +1,112 @@
+:orphan:
+
+.. title:: SOC_SERIES
+
+.. option:: CONFIG_SOC_SERIES
+.. _CONFIG_SOC_SERIES:
+
+SoC series name which can be found under arch/<arch>/soc/<family>/<series>.
+This option holds the directory name used by the build system to locate
+the correct linker and header files.
+
+
+
+:Symbol:           SOC_SERIES
+:Type:             string
+:Value:            "quark_x1000"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  quark_x1000 (value: "quark_x1000")
+ *   Condition: (none)
+ *  quark_se (value: "quark_se")
+ *   Condition: (none)
+ *  quark_d2000 (value: "quark_d2000")
+ *   Condition: (none)
+ *  sam4s (value: "sam4s")
+ *   Condition: (none)
+ *  same70 (value: "same70")
+ *   Condition: (none)
+ *  sam3x (value: "sam3x")
+ *   Condition: (none)
+ *  mps2 (value: "mps2")
+ *   Condition: (none)
+ *  beetle (value: "beetle")
+ *   Condition: (none)
+ *  efm32wg (value: "efm32wg")
+ *   Condition: (none)
+ *  stm32f0 (value: "stm32f0")
+ *   Condition: (none)
+ *  stm32f4 (value: "stm32f4")
+ *   Condition: (none)
+ *  stm32l4 (value: "stm32l4")
+ *   Condition: (none)
+ *  stm32f1 (value: "stm32f1")
+ *   Condition: (none)
+ *  stm32f3 (value: "stm32f3")
+ *   Condition: (none)
+ *  cc2650 (value: "cc2650")
+ *   Condition: (none)
+ *  cc32xx (value: "cc32xx")
+ *   Condition: (none)
+ *  msp432p4xx (value: "msp432p4xx")
+ *   Condition: (none)
+ *  rt (value: "rt")
+ *   Condition: (none)
+ *  kwx (value: "kwx")
+ *   Condition: (none)
+ *  kl2x (value: "kl2x")
+ *   Condition: (none)
+ *  k6x (value: "k6x")
+ *   Condition: (none)
+ *  nrf52 (value: "nrf52")
+ *   Condition: (none)
+ *  nrf51 (value: "nrf51")
+ *   Condition: (none)
+ *  samd (value: "samd")
+ *   Condition: (none)
+ *  "fe310"
+ *   Condition: (none)
+ *  "riscv32-qemu"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_RISCV32_QEMU (value: "n")
+:Locations:
+ * ../arch/Kconfig:277
+ * ../arch/x86/soc/intel_quark/quark_x1000/Kconfig.defconfig.series:12
+ * ../arch/x86/soc/intel_quark/quark_se/Kconfig.defconfig.series:9
+ * ../arch/x86/soc/intel_quark/quark_d2000/Kconfig.defconfig.series:9
+ * ../arch/arm/soc/atmel_sam/sam4s/Kconfig.defconfig.series:10
+ * ../arch/arm/soc/atmel_sam/same70/Kconfig.defconfig.series:9
+ * ../arch/arm/soc/atmel_sam/sam3x/Kconfig.defconfig.series:11
+ * ../arch/arm/soc/arm/mps2/Kconfig.defconfig.series:9
+ * ../arch/arm/soc/arm/beetle/Kconfig.defconfig.series:13
+ * ../arch/arm/soc/silabs_exx32/efm32wg/Kconfig.defconfig.series:11
+ * ../arch/arm/soc/st_stm32/stm32f0/Kconfig.defconfig.series:12
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.defconfig.series:12
+ * ../arch/arm/soc/st_stm32/stm32l4/Kconfig.defconfig.series:13
+ * ../arch/arm/soc/st_stm32/stm32f1/Kconfig.defconfig.series:12
+ * ../arch/arm/soc/st_stm32/stm32f3/Kconfig.defconfig.series:12
+ * ../arch/arm/soc/ti_simplelink/cc2650/Kconfig.defconfig.series:8
+ * ../arch/arm/soc/ti_simplelink/cc32xx/Kconfig.defconfig.series:8
+ * ../arch/arm/soc/ti_simplelink/msp432p4xx/Kconfig.defconfig.series:12
+ * ../arch/arm/soc/nxp_imx/rt/Kconfig.defconfig.series:10
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.defconfig.series:10
+ * ../arch/arm/soc/nxp_kinetis/kl2x/Kconfig.defconfig.series:10
+ * ../arch/arm/soc/nxp_kinetis/k6x/Kconfig.defconfig.series:11
+ * ../arch/arm/soc/nordic_nrf5/nrf52/Kconfig.defconfig.series:12
+ * ../arch/arm/soc/nordic_nrf5/nrf51/Kconfig.defconfig.series:12
+ * ../arch/arm/soc/atmel_sam0/samd/Kconfig.defconfig.series:8
+ * ../arch/riscv32/soc/riscv-privilege/fe310/Kconfig.defconfig.series:3
+ * ../arch/riscv32/soc/riscv-privilege/riscv32-qemu/Kconfig.defconfig.series:3

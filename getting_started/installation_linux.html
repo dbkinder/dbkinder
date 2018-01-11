@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Development Environment Setup on Linux &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="Getting Started Guide" href="getting_started.html"/>
+        <link rel="next" title="Development Environment Setup on macOS" href="installation_mac.html"/>
+        <link rel="prev" title="Getting Started Guide" href="getting_started.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+          <a href="getting_started.html">Getting Started Guide</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#checking-out-the-source-code-anonymously">Checking Out the Source Code Anonymously</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="getting_started.html#set-up-the-development-environment">Set Up the Development Environment</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Development Environment Setup on Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation_mac.html">Development Environment Setup on macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation_win.html">Development Environment Setup on Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#building-and-running-an-application">Building and Running an Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="development-environment-setup-on-linux">
+<span id="installation-linux"></span><h1>Development Environment Setup on Linux<a class="headerlink" href="#development-environment-setup-on-linux" title="Permalink to this headline">¶</a></h1>
+<p>This section describes how to set up a Linux development system.</p>
+<p>After completing these steps, you will be able to compile and run your Zephyr
+applications on the following Linux distributions:</p>
+<ul class="simple">
+<li>Ubuntu 16.04 LTS 64-bit</li>
+<li>Fedora 25 64-bit</li>
+</ul>
+<p>Where needed, alternative instructions are listed for Ubuntu and Fedora.</p>
+<div class="section" id="installing-the-host-s-operating-system">
+<h2>Installing the Host’s Operating System<a class="headerlink" href="#installing-the-host-s-operating-system" title="Permalink to this headline">¶</a></h2>
+<p>Building the project’s software components including the kernel has been
+tested on Ubuntu and Fedora systems. Instructions for installing these OSes
+are beyond the scope of this document.</p>
+</div>
+<div class="section" id="update-your-operating-system">
+<h2>Update Your Operating System<a class="headerlink" href="#update-your-operating-system" title="Permalink to this headline">¶</a></h2>
+<p>Before proceeding with the build, ensure your OS is up to date.  On Ubuntu,
+you’ll first need to update the local database list of available packages
+before upgrading:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo apt-get update
+<span class="gp">$</span> sudo apt-get upgrade
+</pre></div>
+</div>
+<p>On Fedora:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo dnf upgrade
+</pre></div>
+</div>
+<p>Note that having a newer version available for an installed package
+(and reported by <code class="docutils literal"><span class="pre">dnf</span> <span class="pre">check-update</span></code>) does not imply a subsequent
+<code class="docutils literal"><span class="pre">dnf</span> <span class="pre">upgrade</span></code> will install it, because it must also ensure dependencies
+and other restrictions are satisfied.</p>
+</div>
+<div class="section" id="installing-requirements-and-dependencies">
+<h2>Installing Requirements and Dependencies<a class="headerlink" href="#installing-requirements-and-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>Install the following with either apt-get or dnf.</p>
+<p>Install the required packages in a Ubuntu host system with:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo apt-get install --no-install-recommends git cmake ninja-build gperf <span class="se">\</span>
+  ccache doxygen dfu-util device-tree-compiler <span class="se">\</span>
+  python3-ply python3-pip python3-setuptools xz-utils file make gcc-multilib
+</pre></div>
+</div>
+<p>Install the required packages in a Fedora host system with:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo dnf group install <span class="s2">&quot;Development Tools&quot;</span>
+<span class="gp">$</span> sudo dnf install git cmake ninja-build gperf ccache<span class="se">\</span>
+      doxygen dfu-util dtc python3-pip <span class="se">\</span>
+      python3-ply python3-yaml dfu-util dtc python3-pykwalify
+</pre></div>
+</div>
+<p>Install additional packages required for development with Zephyr:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd ~/zephyr  # or to your directory where zephyr is cloned
+$ pip3 install --user -r scripts/requirements.txt
+</pre></div>
+</div>
+<p>CMake version 3.8.2 or higher is required. Check what version you have using
+<code class="docutils literal"><span class="pre">cmake</span> <span class="pre">--version</span></code>, and if its an older version, check the backports or
+install a more recent version manually. For example, to install version
+3.8.2 from the CMake website directly in ~/cmake:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ mkdir $HOME/cmake &amp;&amp; cd $HOME/cmake
+$ wget https://cmake.org/files/v3.8/cmake-3.8.2-Linux-x86_64.sh
+$ yes | sh cmake-3.8.2-Linux-x86_64.sh | cat
+$ echo &quot;export PATH=$PWD/cmake-3.8.2-Linux-x86_64/bin:\$PATH&quot; &gt;&gt; $HOME/.zephyrrc
+$ source &lt;zephyr git clone location&gt;/zephyr-env.sh
+$ cmake --version
+</pre></div>
+</div>
+<div class="section" id="installing-the-zephyr-software-development-kit">
+<span id="zephyr-sdk"></span><h3>Installing the Zephyr Software Development Kit<a class="headerlink" href="#installing-the-zephyr-software-development-kit" title="Permalink to this headline">¶</a></h3>
+<p>Zephyr’s <abbr title="Software Development Kit">SDK</abbr> contains all necessary tools
+and cross-compilers needed to build the kernel on all supported
+architectures. Additionally, it includes host tools such as a custom QEMU and
+a host compiler for building host tools if necessary. The SDK supports the
+following architectures:</p>
+<ul class="simple">
+<li><abbr title="Intel Architecture 32 bits">X86</abbr></li>
+<li><abbr title="Intel Architecture 32 bits IAMCU ABI">X86 IAMCU ABI</abbr></li>
+<li><abbr title="Advanced RISC Machines">ARM</abbr></li>
+<li><abbr title="Argonaut RISC Core">ARC</abbr></li>
+<li><abbr>NIOS II</abbr></li>
+<li><abbr>Xtensa</abbr></li>
+<li><abbr>RISC-V</abbr></li>
+</ul>
+<p>Follow these steps to install the SDK on your Linux host system.</p>
+<ol class="arabic">
+<li><p class="first">Download the latest SDK self-extractable binary.</p>
+<p>Visit the <a class="reference external" href="https://www.zephyrproject.org/developers/#downloads">Zephyr SDK archive</a> to find all available SDK versions,
+including the latest version.</p>
+<p>Alternatively, you can use the following command to download the
+desired version (<em>0.9.2</em> can be replaced with the version number you
+wish to download).</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> wget https://github.com/zephyrproject-rtos/meta-zephyr-sdk/releases/download/0.9.2/zephyr-sdk-0.9.2-setup.run
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run the installation binary, follow this example:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Make sure you have installed all required packages for your host
+distribution as described in the previous section
+<a class="reference internal" href="#installing-requirements-and-dependencies">Installing Requirements and Dependencies</a> otherwise the SDK installation will fail.</p>
+</div>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sh zephyr-sdk-&lt;version&gt;-setup.run
+</pre></div>
+</div>
+<p>There is no need to use <code class="docutils literal"><span class="pre">sudo</span></code> if the SDK is installed in the current
+user’s home directory.</p>
+</li>
+<li><p class="first">Follow the installation instructions on the screen. The
+toolchain’s default installation location is <code class="file docutils literal"><span class="pre">/opt/zephyr-sdk/</span></code>.
+To install in the default installation location, you will need to use sudo. It is recommended
+to install the SDK in your home directory and not in a system directory.</p>
+</li>
+<li><p class="first">To use the Zephyr SDK, export the following environment variables and
+use the target location where SDK was installed, type:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">ZEPHYR_GCC_VARIANT</span><span class="o">=</span>zephyr
+<span class="gp">$</span> <span class="nb">export</span> <span class="nv">ZEPHYR_SDK_INSTALL_DIR</span><span class="o">=</span>&lt;sdk installation directory&gt;
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div><p>To use the same toolchain in new sessions in the future you can set the
+variables in the file <code class="file docutils literal"><span class="pre">$</span><em><span class="pre">HOME</span></em><span class="pre">/.zephyrrc</span></code>, for example:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> cat &lt;&lt;EOF &gt; ~/.zephyrrc
+<span class="go">export ZEPHYR_GCC_VARIANT=zephyr</span>
+<span class="go">export ZEPHYR_SDK_INSTALL_DIR=/opt/zephyr-sdk</span>
+<span class="go">EOF</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="installation_mac.html" class="btn btn-neutral float-right" title="Development Environment Setup on macOS" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="getting_started.html" class="btn btn-neutral" title="Getting Started Guide" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

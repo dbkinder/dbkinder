@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: ADC_TI_ADC108S102
+
+.. option:: CONFIG_ADC_TI_ADC108S102
+.. _CONFIG_ADC_TI_ADC108S102:
+
+Enable support for TI's ADC chip adc108s102 driver.
+
+
+
+:Symbol:           ADC_TI_ADC108S102
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "TI adc108s102 chip driver"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_SPI`
+ *  :option:`CONFIG_ADC_0`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ADC && BOARD_GALILEO (value: "y")
+:Locations:
+ * ../drivers/adc/Kconfig.ti_adc108s102:9
+ * ../boards/x86/galileo/Kconfig.defconfig:36

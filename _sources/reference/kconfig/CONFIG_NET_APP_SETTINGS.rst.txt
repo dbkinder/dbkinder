@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: NET_APP_SETTINGS
+
+.. option:: CONFIG_NET_APP_SETTINGS
+.. _CONFIG_NET_APP_SETTINGS:
+
+Allow IP addresses to be set in config file for
+networking client/server sample applications, or
+some link-layer dedicated settings like the channel.
+Beware this is not meant to be used for proper
+provisioning but quick sampling/testing.
+
+
+
+:Symbol:           NET_APP_SETTINGS
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Set network settings for applications" if NET_APP (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: NET_APP (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:145

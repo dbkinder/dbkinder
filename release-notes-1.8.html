@@ -1,0 +1,594 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Zephyr Kernel 1.8.0 &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+        <link rel="copyright" title="Copyright" href="copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="index.html"/> 
+
+    
+    <script src="_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="index.html">Docs</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="zephyr-kernel-1-8-0">
+<span id="zephyr-1-8"></span><h1>Zephyr Kernel 1.8.0<a class="headerlink" href="#zephyr-kernel-1-8-0" title="Permalink to this headline">¶</a></h1>
+<p>We are pleased to announce the release of Zephyr kernel version 1.8.0.</p>
+<p>Major enhancements with this release include:</p>
+<ul class="simple">
+<li>Tickless kernel</li>
+<li>IP Stack improvements</li>
+<li>Bluetooth 5.0 features</li>
+<li>Ecosystem: Tracing, debugging support through third-party tools (openocd,
+Segger Systemview)</li>
+<li>Improved build support on Mac and Windows development environments</li>
+<li>Xtensa GCC support</li>
+<li>Initial implementation of MMU/MPU support</li>
+<li>Expanded device support</li>
+</ul>
+<p>The following sections provide detailed lists of changes by component.</p>
+<div class="section" id="kernel">
+<h2>Kernel<a class="headerlink" href="#kernel" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Use k_cycle_get_32 instead of sys_cycle_get_32 for Kernel</li>
+<li>Added k_panic() and k_oops() APIs for Kernel</li>
+<li>Added k_thread_create() API for Kernel</li>
+<li>Added k_queue API for Kernel</li>
+<li>Add tickless kernel support</li>
+</ul>
+</div>
+<div class="section" id="architectures">
+<h2>Architectures<a class="headerlink" href="#architectures" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>arm: Update core to use struct k_thread</li>
+<li>arm: Added ARM MPU support</li>
+<li>dts: Added ARM CMSDK support</li>
+<li>arm: Added Initial support for NXP MPU</li>
+<li>arm: Added Device Tree Support for nRF52832 SoC based boards</li>
+<li>arm: Fixed nRF52840-QIAA SoC support for device tree</li>
+<li>arm: Added Device Tree Support for nRF52840 SoC &amp; boards</li>
+<li>arm: Added Device Tree Support for nRF51822 SoC &amp; boards</li>
+<li>dts: Introduced st/mem.h for FLASH &amp; SRAM sizes</li>
+<li>dts: Put IRQ priority into the interrupt property</li>
+<li>arm: Support for MKL25Z soc</li>
+<li>arm: Added FPU support</li>
+<li>x86: defined MMU data structures</li>
+<li>Support for ARC EM Starter Kit version 2.3 added</li>
+</ul>
+</div>
+<div class="section" id="boards">
+<h2>Boards<a class="headerlink" href="#boards" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added qemu_xtensa board definition</li>
+<li>Added a more informative page fault handler x86 board</li>
+<li>xtensa: build similar to other Zephyr arches</li>
+<li>Define MMU data structures for x86 board</li>
+<li>Added support for board disco_l475_iot1</li>
+<li>Added STM32F413 Nucleo board</li>
+<li>Added support for the CC3220SF_LAUNCHXL board</li>
+<li>Support for new ARM board FRDM-KL25Z</li>
+<li>arduino_101 board enable GPIO by default</li>
+<li>boards: convert to using newly introduced integer sized types</li>
+<li>arm: Added support for Nucleo L432KC board</li>
+<li>arm: Added support for STM32L496G Discovery board</li>
+<li>arm: Added support for STM32F469I-DISCO board</li>
+<li>BBC micro:bit: Added driver &amp; API for the 5x5 LED display</li>
+</ul>
+</div>
+<div class="section" id="drivers-and-sensors">
+<h2>Drivers and Sensors<a class="headerlink" href="#drivers-and-sensors" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>UART interrupt-driver API is better defined</li>
+<li>Support for pull-style console API</li>
+<li>nRF5 IEEE 802.15.4 radio driver added</li>
+<li>KW41Z IEEE 802.15.4 radio driver added</li>
+<li>Added MCUX TRNG driver</li>
+<li>Added support for the SiFive Freedom E310 pinmux driver</li>
+<li>drivers/sensor: Convert formatter strings to use PRI defines</li>
+<li>Added lps22hb sensor driver</li>
+<li>Added lsm6dsl sensor driver</li>
+<li>Added heart rate sensor driver</li>
+<li>Added support for max30101 heart rate sensor</li>
+<li>Added support for lis2dh accelerometer</li>
+</ul>
+</div>
+<div class="section" id="networking">
+<h2>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>HTTPS server support added</li>
+<li>HTTP Basic-Auth support added</li>
+<li>IPv6 fragmentation support added</li>
+<li>Add block wise support to CoAP for well-known response</li>
+<li>Big refactoring of network buffer handling</li>
+<li>Start to collect TCP statistics if enabled in config</li>
+<li>IEEE 802.15.4 security support added</li>
+<li>DNS resolver sample application added</li>
+<li>IPv6 multicast listener (MLDv2) support added</li>
+<li>NATS protocol sample application added</li>
+<li>HTTP client and server connectivity fixes</li>
+<li>Network samples Coverity fixes</li>
+<li>Network samples llvm compiler warning fixes</li>
+<li>MQTT publisher connectivity fixes</li>
+<li>6lo IPv6 header compression fixes</li>
+<li>CoAP connectivity fixes</li>
+<li>DHCPv4 connectivity fixes</li>
+<li>TCP connectivity fixes</li>
+<li>DNS documentation and connectivity fixes</li>
+<li>IPv6 connectivity fixes</li>
+<li>IPv4 ARP fixes</li>
+<li>IEEE 802.15.4 configuration tweaking fixes</li>
+<li>Remove ORFD (Overly Reduced Function Device) 802.15.4 support</li>
+<li>Network offloading driver fixes</li>
+<li>Fix various memory leaks</li>
+<li>Properly check TCP and UDP checksum before accepting packet</li>
+<li>Start RX and TX network threads in proper order</li>
+<li>Network samples documentation fixes and clarifications</li>
+<li>RPL mesh routing fixes</li>
+<li>Network link (MAC) address fixes</li>
+</ul>
+</div>
+<div class="section" id="bluetooth">
+<h2>Bluetooth<a class="headerlink" href="#bluetooth" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Host: Added ATT and SMP packet tracking for flow control enforcement</li>
+<li>Host: GATT database changed to a linked list in preparation for dynamic allocation</li>
+<li>Bluetooth 5.0: The Controller reports itself as 5.0-capable</li>
+<li>Bluetooth 5.0: Introduced Channel Selection Algorithm #2 support</li>
+<li>Bluetooth 5.0: Added Multiple PHY support, both 2Mbit/s and long-range coded</li>
+<li>Bluetooth 5.0: Integrated Scan Request notifications</li>
+<li>Controller: Added Low Duty Cycle Directed Advertising support</li>
+<li>Controller: Added Scan duplicate filtering support</li>
+<li>Controller: Enforced complete role separation in the controller for smaller builds</li>
+<li>Controller: Introduced Advanced Controller configuration with several new Kconfig options</li>
+<li>Controller: Changed the radio interrupts to direct ISRs to reduce interrupt latency</li>
+<li>Added HCI Controller to Host flow control support in both Host and Controller</li>
+<li>BR/EDR: Added HFP (e)SCO audio channel establishment support</li>
+<li>BR/EDR: Added support for a functional SDP server</li>
+</ul>
+</div>
+<div class="section" id="build-and-infrastructure">
+<h2>Build and Infrastructure<a class="headerlink" href="#build-and-infrastructure" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Support building host tools</li>
+<li>Added separate DTS target</li>
+<li>Added support for MSYS2</li>
+<li>Use -O2 instead of -Os for ARC with SDK 0.9</li>
+</ul>
+</div>
+<div class="section" id="libraries">
+<h2>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added library for software driven I2C</li>
+<li>Created a HTTP library</li>
+<li>Added HTTP server library support</li>
+<li>Added minimal JSON library</li>
+<li>Update TinyCrypt to version 0.2.6</li>
+<li>Added minimal JSON library</li>
+</ul>
+</div>
+<div class="section" id="hals">
+<h2>HALs<a class="headerlink" href="#hals" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added Atmel SAM family I2C (TWIHS) driver</li>
+<li>Added Atmel SAM serial (UART) driver</li>
+<li>Added WDT driver for Atmel SAM SoCs</li>
+<li>Added Atmel SAM4S SoC support</li>
+<li>Imported Nordic 802.15.4 radio driver</li>
+<li>Added Initial support for NXP MPU</li>
+<li>Updated QMSI to 1.4 RC4</li>
+<li>Added FPU support</li>
+<li>Added basic support for STM32F413</li>
+<li>Introduced STM32F4x DMA driver</li>
+<li>pinmux: stm32: Added support for Nucleo L432KC</li>
+<li>Added support for STM32L496G Discovery board</li>
+<li>Added dts for STM32F407</li>
+<li>Added support for STM32F4DISCOVERY Board</li>
+<li>Added support for STM32F469XI</li>
+<li>Added support for STM32F469I-DISCO</li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Board documentation added for new board ports</li>
+<li>Added a board porting guide</li>
+<li>Added security sections to porting and user guides</li>
+<li>Continued migration of wiki.zephyrproject.org material to website and github wiki</li>
+<li>Improved CSS formatting and appearance of generated documents</li>
+<li>Added breadcrumb navigation header with kernel version number</li>
+<li>Updated getting started setup guides for Linux, Windows, and macOS</li>
+<li>Updates and additions to follow new and updated kernel features</li>
+<li>Broken link and spelling check scans</li>
+<li>Removed deprecated kernel documentation (pre 1.6 release) from website (still available in git repo if needed)</li>
+</ul>
+</div>
+<div class="section" id="tests-and-samples">
+<h2>Tests and Samples<a class="headerlink" href="#tests-and-samples" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added test to verify same tick timeout expiry order</li>
+<li>Added clock_test for kernel</li>
+<li>Added tickless tests</li>
+<li>Added a simple CC2520 crypto dev test</li>
+<li>Added combined observer &amp; broadcaster app for Bluetooth samples</li>
+<li>Added support to wait both IPv4 and IPv6</li>
+<li>Enabled tickless kernel option in some apps</li>
+</ul>
+</div>
+<div class="section" id="jira-related-items">
+<h2>JIRA Related Items<a class="headerlink" href="#jira-related-items" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-248">ZEP-248</a> - Add a BOARD/SOC porting guide</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-339">ZEP-339</a> - Tickless Kernel</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-540">ZEP-540</a> - add APIs for asynchronous transfer callbacks</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-628">ZEP-628</a> - Validate RPL Routing node support</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-638">ZEP-638</a> - feature to consider: flag missing functionality at build time when possible</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-720">ZEP-720</a> - Add MAX30101 heart rate sensor driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-828">ZEP-828</a> - IPv6 - Multicast Join/Leave Support</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-843">ZEP-843</a> - Unified assert/unrecoverable error infrastructure</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-888">ZEP-888</a> - 802.15.4 - Security support</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-932">ZEP-932</a> - Adapt kernel sample &amp; test projects</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-948">ZEP-948</a> - Revisit the timeslicing algorithm</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-973">ZEP-973</a> - Remove deprecated API related to device PM functions and DEVICE_ and SYS_* macros</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1028">ZEP-1028</a> - shrink k_block struct size</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1032">ZEP-1032</a> - IPSP router role support</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1169">ZEP-1169</a> - Sample mbedDTLS DTLS client stability on ethernet driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1171">ZEP-1171</a> - Event group kernel APIs</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1280">ZEP-1280</a> - Provide Event Queues Object</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1313">ZEP-1313</a> - porting and user guides must include a security section</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1326">ZEP-1326</a> - Clean up _THREAD_xxx APIs</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1388">ZEP-1388</a> - Add support for KW40 SoC</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1391">ZEP-1391</a> - Add support for Hexiwear KW40</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1392">ZEP-1392</a> - Add FXAS21002 gyroscope sensor driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1435">ZEP-1435</a> - Improve Quark SE C1000 ARC Floating Point Performance</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1438">ZEP-1438</a> - AIO: AIO Comparator is not stable on D2000 and Arduino101</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1463">ZEP-1463</a> - Add Zephyr Support in segger SystemView</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1500">ZEP-1500</a> - net/mqtt: Test case for the MQTT high-level API</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1528">ZEP-1528</a> - Provide template for multi-core applications</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1529">ZEP-1529</a> - Unable to exit menuconfig</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1530">ZEP-1530</a> - Hotkeys for the menu at the bottom of menuconfig sometimes doesn’t work</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1568">ZEP-1568</a> - Replace arm cortex_m scs and scb functionality with direct CMSIS-core calls</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1586">ZEP-1586</a> - menuconfig: Backspace is broken</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1599">ZEP-1599</a> - printk() support for the ‘-‘ indicator  in format string (left justifier)</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1607">ZEP-1607</a> - JSON encoding/decoding library</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1621">ZEP-1621</a> - Stack Monitoring</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1631">ZEP-1631</a> - Ability to use k_mem_pool_alloc (or similar API) from ISR</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1684">ZEP-1684</a> - Add Atmel SAM family watchdog (WDT) driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1695">ZEP-1695</a> - Support ADXL362 sensor</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1698">ZEP-1698</a> - BME280 support for SPI communication</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1711">ZEP-1711</a> - xtensa build defines Kconfigs with lowercase names</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1718">ZEP-1718</a> - support for IPv6 fragmentation</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1719">ZEP-1719</a> - TCP does not work with 6lo</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1721">ZEP-1721</a> - many TinyCrypt test cases only run on ARM and x86</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1722">ZEP-1722</a> - xtensa: TinyCrypt does not build</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1735">ZEP-1735</a> - Controller to Host flow control</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1759">ZEP-1759</a> - All python scripts needed for build should be moved to python 3 to minimize dependencies</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1761">ZEP-1761</a> - K_MEM_POOL_DEFINE build error “invalid register name” when built with llvm/icx from ISSM toolchain</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1769">ZEP-1769</a> - Implement  Set Event Mask and LE Set Event Mask commands</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1772">ZEP-1772</a> - re-introduce controller to host flow control</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1776">ZEP-1776</a> - sending LE COC data from RX thread can lead to deadlock</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1785">ZEP-1785</a> - Tinytile: Flashing not supported with this board</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1788">ZEP-1788</a> - [REG] bt_enable: No HCI driver registered</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1800">ZEP-1800</a> - Update external mbed TLS library to latest version (2.4.2)</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1812">ZEP-1812</a> - Add tickless kernel support in HPET timer</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1816">ZEP-1816</a> - Add tickless kernel support in LOAPIC timer</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1817">ZEP-1817</a> - Add tickless kernel support in ARCV2 timer</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1818">ZEP-1818</a> - Add tickless kernel support in cortex_m_systick timer</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1821">ZEP-1821</a> - Update PM apps to use mili/micro seconds instead of ticks</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1823">ZEP-1823</a> - Improved Benchmarks</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1825">ZEP-1825</a> - Context Switching KPI</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1836">ZEP-1836</a> - Expose current ecb_encrypt() as bt_encrypt() so host can directly access it</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1856">ZEP-1856</a> - remove legacy micro/nano kernel APIs</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1857">ZEP-1857</a> - Build warnings [-Wpointer-sign] with LLVM/icx (bluetooth_handsfree)</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1866">ZEP-1866</a> - Add Atmel SAM family I2C (TWIHS) driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1880">ZEP-1880</a> - “samples/grove/temperature”: warning raised when generating configure file</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1886">ZEP-1886</a> - Build warnings [-Wpointer-sign] with LLVM/icx (tests/net/nbuf)</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1887">ZEP-1887</a> - Build warnings [-Wpointer-sign] with LLVM/icx (tests/drivers/spi/spi_basic_api)</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1893">ZEP-1893</a> - openocd: ‘make flash’ works with Zephyr SDK only and fails for all other toolchains</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1896">ZEP-1896</a> - [PTS] L2CAP/LE/CFC/BV-06-C</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1899">ZEP-1899</a> - Missing board documentation for xtensa/xt-sim</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1908">ZEP-1908</a> - Missing board documentation for arm/nucleo_96b_nitrogen</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1910">ZEP-1910</a> - Missing board documentation for arm/96b_carbon</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1927">ZEP-1927</a> - AIO: AIO_CMP_POL_FALL is triggered immediately after aio_cmp_configure</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1935">ZEP-1935</a> - Packet loss make RPL mesh more vulnerable</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1936">ZEP-1936</a> - tests/drivers/spi/spi_basic_api/testcase.ini#test_spi - Assertion Fail</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1946">ZEP-1946</a> - Time to Next Event</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1955">ZEP-1955</a> - Nested interrupts crash on Xtensa architecture</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1959">ZEP-1959</a> - Add Atmel SAM family serial (UART) driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1965">ZEP-1965</a> - net-tools HEAD is broken for QEMU/TAP</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1966">ZEP-1966</a> - Doesn’t seem to be able to both send and receive locally via local address</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1968">ZEP-1968</a> - “make mrproper” removes top-level dts/ dir, makes ARM builds fail afterwards</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1980">ZEP-1980</a> - Move app_kernel benchmark to unified kernel</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1984">ZEP-1984</a> - net_nbuf_append(), net_nbuf_append_bytes() have data integrity problems</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1990">ZEP-1990</a> - Basic support for the BBC micro:bit LED display</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1993">ZEP-1993</a> - Flowcontrol Required for CDC_ACM</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1995">ZEP-1995</a> - samples/subsys/console breaks xtensa build</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1997">ZEP-1997</a> - Crash during startup if co-processors are present</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2008">ZEP-2008</a> - Port tickless idle test to unified kernel and cleanup</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2009">ZEP-2009</a> - Port test_sleep test to unified kernel and cleanup</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2011">ZEP-2011</a> - Retrieve RPL node information through CoAP requests</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2012">ZEP-2012</a> - Fault in networking stack for cores that can’t access unaligned memory</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2013">ZEP-2013</a> - dead object monitor code</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2014">ZEP-2014</a> - Default samples/subsys/shell/shell fails to build on QEMU RISCv32 / NIOS2</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2019">ZEP-2019</a> - Xtensa port does not compile if CONFIG_TICKLESS_IDLE is enabled</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2027">ZEP-2027</a> - Bluetooth Peripheral Sample won’t pair with certain Android devices</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2029">ZEP-2029</a> - xtensa: irq_offload() doesn’t work on XRC_D2PM</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2033">ZEP-2033</a> - Channel Selection Algorithm #2</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2034">ZEP-2034</a> - High Duty Cycle Non-Connectable Advertising</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2037">ZEP-2037</a> - Malformed echo response</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2048">ZEP-2048</a> - Change UART “baud-rate” property to “current-speed”</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2051">ZEP-2051</a> - Move away from C99 types to zephyr defined types</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2052">ZEP-2052</a> - arm: unhandled exceptions in thread take down entire system</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2055">ZEP-2055</a> - Add README.rst in the root of the project for github</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2057">ZEP-2057</a> - crash in tests/net/rpl on qemu_x86 causing intermittent sanitycheck failure</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2061">ZEP-2061</a> - samples/net/dns_resolve networking setup/README is confusing</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2064">ZEP-2064</a> - RFC: Making net_shell command handlers reusable</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2065">ZEP-2065</a> - struct dns_addrinfo has unused fields</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2066">ZEP-2066</a> - nitpick: SOCK_STREAM/SOCK_DGRAM values swapped compared to most OSes</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2069">ZEP-2069</a> - samples: net: dhcpv4_client: runs failed on frdm k64f board</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2070">ZEP-2070</a> - net pkt doesn’t full unref after send a data form bluetooth’s ipsp</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2076">ZEP-2076</a> - samples: net: coaps_server: build failed</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2077">ZEP-2077</a> - Fix IID when using CONFIG_NET_L2_BLUETOOTH_ZEP1656</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2080">ZEP-2080</a> - No reply from RPL node after 20-30 minutes.</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2092">ZEP-2092</a> - [NRF][BT] Makefile:946: recipe for target ‘include/generated/generated_dts_board.h’ failed</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2114">ZEP-2114</a> - tests/kernel/fatal : Fail for QC1000/arc</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2125">ZEP-2125</a> - Compilation error when UART1 port is enabled via menuconfig</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2132">ZEP-2132</a> - Build samples/bluetooth/hci_uart fail</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2138">ZEP-2138</a> - Static code scan (coverity) issues seen</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2143">ZEP-2143</a> - Compilation Error on Windows 10 with MSYS2</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2152">ZEP-2152</a> - Xtensa crashes on startup for cores with coprocessors</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-2178">ZEP-2178</a> - Static code scan (coverity) issues seen</li>
+</ul>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!--   for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/js/main.js"></script>
+      <script type="text/javascript" src="_static/js/app.js"></script>
+      <script type="text/javascript" src="_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

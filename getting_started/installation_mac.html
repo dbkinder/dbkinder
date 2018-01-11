@@ -1,0 +1,494 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Development Environment Setup on macOS &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="Getting Started Guide" href="getting_started.html"/>
+        <link rel="next" title="Development Environment Setup on Windows" href="installation_win.html"/>
+        <link rel="prev" title="Development Environment Setup on Linux" href="installation_linux.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+          <a href="getting_started.html">Getting Started Guide</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#checking-out-the-source-code-anonymously">Checking Out the Source Code Anonymously</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="getting_started.html#set-up-the-development-environment">Set Up the Development Environment</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="installation_linux.html">Development Environment Setup on Linux</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Development Environment Setup on macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation_win.html">Development Environment Setup on Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#building-and-running-an-application">Building and Running an Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="development-environment-setup-on-macos">
+<span id="installing-zephyr-mac"></span><h1>Development Environment Setup on macOS<a class="headerlink" href="#development-environment-setup-on-macos" title="Permalink to this headline">¶</a></h1>
+<p>This section describes how to set up a macOS development system.</p>
+<p>After completing these steps, you will be able to compile and run your Zephyr
+applications on the following macOS version:</p>
+<ul class="simple">
+<li>Mac OS X 10.11 (El Capitan)</li>
+<li>macOS Sierra 10.12</li>
+</ul>
+<p>Developing for Zephyr on macOS generally requires you to build the
+toolchain yourself. However, if there is already an macOS toolchain for your
+target architecture you can use it directly.</p>
+<div class="section" id="using-a-3rd-party-toolchain">
+<h2>Using a 3rd Party toolchain<a class="headerlink" href="#using-a-3rd-party-toolchain" title="Permalink to this headline">¶</a></h2>
+<p>If a toolchain is available for the architecture you plan to build for, then
+you can use it as explained in: <a class="reference internal" href="getting_started.html#third-party-x-compilers"><span class="std std-ref">Using Custom and 3rd Party Cross Compilers</span></a>.</p>
+<p>An example of an available 3rd party toolchain is GCC ARM Embedded for the
+Cortex-M family of cores.</p>
+</div>
+<div class="section" id="installing-requirements-and-dependencies">
+<span id="mac-requirements"></span><h2>Installing Requirements and Dependencies<a class="headerlink" href="#installing-requirements-and-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>To install the software components required to build the Zephyr kernel on a
+Mac, you will need to build a cross compiler for the target devices you wish to
+build for and install tools that the build system requires.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Minor version updates of the listed required packages might also
+work.</p>
+</div>
+<p>Before proceeding with the build, ensure your OS is up to date.</p>
+<p>First, install the <strong class="program">Homebrew</strong> (The missing package manager for
+macOS). Homebrew is a free and open-source software package management system
+that simplifies the installation of software on Apple’s macOS operating
+system.</p>
+<p>To install <strong class="program">Homebrew</strong>, visit the <a class="reference external" href="http://brew.sh/">Homebrew site</a> and follow the
+installation instructions on the site.</p>
+<p>To complete the Homebrew installation, you might be prompted to install some
+missing dependency. If so, follow please follow the instructions provided.</p>
+<p>After Homebrew was successfully installed, install the following tools using
+the brew command line.</p>
+<p>Install tools to build Zephyr binaries:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> brew install cmake dfu-util doxygen qemu dtc python3 gperf
+<span class="gp">$</span> curl -O <span class="s1">&#39;https://bootstrap.pypa.io/get-pip.py&#39;</span>
+<span class="gp">$</span> ./get-pip.py
+<span class="gp">$</span> rm get-pip.py
+<span class="gp">$</span> <span class="nb">cd</span> ~/zephyr   <span class="c1"># or to the folder where you cloned the zephyr repo</span>
+<span class="gp">$</span> pip3 install --user -r scripts/requirements.txt
+</pre></div>
+</div>
+<p>Source <code class="file docutils literal"><span class="pre">zephyr-env.sh</span></code> wherever you have cloned the Zephyr Git repository:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">unset</span> ZEPHYR_SDK_INSTALL_DIR
+<span class="gp">$</span> <span class="nb">cd</span> &lt;zephyr git clone location&gt;
+<span class="gp">$</span> <span class="nb">source</span> zephyr-env.sh
+</pre></div>
+</div>
+<p>Build Kconfig in <code class="file docutils literal"><span class="pre">$ZEPHYR_BASE/build</span></code> and add it to path</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake <span class="nv">$ZEPHYR_BASE</span>/scripts
+<span class="gp">$</span> make
+<span class="gp">$</span> <span class="nb">echo</span> <span class="s2">&quot;export PATH=</span><span class="nv">$PWD</span><span class="s2">/kconfig:\$PATH&quot;</span> &gt;&gt; <span class="nv">$HOME</span>/.zephyrrc
+<span class="gp">$</span> <span class="nb">source</span> <span class="nv">$ZEPHYR_BASE</span>/zephyr-env.sh
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You only need to do this once after cloning the git repository.</p>
+</div>
+<p>Finally, assuming you are using a 3rd-party toolchain you can try building the <a class="reference internal" href="../samples/hello_world/README.html#hello-world"><span class="std std-ref">Hello World</span></a> sample to check things out.</p>
+<p>To build for the ARM-based Nordic nRF52 Development Kit:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>nrf52_pca10040 ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+</pre></div>
+</div>
+</div>
+<div class="section" id="setting-up-the-toolchain">
+<span id="setting-up-mac-toolchain"></span><h2>Setting Up the Toolchain<a class="headerlink" href="#setting-up-the-toolchain" title="Permalink to this headline">¶</a></h2>
+<p>Install tools needed for building the toolchain (if needed):</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> brew install gettext help2man mpfr gmp coreutils wget
+<span class="gp">$</span> brew tap homebrew/dupes
+<span class="gp">$</span> brew install grep --with-default-names
+</pre></div>
+</div>
+<p>To build the toolchain, you will need the latest version of crosstool-ng (1.23).
+This version was not available via brew when writing this documentation, you can
+however try and see if you get 1.23 installed:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> brew install crosstool-ng
+</pre></div>
+</div>
+<p>Alternatively you can install the latest version of <strong class="program">crosstool-ng</strong>
+from source. Download the latest version from the <a class="reference external" href="http://crosstool-ng.org">crosstool-ng site</a>. The
+latest version usually supports the latest released compilers.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> wget http://crosstool-ng.org/download/crosstool-ng/crosstool-ng-1.23.0.tar.bz2
+<span class="gp">$</span> tar xvf crosstool-ng-1.23.0.tar.bz2
+<span class="gp">$</span> <span class="nb">cd</span> crosstool-ng-1.23.0/
+<span class="gp">$</span> ./configure
+<span class="gp">$</span> make
+<span class="gp">$</span> make install
+</pre></div>
+</div>
+<div class="section" id="creating-a-case-sensitive-file-system">
+<h3>Creating a Case-sensitive File System<a class="headerlink" href="#creating-a-case-sensitive-file-system" title="Permalink to this headline">¶</a></h3>
+<p>Building the compiler requires a case-sensitive file system. Therefore, use
+<strong class="program">diskutil</strong> to create an 8 GB blank sparse image making sure you select
+case-sensitive file system (OS X Extended (Case-sensitive, Journaled) and
+mount it.</p>
+<p>Alternatively you can use the script below to create the image:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nv">ImageName</span><span class="o">=</span>CrossToolNG
+<span class="nv">ImageNameExt</span><span class="o">=</span><span class="si">${</span><span class="nv">ImageName</span><span class="si">}</span>.sparseimage
+diskutil umount force /Volumes/<span class="si">${</span><span class="nv">ImageName</span><span class="si">}</span> <span class="o">&amp;&amp;</span> <span class="nb">true</span>
+rm -f <span class="si">${</span><span class="nv">ImageNameExt</span><span class="si">}</span> <span class="o">&amp;&amp;</span> <span class="nb">true</span>
+hdiutil create <span class="si">${</span><span class="nv">ImageName</span><span class="si">}</span> -volname <span class="si">${</span><span class="nv">ImageName</span><span class="si">}</span> -type SPARSE -size 8g -fs HFSX
+hdiutil mount <span class="si">${</span><span class="nv">ImageNameExt</span><span class="si">}</span>
+<span class="nb">cd</span> /Volumes/<span class="nv">$ImageName</span>
+</pre></div>
+</div>
+<p>When mounted, the file system of the image will be available under
+<code class="file docutils literal"><span class="pre">/Volumes</span></code>. Change to the mounted directory:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> /Volumes/CrossToolNG
+<span class="gp">$</span> mkdir build
+<span class="gp">$</span> <span class="nb">cd</span> build
+</pre></div>
+</div>
+</div>
+<div class="section" id="setting-the-toolchain-options">
+<h3>Setting the Toolchain Options<a class="headerlink" href="#setting-the-toolchain-options" title="Permalink to this headline">¶</a></h3>
+<p>In the Zephyr kernel source tree we provide configurations for NIOS-II and
+X86 that can be used to preselect the options needed for building the toolchain.</p>
+<p>The configuration files can be found in
+<code class="file docutils literal"><span class="pre">$</span><em><span class="pre">ZEPHYR_BASE</span></em><span class="pre">/scripts/cross_compiler/</span></code>.</p>
+<p>Currently the following configurations are provided:</p>
+<ul class="simple">
+<li>i586.config: for standard ABI, for example for Galileo and qemu_x86</li>
+<li>iamcu.config: for IAMCU ABI, for example for the Arduino 101</li>
+<li>nios2.config: for Nios II boards</li>
+</ul>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> cp <span class="si">${</span><span class="nv">ZEPHYR_BASE</span><span class="si">}</span>/scripts/cross_compiler/i586.config .config
+</pre></div>
+</div>
+<p>You can create a toolchain configuration or customize an existing configuration
+yourself using the configuration menus:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">CT_PREFIX</span><span class="o">=</span>/Volumes/CrossToolNG
+<span class="gp">$</span> ct-ng oldconfig
+</pre></div>
+</div>
+</div>
+<div class="section" id="verifying-the-configuration-of-the-toolchain">
+<h3>Verifying the Configuration of the Toolchain<a class="headerlink" href="#verifying-the-configuration-of-the-toolchain" title="Permalink to this headline">¶</a></h3>
+<p>Before building the toolchain it is advisable to perform a quick verification
+of the configuration set for the toolchain.</p>
+<ol class="arabic simple">
+<li>Open the generated <code class="file docutils literal"><span class="pre">.config</span></code> file.</li>
+<li>Verify the following lines are present, assuming the sparse image was
+mounted under <code class="file docutils literal"><span class="pre">/Volumes/CrossToolNG</span></code>:</li>
+</ol>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>...
+<span class="nv">CT_LOCAL_TARBALLS_DIR</span><span class="o">=</span><span class="s2">&quot;/Volumes/CrossToolNG/src&quot;</span>
+<span class="c1"># CT_SAVE_TARBALLS is not set</span>
+<span class="nv">CT_WORK_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CT_TOP_DIR</span><span class="si">}</span><span class="s2">/.build&quot;</span>
+<span class="nv">CT_PREFIX_DIR</span><span class="o">=</span><span class="s2">&quot;/Volumes/CrossToolNG/x-tools/</span><span class="si">${</span><span class="nv">CT_TARGET</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nv">CT_INSTALL_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CT_PREFIX_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="c1"># Following options prevent link errors</span>
+<span class="nv">CT_WANTS_STATIC_LINK</span><span class="o">=</span>n
+<span class="nv">CT_CC_STATIC_LIBSTDCXX</span><span class="o">=</span>n
+...
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-the-toolchain">
+<h3>Building the Toolchain<a class="headerlink" href="#building-the-toolchain" title="Permalink to this headline">¶</a></h3>
+<p>To build the toolchain, enter:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ct-ng build
+</pre></div>
+</div>
+<p>The above process takes a while. When finished, the toolchain will be available
+under <code class="file docutils literal"><span class="pre">/Volumes/CrossToolNG/x-tools</span></code>.</p>
+<p>Repeat the step for all architectures you want to support in your environment.</p>
+<p>To use the toolchain with Zephyr, export the following environment variables
+and use the target location where the toolchain was installed, type:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">ZEPHYR_GCC_VARIANT</span><span class="o">=</span>xtools
+<span class="gp">$</span> <span class="nb">export</span> <span class="nv">XTOOLS_TOOLCHAIN_PATH</span><span class="o">=</span>/Volumes/CrossToolNG/x-tools
+</pre></div>
+</div>
+<p>To use the same toolchain in new sessions in the future you can set the
+variables in the file <code class="file docutils literal"><span class="pre">$</span><em><span class="pre">HOME</span></em><span class="pre">/.zephyrrc</span></code>, for example:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> cat &lt;&lt;EOF &gt; ~/.zephyrrc
+<span class="go">export XTOOLS_TOOLCHAIN_PATH=/Volumes/CrossToolNG/x-tools</span>
+<span class="go">export ZEPHYR_GCC_VARIANT=xtools</span>
+<span class="go">EOF</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="installation_win.html" class="btn btn-neutral float-right" title="Development Environment Setup on Windows" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="installation_linux.html" class="btn btn-neutral" title="Development Environment Setup on Linux" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: APDS9960
+
+.. option:: CONFIG_APDS9960
+.. _CONFIG_APDS9960:
+
+Enable driver for APDS9960 sensors.
+
+
+
+:Symbol:           APDS9960
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "APDS9960 Sensor" if I2C (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: I2C (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/apds9960/Kconfig:7

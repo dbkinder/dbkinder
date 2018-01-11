@@ -1,0 +1,750 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Network Connectivity API &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="Networking" href="networking.html"/>
+        <link rel="next" title="BSD Sockets compatible API" href="bsd-sockets.html"/>
+        <link rel="prev" title="IP Stack Architecture" href="ip-stack-architecture.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../subsystems.html">Subsystems</a> /
+      
+          <a href="networking.html">Networking</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../subsystems.html">Subsystems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_library.html">Standard C Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/index.html">Logging</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="networking.html">Networking</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ip-stack-architecture.html">IP Stack Architecture</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Network Connectivity API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bsd-sockets.html">BSD Sockets compatible API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="l2-and-drivers.html">L2 Stack and Drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network-management-api.html">Network Management API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html">Network Application API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#initialization">Initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="net-app-api.html#client-server-applications">Client / Server Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffers.html">Network Buffers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qemu_setup.html">Networking with QEMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usbnet_setup.html">USB Device Networking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../power_management.html">Power Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor.html">Sensor Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shell.html">Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usb/usb.html">USB device stack</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="network-connectivity-api">
+<span id="networking-api-usage"></span><h1>Network Connectivity API<a class="headerlink" href="#network-connectivity-api" title="Permalink to this headline">¶</a></h1>
+<p>Applications can use the connectivity API defined in <code class="file docutils literal"><span class="pre">net_context.h</span></code>
+to create a connection, send or receive data, and close a connection.
+The same API can be used when working with UDP or TCP data.</p>
+<p>The net_context API is similar to the BSD socket API and mapping between these
+two is possible. The main difference between net_context API and BSD socket
+API is that the net_context API uses the fragmented network buffers (net_buf)
+defined in <code class="file docutils literal"><span class="pre">include/net/buf.h</span></code> and BSD socket API uses linear memory buffers.</p>
+<p>This example creates a simple server that listens to incoming UDP connections
+and sends the received data back. You can download the example application
+source file here <a class="reference external" href="https://raw.githubusercontent.com/zephyrproject-rtos/zephyr/master/doc/subsystems/networking/connectivity-example-app.c">connectivity-example-app.c</a></p>
+<p>This example application begins with some initialization. (Use this as an
+example; you may need to do things differently in your own application.)</p>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#define SYS_LOG_DOMAIN &quot;example-app&quot;</span>
+<span class="cp">#define SYS_LOG_LEVEL SYS_LOG_LEVEL_DEBUG</span>
+<span class="cp">#define NET_DEBUG 1</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;zephyr.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;net/net_pkt.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;net/net_core.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;net/net_context.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#define MY_IP6ADDR { { { 0x20, 0x01, 0x0d, 0xb8, 0, 0, 0, 0, \</span>
+<span class="cp">			 0, 0, 0, 0, 0, 0, 0, 0x1 } } }</span>
+<span class="cp">#define MY_PORT 4242</span>
+
+<span class="k">struct</span> <span class="n">in6_addr</span> <span class="n">in6addr_my</span> <span class="o">=</span> <span class="n">MY_IP6ADDR</span><span class="p">;</span>
+<span class="k">struct</span> <span class="n">sockaddr_in6</span> <span class="n">my_addr6</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+<span class="k">struct</span> <span class="n">net_context</span> <span class="o">*</span><span class="n">context</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">ret</span><span class="p">;</span>
+
+<span class="k">struct</span> <span class="n">k_sem</span> <span class="n">waiter</span><span class="p">;</span>
+
+<span class="k">static</span> <span class="kr">inline</span> <span class="kt">void</span> <span class="nf">quit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">k_sem_give</span><span class="p">(</span><span class="o">&amp;</span><span class="n">waiter</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kr">inline</span> <span class="kt">void</span> <span class="nf">init_app</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">k_sem_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">waiter</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+	<span class="cm">/* Add our address to the network interface */</span>
+	<span class="n">net_if_ipv6_addr_add</span><span class="p">(</span><span class="n">net_if_get_default</span><span class="p">(),</span> <span class="o">&amp;</span><span class="n">in6addr_my</span><span class="p">,</span>
+			     <span class="n">NET_ADDR_MANUAL</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">NET_INFO</span><span class="p">(</span><span class="s">&quot;Run sample application&quot;</span><span class="p">);</span>
+
+	<span class="n">init_app</span><span class="p">();</span>
+
+	<span class="n">create_context</span><span class="p">();</span>
+
+	<span class="n">bind_address</span><span class="p">();</span>
+
+	<span class="n">receive_data</span><span class="p">();</span>
+
+	<span class="n">k_sem_take</span><span class="p">(</span><span class="o">&amp;</span><span class="n">waiter</span><span class="p">,</span> <span class="n">K_FOREVER</span><span class="p">);</span>
+
+	<span class="n">close_context</span><span class="p">();</span>
+
+	<span class="n">NET_INFO</span><span class="p">(</span><span class="s">&quot;Stopping sample application&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>After initialization, first thing application needs to create a context.
+Context is similar to a socket.</p>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>57
+58
+59
+60
+61
+62
+63
+64
+65
+66</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span> <span class="nf">create_context</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">ret</span> <span class="o">=</span> <span class="n">net_context_get</span><span class="p">(</span><span class="n">AF_INET6</span><span class="p">,</span> <span class="n">SOCK_DGRAM</span><span class="p">,</span> <span class="n">IPPROTO_UDP</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">context</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ret</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">NET_ERR</span><span class="p">(</span><span class="s">&quot;Cannot get context (%d)&quot;</span><span class="p">,</span> <span class="n">ret</span><span class="p">);</span>
+		<span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Then you need to define the local end point for a connection.</p>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span> <span class="nf">bind_address</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">net_ipaddr_copy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">my_addr6</span><span class="p">.</span><span class="n">sin6_addr</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">in6addr_my</span><span class="p">);</span>
+	<span class="n">my_addr6</span><span class="p">.</span><span class="n">sin6_family</span> <span class="o">=</span> <span class="n">AF_INET6</span><span class="p">;</span>
+	<span class="n">my_addr6</span><span class="p">.</span><span class="n">sin6_port</span> <span class="o">=</span> <span class="n">htons</span><span class="p">(</span><span class="n">MY_PORT</span><span class="p">);</span>
+
+	<span class="n">ret</span> <span class="o">=</span> <span class="n">net_context_bind</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="p">(</span><span class="k">struct</span> <span class="n">sockaddr</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">my_addr6</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">NET_ERR</span><span class="p">(</span><span class="s">&quot;Cannot bind IPv6 UDP port %d (%d)&quot;</span><span class="p">,</span>
+			<span class="n">ntohs</span><span class="p">(</span><span class="n">my_addr6</span><span class="p">.</span><span class="n">sin6_port</span><span class="p">),</span> <span class="n">ret</span><span class="p">);</span>
+		<span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Wait until the connection data is received.</p>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#define MAX_DBG_PRINT 64</span>
+
+<span class="k">static</span> <span class="k">struct</span> <span class="n">net_buf</span> <span class="o">*</span><span class="nf">udp_recv</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span>
+				<span class="k">struct</span> <span class="n">net_context</span> <span class="o">*</span><span class="n">context</span><span class="p">,</span>
+				<span class="k">struct</span> <span class="n">net_buf</span> <span class="o">*</span><span class="n">buf</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">struct</span> <span class="n">net_buf</span> <span class="o">*</span><span class="n">reply_buf</span><span class="p">,</span> <span class="o">*</span><span class="n">frag</span><span class="p">,</span> <span class="o">*</span><span class="n">tmp</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">header_len</span><span class="p">,</span> <span class="n">recv_len</span><span class="p">,</span> <span class="n">reply_len</span><span class="p">;</span>
+
+	<span class="n">NET_INFO</span><span class="p">(</span><span class="s">&quot;%s received %u bytes&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span>
+	      <span class="n">net_pkt_appdatalen</span><span class="p">(</span><span class="n">buf</span><span class="p">));</span>
+
+	<span class="n">reply_buf</span> <span class="o">=</span> <span class="n">net_pkt_get_tx</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">K_FOREVER</span><span class="p">);</span>
+
+	<span class="n">NET_ASSERT</span><span class="p">(</span><span class="n">reply_buf</span><span class="p">);</span>
+
+	<span class="n">recv_len</span> <span class="o">=</span> <span class="n">net_buf_frags_len</span><span class="p">(</span><span class="n">buf</span><span class="o">-&gt;</span><span class="n">frags</span><span class="p">);</span>
+
+	<span class="n">tmp</span> <span class="o">=</span> <span class="n">buf</span><span class="o">-&gt;</span><span class="n">frags</span><span class="p">;</span>
+
+	<span class="cm">/* First fragment will contain IP header so move the data</span>
+<span class="cm">	 * down in order to get rid of it.</span>
+<span class="cm">	 */</span>
+	<span class="n">header_len</span> <span class="o">=</span> <span class="n">net_pkt_appdata</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span> <span class="o">-</span> <span class="n">tmp</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+
+	<span class="n">NET_ASSERT</span><span class="p">(</span><span class="n">header_len</span> <span class="o">&lt;</span> <span class="n">CONFIG_NET_BUF_DATA_SIZE</span><span class="p">);</span>
+
+	<span class="n">net_buf_pull</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">header_len</span><span class="p">);</span>
+
+	<span class="k">while</span> <span class="p">(</span><span class="n">tmp</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">frag</span> <span class="o">=</span> <span class="n">net_pkt_get_data</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">K_FOREVER</span><span class="p">);</span>
+
+		<span class="n">memcpy</span><span class="p">(</span><span class="n">net_buf_add</span><span class="p">(</span><span class="n">frag</span><span class="p">,</span> <span class="n">tmp</span><span class="o">-&gt;</span><span class="n">len</span><span class="p">),</span> <span class="n">tmp</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">tmp</span><span class="o">-&gt;</span><span class="n">len</span><span class="p">);</span>
+
+		<span class="n">net_buf_frag_add</span><span class="p">(</span><span class="n">reply_buf</span><span class="p">,</span> <span class="n">frag</span><span class="p">);</span>
+
+		<span class="n">net_buf_frag_del</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">tmp</span><span class="p">);</span>
+
+		<span class="n">tmp</span> <span class="o">=</span> <span class="n">buf</span><span class="o">-&gt;</span><span class="n">frags</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="n">reply_len</span> <span class="o">=</span> <span class="n">net_buf_frags_len</span><span class="p">(</span><span class="n">reply_buf</span><span class="o">-&gt;</span><span class="n">frags</span><span class="p">);</span>
+
+	<span class="n">NET_ASSERT_INFO</span><span class="p">(</span><span class="n">recv_len</span> <span class="o">!=</span> <span class="n">reply_len</span><span class="p">,</span>
+			<span class="s">&quot;Received %d bytes, sending %d bytes&quot;</span><span class="p">,</span>
+			<span class="n">recv_len</span><span class="p">,</span> <span class="n">reply_len</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="n">reply_buf</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kr">inline</span> <span class="kt">void</span> <span class="nf">udp_sent</span><span class="p">(</span><span class="k">struct</span> <span class="n">net_context</span> <span class="o">*</span><span class="n">context</span><span class="p">,</span>
+			    <span class="kt">int</span> <span class="n">status</span><span class="p">,</span>
+			    <span class="kt">void</span> <span class="o">*</span><span class="n">token</span><span class="p">,</span>
+			    <span class="kt">void</span> <span class="o">*</span><span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">NET_INFO</span><span class="p">(</span><span class="s">&quot;Sent %d bytes&quot;</span><span class="p">,</span> <span class="n">POINTER_TO_UINT</span><span class="p">(</span><span class="n">token</span><span class="p">));</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kr">inline</span> <span class="kt">void</span> <span class="nf">set_dst_addr</span><span class="p">(</span><span class="n">sa_family_t</span> <span class="n">family</span><span class="p">,</span>
+				<span class="k">struct</span> <span class="n">net_buf</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span>
+				<span class="k">struct</span> <span class="n">sockaddr</span> <span class="o">*</span><span class="n">dst_addr</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">family</span> <span class="o">==</span> <span class="n">AF_INET6</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">net_ipaddr_copy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">net_sin6</span><span class="p">(</span><span class="n">dst_addr</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">sin6_addr</span><span class="p">,</span>
+				<span class="o">&amp;</span><span class="n">NET_IPV6_HDR</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">src</span><span class="p">);</span>
+		<span class="n">net_sin6</span><span class="p">(</span><span class="n">dst_addr</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">sin6_family</span> <span class="o">=</span> <span class="n">AF_INET6</span><span class="p">;</span>
+		<span class="n">net_sin6</span><span class="p">(</span><span class="n">dst_addr</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">sin6_port</span> <span class="o">=</span> <span class="n">NET_UDP_HDR</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">src_port</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">udp_received</span><span class="p">(</span><span class="k">struct</span> <span class="n">net_context</span> <span class="o">*</span><span class="n">context</span><span class="p">,</span>
+			 <span class="k">struct</span> <span class="n">net_buf</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span>
+			 <span class="kt">int</span> <span class="n">status</span><span class="p">,</span>
+			 <span class="kt">void</span> <span class="o">*</span><span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">struct</span> <span class="n">net_buf</span> <span class="o">*</span><span class="n">reply_buf</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="n">sockaddr</span> <span class="n">dst_addr</span><span class="p">;</span>
+	<span class="n">sa_family_t</span> <span class="n">family</span> <span class="o">=</span> <span class="n">net_pkt_family</span><span class="p">(</span><span class="n">buf</span><span class="p">);</span>
+	<span class="k">static</span> <span class="kt">char</span> <span class="n">dbg</span><span class="p">[</span><span class="n">MAX_DBG_PRINT</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">ret</span><span class="p">;</span>
+
+	<span class="n">snprintf</span><span class="p">(</span><span class="n">dbg</span><span class="p">,</span> <span class="n">MAX_DBG_PRINT</span><span class="p">,</span> <span class="s">&quot;UDP IPv%c&quot;</span><span class="p">,</span>
+		 <span class="n">family</span> <span class="o">==</span> <span class="n">AF_INET6</span> <span class="o">?</span> <span class="sc">&#39;6&#39;</span> <span class="o">:</span> <span class="sc">&#39;4&#39;</span><span class="p">);</span>
+
+	<span class="n">set_dst_addr</span><span class="p">(</span><span class="n">family</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">dst_addr</span><span class="p">);</span>
+
+	<span class="n">reply_buf</span> <span class="o">=</span> <span class="n">udp_recv</span><span class="p">(</span><span class="n">dbg</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+
+	<span class="n">net_pkt_unref</span><span class="p">(</span><span class="n">buf</span><span class="p">);</span>
+
+	<span class="n">ret</span> <span class="o">=</span> <span class="n">net_context_sendto</span><span class="p">(</span><span class="n">reply_buf</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">dst_addr</span><span class="p">,</span> <span class="n">udp_sent</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+				 <span class="n">UINT_TO_POINTER</span><span class="p">(</span><span class="n">net_buf_frags_len</span><span class="p">(</span><span class="n">reply_buf</span><span class="p">)),</span>
+				 <span class="n">user_data</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">NET_ERR</span><span class="p">(</span><span class="s">&quot;Cannot send data to peer (%d)&quot;</span><span class="p">,</span> <span class="n">ret</span><span class="p">);</span>
+
+		<span class="n">net_pkt_unref</span><span class="p">(</span><span class="n">reply_buf</span><span class="p">);</span>
+
+		<span class="n">quit</span><span class="p">();</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">int</span> <span class="nf">receive_data</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">ret</span> <span class="o">=</span> <span class="n">net_context_recv</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">udp_received</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">NET_ERR</span><span class="p">(</span><span class="s">&quot;Cannot receive IPv6 UDP packets&quot;</span><span class="p">);</span>
+
+		<span class="n">quit</span><span class="p">();</span>
+
+		<span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Close the context when finished.</p>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/* Context close */</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="nf">close_context</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">ret</span> <span class="o">=</span> <span class="n">net_context_put</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">NET_ERR</span><span class="p">(</span><span class="s">&quot;Cannot close IPv6 UDP context&quot;</span><span class="p">);</span>
+		<span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="bsd-sockets.html" class="btn btn-neutral float-right" title="BSD Sockets compatible API" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="ip-stack-architecture.html" class="btn btn-neutral" title="IP Stack Architecture" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+:orphan:
+
+.. title:: KERNEL_EVENT_LOGGER_THREAD
+
+.. option:: CONFIG_KERNEL_EVENT_LOGGER_THREAD
+.. _CONFIG_KERNEL_EVENT_LOGGER_THREAD:
+
+Enable thread event messages. These messages provide the following
+information:
+
+        - When threads are marked as ready to be executed.
+        - When threads are marked as pending.
+        - When threads end.
+
+Context switching messages should be enabled by enabling the
+CONFIG_KERNEL_EVENT_LOGGER_CONTEXT_SWITCH setting instead.
+
+
+
+:Symbol:           KERNEL_EVENT_LOGGER_THREAD
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Thread event logging point"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ KERNEL_EVENT_LOGGER (value: "n")
+:Locations:
+ * ../kernel/Kconfig.event_logger:74

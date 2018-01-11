@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: MBEDTLS_HEAP_SIZE
+
+.. option:: CONFIG_MBEDTLS_HEAP_SIZE
+.. _CONFIG_MBEDTLS_HEAP_SIZE:
+
+The mbedtls routines will use this heap if enabled.
+See ext/lib/crypto/mbedtls/include/mbedtls/config.h and
+MBEDTLS_MEMORY_BUFFER_ALLOC_C option for details. That option is not
+enabled by default.
+Default value for the heap size is not set as it depends on the
+application. For server application 15000 bytes should be enough.
+For some dedicated and specific usage of mbedtls API, the 1000 bytes
+might be ok.
+
+
+
+:Symbol:           MBEDTLS_HEAP_SIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Heap size for mbed TLS" if MBEDTLS_ENABLE_HEAP (value: "n")
+:Default values:
+
+ *  512 (value: "n")
+ *   Condition: MBEDTLS_ENABLE_HEAP (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../ext/lib/crypto/mbedtls/Kconfig:88

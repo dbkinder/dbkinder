@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: IEEE802154_CC2520_CRYPTO_INIT_PRIO
+
+.. option:: CONFIG_IEEE802154_CC2520_CRYPTO_INIT_PRIO
+.. _CONFIG_IEEE802154_CC2520_CRYPTO_INIT_PRIO:
+
+Set the initialization priority number. Do not mess with it unless
+you know what you are doing. It should be initialized after CC2520
+as it shares the same runtime context.
+
+
+
+:Symbol:           IEEE802154_CC2520_CRYPTO_INIT_PRIO
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "TI CC2520 crypto device initialization priority" if IEEE802154_CC2520_CRYPTO (value: "n")
+:Default values:
+
+ *  81 (value: "n")
+ *   Condition: IEEE802154_CC2520_CRYPTO (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ IEEE802154_CC2520 (value: "n")
+:Locations:
+ * ../drivers/ieee802154/Kconfig.cc2520:115

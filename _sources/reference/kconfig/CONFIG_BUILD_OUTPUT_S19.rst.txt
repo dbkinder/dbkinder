@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BUILD_OUTPUT_S19
+
+.. option:: CONFIG_BUILD_OUTPUT_S19
+.. _CONFIG_BUILD_OUTPUT_S19:
+
+Build a binary in S19 format. This will build a zephyr.s19 file need
+by some platforms.
+
+
+
+:Symbol:           BUILD_OUTPUT_S19
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Build a binary in S19 format"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BOARD_ZEDBOARD_PULPINO && SOC_RISCV32_PULPINO (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../misc/Kconfig:207

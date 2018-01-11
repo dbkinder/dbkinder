@@ -1,0 +1,30 @@
+:orphan:
+
+.. title:: ARCH_HAS_STACK_PROTECTION
+
+.. option:: CONFIG_ARCH_HAS_STACK_PROTECTION
+.. _CONFIG_ARCH_HAS_STACK_PROTECTION:
+
+The configuration item CONFIG_ARCH_HAS_STACK_PROTECTION:
+
+:Symbol:           ARCH_HAS_STACK_PROTECTION
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ X86_MMU && X86 && CPU_ATOM || X86_MMU && X86 && CPU_MINUTEIA || ARM_CORE_MPU && ARM && CPU_CORTEX_M || CPU_ARCV2 && ARC (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/Kconfig:166

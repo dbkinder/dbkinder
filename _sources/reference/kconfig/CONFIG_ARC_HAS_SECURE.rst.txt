@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: ARC_HAS_SECURE
+
+.. option:: CONFIG_ARC_HAS_SECURE
+.. _CONFIG_ARC_HAS_SECURE:
+
+This opiton is enabled when ARC core supports secure mode
+
+
+
+:Symbol:           ARC_HAS_SECURE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ SOC_EM7D && BOARD_EM_STARTERKIT_R23 (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ ARC (value: "n")
+:Locations:
+ * ../arch/arc/Kconfig:152

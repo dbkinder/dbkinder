@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: FXAS21002_GPIO_NAME
+
+.. option:: CONFIG_FXAS21002_GPIO_NAME
+.. _CONFIG_FXAS21002_GPIO_NAME:
+
+The configuration item CONFIG_FXAS21002_GPIO_NAME:
+
+:Symbol:           FXAS21002_GPIO_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "GPIO device name"
+:Default values:
+
+ *  GPIO_MCUX_PORTC_NAME (value: "")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FXAS21002 && BOARD_HEXIWEAR_K64 (value: "n")
+:Locations:
+ * ../drivers/sensor/fxas21002/Kconfig:92
+ * ../boards/arm/hexiwear_k64/Kconfig.defconfig:114

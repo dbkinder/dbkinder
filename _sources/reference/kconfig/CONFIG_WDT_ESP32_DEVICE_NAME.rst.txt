@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: WDT_ESP32_DEVICE_NAME
+
+.. option:: CONFIG_WDT_ESP32_DEVICE_NAME
+.. _CONFIG_WDT_ESP32_DEVICE_NAME:
+
+Set the name used by WDT device during registration.
+
+
+
+:Symbol:           WDT_ESP32_DEVICE_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Device name for Watchdog (WDT)" if WDT_ESP32 (value: "n")
+:Default values:
+
+ *  "WATCHDOG_0"
+ *   Condition: WDT_ESP32 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ WATCHDOG (value: "n")
+:Locations:
+ * ../drivers/watchdog/Kconfig.esp32:22

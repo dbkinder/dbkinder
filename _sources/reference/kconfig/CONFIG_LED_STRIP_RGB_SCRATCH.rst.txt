@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: LED_STRIP_RGB_SCRATCH
+
+.. option:: CONFIG_LED_STRIP_RGB_SCRATCH
+.. _CONFIG_LED_STRIP_RGB_SCRATCH:
+
+The configuration item CONFIG_LED_STRIP_RGB_SCRATCH:
+
+:Symbol:           LED_STRIP_RGB_SCRATCH
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LED_STRIP (value: "n")
+:Locations:
+ * ../drivers/led_strip/Kconfig:41

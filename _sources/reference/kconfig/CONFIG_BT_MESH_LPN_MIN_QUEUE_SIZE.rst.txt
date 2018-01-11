@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: BT_MESH_LPN_MIN_QUEUE_SIZE
+
+.. option:: CONFIG_BT_MESH_LPN_MIN_QUEUE_SIZE
+.. _CONFIG_BT_MESH_LPN_MIN_QUEUE_SIZE:
+
+The MinQueueSizeLog field is defined as log_2(N), where N is
+the minimum number of maximum size Lower Transport PDUs that
+the Friend node can store in its Friend Queue. As an example,
+MinQueueSizeLog value 1 gives N = 2, and value 7 gives N = 128.
+
+
+
+:Symbol:           BT_MESH_LPN_MIN_QUEUE_SIZE
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 7]
+:Prompts:
+
+ *  "Minimum size of acceptable friend queue (MinQueueSizeLog)"
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_LOW_POWER (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:253

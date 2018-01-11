@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: GPIO_GECKO_PORTF
+
+.. option:: CONFIG_GPIO_GECKO_PORTF
+.. _CONFIG_GPIO_GECKO_PORTF:
+
+Enable Port F.
+
+
+
+:Symbol:           GPIO_GECKO_PORTF
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port F"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_GECKO && BOARD_EFM32WG_STK3800 (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.gecko:84
+ * ../boards/arm/efm32wg_stk3800/Kconfig.defconfig:36

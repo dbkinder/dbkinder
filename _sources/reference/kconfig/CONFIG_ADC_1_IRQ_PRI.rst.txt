@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: ADC_1_IRQ_PRI
+
+.. option:: CONFIG_ADC_1_IRQ_PRI
+.. _CONFIG_ADC_1_IRQ_PRI:
+
+The configuration item CONFIG_ADC_1_IRQ_PRI:
+
+:Symbol:           ADC_1_IRQ_PRI
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "ADC 1 interrupt priority" if ADC_1 && !HAS_DTS_ADC (value: "n")
+:Default values:
+
+ *  2 (value: "n")
+ *   Condition: ADC_1 && !HAS_DTS_ADC (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ADC (value: "y")
+:Locations:
+ * ../drivers/adc/Kconfig:71

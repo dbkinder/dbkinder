@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: PINMUX_ESP32
+
+.. option:: CONFIG_PINMUX_ESP32
+.. _CONFIG_PINMUX_ESP32:
+
+Enable driver for ESP32 Pin multiplexer.
+
+
+
+:Symbol:           PINMUX_ESP32
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "ESP32 Pin multiplexer driver" if PINMUX && SOC_ESP32 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: PINMUX && SOC_ESP32 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ PINMUX (value: "n")
+:Locations:
+ * ../drivers/pinmux/Kconfig.esp32:9

@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: MAX30101_NAME
+
+.. option:: CONFIG_MAX30101_NAME
+.. _CONFIG_MAX30101_NAME:
+
+The configuration item CONFIG_MAX30101_NAME:
+
+:Symbol:           MAX30101_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Driver name"
+:Default values:
+
+ *  "MAX30101"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MAX30101 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/max30101/Kconfig:16

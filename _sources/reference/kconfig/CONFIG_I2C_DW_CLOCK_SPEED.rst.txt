@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: I2C_DW_CLOCK_SPEED
+
+.. option:: CONFIG_I2C_DW_CLOCK_SPEED
+.. _CONFIG_I2C_DW_CLOCK_SPEED:
+
+The configuration item CONFIG_I2C_DW_CLOCK_SPEED:
+
+:Symbol:           I2C_DW_CLOCK_SPEED
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Set the clock speed for I2C" if I2C_DW (value: "n")
+:Default values:
+
+ *  32 (value: "n")
+ *   Condition: I2C_DW (value: "n")
+ *  25 (value: "n")
+ *   Condition: (none)
+ *  100 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C && BOARD_EM_STARTERKIT && I2C_DW (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:163
+ * ../arch/x86/soc/intel_quark/quark_x1000/Kconfig.defconfig.series:73
+ * ../boards/arc/em_starterkit/Kconfig.defconfig:77

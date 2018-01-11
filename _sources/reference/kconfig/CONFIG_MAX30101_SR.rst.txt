@@ -1,0 +1,49 @@
+:orphan:
+
+.. title:: MAX30101_SR
+
+.. option:: CONFIG_MAX30101_SR
+.. _CONFIG_MAX30101_SR:
+
+Set the effective sampling rate with one sample consisting of one
+pulse/conversion per active LED channel. In SpO2 mode, these means
+one IR pulse/conversion and one red pulse/conversion per sample
+period.
+0 = 50 Hz
+1 = 100 Hz
+2 = 200 Hz
+3 = 400 Hz
+4 = 800 Hz
+5 = 1000 Hz
+6 = 1600 Hz
+7 = 3200 Hz
+
+
+
+:Symbol:           MAX30101_SR
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 7]
+:Prompts:
+
+ *  "ADC sample rate control"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MAX30101 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/max30101/Kconfig:95

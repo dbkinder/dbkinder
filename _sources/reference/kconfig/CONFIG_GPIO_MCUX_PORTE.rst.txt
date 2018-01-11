@@ -1,0 +1,47 @@
+:orphan:
+
+.. title:: GPIO_MCUX_PORTE
+
+.. option:: CONFIG_GPIO_MCUX_PORTE
+.. _CONFIG_GPIO_MCUX_PORTE:
+
+Enable Port E.
+
+
+
+:Symbol:           GPIO_MCUX_PORTE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port E" if PINMUX_MCUX_PORTE (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: PINMUX_MCUX_PORTE (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_MCUX && BOARD_FRDM_KL25Z (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.mcux:86
+ * ../boards/arm/hexiwear_k64/Kconfig.defconfig:71
+ * ../boards/arm/frdm_k64f/Kconfig.defconfig:71
+ * ../boards/arm/usb_kw24d512/Kconfig.defconfig:70
+ * ../boards/arm/frdm_kl25z/Kconfig.defconfig:64

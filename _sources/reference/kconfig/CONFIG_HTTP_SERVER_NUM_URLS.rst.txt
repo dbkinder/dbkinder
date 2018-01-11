@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: HTTP_SERVER_NUM_URLS
+
+.. option:: CONFIG_HTTP_SERVER_NUM_URLS
+.. _CONFIG_HTTP_SERVER_NUM_URLS:
+
+This value determines how many URLs this HTTP server can handle.
+
+
+
+:Symbol:           HTTP_SERVER_NUM_URLS
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Max number of URLs that the HTTP server will handle" if HTTP_SERVER (value: "n")
+:Default values:
+
+ *  8 (value: "n")
+ *   Condition: HTTP_SERVER (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ HTTP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/http/Kconfig:117

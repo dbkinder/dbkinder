@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: NET_L2_BT_MGMT
+
+.. option:: CONFIG_NET_L2_BT_MGMT
+.. _CONFIG_NET_L2_BT_MGMT:
+
+The configuration item CONFIG_NET_L2_BT_MGMT:
+
+:Symbol:           NET_L2_BT_MGMT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable Bluetooth Network Management support" if NET_L2_BT (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: NET_L2_BT (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_NET_MGMT` if NET_L2_BT (value: "n")
+ *  :option:`CONFIG_NET_MGMT_EVENT` if NET_L2_BT (value: "n")
+:Reverse (select-related) dependencies:
+ NETWORKING && NETWORKING && NET_L2_BT_SHELL || NET_APP_SETTINGS && NETWORKING && NET_L2_BT && NET_APP_BT_NODE (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/ip/l2/Kconfig:94

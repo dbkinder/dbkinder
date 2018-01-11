@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: NET_DEBUG_SOCKETS
+
+.. option:: CONFIG_NET_DEBUG_SOCKETS
+.. _CONFIG_NET_DEBUG_SOCKETS:
+
+Enables logging for sockets code. (Logging level is defined by
+SYS_LOG_NET_LEVEL setting).
+
+
+
+:Symbol:           NET_DEBUG_SOCKETS
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Debug BSD Sockets compatible API calls"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: NET_LOG_GLOBAL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_SOCKETS && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/sockets/Kconfig:35

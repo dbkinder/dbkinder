@@ -1,0 +1,770 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Display Interface APIs &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="api.html"/>
+        <link rel="next" title="Miscellaneous APIs" href="misc_api.html"/>
+        <link rel="prev" title="File System APIs" href="file_system.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+          <a href="../application/index.html">Developer Guides</a> /
+      
+          <a href="api.html">API Documentation</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../application/index.html">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../porting/porting.html">Porting Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../application/application.html">Application Development Primer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../samples/samples.html">Samples and Demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/kconfig/index.html">Configuration Options Reference Guide</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">API Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="kernel_api.html">Kernel APIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="device.html">Device Driver Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bluetooth.html">Bluetooth API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="networking.html">Networking API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_interfaces.html">Input / Output Driver APIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power_management_api.html">Power Management APIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_system.html">File System APIs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Display Interface APIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc_api.html">Miscellaneous APIs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html">Zephyr documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="display-interface-apis">
+<span id="display-api"></span><h1>Display Interface APIs<a class="headerlink" href="#display-interface-apis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="grove-lcd-display">
+<h2>Grove LCD Display<a class="headerlink" href="#grove-lcd-display" title="Permalink to this headline">¶</a></h2>
+<dl class="group">
+<dt>
+<span class="target" id="da/d24/group__grove__display"></span><em>group</em> <code class="descname">grove_display</code></dt>
+<dd><p>Grove display APIs. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.GROVE_LCD_NAME">
+<span class="target" id="da/d24/group__grove__display_1ga99c15a838cd9f4a2c30a01084c04934c"></span><code class="descname">GROVE_LCD_NAME</code><a class="headerlink" href="#c.GROVE_LCD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_DS_DISPLAY_ON">
+<span class="target" id="da/d24/group__grove__display_1ga4fe4ad1bc603fa658247ea2f7dbf7f31"></span><code class="descname">GLCD_DS_DISPLAY_ON</code><a class="headerlink" href="#c.GLCD_DS_DISPLAY_ON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_DS_DISPLAY_OFF">
+<span class="target" id="da/d24/group__grove__display_1ga66bc1e76fcda544f619d02ecbdcb368f"></span><code class="descname">GLCD_DS_DISPLAY_OFF</code><a class="headerlink" href="#c.GLCD_DS_DISPLAY_OFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_DS_CURSOR_ON">
+<span class="target" id="da/d24/group__grove__display_1gaa40ba9872b397a1daa26f68f17d7e28d"></span><code class="descname">GLCD_DS_CURSOR_ON</code><a class="headerlink" href="#c.GLCD_DS_CURSOR_ON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_DS_CURSOR_OFF">
+<span class="target" id="da/d24/group__grove__display_1gaac73ba0ea95d570493485212ce704691"></span><code class="descname">GLCD_DS_CURSOR_OFF</code><a class="headerlink" href="#c.GLCD_DS_CURSOR_OFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_DS_BLINK_ON">
+<span class="target" id="da/d24/group__grove__display_1ga62f05f0aa279c530bb96153efd2a36da"></span><code class="descname">GLCD_DS_BLINK_ON</code><a class="headerlink" href="#c.GLCD_DS_BLINK_ON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_DS_BLINK_OFF">
+<span class="target" id="da/d24/group__grove__display_1gaca5ebc6bff0db636ff8767f7c225143f"></span><code class="descname">GLCD_DS_BLINK_OFF</code><a class="headerlink" href="#c.GLCD_DS_BLINK_OFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_IS_SHIFT_INCREMENT">
+<span class="target" id="da/d24/group__grove__display_1ga460a887aaa11dbe4461226a55bcae951"></span><code class="descname">GLCD_IS_SHIFT_INCREMENT</code><a class="headerlink" href="#c.GLCD_IS_SHIFT_INCREMENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_IS_SHIFT_DECREMENT">
+<span class="target" id="da/d24/group__grove__display_1ga2258570aac3ed680739324a2daf5f626"></span><code class="descname">GLCD_IS_SHIFT_DECREMENT</code><a class="headerlink" href="#c.GLCD_IS_SHIFT_DECREMENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_IS_ENTRY_LEFT">
+<span class="target" id="da/d24/group__grove__display_1ga5e136501ffbde18b34163bc1a7948c9a"></span><code class="descname">GLCD_IS_ENTRY_LEFT</code><a class="headerlink" href="#c.GLCD_IS_ENTRY_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_IS_ENTRY_RIGHT">
+<span class="target" id="da/d24/group__grove__display_1ga6c9cee5b9f86efcc2073f60dc204fc2a"></span><code class="descname">GLCD_IS_ENTRY_RIGHT</code><a class="headerlink" href="#c.GLCD_IS_ENTRY_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_FS_8BIT_MODE">
+<span class="target" id="da/d24/group__grove__display_1ga726ae92e51500c82a202164edb706cd4"></span><code class="descname">GLCD_FS_8BIT_MODE</code><a class="headerlink" href="#c.GLCD_FS_8BIT_MODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_FS_ROWS_2">
+<span class="target" id="da/d24/group__grove__display_1ga7007ac8d919421d34e4dff4e97503cb6"></span><code class="descname">GLCD_FS_ROWS_2</code><a class="headerlink" href="#c.GLCD_FS_ROWS_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_FS_ROWS_1">
+<span class="target" id="da/d24/group__grove__display_1ga2ebedc80c40c35ea57ebcb3968bc1052"></span><code class="descname">GLCD_FS_ROWS_1</code><a class="headerlink" href="#c.GLCD_FS_ROWS_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_FS_DOT_SIZE_BIG">
+<span class="target" id="da/d24/group__grove__display_1gabcfa7abdd0834ee469a6693a0aa7f883"></span><code class="descname">GLCD_FS_DOT_SIZE_BIG</code><a class="headerlink" href="#c.GLCD_FS_DOT_SIZE_BIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GLCD_FS_DOT_SIZE_LITTLE">
+<span class="target" id="da/d24/group__grove__display_1gae47fb073bb30f1fab7171a6bad55fc22"></span><code class="descname">GLCD_FS_DOT_SIZE_LITTLE</code><a class="headerlink" href="#c.GLCD_FS_DOT_SIZE_LITTLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GROVE_RGB_WHITE">
+<span class="target" id="da/d24/group__grove__display_1gaca2204b331e88203b05d0382d80cc5de"></span><code class="descname">GROVE_RGB_WHITE</code><a class="headerlink" href="#c.GROVE_RGB_WHITE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GROVE_RGB_RED">
+<span class="target" id="da/d24/group__grove__display_1gad391aa4262d4fd7e93052e7dafc5daa4"></span><code class="descname">GROVE_RGB_RED</code><a class="headerlink" href="#c.GROVE_RGB_RED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GROVE_RGB_GREEN">
+<span class="target" id="da/d24/group__grove__display_1ga6e9faff3c1a708d6c5d509a85e1dd1f4"></span><code class="descname">GROVE_RGB_GREEN</code><a class="headerlink" href="#c.GROVE_RGB_GREEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.GROVE_RGB_BLUE">
+<span class="target" id="da/d24/group__grove__display_1gaf754fe5b8b20bca5ae9768833e045ef8"></span><code class="descname">GROVE_RGB_BLUE</code><a class="headerlink" href="#c.GROVE_RGB_BLUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv210glcd_printP6devicePc5u32_t">
+<span id="glcd_print__deviceP.cP.u32_t"></span><span class="target" id="da/d24/group__grove__display_1gac18647f2f26b71aa21ea2fba8e01cc4f"></span>void <code class="descname">glcd_print</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em>, char *<em>data</em>, u32_t <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210glcd_printP6devicePc5u32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Send text to the screen. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: Pointer to device structure for driver instance. </li>
+<li><code class="docutils literal"><span class="pre">data</span></code>: the ASCII text to display </li>
+<li><code class="docutils literal"><span class="pre">size</span></code>: the length of the text in bytes </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv219glcd_cursor_pos_setP6device4u8_t4u8_t">
+<span id="glcd_cursor_pos_set__deviceP.u8_t.u8_t"></span><span class="target" id="da/d24/group__grove__display_1ga058062ed9766f9f25f8c1ad7279b757b"></span>void <code class="descname">glcd_cursor_pos_set</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em>, u8_t <em>col</em>, u8_t <em>row</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv219glcd_cursor_pos_setP6device4u8_t4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set text cursor position for next additions. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: Pointer to device structure for driver instance. </li>
+<li><code class="docutils literal"><span class="pre">col</span></code>: the column for the cursor to be moved to (0-15) </li>
+<li><code class="docutils literal"><span class="pre">row</span></code>: the row it should be moved to (0 or 1) </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv210glcd_clearP6device">
+<span id="glcd_clear__deviceP"></span><span class="target" id="da/d24/group__grove__display_1ga027239a768f9702b7a85ac1a0f8c0f64"></span>void <code class="descname">glcd_clear</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210glcd_clearP6device" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Clear the current display. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: Pointer to device structure for driver instance. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv222glcd_display_state_setP6device4u8_t">
+<span id="glcd_display_state_set__deviceP.u8_t"></span><span class="target" id="da/d24/group__grove__display_1gadf781c2b12929642ab13ec00ffb8e6cf"></span>void <code class="descname">glcd_display_state_set</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em>, u8_t <em>opt</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv222glcd_display_state_setP6device4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Function to change the display state. </p>
+<p>This function provides the user the ability to change the state of the display as per needed. Controlling things like powering on or off the screen, the option to display the cursor or not, and the ability to blink the cursor.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: Pointer to device structure for driver instance. </li>
+<li><code class="docutils literal"><span class="pre">opt</span></code>: An 8bit bitmask of GLCD_DS_* options. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv222glcd_display_state_getP6device">
+<span id="glcd_display_state_get__deviceP"></span><span class="target" id="da/d24/group__grove__display_1gacc12c2f624cde2faf91cf540ad00c0aa"></span>u8_t <code class="descname">glcd_display_state_get</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv222glcd_display_state_getP6device" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>return the display feature set associated with the device </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the display feature set associated with the device. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: the Grove LCD to get the display features set</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv220glcd_input_state_setP6device4u8_t">
+<span id="glcd_input_state_set__deviceP.u8_t"></span><span class="target" id="da/d24/group__grove__display_1gadb351fa6905fb62e0469bff192d533f9"></span>void <code class="descname">glcd_input_state_set</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em>, u8_t <em>opt</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220glcd_input_state_setP6device4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Function to change the input state. </p>
+<p>This function provides the user the ability to change the state of the text input. Controlling things like text entry from the left or right side, and how far to increment on new text</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: Pointer to device structure for driver instance. </li>
+<li><code class="docutils literal"><span class="pre">opt</span></code>: A bitmask of GLCD_IS_* options </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv220glcd_input_state_getP6device">
+<span id="glcd_input_state_get__deviceP"></span><span class="target" id="da/d24/group__grove__display_1ga003c62873a39d522fcbe512351cf2cea"></span>u8_t <code class="descname">glcd_input_state_get</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220glcd_input_state_getP6device" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>return the input set associated with the device </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the input set associated with the device. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: the Grove LCD to get the input features set</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv217glcd_function_setP6device4u8_t">
+<span id="glcd_function_set__deviceP.u8_t"></span><span class="target" id="da/d24/group__grove__display_1ga39e5d8a47fc742133d11fe445f29a167"></span>void <code class="descname">glcd_function_set</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em>, u8_t <em>opt</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv217glcd_function_setP6device4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Function to set the functional state of the display. </p>
+<p>
+This function provides the user the ability to change the state of the display as per needed. Controlling things like the number of rows, dot size, and text display quality. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: Pointer to device structure for driver instance. </li>
+<li><code class="docutils literal"><span class="pre">opt</span></code>: A bitmask of GLCD_FS_* options</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv217glcd_function_getP6device">
+<span id="glcd_function_get__deviceP"></span><span class="target" id="da/d24/group__grove__display_1ga39e3e11ae63f0840a45b4914ff2f4cc4"></span>u8_t <code class="descname">glcd_function_get</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv217glcd_function_getP6device" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>return the function set associated with the device </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the function features set associated with the device. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: the Grove LCD to get the functions set</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv217glcd_color_selectP6device4u8_t">
+<span id="glcd_color_select__deviceP.u8_t"></span><span class="target" id="da/d24/group__grove__display_1ga8b586f7f89bcfb15c77bb6db1ef26738"></span>void <code class="descname">glcd_color_select</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em>, u8_t <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv217glcd_color_selectP6device4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set LCD background to a predefined color. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: Pointer to device structure for driver instance. </li>
+<li><code class="docutils literal"><span class="pre">color</span></code>: One of the predefined color options </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv214glcd_color_setP6device4u8_t4u8_t4u8_t">
+<span id="glcd_color_set__deviceP.u8_t.u8_t.u8_t"></span><span class="target" id="da/d24/group__grove__display_1ga2fa4c46c5771888e336a72ea318f8d93"></span>void <code class="descname">glcd_color_set</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em>, u8_t <em>r</em>, u8_t <em>g</em>, u8_t <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv214glcd_color_setP6device4u8_t4u8_t4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set LCD background to custom RGB color value. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: Pointer to device structure for driver instance. </li>
+<li><code class="docutils literal"><span class="pre">r</span></code>: A numeric value for the red color (max is 255) </li>
+<li><code class="docutils literal"><span class="pre">g</span></code>: A numeric value for the green color (max is 255) </li>
+<li><code class="docutils literal"><span class="pre">b</span></code>: A numeric value for the blue color (max is 255) </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv215glcd_initializeP6device">
+<span id="glcd_initialize__deviceP"></span><span class="target" id="da/d24/group__grove__display_1ga9ea4987d3dd87c2c495a69aaa46293cd"></span>int <code class="descname">glcd_initialize</code><span class="sig-paren">(</span><em class="property">struct</em> <a class="reference internal" href="device.html#_CPPv26device" title="device">device</a> *<em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215glcd_initializeP6device" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize the Grove LCD panel. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Returns 0 if all passes </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">port</span></code>: Pointer to device structure for driver instance.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="bbc-micro-bit-display">
+<h2>BBC micro:bit Display<a class="headerlink" href="#bbc-micro-bit-display" title="Permalink to this headline">¶</a></h2>
+<dl class="group">
+<dt>
+<span class="target" id="d1/d1e/group__mb__display"></span><em>group</em> <code class="descname">mb_display</code></dt>
+<dd><p>BBC micro:bit display APIs. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.MB_IMAGE">
+<span class="target" id="d1/d1e/group__mb__display_1ga529a5650acaf699b23b4b4234127cf2c"></span><code class="descname">MB_IMAGE</code><span class="sig-paren">(</span>_rows...<span class="sig-paren">)</span><a class="headerlink" href="#c.MB_IMAGE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate an image object from a given array rows/columns. </p>
+<p>This helper takes an array of 5 rows, each consisting of 5 0/1 values which correspond to the columns of that row. The value 0 means the pixel is disabled whereas a 1 means the pixel is enabled.</p>
+<p>The pixels go from left to right and top to bottom, i.e. top-left corner is the first row’s first value, top-right is the first rows last value, and bottom-right corner is the last value of the last (5th) row. As an example, the following would create a smiley face image:</p>
+<p></p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Image bitmap that can be passed e.g. to mb_display_image(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">_rows</span></code>: Each of the 5 rows represented as a 5-value column array.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="type">
+<dt id="_CPPv2N10mb_display15mb_display_modeE">
+<span id="mb_display::mb_display_mode"></span><span class="target" id="d1/d1e/group__mb__display_1ga750a177cffbb90ab38392d9ebad9a8eb"></span><em class="property">enum </em><code class="descname">mb_display_mode</code><a class="headerlink" href="#_CPPv2N10mb_display15mb_display_modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Display mode. </p>
+<p>First 16 bits are reserved for modes, last 16 for flags. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N10mb_display23MB_DISPLAY_MODE_DEFAULTE">
+<span class="target" id="d1/d1e/group__mb__display_ga750a177cffbb90ab38392d9ebad9a8eb_1gga750a177cffbb90ab38392d9ebad9a8eba804d6d635a1525c85fd4bd349a56fff5"></span><code class="descname">MB_DISPLAY_MODE_DEFAULT</code><a class="headerlink" href="#_CPPv2N10mb_display23MB_DISPLAY_MODE_DEFAULTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default mode (“single” for images, “scroll” for text). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10mb_display22MB_DISPLAY_MODE_SINGLEE">
+<span class="target" id="d1/d1e/group__mb__display_ga750a177cffbb90ab38392d9ebad9a8eb_1gga750a177cffbb90ab38392d9ebad9a8eba4cc5223f0f4d28c9bb7c8be5ee6a744a"></span><code class="descname">MB_DISPLAY_MODE_SINGLE</code><a class="headerlink" href="#_CPPv2N10mb_display22MB_DISPLAY_MODE_SINGLEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Display images sequentially, one at a time. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10mb_display22MB_DISPLAY_MODE_SCROLLE">
+<span class="target" id="d1/d1e/group__mb__display_ga750a177cffbb90ab38392d9ebad9a8eb_1gga750a177cffbb90ab38392d9ebad9a8ebaa9e5d94518766711673e3c1e7b513e69"></span><code class="descname">MB_DISPLAY_MODE_SCROLL</code><a class="headerlink" href="#_CPPv2N10mb_display22MB_DISPLAY_MODE_SCROLLE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Display images by scrolling. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10mb_display20MB_DISPLAY_FLAG_LOOPE">
+<span class="target" id="d1/d1e/group__mb__display_ga750a177cffbb90ab38392d9ebad9a8eb_1gga750a177cffbb90ab38392d9ebad9a8ebac96bf2e5073ffa9ec8521b67c8d581cc"></span><code class="descname">MB_DISPLAY_FLAG_LOOP</code> = BIT(16)<a class="headerlink" href="#_CPPv2N10mb_display20MB_DISPLAY_FLAG_LOOPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Loop back to the beginning when reaching the last image. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv214mb_display_getv">
+<span id="mb_display_get__void"></span><span class="target" id="d1/d1e/group__mb__display_1ga5fc9dfbee73fc15bf06ce7b4bc920474"></span><em class="property">struct</em> mb_display *<code class="descname">mb_display_get</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv214mb_display_getv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a pointer to the BBC micro:bit display object. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Pointer to display object. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216mb_display_imageP10mb_display5u32_t5s32_tPK8mb_image4u8_t">
+<span id="mb_display_image__mb_displayP.u32_t.s32_t.mb_imageCP.u8_t"></span><span class="target" id="d1/d1e/group__mb__display_1ga19fbed3180b32d14898ab485540fb9cb"></span>void <code class="descname">mb_display_image</code><span class="sig-paren">(</span><em class="property">struct</em> mb_display *<em>disp</em>, u32_t <em>mode</em>, s32_t <em>duration</em>, <em class="property">const</em> <em class="property">struct</em> <a class="reference internal" href="#_CPPv28mb_image" title="mb_image">mb_image</a> *<em>img</em>, u8_t <em>img_count</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216mb_display_imageP10mb_display5u32_t5s32_tPK8mb_image4u8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Display one or more images on the BBC micro:bit LED display. </p>
+<p>This function takes an array of one or more images and renders them sequentially on the micro:bit display. The call is asynchronous, i.e. the processing of the display happens in the background. If there is another image being displayed it will be canceled and the new one takes over.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">disp</span></code>: Display object. </li>
+<li><code class="docutils literal"><span class="pre">mode</span></code>: One of the MB_DISPLAY_MODE_* options. </li>
+<li><code class="docutils literal"><span class="pre">duration</span></code>: Duration how long to show each image (in milliseconds). </li>
+<li><code class="docutils literal"><span class="pre">img</span></code>: Array of image bitmaps (struct <a class="reference internal" href="#dd/d78/structmb__image"><span class="std std-ref">mb_image</span></a> objects). </li>
+<li><code class="docutils literal"><span class="pre">img_count</span></code>: Number of images in ‘img’ array. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216mb_display_printP10mb_display5u32_t5s32_tPKcz">
+<span id="mb_display_print__mb_displayP.u32_t.s32_t.cCP.z"></span><span class="target" id="d1/d1e/group__mb__display_1ga4fc63ac8664c10203b9753f3854d980a"></span>void <code class="descname">mb_display_print</code><span class="sig-paren">(</span><em class="property">struct</em> mb_display *<em>disp</em>, u32_t <em>mode</em>, s32_t <em>duration</em>, <em class="property">const</em> char *<em>fmt</em>, ...<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216mb_display_printP10mb_display5u32_t5s32_tPKcz" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Print a string of characters on the BBC micro:bit LED display. </p>
+<p>This function takes a printf-style format string and outputs it in a scrolling fashion to the display.</p>
+<p>The call is asynchronous, i.e. the processing of the display happens in the background. If there is another image or string being displayed it will be canceled and the new one takes over.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">disp</span></code>: Display object. </li>
+<li><code class="docutils literal"><span class="pre">mode</span></code>: One of the MB_DISPLAY_MODE_* options. </li>
+<li><code class="docutils literal"><span class="pre">duration</span></code>: Duration how long to show each character (in milliseconds). </li>
+<li><code class="docutils literal"><span class="pre">fmt</span></code>: printf-style format string </li>
+<li><code class="docutils literal"><span class="pre">...</span></code>: Optional list of format arguments. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv215mb_display_stopP10mb_display">
+<span id="mb_display_stop__mb_displayP"></span><span class="target" id="d1/d1e/group__mb__display_1gad15b3635993007d8aad9364cbe29311b"></span>void <code class="descname">mb_display_stop</code><span class="sig-paren">(</span><em class="property">struct</em> mb_display *<em>disp</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215mb_display_stopP10mb_display" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Stop the ongoing display of an image. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">disp</span></code>: Display object. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv28mb_image">
+<span id="mb_image"></span><span class="target" id="dd/d78/structmb__image"></span><em class="property">struct </em><code class="descname">mb_image</code><a class="headerlink" href="#_CPPv28mb_image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;mb_display.h&gt;</em><p>Representation of a BBC micro:bit display image. </p>
+<p>This struct should normally not be used directly, rather created using the MB_IMAGE() macro. </p>
+</dd></dl>
+
+<dl class="type">
+<dt>
+<span class="target" id="d1/d72/unionmb__image_8____unnamed____"></span><em class="property">union </em></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt>
+<span class="target" id="d1/d72/unionmb__image_8____unnamed_____1a69b18367d2d284909a41fd31d882af63"></span><code class="descname"></code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="d1/d72/unionmb__image_8____unnamed_____1a7fc5cc6599c7b58e764cbf305f44e46f"></span><code class="descname"></code></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="misc_api.html" class="btn btn-neutral float-right" title="Miscellaneous APIs" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="file_system.html" class="btn btn-neutral" title="File System APIs" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

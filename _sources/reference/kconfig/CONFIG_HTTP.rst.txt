@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: HTTP
+
+.. option:: CONFIG_HTTP
+.. _CONFIG_HTTP:
+
+This option enables the HTTP library
+
+
+
+:Symbol:           HTTP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "HTTP support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/http/Kconfig:6

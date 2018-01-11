@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: BT_MESH_FRIEND_SEG_RX
+
+.. option:: CONFIG_BT_MESH_FRIEND_SEG_RX
+.. _CONFIG_BT_MESH_FRIEND_SEG_RX:
+
+Number of incomplete segment lists that we track for each LPN
+that we are Friends for. In other words, this determines how
+many elements we can simultaneously be receiving segmented
+messages from when the messages are going into the Friend queue.
+
+
+
+:Symbol:           BT_MESH_FRIEND_SEG_RX
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 1000]
+:Prompts:
+
+ *  "Number of incomplete segment lists per LPN"
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_FRIEND (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:351

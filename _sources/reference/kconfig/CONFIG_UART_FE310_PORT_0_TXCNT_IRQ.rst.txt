@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: UART_FE310_PORT_0_TXCNT_IRQ
+
+.. option:: CONFIG_UART_FE310_PORT_0_TXCNT_IRQ
+.. _CONFIG_UART_FE310_PORT_0_TXCNT_IRQ:
+
+Port 0 TX Threshold at which the TX FIFO interrupt triggers.
+
+
+
+:Symbol:           UART_FE310_PORT_0_TXCNT_IRQ
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port 0 TX Interrupt Threshold Count" if UART_FE310_PORT_0 (value: "n")
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: UART_FE310_PORT_0 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.fe310:58

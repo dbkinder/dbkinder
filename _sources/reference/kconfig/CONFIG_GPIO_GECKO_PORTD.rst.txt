@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: GPIO_GECKO_PORTD
+
+.. option:: CONFIG_GPIO_GECKO_PORTD
+.. _CONFIG_GPIO_GECKO_PORTD:
+
+Enable Port D.
+
+
+
+:Symbol:           GPIO_GECKO_PORTD
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port D"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_GECKO && BOARD_EFM32WG_STK3800 (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.gecko:62
+ * ../boards/arm/efm32wg_stk3800/Kconfig.defconfig:30

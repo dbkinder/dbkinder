@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: ADC_DW
+
+.. option:: CONFIG_ADC_DW
+.. _CONFIG_ADC_DW:
+
+Enable the driver implementation of the Designware ADC IP.
+
+
+
+:Symbol:           ADC_DW
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "ARC Designware Driver" if ARC (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: ARC (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_ADC_0` if ARC (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ADC (value: "y")
+:Locations:
+ * ../drivers/adc/Kconfig.dw:9

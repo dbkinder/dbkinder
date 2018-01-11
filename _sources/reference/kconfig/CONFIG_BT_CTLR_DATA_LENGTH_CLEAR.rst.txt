@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: BT_CTLR_DATA_LENGTH_CLEAR
+
+.. option:: CONFIG_BT_CTLR_DATA_LENGTH_CLEAR
+.. _CONFIG_BT_CTLR_DATA_LENGTH_CLEAR:
+
+Enable support for Bluetooth v4.2 LE Data Length Update procedure, up to
+251 byte cleartext payloads in the Controller. Encrypted connections
+are not supported.
+
+
+
+:Symbol:           BT_CTLR_DATA_LENGTH_CLEAR
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Data Length Support (Cleartext only)" if BT_CTLR_DATA_LENGTH && SOC_SERIES_NRF51X && BT_CTLR_ADVANCED_FEATURES (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:233

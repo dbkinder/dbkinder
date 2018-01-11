@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: NET_APP_AUTO_INIT
+
+.. option:: CONFIG_NET_APP_AUTO_INIT
+.. _CONFIG_NET_APP_AUTO_INIT:
+
+If this option is set, then the net_app API is automatically
+initialized when the device is started. If you do not wish to do
+this, then disable this and call net_app_init() in your application.
+
+
+
+:Symbol:           NET_APP_AUTO_INIT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Init networking support automatically during device startup"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:20

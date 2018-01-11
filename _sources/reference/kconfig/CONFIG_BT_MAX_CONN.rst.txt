@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: BT_MAX_CONN
+
+.. option:: CONFIG_BT_MAX_CONN
+.. _CONFIG_BT_MAX_CONN:
+
+Maximum number of simultaneous Bluetooth connections
+supported.
+
+
+
+:Symbol:           BT_MAX_CONN
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 64]
+:Prompts:
+
+ *  "Maximum number of simultaneous connections" if BT_CONN (value: "n")
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: BT_CONN (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT (value: "n")
+:Locations:
+ * ../subsys/bluetooth/Kconfig:87

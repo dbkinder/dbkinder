@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: BT_CTLR_HCI_VS_BUILD_INFO
+
+.. option:: CONFIG_BT_CTLR_HCI_VS_BUILD_INFO
+.. _CONFIG_BT_CTLR_HCI_VS_BUILD_INFO:
+
+User-defined string that will be returned by the Zephyr VS Read Build
+Information command after the Zephyr version and build time. When
+setting this to a value different from an empty string, a space
+character is required at the beginning to separate it from the
+already included information.
+
+
+
+:Symbol:           BT_CTLR_HCI_VS_BUILD_INFO
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Zephyr HCI VS Build Info string" if BT_HCI_VS_EXT (value: "n")
+:Default values:
+
+ *  ""
+ *   Condition: BT_HCI_VS_EXT (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:33

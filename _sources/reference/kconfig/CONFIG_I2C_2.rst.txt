@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: I2C_2
+
+.. option:: CONFIG_I2C_2
+.. _CONFIG_I2C_2:
+
+The configuration item CONFIG_I2C_2:
+
+:Symbol:           I2C_2
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable I2C Port 2"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ I2C && SOC_STM32L475XG && BOARD_DISCO_L475_IOT1 || I2C && SOC_STM32F103XB && BOARD_OLIMEXINO_STM32 || I2C && SOC_STM32F303XC && BOARD_STM32F3_DISCO (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ I2C && BOARD_DISCO_L475_IOT1 (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:268
+ * ../boards/arm/disco_l475_iot1/Kconfig.defconfig:54

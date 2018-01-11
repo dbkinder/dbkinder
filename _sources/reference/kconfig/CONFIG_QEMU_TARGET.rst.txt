@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: QEMU_TARGET
+
+.. option:: CONFIG_QEMU_TARGET
+.. _CONFIG_QEMU_TARGET:
+
+Mark all QEMU targets with this variable for checking whether we are
+running in an emulated environment.
+
+
+
+:Symbol:           QEMU_TARGET
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BOARD_X86_JAILHOUSE && SOC_IA32 || BOARD_QEMU_X86 && SOC_IA32 || BOARD_QEMU_CORTEX_M3 && SOC_TI_LM3S6965 || BOARD_QEMU_NIOS2 && SOC_NIOS2_QEMU || BOARD_QEMU_RISCV32 && SOC_RISCV32_QEMU || BOARD_QEMU_XTENSA && SOC_XTENSA_SAMPLE_CONTROLLER (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/Kconfig:10

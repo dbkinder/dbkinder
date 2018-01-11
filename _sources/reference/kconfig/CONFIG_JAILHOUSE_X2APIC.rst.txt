@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: JAILHOUSE_X2APIC
+
+.. option:: CONFIG_JAILHOUSE_X2APIC
+.. _CONFIG_JAILHOUSE_X2APIC:
+
+The configuration item CONFIG_JAILHOUSE_X2APIC:
+
+:Symbol:           JAILHOUSE_X2APIC
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "When in Jailhouse inmate cell mode, access APIC in x2APIC mode" if JAILHOUSE (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: JAILHOUSE (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BOARD_X86_JAILHOUSE (value: "n")
+:Locations:
+ * ../boards/x86/x86_jailhouse/Kconfig.defconfig:11

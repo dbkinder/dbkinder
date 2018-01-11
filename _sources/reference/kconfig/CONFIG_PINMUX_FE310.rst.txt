@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: PINMUX_FE310
+
+.. option:: CONFIG_PINMUX_FE310
+.. _CONFIG_PINMUX_FE310:
+
+Enable driver for the SiFive Freedom E310 SOC pinmux driver
+
+
+
+:Symbol:           PINMUX_FE310
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SiFive Freedom E310 SOC pinmux driver" if PINMUX && SOC_SERIES_RISCV32_FE310 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: PINMUX && SOC_SERIES_RISCV32_FE310 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ PINMUX (value: "n")
+:Locations:
+ * ../drivers/pinmux/Kconfig.fe310:8

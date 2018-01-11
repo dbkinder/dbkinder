@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: SOC_PART_NUMBER_IMX_RT
+
+.. option:: CONFIG_SOC_PART_NUMBER_IMX_RT
+.. _CONFIG_SOC_PART_NUMBER_IMX_RT:
+
+This string holds the full part number of the SoC. It is a hidden option
+that you should not set directly. The part number selection choice defines
+the default value for this string.
+
+
+
+:Symbol:           SOC_PART_NUMBER_IMX_RT
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  "MIMXRT1051CVL5A"
+ *   Condition: SOC_PART_NUMBER_MIMXRT1051CVL5A (value: "n")
+ *  "MIMXRT1051DVL6A"
+ *   Condition: SOC_PART_NUMBER_MIMXRT1051DVL6A (value: "n")
+ *  "MIMXRT1052CVL5A"
+ *   Condition: SOC_PART_NUMBER_MIMXRT1052CVL5A (value: "n")
+ *  "MIMXRT1052DVL6A"
+ *   Condition: SOC_PART_NUMBER_MIMXRT1052DVL6A (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_IMX_RT && ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/nxp_imx/rt/Kconfig.soc:54

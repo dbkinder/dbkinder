@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: WS2812_WHT_ORDER
+
+.. option:: CONFIG_WS2812_WHT_ORDER
+.. _CONFIG_WS2812_WHT_ORDER:
+
+If the blue channel is shifted out first, specify 0.
+If second, specify 1, and so on.
+
+
+
+:Symbol:           WS2812_WHT_ORDER
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 3]
+:Prompts:
+
+ *  "Order in which a white pixel should be shifted out" if WS2812_HAS_WHITE_CHANNEL (value: "n")
+:Default values:
+
+ *  3 (value: "n")
+ *   Condition: WS2812_HAS_WHITE_CHANNEL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ WS2812_STRIP && LED_STRIP (value: "n")
+:Locations:
+ * ../drivers/led_strip/Kconfig.ws2812:113

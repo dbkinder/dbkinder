@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: FXAS21002_TRIGGER
+
+.. option:: CONFIG_FXAS21002_TRIGGER
+.. _CONFIG_FXAS21002_TRIGGER:
+
+The configuration item CONFIG_FXAS21002_TRIGGER:
+
+:Symbol:           FXAS21002_TRIGGER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ FXAS21002 && SENSOR && FXAS21002_TRIGGER_GLOBAL_THREAD || FXAS21002 && SENSOR && FXAS21002_TRIGGER_OWN_THREAD (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ FXAS21002 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/fxas21002/Kconfig:86

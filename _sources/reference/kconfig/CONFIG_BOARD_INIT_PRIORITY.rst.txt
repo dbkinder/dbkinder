@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: BOARD_INIT_PRIORITY
+
+.. option:: CONFIG_BOARD_INIT_PRIORITY
+.. _CONFIG_BOARD_INIT_PRIORITY:
+
+Board initialization priority. This must be bigger than
+GPIO_GECKO_COMMON_INIT_PRIORITY.
+
+
+
+:Symbol:           BOARD_INIT_PRIORITY
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  KERNEL_INIT_PRIORITY_DEFAULT (value: "n")
+ *   Condition: GPIO (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BOARD_EFM32WG_STK3800 (value: "n")
+:Locations:
+ * ../boards/arm/efm32wg_stk3800/Kconfig:9

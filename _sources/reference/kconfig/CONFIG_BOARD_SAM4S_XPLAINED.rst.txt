@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_SAM4S_XPLAINED
+
+.. option:: CONFIG_BOARD_SAM4S_XPLAINED
+.. _CONFIG_BOARD_SAM4S_XPLAINED:
+
+The configuration item CONFIG_BOARD_SAM4S_XPLAINED:
+
+:Symbol:           BOARD_SAM4S_XPLAINED
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Atmel SAM4S Xplained" if SOC_PART_NUMBER_SAM4S16C (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/sam4s_xplained/Kconfig.board:7

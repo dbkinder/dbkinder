@@ -1,0 +1,43 @@
+:orphan:
+
+.. title:: ENTROPY_MCUX_TRNG
+
+.. option:: CONFIG_ENTROPY_MCUX_TRNG
+.. _CONFIG_ENTROPY_MCUX_TRNG:
+
+This option enables the true random number generator (TRNG)
+driver based on the MCUX TRNG driver.
+
+
+:Symbol:           ENTROPY_MCUX_TRNG
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "MCUX TRNG driver" if ENTROPY_GENERATOR && HAS_MCUX_TRNG (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: ENTROPY_GENERATOR && HAS_MCUX_TRNG (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_ENTROPY_HAS_DRIVER` if ENTROPY_GENERATOR && HAS_MCUX_TRNG (value: "n")
+ *  :option:`CONFIG_ENTROPY_DEVICE_RANDOM_GENERATOR` if ENTROPY_GENERATOR && HAS_MCUX_TRNG (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_MKW40Z4 && SOC_SERIES_KINETIS_KWX && ENTROPY_GENERATOR (value: "n")
+:Locations:
+ * ../drivers/entropy/Kconfig.mcux:17
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.defconfig.mkw41z4:62
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.defconfig.mkw40z4:62

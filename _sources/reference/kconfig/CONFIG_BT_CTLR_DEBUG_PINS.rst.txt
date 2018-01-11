@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BT_CTLR_DEBUG_PINS
+
+.. option:: CONFIG_BT_CTLR_DEBUG_PINS
+.. _CONFIG_BT_CTLR_DEBUG_PINS:
+
+Turn on debug GPIO toggling for the BLE Controller. This is useful
+when debugging with a logic analyzer or profiling certain sections of
+the code. When enabled, pins P0.16 to P0.25 are taken over exclusively
+by the controller and cannot be used outside of it.
+
+
+
+:Symbol:           BT_CTLR_DEBUG_PINS
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bluetooth Controller Debug Pins" if BOARD_NRF51_PCA10028 || BOARD_NRF52_PCA10040 || BOARD_NRF52840_PCA10056 (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:485

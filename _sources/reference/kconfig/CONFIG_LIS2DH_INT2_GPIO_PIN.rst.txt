@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: LIS2DH_INT2_GPIO_PIN
+
+.. option:: CONFIG_LIS2DH_INT2_GPIO_PIN
+.. _CONFIG_LIS2DH_INT2_GPIO_PIN:
+
+The number of the GPIO on which the interrupt 2 signal from the LIS2DH
+chip will be received.
+
+
+
+:Symbol:           LIS2DH_INT2_GPIO_PIN
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 254]
+:Prompts:
+
+ *  "Interrupt 2 GPIO pin number" if LIS2DH && LIS2DH_TRIGGER (value: "n")
+:Default values:
+
+ *  26 (value: "n")
+ *   Condition: LIS2DH && LIS2DH_TRIGGER (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lis2dh/Kconfig:132

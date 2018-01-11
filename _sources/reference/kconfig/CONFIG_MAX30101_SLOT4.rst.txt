@@ -1,0 +1,46 @@
+:orphan:
+
+.. title:: MAX30101_SLOT4
+
+.. option:: CONFIG_MAX30101_SLOT4
+.. _CONFIG_MAX30101_SLOT4:
+
+Set which LED and pulse amplitude are active in time slot 4.
+0: None (disabled)
+1: LED1 (red), LED1_PA
+2: LED2 (IR), LED2_PA
+3: LED3 (green), LED3_PA
+4: None (disabled)
+5: LED1 (red), PILOT_PA
+6: LED2 (IR), PILOT_PA
+7: LED3 (green), PILOT_PA
+
+
+
+:Symbol:           MAX30101_SLOT4
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 7]
+:Prompts:
+
+ *  "Slot 4"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MAX30101 && SENSOR && MAX30101_MULTI_LED_MODE (value: "n")
+:Locations:
+ * ../drivers/sensor/max30101/Kconfig:202

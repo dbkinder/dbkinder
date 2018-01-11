@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: SOC_STM32F413XH
+
+.. option:: CONFIG_SOC_STM32F413XH
+.. _CONFIG_SOC_STM32F413XH:
+
+The configuration item CONFIG_SOC_STM32F413XH:
+
+:Symbol:           SOC_STM32F413XH
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "STM32F413XH"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.soc:27

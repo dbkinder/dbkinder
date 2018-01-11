@@ -1,0 +1,462 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Bluetooth: IPSP Sample &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../../index.html"/>
+        <link rel="up" title="Bluetooth" href="../bluetooth.html"/>
+        <link rel="next" title="Bluetooth: Peripheral" href="../peripheral/README.html"/>
+        <link rel="prev" title="Bluetooth: HCI USB" href="../hci_usb/README.html"/> 
+
+    
+    <script src="../../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../../index.html">Docs</a> /
+      
+          <a href="../../../application/index.html">Developer Guides</a> /
+      
+          <a href="../../samples.html">Samples and Demos</a> /
+      
+          <a href="../bluetooth.html">Bluetooth</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../application/index.html">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../porting/porting.html">Porting Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../application/application.html">Application Development Primer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../samples.html">Samples and Demos</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../kernel.html">Kernel Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/basic.html">Basic Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../subsys/subsys.html">Various Subsystems Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../net/net.html">Networking Samples</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sensor/sensor.html">Sensor Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../grove/grove.html">Grove Kit Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../boards/boards.html">Board-specific samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mpu/index.html">MMU/MPU Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../drivers/drivers.html">Driver Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/kconfig/index.html">Configuration Options Reference Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/api.html">API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../README.html">Zephyr documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="bluetooth-ipsp-sample">
+<span id="id1"></span><h1>Bluetooth: IPSP Sample<a class="headerlink" href="#bluetooth-ipsp-sample" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Application demonstrating the IPSP (Internet Protocol Support Profile) Node
+role. IPSP is the Bluetooth profile that underneath utilizes 6LoWPAN, i.e. gives
+you IPv6 connectivity over BLE.</p>
+</div>
+<div class="section" id="building-and-running">
+<h2>Building and Running<a class="headerlink" href="#building-and-running" title="Permalink to this headline">¶</a></h2>
+<p>This sample can be found under <code class="file docutils literal"><span class="pre">samples/bluetooth/ipsp</span></code> in the
+Zephyr tree.</p>
+<div class="section" id="testing-with-a-linux-host">
+<h3>Testing with a Linux host<a class="headerlink" href="#testing-with-a-linux-host" title="Permalink to this headline">¶</a></h3>
+<p>To test IPSP please take a look at samples/net/README, in addition to running
+echo-client you must enable 6LowPAN module in Linux with the following commands
+(as root):</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> modprobe bluetooth_6lowpan
+<span class="gp">#</span> <span class="nb">echo</span> <span class="m">1</span> &gt; /sys/kernel/debug/bluetooth/6lowpan_enable
+</pre></div>
+</div>
+<p>If you connected your board to a UART console, you will see an output similar to
+(may vary slightly by application and Zephyr versions):</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">[bt] [WRN] set_static_addr: Using temporary static random address</span>
+<span class="go">[bt] [INF] show_dev_info: Identity: cb:af:14:57:d8:6e (random)</span>
+<span class="go">[bt] [INF] show_dev_info: HCI: version 5.0 (0x09) revision 0x0000, manufacturer 0xffff</span>
+<span class="go">[bt] [INF] show_dev_info: LMP: version 5.0 (0x09) subver 0xffff</span>
+<span class="go">[bt] [WRN] bt_pub_key_gen: ECC HCI commands not available</span>
+<span class="go">[ipsp] [INF] init_app: Run IPSP sample</span>
+<span class="go">[ipsp] [INF] listen: Starting to wait</span>
+</pre></div>
+</div>
+<p>The output above shows the BLE address assigned to your board for the
+current session; the address will be different on subsequent sessions.</p>
+<p>Alternatively, you may scan for your board on the host. The modern way to do
+that is using <code class="docutils literal"><span class="pre">bluetoothctl</span></code> utility (included in the recent versions of
+BlueZ package) and its <code class="docutils literal"><span class="pre">scan</span> <span class="pre">on</span></code> command:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> bluetoothctl
+<span class="go">[NEW] Controller A3:24:97:EB:D6:23 ubuntu-0 [default]</span>
+<span class="go">[NEW] Device D7:5C:D6:18:14:87 Zephyr</span>
+<span class="go">[NEW] Device E1:E7:F9:56:EC:06 Zephyr</span>
+<span class="go">[NEW] Device C8:12:C5:08:86:E1 Zephyr</span>
+<span class="gp">[bluetooth]#</span> scan on
+<span class="go">Discovery started</span>
+<span class="go">[NEW] Device DC:98:FB:22:CA:3A Zephyr</span>
+</pre></div>
+</div>
+<p>When started, <code class="docutils literal"><span class="pre">bluetoothctl</span></code> shows all BLE (and likely, BT/EDR) devices it
+knows about. As discussed above, the IPSP uses static random addresses, so
+entries for previously connected devices, as shown above, can accumulate and
+become stale. You need to be extra careful to find an entry for the active
+address. The best approach may be to reset your board after issuing
+<code class="docutils literal"><span class="pre">scan</span> <span class="pre">on</span></code> command. This way it will reinitialize with the BLE address
+which will be discovered after the command.</p>
+<p>As an alternative to <code class="docutils literal"><span class="pre">bluetoothctl</span></code>, you can use the legacy <code class="docutils literal"><span class="pre">hcitool</span></code>
+utility which talks directly to hardware and always shows fresh scan results:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo hcitool lescan
+<span class="go">LE Scan ...</span>
+<span class="go">CB:AF:14:57:D8:6E (unknown)</span>
+<span class="go">CB:AF:14:57:D8:6E Test IPSP node</span>
+</pre></div>
+</div>
+<p>After you have found the board’s BLE address, connect to the board (as root):</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> <span class="nb">echo</span> <span class="s2">&quot;connect &lt;bdaddr&gt; &lt;type&gt;&quot;</span> &gt; /sys/kernel/debug/bluetooth/6lowpan_control
+</pre></div>
+</div>
+<p>Where <code class="docutils literal"><span class="pre">&lt;bdaddr&gt;</span></code> is the BLE address and <code class="docutils literal"><span class="pre">&lt;type&gt;</span></code> is BLE address type:
+1 for public address and 2 for random address. As you can see from
+the IPSP sample output above, it uses a static random address. So, with the
+sample output above, the command will be:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> <span class="nb">echo</span> <span class="s2">&quot;connect CB:AF:14:57:D8:6E 2&quot;</span> &gt; /sys/kernel/debug/bluetooth/6lowpan_control
+</pre></div>
+</div>
+<p>Once connected a dedicated interface will be created, usually bt0. You can verify this
+with the following command:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ifconfig
+<span class="go">bt0       Link encap:UNSPEC  HWaddr F8-2F-A8-FF-FE-EB-6D-8C-00-00-00-00-00-00-00-00</span>
+<span class="go">          inet6 addr: fe80::fa2f:a8ff:feeb:6d8c/64 Scope:Link</span>
+<span class="go">          UP POINTOPOINT RUNNING MULTICAST  MTU:1280  Metric:1</span>
+<span class="go">          RX packets:2 errors:0 dropped:3 overruns:0 frame:0</span>
+<span class="go">          TX packets:6 errors:0 dropped:0 overruns:0 carrier:0</span>
+<span class="go">          collisions:0 txqueuelen:1000</span>
+<span class="go">          RX bytes:92 (92.0 B)  TX bytes:233 (233.0 B)</span>
+</pre></div>
+</div>
+<p>As can be seen from the output, only a link-local IPv6 address was assigned
+to the interface.</p>
+<p>At this point, you can test IPv6 connectivity (and discover your board’s IPv6
+address) by pinging “All local-link nodes” IPv6 address:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ping6 -I bt0 ff02::1
+<span class="go">PING ff02::1(ff02::1) from fe80::fa54:a8ff:feeb:218f bt0: 56 data bytes</span>
+<span class="go">64 bytes from fe80::fa54:a8ff:feeb:218f: icmp_seq=1 ttl=64 time=0.088 ms</span>
+<span class="go">64 bytes from fe80::c9af:14ff:fe57:d86e: icmp_seq=1 ttl=64 time=285 ms (DUP!)</span>
+</pre></div>
+</div>
+<p>For each ping packet, both your host and the BLE board send a reply. You
+can see the board’s reply marked as <code class="docutils literal"><span class="pre">(DUP!)</span></code>. You can ping the board
+directly with:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ping6 fe80::c9af:14ff:fe57:d86e%bt0
+<span class="go">PING fe80::c9af:14ff:fe57:d86e%bt0(fe80::c9af:14ff:fe57:d86e) 56 data bytes</span>
+<span class="go">64 bytes from fe80::c9af:14ff:fe57:d86e: icmp_seq=1 ttl=64 time=177 ms</span>
+<span class="go">64 bytes from fe80::c9af:14ff:fe57:d86e: icmp_seq=2 ttl=64 time=53.0 ms</span>
+</pre></div>
+</div>
+<p>Note that the command uses a “scoped IPv6 address”, where the scope is
+defined by the networking interface, with <code class="docutils literal"><span class="pre">%bt0</span></code> appended in this case.
+A specification like that is an alternative to passing <code class="docutils literal"><span class="pre">-I</span> <span class="pre">bt0</span></code> to
+<code class="docutils literal"><span class="pre">ping6</span></code> (and works with other networking tools like <code class="docutils literal"><span class="pre">telnet</span></code>, <code class="docutils literal"><span class="pre">nc</span></code>,
+<code class="docutils literal"><span class="pre">curl</span></code>, etc.)</p>
+<p>While we can use a link-local address, it’s not very convenient, as it must be
+scoped and will change on each run. Instead, the IPSP sample is configured with
+<code class="docutils literal"><span class="pre">2001:db8::1</span></code> static address and we’ll configure the host’s interface to
+access that address by configuring <code class="docutils literal"><span class="pre">bt0</span></code> with the complementary address
+<code class="docutils literal"><span class="pre">2001:db8::2</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ip address add <span class="m">2001</span>:db8::2/64 dev bt0
+</pre></div>
+</div>
+<p>Now we can ping the board’s static address with:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ping6 <span class="m">2001</span>:db8::1
+<span class="go">PING 2001:db8::1(2001:db8::1) 56 data bytes</span>
+<span class="go">64 bytes from 2001:db8::1: icmp_seq=1 ttl=64 time=282 ms</span>
+</pre></div>
+</div>
+<p>The IPSP sample includes builtin echo server for UDP and TCP on a port 4242,
+which we can test with:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> telnet <span class="m">2001</span>:db8::1 <span class="m">4242</span>
+<span class="go">Trying 2001:db8::1...</span>
+<span class="go">Connected to 2001:db8::1.</span>
+<span class="go">Escape character is &#39;^]&#39;.</span>
+<span class="go">test</span>
+<span class="go">test</span>
+<span class="go">test2</span>
+<span class="go">test2</span>
+<span class="go">^]</span>
+<span class="go">telnet&gt; quit</span>
+<span class="go">Connection closed.</span>
+</pre></div>
+</div>
+<p>In the output above, first <code class="docutils literal"><span class="pre">test</span></code> line was typed, next was echoed back by
+the board. Likewise for <code class="docutils literal"><span class="pre">test2</span></code>. To quit telnet tool, type Ctrl+], then
+“quit” at the prompt.</p>
+<p>As an alternative to using well-known networking tools above, and also to
+test both TCP and UDP echo, you can use Zephyr’s helper tool in the GitHub
+<code class="docutils literal"><span class="pre">zephyrproject-rtos/net-tools</span></code> repository:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> echo-client -i bt0 &lt;ip&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For hosts using kernels released before 4.12 CONFIG_NET_L2_BT_ZEP1656
+shall be selected: <a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1656">https://jira.zephyrproject.org/browse/ZEP-1656</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../peripheral/README.html" class="btn btn-neutral float-right" title="Bluetooth: Peripheral" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../hci_usb/README.html" class="btn btn-neutral" title="Bluetooth: HCI USB" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

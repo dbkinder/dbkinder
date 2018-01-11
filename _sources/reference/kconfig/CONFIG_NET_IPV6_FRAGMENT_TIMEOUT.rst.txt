@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: NET_IPV6_FRAGMENT_TIMEOUT
+
+.. option:: CONFIG_NET_IPV6_FRAGMENT_TIMEOUT
+.. _CONFIG_NET_IPV6_FRAGMENT_TIMEOUT:
+
+How long to wait for IPv6 fragment to arrive before the reassembly
+will timeout. RFC 2460 chapter 4.5 tells to wait for 60 seconds but
+this might be too long in memory constrained devices. This value
+is in seconds.
+
+
+
+:Symbol:           NET_IPV6_FRAGMENT_TIMEOUT
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 60]
+:Prompts:
+
+ *  "How long to wait the fragments to receive" if NET_IPV6_FRAGMENT (value: "n")
+:Default values:
+
+ *  5 (value: "n")
+ *   Condition: NET_IPV6_FRAGMENT (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE && NET_IPV6 (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig.ipv6:64

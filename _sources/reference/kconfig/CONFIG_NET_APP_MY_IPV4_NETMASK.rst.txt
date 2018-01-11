@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_APP_MY_IPV4_NETMASK
+
+.. option:: CONFIG_NET_APP_MY_IPV4_NETMASK
+.. _CONFIG_NET_APP_MY_IPV4_NETMASK:
+
+Static netmask to use if not overridden by DHCP. Use empty value to
+skip setting static value.
+
+
+
+:Symbol:           NET_APP_MY_IPV4_NETMASK
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "My IPv4 netmask"
+:Default values:
+
+ *  "255.255.255.0"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP_SETTINGS && NETWORKING && NET_IPV4 (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:181

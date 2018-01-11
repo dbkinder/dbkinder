@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: ENTROPY_HAS_DRIVER
+
+.. option:: CONFIG_ENTROPY_HAS_DRIVER
+.. _CONFIG_ENTROPY_HAS_DRIVER:
+
+This is an option to be enabled by individual entropy driver
+to signal that there is a true entropy driver.
+
+
+
+:Symbol:           ENTROPY_HAS_DRIVER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ ENTROPY_GENERATOR && HAS_MCUX_RNGA && ENTROPY_GENERATOR && ENTROPY_MCUX_RNGA || ENTROPY_GENERATOR && HAS_MCUX_TRNG && ENTROPY_GENERATOR && ENTROPY_MCUX_TRNG || SOC_FAMILY_STM32 && ENTROPY_GENERATOR && ENTROPY_GENERATOR && ENTROPY_STM32_RNG || ENTROPY_GENERATOR && SOC_ESP32 && ENTROPY_GENERATOR && ENTROPY_ESP32_RNG || ENTROPY_GENERATOR && !BT && ENTROPY_GENERATOR && ENTROPY_NRF5_RNG (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ ENTROPY_GENERATOR (value: "n")
+:Locations:
+ * ../drivers/entropy/Kconfig:23

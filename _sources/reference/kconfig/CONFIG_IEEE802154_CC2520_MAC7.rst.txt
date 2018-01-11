@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: IEEE802154_CC2520_MAC7
+
+.. option:: CONFIG_IEEE802154_CC2520_MAC7
+.. _CONFIG_IEEE802154_CC2520_MAC7:
+
+This is the byte 7 of the MAC address.
+
+
+
+:Symbol:           IEEE802154_CC2520_MAC7
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, ff]
+:Prompts:
+
+ *  "MAC Address Byte 7"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ !IEEE802154_CC2520_RANDOM_MAC && IEEE802154_CC2520 (value: "n")
+:Locations:
+ * ../drivers/ieee802154/Kconfig.cc2520:90

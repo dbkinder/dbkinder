@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: SOC_HIFI_MINI
+
+.. option:: CONFIG_SOC_HIFI_MINI
+.. _CONFIG_SOC_HIFI_MINI:
+
+The configuration item CONFIG_SOC_HIFI_MINI:
+
+:Symbol:           SOC_HIFI_MINI
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "hifi_mini core"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/xtensa/soc/hifi_mini/Kconfig.soc:4

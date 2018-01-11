@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: MDNS_RESPONDER
+
+.. option:: CONFIG_MDNS_RESPONDER
+.. _CONFIG_MDNS_RESPONDER:
+
+This option enables the mDNS responder support for Zephyr.
+It will listen well-known address ff02::fb and 224.0.0.251.
+Currently this only returns IP address information.
+You must set CONFIG_NET_HOSTNAME to some meaningful value and
+then mDNS will start to respond to <hostname>.local mDNS queries.
+See RFC 6762 for more details about mDNS.
+
+
+
+:Symbol:           MDNS_RESPONDER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "mDNS responder" if NET_HOSTNAME_ENABLE (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: NET_HOSTNAME_ENABLE (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_NET_IPV6_MLD` if NET_IPV6 && NET_HOSTNAME_ENABLE (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/dns/Kconfig:121

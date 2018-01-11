@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_APP_NEED_IPV4
+
+.. option:: CONFIG_NET_APP_NEED_IPV4
+.. _CONFIG_NET_APP_NEED_IPV4:
+
+The network application needs IPv4 support to function properly.
+This option makes sure the network application is initialized properly
+in order to use IPv4.
+
+
+
+:Symbol:           NET_APP_NEED_IPV4
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "This application wants IPv4 support" if NET_APP_AUTO_INIT (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_NET_IPV4` if NET_APP_AUTO_INIT (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:60

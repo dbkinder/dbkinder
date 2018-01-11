@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: PMS7003_UART_DEVICE
+
+.. option:: CONFIG_PMS7003_UART_DEVICE
+.. _CONFIG_PMS7003_UART_DEVICE:
+
+The configuration item CONFIG_PMS7003_UART_DEVICE:
+
+:Symbol:           PMS7003_UART_DEVICE
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "UART device" if PMS7003 (value: "n")
+:Default values:
+
+ *  "UART_3"
+ *   Condition: PMS7003 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/pms7003/Kconfig:16

@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: UART_SAM_PORT_3
+
+.. option:: CONFIG_UART_SAM_PORT_3
+.. _CONFIG_UART_SAM_PORT_3:
+
+Enable UART3 at boot
+
+
+
+:Symbol:           UART_SAM_PORT_3
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable UART3" if UART_SAM (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: UART_SAM (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.uart_sam:62

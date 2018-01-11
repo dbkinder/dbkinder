@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: BT_CONN_TX_MAX
+
+.. option:: CONFIG_BT_CONN_TX_MAX
+.. _CONFIG_BT_CONN_TX_MAX:
+
+Maximum number of pending TX buffers that have not yet
+been acknowledged by the controller.
+
+
+
+:Symbol:           BT_CONN_TX_MAX
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 128]
+:Prompts:
+
+ *  "Maximum number of pending TX buffers"
+:Default values:
+
+ *  7 (value: "n")
+ *   Condition: (none)
+ *  BT_CTLR_TX_BUFFERS (value: "n")
+ *   Condition: BT_CTLR (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_CONN (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:181

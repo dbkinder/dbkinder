@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: I2C_GPIO_1_NAME
+
+.. option:: CONFIG_I2C_GPIO_1_NAME
+.. _CONFIG_I2C_GPIO_1_NAME:
+
+This is the device name for the I2C device, and is included in the
+device struct.
+
+
+
+:Symbol:           I2C_GPIO_1_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bit Bang I2C device 1 device name" if I2C_GPIO_1 (value: "n")
+:Default values:
+
+ *  "I2C_1"
+ *   Condition: I2C_GPIO_1 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig.gpio:61

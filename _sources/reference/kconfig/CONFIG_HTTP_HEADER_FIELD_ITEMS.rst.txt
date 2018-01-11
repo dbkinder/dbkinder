@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: HTTP_HEADER_FIELD_ITEMS
+
+.. option:: CONFIG_HTTP_HEADER_FIELD_ITEMS
+.. _CONFIG_HTTP_HEADER_FIELD_ITEMS:
+
+Number of HTTP header field items that an HTTP server
+application will handle
+
+
+
+:Symbol:           HTTP_HEADER_FIELD_ITEMS
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "HTTP header field max number of items" if HTTP_SERVER (value: "n")
+:Default values:
+
+ *  8 (value: "n")
+ *   Condition: HTTP_SERVER (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ HTTP && NETWORKING && !HTTP_APP (value: "n")
+:Locations:
+ * ../subsys/net/lib/http/Kconfig:83

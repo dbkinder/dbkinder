@@ -1,0 +1,71 @@
+:orphan:
+
+.. title:: GPIO
+
+.. option:: CONFIG_GPIO
+.. _CONFIG_GPIO:
+
+Include GPIO drivers in system config
+
+
+
+:Symbol:           GPIO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "GPIO Drivers"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ SPI_QMSI_SS && SPI && SPI_SS_CS_GPIO || SOC_FAMILY_NRF5 && I2C && I2C_NRF5 (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ UART_NRF5 && BOARD_96B_CARBON_NRF51 (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig:9
+ * ../arch/x86/soc/intel_quark/quark_se/Kconfig.defconfig.series:261
+ * ../arch/arm/soc/silabs_exx32/efm32wg/Kconfig.defconfig.efm32wg:15
+ * ../arch/arm/soc/nxp_imx/rt/Kconfig.defconfig.mimxrt1052:21
+ * ../arch/arm/soc/nxp_kinetis/k6x/Kconfig.defconfig.mk64f12:36
+ * ../arch/arm/soc/nordic_nrf5/Kconfig.defconfig:15
+ * ../boards/x86/galileo/Kconfig.defconfig:16
+ * ../boards/x86/arduino_101/Kconfig.defconfig:21
+ * ../boards/x86/quark_se_c1000_devboard/Kconfig.defconfig:26
+ * ../boards/arm/quark_se_c1000_ble/Kconfig.defconfig:14
+ * ../boards/arm/arduino_101_ble/Kconfig.defconfig:14
+ * ../boards/arm/curie_ble/Kconfig.defconfig:14
+ * ../boards/arm/96b_carbon_nrf51/Kconfig.defconfig:14

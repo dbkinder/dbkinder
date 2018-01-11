@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: LSM6DSL
+
+.. option:: CONFIG_LSM6DSL
+.. _CONFIG_LSM6DSL:
+
+Enable driver for LSM6DSL I2C-based accelerometer and gyroscope
+sensor.
+
+
+
+:Symbol:           LSM6DSL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "LSM6DSL I2C accelerometer and gyroscope Chip" if I2C (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: I2C (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/lsm6dsl/Kconfig:10

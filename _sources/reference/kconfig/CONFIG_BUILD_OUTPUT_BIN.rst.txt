@@ -1,0 +1,54 @@
+:orphan:
+
+.. title:: BUILD_OUTPUT_BIN
+
+.. option:: CONFIG_BUILD_OUTPUT_BIN
+.. _CONFIG_BUILD_OUTPUT_BIN:
+
+Build a binary in BIN format. This will build a zephyr.bin file need
+by some platforms.
+
+
+
+:Symbol:           BUILD_OUTPUT_BIN
+:Type:             bool
+:Value:            "y"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Build a binary in BIN format"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BOARD_QEMU_XTENSA (value: "n")
+:Locations:
+ * ../misc/Kconfig:193
+ * ../boards/x86/qemu_x86/Kconfig.defconfig:5
+ * ../boards/arm/qemu_cortex_m3/Kconfig.defconfig:4
+ * ../boards/posix/native_posix/Kconfig.defconfig:4
+ * ../boards/nios2/qemu_nios2/Kconfig.defconfig:3
+ * ../boards/riscv32/qemu_riscv32/Kconfig.defconfig:3
+ * ../boards/xtensa/qemu_xtensa/Kconfig.defconfig:7

@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_MSP_EXP432P401R_LAUNCHXL
+
+.. option:: CONFIG_BOARD_MSP_EXP432P401R_LAUNCHXL
+.. _CONFIG_BOARD_MSP_EXP432P401R_LAUNCHXL:
+
+The configuration item CONFIG_BOARD_MSP_EXP432P401R_LAUNCHXL:
+
+:Symbol:           BOARD_MSP_EXP432P401R_LAUNCHXL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "TI MSP-EXP432P401R LAUNCHXL" if SOC_MSP432P401R (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/msp_exp432p401r_launchxl/Kconfig.board:4

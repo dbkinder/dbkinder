@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: NET_BUF_WARN_ALLOC_INTERVAL
+
+.. option:: CONFIG_NET_BUF_WARN_ALLOC_INTERVAL
+.. _CONFIG_NET_BUF_WARN_ALLOC_INTERVAL:
+
+Interval in seconds of Network buffer allocation warnings which are
+generated when a buffer cannot immediately be allocated with K_FOREVER
+which may lead to deadlocks. Setting it to 0 makes warnings to be
+printed only once per allocation.
+
+
+
+:Symbol:           NET_BUF_WARN_ALLOC_INTERVAL
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 60]
+:Prompts:
+
+ *  "Interval of Network buffer allocation warnings" if NET_BUF_LOG (value: "n")
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: NET_BUF_LOG (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../subsys/net/Kconfig:41

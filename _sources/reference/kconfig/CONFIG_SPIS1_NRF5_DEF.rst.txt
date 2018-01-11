@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: SPIS1_NRF5_DEF
+
+.. option:: CONFIG_SPIS1_NRF5_DEF
+.. _CONFIG_SPIS1_NRF5_DEF:
+
+Default character. Character clocked out in case of an ignored
+transaction.
+
+
+
+:Symbol:           SPIS1_NRF5_DEF
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Default character"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SPI_1 && !I2C_1 && SPI_LEGACY_API && SPI && SPI_NRF5 && SPIS1_NRF5 (value: "n")
+:Locations:
+ * ../drivers/spi/Kconfig.nrf5_legacy:257

@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: SOC_MKW24D5
+
+.. option:: CONFIG_SOC_MKW24D5
+.. _CONFIG_SOC_MKW24D5:
+
+The configuration item CONFIG_SOC_MKW24D5:
+
+:Symbol:           SOC_MKW24D5
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SOC_MKW24D5"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_CPU_CORTEX_M4`
+ *  :option:`CONFIG_HAS_MCUX`
+ *  :option:`CONFIG_HAS_MCUX_ADC16`
+ *  :option:`CONFIG_HAS_MCUX_FTM`
+ *  :option:`CONFIG_HAS_MCUX_RNGA`
+ *  :option:`CONFIG_HAS_MCUX_SIM`
+ *  :option:`CONFIG_HAS_OSC`
+ *  :option:`CONFIG_HAS_MCG`
+ *  :option:`CONFIG_HAS_SEGGER_RTT`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.soc:23

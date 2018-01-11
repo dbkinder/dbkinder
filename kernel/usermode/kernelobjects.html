@@ -1,0 +1,536 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Kernel Objects &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="User Mode" href="usermode.html"/>
+        <link rel="next" title="System Calls" href="syscalls.html"/>
+        <link rel="prev" title="User Mode" href="usermode.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../kernel.html">Zephyr Kernel Primer</a> /
+      
+          <a href="usermode.html">User Mode</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../kernel.html">Zephyr Kernel Primer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../threads/threads.html">Threads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timing/timing.html">Timing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory/memory.html">Memory Allocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synchronization/synchronization.html">Synchronization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_passing/data_passing.html">Data Passing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="usermode.html">User Mode</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Kernel Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscalls.html">System Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory_domain.html">Memory Domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../other/other.html">Other Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="kernel-objects">
+<span id="kernelobjects"></span><h1>Kernel Objects<a class="headerlink" href="#kernel-objects" title="Permalink to this headline">¶</a></h1>
+<p>A kernel object can be one of three classes of data:</p>
+<ul class="simple">
+<li>A core kernel object, such as a semaphore, thread, pipe, etc.</li>
+<li>A thread stack, which is an array of <code class="xref c c-type docutils literal"><span class="pre">struct</span> <span class="pre">_k_thread_stack_element</span></code>
+and declared with <code class="xref c c-macro docutils literal"><span class="pre">K_THREAD_STACK_DEFINE()</span></code></li>
+<li>A device driver instance (struct device) that belongs to one of a defined
+set of subsystems</li>
+</ul>
+<p>The set of known kernel objects and driver subsystems is defined in
+include/kernel.h as <code class="xref cpp cpp-enum docutils literal"><span class="pre">k_objects</span></code>.</p>
+<p>Kernel objects are completely opaque to user threads. User threads work
+with addresses to kernel objects when making API calls, but may never
+dereference these addresses, doing so will cause a memory protection fault.
+All kernel objects must be placed in memory that is not accessible by
+user threads.</p>
+<p>Since user threads may not directly manipulate kernel objects, all use of
+them must go through system calls. In order to perform a system call on
+a kernel object, checks are performed by system call handler functions
+that the kernel object address is valid and that the calling thread
+has sufficient permissions to work with it.</p>
+<div class="section" id="object-placement">
+<h2>Object Placement<a class="headerlink" href="#object-placement" title="Permalink to this headline">¶</a></h2>
+<p>Kernel objects that are only used by supervisor threads have no restrictions
+and can be located anywhere in the binary, or even declared on stacks. However,
+to prevent accidental or intentional corruption by user threads, they must
+not be located in any memory that user threads have direct access to.</p>
+<p>In order for a kernel object to be usable by a user thread via system call
+APIs, several conditions must be met on how the kernel object is declared:</p>
+<ul class="simple">
+<li>The object must be declared as a top-level global at build time, such that it
+appears in the ELF symbol table. It is permitted to declare kernel objects
+with static scope. The post-build script <code class="docutils literal"><span class="pre">gen_kobject_list.py</span></code> scans the
+generated ELF file to find kernel objects and places their memory addresses
+in a special table of kernel object metadata.  Kernel objects may be members
+of arrays or embedded within other data structures.</li>
+<li>Kernel objects must be located in memory reserved for the kernel. If
+<a class="reference internal" href="../../reference/kconfig/CONFIG_APPLICATION_MEMORY.html#cmdoption-arg-config-application-memory"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_APPLICATION_MEMORY</span></code></a> is used, all declarations of kernel
+objects inside application code must be prefixed with the <code class="xref c c-macro docutils literal"><span class="pre">__kernel</span></code>
+attribute so that they are placed in the right memory sections. The APIs for
+statically declaring and initializing kernel objects (such as
+<code class="xref c c-macro docutils literal"><span class="pre">K_SEM_DEFINE()</span></code>) automatically do this. However, uninitialized
+kernel objects need to be tagged like this:</li>
+</ul>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">__kernel</span> <span class="k">struct</span> <span class="n">k_sem</span> <span class="n">my_sem</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Any memory reserved for a kernel object must be used exclusively for that
+object. Kernel objects may not be members of a union data type.</li>
+</ul>
+<p>Kernel objects that are found but do not meet the above conditions will not be
+included in the generated table that is used to validate kernel object pointers
+passed in from user mode.</p>
+<p>The debug output of the <code class="docutils literal"><span class="pre">gen_kobject_list.py</span></code> script may be useful when
+debugging why some object was unexpectedly not being tracked. This
+information will be printed if the script is run with the <code class="docutils literal"><span class="pre">--verbose</span></code> flag,
+or if the build system is invoked with verbose output.</p>
+<div class="section" id="implementation-details">
+<h3>Implementation Details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">gen_kobject_list.py</span></code> script is a post-build step which finds all the
+valid kernel object instances in the binary. It accomplishes this by parsing
+the DWARF debug information present in the generated ELF file for the kernel.</p>
+<p>Any instances of structs or arrays corresponding to kernel objects that meet
+the object placement criteria will have their memory addresses placed in a
+special perfect hash table of kernel objects generated by the ‘gperf’ tool.
+When a system call is made and the kernel is presented with a memory address
+of what may or may not be a valid kernel object, the address can be validated
+with a constant-time lookup in this table.</p>
+<p>Drivers are a special case. All drivers are instances of <code class="xref c c-type docutils literal"><span class="pre">struct</span>
+<span class="pre">device</span></code>, but it is important to know what subsystem a driver belongs to so that
+incorrect operations, such as calling a UART API on a sensor driver object, can
+be prevented. When a device struct is found, its API pointer is examined to
+determine what subsystem the driver belongs to.</p>
+<p>The table itself maps kernel object memory addresses to instances of
+<code class="xref c c-type docutils literal"><span class="pre">struct</span> <span class="pre">_k_object</span></code>, which has all the metadata for that object. This
+includes:</p>
+<ul class="simple">
+<li>A bitfield indicating permissions on that object. All threads have a
+numerical ID assigned to them at build time, used to index the permission
+bitfield for an object to see if that thread has permission on it. The size
+of this bitfield is controlled by the <a class="reference internal" href="../../reference/kconfig/CONFIG_MAX_THREAD_BYTES.html#cmdoption-arg-config-max-thread-bytes"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_MAX_THREAD_BYTES</span></code></a>
+option and the build system will generate an error if this value is too low.</li>
+<li>A type field indicating what kind of object this is, which is some
+instance of <code class="xref cpp cpp-enum docutils literal"><span class="pre">k_objects</span></code>.</li>
+<li>A set of flags for that object. This is currently used to track
+initialization state and whether an object is public or not.</li>
+<li>An extra data field. This is currently used for thread stack objects
+to denote how large the stack is, and for thread objects to indicate
+the thread’s index in kernel object permission bitfields.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="supervisor-thread-access-permission">
+<h2>Supervisor Thread Access Permission<a class="headerlink" href="#supervisor-thread-access-permission" title="Permalink to this headline">¶</a></h2>
+<p>Supervisor threads can access any kernel object. However, permissions for
+supervisor threads are still tracked for two reasons:</p>
+<ul class="simple">
+<li>If a supervisor thread calls <a class="reference internal" href="../../api/kernel_api.html#_CPPv224k_thread_user_mode_enter16k_thread_entry_tPvPvPv" title="k_thread_user_mode_enter"><code class="xref cpp cpp-func docutils literal"><span class="pre">k_thread_user_mode_enter()</span></code></a>, the
+thread will then run in user mode with any permissions it had been granted
+(in many cases, by itself) when it was a supervisor thread.</li>
+<li>If a supervisor thread creates a user thread with the
+<a class="reference internal" href="../../api/kernel_api.html#c.K_INHERIT_PERMS" title="K_INHERIT_PERMS"><code class="xref c c-macro docutils literal"><span class="pre">K_INHERIT_PERMS</span></code></a> option, the child thread will be granted the
+same permissions as the parent thread, except the parent thread object.</li>
+</ul>
+</div>
+<div class="section" id="user-thread-access-permission">
+<h2>User Thread Access Permission<a class="headerlink" href="#user-thread-access-permission" title="Permalink to this headline">¶</a></h2>
+<p>By default, when a user thread is created, it will only have access permissions
+on its own thread object. Other kernel objects by default are not usable.
+Access to them needs to be explicitly or implicitly granted. There are several
+ways to do this.</p>
+<ul class="simple">
+<li>If a thread is created with the <a class="reference internal" href="../../api/kernel_api.html#c.K_INHERIT_PERMS" title="K_INHERIT_PERMS"><code class="xref c c-macro docutils literal"><span class="pre">K_INHERIT_PERMS</span></code></a>, that thread
+will inherit all the permissions of the parent thread, except the parent
+thread object.</li>
+<li>A thread that has permission on an object, or is running in supervisor mode,
+may grant permission on that object to another thread via the
+<code class="xref c c-func docutils literal"><span class="pre">k_object_access_grant()</span></code> API. The convenience function
+<code class="xref c c-func docutils literal"><span class="pre">k_thread_access_grant()</span></code> may also be used, which accepts a
+NULL-terminated list of kernel objects and calls
+<code class="xref c c-func docutils literal"><span class="pre">k_object_access_grant()</span></code> on each of them. The thread being granted
+permission, or the object whose access is being granted, do not need to be in
+an initialized state. If the caller is from user mode, the caller must have
+permissions on both the kernel object and the target thread object.</li>
+<li>Supervisor threads may declare a particular kernel object to be a public
+object, usable by all current and future threads with the
+<code class="xref c c-func docutils literal"><span class="pre">k_object_access_all_grant()</span></code> API. You must assume that any
+untrusted or exploited code will then be able to access the object. Use
+this API with caution!</li>
+<li>If a thread was declared statically with <code class="xref c c-macro docutils literal"><span class="pre">K_THREAD_DEFINE()</span></code>,
+then the <code class="xref c c-macro docutils literal"><span class="pre">K_THREAD_ACCESS_GRANT()</span></code> may be used to grant that thread
+access to a set of kernel objects at boot time.</li>
+</ul>
+<p>Once a thread has been granted access to an object, such access may be
+removed with the <code class="xref c c-func docutils literal"><span class="pre">k_object_access_revoke()</span></code> API. User threads using
+this API must have permission on both the object in question, and the thread
+object that is having access revoked.</p>
+<p>API calls from supervisor mode to set permissions on kernel objects that are
+not being tracked by the kernel will be no-ops. Doing the same from user mode
+will result in a fatal error for the calling thread.</p>
+</div>
+<div class="section" id="initialization-state">
+<h2>Initialization State<a class="headerlink" href="#initialization-state" title="Permalink to this headline">¶</a></h2>
+<p>Most operations on kernel objects will fail if the object is considered to be
+in an uninitialized state. The appropriate init function for the object must
+be performed first.</p>
+<p>Some objects will be implicitly initialized at boot:</p>
+<ul class="simple">
+<li>Kernel objects that were declared with static initialization macros
+(such as <a class="reference internal" href="../../api/kernel_api.html#c.K_SEM_DEFINE" title="K_SEM_DEFINE"><code class="xref c c-macro docutils literal"><span class="pre">K_SEM_DEFINE</span></code></a> for semaphores) will be in an initialized
+state at build time.</li>
+<li>Device driver objects are considered initialized after their init function
+is run by the kernel early in the boot process.</li>
+</ul>
+<p>If a kernel object is initialized with a private static initializer, the
+object must have <code class="xref c c-func docutils literal"><span class="pre">_k_object_init()</span></code> on it at some point by a supervisor
+thread, otherwise the kernel will consider the object uninitialized if accessed
+by a user thread. This is very uncommon, typically only for kernel objects that
+are embedded within some larger struct and initialized statically.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">foo</span> <span class="p">{</span>
+    <span class="k">struct</span> <span class="n">k_sem</span> <span class="n">sem</span><span class="p">;</span>
+    <span class="p">...</span>
+<span class="p">};</span>
+
+<span class="n">__kernel</span> <span class="k">struct</span> <span class="n">foo</span> <span class="n">my_foo</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">.</span><span class="n">sem</span> <span class="o">=</span> <span class="n">_K_SEM_INITIALIZER</span><span class="p">(</span><span class="n">my_foo</span><span class="p">.</span><span class="n">sem</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">...</span>
+<span class="p">};</span>
+
+<span class="p">...</span>
+<span class="n">_k_object_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">my_foo</span><span class="p">.</span><span class="n">sem</span><span class="p">);</span>
+<span class="p">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-new-kernel-object-types">
+<h2>Creating New Kernel Object Types<a class="headerlink" href="#creating-new-kernel-object-types" title="Permalink to this headline">¶</a></h2>
+<p>When implementing new kernel features or driver subsystems, it may be necessary
+to define some new kernel object types. There are different steps needed
+for creating core kernel objects and new driver subsystems.</p>
+<div class="section" id="creating-new-core-kernel-objects">
+<h3>Creating New Core Kernel Objects<a class="headerlink" href="#creating-new-core-kernel-objects" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>In <code class="docutils literal"><span class="pre">scripts/gen_kobject_list.py</span></code>, add the name of the struct to the
+<code class="xref py py-data docutils literal"><span class="pre">kobjects</span></code> list.</li>
+<li>The name of the enumerated type is derived from the name of the struct.
+Take the name of the struct, remove the first two characters, convert to
+uppercase, and prepend <code class="docutils literal"><span class="pre">K_OBJ_</span></code> to it. Add the enum to
+<code class="xref cpp cpp-enum docutils literal"><span class="pre">k_objects</span></code> in include/kernel.h. For example, <code class="docutils literal"><span class="pre">struct</span> <span class="pre">k_foo</span></code>
+should be enumerated as <code class="docutils literal"><span class="pre">K_OBJ_FOO</span></code>.</li>
+<li>Add a string representation for the enum to the
+<code class="xref c c-func docutils literal"><span class="pre">otype_to_str()</span></code> function in kernel/userspace.c</li>
+</ul>
+<p>Instances of the new struct should now be tracked.</p>
+</div>
+<div class="section" id="creating-new-driver-subsystem-kernel-objects">
+<h3>Creating New Driver Subsystem Kernel Objects<a class="headerlink" href="#creating-new-driver-subsystem-kernel-objects" title="Permalink to this headline">¶</a></h3>
+<p>All driver instances are <code class="xref c c-type docutils literal"><span class="pre">struct</span> <span class="pre">device</span></code>. They are differentiated by
+what API struct they are set to.</p>
+<ul class="simple">
+<li>In <code class="docutils literal"><span class="pre">scripts/gen_kobject_list.py</span></code>, add the name of the API struct for the
+new subsystem to the <code class="xref py py-data docutils literal"><span class="pre">subsystems</span></code> list.</li>
+<li>Take the name of the API struct, remove the trailing “_driver_api” from its
+name, convert to uppercase, and prepend <code class="docutils literal"><span class="pre">K_OBJ_DRIVER_</span></code> to it. This is
+the name of the enumerated type, which should be added to
+<code class="xref cpp cpp-enum docutils literal"><span class="pre">k_objects</span></code> in include/kernel.h. For example, <code class="docutils literal"><span class="pre">foo_driver_api</span></code>
+should be enumerated as <code class="docutils literal"><span class="pre">K_OBJ_DRIVER_FOO</span></code>.</li>
+<li>Add a string representation for the enum to the
+<code class="xref c c-func docutils literal"><span class="pre">otype_to_str()</span></code> function in <code class="docutils literal"><span class="pre">kernel/userspace.c</span></code></li>
+</ul>
+<p>Driver instances of the new subsystem should now be tracked.</p>
+</div>
+</div>
+<div class="section" id="configuration-options">
+<h2>Configuration Options<a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h2>
+<p>Related configuration options:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../reference/kconfig/CONFIG_USERSPACE.html#cmdoption-arg-config-userspace"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_USERSPACE</span></code></a></li>
+<li><a class="reference internal" href="../../reference/kconfig/CONFIG_APPLICATION_MEMORY.html#cmdoption-arg-config-application-memory"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_APPLICATION_MEMORY</span></code></a></li>
+<li><a class="reference internal" href="../../reference/kconfig/CONFIG_MAX_THREAD_BYTES.html#cmdoption-arg-config-max-thread-bytes"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_MAX_THREAD_BYTES</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="apis">
+<h2>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="xref c c-func docutils literal"><span class="pre">k_object_access_grant()</span></code></li>
+<li><code class="xref c c-func docutils literal"><span class="pre">k_object_access_revoke()</span></code></li>
+<li><code class="xref c c-func docutils literal"><span class="pre">k_object_access_all_grant()</span></code></li>
+<li><code class="xref c c-func docutils literal"><span class="pre">k_thread_access_grant()</span></code></li>
+<li><code class="xref c c-func docutils literal"><span class="pre">k_thread_user_mode_enter()</span></code></li>
+<li><code class="xref c c-macro docutils literal"><span class="pre">K_THREAD_ACCESS_GRANT()</span></code></li>
+</ul>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="syscalls.html" class="btn btn-neutral float-right" title="System Calls" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="usermode.html" class="btn btn-neutral" title="User Mode" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

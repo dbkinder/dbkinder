@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_TEST
+
+.. option:: CONFIG_NET_TEST
+.. _CONFIG_NET_TEST:
+
+Used for self-contained networking tests that do not require a
+network device.
+
+
+
+:Symbol:           NET_TEST
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Network Testing"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig:257

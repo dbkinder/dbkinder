@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: SOC_MSP432P401R
+
+.. option:: CONFIG_SOC_MSP432P401R
+.. _CONFIG_SOC_MSP432P401R:
+
+The configuration item CONFIG_SOC_MSP432P401R:
+
+:Symbol:           SOC_MSP432P401R
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "MSP432P401R"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_HAS_MSP432P4XXSDK`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/ti_simplelink/msp432p4xx/Kconfig.soc:12

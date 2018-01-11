@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: BT_MESH_LOW_POWER
+
+.. option:: CONFIG_BT_MESH_LOW_POWER
+.. _CONFIG_BT_MESH_LOW_POWER:
+
+Enable this option to be able to act as a Low Power Node.
+
+
+
+:Symbol:           BT_MESH_LOW_POWER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Support for Low Power features"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:195

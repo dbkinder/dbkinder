@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_TCP_CHECKSUM
+
+.. option:: CONFIG_NET_TCP_CHECKSUM
+.. _CONFIG_NET_TCP_CHECKSUM:
+
+Enables TCP handler to check TCP checksum. If the checksum is invalid,
+then the packet is discarded.
+
+
+
+:Symbol:           NET_TCP_CHECKSUM
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Check TCP checksum" if NET_TCP (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: NET_TCP (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig:103

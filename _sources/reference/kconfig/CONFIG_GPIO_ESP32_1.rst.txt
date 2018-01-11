@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: GPIO_ESP32_1
+
+.. option:: CONFIG_GPIO_ESP32_1
+.. _CONFIG_GPIO_ESP32_1:
+
+Include support for GPIO pins 32-39 on the ESP32.
+
+
+
+:Symbol:           GPIO_ESP32_1
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "ESP32 GPIO (pins 32-39)"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_ESP32 && GPIO (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.esp32:33

@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: APPLICATION_MEMORY
+
+.. option:: CONFIG_APPLICATION_MEMORY
+.. _CONFIG_APPLICATION_MEMORY:
+
+For all read-write memory sections (namely bss, noinit, data),
+separate them into application and kernel areas. The application area
+will have the project-level application objects and any libraries
+including the C library in it.
+
+
+
+:Symbol:           APPLICATION_MEMORY
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Split kernel and application memory"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../kernel/Kconfig:162

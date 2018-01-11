@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: LPD880X_STRIP_SPI_DEV_NAME
+
+.. option:: CONFIG_LPD880X_STRIP_SPI_DEV_NAME
+.. _CONFIG_LPD880X_STRIP_SPI_DEV_NAME:
+
+Specify the device name of the SPI master which the
+LPD880X driver should use to control the LED strip.
+Examples: SPI_0, SPI_1, etc.
+
+
+
+:Symbol:           LPD880X_STRIP_SPI_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SPI master to use to drive the strip"
+:Default values:
+
+ *  ""
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LPD880X_STRIP && LED_STRIP (value: "n")
+:Locations:
+ * ../drivers/led_strip/Kconfig.lpd880x:31

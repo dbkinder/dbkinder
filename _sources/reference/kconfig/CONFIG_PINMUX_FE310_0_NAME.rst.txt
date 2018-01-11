@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: PINMUX_FE310_0_NAME
+
+.. option:: CONFIG_PINMUX_FE310_0_NAME
+.. _CONFIG_PINMUX_FE310_0_NAME:
+
+The configuration item CONFIG_PINMUX_FE310_0_NAME:
+
+:Symbol:           PINMUX_FE310_0_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "FE310 pinmux 0 driver name"
+:Default values:
+
+ *  "pinmux0"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ PINMUX_FE310 && PINMUX (value: "n")
+:Locations:
+ * ../drivers/pinmux/Kconfig.fe310:17

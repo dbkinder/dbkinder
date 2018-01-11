@@ -1,0 +1,53 @@
+:orphan:
+
+.. title:: PINMUX_MCUX_PORTC
+
+.. option:: CONFIG_PINMUX_MCUX_PORTC
+.. _CONFIG_PINMUX_MCUX_PORTC:
+
+Enable Port C.
+
+
+
+:Symbol:           PINMUX_MCUX_PORTC
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port C"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: UART_MCUX_LPUART_0 || I2C_1 (value: "n")
+ *  y (value: "y")
+ *   Condition: SPI_0 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ PINMUX_MCUX && BOARD_FRDM_KL25Z (value: "n")
+:Locations:
+ * ../drivers/pinmux/Kconfig.mcux:39
+ * ../boards/arm/hexiwear_k64/Kconfig.defconfig:46
+ * ../boards/arm/frdm_kw41z/Kconfig.defconfig:33
+ * ../boards/arm/frdm_k64f/Kconfig.defconfig:46
+ * ../boards/arm/usb_kw24d512/Kconfig.defconfig:48
+ * ../boards/arm/hexiwear_kw40z/Kconfig.defconfig:30
+ * ../boards/arm/frdm_kl25z/Kconfig.defconfig:39

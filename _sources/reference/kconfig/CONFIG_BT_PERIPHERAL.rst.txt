@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: BT_PERIPHERAL
+
+.. option:: CONFIG_BT_PERIPHERAL
+.. _CONFIG_BT_PERIPHERAL:
+
+Select this for LE Peripheral role support.
+
+
+
+:Symbol:           BT_PERIPHERAL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Peripheral Role support"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: BT_HCI_RAW (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_BT_BROADCASTER`
+ *  :option:`CONFIG_BT_CONN`
+:Reverse (select-related) dependencies:
+ BT_HCI && BT && BT_HCI_HOST && BT_BREDR || NETWORKING && NETWORKING && NET_L2_BT (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT (value: "n")
+:Locations:
+ * ../subsys/bluetooth/Kconfig:46

@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: BT_CTLR_DTM
+
+.. option:: CONFIG_BT_CTLR_DTM
+.. _CONFIG_BT_CTLR_DTM:
+
+Enable support for Direct Test Mode in the Controller.
+
+
+
+:Symbol:           BT_CTLR_DTM
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BT_HCI && BT && BT_CTLR && BT_CTLR_DTM_HCI (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:214

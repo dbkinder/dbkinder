@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: OUTPUT_STAT
+
+.. option:: CONFIG_OUTPUT_STAT
+.. _CONFIG_OUTPUT_STAT:
+
+Create a stat file using readelf -e <elf>
+
+
+
+:Symbol:           OUTPUT_STAT
+:Type:             bool
+:Value:            "y"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Create a statistics file"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../misc/Kconfig:160

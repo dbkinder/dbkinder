@@ -1,0 +1,787 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Architecture Porting Guide &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="Porting Guides" href="porting.html"/>
+        <link rel="next" title="Board Porting Guide" href="board_porting.html"/>
+        <link rel="prev" title="Porting Guides" href="porting.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+          <a href="../application/index.html">Developer Guides</a> /
+      
+          <a href="porting.html">Porting Guides</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../application/index.html">Developer Guides</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="porting.html">Porting Guides</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Architecture Porting Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="board_porting.html">Board Porting Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ip-stack-migrate.html">Migrating from Zephyr v1.6 IP Stack to v1.7</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../application/application.html">Application Development Primer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../samples/samples.html">Samples and Demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/kconfig/index.html">Configuration Options Reference Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/api.html">API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html">Zephyr documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="architecture-porting-guide">
+<span id="id1"></span><h1>Architecture Porting Guide<a class="headerlink" href="#architecture-porting-guide" title="Permalink to this headline">¶</a></h1>
+<p>An architecture port is needed to enable Zephyr to run on an <abbr title="instruction set architecture">ISA</abbr> or an <abbr title="Application Binary Interface">ABI</abbr> that is not currently supported.</p>
+<p>The following are examples of ISAs and ABIs that Zephyr supports:</p>
+<ul class="simple">
+<li>x86_32 ISA with System V ABI</li>
+<li>x86_32 ISA with IAMCU ABI</li>
+<li>ARMv7-M ISA with Thumb2 instruction set and ARM Embedded ABI (aeabi)</li>
+<li>ARCv2 ISA</li>
+</ul>
+<p>An architecture port can be divided in several parts; most are required and
+some are optional:</p>
+<ul class="simple">
+<li><strong>The early boot sequence</strong>: each architecture has different steps it must
+take when the CPU comes out of reset (required).</li>
+<li><strong>Interrupt and exception handling</strong>: each architecture handles asynchronous
+and unrequested events in a specific manner (required).</li>
+<li><strong>Thread context switching</strong>: the Zephyr context switch is dependent on the
+ABI and each ISA has a different set of registers to save (required).</li>
+<li><strong>Thread creation and termination</strong>: A thread’s initial stack frame is ABI
+and architecture-dependent, and thread abortion possibly as well (required).</li>
+<li><strong>Device drivers</strong>: most often, the system clock timer and the interrupt
+controller are tied to the architecture (some required, some optional).</li>
+<li><strong>Utility libraries</strong>: some common kernel APIs rely on a
+architecture-specific implementation for performance reasons (required).</li>
+<li><strong>CPU idling/power management</strong>: most architectures implement instructions
+for putting the CPU to sleep (partly optional, most likely very desired).</li>
+<li><strong>Fault management</strong>: for implementing architecture-specific debug help and
+handling of fatal error in threads (partly optional).</li>
+<li><strong>Linker scripts and toolchains</strong>: architecture-specific details will most
+likely be needed in the build system and when linking the image (required).</li>
+</ul>
+<div class="section" id="early-boot-sequence">
+<h2>Early Boot Sequence<a class="headerlink" href="#early-boot-sequence" title="Permalink to this headline">¶</a></h2>
+<p>The goal of the early boot sequence is to take the system from the state it is
+after reset to a state where is can run C code and thus the common kernel
+initialization sequence. Most of the time, very few steps are needed, while
+some architectures require a bit more work to be performed.</p>
+<p>Common steps for all architectures:</p>
+<ul class="simple">
+<li>Setup an initial stack.</li>
+<li>If running an <abbr title="eXecute-In-Place">XIP</abbr> kernel, copy initialized data</li>
+<li>from ROM to RAM.</li>
+<li>If not using an ELF loader, zero the BSS section.</li>
+<li>Jump to <code class="code docutils literal"><span class="pre">_Cstart()</span></code>, the early kernel initialization<ul>
+<li><code class="code docutils literal"><span class="pre">_Cstart()</span></code> is responsible for context switching out of the fake
+context running at startup into the main thread.</li>
+</ul>
+</li>
+</ul>
+<p>Some examples of architecture-specific steps that have to be taken:</p>
+<ul class="simple">
+<li>If given control in real mode on x86_32, switch to 32-bit protected mode.</li>
+<li>Setup the segment registers on x86_32 to handle boot loaders that leave them
+in an unknown or broken state.</li>
+<li>Initialize a board-specific watchdog on Cortex-M3/4.</li>
+<li>Switch stacks from MSP to PSP on Cortex-M.</li>
+<li>Use a different approach than calling into _Swap() on Cortex-M to prevent
+race conditions.</li>
+<li>Setup FIRQ and regular IRQ handling on ARCv2.</li>
+</ul>
+</div>
+<div class="section" id="interrupt-and-exception-handling">
+<h2>Interrupt and Exception Handling<a class="headerlink" href="#interrupt-and-exception-handling" title="Permalink to this headline">¶</a></h2>
+<p>Each architecture defines interrupt and exception handling differently.</p>
+<p>When a device wants to signal the processor that there is some work to be done
+on its behalf, it raises an interrupt. When a thread does an operation that is
+not handled by the serial flow of the software itself, it raises an exception.
+Both, interrupts and exceptions, pass control to a handler. The handler is
+known as an <abbr title="Interrupt Service Routine">ISR</abbr> in the case of
+interrupts. The handler perform the work required the exception or the
+interrupt.  For interrupts, that work is device-specific. For exceptions, it
+depends on the exception, but most often the core kernel itself is responsible
+for providing the handler.</p>
+<p>The kernel has to perform some work in addition to the work the handler itself
+performs. For example:</p>
+<ul class="simple">
+<li>Prior to handing control to the handler:<ul>
+<li>Save the currently executing context.</li>
+<li>Possibly getting out of power saving mode, which includes waking up
+devices.</li>
+<li>Updating the kernel uptime if getting out of tickless idle mode.</li>
+</ul>
+</li>
+<li>After getting control back from the handler:<ul>
+<li>Decide whether to perform a context switch.</li>
+<li>When performing a context switch, restore the context being context
+switched in.</li>
+</ul>
+</li>
+</ul>
+<p>This work is conceptually the same across architectures, but the details are
+completely different:</p>
+<ul class="simple">
+<li>The registers to save and restore.</li>
+<li>The processor instructions to perform the work.</li>
+<li>The numbering of the exceptions.</li>
+<li>etc.</li>
+</ul>
+<p>It thus needs an architecture-specific implementation, called the
+interrupt/exception stub.</p>
+<p>Another issue is that the kernel defines the signature of ISRs as:</p>
+<div class="highlight-C"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">isr</span><span class="p">)(</span><span class="kt">void</span> <span class="o">*</span><span class="n">parameter</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Architectures do not have a consistent or native way of handling parameters to
+an ISR. As such there are two commonly used methods for handling the
+parameter.</p>
+<ul class="simple">
+<li>Using some architecture defined mechanism, the parameter value is forced in
+the stub. This is commonly found in X86-based architectures.</li>
+<li>The parameters to the ISR are inserted and tracked via a separate table
+requiring the architecture to discover at runtime which interrupt is
+executing. A common interrupt handler demuxer is installed for all entries of
+the real interrupt vector table, which then fetches the device’s ISR and
+parameter from the separate table. This approach is commonly used in the ARC
+and ARM architectures via the <a class="reference internal" href="../reference/kconfig/CONFIG_GEN_ISR_TABLES.html#cmdoption-arg-config-gen-isr-tables"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_GEN_ISR_TABLES</span></code></a> implementation.
+You can find examples of the stubs by looking at <code class="code docutils literal"><span class="pre">_interrupt_enter()</span></code> in
+x86, <code class="code docutils literal"><span class="pre">_IntExit()</span></code> in ARM, <code class="code docutils literal"><span class="pre">_isr_wrapper()</span></code> in ARM, or the full
+implementation description for ARC in <code class="file docutils literal"><span class="pre">arch/arc/core/isr_wrapper.S</span></code>.</li>
+</ul>
+<p>Each architecture also has to implement primitives for interrupt control:</p>
+<ul class="simple">
+<li>locking interrupts: <a class="reference internal" href="../api/kernel_api.html#c.irq_lock" title="irq_lock"><code class="xref c c-func docutils literal"><span class="pre">irq_lock()</span></code></a>, <a class="reference internal" href="../api/kernel_api.html#c.irq_unlock" title="irq_unlock"><code class="xref c c-func docutils literal"><span class="pre">irq_unlock()</span></code></a>.</li>
+<li>registering interrupts: <a class="reference internal" href="../api/kernel_api.html#c.IRQ_CONNECT" title="IRQ_CONNECT"><code class="xref c c-func docutils literal"><span class="pre">IRQ_CONNECT()</span></code></a>.</li>
+<li>programming the priority if possible <code class="xref c c-func docutils literal"><span class="pre">irq_priority_set()</span></code>.</li>
+<li>enabling/disabling interrupts: <a class="reference internal" href="../api/kernel_api.html#c.irq_enable" title="irq_enable"><code class="xref c c-func docutils literal"><span class="pre">irq_enable()</span></code></a>, <a class="reference internal" href="../api/kernel_api.html#c.irq_disable" title="irq_disable"><code class="xref c c-func docutils literal"><span class="pre">irq_disable()</span></code></a>.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference internal" href="../api/kernel_api.html#c.IRQ_CONNECT" title="IRQ_CONNECT"><code class="xref c c-macro docutils literal"><span class="pre">IRQ_CONNECT</span></code></a> is a macro that uses assembler and/or linker script
+tricks to connect interrupts at build time, saving boot time and text size.</p>
+</div>
+<p>The vector table should contain a handler for each interrupt and exception that
+can possibly occur. The handler can be as simple as a spinning loop. However,
+we strongly suggest that handlers at least print some debug information. The
+information helps figuring out what went wrong when hitting an exception that
+is a fault, like divide-by-zero or invalid memory access, or an interrupt that
+is not expected (<em class="dfn">spurious interrupt</em>). See the ARM implementation in
+<code class="file docutils literal"><span class="pre">arch/arm/core/fault.c</span></code> for an example.</p>
+</div>
+<div class="section" id="thread-context-switching">
+<h2>Thread Context Switching<a class="headerlink" href="#thread-context-switching" title="Permalink to this headline">¶</a></h2>
+<p>Multi-threading is the basic purpose to have a kernel at all. Zephyr supports
+two types of threads: preemptible and cooperative.</p>
+<p>Two crucial concepts when writing an architecture port are the following:</p>
+<ul class="simple">
+<li>Cooperative threads run at a higher priority than preemptible ones, and
+always preempt them.</li>
+<li>After handling an interrupt, if a cooperative thread was interrupted, the
+kernel always goes back to running that thread, since it is not preemptible.</li>
+</ul>
+<p>A context switch can happen in several circumstances:</p>
+<ul class="simple">
+<li>When a thread executes a blocking operation, such as taking a semaphore that
+is currently unavailable.</li>
+<li>When a preemptible thread unblocks a thread of higher priority by releasing
+the object on which it was blocked.</li>
+<li>When an interrupt unblocks a thread of higher priority than the one currently
+executing, if the currently executing thread is preemptible.</li>
+<li>When a thread runs to completion.</li>
+<li>When a thread causes a fatal exception and is removed from the running
+threads. For example, referencing invalid memory,</li>
+</ul>
+<p>Therefore, the context switching must thus be able to handle all these cases.</p>
+<p>The kernel keeps the next thread to run in a “cache”, and thus the context
+switching code only has to fetch from that cache to select which thread to run.</p>
+<p>There are two types of context switches: <em class="dfn">cooperative</em> and <em class="dfn">preemptive</em>.</p>
+<ul class="simple">
+<li>A <em>cooperative</em> context switch happens when a thread willfully gives the
+control to another thread. There are two cases where this happens<ul>
+<li>When a thread explicitly yields.</li>
+<li>When a thread tries to take an object that is currently unavailable and is
+willing to wait until the object becomes available.</li>
+</ul>
+</li>
+<li>A <em>preemptive</em> context switch happens either because an ISR or a
+thread causes an operation that schedules a thread of higher priority than the
+one currently running, if the currently running thread is preemptible.
+An example of such an operation is releasing an object on which the thread
+of higher priority was waiting.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Control is never taken from cooperative thread when one of them is the
+running thread.</p>
+</div>
+<p>A cooperative context switch is always done by having a thread call the
+<code class="code docutils literal"><span class="pre">_Swap()</span></code> kernel internal symbol. When <code class="code docutils literal"><span class="pre">_Swap</span></code> is called, the
+kernel logic knows that a context switch has to happen: <code class="code docutils literal"><span class="pre">_Swap</span></code> does not
+check to see if a context switch must happen. Rather, <code class="code docutils literal"><span class="pre">_Swap</span></code> decides
+what thread to context switch in. <code class="code docutils literal"><span class="pre">_Swap</span></code> is called by the kernel logic
+when an object being operated on is unavailable, and some thread
+yielding/sleeping primitives.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">On x86 and Nios2, <code class="code docutils literal"><span class="pre">_Swap</span></code> is generic enough and the architecture
+flexible enough that <code class="code docutils literal"><span class="pre">_Swap</span></code> can be called when exiting an interrupt
+to provoke the context switch. This should not be taken as a rule, since
+neither the ARM Cortex-M or ARCv2 port do this.</p>
+</div>
+<p>Since <code class="code docutils literal"><span class="pre">_Swap</span></code> is cooperative, the caller-saved registers from the ABI are
+already on the stack. There is no need to save them in the k_thread structure.</p>
+<p>A context switch can also be performed preemptively. This happens upon exiting
+an ISR, in the kernel interrupt exit stub:</p>
+<ul class="simple">
+<li><code class="code docutils literal"><span class="pre">_interrupt_enter</span></code> on x86 after the handler is called.</li>
+<li><code class="code docutils literal"><span class="pre">_IntExit</span></code> on ARM.</li>
+<li><code class="code docutils literal"><span class="pre">_firq_exit</span></code> and <code class="code docutils literal"><span class="pre">_rirq_exit</span></code> on ARCv2.</li>
+</ul>
+<p>In this case, the context switch must only be invoked when the interrupted
+thread was preemptible, not when it was a cooperative one, and only when the
+current interrupt is not nested.</p>
+<p>The kernel also has the concept of “locking the scheduler”. This is a concept
+similar to locking the interrupts, but lighter-weight since interrupts can
+still occur. If a thread has locked the scheduler, is it temporarily
+non-preemptible.</p>
+<p>So, the decision logic to invoke the context switch when exiting an interrupt
+is simple:</p>
+<ul class="simple">
+<li>If the interrupted thread is not preemptible, do not invoke it.</li>
+<li>Else, fetch the cached thread from the ready queue, and:<ul>
+<li>If the cached thread is not the current thread, invoke the context switch.</li>
+<li>Else, do not invoke it.</li>
+</ul>
+</li>
+</ul>
+<p>This is simple, but crucial: if this is not implemented correctly, the kernel
+will not function as intended and will experience bizarre crashes, mostly due
+to stack corruption.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If running a coop-only system, i.e. if <a class="reference internal" href="../reference/kconfig/CONFIG_NUM_PREEMPT_PRIORITIES.html#cmdoption-arg-config-num-preempt-priorities"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_NUM_PREEMPT_PRIORITIES</span></code></a>
+is 0, no preemptive context switch ever happens. The interrupt code can be
+optimized to not take any scheduling decision when this is the case.</p>
+</div>
+</div>
+<div class="section" id="thread-creation-and-termination">
+<h2>Thread Creation and Termination<a class="headerlink" href="#thread-creation-and-termination" title="Permalink to this headline">¶</a></h2>
+<p>To start a new thread, a stack frame must be constructed so that the context
+switch can pop it the same way it would pop one from a thread that had been
+context switched out. This is to be implemented in an architecture-specific
+<code class="code docutils literal"><span class="pre">_new_thread</span></code> internal routine.</p>
+<p>The thread entry point is also not to be called directly, i.e. it should not be
+set as the <abbr title="program counter">PC</abbr> for the new thread. Rather it must be
+wrapped in <code class="code docutils literal"><span class="pre">_thread_entry</span></code>. This means that the PC in the stack
+frame shall be set to <code class="code docutils literal"><span class="pre">_thread_entry</span></code>, and the thread entry point shall
+be passed as the first parameter to <code class="code docutils literal"><span class="pre">_thread_entry</span></code>. The specifics of
+this depend on the ABI.</p>
+<p>The need for an architecture-specific thread termination implementation depends
+on the architecture. There is a generic implementation, but it might not work
+for a given architecture.</p>
+<p>One reason that has been encountered for having an architecture-specific
+implementation of thread termination is that aborting a thread might be
+different if aborting because of a graceful exit or because of an exception.
+This is the case for ARM Cortex-M, where the CPU has to be taken out of handler
+mode if the thread triggered a fatal exception, but not if the thread
+gracefully exits its entry point function.</p>
+<p>This means implementing an architecture-specific version of
+<code class="xref c c-func docutils literal"><span class="pre">k_thread_abort()</span></code>, and setting the Kconfig option
+<a class="reference internal" href="../reference/kconfig/CONFIG_ARCH_HAS_THREAD_ABORT.html#cmdoption-arg-config-arch-has-thread-abort"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_ARCH_HAS_THREAD_ABORT</span></code></a> as needed for the architecture (e.g. see
+<code class="file docutils literal"><span class="pre">arch/arm//core/cortex_m/Kconfig</span></code>).</p>
+</div>
+<div class="section" id="device-drivers">
+<h2>Device Drivers<a class="headerlink" href="#device-drivers" title="Permalink to this headline">¶</a></h2>
+<p>The kernel requires very few hardware devices to function. In theory, the only
+required device is the interrupt controller, since the kernel can run without a
+system clock. In practice, to get access to most, if not all, of the sanity
+check test suite, a system clock is needed as well. Since these two are usually
+tied to the architecture, they are part of the architecture port.</p>
+<div class="section" id="interrupt-controllers">
+<h3>Interrupt Controllers<a class="headerlink" href="#interrupt-controllers" title="Permalink to this headline">¶</a></h3>
+<p>There can be significant differences between the interrupt controllers and the
+interrupt concepts across architectures.</p>
+<p>For example, x86 has the concept of an <abbr title="Interrupt Descriptor Table">IDT</abbr>
+and different interrupt controllers. Although modern systems mostly
+standardized on the <abbr title="Advanced Programmable Interrupt Controller">APIC</abbr>,
+some small Quark-based systems use the <abbr title="Micro-controller Vectored Interrupt Controller">MVIC</abbr>. Also, the position of an interrupt in the IDT
+determines its priority.</p>
+<p>On the other hand, the ARM Cortex-M has the <abbr title="Nested Vectored Interrupt Controller">NVIC</abbr> as part of the architecture definition. There is no need
+for an IDT-like table that is separate from the NVIC vector table. The position
+in the table has nothing to do with priority of an IRQ: priorities are
+programmable per-entry.</p>
+<p>The ARCv2 has its interrupt unit as part of the architecture definition, which
+is somewhat similar to the NVIC. However, where ARC defines interrupts as
+having a one-to-one mapping between exception and interrupt numbers (i.e.
+exception 1 is IRQ1, and device IRQs start at 16), ARM has IRQ0 being
+equivalent to exception 16 (and weirdly enough, exception 1 can be seen as
+IRQ-15).</p>
+<p>All these differences mean that very little, if anything, can be shared between
+architectures with regards to interrupt controllers.</p>
+</div>
+<div class="section" id="system-clock">
+<h3>System Clock<a class="headerlink" href="#system-clock" title="Permalink to this headline">¶</a></h3>
+<p>x86 has APIC timers and the HPET as part of its architecture definition. ARM
+Cortex-M has the SYSTICK exception. Finally, ARCv2 has the timer0/1 device.</p>
+<p>Kernel timeouts are handled in the context of the system clock timer driver’s
+interrupt handler.</p>
+<div class="section" id="tickless-idle">
+<h4>Tickless Idle<a class="headerlink" href="#tickless-idle" title="Permalink to this headline">¶</a></h4>
+<p>The kernel has support for tickless idle. Tickless idle is the concept where no
+system clock timer interrupt is to be delivered to the CPU when the kernel is
+about to go idle and the closest timeout expiry is passed a certain threshold.
+When this condition happens, the system clock is reprogrammed far in the future
+instead of for a periodic tick. For this to work, the system clock timer driver
+must support it.</p>
+<p>Tickless idle is optional but strongly recommended to achieve low-power
+consumption.</p>
+<p>The kernel has built-in support for going into tickless idle.</p>
+<p>The system clock timer driver must implement some hooks to support tickless
+idle. See existing drivers for examples.</p>
+<p>The interrupt entry stub (<code class="code docutils literal"><span class="pre">_interrupt_enter</span></code>, <code class="code docutils literal"><span class="pre">_isr_wrapper</span></code>) needs
+to be adapted to handle exiting tickless idle. See examples in the code for
+existing architectures.</p>
+</div>
+</div>
+<div class="section" id="console-over-serial-line">
+<h3>Console Over Serial Line<a class="headerlink" href="#console-over-serial-line" title="Permalink to this headline">¶</a></h3>
+<p>There is one other device that is almost a requirement for an architecture
+port, since it is so useful for debugging. It is a simple polling, output-only,
+serial port driver on which to send the console (<code class="code docutils literal"><span class="pre">printk</span></code>,
+<code class="code docutils literal"><span class="pre">printf</span></code>) output.</p>
+<p>It is not required, and a RAM console (<a class="reference internal" href="../reference/kconfig/CONFIG_RAM_CONSOLE.html#cmdoption-arg-config-ram-console"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_RAM_CONSOLE</span></code></a>)
+can be used to send all output to a circular buffer that can be read
+by a debugger instead.</p>
+</div>
+</div>
+<div class="section" id="utility-libraries">
+<h2>Utility Libraries<a class="headerlink" href="#utility-libraries" title="Permalink to this headline">¶</a></h2>
+<p>The kernel depends on a few functions that can be implemented with very few
+instructions or in a lock-less manner in modern processors. Those are thus
+expected to be implemented as part of an architecture port.</p>
+<ul class="simple">
+<li>Atomic operators.<ul>
+<li>If instructions do not exist for a given architecture,
+a generic version that wraps <a class="reference internal" href="../api/kernel_api.html#c.irq_lock" title="irq_lock"><code class="xref c c-func docutils literal"><span class="pre">irq_lock()</span></code></a> or <a class="reference internal" href="../api/kernel_api.html#c.irq_unlock" title="irq_unlock"><code class="xref c c-func docutils literal"><span class="pre">irq_unlock()</span></code></a>
+around non-atomic operations exists. It is configured using the
+<a class="reference internal" href="../reference/kconfig/CONFIG_ATOMIC_OPERATIONS_C.html#cmdoption-arg-config-atomic-operations-c"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_ATOMIC_OPERATIONS_C</span></code></a> Kconfig option.</li>
+</ul>
+</li>
+<li>Find-least-significant-bit-set and find-most-significant-bit-set.<ul>
+<li>If instructions do not exist for a given architecture, it is always
+possible to implement these functions as generic C functions.</li>
+</ul>
+</li>
+</ul>
+<p>It is possible to use compiler built-ins to implement these, but be careful
+they use the required compiler barriers.</p>
+</div>
+<div class="section" id="cpu-idling-power-management">
+<h2>CPU Idling/Power Management<a class="headerlink" href="#cpu-idling-power-management" title="Permalink to this headline">¶</a></h2>
+<p>The kernel provides support for CPU power management with two functions:
+<code class="xref c c-func docutils literal"><span class="pre">k_cpu_idle()</span></code> and <code class="xref c c-func docutils literal"><span class="pre">k_cpu_atomic_idle()</span></code>.</p>
+<p><code class="xref c c-func docutils literal"><span class="pre">k_cpu_idle()</span></code> can be as simple as calling the power saving instruction
+for the architecture with interrupts unlocked, for example <code class="code docutils literal"><span class="pre">hlt</span></code> on x86,
+<code class="code docutils literal"><span class="pre">wfi</span></code> or <code class="code docutils literal"><span class="pre">wfe</span></code> on ARM, <code class="code docutils literal"><span class="pre">sleep</span></code> on ARC. This function can be
+called in a loop within a context that does not care if it get interrupted or
+not by an interrupt before going to sleep. There are basically two scenarios
+when it is correct to use this function:</p>
+<ul class="simple">
+<li>In a single-threaded system, in the only thread when the thread is not used
+for doing real work after initialization, i.e. it is sitting in a loop doing
+nothing for the duration of the application.</li>
+<li>In the idle thread.</li>
+</ul>
+<p><code class="xref c c-func docutils literal"><span class="pre">k_cpu_atomic_idle()</span></code>, on the other hand, must be able to atomically
+re-enable interrupts and invoke the power saving instruction. It can thus be
+used in real application code, again in single-threaded systems.</p>
+<p>Normally, idling the CPU should be left to the idle thread, but in some very
+special scenarios, these APIs can be used by applications.</p>
+<p>Both functions must exist for a given architecture. However, the implementation
+can be simply the following steps, if desired:</p>
+<ol class="arabic simple">
+<li>unlock interrupts</li>
+<li>NOP</li>
+</ol>
+<p>However, a real implementation is strongly recommended.</p>
+</div>
+<div class="section" id="fault-management">
+<h2>Fault Management<a class="headerlink" href="#fault-management" title="Permalink to this headline">¶</a></h2>
+<p>Each architecture provides two fatal error handlers:</p>
+<ul class="simple">
+<li><code class="code docutils literal"><span class="pre">_NanoFatalErrorHandler</span></code>, called by software for unrecoverable errors.</li>
+<li><code class="code docutils literal"><span class="pre">_SysFatalErrorHandler</span></code>, which makes the decision on how to handle
+the thread where the error is generated, most likely by terminating it.</li>
+</ul>
+<p>See the current architecture implementations for examples.</p>
+</div>
+<div class="section" id="toolchain-and-linking">
+<h2>Toolchain and Linking<a class="headerlink" href="#toolchain-and-linking" title="Permalink to this headline">¶</a></h2>
+<p>Toolchain support has to be added to the build system.</p>
+<p>Some architecture-specific definitions are needed in <code class="file docutils literal"><span class="pre">include/toolchain/gcc.h</span></code>.
+See what exists in that file for currently supported architectures.</p>
+<p>Each architecture also needs its own linker script, even if most sections can
+be derived from the linker scripts of other architectures. Some sections might
+be specific to the new architecture, for example the SCB section on ARM and the
+IDT section on x86.</p>
+<div class="section" id="hardware-stack-protection">
+<h3>Hardware Stack Protection<a class="headerlink" href="#hardware-stack-protection" title="Permalink to this headline">¶</a></h3>
+<p>This option uses hardware features to generate a fatal error if a thread
+in supervisor mode overflows its stack. This is useful for debugging, although
+for a couple reasons, you can’t reliably make any assertions about the state
+of the system after this happens:</p>
+<ul class="simple">
+<li>The kernel could have been inside a critical section when the overflow
+occurs, leaving important global data structures in a corrupted state.</li>
+<li>For systems that implement stack protection using a guard memory region,
+it’s possible to overshoot the guard and corrupt adjacent data structures
+before the hardware detects this situation.</li>
+</ul>
+<p>To enable the <a class="reference internal" href="../reference/kconfig/CONFIG_HW_STACK_PROTECTION.html#cmdoption-arg-config-hw-stack-protection"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_HW_STACK_PROTECTION</span></code></a> feature, the system must
+provide some kind of hardware-based stack overflow protection, and enable the
+<a class="reference internal" href="../reference/kconfig/CONFIG_ARCH_HAS_STACK_PROTECTION.html#cmdoption-arg-config-arch-has-stack-protection"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_ARCH_HAS_STACK_PROTECTION</span></code></a> option.</p>
+<p>There are no C APIs that need to be implemented to support stack protection,
+and it’s entirely implemented within the <code class="docutils literal"><span class="pre">arch/</span></code> code.  However in most cases
+(such as if a guard region needs to be defined) the architecture will need to
+declare its own versions of the K_THREAD_STACK macros in <code class="docutils literal"><span class="pre">arch/cpu.h</span></code>:</p>
+<ul class="simple">
+<li><code class="xref c c-macro docutils literal"><span class="pre">_ARCH_THREAD_STACK_DEFINE()</span></code></li>
+<li><code class="xref c c-macro docutils literal"><span class="pre">_ARCH_THREAD_STACK_ARRAY_DEFINE()</span></code></li>
+<li><code class="xref c c-macro docutils literal"><span class="pre">_ARCH_THREAD_STACK_MEMBER()</span></code></li>
+<li><code class="xref c c-macro docutils literal"><span class="pre">_ARCH_THREAD_STACK_SIZEOF()</span></code></li>
+</ul>
+<p>For systems that implement stack protection using a Memory Protection Unit
+(MPU) or Memory Management Unit (MMU), this is typically done by declaring a
+guard memory region immediately before the stack area.</p>
+<ul class="simple">
+<li>On MMU systems, this guard area is an entire page whose permissions in the
+page table will generate a fault on writes. This page needs to be
+configured in the arch’s _new_thread() function.</li>
+<li>On MPU systems, one of the MPU regions needs to be reserved for the thread
+stack guard area, whose size should be minimized. The region in the MPU
+should be reconfigured on context switch such that the guard region
+for the incoming thread is not writable.</li>
+</ul>
+</div>
+<div class="section" id="user-mode-threads">
+<h3>User Mode Threads<a class="headerlink" href="#user-mode-threads" title="Permalink to this headline">¶</a></h3>
+<p>To support user mode threads, several kernel-to-arch APIs need to be
+implemented, and the system must enable the <a class="reference internal" href="../reference/kconfig/CONFIG_ARCH_HAS_USERSPACE.html#cmdoption-arg-config-arch-has-userspace"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_ARCH_HAS_USERSPACE</span></code></a>
+option. Please see the documentation for each of these functions for more
+details:</p>
+<ul class="simple">
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">_arch_buffer_validate()</span></code> to test whether the current thread has
+access permissions to a particular memory region</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">_arch_user_mode_enter()</span></code> which will irreversibly drop a supervisor
+thread to user mode privileges. The stack must be wiped.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">_arch_syscall_oops()</span></code> which generates a kernel oops when system
+call parameters can’t be validated, in such a way that the oops appears to be
+generated from where the system call was invoked in the user thread</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">_arch_syscall_invoke0()</span></code> through
+<code class="xref cpp cpp-func docutils literal"><span class="pre">_arch_syscall_invoke6()</span></code> invoke a system call with the
+appropriate number of arguments which must all be passed in during the
+privilege elevation via registers.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">_arch_is_user_context()</span></code> return nonzero if the CPU is currently
+running in user mode</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">_arch_mem_domain_max_partitions_get()</span></code> which indicates the max
+number of regions for a memory domain. MMU systems have an unlimited amount,
+MPU systems have constraints on this.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">_arch_mem_domain_partition_remove()</span></code> Remove a partition from
+a memory domain if the currently executing thread was part of that domain.</li>
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">_arch_mem_domain_destroy()</span></code> Reset the thread’s memory domain
+configuration</li>
+</ul>
+<p>In addition to implementing these APIs, there are some other tasks as well:</p>
+<ul class="simple">
+<li><code class="xref cpp cpp-func docutils literal"><span class="pre">_new_thread()</span></code> needs to spawn threads with <a class="reference internal" href="../api/kernel_api.html#c.K_USER" title="K_USER"><code class="xref c c-macro docutils literal"><span class="pre">K_USER</span></code></a> in
+user mode</li>
+<li>On context switch, the outgoing thread’s stack memory should be marked
+inaccessible to user mode by making the appropriate configuration changes in
+the memory management hardware.. The incoming thread’s stack memory should
+likewise be marked as accessible. This ensures that threads can’t mess with
+other thread stacks.</li>
+<li>On context switch, the system needs to switch between memory domains for
+the incoming and outgoing threads.</li>
+<li>Thread stack areas must include a kernel stack region. This should be
+inaccessible to user threads at all times. This stack will be used when
+system calls are made. This should be fixed size for all threads, and must
+be large enough to handle any system call.</li>
+<li>A software interrupt or some kind of privilege elevation mechanism needs to
+be established. This is closely tied to how the _arch_syscall_invoke macros
+are implemented. On system call, the appropriate handler function needs to
+be looked up in _k_syscall_table. Bad system call IDs should jump to the
+<code class="xref cpp cpp-enum docutils literal"><span class="pre">K_SYSCALL_BAD</span></code> handler. Upon completion of the system call, care
+must be taken not to leak any register state back to user mode.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="board_porting.html" class="btn btn-neutral float-right" title="Board Porting Guide" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="porting.html" class="btn btn-neutral" title="Porting Guides" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

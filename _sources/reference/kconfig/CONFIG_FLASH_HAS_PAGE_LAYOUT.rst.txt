@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: FLASH_HAS_PAGE_LAYOUT
+
+.. option:: CONFIG_FLASH_HAS_PAGE_LAYOUT
+.. _CONFIG_FLASH_HAS_PAGE_LAYOUT:
+
+This option is enabled when the SoC flash driver supports
+retrieving the layout of flash memory pages.
+
+
+
+:Symbol:           FLASH_HAS_PAGE_LAYOUT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ FLASH && SOC_FAMILY_NRF5 && SOC_FLASH_NRF5 || SOC_SERIES_STM32F0X && (SOC_SERIES_STM32F0X || SOC_SERIES_STM32F3X || SOC_SERIES_STM32F4X || SOC_SERIES_STM32L4X) && FLASH && SOC_FAMILY_STM32 && SOC_FLASH_STM32 || SOC_SERIES_STM32F4X && (SOC_SERIES_STM32F0X || SOC_SERIES_STM32F3X || SOC_SERIES_STM32F4X || SOC_SERIES_STM32L4X) && FLASH && SOC_FAMILY_STM32 && SOC_FLASH_STM32 || SOC_SERIES_STM32L4X && (SOC_SERIES_STM32F0X || SOC_SERIES_STM32F3X || SOC_SERIES_STM32F4X || SOC_SERIES_STM32L4X) && FLASH && SOC_FAMILY_STM32 && SOC_FLASH_STM32 (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/Kconfig:253

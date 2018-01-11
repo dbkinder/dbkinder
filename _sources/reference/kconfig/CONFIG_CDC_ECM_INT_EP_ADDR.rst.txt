@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: CDC_ECM_INT_EP_ADDR
+
+.. option:: CONFIG_CDC_ECM_INT_EP_ADDR
+.. _CONFIG_CDC_ECM_INT_EP_ADDR:
+
+CDC ECM class interrupt endpoint address
+
+
+
+:Symbol:           CDC_ECM_INT_EP_ADDR
+:Type:             hex
+:Value:            "0x81"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0x81, 0x8F]
+:Prompts:
+
+ *  "CDC ECM Interrupt Endpoint address"
+:Default values:
+
+ *  0x83 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_NETWORK_ECM (value: "n")
+:Locations:
+ * ../subsys/usb/class/netusb/Kconfig:37

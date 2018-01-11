@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: IMG_BLOCK_BUF_SIZE
+
+.. option:: CONFIG_IMG_BLOCK_BUF_SIZE
+.. _CONFIG_IMG_BLOCK_BUF_SIZE:
+
+Size (in Bytes) of buffer for image writer. Must be a multiple of
+the access alignment required by used flash driver.
+
+
+
+:Symbol:           IMG_BLOCK_BUF_SIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Image writer buffer size" if MCUBOOT_IMG_MANAGER (value: "n")
+:Default values:
+
+ *  512 (value: "n")
+ *   Condition: MCUBOOT_IMG_MANAGER (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../subsys/dfu/Kconfig:35

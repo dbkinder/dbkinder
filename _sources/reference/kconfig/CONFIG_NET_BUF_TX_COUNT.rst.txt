@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_BUF_TX_COUNT
+
+.. option:: CONFIG_NET_BUF_TX_COUNT
+.. _CONFIG_NET_BUF_TX_COUNT:
+
+Each data buffer will occupy CONFIG_NET_BUF_DATA_SIZE + smallish
+header (sizeof(struct net_buf)) amount of data.
+
+
+
+:Symbol:           NET_BUF_TX_COUNT
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "How many network buffers are allocated for sending data"
+:Default values:
+
+ *  16 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig:315

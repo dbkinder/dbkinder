@@ -1,0 +1,800 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Zephyr Sanity Tests &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../index.html"/>
+        <link rel="up" title="Testing" href="index.html"/>
+        <link rel="next" title="USB device stack" href="../usb/usb.html"/>
+        <link rel="prev" title="Test Framework" href="ztest.html"/> 
+
+    
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../index.html">Docs</a> /
+      
+          <a href="../subsystems.html">Subsystems</a> /
+      
+          <a href="index.html">Testing</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../subsystems.html">Subsystems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_library.html">Standard C Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../networking/networking.html">Networking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power_management.html">Power Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor.html">Sensor Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shell.html">Shell</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Testing</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ztest.html">Test Framework</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Zephyr Sanity Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../usb/usb.html">USB device stack</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="zephyr-sanity-tests">
+<h1>Zephyr Sanity Tests<a class="headerlink" href="#zephyr-sanity-tests" title="Permalink to this headline">¶</a></h1>
+<p>This script scans for the set of unit test applications in the git repository
+and attempts to execute them. By default, it tries to build each test
+case on boards marked as default in the board definition file.</p>
+<p>The default options will build the majority of the tests on a defined set of
+boards and will run in an emulated environment (QEMU) if available for the
+architecture or configuration being tested.</p>
+<p>In normal use, sanitycheck runs a limited set of kernel tests (inside
+QEMU).  Because of its limited text execution coverage, sanitycheck
+cannot guarantee local changes will succeed in the full build
+environment, but it does sufficient testing by building samples and
+tests for different boards and different configurations to help keep the
+full code tree buildable.</p>
+<p>To run the script in the local tree, follow the steps below:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ source zephyr-env.sh
+$ ./scripts/sanitycheck
+</pre></div>
+</div>
+<p>If you have a system with a large number of cores, you can build and run
+all possible tests using the following options:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ ./scripts/sanitycheck --all --enable-slow
+</pre></div>
+</div>
+<p>This will build for all available boards and run all applicable tests in
+a simulated (QEMU) environment.</p>
+<p>The sanitycheck script accepts the following optional arguments:</p>
+<blockquote>
+<div><table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>show this help message and exit</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-p <var>PLATFORM</var></span>, <span class="option">--platform <var>PLATFORM</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Platform filter for testing. This option may be used
+multiple times. Testcases will only be built/run on
+the platforms specified. If this option is not used,
+then platforms marked as default in the platform
+metadata file will be chosen to build and test.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-L <var>N</var></span>, <span class="option">--platform-limit <var>N</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Controls what platforms are tested if –platform or
+–all are not used. For each architecture specified by
+–arch (defaults to all of them), choose the first N
+platforms to test in the arch-specific .yaml file
+‘platforms’ list. Defaults to 1.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-a <var>ARCH</var></span>, <span class="option">--arch <var>ARCH</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Arch filter for testing. Takes precedence over
+–platform. If unspecified, test all arches. Multiple
+invocations are treated as a logical ‘or’ relationship</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-t <var>TAG</var></span>, <span class="option">--tag <var>TAG</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Specify tags to restrict which tests to run by tag
+value. Default is to not do any tag filtering.
+Multiple invocations are treated as a logical ‘or’
+relationship</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-e <var>EXCLUDE_TAG</var></span>, <span class="option">--exclude-tag <var>EXCLUDE_TAG</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Specify tags of tests that should not run. Default is
+to run all tests with all tags.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-f</span>, <span class="option">--only-failed</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Run only those tests that failed the previous sanity
+check invocation.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-c <var>CONFIG</var></span>, <span class="option">--config <var>CONFIG</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Specify platform configuration values filtering. This
+can be specified two ways: &lt;config&gt;=&lt;value&gt; or just
+&lt;config&gt;. The defconfig for all platforms will be
+checked. For the &lt;config&gt;=&lt;value&gt; case, only match
+defconfig that have that value defined. For the
+&lt;config&gt; case, match defconfig that have that value
+assigned to any value. Prepend a ‘!’ to invert the
+match.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-s <var>TEST</var></span>, <span class="option">--test <var>TEST</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Run only the specified test cases. These are named by
+&lt;path to test project relative to –testcase-
+root&gt;/&lt;testcase.yaml section name&gt;</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-l</span>, <span class="option">--all</span></kbd></td>
+<td>Build/test on all platforms. Any –platform arguments
+ignored.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-o <var>TESTCASE_REPORT</var></span>, <span class="option">--testcase-report <var>TESTCASE_REPORT</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Output a CSV spreadsheet containing results of the
+test run</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-d <var>DISCARD_REPORT</var></span>, <span class="option">--discard-report <var>DISCARD_REPORT</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Output a CSV spreadsheet showing tests that were
+skipped and why</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--compare-report <var>COMPARE_REPORT</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Use this report file for size comparison</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--ccache</span></kbd></td>
+<td>Enable the use of ccache when building</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-B <var>SUBSET</var></span>, <span class="option">--subset <var>SUBSET</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Only run a subset of the tests, 1/4 for running the
+first 25%, 3/5 means run the 3rd fifth of the total.
+This option is useful when running a large number of
+tests on different hosts to speed up execution time.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-y</span>, <span class="option">--dry-run</span></kbd></td>
+<td>Create the filtered list of test cases, but don’t
+actually run them. Useful if you’re just interested in
+–discard-report</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-r</span>, <span class="option">--release</span></kbd></td>
+<td>Update the benchmark database with the results of this
+test run. Intended to be run by CI when tagging an
+official release. This database is used as a basis for
+comparison when looking for deltas in metrics such as
+footprint</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-w</span>, <span class="option">--warnings-as-errors</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Treat warning conditions as errors</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-v</span>, <span class="option">--verbose</span></kbd></td>
+<td>Emit debugging information, call multiple times to
+increase verbosity</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-i</span>, <span class="option">--inline-logs</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Upon test failure, print relevant log data to stdout
+instead of just a path to it</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--log-file <var>FILENAME</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>log also to file</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-m</span>, <span class="option">--last-metrics</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Instead of comparing metrics from the last –release,
+compare with the results of the previous sanity check
+invocation</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-u</span>, <span class="option">--no-update</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>do not update the results of the last run of the
+sanity checks</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-b</span>, <span class="option">--build-only</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Only build the code, do not execute any of it in QEMU</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-j <var>JOBS</var></span>, <span class="option">--jobs <var>JOBS</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Number of cores to use when building, defaults to
+number of CPUs * 2</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-H <var>FOOTPRINT_THRESHOLD</var></span>, <span class="option">--footprint-threshold <var>FOOTPRINT_THRESHOLD</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>When checking test case footprint sizes, warn the user
+if the new app size is greater then the specified
+percentage from the last release. Default is 5. 0 to
+warn on any increase on app size</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-D</span>, <span class="option">--all-deltas</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Show all footprint deltas, positive or negative.
+Implies –footprint-threshold=0</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-O <var>OUTDIR</var></span>, <span class="option">--outdir <var>OUTDIR</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Output directory for logs and binaries.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-n</span>, <span class="option">--no-clean</span></kbd></td>
+<td>Do not delete the outdir before building. Will result
+in faster compilation since builds will be incremental</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-T <var>TESTCASE_ROOT</var></span>, <span class="option">--testcase-root <var>TESTCASE_ROOT</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Base directory to recursively search for test cases.
+All testcase.yaml files under here will be processed.
+May be called multiple times. Defaults to the
+‘samples’ and ‘tests’ directories in the Zephyr tree.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-A <var>ARCH_ROOT</var></span>, <span class="option">--arch-root <var>ARCH_ROOT</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Directory to search for arch configuration files. All
+.yaml files in the directory will be processed.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-z <var>SIZE</var></span>, <span class="option">--size <var>SIZE</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Don’t run sanity checks. Instead, produce a report to
+stdout detailing RAM/ROM sizes on the specified
+filenames. All other command line arguments ignored.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-S</span>, <span class="option">--enable-slow</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Execute time-consuming test cases that have been
+marked as ‘slow’ in testcase.yaml. Normally these are
+only built.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-R</span>, <span class="option">--enable-asserts</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Build all test cases with assertions enabled.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-Q</span>, <span class="option">--error-on-deprecations</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Error on deprecation warnings.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-x <var>EXTRA_ARGS</var></span>, <span class="option">--extra-args <var>EXTRA_ARGS</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Extra arguments to pass to the build when compiling
+test cases. May be called multiple times. These will
+be passed in after any sanitycheck-supplied options.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-C</span>, <span class="option">--coverage</span></kbd></td>
+<td>Scan for unit test coverage with gcov + lcov.</td></tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="board-configuration">
+<h2>Board Configuration<a class="headerlink" href="#board-configuration" title="Permalink to this headline">¶</a></h2>
+<p>To build tests for a specific board and to execute some of the tests on real
+hardware or in an emulation environment such as QEMU a board configuration file
+is required which is generic enough to be used for other tasks that require a
+board inventory with details about the board and its configuration that is only
+available during build time otherwise.</p>
+<p>The board metadata file is located in the board directory and is structured
+using the YAML markup language. The example below shows a board with a data
+required for best test coverage for this specific board:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">identifier</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">quark_d2000_crb</span>
+<span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Quark D2000 Devboard</span>
+<span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mcu</span>
+<span class="l l-Scalar l-Scalar-Plain">arch</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">x86</span>
+<span class="l l-Scalar l-Scalar-Plain">toolchain</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">zephyr</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">issm</span>
+<span class="l l-Scalar l-Scalar-Plain">ram</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="l l-Scalar l-Scalar-Plain">flash</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="l l-Scalar l-Scalar-Plain">testing</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">default</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">ignore_tags</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">net</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bluetooth</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>identifier:</dt>
+<dd><p class="first">A string that matches how the board is defined in the build system. This same
+string is used when building, for example when calling ‘cmake’:</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="c1"># cmake -DBOARD=quark_d2000_crb ..</span>
+</pre></div>
+</div>
+</dd>
+<dt>name:</dt>
+<dd>The actual name of the board as it appears in marketing material.</dd>
+<dt>type:</dt>
+<dd>Type of the board or configuration, currently we support 2 types: mcu, qemu</dd>
+<dt>arch:</dt>
+<dd>Architecture of the board</dd>
+<dt>toolchain:</dt>
+<dd>The list of supported toolchains that can build this board. This should match
+one of the values used for ‘ZEPHYR_GCC_VARIANT’ when building on the command line</dd>
+<dt>ram:</dt>
+<dd>Available RAM on the board (specified in KB). This is used to match testcase
+requirements.  If not specified we default to 128KB.</dd>
+<dt>flash:</dt>
+<dd>Available FLASH on the board (specified in KB). This is used to match testcase
+requirements.  If not specified we default to 512KB.</dd>
+<dt>supported:</dt>
+<dd><p class="first">A list of features this board supports. This can be specified as a single word
+feature or as a variant of a feature class. For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">supported</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">pci</span>
+</pre></div>
+</div>
+<p>This indicates the board does support PCI. You can make a testcase build or
+run only on such boards, or:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">supported</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">netif</span><span class="p">:</span><span class="n">eth</span>
+  <span class="o">-</span> <span class="n">sensor</span><span class="p">:</span><span class="n">bmi16</span>
+</pre></div>
+</div>
+<p class="last">A testcase can both depend on ‘eth’ to only test ethernet or on ‘netif’ to run
+on any board with a networking interface.</p>
+</dd>
+<dt>testing:</dt>
+<dd><p class="first">testing relating keywords to provide best coverage for the features of this
+board.</p>
+<dl class="last docutils">
+<dt>default: [True|False]:</dt>
+<dd>This is a default board, it will tested with the highest priority and is
+covered when invoking the simplified sanitycheck without any additional
+arguments.</dd>
+<dt>ignore_tags:</dt>
+<dd>Do not attempt to build (and therefore run) tests marked with this list of
+tags.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="test-cases">
+<h2>Test Cases<a class="headerlink" href="#test-cases" title="Permalink to this headline">¶</a></h2>
+<p>Test cases are detected by the presence of a ‘testcase.yaml’ or a ‘sample.yaml’
+files in the application’s project directory. This file may contain one or more
+entries in the test section each identifying a test scenario. The name of
+the test case only needs to be unique for the test cases specified in
+that testcase meta-data.</p>
+<p>Test cases are written using the YAML syntax and share the same structure as
+samples. The following is an example test with a few options that are
+explained in this document.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tests</span><span class="p">:</span>
+  <span class="n">test</span><span class="p">:</span>
+    <span class="n">build_only</span><span class="p">:</span> <span class="n">true</span>
+    <span class="n">platform_whitelist</span><span class="p">:</span> <span class="n">qemu_cortex_m3</span> <span class="n">qemu_x86</span> <span class="n">arduino_101</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="n">bluetooth</span>
+  <span class="n">test_br</span><span class="p">:</span>
+    <span class="n">build_only</span><span class="p">:</span> <span class="n">true</span>
+    <span class="n">extra_args</span><span class="p">:</span> <span class="n">CONF_FILE</span><span class="o">=</span><span class="s2">&quot;prj_br.conf&quot;</span>
+    <span class="nb">filter</span><span class="p">:</span> <span class="ow">not</span> <span class="n">CONFIG_DEBUG</span>
+    <span class="n">platform_exclude</span><span class="p">:</span> <span class="n">quark_d2000_crb</span>
+    <span class="n">platform_whitelist</span><span class="p">:</span> <span class="n">qemu_cortex_m3</span> <span class="n">qemu_x86</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="n">bluetooth</span>
+</pre></div>
+</div>
+<p>A sample with tests will have the same structure with additional information
+related to the sample and what is being demonstrated:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sample</span><span class="p">:</span>
+  <span class="n">name</span><span class="p">:</span> <span class="n">hello</span> <span class="n">world</span>
+  <span class="n">description</span><span class="p">:</span> <span class="n">Hello</span> <span class="n">World</span> <span class="n">sample</span><span class="p">,</span> <span class="n">the</span> <span class="n">simplest</span> <span class="n">Zephyr</span> <span class="n">application</span>
+  <span class="n">platforms</span><span class="p">:</span> <span class="nb">all</span>
+<span class="n">tests</span><span class="p">:</span>
+  <span class="n">test</span><span class="p">:</span>
+    <span class="n">build_only</span><span class="p">:</span> <span class="n">true</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="n">samples</span> <span class="n">tests</span>
+    <span class="n">min_ram</span><span class="p">:</span> <span class="mi">16</span>
+  <span class="n">singlethread</span><span class="p">:</span>
+    <span class="n">build_only</span><span class="p">:</span> <span class="n">true</span>
+    <span class="n">extra_args</span><span class="p">:</span> <span class="n">CONF_FILE</span><span class="o">=</span><span class="n">prj_single</span><span class="o">.</span><span class="n">conf</span>
+    <span class="nb">filter</span><span class="p">:</span> <span class="ow">not</span> <span class="n">CONFIG_BT</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">CONFIG_GPIO_SCH</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="n">samples</span> <span class="n">tests</span>
+    <span class="n">min_ram</span><span class="p">:</span> <span class="mi">16</span>
+</pre></div>
+</div>
+<p>The full canonical name for each test case is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">test</span> <span class="n">case</span><span class="o">&gt;/&lt;</span><span class="n">test</span> <span class="n">entry</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Each test block in the testcase meta data can define the following key/value
+pairs:</p>
+<dl class="docutils">
+<dt>tags: &lt;list of tags&gt; (required)</dt>
+<dd>A set of string tags for the testcase. Usually pertains to
+functional domains but can be anything. Command line invocations
+of this script can filter the set of tests to run based on tag.</dd>
+<dt>skip: &lt;True|False&gt; (default False)</dt>
+<dd>skip testcase unconditionally. This can be used for broken tests.</dd>
+<dt>slow: &lt;True|False&gt; (default False)</dt>
+<dd>Don’t run this test case unless –enable-slow was passed in on the
+command line. Intended for time-consuming test cases that are only
+run under certain circumstances, like daily builds. These test cases
+are still compiled.</dd>
+<dt>extra_args: &lt;list of extra arguments&gt;</dt>
+<dd>Extra arguments to pass to Make when building or running the
+test case.</dd>
+<dt>extra_configs: &lt;list of extra configurations&gt;</dt>
+<dd><p class="first">Extra configuration options to be merged with a master prj.conf
+when building or running the test case. For example:</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">common</span><span class="p">:</span>
+  <span class="n">tags</span><span class="p">:</span> <span class="n">drivers</span> <span class="n">adc</span>
+<span class="n">tests</span><span class="p">:</span>
+  <span class="n">test</span><span class="p">:</span>
+    <span class="n">depends_on</span><span class="p">:</span> <span class="n">adc</span>
+  <span class="n">test_resolution_6</span><span class="p">:</span>
+    <span class="n">extra_configs</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">CONFIG_ADC_QMSI_SAMPLE_WIDTH</span><span class="o">=</span><span class="mi">6</span>
+    <span class="n">platform_whitelist</span><span class="p">:</span> <span class="n">quark_se_c1000_ss_devboard</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="n">hwtest</span>
+</pre></div>
+</div>
+</dd>
+<dt>build_only: &lt;True|False&gt; (default False)</dt>
+<dd>If true, don’t try to run the test under QEMU even if the
+selected platform supports it.</dd>
+<dt>build_on_all: &lt;True|False&gt; (default False)</dt>
+<dd>If true, attempt to build test on all available platforms.</dd>
+<dt>depends_on: &lt;list of features&gt;</dt>
+<dd>A board or platform can announce what features it supports, this option
+will enable the test only those platforms that provide this feature.</dd>
+<dt>min_ram: &lt;integer&gt;</dt>
+<dd>minimum amount of RAM needed for this test to build and run. This is
+compared with information provided by the board metadata.</dd>
+<dt>min_flash: &lt;integer&gt;</dt>
+<dd>minimum amount of ROM needed for this test to build and run. This is
+compared with information provided by the board metadata.</dd>
+<dt>timeout: &lt;number of seconds&gt;</dt>
+<dd>Length of time to run test in QEMU before automatically killing it.
+Default to 60 seconds.</dd>
+<dt>arch_whitelist: &lt;list of arches, such as x86, arm, arc&gt;</dt>
+<dd>Set of architectures that this test case should only be run for.</dd>
+<dt>arch_exclude: &lt;list of arches, such as x86, arm, arc&gt;</dt>
+<dd>Set of architectures that this test case should not run on.</dd>
+<dt>platform_whitelist: &lt;list of platforms&gt;</dt>
+<dd>Set of platforms that this test case should only be run for.</dd>
+<dt>platform_exclude: &lt;list of platforms&gt;</dt>
+<dd>Set of platforms that this test case should not run on.</dd>
+<dt>extra_sections: &lt;list of extra binary sections&gt;</dt>
+<dd>When computing sizes, sanitycheck will report errors if it finds
+extra, unexpected sections in the Zephyr binary unless they are named
+here. They will not be included in the size calculation.</dd>
+<dt>filter: &lt;expression&gt;</dt>
+<dd><p class="first">Filter whether the testcase should be run by evaluating an expression
+against an environment containing the following values:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="n">ARCH</span> <span class="p">:</span> <span class="o">&lt;</span><span class="n">architecture</span><span class="o">&gt;</span><span class="p">,</span>
+  <span class="n">PLATFORM</span> <span class="p">:</span> <span class="o">&lt;</span><span class="n">platform</span><span class="o">&gt;</span><span class="p">,</span>
+  <span class="o">&lt;</span><span class="nb">all</span> <span class="n">CONFIG_</span><span class="o">*</span> <span class="n">key</span><span class="o">/</span><span class="n">value</span> <span class="n">pairs</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">test</span><span class="s1">&#39;s generated defconfig&gt;,</span>
+  <span class="o">*&lt;</span><span class="n">env</span><span class="o">&gt;</span><span class="p">:</span> <span class="nb">any</span> <span class="n">environment</span> <span class="n">variable</span> <span class="n">available</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The grammar for the expression language is as follows:</p>
+<dl class="docutils">
+<dt>expression ::= expression “and” expression</dt>
+<dd><div class="first last line-block">
+<div class="line">expression “or” expression</div>
+<div class="line">“not” expression</div>
+<div class="line">“(” expression “)”</div>
+<div class="line">symbol “==” constant</div>
+<div class="line">symbol “!=” constant</div>
+<div class="line">symbol “&lt;” number</div>
+<div class="line">symbol “&gt;” number</div>
+<div class="line">symbol “&gt;=” number</div>
+<div class="line">symbol “&lt;=” number</div>
+<div class="line">symbol “in” list</div>
+<div class="line">symbol “:” string</div>
+<div class="line">symbol</div>
+</div>
+</dd>
+</dl>
+<p>list ::= “[” list_contents “]”</p>
+<dl class="docutils">
+<dt>list_contents ::= constant</dt>
+<dd><div class="first last line-block">
+<div class="line">list_contents “,” constant</div>
+</div>
+</dd>
+<dt>constant ::= number</dt>
+<dd><div class="first last line-block">
+<div class="line">string</div>
+</div>
+</dd>
+</dl>
+<p>For the case where expression ::= symbol, it evaluates to true
+if the symbol is defined to a non-empty string.</p>
+<p>Operator precedence, starting from lowest to highest:</p>
+<blockquote>
+<div>or (left associative)
+and (left associative)
+not (right associative)
+all comparison operators (non-associative)</div></blockquote>
+<p>arch_whitelist, arch_exclude, platform_whitelist, platform_exclude
+are all syntactic sugar for these expressions. For instance</p>
+<blockquote>
+<div>arch_exclude = x86 arc</div></blockquote>
+<p>Is the same as:</p>
+<blockquote>
+<div>filter = not ARCH in [“x86”, “arc”]</div></blockquote>
+<p>The ‘:’ operator compiles the string argument as a regular expression,
+and then returns a true value only if the symbol’s value in the environment
+matches. For example, if CONFIG_SOC=”quark_se” then</p>
+<blockquote>
+<div>filter = CONFIG_SOC : “quark.*”</div></blockquote>
+<p class="last">Would match it.</p>
+</dd>
+</dl>
+<p>The set of test cases that actually run depends on directives in the testcase
+filed and options passed in on the command line. If there is any confusion,
+running with -v or –discard-report can help show why particular test cases
+were skipped.</p>
+<p>Metrics (such as pass/fail state and binary size) for the last code
+release are stored in scripts/sanity_chk/sanity_last_release.csv.
+To update this, pass the –all –release options.</p>
+<p>To load arguments from a file, write ‘+’ before the file name, e.g.,
++file_name. File content must be one or more valid arguments separated by
+line break instead of white spaces.</p>
+<p>Most everyday users will run with no arguments.</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../usb/usb.html" class="btn btn-neutral float-right" title="USB device stack" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="ztest.html" class="btn btn-neutral" title="Test Framework" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

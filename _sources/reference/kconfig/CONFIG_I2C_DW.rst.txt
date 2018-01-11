@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: I2C_DW
+
+.. option:: CONFIG_I2C_DW
+.. _CONFIG_I2C_DW:
+
+Enable Design Ware I2C support on the selected board
+
+
+
+:Symbol:           I2C_DW
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Design Ware I2C support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C && BOARD_EM_STARTERKIT (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:21
+ * ../arch/x86/soc/intel_quark/quark_x1000/Kconfig.defconfig.series:68
+ * ../boards/arc/em_starterkit/Kconfig.defconfig:72

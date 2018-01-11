@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: BT_CTLR_GPIO_PA_PIN
+
+.. option:: CONFIG_BT_CTLR_GPIO_PA_PIN
+.. _CONFIG_BT_CTLR_GPIO_PA_PIN:
+
+GPIO Pin number connected to a Power Amplifier.
+
+
+
+:Symbol:           BT_CTLR_GPIO_PA_PIN
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Power Amplifier GPIO pin number"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR && BT_CTLR_GPIO_PA (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:405

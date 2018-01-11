@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: ARM_MPU_IMX_RT
+
+.. option:: CONFIG_ARM_MPU_IMX_RT
+.. _CONFIG_ARM_MPU_IMX_RT:
+
+Enable MPU support on NXP i.MX RT series SoCs.
+
+
+
+:Symbol:           ARM_MPU_IMX_RT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable MPU on i.MX RT" if CPU_HAS_MPU (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: CPU_HAS_MPU (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_ARM_MPU` if CPU_HAS_MPU (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_IMX_RT && ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/nxp_imx/rt/Kconfig.soc:34

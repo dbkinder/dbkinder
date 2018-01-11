@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: SNTP
+
+.. option:: CONFIG_SNTP
+.. _CONFIG_SNTP:
+
+Enable SNTP client library
+
+
+
+:Symbol:           SNTP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SNTP Support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_NET_APP_CLIENT`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/sntp/Kconfig:7

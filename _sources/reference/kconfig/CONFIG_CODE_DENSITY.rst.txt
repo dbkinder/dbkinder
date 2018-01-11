@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: CODE_DENSITY
+
+.. option:: CONFIG_CODE_DENSITY
+.. _CONFIG_CODE_DENSITY:
+
+Enable code density option to get better code density
+
+
+
+:Symbol:           CODE_DENSITY
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Code Density Option"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ARC (value: "n")
+:Locations:
+ * ../arch/arc/Kconfig:145

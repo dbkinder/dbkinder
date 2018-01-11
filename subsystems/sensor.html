@@ -1,0 +1,764 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Sensor Drivers &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="Subsystems" href="subsystems.html"/>
+        <link rel="next" title="Shell" href="shell.html"/>
+        <link rel="prev" title="Power Management" href="power_management.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+          <a href="subsystems.html">Subsystems</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="subsystems.html">Subsystems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c_library.html">Standard C Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging/index.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networking/networking.html">Networking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_management.html">Power Management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sensor Drivers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-operation">Basic Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-and-attributes">Configuration and Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triggers">Triggers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="shell.html">Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test/index.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb/usb.html">USB device stack</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="sensor-drivers">
+<span id="sensor"></span><h1>Sensor Drivers<a class="headerlink" href="#sensor-drivers" title="Permalink to this headline">¶</a></h1>
+<p>The sensor subsystem exposes an API to uniformly access sensor devices.
+Common operations are: reading data and executing code when specific
+conditions are met.</p>
+<div class="section" id="basic-operation">
+<h2>Basic Operation<a class="headerlink" href="#basic-operation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="channels">
+<h3>Channels<a class="headerlink" href="#channels" title="Permalink to this headline">¶</a></h3>
+<p>Fundamentally, a channel is a quantity that a sensor device can measure.</p>
+<p>Sensors can have multiple channels, either to represent different axes of
+the same physical property (e.g. acceleration); or because they can measure
+different properties altogether (ambient temperature, pressure and
+humidity).  Complex sensors cover both cases, so a single device can expose
+three acceleration channels and a temperature one.</p>
+<p>It is imperative that all sensors that support a given channel express
+results in the same unit of measurement.  The following is a list of all
+supported channels, along with their description and units of measurement:</p>
+<dl class="type">
+<dt id="_CPPv214sensor_channel">
+<span id="sensor_channel"></span><span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1gaaa1b502bc029b10d7b23b0a25ef4e934"></span><em class="property">enum </em><code class="descclassname"></code><code class="descname">sensor_channel</code><a class="headerlink" href="#_CPPv214sensor_channel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sensor channels. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv219SENSOR_CHAN_ACCEL_X">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934afa9238082f000350530ca77b2f513d4c"></span><code class="descname">SENSOR_CHAN_ACCEL_X</code><a class="headerlink" href="#_CPPv219SENSOR_CHAN_ACCEL_X" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Acceleration on the X axis, in m/s^2. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv219SENSOR_CHAN_ACCEL_Y">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a61c145468f01916c1a547fb38a1be9a8"></span><code class="descname">SENSOR_CHAN_ACCEL_Y</code><a class="headerlink" href="#_CPPv219SENSOR_CHAN_ACCEL_Y" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Acceleration on the Y axis, in m/s^2. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv219SENSOR_CHAN_ACCEL_Z">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a78e06bb48cfe06e42829816ad4cb5a0f"></span><code class="descname">SENSOR_CHAN_ACCEL_Z</code><a class="headerlink" href="#_CPPv219SENSOR_CHAN_ACCEL_Z" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Acceleration on the Z axis, in m/s^2. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv221SENSOR_CHAN_ACCEL_XYZ">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a16c05784ae15a4952ea708c2f11a2ae9"></span><code class="descname">SENSOR_CHAN_ACCEL_XYZ</code><a class="headerlink" href="#_CPPv221SENSOR_CHAN_ACCEL_XYZ" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Acceleration on the X, Y and Z axes. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv221SENSOR_CHAN_ACCEL_ANY">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934aa07361cd2a1831d229b8654ce1ff1014"></span><code class="descname">SENSOR_CHAN_ACCEL_ANY</code> = SENSOR_CHAN_ACCEL_XYZ<a class="headerlink" href="#_CPPv221SENSOR_CHAN_ACCEL_ANY" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This enum value will be deprecated. Please use SENSOR_CHAN_ACCEL_XYZ instead.</p>
+<p>Acceleration on any axis. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv218SENSOR_CHAN_GYRO_X">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934ac5709b77f0eb69972ccc055f927e5015"></span><code class="descname">SENSOR_CHAN_GYRO_X</code><a class="headerlink" href="#_CPPv218SENSOR_CHAN_GYRO_X" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Angular velocity around the X axis, in radians/s. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv218SENSOR_CHAN_GYRO_Y">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a4a9533172105fd2e55d96e0122a48847"></span><code class="descname">SENSOR_CHAN_GYRO_Y</code><a class="headerlink" href="#_CPPv218SENSOR_CHAN_GYRO_Y" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Angular velocity around the Y axis, in radians/s. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv218SENSOR_CHAN_GYRO_Z">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a9b6b9d13cd8d82449823d65779a87a39"></span><code class="descname">SENSOR_CHAN_GYRO_Z</code><a class="headerlink" href="#_CPPv218SENSOR_CHAN_GYRO_Z" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Angular velocity around the Z axis, in radians/s. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv220SENSOR_CHAN_GYRO_XYZ">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a1d36b89ab3761e9bc86effc839f8db0e"></span><code class="descname">SENSOR_CHAN_GYRO_XYZ</code><a class="headerlink" href="#_CPPv220SENSOR_CHAN_GYRO_XYZ" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Angular velocity around the X, Y and Z axes. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv220SENSOR_CHAN_GYRO_ANY">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a2cef52cbad660bdcabdf6293c2744bb5"></span><code class="descname">SENSOR_CHAN_GYRO_ANY</code> = SENSOR_CHAN_GYRO_XYZ<a class="headerlink" href="#_CPPv220SENSOR_CHAN_GYRO_ANY" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This enum value will be deprecated. Please use SENSOR_CHAN_GYRO_XYZ instead.</p>
+<p>Angular velocity on any axis. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv218SENSOR_CHAN_MAGN_X">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a171f37ba152d34f75ff745cb848b3240"></span><code class="descname">SENSOR_CHAN_MAGN_X</code><a class="headerlink" href="#_CPPv218SENSOR_CHAN_MAGN_X" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Magnetic field on the X axis, in Gauss. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv218SENSOR_CHAN_MAGN_Y">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a2b4f1764f47428c528447347d7730942"></span><code class="descname">SENSOR_CHAN_MAGN_Y</code><a class="headerlink" href="#_CPPv218SENSOR_CHAN_MAGN_Y" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Magnetic field on the Y axis, in Gauss. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv218SENSOR_CHAN_MAGN_Z">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a2a2115051ded019a57ece5a00f86ea61"></span><code class="descname">SENSOR_CHAN_MAGN_Z</code><a class="headerlink" href="#_CPPv218SENSOR_CHAN_MAGN_Z" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Magnetic field on the Z axis, in Gauss. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv220SENSOR_CHAN_MAGN_XYZ">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a5d1f48466f6f600503af18427fa3da32"></span><code class="descname">SENSOR_CHAN_MAGN_XYZ</code><a class="headerlink" href="#_CPPv220SENSOR_CHAN_MAGN_XYZ" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Magnetic field on the X, Y and Z axes. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv220SENSOR_CHAN_MAGN_ANY">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934ad222b487e075b6c63fb4dcfdc6d2634b"></span><code class="descname">SENSOR_CHAN_MAGN_ANY</code> = SENSOR_CHAN_MAGN_XYZ<a class="headerlink" href="#_CPPv220SENSOR_CHAN_MAGN_ANY" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This enum value will be deprecated. Please use SENSOR_CHAN_MAGN_XYZ instead.</p>
+<p>Magnetic field on any axis. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv216SENSOR_CHAN_TEMP">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a22ed4778240da23841e030a633eb31b6"></span><code class="descname">SENSOR_CHAN_TEMP</code><a class="headerlink" href="#_CPPv216SENSOR_CHAN_TEMP" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Temperature in degrees Celsius. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv217SENSOR_CHAN_PRESS">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a14cd68844542e23d1b641a2bc54132a9"></span><code class="descname">SENSOR_CHAN_PRESS</code><a class="headerlink" href="#_CPPv217SENSOR_CHAN_PRESS" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Pressure in kilopascal. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv216SENSOR_CHAN_PROX">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934abaec2c1347ef0035221dd4d9c34a4774"></span><code class="descname">SENSOR_CHAN_PROX</code><a class="headerlink" href="#_CPPv216SENSOR_CHAN_PROX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Proximity. Adimensional. A value of 1 indicates that an object is close. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv220SENSOR_CHAN_HUMIDITY">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934ad08ddb6c9cd71c853a121f426fcea042"></span><code class="descname">SENSOR_CHAN_HUMIDITY</code><a class="headerlink" href="#_CPPv220SENSOR_CHAN_HUMIDITY" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Humidity, in milli percent. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv217SENSOR_CHAN_LIGHT">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a6e91196c11d080c3f5df55fda190e19d"></span><code class="descname">SENSOR_CHAN_LIGHT</code><a class="headerlink" href="#_CPPv217SENSOR_CHAN_LIGHT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Illuminance in visible spectrum, in lux. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv214SENSOR_CHAN_IR">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934ad725fe5778f000a17f93f83dab31132c"></span><code class="descname">SENSOR_CHAN_IR</code><a class="headerlink" href="#_CPPv214SENSOR_CHAN_IR" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Illuminance in infra-red spectrum, in lux. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv215SENSOR_CHAN_RED">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934af22c8ef66f4871efe5a22863d7f434aa"></span><code class="descname">SENSOR_CHAN_RED</code><a class="headerlink" href="#_CPPv215SENSOR_CHAN_RED" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Illuminance in red spectrum, in lux. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv217SENSOR_CHAN_GREEN">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a216a3b2b77d7a92f94547aeb889ae378"></span><code class="descname">SENSOR_CHAN_GREEN</code><a class="headerlink" href="#_CPPv217SENSOR_CHAN_GREEN" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Illuminance in green spectrum, in lux. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv216SENSOR_CHAN_BLUE">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a6e66f95d73d05c2b3511e2db506844f5"></span><code class="descname">SENSOR_CHAN_BLUE</code><a class="headerlink" href="#_CPPv216SENSOR_CHAN_BLUE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Illuminance in blue spectrum, in lux. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv220SENSOR_CHAN_ALTITUDE">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934af5ba63bfef1c64c8a96ae7fba4f35512"></span><code class="descname">SENSOR_CHAN_ALTITUDE</code><a class="headerlink" href="#_CPPv220SENSOR_CHAN_ALTITUDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Altitude, in meters </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv218SENSOR_CHAN_PM_1_0">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a08f0c21c33008292b0b58defe5c06815"></span><code class="descname">SENSOR_CHAN_PM_1_0</code><a class="headerlink" href="#_CPPv218SENSOR_CHAN_PM_1_0" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>1.0 micro-meters Particulate Matter, in ug/m^3 </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv218SENSOR_CHAN_PM_2_5">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934a3398fdc51964aa06c9a01096d2fac945"></span><code class="descname">SENSOR_CHAN_PM_2_5</code><a class="headerlink" href="#_CPPv218SENSOR_CHAN_PM_2_5" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>2.5 micro-meters Particulate Matter, in ug/m^3 </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv217SENSOR_CHAN_PM_10">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934aa450541bde278aefcc9b53bd0826e225"></span><code class="descname">SENSOR_CHAN_PM_10</code><a class="headerlink" href="#_CPPv217SENSOR_CHAN_PM_10" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>10 micro-meters Particulate Matter, in ug/m^3 </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv215SENSOR_CHAN_ALL">
+<span class="target" id="d1/d98/group__sensor__interface_gaaa1b502bc029b10d7b23b0a25ef4e934_1ggaaa1b502bc029b10d7b23b0a25ef4e934ab275027eb550b2b075c44917634eca2c"></span><code class="descname">SENSOR_CHAN_ALL</code><a class="headerlink" href="#_CPPv215SENSOR_CHAN_ALL" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>All channels. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="values">
+<h3>Values<a class="headerlink" href="#values" title="Permalink to this headline">¶</a></h3>
+<p>Sensor devices return results as <code class="xref c c-type docutils literal"><span class="pre">struct</span> <span class="pre">sensor_value</span></code>.  This
+representation avoids use of floating point values as they may not be
+supported on certain setups.</p>
+<dl class="class">
+<dt id="_CPPv212sensor_value">
+<span id="sensor_value"></span><span class="target" id="dc/da4/structsensor__value"></span><em class="property">struct </em><code class="descclassname"></code><code class="descname">sensor_value</code><a class="headerlink" href="#_CPPv212sensor_value" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Representation of a sensor readout value. </p>
+<p>The value is represented as having an integer and a fractional part, and can be obtained using the formula val1 + val2 * 10^(-6). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N12sensor_value4val1E">
+<span id="sensor_value::val1__s32_t"></span><span class="target" id="dc/da4/structsensor__value_1a7188472aae942471887de5f9121c7f46"></span>s32_t <code class="descname">val1</code><a class="headerlink" href="#_CPPv2N12sensor_value4val1E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Integer part of the value. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N12sensor_value4val2E">
+<span id="sensor_value::val2__s32_t"></span><span class="target" id="dc/da4/structsensor__value_1ae3848a5e513b7ad204abfb74b01e05d7"></span>s32_t <code class="descname">val2</code><a class="headerlink" href="#_CPPv2N12sensor_value4val2E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fractional part of the value. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="fetching-values">
+<h3>Fetching Values<a class="headerlink" href="#fetching-values" title="Permalink to this headline">¶</a></h3>
+<p>Getting a reading from a sensor requires two operations.  First, an
+application instructs the driver to fetch a sample of all its channels.
+Then, individual channels may be read.  In the case of channels with
+multiple axes, they can be read in a single operation by supplying
+the corresponding <code class="docutils literal"><span class="pre">_XYZ</span></code> channel type and a buffer of 3
+<code class="xref c c-type docutils literal"><span class="pre">struct</span> <span class="pre">sensor_value</span></code> objects.  This approach ensures consistency
+of channels between reads and efficiency of communication by issuing a
+single transaction on the underlying bus.</p>
+<p>Below is an example illustrating the usage of the BME280 sensor, which
+measures ambient temperature and atmospheric pressure.  Note that
+<code class="xref c c-func docutils literal"><span class="pre">sensor_sample_fetch()</span></code> is only called once, as it reads and
+compensates data for both channels.</p>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">struct</span> <span class="n">device</span> <span class="o">*</span><span class="n">dev</span> <span class="o">=</span> <span class="n">device_get_binding</span><span class="p">(</span><span class="s">&quot;BME280&quot;</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;dev %p name %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">dev</span><span class="p">,</span> <span class="n">dev</span><span class="o">-&gt;</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
+
+	<span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">struct</span> <span class="n">sensor_value</span> <span class="n">temp</span><span class="p">,</span> <span class="n">press</span><span class="p">,</span> <span class="n">humidity</span><span class="p">;</span>
+
+		<span class="n">sensor_sample_fetch</span><span class="p">(</span><span class="n">dev</span><span class="p">);</span>
+		<span class="n">sensor_channel_get</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span> <span class="n">SENSOR_CHAN_TEMP</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">temp</span><span class="p">);</span>
+		<span class="n">sensor_channel_get</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span> <span class="n">SENSOR_CHAN_PRESS</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">press</span><span class="p">);</span>
+		<span class="n">sensor_channel_get</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span> <span class="n">SENSOR_CHAN_HUMIDITY</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">humidity</span><span class="p">);</span>
+
+		<span class="n">printf</span><span class="p">(</span><span class="s">&quot;temp: %d.%06d; press: %d.%06d; humidity: %d.%06d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+		      <span class="n">temp</span><span class="p">.</span><span class="n">val1</span><span class="p">,</span> <span class="n">temp</span><span class="p">.</span><span class="n">val2</span><span class="p">,</span> <span class="n">press</span><span class="p">.</span><span class="n">val1</span><span class="p">,</span> <span class="n">press</span><span class="p">.</span><span class="n">val2</span><span class="p">,</span>
+		      <span class="n">humidity</span><span class="p">.</span><span class="n">val1</span><span class="p">,</span> <span class="n">humidity</span><span class="p">.</span><span class="n">val2</span><span class="p">);</span>
+
+		<span class="n">k_sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>The example assumes that the returned values have type <code class="xref c c-type docutils literal"><span class="pre">struct</span>
+<span class="pre">sensor_value</span></code>, which is the case for BME280.  A real application
+supporting multiple sensors should inspect the <code class="xref c c-data docutils literal"><span class="pre">type</span></code> field of
+the <code class="xref c c-data docutils literal"><span class="pre">temp</span></code> and <code class="xref c c-data docutils literal"><span class="pre">press</span></code> values and use the other fields
+of the structure accordingly.</p>
+</div>
+</div>
+<div class="section" id="configuration-and-attributes">
+<h2>Configuration and Attributes<a class="headerlink" href="#configuration-and-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Setting the communication bus and address is considered the most basic
+configuration for sensor devices.  This setting is done at compile time, via
+the configuration menu.  If the sensor supports interrupts, the interrupt
+lines and triggering parameters described below are also configured at
+compile time.</p>
+<p>Alongside these communication parameters, sensor chips typically expose
+multiple parameters that control the accuracy and frequency of measurement.
+In compliance with Zephyr’s design goals, most of these values are
+statically configured at compile time.</p>
+<p>However, certain parameters could require runtime configuration, for
+example, threshold values for interrupts.  These values are configured via
+attributes.  The example in the following section showcases a sensor with an
+interrupt line that is triggered when the temperature crosses a threshold.
+The threshold is configured at runtime using an attribute.</p>
+</div>
+<div class="section" id="triggers">
+<h2>Triggers<a class="headerlink" href="#triggers" title="Permalink to this headline">¶</a></h2>
+<p><em class="dfn">Triggers</em> in Zephyr refer to the interrupt lines of the sensor chips.
+Many sensor chips support one or more triggers. Some examples of triggers
+include: new data is ready for reading, a channel value has crossed a
+threshold, or the device has sensed motion.</p>
+<p>To configure a trigger, an application needs to supply a <code class="xref c c-type docutils literal"><span class="pre">struct</span>
+<span class="pre">sensor_trigger</span></code> and a handler function.  The structure contains the trigger
+type and the channel on which the trigger must be configured.</p>
+<p>Because most sensors are connected via SPI or I2C busses, it is not possible
+to communicate with them from the interrupt execution context.  The
+execution of the trigger handler is deferred to a thread, so that data
+fetching operations are possible.  A driver can spawn its own thread to fetch
+data, thus ensuring minimum latency. Alternatively, multiple sensor drivers
+can share a system-wide thread. The shared thread approach increases the
+latency of handling interrupts but uses less memory. You can configure which
+approach to follow for each driver. Most drivers can entirely disable
+triggers resulting in a smaller footprint.</p>
+<p>The following example contains a trigger fired whenever temperature crosses
+the 26 degree Celsius threshold. It also samples the temperature every
+second. A real application would ideally disable periodic sampling in the
+interest of saving power. Since the application has direct access to the
+kernel config symbols, no trigger is registered when triggering was disabled
+by the driver’s configuration.</p>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#ifdef CONFIG_MCP9808_TRIGGER</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">trigger_handler</span><span class="p">(</span><span class="k">struct</span> <span class="n">device</span> <span class="o">*</span><span class="n">dev</span><span class="p">,</span> <span class="k">struct</span> <span class="n">sensor_trigger</span> <span class="o">*</span><span class="n">trig</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">struct</span> <span class="n">sensor_value</span> <span class="n">temp</span><span class="p">;</span>
+
+	<span class="n">sensor_sample_fetch</span><span class="p">(</span><span class="n">dev</span><span class="p">);</span>
+	<span class="n">sensor_channel_get</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span> <span class="n">SENSOR_CHAN_TEMP</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">temp</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;trigger fired, temp %d.%06d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">temp</span><span class="p">.</span><span class="n">val1</span><span class="p">,</span> <span class="n">temp</span><span class="p">.</span><span class="n">val2</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">struct</span> <span class="n">device</span> <span class="o">*</span><span class="n">dev</span> <span class="o">=</span> <span class="n">device_get_binding</span><span class="p">(</span><span class="s">&quot;MCP9808&quot;</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">dev</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">&quot;device not found.  aborting test.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+		<span class="k">return</span><span class="p">;</span>
+	<span class="p">}</span>
+
+<span class="cp">#ifdef DEBUG</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;dev %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">dev</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;dev %p name %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">dev</span><span class="p">,</span> <span class="n">dev</span><span class="o">-&gt;</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifdef CONFIG_MCP9808_TRIGGER</span>
+	<span class="k">struct</span> <span class="n">sensor_value</span> <span class="n">val</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="n">sensor_trigger</span> <span class="n">trig</span><span class="p">;</span>
+
+	<span class="n">val</span><span class="p">.</span><span class="n">val1</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>
+	<span class="n">val</span><span class="p">.</span><span class="n">val2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="n">sensor_attr_set</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span> <span class="n">SENSOR_CHAN_TEMP</span><span class="p">,</span>
+			<span class="n">SENSOR_ATTR_UPPER_THRESH</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">val</span><span class="p">);</span>
+
+	<span class="n">trig</span><span class="p">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">SENSOR_TRIG_THRESHOLD</span><span class="p">;</span>
+	<span class="n">trig</span><span class="p">.</span><span class="n">chan</span> <span class="o">=</span> <span class="n">SENSOR_CHAN_TEMP</span><span class="p">;</span>
+
+	<span class="n">sensor_trigger_set</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">trig</span><span class="p">,</span> <span class="n">trigger_handler</span><span class="p">);</span>
+<span class="cp">#endif</span>
+
+	<span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">struct</span> <span class="n">sensor_value</span> <span class="n">temp</span><span class="p">;</span>
+		<span class="kt">int</span> <span class="n">rc</span><span class="p">;</span>
+
+		<span class="n">rc</span> <span class="o">=</span> <span class="n">sensor_sample_fetch</span><span class="p">(</span><span class="n">dev</span><span class="p">);</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">&quot;sensor_sample_fetch error: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">rc</span><span class="p">);</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="n">rc</span> <span class="o">=</span> <span class="n">sensor_channel_get</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span> <span class="n">SENSOR_CHAN_TEMP</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">temp</span><span class="p">);</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">&quot;sensor_channel_get error: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">rc</span><span class="p">);</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="n">printf</span><span class="p">(</span><span class="s">&quot;temp: %d.%06d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">temp</span><span class="p">.</span><span class="n">val1</span><span class="p">,</span> <span class="n">temp</span><span class="p">.</span><span class="n">val2</span><span class="p">);</span>
+
+		<span class="n">k_sleep</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="shell.html" class="btn btn-neutral float-right" title="Shell" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="power_management.html" class="btn btn-neutral" title="Power Management" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

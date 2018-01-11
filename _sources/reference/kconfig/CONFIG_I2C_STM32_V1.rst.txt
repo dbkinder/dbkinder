@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: I2C_STM32_V1
+
+.. option:: CONFIG_I2C_STM32_V1
+.. _CONFIG_I2C_STM32_V1:
+
+Enable I2C support on the STM32 F1 and F4X family of processors. This
+driver also supports the F2 and L1 series.
+
+
+
+:Symbol:           I2C_STM32_V1
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "STM32 V1 Driver (F1/F4X)" if SOC_FAMILY_STM32 && (SOC_SERIES_STM32F1X || SOC_SERIES_STM32F4X) (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SOC_FAMILY_STM32 && (SOC_SERIES_STM32F1X || SOC_SERIES_STM32F4X) (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_HAS_DTS_I2C` if SOC_FAMILY_STM32 && (SOC_SERIES_STM32F1X || SOC_SERIES_STM32F4X) (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:114

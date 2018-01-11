@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: FS_NFFS_FLASH_DEV_NAME
+
+.. option:: CONFIG_FS_NFFS_FLASH_DEV_NAME
+.. _CONFIG_FS_NFFS_FLASH_DEV_NAME:
+
+The configuration item CONFIG_FS_NFFS_FLASH_DEV_NAME:
+
+:Symbol:           FS_NFFS_FLASH_DEV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Flash device name to be used" if FILE_SYSTEM_NFFS (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FILE_SYSTEM (value: "n")
+:Locations:
+ * ../subsys/fs/Kconfig:53

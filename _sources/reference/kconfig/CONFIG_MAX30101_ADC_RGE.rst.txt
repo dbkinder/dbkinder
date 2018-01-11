@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: MAX30101_ADC_RGE
+
+.. option:: CONFIG_MAX30101_ADC_RGE
+.. _CONFIG_MAX30101_ADC_RGE:
+
+Set the ADC's full-scale range.
+0 = 7.81 pA/LSB
+1 = 15.63 pA/LSB
+2 = 31.25 pA/LSB
+3 = 62.5 pA/LSB
+
+
+
+:Symbol:           MAX30101_ADC_RGE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 3]
+:Prompts:
+
+ *  "ADC range control"
+:Default values:
+
+ *  2 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MAX30101 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/max30101/Kconfig:84

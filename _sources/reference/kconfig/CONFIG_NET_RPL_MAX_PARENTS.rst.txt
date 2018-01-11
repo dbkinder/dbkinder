@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: NET_RPL_MAX_PARENTS
+
+.. option:: CONFIG_NET_RPL_MAX_PARENTS
+.. _CONFIG_NET_RPL_MAX_PARENTS:
+
+This determines how many RPL parents each node can have.
+
+
+
+:Symbol:           NET_RPL_MAX_PARENTS
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Maximum number of parents for one node"
+:Default values:
+
+ *  NET_IPV6_MAX_NEIGHBORS (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && NET_RPL (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig.rpl:126

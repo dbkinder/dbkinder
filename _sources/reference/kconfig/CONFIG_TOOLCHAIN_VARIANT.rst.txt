@@ -1,0 +1,56 @@
+:orphan:
+
+.. title:: TOOLCHAIN_VARIANT
+
+.. option:: CONFIG_TOOLCHAIN_VARIANT
+.. _CONFIG_TOOLCHAIN_VARIANT:
+
+For optimized compilers with reduced features, specify the name
+of the variant.
+
+
+
+:Symbol:           TOOLCHAIN_VARIANT
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Cross-compiler variant name"
+:Default values:
+
+ *  RG-2016.4-linux (value: "RG-2016.4-linux")
+ *   Condition: (none)
+ *  "iamcu"
+ *   Condition: X86_IAMCU (value: "n")
+ *  ""
+ *   Condition: !X86_IAMCU (value: "y")
+ *  "iamcu"
+ *   Condition: X86_IAMCU (value: "n")
+ *  ""
+ *   Condition: !X86_IAMCU (value: "y")
+ *  RF-2016.4-linux (value: "RF-2016.4-linux")
+ *   Condition: (none)
+ *  RF-2016.4-linux (value: "RF-2016.4-linux")
+ *   Condition: (none)
+ *  RF-2016.4-linux (value: "RF-2016.4-linux")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_D_108MINI (value: "n")
+:Locations:
+ * ../arch/xtensa/Kconfig:79
+ * ../misc/Kconfig:144
+ * ../arch/x86/soc/intel_quark/quark_se/Kconfig.defconfig.series:15
+ * ../arch/x86/soc/intel_quark/quark_d2000/Kconfig.defconfig.series:15
+ * ../arch/xtensa/soc/D_212GP/Kconfig.defconfig:16
+ * ../arch/xtensa/soc/D_233L/Kconfig.defconfig:16
+ * ../arch/xtensa/soc/D_108mini/Kconfig.defconfig:16

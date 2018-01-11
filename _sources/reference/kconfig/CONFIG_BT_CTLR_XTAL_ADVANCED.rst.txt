@@ -1,0 +1,50 @@
+:orphan:
+
+.. title:: BT_CTLR_XTAL_ADVANCED
+
+.. option:: CONFIG_BT_CTLR_XTAL_ADVANCED
+.. _CONFIG_BT_CTLR_XTAL_ADVANCED:
+
+Enables advanced event preparation offset ahead of radio tx/rx, taking
+into account predictive processing time requirements in preparation to
+the event, like control procedure handling and CPU execution speeds.
+Crystal oscillator is retained between closely spaced consecutive
+radio events to reduce the overall number of crystal settling current
+consumptions.
+
+This feature maximizes radio utilization in an average role event
+timeslice when they are closely spaced by using a reduced offset
+between preparation and radio event.
+
+By disabling this feature, the controller will use a constant offset
+between the preparation and radio event. The controller will toggle
+crystal oscillator between two closely spaced radio events leading to
+higher average current due to increased number of crystal settling
+current consumptions.
+
+
+
+:Symbol:           BT_CTLR_XTAL_ADVANCED
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Advanced event preparation" if BT_CTLR_ADVANCED_FEATURES (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:287

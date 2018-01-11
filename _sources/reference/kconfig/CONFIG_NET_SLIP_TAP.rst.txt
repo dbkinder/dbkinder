@@ -1,0 +1,44 @@
+:orphan:
+
+.. title:: NET_SLIP_TAP
+
+.. option:: CONFIG_NET_SLIP_TAP
+.. _CONFIG_NET_SLIP_TAP:
+
+SLIP TAP support is necessary when testing with QEMU. The host
+needs to have tunslip6 with TAP support running in order to
+communicate via the SLIP driver. See net-tools project at
+https://github.com/zephyrproject-rtos/net-tools for more details.
+
+
+
+:Symbol:           NET_SLIP_TAP
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "TAP SLIP driver"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: QEMU_TARGET && !NET_TEST && !NET_L2_BT (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_SLIP`
+ *  :option:`CONFIG_UART_PIPE`
+ *  :option:`CONFIG_UART_INTERRUPT_DRIVEN`
+ *  :option:`CONFIG_SLIP_TAP`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig:264

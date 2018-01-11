@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BOARD_NATIVE_POSIX
+
+.. option:: CONFIG_BOARD_NATIVE_POSIX
+.. _CONFIG_BOARD_NATIVE_POSIX:
+
+Will produce a console Linux process which can be executed natively.
+It provides some minimal needed models:
+An interrupt controller, timer (system tick), and redirects kernel prints to
+stdout.
+
+
+:Symbol:           BOARD_NATIVE_POSIX
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Posix simple process" if SOC_POSIX (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_NATIVE_POSIX_TIMER` if SOC_POSIX (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/posix/native_posix/Kconfig.board:2

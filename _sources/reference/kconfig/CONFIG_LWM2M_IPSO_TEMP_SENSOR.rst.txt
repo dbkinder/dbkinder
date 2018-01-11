@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: LWM2M_IPSO_TEMP_SENSOR
+
+.. option:: CONFIG_LWM2M_IPSO_TEMP_SENSOR
+.. _CONFIG_LWM2M_IPSO_TEMP_SENSOR:
+
+This IPSO object should be used with a temperature sensor to
+report a temperature measurement. It also provides resources for
+minimum/maximum measured values and the minimum/maximum range
+that can be measured by the temperature sensor.
+
+
+
+:Symbol:           LWM2M_IPSO_TEMP_SENSOR
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "IPSO Temperature Sensor Support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING && LWM2M_IPSO_SUPPORT (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig.ipso:16

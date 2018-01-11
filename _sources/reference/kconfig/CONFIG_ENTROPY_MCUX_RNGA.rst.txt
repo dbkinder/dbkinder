@@ -1,0 +1,44 @@
+:orphan:
+
+.. title:: ENTROPY_MCUX_RNGA
+
+.. option:: CONFIG_ENTROPY_MCUX_RNGA
+.. _CONFIG_ENTROPY_MCUX_RNGA:
+
+This option enables the random number generator accelerator (RNGA)
+driver based on the MCUX RNGA driver.
+
+
+
+:Symbol:           ENTROPY_MCUX_RNGA
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "MCUX RNGA driver" if ENTROPY_GENERATOR && HAS_MCUX_RNGA (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: ENTROPY_GENERATOR && HAS_MCUX_RNGA (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_ENTROPY_HAS_DRIVER` if ENTROPY_GENERATOR && HAS_MCUX_RNGA (value: "n")
+ *  :option:`CONFIG_ENTROPY_DEVICE_RANDOM_GENERATOR` if ENTROPY_GENERATOR && HAS_MCUX_RNGA (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_MK64F12 && SOC_SERIES_KINETIS_K6X && ENTROPY_GENERATOR (value: "n")
+:Locations:
+ * ../drivers/entropy/Kconfig.mcux:7
+ * ../arch/arm/soc/nxp_kinetis/kwx/Kconfig.defconfig.mkw2xd512:84
+ * ../arch/arm/soc/nxp_kinetis/k6x/Kconfig.defconfig.mk64f12:79

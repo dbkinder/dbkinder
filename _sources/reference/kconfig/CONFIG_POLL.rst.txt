@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: POLL
+
+.. option:: CONFIG_POLL
+.. _CONFIG_POLL:
+
+Asynchronous notification framework. Enable the k_poll() and
+k_poll_signal() APIs.  The former can wait on multiple events
+concurrently, which can be either directly triggered or triggered by
+the availability of some kernel objects (semaphores and fifos).
+
+
+
+:Symbol:           POLL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "async I/O framework"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ BT_HCI && BT && BT_CONN && BT_HCI_ACL_FLOW_CONTROL || BT_HCI && BT && !BT_HCI_RAW && BT_HCI_HOST || NETWORKING (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../kernel/Kconfig:324

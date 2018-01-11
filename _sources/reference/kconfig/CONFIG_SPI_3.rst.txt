@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: SPI_3
+
+.. option:: CONFIG_SPI_3
+.. _CONFIG_SPI_3:
+
+Enable SPI controller port 3.
+
+
+
+:Symbol:           SPI_3
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "SPI port 3"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SPI (value: "n")
+:Locations:
+ * ../drivers/spi/Kconfig:214

@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: NET_DEBUG_NET_PKT_ALL
+
+.. option:: CONFIG_NET_DEBUG_NET_PKT_ALL
+.. _CONFIG_NET_DEBUG_NET_PKT_ALL:
+
+Enables printing of network packet and buffer allocations and frees for
+each allocation. This can produce lot of output so it is disabled by
+default.
+
+
+
+:Symbol:           NET_DEBUG_NET_PKT_ALL
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Debug network packet and buffer individual allocation" if NET_DEBUG_NET_PKT (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: NET_DEBUG_NET_PKT (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && !NET_RAW_MODE && NET_LOG (value: "n")
+:Locations:
+ * ../subsys/net/ip/Kconfig.debug:96

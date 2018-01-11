@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: MPU_STACK_GUARD
+
+.. option:: CONFIG_MPU_STACK_GUARD
+.. _CONFIG_MPU_STACK_GUARD:
+
+Enable thread stack guards via MPU. ARC supports built-in stack protection.
+If your core supports that, it is preferred over MPU stack guard
+
+
+
+:Symbol:           MPU_STACK_GUARD
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Thread Stack Guards" if ARM_CORE_MPU (value: "n")
+ *  "Thread Stack Guards" if ARC_CORE_MPU && !ARC_STACK_CHECKING (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: ARM_CORE_MPU (value: "n")
+ *  n (value: "n")
+ *   Condition: ARC_CORE_MPU && !ARC_STACK_CHECKING (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_THREAD_STACK_INFO` if ARC_CORE_MPU && !ARC_STACK_CHECKING (value: "n")
+:Reverse (select-related) dependencies:
+ ARM_CORE_MPU && ARM && ARM_STACK_PROTECTION (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ CPU_HAS_MPU && ARC (value: "n")
+:Locations:
+ * ../arch/arm/core/cortex_m/mpu/Kconfig:17
+ * ../arch/arc/core/mpu/Kconfig:24

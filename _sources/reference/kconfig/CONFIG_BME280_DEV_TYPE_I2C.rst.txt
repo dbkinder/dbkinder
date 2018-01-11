@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BME280_DEV_TYPE_I2C
+
+.. option:: CONFIG_BME280_DEV_TYPE_I2C
+.. _CONFIG_BME280_DEV_TYPE_I2C:
+
+The configuration item CONFIG_BME280_DEV_TYPE_I2C:
+
+:Symbol:           BME280_DEV_TYPE_I2C
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "I2C" if I2C (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/bme280/Kconfig:33

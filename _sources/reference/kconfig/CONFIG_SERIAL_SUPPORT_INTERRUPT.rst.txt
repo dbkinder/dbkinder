@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: SERIAL_SUPPORT_INTERRUPT
+
+.. option:: CONFIG_SERIAL_SUPPORT_INTERRUPT
+.. _CONFIG_SERIAL_SUPPORT_INTERRUPT:
+
+This is an option to be enabled by individual serial driver
+to signal that the driver and hardware supports interrupts.
+
+
+
+:Symbol:           SERIAL_SUPPORT_INTERRUPT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ UART_NS16550 && SERIAL || HAS_MCUX && CLOCK_CONTROL && SERIAL && UART_MCUX || HAS_MCUX_LPSCI && CLOCK_CONTROL && SERIAL && UART_MCUX_LPSCI || HAS_MCUX_LPUART && CLOCK_CONTROL && SERIAL && UART_MCUX_LPUART || UART_STELLARIS && SERIAL || QMSI && SERIAL && UART_QMSI || SOC_FAMILY_STM32 && SERIAL && UART_STM32 || SOC_FAMILY_NRF5 && SERIAL && UART_NRF5 || SOC_SERIES_CC32XX && SOC_FAMILY_TISIMPLELINK && SERIAL && UART_CC32XX || SOC_FAMILY_ARM && SERIAL && UART_CMSDK_APB || SOC_RISCV32_FE310 && SERIAL && UART_FE310 || HAS_SILABS_GECKO && GPIO_GECKO && SERIAL && UART_GECKO || SOC_SERIES_MSP432P4XX && SOC_FAMILY_TISIMPLELINK && SERIAL && UART_MSP432P4XX || SOC_FAMILY_SAM0 && SERIAL && UART_SAM0 (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig:28

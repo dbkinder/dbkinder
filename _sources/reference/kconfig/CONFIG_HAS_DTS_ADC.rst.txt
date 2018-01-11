@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: HAS_DTS_ADC
+
+.. option:: CONFIG_HAS_DTS_ADC
+.. _CONFIG_HAS_DTS_ADC:
+
+This option specifies that the target platform supports device tree
+configuration for ADC.
+
+
+
+:Symbol:           HAS_DTS_ADC
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ HAS_MCUX_ADC16 && ADC && ADC_MCUX_ADC16 || SOC_FAMILY_SAM && ADC && ADC_SAM_AFEC (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../dts/Kconfig:7

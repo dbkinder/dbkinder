@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: BT_MESH_LPN_INIT_POLL_TIMEOUT
+
+.. option:: CONFIG_BT_MESH_LPN_INIT_POLL_TIMEOUT
+.. _CONFIG_BT_MESH_LPN_INIT_POLL_TIMEOUT:
+
+The initial value of the PollTimeout timer when Friendship
+gets established for the first time. After this the timeout
+will gradually grow toward the actual PollTimeout, doubling
+in value for each iteration. The value is in units of 100
+milliseconds, so e.g. a value of 300 means 30 seconds.
+
+
+
+:Symbol:           BT_MESH_LPN_INIT_POLL_TIMEOUT
+:Type:             int
+:Value:            "10"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [10, BT_MESH_LPN_POLL_TIMEOUT]
+:Prompts:
+
+ *  "The starting value of the PollTimeout timer"
+:Default values:
+
+ *  BT_MESH_LPN_POLL_TIMEOUT (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_LOW_POWER (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:285

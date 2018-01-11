@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: I2C_3_IRQ_PRI
+
+.. option:: CONFIG_I2C_3_IRQ_PRI
+.. _CONFIG_I2C_3_IRQ_PRI:
+
+IRQ priority.
+
+
+
+:Symbol:           I2C_3_IRQ_PRI
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port 3 interrupt priority" if I2C_3 && !HAS_DTS_I2C (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:314

@@ -1,0 +1,46 @@
+:orphan:
+
+.. title:: FXAS21002_DR
+
+.. option:: CONFIG_FXAS21002_DR
+.. _CONFIG_FXAS21002_DR:
+
+Selects the output data rate
+0: 800 Hz
+1: 400 Hz
+2: 200 Hz
+3: 100 Hz
+4: 50 Hz
+5: 25 Hz
+6: 12.5 Hz
+7: 12.5 Hz
+
+
+
+:Symbol:           FXAS21002_DR
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 7]
+:Prompts:
+
+ *  "Output data rate"
+:Default values:
+
+ *  3 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FXAS21002 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/fxas21002/Kconfig:54

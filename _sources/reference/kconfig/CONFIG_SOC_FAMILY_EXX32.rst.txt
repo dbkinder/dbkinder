@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: SOC_FAMILY_EXX32
+
+.. option:: CONFIG_SOC_FAMILY_EXX32
+.. _CONFIG_SOC_FAMILY_EXX32:
+
+The configuration item CONFIG_SOC_FAMILY_EXX32:
+
+:Symbol:           SOC_FAMILY_EXX32
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ SOC_SERIES_EFM32WG (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/silabs_exx32/Kconfig:7

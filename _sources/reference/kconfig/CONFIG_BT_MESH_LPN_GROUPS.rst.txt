@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: BT_MESH_LPN_GROUPS
+
+.. option:: CONFIG_BT_MESH_LPN_GROUPS
+.. _CONFIG_BT_MESH_LPN_GROUPS:
+
+Maximum number of groups that the LPN can subscribe to.
+
+
+:Symbol:           BT_MESH_LPN_GROUPS
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 16384]
+:Prompts:
+
+ *  "Number of groups the LPN can subscribe to"
+:Default values:
+
+ *  8 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_LOW_POWER (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:305

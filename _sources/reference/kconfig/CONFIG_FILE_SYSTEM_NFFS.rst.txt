@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: FILE_SYSTEM_NFFS
+
+.. option:: CONFIG_FILE_SYSTEM_NFFS
+.. _CONFIG_FILE_SYSTEM_NFFS:
+
+Enables NFFS file system support.
+Note: NFFS requires 1-byte unaligned access to flash thus it
+will not work on devices that support only aligned flash access.
+
+
+
+:Symbol:           FILE_SYSTEM_NFFS
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "NFFS file system support"
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_FLASH_PAGE_LAYOUT`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ FILE_SYSTEM (value: "n")
+:Locations:
+ * ../subsys/fs/Kconfig:32

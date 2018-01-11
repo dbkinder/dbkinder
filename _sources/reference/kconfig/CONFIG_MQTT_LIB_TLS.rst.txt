@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: MQTT_LIB_TLS
+
+.. option:: CONFIG_MQTT_LIB_TLS
+.. _CONFIG_MQTT_LIB_TLS:
+
+Enables MQTT library with TLS support
+
+
+:Symbol:           MQTT_LIB_TLS
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable TLS support for the MQTT application" if MQTT_LIB (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: MQTT_LIB (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_NET_APP_TLS` if MQTT_LIB (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/mqtt/Kconfig:46

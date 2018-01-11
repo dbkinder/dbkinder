@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: I2S_SAM_SSC
+
+.. option:: CONFIG_I2S_SAM_SSC
+.. _CONFIG_I2S_SAM_SSC:
+
+Enable Inter Sound (I2S) bus driver for Atmel SAM MCU family based on
+Synchronous Serial Controller (SSC) module.
+
+
+
+:Symbol:           I2S_SAM_SSC
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Atmel SAM MCU family I2S (SSC) Bus Driver" if SOC_FAMILY_SAM (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SOC_FAMILY_SAM (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_DMA` if SOC_FAMILY_SAM (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ I2S && BOARD_SAM_E70_XPLAINED (value: "n")
+:Locations:
+ * ../drivers/i2s/Kconfig.sam_ssc:8
+ * ../boards/arm/sam_e70_xplained/Kconfig.defconfig:14

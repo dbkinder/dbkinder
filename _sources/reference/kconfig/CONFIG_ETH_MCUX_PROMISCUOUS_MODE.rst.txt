@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: ETH_MCUX_PROMISCUOUS_MODE
+
+.. option:: CONFIG_ETH_MCUX_PROMISCUOUS_MODE
+.. _CONFIG_ETH_MCUX_PROMISCUOUS_MODE:
+
+Place the Ethernet receiver in promiscuous mode. This may be useful
+for debugging and not needed for normal work.
+
+
+
+:Symbol:           ETH_MCUX_PROMISCUOUS_MODE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable promiscuous mode"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ETH_MCUX (value: "n")
+:Locations:
+ * ../drivers/ethernet/Kconfig.mcux:18

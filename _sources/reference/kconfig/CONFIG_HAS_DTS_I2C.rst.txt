@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: HAS_DTS_I2C
+
+.. option:: CONFIG_HAS_DTS_I2C
+.. _CONFIG_HAS_DTS_I2C:
+
+This option specifies that the target platform supports device tree
+configuration for I2c.
+
+
+
+:Symbol:           HAS_DTS_I2C
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: HAS_DTS (value: "y")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ SOC_FAMILY_SAM && I2C && I2C_SAM_TWIHS || SOC_FAMILY_SAM && I2C && I2C_SAM_TWI || HAS_MCUX && I2C && I2C_MCUX || SOC_SERIES_CC32XX && I2C && I2C_CC32XX || SOC_FAMILY_STM32 && (SOC_SERIES_STM32F1X || SOC_SERIES_STM32F4X) && I2C && I2C_STM32_V1 || SOC_FAMILY_STM32 && (SOC_SERIES_STM32F0X || SOC_SERIES_STM32F3X || SOC_SERIES_STM32L4X) && I2C && I2C_STM32_V2 (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../dts/Kconfig:14

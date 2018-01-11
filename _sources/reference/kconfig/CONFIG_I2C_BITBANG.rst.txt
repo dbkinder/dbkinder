@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: I2C_BITBANG
+
+.. option:: CONFIG_I2C_BITBANG
+.. _CONFIG_I2C_BITBANG:
+
+Enable library used for software driven (bit banging) I2C support
+
+
+
+:Symbol:           I2C_BITBANG
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ I2C && ARM && I2C && I2C_SBCON || I2C && I2C && I2C_GPIO (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ I2C (value: "n")
+:Locations:
+ * ../drivers/i2c/Kconfig:146

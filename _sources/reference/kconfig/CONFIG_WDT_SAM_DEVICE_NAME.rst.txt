@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: WDT_SAM_DEVICE_NAME
+
+.. option:: CONFIG_WDT_SAM_DEVICE_NAME
+.. _CONFIG_WDT_SAM_DEVICE_NAME:
+
+Set the name used by WDT device during registration.
+
+
+:Symbol:           WDT_SAM_DEVICE_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Device name for Watchdog (WDT)" if WDT_SAM (value: "n")
+:Default values:
+
+ *  "WDT"
+ *   Condition: WDT_SAM (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ WATCHDOG (value: "n")
+:Locations:
+ * ../drivers/watchdog/Kconfig.sam:22

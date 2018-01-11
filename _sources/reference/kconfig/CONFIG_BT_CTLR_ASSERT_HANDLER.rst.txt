@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: BT_CTLR_ASSERT_HANDLER
+
+.. option:: CONFIG_BT_CTLR_ASSERT_HANDLER
+.. _CONFIG_BT_CTLR_ASSERT_HANDLER:
+
+This option enables an application-defined sink for the
+controller assertion mechanism. This must be defined in
+application code as void \"bt_controller_assert_handle(char \*, int)\"
+and will be invoked whenever the controller code encounters
+an unrecoverable error.
+
+
+
+:Symbol:           BT_CTLR_ASSERT_HANDLER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Bluetooth Controller Assertion Handler" if BT_HCI_RAW (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_CTLR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/controller/Kconfig:467

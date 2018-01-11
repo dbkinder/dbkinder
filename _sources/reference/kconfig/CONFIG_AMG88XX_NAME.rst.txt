@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: AMG88XX_NAME
+
+.. option:: CONFIG_AMG88XX_NAME
+.. _CONFIG_AMG88XX_NAME:
+
+Device name identifying the AMG88XX sensor.
+
+
+
+:Symbol:           AMG88XX_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Driver name"
+:Default values:
+
+ *  "AMG88XX"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ AMG88XX && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/amg88xx/Kconfig:18

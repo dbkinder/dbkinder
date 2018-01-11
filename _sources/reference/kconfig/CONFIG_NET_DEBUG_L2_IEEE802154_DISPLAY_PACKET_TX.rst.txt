@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: NET_DEBUG_L2_IEEE802154_DISPLAY_PACKET_TX
+
+.. option:: CONFIG_NET_DEBUG_L2_IEEE802154_DISPLAY_PACKET_TX
+.. _CONFIG_NET_DEBUG_L2_IEEE802154_DISPLAY_PACKET_TX:
+
+This will print-out transmitted packets only.
+
+
+
+:Symbol:           NET_DEBUG_L2_IEEE802154_DISPLAY_PACKET_TX
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Print-out only TX packets"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NETWORKING && NETWORKING && NET_L2_IEEE802154 && NET_DEBUG_L2_IEEE802154_DISPLAY_PACKET (value: "n")
+:Locations:
+ * ../subsys/net/ip/l2/ieee802154/Kconfig:54

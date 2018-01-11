@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Zephyr documentation &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+        <link rel="copyright" title="Copyright" href="copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="index.html"/>
+        <link rel="up" title="Developer Guides" href="application/index.html"/>
+        <link rel="next" title="Supported Boards" href="boards/boards.html"/>
+        <link rel="prev" title="Miscellaneous APIs" href="api/misc_api.html"/> 
+
+    
+    <script src="_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="index.html">Docs</a> /
+      
+          <a href="application/index.html">Developer Guides</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="application/index.html">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="porting/porting.html">Porting Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="application/application.html">Application Development Primer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samples/samples.html">Samples and Demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/kconfig/index.html">Configuration Options Reference Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/api.html">API Documentation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Zephyr documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#documentation-overview">Documentation overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-the-documentation-processors">Installing the documentation processors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation-presentation-theme">Documentation presentation theme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-documentation-processors">Running the documentation processors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filtering-expected-warnings">Filtering expected warnings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="zephyr-documentation">
+<span id="zephyr-doc"></span><h1>Zephyr documentation<a class="headerlink" href="#zephyr-documentation" title="Permalink to this headline">¶</a></h1>
+<p>These instructions will walk you through generating the Zephyr Project’s
+documentation on your local system using the same documentation sources
+as we use to create the online documentation found at
+<a class="reference external" href="https://zephyrproject.org/doc">https://zephyrproject.org/doc</a></p>
+<div class="section" id="documentation-overview">
+<h2>Documentation overview<a class="headerlink" href="#documentation-overview" title="Permalink to this headline">¶</a></h2>
+<p>Zephyr Project content is written using the reStructuredText markup
+language (.rst file extension) with Sphinx extensions, and processed
+using sphinx to create a formatted stand-alone website. Developers can
+view this content either in its raw form as .rst markup files, or you
+can generate the HTML content and view it with a web browser directly on
+your workstation. This same .rst content is also fed into the Zephyr
+Project’s public website documentation area (with a different theme
+applied).</p>
+<p>You can read details about <a class="reference external" href="http://sphinx-doc.org/rest.html">reStructuredText</a>, and <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> from
+their respective websites.</p>
+<p>The project’s documentation contains the following items:</p>
+<ul class="simple">
+<li>ReStructuredText source files used to generate documentation found at the
+<a class="reference external" href="https://zephyrproject.org/doc">https://zephyrproject.org/doc</a> website. Most of the reStructuredText sources
+are found in the <code class="docutils literal"><span class="pre">/doc</span></code> directory, but others are stored within the
+code source tree near their specific component (such as <code class="docutils literal"><span class="pre">/samples</span></code> and
+<code class="docutils literal"><span class="pre">/boards</span></code>)</li>
+<li>Doxygen-generated material used to create all API-specific documents
+also found at <a class="reference external" href="https://zephyrproject.org/doc">https://zephyrproject.org/doc</a></li>
+<li>Script-generated material for kernel configuration options based on Kconfig
+files found in the source code tree</li>
+</ul>
+<p>The reStructuredText files are processed by the Sphinx documentation system,
+and make use of the breathe extension for including the doxygen-generated API
+material.  Additional tools are required to generate the
+documentation locally, as described in the following sections.</p>
+</div>
+<div class="section" id="installing-the-documentation-processors">
+<h2>Installing the documentation processors<a class="headerlink" href="#installing-the-documentation-processors" title="Permalink to this headline">¶</a></h2>
+<p>Our documentation processing has been tested to run with:</p>
+<ul class="simple">
+<li>Doxygen version 1.8.11</li>
+<li>Sphinx version 1.5.5</li>
+<li>Breathe version 4.6.0</li>
+<li>docutils version 0.13.1</li>
+</ul>
+<p>Begin by cloning a copy of the git repository for the zephyr project and
+setting up your development environment as described in <a class="reference internal" href="getting_started/getting_started.html#getting-started"><span class="std std-ref">Getting Started Guide</span></a>
+or specifically for Ubuntu in <a class="reference internal" href="getting_started/installation_linux.html#installation-linux"><span class="std std-ref">Development Environment Setup on Linux</span></a>.  (Be sure to
+export the environment variables <code class="docutils literal"><span class="pre">ZEPHYR_GCC_VARIANT</span></code> and
+<code class="docutils literal"><span class="pre">ZEPHYR_SDK_INSTALL_DIR</span></code> as documented there.)</p>
+<p>Other than <code class="docutils literal"><span class="pre">doxygen</span></code>, the documentation tools should be installed using <code class="docutils literal"><span class="pre">pip</span></code>.
+If you don’t already have pip installed, these commands will install it:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ curl -O <span class="s1">&#39;https://bootstrap.pypa.io/get-pip.py&#39;</span>
+$ ./get-pip.py
+$ rm get-pip.py
+</pre></div>
+</div>
+<p>The documentation generation tools are included in the set of tools
+expected for the Zephyr build environment and so are included in
+<code class="docutils literal"><span class="pre">requirements.txt</span></code>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo -E apt-get install doxygen
+$ pip install -r scripts/requirements.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="documentation-presentation-theme">
+<h2>Documentation presentation theme<a class="headerlink" href="#documentation-presentation-theme" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx supports easy customization of the generated documentation
+appearance through the use of themes.  Replace the theme files and do
+another <code class="docutils literal"><span class="pre">make</span> <span class="pre">htmldocs</span></code> and the output layout and style is changed.
+The <code class="docutils literal"><span class="pre">read-the-docs</span></code> theme is installed as part of the
+<code class="docutils literal"><span class="pre">requirements.txt</span></code> list above, and will be used if it’s available, for
+local doc generation.</p>
+</div>
+<div class="section" id="running-the-documentation-processors">
+<h2>Running the documentation processors<a class="headerlink" href="#running-the-documentation-processors" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">/doc</span></code> directory in your cloned copy of the Zephyr project git
+repo has all the .rst source files, extra tools, and Makefile for
+generating a local copy of the Zephyr project’s technical documentation.
+Assuming the local Zephyr project copy is <code class="docutils literal"><span class="pre">~/zephyr</span></code>, here are the
+commands to generate the html content locally:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/zephyr
+$ <span class="nb">source</span> zephyr-env.sh
+$ <span class="nb">cd</span> doc
+$ make htmldocs
+</pre></div>
+</div>
+<p>Depending on your development system, it will take about 15 minutes to
+collect and generate the HTML content.  When done, the HTML output will
+be in <code class="docutils literal"><span class="pre">~/zephyr/doc/_build/html/index.html</span></code></p>
+</div>
+<div class="section" id="filtering-expected-warnings">
+<h2>Filtering expected warnings<a class="headerlink" href="#filtering-expected-warnings" title="Permalink to this headline">¶</a></h2>
+<p>Alas, there are some known issues with the doxygen/Sphinx/Breathe
+processing that generates warnings for some constructs, in particular
+around unnamed structures in nested unions or structs. Also, adding
+qualifiers to a function declaration, like __deprecated, can generate a
+warning.  While these issues are being considered for fixing in
+Sphinx/Breathe, we’ve added a post-processing filter on the output of
+the documentation build process to remove “expected” messages from the
+generation process output.</p>
+<p>The output from the Sphinx build is processed by the python script
+<code class="docutils literal"><span class="pre">scripts/filter-known-issues.py</span></code> together with a set of filter
+configuration files in the <code class="docutils literal"><span class="pre">.known-issues/doc</span></code> folder.  (This
+filtering is done as part of the <code class="docutils literal"><span class="pre">doc/Makefile</span></code>.)</p>
+<p>If you’re contributing components included in the Zephyr API
+documentation and run across these warnings, you can include filtering
+them out as “expected” warnings by adding a conf file to the
+<code class="docutils literal"><span class="pre">.known-issues/doc</span></code> folder, following the example of other conf files
+found there.</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="boards/boards.html" class="btn btn-neutral float-right" title="Supported Boards" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="api/misc_api.html" class="btn btn-neutral" title="Miscellaneous APIs" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/js/main.js"></script>
+      <script type="text/javascript" src="_static/js/app.js"></script>
+      <script type="text/javascript" src="_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+:orphan:
+
+.. title:: BOARD_EM_STARTERKIT_R23
+
+.. option:: CONFIG_BOARD_EM_STARTERKIT_R23
+.. _CONFIG_BOARD_EM_STARTERKIT_R23:
+
+The configuration item CONFIG_BOARD_EM_STARTERKIT_R23:
+
+:Symbol:           BOARD_EM_STARTERKIT_R23
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "2.3" if SOC_EM9D || SOC_EM11D || SOC_EM7D (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BOARD_EM_STARTERKIT (value: "n")
+:Locations:
+ * ../boards/arc/em_starterkit/Kconfig:18

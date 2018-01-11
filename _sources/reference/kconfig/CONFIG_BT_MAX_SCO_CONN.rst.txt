@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: BT_MAX_SCO_CONN
+
+.. option:: CONFIG_BT_MAX_SCO_CONN
+.. _CONFIG_BT_MAX_SCO_CONN:
+
+Maximum number of simultaneous Bluetooth synchronous connections
+supported. The minimum (and default) number is 1.
+
+
+
+:Symbol:           BT_MAX_SCO_CONN
+:Type:             int
+:Value:            "1"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [1, 3]
+:Prompts:
+
+ *  "Maximum number of simultaneous SCO connections"
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_BREDR (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:466

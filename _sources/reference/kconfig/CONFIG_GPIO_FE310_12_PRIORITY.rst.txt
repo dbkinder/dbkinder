@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: GPIO_FE310_12_PRIORITY
+
+.. option:: CONFIG_GPIO_FE310_12_PRIORITY
+.. _CONFIG_GPIO_FE310_12_PRIORITY:
+
+The configuration item CONFIG_GPIO_FE310_12_PRIORITY:
+
+:Symbol:           GPIO_FE310_12_PRIORITY
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "GPIO 12 interrupt priority"
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_FE310 && GPIO (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.fe310:71

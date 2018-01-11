@@ -1,0 +1,32 @@
+:orphan:
+
+.. title:: RISCV_RAM_SIZE
+
+.. option:: CONFIG_RISCV_RAM_SIZE
+.. _CONFIG_RISCV_RAM_SIZE:
+
+The configuration item CONFIG_RISCV_RAM_SIZE:
+
+:Symbol:           RISCV_RAM_SIZE
+:Type:             hex
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  0x4000 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_RISCV32_FE310 (value: "n")
+:Locations:
+ * ../arch/riscv32/soc/riscv-privilege/fe310/Kconfig.defconfig.series:43

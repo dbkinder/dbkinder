@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: IWDG_STM32_TIMEOUT
+
+.. option:: CONFIG_IWDG_STM32_TIMEOUT
+.. _CONFIG_IWDG_STM32_TIMEOUT:
+
+Set timeout value for IWDG in microseconds.
+The min timeout supported is 0.1ms, the max timeout is 26214.4ms.
+
+
+:Symbol:           IWDG_STM32_TIMEOUT
+:Type:             int
+:Value:            "100"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [100, 26214400]
+:Prompts:
+
+ *  "Value for IWDG timeout in [us]" if IWDG_STM32 (value: "n")
+:Default values:
+
+ *  100 (value: "n")
+ *   Condition: IWDG_STM32 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ WATCHDOG (value: "n")
+:Locations:
+ * ../drivers/watchdog/Kconfig.stm32:32

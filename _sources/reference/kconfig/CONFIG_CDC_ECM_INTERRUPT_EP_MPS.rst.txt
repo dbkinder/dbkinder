@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: CDC_ECM_INTERRUPT_EP_MPS
+
+.. option:: CONFIG_CDC_ECM_INTERRUPT_EP_MPS
+.. _CONFIG_CDC_ECM_INTERRUPT_EP_MPS:
+
+CDC ECM class interrupt endpoint size
+
+
+
+:Symbol:           CDC_ECM_INTERRUPT_EP_MPS
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  16 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_STACK && USB_DEVICE_NETWORK_ECM (value: "n")
+:Locations:
+ * ../subsys/usb/class/netusb/Kconfig:58

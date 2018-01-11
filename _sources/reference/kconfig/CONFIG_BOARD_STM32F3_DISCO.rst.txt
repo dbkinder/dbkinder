@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: BOARD_STM32F3_DISCO
+
+.. option:: CONFIG_BOARD_STM32F3_DISCO
+.. _CONFIG_BOARD_STM32F3_DISCO:
+
+The configuration item CONFIG_BOARD_STM32F3_DISCO:
+
+:Symbol:           BOARD_STM32F3_DISCO
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   true
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "STM32F3DISCOVERY Development Board" if SOC_STM32F303XC (value: "n")
+:Default values:
+ (no default values)
+:Selects:
+
+ *  :option:`CONFIG_I2C_1` if I2C && SOC_STM32F303XC (value: "n")
+ *  :option:`CONFIG_I2C_2` if I2C && SOC_STM32F303XC (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../boards/arm/stm32f3_disco/Kconfig.board:8

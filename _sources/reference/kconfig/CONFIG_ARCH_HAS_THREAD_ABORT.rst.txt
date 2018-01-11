@@ -1,0 +1,30 @@
+:orphan:
+
+.. title:: ARCH_HAS_THREAD_ABORT
+
+.. option:: CONFIG_ARCH_HAS_THREAD_ABORT
+.. _CONFIG_ARCH_HAS_THREAD_ABORT:
+
+The configuration item CONFIG_ARCH_HAS_THREAD_ABORT:
+
+:Symbol:           ARCH_HAS_THREAD_ABORT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ ARM || ARCH_POSIX (value: "n")
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../arch/Kconfig:179

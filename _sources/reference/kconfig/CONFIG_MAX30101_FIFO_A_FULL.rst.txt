@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: MAX30101_FIFO_A_FULL
+
+.. option:: CONFIG_MAX30101_FIFO_A_FULL
+.. _CONFIG_MAX30101_FIFO_A_FULL:
+
+Set the trigger for the FIFO_A_FULL interrupt
+
+
+
+:Symbol:           MAX30101_FIFO_A_FULL
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 15]
+:Prompts:
+
+ *  "FIFO almost full value"
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ MAX30101 && SENSOR (value: "n")
+:Locations:
+ * ../drivers/sensor/max30101/Kconfig:54

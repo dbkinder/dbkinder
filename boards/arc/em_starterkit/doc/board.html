@@ -1,0 +1,655 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>DesignWare(R) ARC(R) EM Starter Kit &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../../../index.html"/>
+        <link rel="up" title="ARC Boards" href="../../index.html"/>
+        <link rel="next" title="NIOS II Boards" href="../../../nios2/index.html"/>
+        <link rel="prev" title="Arduino/Genuino 101 (Sensor Subsystem)" href="../../arduino_101_sss/doc/board.html"/> 
+
+    
+    <script src="../../../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../../../index.html">Docs</a> /
+      
+          <a href="../../../boards.html">Supported Boards</a> /
+      
+          <a href="../../index.html">ARC Boards</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../boards.html">Supported Boards</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../x86/index.html">x86 Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../arm/index.html">ARM Boards</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">ARC Boards</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../arduino_101_sss/doc/board.html">Arduino/Genuino 101 (Sensor Subsystem)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DesignWare(R) ARC(R) EM Starter Kit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../nios2/index.html">NIOS II Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../xtensa/index.html">XTENSA Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../posix/index.html">Native POSIX Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="designware-r-arc-r-em-starter-kit">
+<span id="em-starterkit"></span><h1>DesignWare(R) ARC(R) EM Starter Kit<a class="headerlink" href="#designware-r-arc-r-em-starter-kit" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The DesignWare(R) ARC(R) EM Starter Kit is a low-cost, versatile solution
+enabling rapid software development and software debugging, and profiling
+for the ARC EM Family of processors. The EM Family includes the EM4, EM6,
+EM5D, EM7D, EM9D, and EM11D cores. The Zephyr RTOS can be used with the
+EM Starter Kit.</p>
+<a class="reference internal image-reference" href="../../../../_images/ARC_EM_Starter_Kit_Board_Photo.jpg"><img alt="DesignWare(R) ARC(R) EM Starter Kit (synopsys.com)" class="align-center" src="../../../../_images/ARC_EM_Starter_Kit_Board_Photo.jpg" style="width: 442px;" /></a>
+<p>The ARC EM Starter Kit consists of a hardware platform, including pre-installed
+FPGA images of different ARC EM processor configurations with peripherals.
+Documentation for this board can be found at <a class="reference external" href="https://www.embarc.org">embARC website</a>.</p>
+<p>See also this URL for details about the board:
+<a class="reference external" href="https://www.synopsys.com/dw/ipdir.php?ds=arc_em_starter_kit">Designware ARC EM Starter Kit website</a> .</p>
+<p>The latest version of EM Starter Kit is 2.3, developer can upgrade from
+2.0/2.1/2.2 to 2.3 using latest firmware.
+The default configuration for EM Starter Kit boards can be found in
+<code class="file docutils literal"><span class="pre">boards/arc/em_starterkit/em_starterkit_defconfig</span></code>.</p>
+<p>The default SoC for this board supported in Zephyr is the EM9D.
+This configuration is a Harvard Architecture, with a separate
+instruction bus and data bus. Instruction memory is called ICCM
+and data memory is called DCCM. The configuration file for EM9D
+is found in <code class="file docutils literal"><span class="pre">arch/arc/soc/em9d/Kconfig.defconfig</span></code>.</p>
+<p>If you have a larger program, you can select the EM7D or EM11D, which gives
+access to 128KB DRAM with i-cache and d-cache. The configuration file for EM7D
+is found in <code class="file docutils literal"><span class="pre">arch/arc/soc/em7d/Kconfig.defconfig</span></code> and EM11D is found in
+<code class="file docutils literal"><span class="pre">arch/arc/soc/em11d/Kconfig.defconfig</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">EM7D of EM Starter Kit 2.3 has secureshield feature,
+which is not supported in Zephyr currently.</p>
+</div>
+</div>
+<div class="section" id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="board-layout">
+<h3>Board Layout<a class="headerlink" href="#board-layout" title="Permalink to this headline">¶</a></h3>
+<p>The ARC EM Starter Kit main board has 6 Pmod connectors. These can be configured
+to support attachment of GPIO, I2C, UART or SPI devices.</p>
+<p>The board also has a 16MB SPI-FLASH and an SDCard for storage. There are 9 LEDs,
+3 buttons, and 4 dip switches that can be used with GPIO.</p>
+<p>The Xilinx Spartan(R)-6 LX150 FPGA can auto-load one of 3 FPGA SoC bit files
+which have the EM7D, EM9D, or EM11D SoC.</p>
+<p>Documentation and general information for the board can be found at the
+<a class="reference external" href="https://www.embarc.org">embARC website</a>, which also includes some free sample software.</p>
+</div>
+<div class="section" id="supported-firmware-versions">
+<h3>Supported Firmware Versions<a class="headerlink" href="#supported-firmware-versions" title="Permalink to this headline">¶</a></h3>
+<p>The EM Starter Kit has different versions, such as 1.0, 1.1, 2.0, 2.1,
+2.2 and 2.3.
+In Zephyr, only firmware versions 2.2 and 2.3 are supported.</p>
+<ul class="simple">
+<li>For EM Starter Kit 2.2, EM7D, EM9D and EM11D core configurations are supported.<ul>
+<li>Use <a class="reference internal" href="../../../../reference/kconfig/CONFIG_BOARD_EM_STARTERKIT_R22.html#cmdoption-arg-config-board-em-starterkit-r22"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_BOARD_EM_STARTERKIT_R22</span></code></a> to select 2.2 version.</li>
+<li>Use <a class="reference internal" href="../../../../reference/kconfig/CONFIG_SOC_EM7D.html#cmdoption-arg-config-soc-em7d"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SOC_EM7D</span></code></a>, <a class="reference internal" href="../../../../reference/kconfig/CONFIG_SOC_EM9D.html#cmdoption-arg-config-soc-em9d"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SOC_EM9D</span></code></a> or
+<a class="reference internal" href="../../../../reference/kconfig/CONFIG_SOC_EM11D.html#cmdoption-arg-config-soc-em11d"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SOC_EM11D</span></code></a> to select EM7D, EM9D or EM11D.</li>
+</ul>
+</li>
+<li>For EM Starter Kit 2.3, EM9D and EM11D core configurations are supported.<ul>
+<li>Use <a class="reference internal" href="../../../../reference/kconfig/CONFIG_BOARD_EM_STARTERKIT_R23.html#cmdoption-arg-config-board-em-starterkit-r23"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_BOARD_EM_STARTERKIT_R23</span></code></a> to select 2.3 version.</li>
+<li>Use <a class="reference internal" href="../../../../reference/kconfig/CONFIG_SOC_EM9D.html#cmdoption-arg-config-soc-em9d"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SOC_EM9D</span></code></a> or <a class="reference internal" href="../../../../reference/kconfig/CONFIG_SOC_EM11D.html#cmdoption-arg-config-soc-em11d"><code class="xref std std-option docutils literal"><span class="pre">CONFIG_SOC_EM11D</span></code></a>
+to select EM9D or EM11D.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="supported-features">
+<h3>Supported Features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h3>
+<p>The Zephyr kernel supports multiple hardware features on the EM Starter Kit
+through the use of device drivers.</p>
+<p>The EM Starter Kit supports 6 Digilent Pmod(TM) Interfaces, which enables the
+use of a large variety of pluggable modules for storage, communications,
+sensors, displays, etc. With the Pmod interface, you can prototype your
+applications using the Zephyr RTOS.</p>
+<p>The table below shows which drivers are supported and which functionality can
+be found on which architectures:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="21%" />
+<col width="9%" />
+<col width="12%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Interface</th>
+<th class="head">Controller</th>
+<th class="head">EM9D</th>
+<th class="head">EM11D</th>
+<th class="head">Driver/Component</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>INT</td>
+<td>on-chip</td>
+<td>Y</td>
+<td>Y</td>
+<td>interrupt_controller</td>
+</tr>
+<tr class="row-odd"><td>UART</td>
+<td>usb +
+2 Pmods</td>
+<td>Y</td>
+<td>Y</td>
+<td>serial port-polling;
+serial port-interrupt</td>
+</tr>
+<tr class="row-even"><td>SPI</td>
+<td>2 Pmods</td>
+<td>Y</td>
+<td>Y</td>
+<td>spi</td>
+</tr>
+<tr class="row-odd"><td>ADC</td>
+<td>n/a</td>
+<td>N</td>
+<td>N</td>
+<td>adc (can add via Pmod)</td>
+</tr>
+<tr class="row-even"><td>I2C</td>
+<td>2 Pmods</td>
+<td>Y</td>
+<td>Y</td>
+<td>i2c</td>
+</tr>
+<tr class="row-odd"><td>GPIO</td>
+<td>6 Pmods</td>
+<td>Y</td>
+<td>Y</td>
+<td>gpio</td>
+</tr>
+<tr class="row-even"><td>PWM</td>
+<td>n/a</td>
+<td>N</td>
+<td>N</td>
+<td>pwm</td>
+</tr>
+</tbody>
+</table>
+<p>The board has 3 (debounced and interrupting) buttons for use with GPIO, 4 dip
+switches, 9 LEDs, SDCard on SPI, and a 16MB SPI-Flash memory.</p>
+<p>The SPI-Flash also holds 3 (or 4) separate FPGA CPU bit files, selectable via
+dip switch.</p>
+<p>The SPI-Flash is also programmed with a bootloader. The bootloader can copy a
+program image from SPI-Flash into executable memory. Zephyr initialization will
+copy the initialized data section to the data memory if CONFIG_XIP is used.</p>
+</div>
+</div>
+<div class="section" id="programming-and-debugging">
+<h2>Programming and Debugging<a class="headerlink" href="#programming-and-debugging" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="required-hardware-and-software">
+<h3>Required Hardware and Software<a class="headerlink" href="#required-hardware-and-software" title="Permalink to this headline">¶</a></h3>
+<p>To use Zephyr RTOS applications on the EM Starter Kit board, a few additional
+pieces of hardware are required.</p>
+<ul class="simple">
+<li>USB Cable (delivered as part of the ARC EM Starter Kit)</li>
+<li>The USB cable provides power to the board; however, if the board is to run
+standalone, the universal switching power adaptor (110-240V AC to 5V DC),
+provided in the package, can be used to power the board.</li>
+<li><a class="reference internal" href="../../../../getting_started/installation_linux.html#zephyr-sdk"><span class="std std-ref">The Zephyr SDK</span></a></li>
+<li>Terminal emulator software for use with the USB-UART. Suggestion:
+<a class="reference external" href="http://www.putty.org">Putty Website</a>.</li>
+<li>(optional) A collection of Pmods.
+See <a class="reference external" href="http://store.digilentinc.com/pmod-modules">Digilent Pmod Modules</a> or develop your custom interfaces to attach
+to the Pmod connector.</li>
+</ul>
+</div>
+<div class="section" id="set-up-the-arc-em-starter-kit">
+<h3>Set up the ARC EM Starter Kit<a class="headerlink" href="#set-up-the-arc-em-starter-kit" title="Permalink to this headline">¶</a></h3>
+<p>To run Zephyr application on correct arc core of EM Starter Kit, you need to
+setup the board correctly.</p>
+<ul class="simple">
+<li>Connect the digilent usb cable from your host to the board.</li>
+<li>Connect the 5V DC power supply to your board.</li>
+<li>Select the core configuration of the board by choosing correct dip switch
+SW1 settings, then press then FPGA configure button located above the letter
+‘C’ of the ARC logo on the board.</li>
+<li>Then the board will be reconfigured with selected core configuration, you
+can download and debug Zephyr application now.</li>
+<li>If you want to know more about how to use this board, you can take a look
+at the <a class="reference external" href="https://www.synopsys.com/dw/ipdir.php?ds=arc_em_starter_kit">ARC EM Starter Kit User Guide</a>.</li>
+</ul>
+</div>
+<div class="section" id="set-up-zephyr-software">
+<h3>Set up Zephyr Software<a class="headerlink" href="#set-up-zephyr-software" title="Permalink to this headline">¶</a></h3>
+<p>Since there are different firmware versions of EM Starter Kit, you need to
+choose the proper firmware version supported in Zephyr.</p>
+<p>Three different configurations exist for this board:</p>
+<ul class="simple">
+<li>EM7D: em_starterkit_em7d_defconfig</li>
+<li>EM9D: em_starterkit_defconfig</li>
+<li>EM11D: em_starterkit_em11d_defconfig</li>
+</ul>
+</div>
+<div class="section" id="building-sample-applications">
+<h3>Building Sample Applications<a class="headerlink" href="#building-sample-applications" title="Permalink to this headline">¶</a></h3>
+<p>You can try many of the sample applications or tests, but let us discuss
+the one called <a class="reference internal" href="../../../../samples/hello_world/README.html#hello-world"><span class="std std-ref">Hello World</span></a>.
+It is found in <code class="file docutils literal"><span class="pre">$ZEPHYR_BASE/samples/hello_world</span></code>.</p>
+<div class="section" id="configuring">
+<h4>Configuring<a class="headerlink" href="#configuring" title="Permalink to this headline">¶</a></h4>
+<p>You may need to write a prj_arc.conf file if the sample doesn’t have one.
+Next, you can use the menuconfig rule to configure the target. By
+specifying <code class="docutils literal"><span class="pre">em_starterkit</span></code> as the board configuration, you can select the ARC
+EM Starter Kit board support for Zephyr.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>em_starterkit ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make menuconfig
+</pre></div>
+</div>
+<p>On this board you will also need to consider the “ARC SoC Selection” and set
+it either to EM9D or EM11D. To boot up the EM9D on the board, all dip
+switches should be UP except for switch 1. Other configuration choices
+are made in the normal way. To boot up the EM11D on the board,
+all dip switches should be UP except for switch 2. Next press the button
+above the letter C in the “ARC” logo on the silkscreen.</p>
+</div>
+<div class="section" id="building">
+<h4>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h4>
+<p>You can build application in the usual way.  Refer to
+<a class="reference internal" href="../../../../application/application.html#build-an-application"><span class="std std-ref">Build an Application</span></a> for more details. Here is an example for
+<a class="reference internal" href="../../../../samples/hello_world/README.html#hello-world"><span class="std std-ref">Hello World</span></a>.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/hello_world
+
+<span class="gp">#</span> If you already made a build directory <span class="o">(</span>build<span class="o">)</span> and ran cmake, just <span class="s1">&#39;cd build&#39;</span> instead.
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>em_starterkit ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="connecting-serial-output">
+<h3>Connecting Serial Output<a class="headerlink" href="#connecting-serial-output" title="Permalink to this headline">¶</a></h3>
+<p>In the default configuration, Zephyr’s EM Starter Kit images support
+serial output via the UART1 on the board.  To enable serial output:</p>
+<p>On your development environment, you will need to:</p>
+<ul class="simple">
+<li>Open a serial port emulator (i.e. on Linux minicom, putty, screen, etc)</li>
+<li>Specify the tty driver name, for example, on Linux this may be <code class="file docutils literal"><span class="pre">/dev/ttyUSB1</span></code></li>
+<li>Set the communication settings to:</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="60%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameter</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Baud:</td>
+<td>115200</td>
+</tr>
+<tr class="row-odd"><td>Data:</td>
+<td>8 bits</td>
+</tr>
+<tr class="row-even"><td>Parity:</td>
+<td>None</td>
+</tr>
+<tr class="row-odd"><td>Stopbits:</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
+<p>Using the latest version of Zephyr SDK(&gt;=0.9), you can debug and flash
+EM Starterkit directly.</p>
+<p>One option is to build and debug the application using the usual
+Zephyr build system commands.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> &lt;my app&gt;
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>em_starterkit ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make debug
+</pre></div>
+</div>
+<p>At this point you can do your normal debug session. Set breakpoints and then
+‘c’ to continue into the program.</p>
+<p>The other option is to launch a debug server, as follows.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> &lt;my app&gt;
+
+<span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>em_starterkit ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make debugserver
+</pre></div>
+</div>
+<p>Then connect to the debug server at the EM Starter Kit from a second
+console, from the build directory containing the output <code class="file docutils literal"><span class="pre">zephyr.elf</span></code>.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> &lt;my app&gt;
+<span class="gp">$</span> <span class="nv">$ZEPHYR_SDK_INSTALL_DIR</span>/sysroots/x86_64-pokysdk-linux/usr/bin/arc-zephyr-elf/arc-zephyr-elf-gdb <span class="se">\</span>
+   zephyr.elf
+<span class="go">(gdb) target remote localhost:3333</span>
+<span class="go">(gdb) load</span>
+<span class="go">(gdb) b main</span>
+<span class="go">(gdb) c</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="flashing">
+<h3>Flashing<a class="headerlink" href="#flashing" title="Permalink to this headline">¶</a></h3>
+<p>If you just want to download the application to the EM Starter Kit’s CCM
+or DDR and run, you can do so in the usual way.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> Make a build directory, and use cmake to configure a Make-based build system:
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>em_starterkit ..
+
+<span class="gp">#</span> Now run make on the generated build system:
+<span class="gp">$</span> make flash
+</pre></div>
+</div>
+<p>This command still uses openocd and gdb to load application elf file
+to EM Starter Kit, but it will load application and then run immediately.
+If power is lost, the application will also lost due to power loss.</p>
+<p>Most of the time you will not be flashing your program but will instead
+debug it using openocd and gdb. The program can be download via the USB
+cable into the code and data memories.</p>
+<p>When you are ready to deploy the program so that it boots up automatically
+on reset or power-up, you can follow the steps to place the program on
+SPI-FLASH.</p>
+<p>For instructions on how to write your program to SPI-FLASH,
+refer to the documentation on the ARC EM Starter Kit at the
+<a class="reference external" href="https://www.embarc.org">embARC website</a>, which includes instructions for how to place an
+executable image onto the SPI-FLASH in such a way that it is understood
+by the bootloader.</p>
+</div>
+</div>
+<div class="section" id="release-notes">
+<h2>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h2>
+<p>The following is a list of TODO items:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1153">ZEP-1153</a>: Zephyr needs i-cache API (all targets)</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-713">ZEP-713</a>: Zephyr ARC port doesn’t yet support nested regular interrupts.</li>
+<li>pinmux driver: Possibly it can be written to configure PMods too.</li>
+</ul>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../../../nios2/index.html" class="btn btn-neutral float-right" title="NIOS II Boards" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../../arduino_101_sss/doc/board.html" class="btn btn-neutral" title="Arduino/Genuino 101 (Sensor Subsystem)" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

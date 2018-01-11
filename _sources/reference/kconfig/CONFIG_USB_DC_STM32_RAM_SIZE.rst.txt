@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: USB_DC_STM32_RAM_SIZE
+
+.. option:: CONFIG_USB_DC_STM32_RAM_SIZE
+.. _CONFIG_USB_DC_STM32_RAM_SIZE:
+
+Total size in bytes for RX/TX buffering (FIFO, PMA...)
+In case of USB-OTG-FS controller, datasheet defines a shared FIFO size.
+For USB device controller, datasheet defines USB packet SRAM size.
+
+
+
+:Symbol:           USB_DC_STM32_RAM_SIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+ (no prompts)
+:Default values:
+
+ *  512 (value: "n")
+ *   Condition: USB_DC_STM32 (value: "n")
+ *  1280 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ USB && SOC_SERIES_STM32F4X (value: "n")
+:Locations:
+ * ../drivers/usb/device/Kconfig:47
+ * ../arch/arm/soc/st_stm32/stm32f4/Kconfig.defconfig.series:68

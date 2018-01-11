@@ -1,0 +1,42 @@
+:orphan:
+
+.. title:: BT_ATT_ENFORCE_FLOW
+
+.. option:: CONFIG_BT_ATT_ENFORCE_FLOW
+.. _CONFIG_BT_ATT_ENFORCE_FLOW:
+
+Enforce flow control rules on incoming PDUs, preventing a peer
+from sending new requests until a previous one has been responded
+or sending a new indication until a previous one has been
+confirmed. This may need to be disabled to avoid potential race
+conditions arising from a USB based HCI transport that splits
+HCI events and ACL data to separate endpoints.
+
+
+
+:Symbol:           BT_ATT_ENFORCE_FLOW
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enforce strict flow control semantics for incoming PDUs"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+ *  n (value: "n")
+ *   Condition: BOARD_QEMU_CORTEX_M3 || BOARD_QEMU_X86 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_CONN (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/Kconfig:197

@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: BT_MESH_LPN_ESTABLISHMENT
+
+.. option:: CONFIG_BT_MESH_LPN_ESTABLISHMENT
+.. _CONFIG_BT_MESH_LPN_ESTABLISHMENT:
+
+Perform the Friendship establishment using low power, with
+the help of a reduced scan duty cycle. The downside of this
+is that the node may miss out on messages intended for it
+until it has successfully set up Friendship with a Friend
+node.
+
+
+
+:Symbol:           BT_MESH_LPN_ESTABLISHMENT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Perform Friendship establishment using low power"
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH && BT_MESH_LOW_POWER (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:202

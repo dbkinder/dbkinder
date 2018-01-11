@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: GPIO_GECKO_PORTF_NAME
+
+.. option:: CONFIG_GPIO_GECKO_PORTF_NAME
+.. _CONFIG_GPIO_GECKO_PORTF_NAME:
+
+The configuration item CONFIG_GPIO_GECKO_PORTF_NAME:
+
+:Symbol:           GPIO_GECKO_PORTF_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port F driver name" if GPIO_GECKO_PORTF (value: "n")
+:Default values:
+
+ *  "GPIO_5"
+ *   Condition: GPIO_GECKO_PORTF (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_GECKO && GPIO (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.gecko:90

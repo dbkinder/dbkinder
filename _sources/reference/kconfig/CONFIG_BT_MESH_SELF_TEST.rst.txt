@@ -1,0 +1,34 @@
+:orphan:
+
+.. title:: BT_MESH_SELF_TEST
+
+.. option:: CONFIG_BT_MESH_SELF_TEST
+.. _CONFIG_BT_MESH_SELF_TEST:
+
+This option adds extra self-tests which are run every time
+mesh networking is initialized.
+
+
+
+:Symbol:           BT_MESH_SELF_TEST
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Perform self-tests"
+:Default values:
+ (no default values)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:82

@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: NET_APP_DTLS_TIMEOUT
+
+.. option:: CONFIG_NET_APP_DTLS_TIMEOUT
+.. _CONFIG_NET_APP_DTLS_TIMEOUT:
+
+If a DTLS session does not have any activity, then disconnect
+the session. The value is in seconds.
+
+
+
+:Symbol:           NET_APP_DTLS_TIMEOUT
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "DTLS session timeout" if NET_APP_DTLS (value: "n")
+:Default values:
+
+ *  15 (value: "n")
+ *   Condition: NET_APP_DTLS (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:113

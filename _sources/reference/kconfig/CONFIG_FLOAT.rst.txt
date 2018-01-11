@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: FLOAT
+
+.. option:: CONFIG_FLOAT
+.. _CONFIG_FLOAT:
+
+This option allows threads to use the floating point registers.
+By default, only a single thread may use the registers.
+
+Disabling this option means that any thread that uses a
+floating point register will get a fatal exception.
+
+
+
+:Symbol:           FLOAT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "y"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Floating point registers"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ CPU_HAS_FPU (value: "y")
+:Locations:
+ * ../arch/Kconfig:231

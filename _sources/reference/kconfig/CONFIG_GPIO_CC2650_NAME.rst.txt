@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: GPIO_CC2650_NAME
+
+.. option:: CONFIG_GPIO_CC2650_NAME
+.. _CONFIG_GPIO_CC2650_NAME:
+
+The configuration item CONFIG_GPIO_CC2650_NAME:
+
+:Symbol:           GPIO_CC2650_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "GPIO driver name."
+:Default values:
+
+ *  "GPIO_0"
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ GPIO_CC2650 && GPIO (value: "n")
+:Locations:
+ * ../drivers/gpio/Kconfig.cc2650:16

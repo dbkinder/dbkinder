@@ -1,0 +1,37 @@
+:orphan:
+
+.. title:: NET_APP_BT_NODE
+
+.. option:: CONFIG_NET_APP_BT_NODE
+.. _CONFIG_NET_APP_BT_NODE:
+
+Enables application to operate in node mode which requires GATT
+service to be registered and start advertising as peripheral.
+
+
+
+:Symbol:           NET_APP_BT_NODE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable Bluetooth node support"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+:Selects:
+
+ *  :option:`CONFIG_NET_L2_BT_MGMT`
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ NET_APP_SETTINGS && NETWORKING && NET_L2_BT (value: "n")
+:Locations:
+ * ../subsys/net/lib/app/Kconfig:265

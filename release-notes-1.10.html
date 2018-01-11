@@ -1,0 +1,828 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Zephyr Kernel 1.10.0 &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+        <link rel="copyright" title="Copyright" href="copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="index.html"/> 
+
+    
+    <script src="_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="index.html">Docs</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="zephyr-kernel-1-10-0">
+<span id="zephyr-1-10"></span><h1>Zephyr Kernel 1.10.0<a class="headerlink" href="#zephyr-kernel-1-10-0" title="Permalink to this headline">¶</a></h1>
+<p>We are pleased to announce the release of Zephyr kernel version 1.10.0.</p>
+<p>Major enhancements with this release include:</p>
+<ul class="simple">
+<li>Initial alpha-quality thread-level memory protection on x86, userspace and memory
+domains</li>
+<li>Major overhaul to the build system and a switch from Kbuild to CMake.</li>
+<li>Newtron Flash Filesystem (NFFS) Support</li>
+<li>Increased testsuite coverage and migrated majority of testcases to use ztest</li>
+<li>Integration with MCUBOOT Bootloader</li>
+<li>Additional SoC, platform and driver support for many of the already supported
+platforms.</li>
+</ul>
+<p>The following sections provide detailed lists of changes by component.</p>
+<div class="section" id="kernel">
+<h2>Kernel<a class="headerlink" href="#kernel" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Remove deprecated k_mem_pool_defrag code</li>
+<li>Initial alpha-quality thread-level memory protection on x86, userspace and memory
+domains:<ul>
+<li>Same kernel &amp; driver APIs for kernel and user mode threads</li>
+<li>System calls for privilege elevation</li>
+<li>Stack overflow protection</li>
+<li>Kernel object and device driver permission tracking</li>
+<li>Simple app vs. kernel memory separation</li>
+<li>Memory domain APIs for fine-tuning memory region permissions</li>
+<li>Stack memory protection from other threads</li>
+</ul>
+</li>
+<li>Add the following application-facing memory domain APIs:<ul>
+<li>k_mem_domain_init() - to initialize a memory domain</li>
+<li>k_mem_domain_destroy() - to destroy a memory domain</li>
+<li>k_mem_domain_add_partition() - to add a partition into a domain</li>
+<li>k_mem_domain_remove_partition() - to remove a partition from a domain</li>
+<li>k_mem_domain_add_thread() - to add a thread into a domain</li>
+<li>k_mem_domain_remove_thread() - to remove a thread from a domain</li>
+</ul>
+</li>
+<li>add k_calloc() which uses kernel heap to implement traditional calloc()
+semantics.</li>
+<li>Introduce object validation mechanism: All system calls made from userspace,
+which involve pointers to kernel objects (including device drivers), will need
+to have those pointers validated; userspace must never be able to crash the
+kernel by passing it garbage.</li>
+</ul>
+</div>
+<div class="section" id="architectures">
+<h2>Architectures<a class="headerlink" href="#architectures" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>nrf52: Add support for LOW_POWER state and SYSTEM_OFF</li>
+<li>Architecture specific memory domain APIs added</li>
+<li>Tickless Kernel Implementation for Xtensa</li>
+<li>Added support for the following ARM SoCs:<ul>
+<li>NXP i.MX RT1052</li>
+<li>Silabs EFM32WG</li>
+<li>STM F0</li>
+<li>TI MSP432P4xx</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="boards">
+<h2>Boards<a class="headerlink" href="#boards" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Jailhouse port: The port will enable Zephyr to run as a guest OS on x86-64
+systems. It comes with a test on QEMU to validate that, thus this new board
+introduction.</li>
+<li>Power Management for nrf52 series SOC</li>
+<li>Added support for the following ARM boards:<ul>
+<li>96b_neonkey</li>
+<li>efm32wg_stk3800</li>
+<li>mimxrt1050_evk</li>
+<li>msp_exp432p401r_launchxl</li>
+<li>nucleo_f030r8</li>
+<li>nucleo_f091rc</li>
+<li>stm32f411e_disco</li>
+<li>stm32f412g_disco</li>
+<li>stm32l476g_disco</li>
+<li>usb_kw24d512</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="drivers-and-sensors">
+<h2>Drivers and Sensors<a class="headerlink" href="#drivers-and-sensors" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>timer: Add Support for TICKLESS KERNEL in xtensa_sys_timer</li>
+<li>Rename <cite>random</cite> to <cite>entropy</cite></li>
+<li>Add Atmel SAM I2S (SSC) driver</li>
+<li>Add Atmel SAM DMA (XDMAC) driver</li>
+<li>Add plantower PMS7003 Driver</li>
+<li>Add Altera shim driver for JTAG UART soft IP</li>
+<li>Add Altera shim driver for timer soft IP</li>
+<li>Introduce mcux ccm driver</li>
+<li>Introduce mcux igpio shim driver</li>
+</ul>
+</div>
+<div class="section" id="networking">
+<h2>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>HTTP API changed to use net-app API. Old HTTP API is deprecated.</li>
+<li>Loopback network interface support added. This is used in testing only.</li>
+<li>LWM2M multi-fragment network packet support added.</li>
+<li>New CoAP library implementation, supporting longer network packets.</li>
+<li>Deprecated ZoAP library.</li>
+<li>mDNS (multicast DNS) support added.</li>
+<li>SNTP (Simple Network Time Protocol) client library added.</li>
+<li>Various fixes for: TCP, RPL, ARP, DNS, LWM2M, Ethernet, net-app API, Network
+shell, and BSD socket API</li>
+<li>Network management API fixes.</li>
+<li>Networking sample application fixes.</li>
+<li>6lo IPv6 header compression fixes.</li>
+<li>IEEE 802.15.4 generic fixes.</li>
+<li>IEEE 802.15.4 mcr20a driver fixes.</li>
+<li>IEEE 802.15.4 kw41z driver fixes.</li>
+<li>IEEE 802.15.4 nrf5 driver fixes.</li>
+</ul>
+</div>
+<div class="section" id="bluetooth">
+<h2>Bluetooth<a class="headerlink" href="#bluetooth" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Multiple qualification-related fixes for Bluetooth Mesh</li>
+<li>Support for Bluetooth Mesh Friend Node role</li>
+<li>Support for Bluetooth Mesh Foundation Client Models</li>
+<li>New Bluetooth Mesh shell module and test application</li>
+<li>Support for PA/LNA amplifiers in the BLE Controller</li>
+<li>Support for additional VS commands in the BLE Controller</li>
+<li>Multiple stability fixes for the BLE Controller</li>
+</ul>
+</div>
+<div class="section" id="build-and-infrastructure">
+<h2>Build and Infrastructure<a class="headerlink" href="#build-and-infrastructure" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The Zephyr project has migrated to CMake, an important step in a
+larger effort to make Zephyr easier to use for application developers
+working on different platforms with different development environment
+needs.  This change retains Kconfig as-is, and replaces all Makefiles
+with corresponding CMakeLists.txt.  The DSL-like Make language that
+KBuild offers is replaced by a set of CMake extensions that provide
+either simple one-to-one translations of KBuild features or introduce
+new concepts that replace KBuild concepts. Please re-read the Getting
+Started guide
+(<a class="reference external" href="http://docs.zephyrproject.org/getting_started/getting_started.html">http://docs.zephyrproject.org/getting_started/getting_started.html</a>)
+with updated instructions for setting up and developing on your host-OS.
+You <em>will</em> need to port your own out-of-tree scripts and Makefiles to
+CMake.</li>
+</ul>
+</div>
+<div class="section" id="libraries-subsystems">
+<h2>Libraries / Subsystems<a class="headerlink" href="#libraries-subsystems" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The implementation for sys_rand32_get() function has been moved to a new
+“random” subsystem. There are new implementations for this function, one based
+in the Xoroshift128+ PRNG (using a hardware number generator to seed), and
+another that obtains random numbers directly from a hardware number generator
+driver. Hardware number generator drivers have been moved to a
+“drivers/entropy” directory; these drivers only expose the interface provided
+by include/entropy.h.</li>
+<li>TinyCrypt updated to version 0.2.8</li>
+</ul>
+</div>
+<div class="section" id="hals">
+<h2>HALs<a class="headerlink" href="#hals" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Add Altera HAL for support NIOS-II boards</li>
+<li>Add mcux 2.3.0 for mimxrt1051 and mimxrt1052</li>
+<li>stm32cube: HAL/LL static library for stm32f0xx v.1.9.</li>
+<li>Add support for STM32 family USB driver</li>
+<li>Add Silabs Gecko SDK for EFM32WG SoCs</li>
+<li>Simplelink: Update cc32xx SDK to version 1.50.00.06</li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Missing API documentation caused by doxygen subgroups and missing
+Sphinx directives now included.</li>
+<li>Note added to all released doc pages mentioning more current content could
+be available from the master branch version of the documentation.</li>
+<li>Documentation updated to use CMake (vs. Make) in all examples, and
+using a new Sphinx extension to keep examples consistent.</li>
+<li>Getting Started Guide material updated to include CMake dependencies
+and build instructions required for version 1.10.</li>
+<li>Instead of hiding all expected warnings from the document build
+process (there are some known doxygen/sphinx issues), the build
+now outputs all warnings, and then reports
+if any new/unexpected warnings or errors were detected.</li>
+<li>Obsolete V1 to V2 porting material removed.</li>
+<li>Continued updates to documentation for new board support, new samples,
+and new features.</li>
+<li>Integration of documentation with new zephyrproject.org website.</li>
+<li>Documentation moved to docs.zephyrproject.org site (with redirection
+from zephyrproject.org/doc)</li>
+</ul>
+</div>
+<div class="section" id="tests-and-samples">
+<h2>Tests and Samples<a class="headerlink" href="#tests-and-samples" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Benchmarking: cleanup of the benchmarking code</li>
+<li>Add userspace protection tests</li>
+<li>Move all tests to ztest and cleanup coding style and formatting</li>
+</ul>
+</div>
+<div class="section" id="issue-related-items">
+<h2>Issue Related Items<a class="headerlink" href="#issue-related-items" title="Permalink to this headline">¶</a></h2>
+<p>These GitHub issues were addressed since the previous 1.9.0 tagged
+release:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/779">779</a> - CI: shippable - provide some means to allow users to rebuild</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1166">1166</a> - Keeping reusable components under samples/ leads to build issues</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1236">1236</a> - Cleanup CONFIG_EXECUTION_BENCHMARKING</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1241">1241</a> - tests/net/ipv6/ FAILED on qc1000:x86</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1242">1242</a> - tests/kernel/mutex/mutex/ FAILED &#64; esp32</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1256">1256</a> - [cmake] A board should support multiple configurations (variants)</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1270">1270</a> - Issue : Information CC3220SF LaunchXL</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1280">1280</a> - shell on Arduino Due prints “shell&gt;” before the delayed boot banner</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1289">1289</a> - C++ 11 support!</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1332">1332</a> - sanitycheck builds too many duplicates in CI, make it smarter</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1392">1392</a> - No module named ‘elftools’</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1397">1397</a> - no serialport output</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1415">1415</a> - Problem with forcing new line in generated documentation.</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1416">1416</a> - Regression added by commit cd35742a (net/ethernet/arp: Let ethernet L2 managing pkt’s reference while sending)</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1419">1419</a> - test, please ignore</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1425">1425</a> - spi.h and spi_legacy.h documentation conflicts</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1428">1428</a> - networking defines being used but not defined anywhere</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1435">1435</a> - Could not connect to Eclipse Leshan Demo Server</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1445">1445</a> - doc: groups of items in API documentation not displaying</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1450">1450</a> - make kconfig help is difficult to understand</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1474">1474</a> - tests/net/ipv6_fragment build failure, missing testcase.yaml</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1487">1487</a> - net/lib/dns doesn’t respect CONFIG_NET_IPV6=n</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1488">1488</a> - Replacing Make/Kbuild with CMake</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1499">1499</a> - doc: replace Mac OS with macOS</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1501">1501</a> - doc: Fix link title</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1510">1510</a> - “make debugserver” broken for qemu_xtensa</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1522">1522</a> - “make qemu” may not regenerate .config after changes to prj.conf</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1524">1524</a> - doc: Remove “Changes from Version 1 Kernel” document</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1527">1527</a> - make htmldocs failed</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1538">1538</a> - esp32: is broken for the latest esp-idf version</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1542">1542</a> - filter-known-issues.py fails if input file is empty</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1543">1543</a> - doc: add process documentation for importing non-Apache2.0 licensed code</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1544">1544</a> - regression: net: K64F: DHCP seems to fail a lot after 91041f9e</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1558">1558</a> - Master reports itself as if it was 1.9.0 release</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1571">1571</a> - Update to latest tinycrypt: v0.2.8</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1573">1573</a> - tests/net/lib/http_header_fields/ fails with CONFIG_HTTP_PARSER_STRICT enabled</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1580">1580</a> - checkpatch output in shippable log displays without line breaks</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1581">1581</a> - two tests fail in qemu_cortex_m3 with new SDK</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1597">1597</a> - remove deprecated k_mem_pool_defrag()</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1626">1626</a> - Bluetooth LE dual mode topology</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1628">1628</a> - Bluetooth LE data length extension</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1629">1629</a> - LE privacy 1.2</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1630">1630</a> - E2E tests for connection</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1632">1632</a> - Implement Environmental Sensing Profile sample app</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1653">1653</a> - enable stack canaries on ARC so we can run test_stackprot</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1670">1670</a> - Add Reject command handling</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1853">1853</a> - Review all Kconfig variables used and Simplify</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1880">1880</a> - Zephyr Build Management</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1883">1883</a> - Audio Codec</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1885">1885</a> - Display Interface</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/1902">1902</a> - uWeave</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2011">2011</a> - tcf: add support for running altera_max10 binaries</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2035">2035</a> - doc: remove workaround for sphinx issue once 1.5 is released</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2202">2202</a> - sporadic bad RAM pointer error under qemu_nios2</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2277">2277</a> - Update to a more recent version of micro-ecc in Zephyr</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2281">2281</a> - purge usage of platform_whitelist</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2411">2411</a> - Look into supporting additional file systems under Zephyr FS API</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2580">2580</a> - Failure in test_nano_work</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2723">2723</a> - QEMU NIOS2 sporadic FAIL in tests/legacy/kernel/test_context</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2775">2775</a> - Ability to make Security / Vulnerability bugs non-public</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2793">2793</a> - entropy subsystem</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2818">2818</a> - Add disk access based on flash on freedom board to interface with file system</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2853">2853</a> - Customer: Zephyr Tutorial</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2855">2855</a> - Customer: Sample code</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2858">2858</a> - Customer: Training / Webinar / Video</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/2942">2942</a> - Support for NXP KW2xD MCU</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3039">3039</a> - Simple Network Time Protocol support</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3058">3058</a> - no good way to include library code outside of $(PROJECT_BASE)</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3064">3064</a> - Symmetric multiprocessing (SMP)</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3070">3070</a> - Add Atmel SAM family DMA (XDMAC) driver</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3139">3139</a> - Zephyr Tutorials and Training</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3142">3142</a> - [PTS] GAP/TC_SEC_AUT_BV_12_C fails</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3143">3143</a> - [PTS] GAP/TC_SEC_AUT_BV_14_C fails</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3144">3144</a> - [PTS] GAP/TC_PRIV_CONN_BV_11_C fails</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3146">3146</a> - [PTS] SM/SLA/PROT/BV-02-C fails</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3147">3147</a> - [PTS] SM/SLA/SIE/BV-01-C fails</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3158">3158</a> - Add support for Panther board based on Quark SE C1000</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3184">3184</a> - xtensa: Zephyr SDK build and emulation support</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3201">3201</a> - Add Device Tree Documentation</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3268">3268</a> - Add tickless kernel support in xtensa_sys_timer timer</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3274">3274</a> - Lauterbach Debug Tools Support</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3275">3275</a> - Tickless Kernel and Frequency Scaling</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3290">3290</a> - introduce shared metadata for boards, samples and tests</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3294">3294</a> - Application Development</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3297">3297</a> - ROM-able</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3313">3313</a> - [RESEARCH] Memory Protection Unit support</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3353">3353</a> - Missing board documentation for arm/quark_se_c1000_ble</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3355">3355</a> - Missing board documentation for arm/nucleo_f103rb</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3357">3357</a> - Missing board documentation for arm/stm32_mini_a15</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3360">3360</a> - Missing board documentation for x86/panther</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3364">3364</a> - Missing board documentation for arc/panther_ss</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3368">3368</a> - Can Zephyr support SNMP (Simple Network Management Protocol)?</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3378">3378</a> - Zephyr will not build with icecream</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3383">3383</a> - Work up linker-based system call prototype for MPU enabling</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3412">3412</a> - Provide a sample application for kernel_event_logger</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3415">3415</a> - Building FS for Arduino 101</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3432">3432</a> - Port Zephyr to Silabs EFM32WG-STK3800</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3484">3484</a> - Provide stm32cube LL based UART driver</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3485">3485</a> - Provide stm32cube LL based I2C driver</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3486">3486</a> - Provide stm32cube LL based SPI driver</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3587">3587</a> - Move board related device tree files where the board is defined</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3588">3588</a> - Move all X86 boards and related SoCs to device tree</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3600">3600</a> -  Build warnings [-Wpointer-sign] with LLVM/icx (tests/unit/bluetooth/at)</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3601">3601</a> - Use QMSI mailbox driver for Quark SE</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3604">3604</a> - the http_client sample app cannot send GET request on Qemu x86</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3608">3608</a> - Add functionality of Gesture Sensor</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3621">3621</a> - Design system call interface for drivers</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3625">3625</a> - Validation mechanism for user-supplied kernel object pointers</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3627">3627</a> - x86: implement system calls</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3628">3628</a> - implement APIs for dropping threads to unprivileged mode</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3630">3630</a> - use API to validate user-supplied kernel buffers</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3632">3632</a> - define set of architecture-specific memory protection APIs</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3635">3635</a> - Device Driver Access Control</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3641">3641</a> - define kernel system calls</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3643">3643</a> - [PTS] PTS server stops working while executing  TC_SEC_CSIGN_BV_01_C test case</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3646">3646</a> - Zoap message to use more than one fragment</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3682">3682</a> - incremental builds do not work properly in Windows</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3683">3683</a> - unable to follow directions to install Crosstool-NG on OS X</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3688">3688</a> - OS X Setup Instructions Not Working on macOS Sierra</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3690">3690</a> - Move to CMake or similar instead of Kbuild</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3697">3697</a> - Use CMSIS __NVIC_PRIO_BITS consistently</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3716">3716</a> - define / implement application-facing memory domain APIs</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3728">3728</a> - ESP32 i2c Driver Support</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3772">3772</a> - test_mem_pool_api crashes qemu_x86 if CONFIG_DEBUG=y</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3781">3781</a> - iwdg: provide independent watchdog driver compliant with STM32Cube LL API</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3783">3783</a> - Add mbedtls Crypto API shim driver</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3829">3829</a> - PTS test case GATT/SR/GPA/BV-02-C crashes tester in QEMU</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3832">3832</a> - ARM: implement API to validate user buffer</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3844">3844</a> - Fix LWM2M header calculation in lwm2m_engine.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3851">3851</a> - Port SPI HCI driver on new SPI API</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3852">3852</a> - x86: implement memory domain interface</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3892">3892</a> - Add support for STM32F429I_DISC1 board</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3897">3897</a> - Static code scan (coverity) issues seen</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3922">3922</a> - [PTS] GATT/SR/GAT/BV-01-C INCONC</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3923">3923</a> - boards: provide support for Nucleo-64 F030R8</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3939">3939</a> - Add Atmel SAM family I2S (Inter-IC Sound) driver based on SSC module</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3941">3941</a> - x86: implement option for PAE-formatted page tables with NX bit</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3942">3942</a> - x86: scope SMEP support in Zephyr</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3984">3984</a> - Build warning: [-Wpointer-bool-conversion] with LLVM/icx (samples/bluetooth/mesh_demo)</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/3985">3985</a> - Build warning:  [-Wpointer-bool-conversion] with LLVM/icx (samples/bluetooth/mesh)</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4001">4001</a> - GENERATED_KERNEL_OBJECT_FILES end up in application memory</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4004">4004</a> - integrate printk() with console subsystem</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4009">4009</a> - I2C API is mixing two incompatible definitions of bit-fields</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4014">4014</a> - memory protection: implicit kernel object permissions</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4016">4016</a> - bluetooth linker not connected</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4022">4022</a> - net: “queue: Use k_poll if enabled” commit regressed BSD Sockets performance</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4026">4026</a> - CC3220 WiFi Host Driver support</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4027">4027</a> - extra unref happening on net_context</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4029">4029</a> - TinyTILE bluetooth app flash</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4030">4030</a> - Coverity issue seen with CID: 175366 , in file: /subsys/bluetooth/host/smp.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4031">4031</a> - Coverity issue seen with CID: 175365 , in file: /subsys/bluetooth/controller/hci/hci.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4032">4032</a> - Coverity issue seen with CID: 175364 , in file: /subsys/bluetooth/host/mesh/proxy.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4033">4033</a> - Coverity issue seen with CID: 175363 , in file: /subsys/bluetooth/host/smp.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4034">4034</a> - Coverity issue seen with CID: 175362 , in file: /subsys/bluetooth/host/smp.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4035">4035</a> - Coverity issue seen with CID: 175361 , in file: /samples/bluetooth/eddystone/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4036">4036</a> - Coverity issue seen with CID: 175360 , in file: /subsys/bluetooth/host/mesh/prov.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4037">4037</a> - Coverity issue seen with CID: 175359 , in file: /subsys/bluetooth/host/hci_core.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4038">4038</a> - Coverity issue seen with CID: 175358 , in file: /subsys/bluetooth/host/hci_core.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4041">4041</a> - flashing tinytile and use of minicom</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4043">4043</a> - Add new user CONFIG to project</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4044">4044</a> - Livelock in SMP pairing failed scenario</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4046">4046</a> - BLE Central and BLE Peripheral roles at a moment on nRF52832</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4048">4048</a> - HTTP Request Timeout Not Working</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4049">4049</a> - AMP - Multi-core</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4050">4050</a> - zephyr.git/tests/kernel/obj_validation/testcase.yaml#test :Evaluation failure</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4051">4051</a> - Coverity issue seen with CID: 177219 , in file: /drivers/flash/flash_stm32f4x.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4054">4054</a> - [CID: 177215 ], in file: /tests/subsys/dfu/mcuboot/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4055">4055</a> - Coverity issue seen with CID: 177214 , in file: /samples/boards/microbit/pong/src/ble.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4056">4056</a> - Coverity issue seen with CID: 177213 , in file: /tests/net/ipv6_fragment/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4057">4057</a> - Coverity issue seen with CID: 170744, in file: /samples/boards/microbit/pong/src/ble.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4058">4058</a> - samples/net/http_client: The HTTP client failed to  send the GET request</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4059">4059</a> -  zephyr.git/tests/net/ipv6/testcase.yaml#test  :evaluation failed</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4068">4068</a> - [BLE, nRF51822] Error -ENOMEM when use  bt_gatt_write_without_response function</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4099">4099</a> - Add some docs to samples/net/ieee802154/hw</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4131">4131</a> - gen_syscalls.py may choke on non-ascii chars</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4135">4135</a> - checkpatch.pl generates warning messages when run w/ perl-5.26</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4149">4149</a> - Transition message on jira.zephyrproject.org needed</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4162">4162</a> - build error in http_get sample</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4165">4165</a> - ieee802154_uart_pipe.c: warning: return from incompatible pointer type</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4182">4182</a> - NET_APP_SETTINGS for 15.4 doesn’t seem to work (if to trust 15.4 shell)</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4186">4186</a> - tcf.git/examples/test_network_linux_zephyr.py#_test  :Compilation failure</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4188">4188</a> - samples /net/echo_server:failed to send packets to client</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4189">4189</a> - ieee802154_settings.c is duplicated in the codebase</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4190">4190</a> - samples/net/echo_client :failed to send data</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4193">4193</a> - Zephyr libc(snprintf) is not comply with ISO standard.</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4195">4195</a> - tests/net/udp/test_udp.py#_ipv4_udp : evaluation failed</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4239">4239</a> - unit tests broken in sanitycheck</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4249">4249</a> - where is auto-pts py script of zephyr?</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4258">4258</a> - samples/net/zoap_server : unable to communicate between zoap client and server</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4264">4264</a> - Getting started guide for windows: small error</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4289">4289</a> - samples/mpu/mem_domain_apis_test is broken</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4292">4292</a> - net: tcp.c: prepare_segment() may unrightly unref packet in case of error</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4295">4295</a> - Error flashing board STM32373C-EVAL</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4301">4301</a> - checkpatch.pl false positives block PR merge</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4310">4310</a> - unable to flash quark_se_c1000_devboard</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4312">4312</a> - GDB: Ubuntu’s default GDB package does not support arm</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4323">4323</a> - net: tcp.c: prepare_segment() may leak fragments in case of error</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4325">4325</a> - samples/net/http_client:  unable to send the proper http request to Apache server</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4327">4327</a> - NET_PKT_TX_SLAB_DEFINE, NET_PKT_DATA_POOL_DEFINE description and usage are confusing</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4347">4347</a> - net: BSD Sockets UDP sendto() impl broke tests/net/socket/udp/</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4353">4353</a> - VM-VM qemu networking example crashes often</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4358">4358</a> - k_queue_poll returns NULL with K_FOREVER</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4366">4366</a> - memory corruption in test_pipe_api</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4377">4377</a> - Sniffing traffic in a VM-VM qemu setup crashes with a segfault in the monitor application</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4392">4392</a> - zephyr/tests/benchmarks/footprint :build Failed</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4394">4394</a> - Coverity issue seen with CID: 178058</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4395">4395</a> - Coverity issue seen with CID: 178059</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4396">4396</a> - Coverity issue seen with CID: 178060</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4397">4397</a> - Coverity issue seen with CID: 178064</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4398">4398</a> - zephyr/tests/crypto/ccm_mode :-Evaluation failed due to esp32</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4419">4419</a> - 6LoWPAN - source address uncompress corner case</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4421">4421</a> - net: Duplicated functionality between net_pkt_get_src_addr() and net_context.c:create_sockaddr()</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4424">4424</a> - Turning on network debug message w/ LwM2M sample client will result in stack check failure</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4429">4429</a> - I2C: stm32-i2c-v2 Driver (F0/F3/F7) gets stuck in endless loop when handling restart conditions</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4442">4442</a> - samples: net: ieee802154: Sample is not working on nRF52840 platform</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4459">4459</a> - i2c: stm32-i2c-(v1/v2) don’t handle i2c_burst_write like expected</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4463">4463</a> - Some tests and samples are missing a .yaml file</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4466">4466</a> - warnings building echo_client with nrf5</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4469">4469</a> - CI problem with check-compliance.py</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4476">4476</a> - Multiple build failures with i2c_ll_stm32.c driver</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4480">4480</a> - Compilation failure for qemu_x86 with CONFIG_DEBUG_INFO=y</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4481">4481</a> - Build failure with CONFIG_NET_DEBUG_APP=y</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4503">4503</a> - CONFIG_STACK_SENTINEL inconsistencies</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4538">4538</a> - Coverity issue seen with <a class="reference external" href="CID:174928">CID:174928</a></li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4539">4539</a> - Coverity issue seen with <a class="reference external" href="CID:173658">CID:173658</a></li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4540">4540</a> - Coverity issue seen with CID: 173657</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4541">4541</a> - Coverity issue seen with CID: 173653</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4544">4544</a> - [BLE Mesh] Error: Failed to advertise using Node ID</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4563">4563</a> - [BLE Mesh]: How to handle the ‘Set” and ‘Get’ callbacks</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4565">4565</a> - net_context_recv always fails with timeout=K_FOREVER</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4567">4567</a> - [BLE Mesh]: Multiple elements in a node</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4569">4569</a> - LoRa:  support LoRa</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4579">4579</a> - [CID: 178249] Parse warnings in samples/mpu/mem_domain_apis_test/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4580">4580</a> - Coverity issue seen with CID: 178248</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4581">4581</a> - Coverity issue seen with CID: 178247</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4582">4582</a> - Coverity issue seen with CID: 178246</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4583">4583</a> - [CID: 178245] Parse warnings in samples/mpu/mem_domain_apis_test/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4584">4584</a> - Coverity issue seen with CID: 178244</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4585">4585</a> - Coverity issue seen with CID: 178243</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4586">4586</a> - [CID: 178242]: Parse warnings samples/mpu/mem_domain_apis_test/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4587">4587</a> - Coverity issue seen with CID: 178241</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4588">4588</a> - Coverity issue seen with CID: 178240</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4589">4589</a> - [coverity] Null pointer dereferences in tests/net/app/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4591">4591</a> - [CID: 178237] memory corruption in drivers/ieee802154/ieee802154_mcr20a.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4592">4592</a> - Coverity issue seen with CID: 178236</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4593">4593</a> - Coverity issue seen with CID: 178235</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4594">4594</a> - Coverity issue seen with CID: 178234</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4595">4595</a> - Coverity issue seen with CID: 178233</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4600">4600</a> - drivers:i2c_ll_stm32_v2: Interrupt mode uses while loops</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4607">4607</a> - tests/net/socket/udp/ is broken, again</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4630">4630</a> - Sample app ‘coaps_server’ fails to parse coap pkt</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4637">4637</a> - [Coverity CID: 178334] Null pointer dereferences in /subsys/usb/class/netusb/function_ecm.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4638">4638</a> - build is failing when newlib  is enabled</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4644">4644</a> - Kconfig warnings when building any sample for nRF5x</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4652">4652</a> - Document “make flash” in the “application development primer”</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4654">4654</a> - Wrong file name for drivers/aio/aio_comparator_handlers.o</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4667">4667</a> - x86 boards need device trees</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4668">4668</a> - drivers/random/random_handlers.c is built when no random driver has been kconfig’ed into the build</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4683">4683</a> - net: tcp  tcp_retry_expired cause assert</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4695">4695</a> - samples/net/ieee802154 needs documentation</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4697">4697</a> - [regression] net: echo_server doesn’t accept IPv4 connections</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4738">4738</a> - ble-mesh: proxy.c : Is clients-&gt; conn a clerical error? it should be client-&gt; conn?</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4744">4744</a> - tests/net/ieee802154/l2/testcase.yaml#test : unable to acknowledge data from receiver</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4757">4757</a> - kw41z-frdm: assertion failure while setting IRQ priority</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4759">4759</a> - [PTS] GATT/CL/GAW/BV-02-C fails with INCONC</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4760">4760</a> - stm32f4_disco and frdm_k64f  samples/basic/blink_led ,Choose supported PWM driver</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4766">4766</a> - tests: mem_pool: Fixed memory pool test case failure on quark d2000</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4780">4780</a> - [Coverity CID: 178794] Error handling issues in /tests/subsys/dfu/mcuboot/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4781">4781</a> - [Coverity CID: 178793] Incorrect expression in /tests/kernel/static_idt/src/static_idt.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4782">4782</a> - [Coverity CID: 178792] Memory - illegal accesses in /subsys/net/lib/http/http_app_server.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4783">4783</a> - [Coverity CID: 178791] Incorrect expression in /tests/kernel/static_idt/src/static_idt.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4784">4784</a> - [Coverity CID: 178790] Memory - corruptions in /samples/net/http_server/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4785">4785</a> - [Coverity CID: 178789] Null pointer dereferences in /samples/net/http_server/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4786">4786</a> - [Coverity CID: 178788] Control flow issues in /tests/net/context/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4787">4787</a> - [Coverity CID: 178787] Null pointer dereferences in /subsys/net/ip/net_context.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4788">4788</a> - [Coverity <a class="reference external" href="CID:178786">CID:178786</a>] Memory - corruptions in /samples/net/http_server/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4789">4789</a> - [Coverity CID: 178785] Incorrect expression in /tests/kernel/static_idt/src/static_idt.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4791">4791</a> - rpl-node uses testcase.ini instead of sample.yaml format</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4825">4825</a> - Bluetooth IPSP error with qemu_x86</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4827">4827</a> - Ping command crashes kernel over qemu_x86</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4841">4841</a> - fix doc/devices/dts/device_tree.rst path and Make references</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4844">4844</a> - cmake: can’t flash stm32 with openocd</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4847">4847</a> - custom 404 error page not being shown on docs.zephyrproject.org</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4853">4853</a> - cmake: building unit test cases ignore EXTRA_* settings</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4864">4864</a> - cmake: hts221 sensor sample not working anymore</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4881">4881</a> - device_get_binding() returns failure in sample/drivers/crypto</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4889">4889</a> - Flashing EM Starterkit with EM7D fails on master</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4899">4899</a> - Convert opensda doc to CMake</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4901">4901</a> - net: tcp: RST is sent after last ack is received</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4904">4904</a> - cmake: BOOT_BANNER disappeared</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4905">4905</a> - cmake: flashing for quark_se_devboard is broken</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4910">4910</a> - BT host CMakeLists.txt code should be agnostic to the FS implementation</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4912">4912</a> - Not using the Zephyr SDK is broken</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4925">4925</a> - application_development test pollutes source directory</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4936">4936</a> - net: 15.4 MAC addresses are shown differently between shell “net iface” and “ieee15_4 get_ext_addr”</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4937">4937</a> - ESP32 can’t boot</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/4975">4975</a> - Getting started documentation for Mac OS X inconsistent</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5004">5004</a> - Normalize IEEE802514 driver “raw” mode.</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5008">5008</a> - system call headers are not properly regenerated in CMake on incremental builds</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5009">5009</a> - cmake creates too many build artifacts</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5014">5014</a> - samples/drivers/crypto :Unable to find crypto device</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5019">5019</a> - tests/kernel/mem_protect/stackprot : input string is long stack overflow</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5025">5025</a> - arduino_due not generating proper config with cmake (crash)</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5026">5026</a> - k_poll() documentation is wrong</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5040">5040</a> - Bluetooth mesh API documentation incomplete</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5047">5047</a> - document error: getting_started.rst</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5051">5051</a> - Verify doxygen documented APIs are in the generated docs</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5055">5055</a> - [Coverity CID: 179254] Possible Control flow issues in /samples/net/zperf/src/zperf_udp_receiver.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5056">5056</a> - [Coverity CID: 179253] Control flow issues in /samples/net/zperf/src/zperf_tcp_receiver.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5057">5057</a> - [Coverity CID: 179252] Null pointer dereferences in /samples/net/zperf/src/zperf_udp_receiver.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5058">5058</a> - [Coverity CID: 179251] Control flow issues in /samples/net/zperf/src/zperf_udp_receiver.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5059">5059</a> - [Coverity CID: 179250] Null pointer dereferences in /samples/net/zperf/src/zperf_udp_uploader.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5060">5060</a> - [Coverity CID: 179249] Incorrect expression in /tests/kernel/fatal/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5061">5061</a> - [Coverity CID: 179248] Control flow issues in /samples/net/zperf/src/zperf_tcp_receiver.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5062">5062</a> - [Coverity CID: 179247] Incorrect expression in /tests/kernel/fatal/src/main.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5063">5063</a> - samples/bluetooth: central_hr sample app is not connecting with peripheral sample app on arduino_101.</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5085">5085</a> - bug: dts: stm32f1: wrong pinctrl base address</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5087">5087</a> - Samples/bluetooth: Failed to connect with eddystone sample app on arduino_101.</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5090">5090</a> - no makefile in zephyr/samples/bluetooth/mesh examples</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5097">5097</a> - zephyr_library_*() configuration has lower precedence than global zephyr_*()  configuration</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5107">5107</a> - Default partition addressing for nrf52_pca10040 is incompatible</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5116">5116</a> - [Coverity CID: 179986] Null pointer dereferences in /subsys/bluetooth/host/mesh/access.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5117">5117</a> - [Coverity CID: 179985] Error handling issues in /subsys/bluetooth/host/mesh/cfg_srv.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5118">5118</a> - [Coverity CID: 179984] Memory - corruptions in /drivers/ethernet/eth_mcux.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5119">5119</a> - [Coverity CID: 179983] Error handling issues in /subsys/bluetooth/host/mesh/cfg_srv.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5120">5120</a> - [Coverity CID: 179982] Error handling issues in /subsys/bluetooth/host/mesh/cfg_srv.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5121">5121</a> - [Coverity CID: 179981] Incorrect expression in /drivers/ieee802154/ieee802154_kw41z.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5122">5122</a> - [Coverity CID: 179980] Integer handling issues in /subsys/bluetooth/host/mesh/friend.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5123">5123</a> - [Coverity CID: 179979] Error handling issues in /subsys/bluetooth/host/mesh/cfg_srv.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5124">5124</a> - [Coverity CID: 179978] Error handling issues in /subsys/bluetooth/host/mesh/health_srv.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5125">5125</a> - [Coverity CID: 179976] Error handling issues in /subsys/bluetooth/host/mesh/cfg_srv.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5126">5126</a> - [Coverity CID: 179975] Error handling issues in /subsys/bluetooth/host/mesh/health_srv.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5127">5127</a> - [Coverity CID: 179974] Error handling issues in /subsys/bluetooth/host/mesh/cfg_srv.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5128">5128</a> - [Coverity CID: 179973] Error handling issues in /subsys/bluetooth/host/mesh/cfg_srv.c</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5140">5140</a> - CMake migration regressed (changed behavior) of QEMU_PTY=1</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5144">5144</a> - BUG: cmake: make doesn’t update zephyr.hex file</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5145">5145</a> - samples/bluetooth: Connection failure on peripheral CSC with Arduino 101</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5152">5152</a> - CONFIG_CPLUSPLUS is incompatible with the zephyr_get_* API</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5159">5159</a> - [nrf] Button example for nrf5x boards latches GPIO after 1 button press</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5176">5176</a> - zephyr-v1.9.2 tag missing</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5177">5177</a> - hci_usb: Linking error</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5184">5184</a> - kernel system call handlers missing due to -Wl,–no-whole-archive</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5186">5186</a> - gen_syscall_header_py is being run at the wrong time</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5189">5189</a> - tests/subsys/fs/nffs_fs_api:-Evaluation failed</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5207">5207</a> - Bluetooth subsystem uses acl_in_pool even for controllers not supporting flow control</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5211">5211</a> - Kconfig: CPU_HAS_FPU dependencies problem</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5223">5223</a> - CMake: Recent changes broke 3rd-party build system integration again</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5265">5265</a> - ROM size increase due Zephyr compile options not stripping unused functions</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5266">5266</a> - Ensure the Licensing page is up-to-date for the release</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5286">5286</a> - NET_L2: Symbols from the L2 implementation layer are exposed to users of L2</li>
+<li><a class="reference external" href="https://github.com/zephyrproject-rtos/zephyr/issues/5298">5298</a> - Endless loop in uart pipe</li>
+</ul>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!--   for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/js/main.js"></script>
+      <script type="text/javascript" src="_static/js/app.js"></script>
+      <script type="text/javascript" src="_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

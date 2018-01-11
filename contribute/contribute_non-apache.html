@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Contributing non-Apache 2.0 licensed components &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="Contributing to the Zephyr Project" href="contribute.html"/>
+        <link rel="next" title="Zephyr Kernel Primer" href="../kernel/kernel.html"/>
+        <link rel="prev" title="Contribution Guidelines" href="contribute_guidelines.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+          <a href="contribute.html">Contributing to the Zephyr Project</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contribute.html">Contributing to the Zephyr Project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contribute_guidelines.html">Contribution Guidelines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Contributing non-Apache 2.0 licensed components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submission-and-review-process">Submission and review process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-component-readme-template">Code component README template</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="contributing-non-apache-2-0-licensed-components">
+<span id="contribute-non-apache"></span><h1>Contributing non-Apache 2.0 licensed components<a class="headerlink" href="#contributing-non-apache-2-0-licensed-components" title="Permalink to this headline">¶</a></h1>
+<p>Importing code into the Zephyr OS from other projects that use a license
+other than the Apache 2.0 license needs to be fully understood in
+context and approved by the <a class="reference external" href="https://www.zephyrproject.org/about/organization">Zephyr governing board</a>.</p>
+<p>By carefully reviewing potential contributions and also enforcing a
+<a class="reference internal" href="contribute_guidelines.html#dco"><span class="std std-ref">Developer Certification of Origin (DCO)</span></a> for contributed code, we ensure that
+the Zephyr community can develop products with the Zephyr Project
+without concerns over patent or copyright issues.</p>
+<div class="section" id="submission-and-review-process">
+<h2>Submission and review process<a class="headerlink" href="#submission-and-review-process" title="Permalink to this headline">¶</a></h2>
+<p>All contributions to the Zephyr project are submitted through GitHub
+pull requests (PR) following the Zephyr Project’s <a class="reference internal" href="contribute_guidelines.html#contribution-workflow"><span class="std std-ref">Contribution Workflow</span></a>.</p>
+<p>Before you begin working on including a new component to the Zephyr
+Project (Apache-2.0 licensed or not), you should start up a conversation
+on the <a class="reference external" href="https://lists.zephyrproject.org">developer mailing list</a>
+to see what the Zephyr community thinks about the idea.  Maybe there’s
+someone else working on something similar you can collaborate with, or a
+different approach may make the new component unnecessary.</p>
+<p>If the conclusion is that including a new component is the best
+solution, and this new component uses a license other than Apache-2.0,
+these additional steps must be followed:</p>
+<ol class="arabic simple">
+<li>Complete a README for your code component and add it to your source
+code pull request (PR).  A recommended README template can be found in
+<code class="file docutils literal"><span class="pre">doc/contribute/code_component_README</span></code> (and included
+<a class="reference internal" href="#below">below</a> for reference)</li>
+<li>The Zephyr Technical Steering Committee (TSC) will evaluate the code
+component README as part of the PR
+commit and vote on accepting it using the GitHub PR review tools.<ul>
+<li>If rejected by the TSC, a TSC member will communicate this to
+the contributor and the PR will be closed.</li>
+<li>If approved by the TSC, the TSC chair will forward the README to
+the Zephyr governing board for further review.</li>
+</ul>
+</li>
+<li>The Zephyr governing board has two weeks to review and ask questions:<ul>
+<li>If there are no objections, the matter is closed. Approval can be
+accelerated by unanimous approval of the board before the two
+weeks are up.</li>
+<li>If a governing board member raises an objection that cannot be resolved
+via email, the board will meet to discuss whether to override the
+TSC approval or identify other approaches that can resolve the
+objections.</li>
+</ul>
+</li>
+<li>On approval of the Zephyr TSC and governing board, final review of
+the PR may be made to ensure its proper placement in the
+Zephyr Project <a class="reference internal" href="../kernel/overview/source_tree.html#source-tree-v2"><span class="std std-ref">Source Tree Structure</span></a>, (in the <code class="docutils literal"><span class="pre">ext</span></code> folder), and
+inclusion in the <a class="reference internal" href="../LICENSING.html#zephyr-licensing"><span class="std std-ref">Licensing of Zephyr Project components</span></a> document.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">External components not under the Apache-2.0 license <strong>cannot</strong> be
+included in a Zephyr OS release without approval of both the Zephyr TSC
+and the Zephyr governing board.</p>
+</div>
+</div>
+<div class="section" id="code-component-readme-template">
+<span id="below"></span><h2>Code component README template<a class="headerlink" href="#code-component-readme-template" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>[Code Component Name]
+#####################
+
+Origin:
+   [Name of project hosting the original open source code]
+   [Provide a link to the source]
+
+Status:
+   [Current version of this component, supported by Zephyr]
+
+Purpose:
+   [Brief description of what this software does]
+
+Description:
+   [Long description that will help reviewers discuss suitability of the
+   package to solve the problem at hand (there may be a better package
+   available.)
+
+   What is its primary functionality (e.g., SQLLite is a lightweight
+   database)?
+
+   What problem are you trying to solve? (e.g., a state store is
+   required to maintain ...)
+
+   Why is this the right package to solve it (e.g., SQLite is small,
+   easy to use, and has a very liberal license.)]
+
+Dependencies:
+   [What other components does this package depend on? Does the software
+   include any dynamic or static linking, or automatic downloading of any
+   code?
+
+   Will the Zephyr project have a direct dependency on the component, or
+   will it be included via an abstraction layer with this component as a
+   replacable implementation?]
+
+URL:
+   [location to the project&#39;s home, e.g., a github repo]
+
+commit:
+   [08ded7f21529c39e5133688ffb9a9d0c94e5c6e]
+
+Maintained-by:
+   [External]
+
+License:
+   [use SPDX identifier (https://spdx.org/licenses/), such as BSD-3-Clause]
+
+License Link:
+   [link to the project&#39;s LICENSE file, e.g., https://github.com/xyz/LICENSE]
+</pre></div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../kernel/kernel.html" class="btn btn-neutral float-right" title="Zephyr Kernel Primer" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="contribute_guidelines.html" class="btn btn-neutral" title="Contribution Guidelines" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

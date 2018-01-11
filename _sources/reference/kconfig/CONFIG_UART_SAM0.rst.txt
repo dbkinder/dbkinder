@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: UART_SAM0
+
+.. option:: CONFIG_UART_SAM0
+.. _CONFIG_UART_SAM0:
+
+This option enables the SERCOMx USART driver for Atmel SAM0 MCUs.
+
+
+:Symbol:           UART_SAM0
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Atmel SAM0 series SERCOM USART driver" if SOC_FAMILY_SAM0 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: SOC_FAMILY_SAM0 (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_SERIAL_HAS_DRIVER` if SOC_FAMILY_SAM0 (value: "n")
+ *  :option:`CONFIG_SERIAL_SUPPORT_INTERRUPT` if SOC_FAMILY_SAM0 (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.sam0:6

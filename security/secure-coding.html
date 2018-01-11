@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>Secure Coding Guidelines &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="Zephyr Project Security" href="security.html"/>
+        <link rel="next" title="Developer Guides" href="../application/index.html"/>
+        <link rel="prev" title="Zephyr Security Overview" href="security-overview.html"/> 
+
+    
+    <script src="../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../index.html">Docs</a> /
+      
+          <a href="security.html">Zephyr Project Security</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="security.html">Zephyr Project Security</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="security-overview.html">Zephyr Security Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Secure Coding Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-and-scope">Introduction and Scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Secure Coding Guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secure-development-knowledge">Secure development knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-review">Code Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#issues-and-bug-tracking">Issues and Bug Tracking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modifications-to-this-document">Modifications to This Document</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="secure-coding-guidelines">
+<span id="secure-code"></span><h1>Secure Coding Guidelines<a class="headerlink" href="#secure-coding-guidelines" title="Permalink to this headline">¶</a></h1>
+<p>Traditionally, microcontroller-based systems have not placed much
+emphasis on security.
+They have usually been thought of as isolated, disconnected
+from the world, and not very vulnerable, just because of the
+difficulty in accessing them.  The Internet of Things has changed
+this.  Now, code running on small microcontrollers often has access to
+the internet, or at least to other devices (that may themselves have
+vulnerabilities).  Given the volume they are often deployed at,
+uncontrolled access can be devastating <a class="footnote-reference" href="#attackf" id="id1">[1]</a>.</p>
+<p>This document describes the requirements and process for ensuring
+security is addressed within the Zephyr project.  All code submitted
+should comply with these guidelines.</p>
+<p>Much of this document comes from the <a class="reference external" href="https://github.com/linuxfoundation/cii-best-practices-badge">CII best practices</a> document.</p>
+<div class="section" id="introduction-and-scope">
+<h2>Introduction and Scope<a class="headerlink" href="#introduction-and-scope" title="Permalink to this headline">¶</a></h2>
+<p>This document covers guidelines for the <a class="reference external" href="https://www.zephyrproject.org/">Zephyr Project</a>, from a
+security perspective.  Many of the ideas contained herein are captured
+from other open source efforts.</p>
+<p>We begin with an overview of secure design as it relates to
+Zephyr.  This is followed by
+a section on <a class="reference internal" href="#secure-development-knowledge">Secure development knowledge</a>, which
+gives basic requirements that a developer working on the project will
+need to have.  This section gives references to other security
+documents, and full details of how to write secure software are beyond
+the scope of this document.  This section also describes
+vulnerability knowledge that at least one of the primary developers
+should have.  This knowledge will be necessary for the review process
+described below this.</p>
+<p>Following this is a description of the review process used to
+incorporate changes into the Zephyr codebase.  This is followed by
+documentation about how security-sensitive issues are handled by the
+project.</p>
+<p>Finally, the document covers how changes are to be made to this
+document.</p>
+</div>
+<div class="section" id="id2">
+<h2>Secure Coding Guidelines<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Designing an open software system such as Zephyr to be secure requires
+adhering to a defined set of design standards. In <a class="reference internal" href="security-citations.html#salt75" id="id3">[SALT75]</a>, the following,
+widely accepted principles for protection mechanisms are defined to
+help prevent security violations and limit their impact:</p>
+<ul class="simple">
+<li><strong>Open design</strong> as a design guideline incorporates the maxim that
+protection mechanisms cannot be kept secret on any system in
+widespread use. Instead of relying on secret, custom-tailored
+security measures, publicly accepted cryptographic algorithms and
+well established cryptographic libraries shall be used.</li>
+<li><strong>Economy of mechanism</strong> specifies that the underlying design of a
+system shall be kept as simple and small as possible. In the context
+of the Zephyr project, this can be realized, e.g., by modular code
+<a class="reference internal" href="security-citations.html#paul09" id="id4">[PAUL09]</a> and abstracted APIs.</li>
+<li><strong>Complete mediation</strong> requires that each access to every object and
+process needs to be authenticated first. Mechanisms to store access
+conditions shall be avoided if possible.</li>
+<li><strong>Fail-safe defaults</strong> defines that access is restricted by default
+and permitted only in specific conditions defined by the system
+protection scheme, e.g., after successful authentication.
+Furthermore, default settings for services shall be chosen in a way
+to provide maximum security.  This corresponds to the “Secure by
+Default” paradigm <a class="reference internal" href="security-citations.html#ms12" id="id5">[MS12]</a>.</li>
+<li><strong>Separation of privilege</strong> is the principle that two conditions or
+more need to be satisfied before access is granted. In the context
+of the Zephyr project, this could encompass split keys <a class="reference internal" href="security-citations.html#paul09" id="id6">[PAUL09]</a>.</li>
+<li><strong>Least privilege</strong> describes an access model in which each user,
+program, and thread, shall have the smallest possible subset
+of permissions in the system required to perform their task. This
+positive security model aims to minimize the attack surface of the
+system.</li>
+<li><strong>Least common mechanism</strong> specifies that mechanisms common to more
+than one user or process shall not be shared if not strictly
+required. The example given in <a class="reference internal" href="security-citations.html#salt75" id="id7">[SALT75]</a> is a function that should be
+implemented as a shared library executed by each user and not as a
+supervisor procedure shared by all users.</li>
+<li><strong>Psychological acceptability</strong> requires that security features are
+easy to use by the developers in order to ensure their usage and the
+correctness of its application.</li>
+</ul>
+<p>In addition to these general principles, the following points are
+specific to the development of a secure RTOS:</p>
+<ul class="simple">
+<li><strong>Complementary Security/Defense in Depth</strong>: do not rely on a single
+threat mitigation approach. In case of the complementary security
+approach, parts of the threat mitigation are performed by the
+underlying platform. In case such mechanisms are not provided by the
+platform, or are not trusted, a defense in depth <a class="reference internal" href="security-citations.html#ms12" id="id8">[MS12]</a> paradigm
+shall be used.</li>
+<li><strong>Less commonly used services off by default</strong>: to reduce the
+exposure of the system to potential attacks, features or services
+shall not be enabled by default if they are only rarely used (a
+threshold of 80% is given in <a class="reference internal" href="security-citations.html#ms12" id="id9">[MS12]</a>). For the Zephyr project, this can
+be realized using the configuration management. Each functionality
+and module shall be represented as a configuration option and needs
+to be explicitly enabled. Then, all features, protocols, and drivers
+not required for a particular use case can be disabled. The user
+shall be notified if low-level options and APIs are enabled but not
+used by the application.</li>
+<li><strong>Change management</strong>: to guarantee a traceability of changes to the
+system, each change shall follow a specified process including a
+change request, impact analysis, ratification, implementation, and
+validation phase. In each stage, appropriate documentation shall be
+provided. All commits shall be related to a bug report or change
+request in the issue tracker. Commits without a valid reference
+shall be denied.</li>
+</ul>
+</div>
+<div class="section" id="secure-development-knowledge">
+<h2>Secure development knowledge<a class="headerlink" href="#secure-development-knowledge" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="secure-designer">
+<h3>Secure designer<a class="headerlink" href="#secure-designer" title="Permalink to this headline">¶</a></h3>
+<p>The Zephyr project must have at least one primary developer who knows
+how to design secure software.</p>
+<p>This requires understanding the following design principles,
+including the 8 principles from <a class="reference external" href="http://web.mit.edu/Saltzer/www/publications/protection/">Saltzer and Schroeder</a>:</p>
+<ul class="simple">
+<li>economy of mechanism (keep the design as simple and small as
+practical, e.g., by adopting sweeping simplifications)</li>
+<li>fail-safe defaults (access decisions shall deny by default, and
+projects’ installation shall be secure by default)</li>
+<li>complete mediation (every access that might be limited must be
+checked for authority and be non-bypassable)</li>
+</ul>
+<ul class="simple">
+<li>open design (security mechanisms should not depend on attacker
+ignorance of its design, but instead on more easily protected and
+changed information like keys and passwords)</li>
+<li>separation of privilege (ideally, access to important objects should
+depend on more than one condition, so that defeating one protection
+system won’t enable complete access. For example, multi-factor
+authentication, such as requiring both a password and a hardware
+token, is stronger than single-factor authentication)</li>
+<li>least privilege (processes should operate with the least privilege
+necessary)</li>
+<li>least common mechanism (the design should minimize the mechanisms
+common to more than one user and depended on by all users, e.g.,
+directories for temporary files)</li>
+<li>psychological acceptability (the human interface must be designed
+for ease of use - designing for “least astonishment” can help)</li>
+<li>limited attack surface (the set of the
+different points where an attacker can try to enter or extract data)</li>
+<li>input validation with whitelists (inputs should typically be checked
+to determine if they are valid before they are accepted; this
+validation should use whitelists (which only accept known-good
+values), not blacklists (which attempt to list known-bad values)).</li>
+</ul>
+</div>
+<div class="section" id="vulnerability-knowledge">
+<h3>Vulnerability Knowledge<a class="headerlink" href="#vulnerability-knowledge" title="Permalink to this headline">¶</a></h3>
+<p>A “primary developer” in a project is anyone who is familiar with the
+project’s code base, is comfortable making changes to it, and is
+acknowledged as such by most other participants in the project. A
+primary developer would typically make a number of contributions over
+the past year (via code, documentation, or answering questions).
+Developers would typically be considered primary developers if they
+initiated the project (and have not left the project more than three
+years ago), have the option of receiving information on a private
+vulnerability reporting channel (if there is one), can accept commits
+on behalf of the project, or perform final releases of the project
+software. If there is only one developer, that individual is the
+primary developer.</p>
+<p>At least one of the primary developers <strong>must</strong> know of common kinds of
+errors that lead to vulnerabilities in this kind of software, as well
+as at least one method to counter or mitigate each of them.</p>
+<p>Examples (depending on the type of software) include SQL
+injection, OS injection, classic buffer overflow, cross-site
+scripting, missing authentication, and missing authorization. See the
+<a class="reference external" href="http://cwe.mitre.org/top25/">CWE/SANS top 25</a> or <a class="reference external" href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10</a> for commonly used lists.</p>
+</div>
+<div class="section" id="security-subcommittee">
+<h3>Security Subcommittee<a class="headerlink" href="#security-subcommittee" title="Permalink to this headline">¶</a></h3>
+<p>There shall be a “security subcommittee”, responsible for
+enforcing this guideline, monitoring reviews, and improving these
+guidelines.</p>
+<p>This team will be established according to the Zephyr Project charter.</p>
+</div>
+</div>
+<div class="section" id="code-review">
+<h2>Code Review<a class="headerlink" href="#code-review" title="Permalink to this headline">¶</a></h2>
+<p>The Zephyr project shall use a code review system that all changes are
+required to go through.  Each change shall be reviewed by at least one
+primary developer that is not the author of the change.  This
+developer shall determine if this change affects the security of the
+system (based on their general understanding of security), and if so,
+shall request the developer with vulnerability knowledge, or the
+secure designer to also review the code.  Any of these individuals
+shall have the ability to block the change from being merged into the
+mainline code until the security issues have been addressed.</p>
+</div>
+<div class="section" id="issues-and-bug-tracking">
+<h2>Issues and Bug Tracking<a class="headerlink" href="#issues-and-bug-tracking" title="Permalink to this headline">¶</a></h2>
+<p>The Zephyr project shall have an issue tracking system (such as <a class="reference external" href="https://www.atlassian.com/software/jira">JIRA</a>)
+that can be used to record and track defects that are found in the
+system.</p>
+<p>Because security issues are often sensitive, this issue tracking
+system shall have a field to indicate a security issue.  Setting this
+field shall result in the issue only being visible to a
+project-maintained core security team.  In addition, there shall be a
+field to allow core security members to add additional users that will
+have visibility to a given issue.</p>
+<p>This embargo, or limited visibility, shall only be for a fixed
+duration, with a default being a project-decided value.  However,
+because security considerations are often external to the Zephyr
+project itself, it may be necessary to increase this embargo time.
+The time necessary shall be clearly annotated in the issue itself.</p>
+<p>The list of issues shall be reviewed at least once a month by the
+security committee on the Zephyr Project.  This review should focus on
+tracking the fixes, determining if any external parties need to be
+notified or involved, and determining when to lift the embargo on the
+issue.  The embargo should <strong>not</strong> be lifted via an automated means, but
+the review team should avoid unnecessary delay in lifting issues that
+have been resolved.</p>
+</div>
+<div class="section" id="modifications-to-this-document">
+<h2>Modifications to This Document<a class="headerlink" href="#modifications-to-this-document" title="Permalink to this headline">¶</a></h2>
+<p>Changes to this document shall be reviewed by the security committee,
+and approved by consensus.</p>
+<table class="docutils footnote" frame="void" id="attackf" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>An <a class="reference external" href="http://www.theverge.com/2016/10/21/13362354/dyn-dns-ddos-attack-cause-outage-status-explained">attack</a> resulted in a significant portion of DNS
+infrastructure being taken down.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../application/index.html" class="btn btn-neutral float-right" title="Developer Guides" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="security-overview.html" class="btn btn-neutral" title="Zephyr Security Overview" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/js/main.js"></script>
+      <script type="text/javascript" src="../_static/js/app.js"></script>
+      <script type="text/javascript" src="../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>

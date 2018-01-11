@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: EXECUTE_XOR_WRITE
+
+.. option:: CONFIG_EXECUTE_XOR_WRITE
+.. _CONFIG_EXECUTE_XOR_WRITE:
+
+When enabled, will enforce that a writable page isn't executable
+and vice versa.  This might not be acceptable in all scenarios,
+so this option is given for those unafraid of shooting themselves
+in the foot.
+
+If unsure, say Y.
+
+
+
+:Symbol:           EXECUTE_XOR_WRITE
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable W^X for memory partitions" if USERSPACE && ARCH_HAS_EXECUTABLE_PAGE_BIT (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: USERSPACE && ARCH_HAS_EXECUTABLE_PAGE_BIT (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../kernel/Kconfig:528

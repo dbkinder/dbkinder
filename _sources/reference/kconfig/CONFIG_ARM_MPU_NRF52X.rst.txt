@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: ARM_MPU_NRF52X
+
+.. option:: CONFIG_ARM_MPU_NRF52X
+.. _CONFIG_ARM_MPU_NRF52X:
+
+Enable MPU support on Nordic Semiconductor nRF52x series ICs.
+
+
+:Symbol:           ARM_MPU_NRF52X
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable MPU on nRF52" if CPU_HAS_MPU (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: CPU_HAS_MPU (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_ARM_MPU` if CPU_HAS_MPU (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ ARM (value: "n")
+:Locations:
+ * ../arch/arm/soc/nordic_nrf5/nrf52/Kconfig.soc:30

@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: LWM2M_PEER_PORT
+
+.. option:: CONFIG_LWM2M_PEER_PORT
+.. _CONFIG_LWM2M_PEER_PORT:
+
+This is the server port to connect to for LWM2M communication
+
+
+
+:Symbol:           LWM2M_PEER_PORT
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "LWM2M server port" if LWM2M_RD_CLIENT_SUPPORT (value: "n")
+:Default values:
+
+ *  5683 (value: "n")
+ *   Condition: LWM2M_RD_CLIENT_SUPPORT (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ LWM2M && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/lwm2m/Kconfig:104

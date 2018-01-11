@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: DNS_NUM_CONCUR_QUERIES
+
+.. option:: CONFIG_DNS_NUM_CONCUR_QUERIES
+.. _CONFIG_DNS_NUM_CONCUR_QUERIES:
+
+This defines how many concurrent DNS queries can be generated using
+same DNS context. Normally 1 is a good default value.
+
+
+
+:Symbol:           DNS_NUM_CONCUR_QUERIES
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Number of simultaneous DNS queries per one DNS context"
+:Default values:
+
+ *  1 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ DNS_RESOLVER && NETWORKING (value: "n")
+:Locations:
+ * ../subsys/net/lib/dns/Kconfig:105

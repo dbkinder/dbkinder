@@ -1,0 +1,40 @@
+:orphan:
+
+.. title:: BT_MESH_RX_SDU_MAX
+
+.. option:: CONFIG_BT_MESH_RX_SDU_MAX
+.. _CONFIG_BT_MESH_RX_SDU_MAX:
+
+Maximum incoming Upper Transport Access PDU length. Leave this
+to the default value, unless you really need to optimize memory
+usage.
+
+
+
+:Symbol:           BT_MESH_RX_SDU_MAX
+:Type:             int
+:Value:            "36"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [36, 384]
+:Prompts:
+
+ *  "Maximum incoming Upper Transport Access PDU length"
+:Default values:
+
+ *  384 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:181

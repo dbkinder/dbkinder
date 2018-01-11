@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: WDT_SAM_DISABLE_AT_BOOT
+
+.. option:: CONFIG_WDT_SAM_DISABLE_AT_BOOT
+.. _CONFIG_WDT_SAM_DISABLE_AT_BOOT:
+
+Select this option to disable the WDT during boot.
+
+
+
+:Symbol:           WDT_SAM_DISABLE_AT_BOOT
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Disable WDT during boot" if WDT_SAM (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: WDT_SAM (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ WATCHDOG (value: "n")
+:Locations:
+ * ../drivers/watchdog/Kconfig.sam:15

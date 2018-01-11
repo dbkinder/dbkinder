@@ -1,0 +1,44 @@
+:orphan:
+
+.. title:: BT_MESH_ADV_BUF_COUNT
+
+.. option:: CONFIG_BT_MESH_ADV_BUF_COUNT
+.. _CONFIG_BT_MESH_ADV_BUF_COUNT:
+
+Number of advertising buffers available. The transport layer
+reserves ADV_BUF_COUNT - 3 buffers for outgoing segments. The
+maximum outgoing SDU size is 12 times this number (out of which
+4 or 8 bytes is used for the Transport Layer MIC). For
+example, 5 segments means the maximum SDU size is 60 bytes,
+which leaves 56 bytes for application layer data using a
+4-byte MIC and 52 bytes using an 8-byte MIC.
+
+
+
+:Symbol:           BT_MESH_ADV_BUF_COUNT
+:Type:             int
+:Value:            "6"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [6, 256]
+:Prompts:
+
+ *  "Number of advertising buffers"
+:Default values:
+
+ *  6 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BT_HCI && BT && BT_HCI_HOST && BT_MESH (value: "n")
+:Locations:
+ * ../subsys/bluetooth/host/mesh/Kconfig:152

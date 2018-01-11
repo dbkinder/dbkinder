@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: UART_SAM_PORT_2
+
+.. option:: CONFIG_UART_SAM_PORT_2
+.. _CONFIG_UART_SAM_PORT_2:
+
+Enable UART2 at boot
+
+
+
+:Symbol:           UART_SAM_PORT_2
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Enable UART2" if UART_SAM (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: UART_SAM (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SERIAL (value: "n")
+:Locations:
+ * ../drivers/serial/Kconfig.uart_sam:53

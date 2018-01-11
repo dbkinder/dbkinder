@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KMP8MS');</script>
+   <!-- End Google Tag Manager -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../_static/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../_static/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../_static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../_static/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../_static/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../_static/img/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../../_static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../_static/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Zephyr Project">
+    <meta name="application-name" content="Zephyr Project">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <title>LwM2M client &mdash; Zephyr Project Documentation</title>
+    
+
+    
+    
+
+    
+
+    
+    
+      
+    
+
+    
+    
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    
+
+    
+      <link rel="stylesheet" href="../../../_static/zephyr-custom.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/normalize.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/layout.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/main.css" type="text/css" />
+    
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    
+
+    
+        <link rel="index" title="Index" href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+        <link rel="copyright" title="Copyright" href="../../../copyright.html"/>
+      <link rel="top" title="Zephyr Project Documentation" href="../../../index.html"/>
+        <link rel="up" title="Networking Samples" href="../net.html"/>
+        <link rel="next" title="mbedTLS DTLS client" href="../mbedtls_dtlsclient/README.html"/>
+        <link rel="prev" title="HTTP Server" href="../http_server/README.html"/> 
+
+    
+    <script src="../../../_static/js/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="not-front page-documentation one-sidebar sidebar-first" role="document" >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMP8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page">
+      <header id="header">
+  <div class="header-wrapper">
+    <div class="container">
+      <a href="https://zephyrproject.org/" title="Zephyr Project" rel="home" id="logo">
+        <img src="../../../_static/img/logo_white.png" alt="Zephyr Project">
+      </a>
+      <a href="" id="navigation-toggle">
+        <span> </span>
+        Menu
+      </a>
+      <nav id="navigation" class="menu with-primary with-secondary">
+        <ul class="header-menu main-menu">
+          <li class="first expanded about mid-1209"><a href="https://zephyrproject.org/about/"><span>About</span></a>
+            <ul class="menu">
+              <li class="first leaf what-is-zephyr mid-2563"><a href="https://zephyrproject.org/what-is-zephyr/"><span>What is the Zephyr Project?</span></a></li>
+              <li class="leaf organization mid-2564"><a href="https://zephyrproject.org/about/organization/"><span>Organization</span></a></li>
+              <li class="leaf memberships mid-2532"><a href="https://zephyrproject.org/#members"><span>Members</span></a></li>
+              <li class="leaf faq mid-2525"><a href="https://zephyrproject.org/about/#faq"><span>FAQ</span></a></li>
+              <li class="leaf join mid-2622"><a href="https://zephyrproject.org/join/"><span>Join</span></a></li>
+              <li class="last leaf contact-us mid-2530"><a href="https://zephyrproject.org/about/#contact-us"><span>Contact Us</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded developers mid-1209"><a href="https://zephyrproject.org/developers/"><span>Developers</span></a>
+            <ul class="menu">
+              <li class="first expanded leaf code mid-2563"><a href="https://github.com/zephyrproject-rtos/zephyr/" target="_blank"><span>Code</span></a></li>
+              <li class="leaf downloads mid-2564"><a href="https://zephyrproject.org/developers/#downloads"><span>Downloads</span></a></li>
+              <li class="leaf documentation mid-2564"><a href="http://docs.zephyrproject.org/index.html" target="_blank"><span>Documentation</span></a></li>
+              <li class="leaf supported-boards mid-2564"><a href="http://docs.zephyrproject.org/boards/boards.html" target="_blank"><span>Supported Boards</span></a></li>
+              <li class="leaf releases-overview mid-2564"><a href="https://zephyrproject.org/developers/#releases-overview"><span>Releases Overview</span></a></li>
+              <li class="leaf how-to-contribute mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/"><span>How to Contribute</span></a></li>
+              <li class="last leaf community-guidelines mid-2564"><a href="https://zephyrproject.org/developers/how-to-contribute/#community-guidelines"><span>Community Guidelines</span></a></li>
+            </ul>
+          </li>
+          <li class="expanded news mid-1209"><a href="https://zephyrproject.org/news/"><span>News</span></a>
+            <ul class="menu">
+              <li class="first leaf announcements mid-2563"><a href="https://zephyrproject.org/news/announcements/"><span>Announcements</span></a></li>
+              <li class="leaf blog mid-2563"><a href="https://zephyrproject.org/news/blog/"><span>Blog</span></a></li>
+              <li class="last leaf events mid-2563"><a href="https://zephyrproject.org/events/"><span>Events</span></a></li>
+            </ul>
+          </li>
+          <li class="last expanded project-resources mid-1209"><a href="https://zephyrproject.org/project-resources/"><span>Project Resources</span></a>
+            <ul class="menu">
+              <li class="first leaf presentations mid-2563"><a href="https://zephyrproject.org/project-resources/presentations/"><span>Presentations</span></a></li>
+              <li class="leaf videos mid-2563"><a href="https://zephyrproject.org/project-resources/videos/"><span>Videos</span></a></li>
+              <li class="leaf demos mid-2563"><a href="https://zephyrproject.org/project-resources/demos/"><span>Demos</span></a></li>
+              <li class="leaf zephyr-in-market mid-2563"><a href="https://zephyrproject.org/project-resources/zephyr-in-market/"><span>Zephyr in Market</span></a></li>
+              <li class="last leaf developer-tools mid-2563"><a href="https://zephyrproject.org/project-resources/developer-tools/"><span>Developer Tools</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- /navigation -->
+    </div>
+  </div>
+</header><!-- /header -->
+      <!-- STARTS #main -->
+      <div id="main">
+        <!-- STARTS .main-container -->
+        <div class="main-container">
+          
+
+ 
+
+
+
+<!-- Docs -->
+
+
+
+
+
+<div id="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / 
+    <a href="../../../index.html">Docs</a> /
+      
+          <a href="../../../application/index.html">Developer Guides</a> /
+      
+          <a href="../../samples.html">Samples and Demos</a> /
+      
+          <a href="../net.html">Networking Samples</a> /
+      
+  </div>
+</div>
+          <aside id="sidebar-first" class="container-sidebar">
+            
+            <span id="secondary-menu-button" class="">Documentation</span>
+<div class="region region-sidebar">
+  <div class="docs-menu">
+  
+    
+    
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/contribute.html">Contributing to the Zephyr Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kernel/kernel.html">Zephyr Kernel Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../security/security.html">Zephyr Project Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../application/index.html">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../porting/porting.html">Porting Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../application/application.html">Application Development Primer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../samples.html">Samples and Demos</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../kernel.html">Kernel Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/basic.html">Basic Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../subsys/subsys.html">Various Subsystems Samples</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../net.html">Networking Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../bluetooth/bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sensor/sensor.html">Sensor Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../grove/grove.html">Grove Kit Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../boards/boards.html">Board-specific samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mpu/index.html">MMU/MPU Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../drivers/drivers.html">Driver Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/kconfig/index.html">Configuration Options Reference Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/api.html">API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../README.html">Zephyr documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/index.html">Device and Driver Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../subsystems/subsystems.html">Subsystems</a></li>
+</ul>
+
+    
+  
+  </div>
+<div role="search" class="sphinx-search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation" class="search-documentation" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+          </aside>
+          <!-- STARTS .content SECTION-->
+          <section id="content" class="row">
+            
+	    
+            <div class="rst-content">
+              <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                  
+  <div class="section" id="lwm2m-client">
+<span id="lwm2m-client-sample"></span><h1>LwM2M client<a class="headerlink" href="#lwm2m-client" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Lightweight Machine to Machine (LwM2M) is an application layer protocol
+based on CoAP/UDP, and is designed to expose various resources for reading,
+writing and executing via an LwM2M server in a very lightweight environment.</p>
+<p>This LwM2M client sample application for Zephyr implements the LwM2M library
+and establishes a connection to an LwM2M server using the
+<a class="reference external" href="http://www.openmobilealliance.org/release/LightweightM2M/V1_0-20170208-A/OMA-TS-LightweightM2M-V1_0-20170208-A.pdf">Open Mobile Alliance Lightweight Machine to Machine Technical Specification</a>
+(Section 5.3: Client Registration Interface).</p>
+<p>The source code for this sample application can be found at:
+<code class="file docutils literal"><span class="pre">samples/net/lwm2m_client</span></code>.</p>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="../../../subsystems/networking/qemu_setup.html#networking-with-qemu"><span class="std std-ref">Networking with QEMU</span></a></li>
+<li>Linux machine</li>
+<li>Leshan Demo Server (<a class="reference external" href="https://eclipse.org/leshan/">https://eclipse.org/leshan/</a>)</li>
+</ul>
+</div>
+<div class="section" id="building-and-running">
+<h2>Building and Running<a class="headerlink" href="#building-and-running" title="Permalink to this headline">¶</a></h2>
+<p>There are configuration files for various setups in the
+samples/net/lwm2m_client directory:</p>
+<ul class="simple">
+<li><code class="file docutils literal"><span class="pre">prj.conf</span></code>
+This is the standard default config.</li>
+<li><code class="file docutils literal"><span class="pre">prj_dtls.conf</span></code>
+This config is the same as the standard but enables DTLS support via MBEDTLS.</li>
+</ul>
+<p>Build the lwm2m-client sample application like this:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/net/lwm2m_client
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>&lt;board to use&gt; -DCONF_FILE<span class="o">=</span>&lt;config file to use&gt; ..
+<span class="gp">$</span> make
+</pre></div>
+</div>
+<p>The easiest way to setup this sample application is to build and run it
+via QEMU using the default configuration <code class="file docutils literal"><span class="pre">prj.conf</span></code>.
+This requires a small amount of setup described in <a class="reference internal" href="../../../subsystems/networking/qemu_setup.html#networking-with-qemu"><span class="std std-ref">Networking with QEMU</span></a>.</p>
+<p>Download and run the latest build of the Leshan Demo Server:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> wget https://hudson.eclipse.org/leshan/job/leshan/lastSuccessfulBuild/artifact/leshan-server-demo.jar
+<span class="gp">$</span> java -jar ./leshan-server-demo.jar -wp <span class="m">8080</span>
+</pre></div>
+</div>
+<p>You can now open a web browser to: <a class="reference external" href="http://localhost:8080">http://localhost:8080</a> This is where you
+can watch and manage connected LwM2M devices.</p>
+<p>Build the lwm2m-client sample application for QEMU like this:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/net/lwm2m_client
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>qemu_x86 ..
+<span class="gp">$</span> make run
+</pre></div>
+</div>
+<p>The sample will start and automatically connect to the Leshan Demo Server with
+an IPv6 client endpoint “qemu_x86”.</p>
+<p>To change the sample to use IPv4, disable IPv6 by changing these two
+configurations in <code class="docutils literal"><span class="pre">prj.conf</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CONFIG_NET_IPV6</span><span class="o">=</span><span class="n">n</span>
+<span class="n">CONFIG_NET_APP_NEED_IPV6</span><span class="o">=</span><span class="n">n</span>
+</pre></div>
+</div>
+<div class="section" id="dtls-support">
+<h3>DTLS Support<a class="headerlink" href="#dtls-support" title="Permalink to this headline">¶</a></h3>
+<p>To build the lwm2m-client sample for QEMU with DTLS support do the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> <span class="nv">$ZEPHYR_BASE</span>/samples/net/lwm2m_client
+<span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DBOARD<span class="o">=</span>qemu_x86 -DCONF_FILE<span class="o">=</span>prj_dtls.conf ..
+<span class="gp">$</span> make run
+</pre></div>
+</div>
+<p>Setup DTLS security in Leshan Demo Server:</p>
+<ul class="simple">
+<li>Open up the Leshan Demo Server web UI</li>
+<li>Click on “Security”</li>
+<li>Click on “Add new client security configuration”</li>
+<li><dl class="first docutils">
+<dt>Enter the following data:</dt>
+<dd>Client endpoint: qemu_x86
+Security mode: Pre-Shared Key
+Identity: Client_identity
+Key: 000102030405060708090a0b0c0d0e0f</dd>
+</dl>
+</li>
+<li>Start the Zephyr sample</li>
+</ul>
+</div>
+<div class="section" id="sample-output-without-dtls-enabled">
+<h3>Sample output without DTLS enabled<a class="headerlink" href="#sample-output-without-dtls-enabled" title="Permalink to this headline">¶</a></h3>
+<p>The following is sample output from the QEMU console.  First, LwM2M engine is
+initialized.  Then, several LwM2M Smart Objects register themselves with the
+engine.  The sample app then sets some client values so that they can be seen
+in the Leshan Demo Server interface, and finally, the registration request is
+sent to the server where the endpoint is initialized.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">To exit from QEMU enter: &#39;CTRL+a, x&#39;</span>
+<span class="go">[QEMU] CPU: qemu32,+nx,+pae</span>
+<span class="go">qemu-system-i386: warning: Unknown firmware file in legacy mode: genroms/multiboot.bin</span>
+
+<span class="go">shell&gt; [lib/lwm2m_engine] [DBG] lwm2m_engine_init: LWM2M engine thread started</span>
+<span class="go">[lwm2m_obj_security] [DBG] security_create: Create LWM2M security instance: 0</span>
+<span class="go">[lwm2m_obj_server] [DBG] server_create: Create LWM2M server instance: 0</span>
+<span class="go">[lwm2m_obj_device] [DBG] device_create: Create LWM2M device instance: 0</span>
+<span class="go">[lwm2m_obj_firmware] [DBG] firmware_create: Create LWM2M firmware instance: 0</span>
+<span class="go">[lwm2m-client] [INF] main: Run LWM2M client</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_set: path:3/0/0, value:0x0001c99e, len:6</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_set: path:3/0/1, value:0x0001c9ab, len:23</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_set: path:3/0/2, value:0x0001c9c9, len:9</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_set: path:3/0/3, value:0x0001c9d9, len:3</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_set: path:3/0/9, value:0x0041a3a4, len:1</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_set: path:3/0/10, value:0x0041a3b4, len:4</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_set: path:3/0/17, value:0x0001c9fc, len:16</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_set: path:3/0/18, value:0x0001ca14, len:5</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_set: path:3/0/20, value:0x0041a3a4, len:1</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_set: path:3/0/21, value:0x0041a3b4, len:4</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_create_obj_inst: path:3303/0</span>
+<span class="go">[ipso_temp_sensor] [DBG] temp_sensor_create: Create IPSO Temperature Sensor instance: 0</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_engine_set: path:3303/0/5700, value:0x0041a3b8, len:8</span>
+<span class="go">[lib/lwm2m_rd_client] [INF] lwm2m_rd_client_start: LWM2M Client: qemu_x86</span>
+<span class="go">[lib/lwm2m_rd_client] [INF] sm_do_init: RD Client started with endpoint &#39;qemu_x86&#39; and client lifetime 0</span>
+<span class="go">[lib/lwm2m_rd_client] [DBG] sm_send_registration: registration sent [2001:db8::2]</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_udp_receive: checking for reply from [2001:db8::2]</span>
+<span class="go">[lib/lwm2m_rd_client] [DBG] do_registration_reply_cb: Registration callback (code:2.1)</span>
+<span class="go">[lwm2m-client] [DBG] rd_client_event: Registration complete</span>
+<span class="go">[lib/lwm2m_rd_client] [INF] do_registration_reply_cb: Registration Done (EP=&#39;EZd501ZF26&#39;)</span>
+<span class="go">[lib/lwm2m_engine] [DBG] lwm2m_udp_receive: reply 0x004001ec handled and removed</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+              <!-- 
+  <div class="rst-footer-buttons row" role="navigation" aria-label="footer navigation">
+    
+      <a href="../mbedtls_dtlsclient/README.html" class="btn btn-neutral float-right" title="mbedTLS DTLS client" accesskey="n">
+        Next <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="../http_server/README.html" class="btn btn-neutral" title="HTTP Server" accesskey="p">
+        <span class="fa fa-arrow-circle-left"></span> Previous
+      </a>
+    
+  </div>
+  for ZEP-463 remove the prev/next links -->
+            </div>
+            <!-- ENDS #content SECTION -->
+          </section>
+          <!-- ENDS .content -->
+        </div>
+        <!-- ENDS .main-container -->
+      </div>
+      <!-- ENDS #main -->
+      <footer id="footer">
+  <div class="container">
+    <div class="block block-menu block-odd first block" data-bid="menu-footer-menu">
+      <h3 class="title">Footer Menu</h3>
+      <ul class="menu">
+        <li class="leaf google- mid-2404">
+          <a href="https://plus.google.com/+ZephyrProject" class="google-plus"><span>Google+</span></a>
+        </li>
+        <li class="leaf twitter mid-2405">
+          <a href="https://twitter.com/zephyriot" class="twitter"><span>Twitter</span></a>
+        </li>
+        <li class="last leaf email mid-2406">
+          <a href="mailto:info@zephyrproject.org" class="email"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-block block-even block" data-bid="block-4">
+      <p>
+        Zephyr Project © 2018 is a Linux Foundation Project. All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://linuxfoundation.org" target="_blank">Linux Foundation</a> is a registered trademark of The Linux Foundation. Linux is a registered <a href="https://www.linuxfoundation.org/about/linux-foundation-trademark-usage-guidelines" target="_blank">trademark</a> of Linus Torvalds.
+      </p>
+      <p>
+        Please see our <a href="https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a> and <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!-- ENDS #page -->
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.10.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/js/main.js"></script>
+      <script type="text/javascript" src="../../../_static/js/app.js"></script>
+      <script type="text/javascript" src="../../../_static/js/affix.js"></script>
+
+   
+
+  </body>
+</html>
